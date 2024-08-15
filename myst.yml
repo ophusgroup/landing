@@ -1,0 +1,9 @@
+# See docs at: https://mystmd.org/guide/frontmatter
+version: 1
+project:
+  title: Colin Ophus Lab
+  description: Computational Microscopy and Computational Materials Science
+site:
+  template: book-theme
+  domains:
+    - colab.curve.space
