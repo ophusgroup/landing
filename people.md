@@ -18,7 +18,7 @@ title: People
 - Center Fellow, Precourt Institute for Energy, [Stanford University](https://www.stanford.edu/)
 - Staff Scientist, [SLAC National Accelerator Laboratory](https://www6.slac.stanford.edu/)
 
-Colin received his BSc and PhD at the University of Alberta, in Edmonton, Canada. He then worked as Project Scientist, Research Scientist and Staff Scientist at the National Center for Electron Microscopy (NCEM), part of the Molecular Foundry user facility at Lawrence Berkeley Lab. His research focuses on experimental methods, reconstruction algorithms, and software codes for simulation, analysis, and instrument design of transmission electron microscopy (TEM) and scanning TEM (STEM). He was awarded a US Department of Energy (DOE) Early Career award in 2018, and the Burton medal from the Microscopy Society of America (MSA) in 2018. He has published over 200 peer-reviewed publications, and given over 100 invited talks and workshops around the world. Colin advocates for open science and his group develops open-source scientific software such as the Prismatic STEM simulation and py4DSTEM analysis codes. He is also the editor-in-chief for the interactive web-based scientific journal [Elemental Microscopy](elementalmicroscopy.com).
+Colin received his BSc and PhD at the [University of Alberta](https://www.ualberta.ca/en/index.html) in Edmonton, Canada. He then worked as a Project Scientist, Research Scientist, and Staff Scientist at the National Center for Electron Microscopy (NCEM), part of the [Molecular Foundry](https://foundry.lbl.gov/) user facility at Lawrence Berkeley Lab. His research focuses on experimental methods, reconstruction algorithms, and software codes for simulation, analysis, and instrument design of transmission electron microscopy (TEM) and scanning TEM (STEM). He was awarded a US Department of Energy (DOE) Early Career award in 2018, and the [Burton Medal](https://microscopy.org/Society-Awards-Recipients#2022) from the [Microscopy Society of America](https://microscopy.org/) (MSA) in 2018. He has published over 200 peer-reviewed publications, and given over 100 invited talks and workshops around the world. Colin advocates for open science and his group develops open-source scientific software such as the Prismatic STEM simulation and py4DSTEM analysis codes. He is also the editor-in-chief for the interactive web-based scientific journal [Elemental Microscopy](https://www.elementalmicroscopy.com/).
 
 
 
@@ -48,6 +48,9 @@ Steph received her PhD at Northwestern University ...
 
 Georgios Varnavides is a postdoctoral Miller research fellow at the University of California, Berkeley, where he is developing new computational imaging modalities to observe structure and function in materials with high spatial resolution.
 
+[Iterative Phase Retrieval Algorithms for Scanning Transmission Electron Microscopy
+](@https://doi.org/10.48550/arXiv.2309.05250)
+
 [George's website](https://gvarnavides.com/about/)
 
 
@@ -60,12 +63,12 @@ Georgios Varnavides is a postdoctoral Miller research fellow at the University o
 :align: right
 ```
 
-Arthur McCray received his PhD in Applied Physics at Northwestern University , supervised by Amanda Petford-Long.
+Arthur McCray received his PhD in Applied Physics at Northwestern University, supervised by Amanda Petford-Long.
 
 Arthur is the lead developer of the [pyLorenz](https://github.com/PyLorentz/PyLorentz) software package.
 
 
-## Graduate Students Researchers
+## PhD Students
 
 ### Andrew Ducharme
 
@@ -77,6 +80,11 @@ Arthur is the lead developer of the [pyLorenz](https://github.com/PyLorentz/PyLo
 ```
 
 Andrew is a PhD candidate in the Department of Physics at the University of Oregon, supervised by Ben McMorran. He was awarded an SCGSR fellowship from the US Department of Energy to work on STEM Holography-Pytchography in Colin's group at Berkeley Lab and Stanford.
+
+## Masters Students
+
+
+## Undergraduate Interns
 
 
 ## Group Alumni
@@ -90,6 +98,10 @@ Andrew is a PhD candidate in the Department of Physics at the University of Oreg
 ### Benjamin Savitzky
 
 ### Alexander Rakowski
+
+### Philipp Pelz
+
+
 
 ### Ellis Kennedy
 

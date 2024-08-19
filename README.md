@@ -2,4 +2,4 @@
 title: README
 ---
 
-Colin Ophus lab - group website
+Colin Ophus lab - group website repository
