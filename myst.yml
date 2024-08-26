@@ -12,7 +12,7 @@ project:
     - file: facilities.md
     - file: teaching.md
   abbreviations:
-    4D-STEM: four dimensional scanning transmission electron microscopy
+    4DSTEM: four dimensional scanning transmission electron microscopy
     ADF: annular dark field
     BF: bright field
     BibTeX: portmanteau of of “bibliography” and TeX (LaTeX)
@@ -26,7 +26,9 @@ project:
     HAADF: high angle annular dark field
     HRTEM: high resolution transmission electron microscopy
     M&M: Microscopy and Microanalysis
+    NCEM: National Center for Electron Microscopy
     PDF: portable document format
+    py4DSTEM: python four dimensional scanning transmission electron microscopy
     STEM: scanning transmission electron microscopy
 site:
   template: book-theme

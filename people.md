@@ -16,7 +16,9 @@ title: People
 - Center Fellow, [Precourt Institute for Energy](https://energy.stanford.edu/), [Stanford University](https://www.stanford.edu/)
 - Staff Scientist, [SLAC National Accelerator Laboratory](https://www6.slac.stanford.edu/)
 
-Colin received his BSc and PhD at the [University of Alberta](https://www.ualberta.ca/en/index.html) in Edmonton, Canada. He then worked as a Project Scientist, Research Scientist, and Staff Scientist at the National Center for Electron Microscopy (NCEM), part of the [Molecular Foundry](https://foundry.lbl.gov/) user facility at Lawrence Berkeley Lab. His research focuses on experimental methods, reconstruction algorithms, and software codes for simulation, analysis, and instrument design of transmission electron microscopy (TEM) and scanning TEM (STEM). He was awarded a US Department of Energy (DOE) Early Career award in 2018, and the [Burton Medal](https://microscopy.org/Society-Awards-Recipients#2022) from the [Microscopy Society of America](https://microscopy.org/) (MSA) in 2018. He has published over 200 peer-reviewed publications, and given over 100 invited talks and workshops around the world. Colin advocates for open science and his group develops open-source scientific software such as the Prismatic STEM simulation and py4DSTEM analysis codes. He is also the editor-in-chief for the interactive web-based scientific journal [Elemental Microscopy](https://www.elementalmicroscopy.com/).
+Colin received his BSc in Engineering Physics, and his PhD in Materials Engineering in [David Mitlin's](https://www.me.utexas.edu/people/faculty-directory/mitlin) group at the [University of Alberta](https://www.ualberta.ca/en/index.html) in Edmonton, Canada. He received an NSERC scholarship to pursue postdoctoral research working for [Velimir "Mimo" Radmilovic](https://www.sanu.ac.rs/en/member/radmilovic-velimir/) at Berkeley Lab and [Mark Asta](https://asta.mse.berkeley.edu/) at UC Berkeley. He then worked as a Project Scientist, Research Scientist, and Staff Scientist at the [National Center for Electron Microscopy](https://foundry.lbl.gov/about/facilities/the-national-center-for-electron-microscopy-ncem/) (NCEM), part of the [Molecular Foundry](https://foundry.lbl.gov/) user facility at [Lawrence Berkeley Lab](https://www.lbl.gov/). 
+
+His research focuses on experimental methods, reconstruction algorithms, and software codes for simulation, analysis, and instrument design of TEM, STEM and 4DSTEM. He was awarded a US Department of Energy (DOE) Early Career award in 2018, and the [Burton Medal](https://microscopy.org/Society-Awards-Recipients#2022) from the [Microscopy Society of America](https://microscopy.org/) (MSA) in 2018. He has published over 200 peer-reviewed publications, and given over 100 invited talks and workshops around the world. Colin advocates for open science and his group develops open-source scientific software such as the [Prismatic STEM simulation](https://prism-em.com/) and [py4DSTEM analysis](https://github.com/py4dstem/py4DSTEM) codes. He is also the editor-in-chief for the interactive web-based scientific journal [Elemental Microscopy](https://www.elementalmicroscopy.com/).
 
 
 
@@ -231,6 +233,14 @@ Former intern in Colin Ophus' group. Currently pursuing a PhD in Mary Scott's gr
 
 ### Thomas Pekin
 
+
+```{image} /images/people/PekinThomas.jpg
+:alt: Tom
+:class: bg-primary
+:width: 200px
+:align: right
+```
+
 Graduated PhD program in Andrew Minor's group at UC Berkeley.  Postdoc in Christoph Koch’s group at Humboldt Universität zu Berlin. Now a Team Product Owner at Carl Zeiss SMS.
 
 [Optimizing disk registration algorithms for nanobeam electron diffraction strain mapping](@doi.org/10.1016/j.ultramic.2016.12.021)
@@ -247,11 +257,20 @@ Graduated PhD program in Andrew Minor's group at UC Berkeley.  Postdoc in Christ
 :align: right
 ```
 
-Received her PhD from Andy Minor's group at UC Berkeley. Worked as a Sr. Failure Analysis R&D Engineer at Intel. Currently a Staff Scientist at Lawrence Livermore National Lab. 
+Received her PhD from Andy Minor's group and Daryl Chrzan's group at UC Berkeley. Worked as a Sr. Failure Analysis R&D Engineer at Intel. Currently a Staff Scientist at Lawrence Livermore National Lab. 
  
+[HAADF imaging of the omega ($\omega$) phase in a gum metal-related alloy](@https://doi.org/10.1080/14786435.2014.937839)
 
 
 ### Hao Yang
+
+
+```{image} /images/people/YangHao.jpg
+:alt: Hao
+:class: bg-primary
+:width: 200px
+:align: right
+```
 
 Received his PhD from Pete Nellist's group at Oxford. Formerly a postdoc in Colin Ophus' group. Currently working in industry.
 
