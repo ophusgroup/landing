@@ -188,14 +188,44 @@ Received PhD in Mary Scott's group at UC Berkeley.  Now working as a Research Sc
 [Automated crystal orientation mapping in py4DSTEM using sparse correlation matching](@doi.org/10.1017/S1431927622000101)
 
 
+
+### Blanka Janicek
+
+```{image} /images/people/JanicekBlanka.jpg
+:alt: Blanka
+:class: bg-primary
+:width: 200px
+:align: right
+```
+
+Received her PhD in Pinshane Huang's group at UIUC. Worked as postdoc in Xi Jiang's group and Colin Ophus' group at Berkeley Lab. Currently a Scientist working at Exponent.
+
+[Structural Complexities in Sodium Ion Conductive Antiperovskite Revealed by Cryogenic Transmission Electron Microscopy](@https://doi.org/10.1021/acs.nanolett.4c01996)
+
+
 ### Hannah Devyldere
 
-Currently pursuing a PhD in Mary Scott's group at UC Berkeley.
+
+```{image} /images/people/DevyldereHannah.jpg
+:alt: Hannah
+:class: bg-primary
+:width: 200px
+:align: right
+```
+
+Former intern in Colin Ophus' group. Currently pursuing a PhD in Mary Scott's group at UC Berkeley.
 
 
 ### Luis Rangel DaCosta
 
-Currently pursuing a PhD in Mary Scott's group at UC Berkeley.
+```{image} /images/people/RangelDaCostaLuis.jpg
+:alt: Luis
+:class: bg-primary
+:width: 200px
+:align: right
+```
+
+Former intern in Colin Ophus' group. Currently pursuing a PhD in Mary Scott's group at UC Berkeley.
 
 [Prismatic 2.0 – Simulation software for STEM and HRTEM](@https://doi.org/10.1016/j.micron.2021.103141)
 
@@ -223,13 +253,12 @@ Received her PhD from Andy Minor's group at UC Berkeley. Worked as a Sr. Failure
 
 ### Hao Yang
 
-Received his PhD from Pete Nellist's group at Oxford. Formerly a postdoc in Colin Ophus' group. Now working in industry.
+Received his PhD from Pete Nellist's group at Oxford. Formerly a postdoc in Colin Ophus' group. Currently working in industry.
 
 
 ### Milena Loper
 
 Former intern in Colin Ophus' group.
-
 
 ### Iris You
 
