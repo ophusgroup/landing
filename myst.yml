@@ -2,7 +2,32 @@
 version: 1
 project:
   title: Colin Ophus Lab
-  description: Computational Microscopy and Computational Materials Science
+  short_title: COLAB
+  description: Understanding materials atom by atom
+  toc:
+    - file: index.md
+    - file: people.md
+    - file: research.md
+    - file: papers.md
+    - file: facilities.md
+    - file: teaching.md
+  abbreviations:
+    4D-STEM: four dimensional scanning transmission electron microscopy
+    ADF: annular dark field
+    BF: bright field
+    BibTeX: portmanteau of of “bibliography” and TeX (LaTeX)
+    DOI: digital object identifier
+    EM: Elemental Microscopy
+    EWR: exit wave reconstruction
+    FAIR: findable, accessible, interoperable, and reusable
+    FFT: fast Fourier transform
+    FOV: field-of-view
+    GB: grain boundary
+    HAADF: high angle annular dark field
+    HRTEM: high resolution transmission electron microscopy
+    M&M: Microscopy and Microanalysis
+    PDF: portable document format
+    STEM: scanning transmission electron microscopy
 site:
   template: book-theme
   domains:

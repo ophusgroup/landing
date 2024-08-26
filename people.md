@@ -3,15 +3,13 @@ title: People
 ---
 
 
-## Group Leader
-
-### Colin Ophus
+### Group Leader - Colin Ophus
 
 ```{image} /images/people/OphusColin.jpg
 :alt: Colin
 :class: bg-primary
 :width: 200px
-:align: rightx
+:align: right
 ```
 
 - Associate Professor, Department of Materials Science and Engineering, [Stanford University](https://www.stanford.edu/)
@@ -33,7 +31,9 @@ Colin received his BSc and PhD at the [University of Alberta](https://www.ualber
 :align: right
 ```
 
-Steph received her PhD at Northwestern University ...
+Steph received her PhD at Northwestern University in the Dravid Group. During her PhD, she was award an SCGSR from the US Deptartment of Energy for a research internship at Berkeley Lab. She is currently a postdoc working in Colin's group at Stanford and in Karen Bustillo's group at Berkeley Lab.
+
+[Uncovering the three-dimensional structure of upconverting core–shell nanoparticles with multislice electron ptychography](@doi.org/10.1063/5.0206814)
 
 
 
@@ -81,11 +81,14 @@ Arthur is the lead developer of the [pyLorenz](https://github.com/PyLorentz/PyLo
 
 Andrew is a PhD candidate in the Department of Physics at the University of Oregon, supervised by Ben McMorran. He was awarded an SCGSR fellowship from the US Department of Energy to work on STEM Holography-Pytchography in Colin's group at Berkeley Lab and Stanford.
 
-## Masters Students
+<!-- ## Masters Students
 
+- None current
 
 ## Undergraduate Interns
 
+- None current
+ -->
 
 ## Administrators
 
@@ -95,32 +98,106 @@ COLAB admin in the Materials Science and Engineering department at Stanford.
 
 
 
-## Group Alumni
+## Former Members
 
 
 ### Benjamin Savitzky
 
-PhD in Lena Kourkoutis' group at Cornell. Postdoc in Colin's group at Berkeley Lab. Now working as a Principle Research Scientist at hBar Instruments.
+```{image} /images/people/SavitzkyBen.jpg
+:alt: Ben
+:class: bg-primary
+:width: 200px
+:align: right
+```
+
+Formerly a PhD student in Lena Kourkoutis' group at Cornell and a postdoc in Colin Ophus' group at Berkeley Lab. Now working as a Principle Research Scientist at hBar Instruments.
 
 [py4DSTEM: A Software Package for Four-Dimensional Scanning Transmission Electron Microscopy Data Analysis](@doi.org/10.1017/S1431927621000477)
 
+
 ### Alexander Rakowski
+
+```{image} /images/people/RakowskiAlex.jpg
+:alt: Alex
+:class: bg-primary
+:width: 200px
+:align: right
+```
+
+Received his PhD in Sarah Haigh's group at Manchester, and worked a postdoc in Joe Patterson and Colin Ophus' group.  Now returned to silicon valley.
+
+[Disentangling multiple scattering with deep learning: application to strain mapping from electron diffraction patterns](@doi.org/10.1038/s41524-022-00939-9)
+
 
 ### Philipp Pelz
 
-### Milena Loper
+```{image} /images/people/PelzPhilipp.jpg
+:alt: Philipp
+:class: bg-primary
+:width: 200px
+:align: right
+```
 
-### Iris You
+Philipp Pelz received Bachelor degrees in Physics (2011) and Informatics (2012), and Master degrees in Applied & Engineering Physics, Materials Science & Chemistry (2013). In 2018 he obtained his Ph.D. in Physics from the University of Hamburg & The Max Planck Institute for the Structure and Dynamics of Matter, Germany. Subsequently, he spent three years as a postdoctoral researcher at the University of California, Berkeley and the National Center for Electron Microscopy. Since August 2022 he is Tenure-Track Professor for Computational Materials Microscopy at FAU Erlangen-Nürnberg.
+
+[Solving complex nanostructures with ptychographic atomic electron tomography
+](@doi.org/10.1038/s41467-023-43634-z)
+
 
 ### Ellis Kennedy
 
-### Hannah Devyldere
+
+```{image} /images/people/KennedyEllis.jpg
+:alt: Ellis
+:class: bg-primary
+:width: 200px
+:align: right
+```
+
+Received her PhD in Mary Scott's group at UC Berkeley after interning in Colin's group and Mary's group. Formerly a postdoc in Kwabena Bediako's group at UC Berkeley, and now working as a postdoc at Los Alamos National Lab.
+
+[Tilted fluctuation electron microscopy](@doi.org/10.1063/5.0015532)
+
 
 ### Steven Zeltmann
 
+
+```{image} /images/people/ZeltmannSteven.jpg
+:alt: Steve
+:class: bg-primary
+:width: 200px
+:align: right
+```
+
+
+Received his PhD in Andy Minor's group at UC Berkeley. Now working as a Staff Scientist in [PARADIM](@https://www.paradim.org/electronmicroscopy) at Cornell University.
+
+[Patterned probes for high precision 4D-STEM bragg measurements](@doi.org/10.1016/j.ultramic.2019.112890)
+
+### Alexandra Bruefach
+
+```{image} /images/people/BruefachAlexandra.jpg
+:alt: Alexandra
+:class: bg-primary
+:width: 200px
+:align: right
+```
+
+Received PhD in Mary Scott's group at UC Berkeley.  Now working as a Research Scientist at Meta.
+
+[Automated crystal orientation mapping in py4DSTEM using sparse correlation matching](@doi.org/10.1017/S1431927622000101)
+
+
+### Hannah Devyldere
+
+Currently pursuing a PhD in Mary Scott's group at UC Berkeley.
+
+
 ### Luis Rangel DaCosta
 
-### Levi Brown
+Currently pursuing a PhD in Mary Scott's group at UC Berkeley.
+
+[Prismatic 2.0 – Simulation software for STEM and HRTEM](@https://doi.org/10.1016/j.micron.2021.103141)
 
 ### Thomas Pekin
 
@@ -133,7 +210,34 @@ Graduated PhD program in Andrew Minor's group at UC Berkeley.  Postdoc in Christ
 
 ### Rohini Sankaran
 
+```{image} /images/people/SankaranRohini.jpg
+:alt: Rohini
+:class: bg-primary
+:width: 200px
+:align: right
+```
+
+Received her PhD from Andy Minor's group at UC Berkeley. Worked as a Sr. Failure Analysis R&D Engineer at Intel. Currently a Staff Scientist at Lawrence Livermore National Lab. 
+ 
+
+
 ### Hao Yang
+
+Received his PhD from Pete Nellist's group at Oxford. Formerly a postdoc in Colin Ophus' group. Now working in industry.
+
+
+### Milena Loper
+
+Former intern in Colin Ophus' group.
+
+
+### Iris You
+
+Former intern in Colin Ophus' group.
+
+### Levi Brown
+
+Former intern in Colin Ophus' group.
 
 
 

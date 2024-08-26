@@ -17,15 +17,13 @@ However, we now have direct electron detectors which can operate at speeds up to
 
 Our group has developed many kinds of 4D-STEM experiments, including nanobeam orientation and phase mapping, inversion of multiple scattering with physics and machine learning approaches, ptychographic imaging and atomic electron tomography, and many others.
 
-[2023 review on STEM in materials science](@doi.org/10.1146/annurev-matsci-080921-092646)
-
-[2019 review on 4D-STEM](@doi.org/10.1017/S1431927619000497)
-
-
+- [2023 review on STEM in materials science](@doi.org/10.1146/annurev-matsci-080921-092646)
+- [2019 review on 4D-STEM](@doi.org/10.1017/S1431927619000497)
 
 
 
 ## Atomic Electron Tomography
+
 
 
 
