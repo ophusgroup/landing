@@ -7,7 +7,7 @@ title: People
 
 ```{image} /images/people/OphusColin.jpg
 :alt: Colin
-:class: bg-primary
+:class: float-right
 :width: 200px
 :align: right
 ```
