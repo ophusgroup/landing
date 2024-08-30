@@ -3,9 +3,9 @@ title: Teaching
 ---
 
 
-## 4D-STEM analysis  
+## 4DSTEM analysis  
 
-Our group has created many tutorials for 4D-STEM analysis using py4DSTEM, our open source python toolkit for 4D-sTEM.  These tutorials and example datasets can be found online:
+Our group has created many tutorials for 4D-STEM analysis using py4DSTEM, our open source python toolkit for 4DSTEM.  These tutorials and example datasets can be found online:
 
 - [py4DSTEM tutorial GitHub repo]()
 - [py4DSTEM tutorials in Google Colab]()

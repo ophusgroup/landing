@@ -3,7 +3,7 @@ title: People
 ---
 
 
-### Group Leader - Colin Ophus
+### Colin Ophus
 
 ```{image} /images/people/OphusColin.jpg
 :alt: Colin
@@ -12,9 +12,10 @@ title: People
 :align: right
 ```
 
-- Associate Professor, Department of Materials Science and Engineering, [Stanford University](https://www.stanford.edu/)
+- Associate Professor, [Department of Materials Science and Engineering](https://mse.stanford.edu/), [Stanford University](https://www.stanford.edu/)
 - Center Fellow, [Precourt Institute for Energy](https://energy.stanford.edu/), [Stanford University](https://www.stanford.edu/)
 - Staff Scientist, [SLAC National Accelerator Laboratory](https://www6.slac.stanford.edu/)
+- [Google Scholar](https://scholar.google.com/citations?hl=en&user=h5MPYJAAAAAJ)
 
 Colin received his BSc in Engineering Physics, and his PhD in Materials Engineering in [David Mitlin's](https://www.me.utexas.edu/people/faculty-directory/mitlin) group at the [University of Alberta](https://www.ualberta.ca/en/index.html) in Edmonton, Canada. He received an NSERC scholarship to pursue postdoctoral research working for [Velimir "Mimo" Radmilovic](https://www.sanu.ac.rs/en/member/radmilovic-velimir/) at Berkeley Lab and [Mark Asta](https://asta.mse.berkeley.edu/) at UC Berkeley. He then worked as a Project Scientist, Research Scientist, and Staff Scientist at the [National Center for Electron Microscopy](https://foundry.lbl.gov/about/facilities/the-national-center-for-electron-microscopy-ncem/) (NCEM), part of the [Molecular Foundry](https://foundry.lbl.gov/) user facility at [Lawrence Berkeley Lab](https://www.lbl.gov/). 
 
@@ -81,7 +82,7 @@ Arthur is the lead developer of the [pyLorenz](https://github.com/PyLorentz/PyLo
 :align: right
 ```
 
-Andrew is a PhD candidate in the Department of Physics at the University of Oregon, supervised by Ben McMorran. He was awarded an SCGSR fellowship from the US Department of Energy to work on STEM Holography-Pytchography in Colin's group at Berkeley Lab and Stanford.
+Andrew is a PhD candidate in the Department of Physics at the University of Oregon, supervised by Ben McMorran. He was awarded an SCGSR fellowship from the US Department of Energy to work on STEM holography-pytchography in Colin's group at Berkeley Lab and Stanford.
 
 <!-- ## Masters Students
 

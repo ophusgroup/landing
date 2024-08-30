@@ -25,10 +25,15 @@ project:
     GB: grain boundary
     HAADF: high angle annular dark field
     HRTEM: high resolution transmission electron microscopy
+    IDEA: inclusion, diversity, equity and accountability
     M&M: Microscopy and Microanalysis
+    MIDI: matched illumination and detector interferometry
     NCEM: National Center for Electron Microscopy
     PDF: portable document format
     py4DSTEM: python four dimensional scanning transmission electron microscopy
+    SCGSR: science graduate student research
+    SNSF: Stanford Nano Shared Facilities
+    SPM: scanning probe microscopy
     STEM: scanning transmission electron microscopy
 site:
   template: book-theme
