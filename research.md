@@ -4,7 +4,9 @@ title: Research
 
 
 
-## 4DSTEM Experiments
+## 4DSTEM 
+
+### Experiments
 
 :::{figure} ./videos/research_4DSTEM.mp4
 :align: right
@@ -23,7 +25,21 @@ Our group has developed many kinds of 4DSTEM experiments, including nanobeam ori
 
 
 
+
+### Analysis with py4DSTEM
+
+4DSTEM experiments produce prodigious amounts of data - potentially millions of diffraction pattern images, each with tens of thousands of pixels. We have developed robust and efficient software to analyze these huge 4DSTEM datasets, primarily 
+
+To analyze this data, 
+
+Four-Dimensional Scanning Transmission Electron Microscopy
+
+
+
+
 ## Atomic Electron Tomography
+
+### ADF-STEM
 
 Atomic electron tomography (AET) reconstructs the three-dimensional structures of materials at atomic resolution. By recording high-resolution STEM images from many projection directions and then using tomographic reconstruction algorithms, we can use AET to map the 3D positions and species of atoms within complex nanostructures. This method is invaluable for studying defects, interfaces, and other structural intricacies in materials that influence their properties. AET has transformative applications in materials science, catalysis, and nanotechnology, offering unprecedented insights into the atomic-scale architecture of advanced materials.
 
@@ -34,8 +50,9 @@ Atomic electron tomography (AET) reconstructs the three-dimensional structures o
 ZrTe nanowire encapsulated in double-walled carbon nanotube solved with, from @doi.org/10.1038/s41467-023-43634-z.
 :::
 
-Our group pioneered the development of ptychographic atomic electron tomography, where we combined ptychography imaging with AET. This approach significantly enhances the precision and sensitivity of atomic structure determination, enabling the visualization of complex nanostructures, including light elements. PAET has the potential to significantly expand the range of nanostructures that can be resolved in 3D at atomic resolution, and provide deeper insights into the atomic-scale underpinnings of material properties
+### 4DSTEM Ptychography
 
+Our group pioneered the development of ptychographic atomic electron tomography, where we combined ptychography imaging with AET. This approach significantly enhances the precision and sensitivity of atomic structure determination, enabling the visualization of complex nanostructures, including light elements. PAET has the potential to significantly expand the range of nanostructures that can be resolved in 3D at atomic resolution, and provide deeper insights into the atomic-scale underpinnings of material properties
 
 - [(2015) 3D positions of individual atoms in materials revealed by electron tomography](https://dx.doi.org/10.1038/nmat4426)
 - [(2017) Deciphering chemical order/disorder and material properties at the single-atom level](dx.doi.org/10.1038/nature21042)
@@ -44,23 +61,17 @@ Our group pioneered the development of ptychographic atomic electron tomography,
 - [(2024) Atomic-scale identification of active sites of oxygen reduction nanocatalysts](https://doi.org/10.1038/s41929-024-01175-8)
 
 
+
 ## Atomically Disordered Materials
 
 
-
-## Materials Science Characterization
+<!-- ## Materials Science Characterization -->
 
 
 
 ## Data Analysis for Characterization Science
 
 
-
-
-
-## 4DSTEM Analysis with py4DSTEM
-
-Four-Dimensional Scanning Transmission Electron Microscopy
 
 
 

@@ -203,7 +203,7 @@ Received PhD in Mary Scott's group at UC Berkeley.  Now working as a Research Sc
 
 Received her PhD in Pinshane Huang's group at UIUC. Worked as postdoc in Xi Jiang's group and Colin Ophus' group at Berkeley Lab. Currently a Scientist working at Exponent.
 
-[Structural Complexities in Sodium Ion Conductive Antiperovskite Revealed by Cryogenic Transmission Electron Microscopy](@https://doi.org/10.1021/acs.nanolett.4c01996)
+[Structural complexities in sodium ion conductive antiperovskite revealed by cryo-TEM](@https://doi.org/10.1021/acs.nanolett.4c01996)
 
 
 ### Hannah Devyldere

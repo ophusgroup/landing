@@ -4,7 +4,7 @@ title: Home
 
 ## About
 
-Welcome to the Colin Ophus Lab (COLAB) website! Our group performs research in computational imaging, electron microscopy, data analysis, and materials science. 
+Welcome to the Colin Ophus Lab (COLAB) website! Our group performs research in computational imaging, electron microscopy, data analysis, and materials science.
 
 
 ## Current Positions

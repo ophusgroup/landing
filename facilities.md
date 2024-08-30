@@ -1,6 +1,6 @@
 ---
-title: Facilities
-short_title: Facilities and Equipment
+title: Facilities and Equipment
+short_title: Facilities
 ---
 
 
