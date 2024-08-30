@@ -11,12 +11,17 @@ project:
     - file: papers.md
     - file: facilities.md
     - file: teaching.md
+    - file: funding.md
   abbreviations:
     4DSTEM: four dimensional scanning transmission electron microscopy
+    4DSCED: four dimensional scanning confocal electron diffraction
     ADF: annular dark field
+    AET: atomic electron tomography
     BF: bright field
     BibTeX: portmanteau of of “bibliography” and TeX (LaTeX)
+    DOE: Department of Energy
     DOI: digital object identifier
+    EELS: electron energy loss spectroscopy
     EM: Elemental Microscopy
     EWR: exit wave reconstruction
     FAIR: findable, accessible, interoperable, and reusable
@@ -32,9 +37,13 @@ project:
     PDF: portable document format
     py4DSTEM: python four dimensional scanning transmission electron microscopy
     SCGSR: science graduate student research
+    SLAC: Stanford Linear Accelerator Center
     SNSF: Stanford Nano Shared Facilities
     SPM: scanning probe microscopy
     STEM: scanning transmission electron microscopy
+    TRI: Toyota Research Institute
+    US: United States
+    XEDS: x-ray energy dispersive spectrometry
 site:
   template: book-theme
   domains:
