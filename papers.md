@@ -1,5 +1,5 @@
 ---
-title: Peer-Reviewed Publications
+title: Peer-Reviewed Publications (200)
 short_title: Publications
 ---
 

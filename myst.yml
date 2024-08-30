@@ -34,8 +34,9 @@ project:
     M&M: Microscopy and Microanalysis
     MIDI: matched illumination and detector interferometry
     NCEM: National Center for Electron Microscopy
+    PAET: ptychographic atomic electron tomography
     PDF: portable document format
-    py4DSTEM: python four dimensional scanning transmission electron microscopy
+    py4DSTEM: python toolkit for 4DSTEM analysis
     SCGSR: science graduate student research
     SLAC: Stanford Linear Accelerator Center
     SNSF: Stanford Nano Shared Facilities

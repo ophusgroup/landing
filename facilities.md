@@ -6,11 +6,18 @@ short_title: Facilities and Equipment
 
 ## NCEM, Berkeley Lab
 
-
 ```{image} /images/facilities/ncem_foundry.png
 :alt: NCEM
 :class: float-right
-:width: 670px
+:width: 640px
+:align: center
+```
+
+
+```{image} /images/facilities/ncem_foundry_buildings.jpg
+:alt: NCEM
+:class: float-right
+:width: 700px
 :align: center
 ```
 

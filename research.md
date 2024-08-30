@@ -17,29 +17,51 @@ However, we now have direct electron detectors which can operate at speeds up to
 
 Our group has developed many kinds of 4DSTEM experiments, including nanobeam orientation and phase mapping, inversion of multiple scattering with physics and machine learning approaches, ptychographic imaging and atomic electron tomography, and many others.
 
-- [2023 review on STEM in materials science](@doi.org/10.1146/annurev-matsci-080921-092646)
-- [2019 review on 4DSTEM](@doi.org/10.1017/S1431927619000497)
+- [(2019) Review on 4DSTEM](doi.org/10.1017/S1431927619000497)
+- [(2021) 4DSTEM of beam-sensitive Materials](https://doi.org/10.1021/acs.accounts.1c00073)
+- [(2023) Review on STEM in materials science](doi.org/10.1146/annurev-matsci-080921-092646)
 
 
 
 ## Atomic Electron Tomography
 
+Atomic electron tomography (AET) reconstructs the three-dimensional structures of materials at atomic resolution. By recording high-resolution STEM images from many projection directions and then using tomographic reconstruction algorithms, we can use AET to map the 3D positions and species of atoms within complex nanostructures. This method is invaluable for studying defects, interfaces, and other structural intricacies in materials that influence their properties. AET has transformative applications in materials science, catalysis, and nanotechnology, offering unprecedented insights into the atomic-scale architecture of advanced materials.
 
 
+:::{figure} ./images/research/figure_AET_ZrTe_DWCNT.jpg
+:align: center
+:width: 500px
+ZrTe nanowire encapsulated in double-walled carbon nanotube solved with, from @doi.org/10.1038/s41467-023-43634-z.
+:::
+
+Our group pioneered the development of ptychographic atomic electron tomography, where we combined ptychography imaging with AET. This approach significantly enhances the precision and sensitivity of atomic structure determination, enabling the visualization of complex nanostructures, including light elements. PAET has the potential to significantly expand the range of nanostructures that can be resolved in 3D at atomic resolution, and provide deeper insights into the atomic-scale underpinnings of material properties
+
+
+- [(2015) 3D positions of individual atoms in materials revealed by electron tomography](https://dx.doi.org/10.1038/nmat4426)
+- [(2017) Deciphering chemical order/disorder and material properties at the single-atom level](dx.doi.org/10.1038/nature21042)
+- [(2019) Observing crystal nucleation in four dimensions using AET](https://doi.org/10.1038/s41586-019-1317-x)
+- [(2023) Solving complex nanostructures with PAET](doi.org/10.1038/s41467-023-43634-z)
+- [(2024) Atomic-scale identification of active sites of oxygen reduction nanocatalysts](https://doi.org/10.1038/s41929-024-01175-8)
 
 
 ## Atomically Disordered Materials
 
 
 
-
-## 4DSTEM Analysis
-
-Four-Dimensional Scanning Transmission Electron Microscopy
+## Materials Science Characterization
 
 
 
 ## Data Analysis for Characterization Science
+
+
+
+
+
+## 4DSTEM Analysis with py4DSTEM
+
+Four-Dimensional Scanning Transmission Electron Microscopy
+
 
 
 
