@@ -62,20 +62,39 @@ Our group pioneered the development of ptychographic atomic electron tomography,
 
 
 
-## Atomically Disordered Materials
 
 
 <!-- ## Materials Science Characterization -->
 
 
 
-## Data Analysis for Characterization Science
+## Data Analysis for Materials Characterization Science
+
+## Atomic Resolution Imaging
+
+## Scanning Probe Drift Correction
 
 
 
+## ML Inversion of Multiple Scattering
+
+
+## ML Characterization of Disordered Materials
 
 
 
 ## Quantum Mechanical Scattering Simulations
+
+### The PRSIM Algorithm
+
+
+### The Prismatic Code
+
+
+
+### py4DSTEM Diffraction Simulations
+
+
+
 
 

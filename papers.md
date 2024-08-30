@@ -18,7 +18,7 @@ short_title: Publications
 
 - [Ion Implantation-Induced Plastic Phenomena in Metallic Alloys](https://doi.org/10.1007/s11837-024-06418-4)
 
-- [Direct Imaging of the Crystalline Domains and Their Orientation in the PS-b-PEO Block Copolymer with 4D-STEM](https://doi.org/10.1021/acs.macromol.3c02231)
+- [Direct Imaging of the Crystalline Domains and Their Orientation in the PS-b-PEO Block Copolymer with 4DSTEM](https://doi.org/10.1021/acs.macromol.3c02231)
 
 - [Electronic structure along Sm$_2$Co$_3$Ge$_5$ twin boundaries](https://doi.org/10.1016/j.actamat.2024.119831)
 
@@ -73,7 +73,7 @@ short_title: Publications
 
 - [Probing the atomically diffuse interfaces in Pd\@Pt core-shell nanoparticles in three dimensions](https://doi.org/10.1038/s41467-023-38536-z)
     
-- [Defect contrast with 4D-STEM: Understanding crystalline order with virtual detectors and beam modification](https://doi.org/10.1093/micmic/ozad045)
+- [Defect contrast with 4DSTEM: Understanding crystalline order with virtual detectors and beam modification](https://doi.org/10.1093/micmic/ozad045)
     
 - [The mechanism of twin thickening and the elastic strain state of TWIP steel nanotwins](https://doi.org/10.1016/j.msea.2023.145005)
     
@@ -85,9 +85,9 @@ short_title: Publications
     
 - [Competition between exchange and magnetostatic energies in domain pattern transfer from BaTiO$_3$(111) to a Ni thin film](https://doi.org/10.1103/PhysRevMaterials.7.034403)
     
-- [Robust design of semi-automated clustering models for 4D-STEM datasets](https://doi.org/10.1063/5.0130546)
+- [Robust design of semi-automated clustering models for 4DSTEM datasets](https://doi.org/10.1063/5.0130546)
 
-- [4D-STEM reveals crystallization mechanisms of organic semiconductors on graphene](https://doi.org/10.1557/s43579-022-00310-5)
+- [4DSTEM reveals crystallization mechanisms of organic semiconductors on graphene](https://doi.org/10.1557/s43579-022-00310-5)
 
 - [Formation of hierarchically ordered structures in conductive polymers to enhance the performances of lithium-ion batteries](https://doi.org/10.1038/s41560-022-01176-6)
     
@@ -105,7 +105,7 @@ short_title: Publications
         
 - [Accurate quantification of lattice temperature dynamics from ultrafast electron diffraction of single-crystal films using dynamical scattering simulations](https://doi.org/10.1063/4.0000170)
         
-- [Analysis of Interpretable Data Representations for 4D-STEM Using Unsupervised Learning](https://doi.org/10.1017/S1431927622012259)
+- [Analysis of Interpretable Data Representations for 4DSTEM Using Unsupervised Learning](https://doi.org/10.1017/S1431927622012259)
     
 - [Flexible CO$_2$ Sensor Architecture with Selective Nitrogen Functionalities by One-Step Laser-Induced Conversion of Versatile Organic Ink](https://doi.org/10.1002/adfm.202207406)
 
@@ -144,7 +144,7 @@ short_title: Publications
     
 - [Correlative analysis of structure and chemistry of Li$_x$FePO$_4$ platelets using 4DSTEM and x-ray ptychography](https://doi.org/10.1016/j.mattod.2021.10.031)
 
-- [A Fast Algorithm for Scanning Transmission Electron Microscopy Imaging and 4D-STEM Diffraction Simulations](https://doi.org/10.1017/S1431927621012083)
+- [A Fast Algorithm for Scanning Transmission Electron Microscopy Imaging and 4DSTEM Diffraction Simulations](https://doi.org/10.1017/S1431927621012083)
 
 - [Prismatic 2.0 - Simulation Software for STEM and HRTEM](https://doi.org/10.1016/j.micron.2021.103141)
 
@@ -158,7 +158,7 @@ short_title: Publications
 
 - [Switching between Magnetic Bloch and Néel Domain Walls with Anisotropy Modulations](https://doi.org/10.1103/PhysRevLett.127.127203)
     
-- [Nanoscale characterization of crystalline and amorphous phases in silicon oxycarbide ceramics using 4D-STEM](https://doi.org/10.1016/j.matchar.2021.111512)
+- [Nanoscale characterization of crystalline and amorphous phases in silicon oxycarbide ceramics using 4DSTEM](https://doi.org/10.1016/j.matchar.2021.111512)
     
 - [Theory and application of the vector pair correlation function for real-space crystallographic analysis of order/disorder correlations from STEM images](https://doi.org/10.1063/5.0058928)
 
@@ -168,7 +168,7 @@ short_title: Publications
 
 - [Deep Learning Segmentation of Complex Features in Atomic-Resolution Phase-Contrast Transmission Electron Microscopy Images](https://doi.org/10.1017/S1431927621000167)
     
-- [4DSTEM of Beam-Sensitive Materials](https://doi.org/10.1021/acs.accounts.1c00073)
+- [4DSTEM of beam-sensitive Materials](https://doi.org/10.1021/acs.accounts.1c00073)
     
 - [Percolation of Ion-Irradiation-Induced Disorder in Complex Oxide Interfaces](https://doi.org/10.1021/acs.nanolett.1c01651)
 
@@ -209,7 +209,7 @@ short_title: Publications
     
 - [Highly Active Rutile TiO$_2$ Nanocrystalline Photocatalysts](https://doi.org/10.1021/acsami.0c03150)
 
-- [Short-range order and its impact on the CrCoNi medium-entropy alloy](https://doi.org/10.1016/j.ultramic.2019.112890)
+- [Short-range order and its impact on the CrCoNi medium-entropy alloy](https://doi.org/10.1038/s41586-020-2275-z)
 
 - [Tuning the Properties of Zero-Field Room Temperature Ferromagnetic Skyrmions by Interlayer Exchange Coupling](https://doi.org/10.1021/acs.nanolett.0c00137)
     
@@ -217,13 +217,13 @@ short_title: Publications
     
 - [Structural Implications of Interfacial Hydrogen Bonding in Hydrated Wyoming-Montmorillonite Clay](https://doi.org/10.1021/acs.jpcc.9b11339)
     
-- [Patterned Probes for High Precision 4D-STEM Bragg Measurements](https://doi.org/10.1016/j.ultramic.2019.112890)
+- [Patterned Probes for High Precision 4DSTEM Bragg Measurements](https://doi.org/10.1016/j.ultramic.2019.112890)
 
 - [Design and Synthesis of Multigrain Nanocrystals via Geometric Misfit Strain](https://doi.org/10.1038/s41586-019-1899-3)
    
 - [Linear-scaling algorithm for rapid computation of inelastic transitions in the presence of multiple electron scattering](https://doi.org/10.1103/PhysRevResearch.1.033186)
 
-- [A multiple scattering algorithm for three dimensional phase contrast atomic electron tomography](https://doi.org/10.1016/j.ultramic.2019.112860)
+- [A multiple scattering algorithm for 3D phase contrast AET](https://doi.org/10.1016/j.ultramic.2019.112860)
 
 
 ## 2019 (20)
@@ -248,7 +248,7 @@ short_title: Publications
    
 - [Observing crystal nucleation in four dimensions using atomic electron tomography](https://doi.org/10.1038/s41586-019-1317-x)
 
-- [4D-STEM: From scanning nanodiffraction to ptychography and beyond](https://doi.org/10.1017/S1431927619000497)
+- [4DSTEM: From scanning nanodiffraction to ptychography and beyond](https://doi.org/10.1017/S1431927619000497)
     
 - [Interplay between Short‐and Long‐Ranged Forces Leading to the Formation of Ag Nanoparticle Superlattice](https://doi.org/10.1002/smll.201901966)
 
