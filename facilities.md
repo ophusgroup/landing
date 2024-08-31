@@ -6,13 +6,12 @@ short_title: Facilities
 
 ## NCEM, Berkeley Lab
 
-```{image} /images/facilities/ncem_foundry.png
+<!-- ```{image} /images/facilities/ncem_foundry.png
 :alt: NCEM
 :class: float-right
 :width: 640px
 :align: center
-```
-
+``` -->
 
 ```{image} /images/facilities/ncem_foundry_buildings.jpg
 :alt: NCEM
