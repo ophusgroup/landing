@@ -17,7 +17,7 @@ Scanning transmission electron microscopy (STEM) has become an essential tool fo
 
 However, we now have direct electron detectors which can operate at speeds up to 120,000 frames / second. These detectors allow us to record a full 2D image of the diffracted electron beam over a 2D grid of probe positions, generated a 4D dataset. We therefore coined the term four-dimensional scanning transmission electron microscopy (4DSTEM) to describe this family of experiments.
 
-Our group has developed many kinds of 4DSTEM experiments, including nanobeam orientation and phase mapping, inversion of multiple scattering with physics and machine learning approaches, ptychographic imaging and atomic electron tomography, and many others.
+Our group has developed many kinds of 4DSTEM experiments, including nanobeam orientation and phase mapping, inversion of multiple scattering with physics and machine learning approaches, ptychographic imaging, ptychographic atomic electron tomography, and many others.
 
 - [(2019) Review on 4DSTEM](doi.org/10.1017/S1431927619000497)
 - [(2021) 4DSTEM of beam-sensitive Materials](https://doi.org/10.1021/acs.accounts.1c00073)
@@ -27,6 +27,13 @@ Our group has developed many kinds of 4DSTEM experiments, including nanobeam ori
 
 
 ### Analysis with py4DSTEM
+
+```{image} /images/research/py4DSTEM_logo_54_export.png
+:alt: py4DSTEM
+:class: float-right
+:width: 300px
+:align: right
+```
 
 4DSTEM experiments produce prodigious amounts of data - potentially millions of diffraction pattern images, each with tens of thousands of pixels. We have developed robust and efficient software to analyze these huge 4DSTEM datasets, primarily 
 
@@ -39,18 +46,14 @@ Four-Dimensional Scanning Transmission Electron Microscopy
 
 ## Atomic Electron Tomography
 
-### ADF-STEM
 
-Atomic electron tomography (AET) reconstructs the three-dimensional structures of materials at atomic resolution. By recording high-resolution STEM images from many projection directions and then using tomographic reconstruction algorithms, we can use AET to map the 3D positions and species of atoms within complex nanostructures. This method is invaluable for studying defects, interfaces, and other structural intricacies in materials that influence their properties. AET has transformative applications in materials science, catalysis, and nanotechnology, offering unprecedented insights into the atomic-scale architecture of advanced materials.
-
+### 4DSTEM Ptychography
 
 :::{figure} ./images/research/figure_AET_ZrTe_DWCNT.jpg
 :align: center
 :width: 500px
 ZrTe nanowire encapsulated in double-walled carbon nanotube solved with, from @doi.org/10.1038/s41467-023-43634-z.
 :::
-
-### 4DSTEM Ptychography
 
 Our group pioneered the development of ptychographic atomic electron tomography, where we combined ptychography imaging with AET. This approach significantly enhances the precision and sensitivity of atomic structure determination, enabling the visualization of complex nanostructures, including light elements. PAET has the potential to significantly expand the range of nanostructures that can be resolved in 3D at atomic resolution, and provide deeper insights into the atomic-scale underpinnings of material properties
 
@@ -61,6 +64,16 @@ Our group pioneered the development of ptychographic atomic electron tomography,
 - [(2024) Atomic-scale identification of active sites of oxygen reduction nanocatalysts](https://doi.org/10.1038/s41929-024-01175-8)
 
 
+
+
+
+### ADF-STEM
+
+Atomic electron tomography (AET) reconstructs the three-dimensional structures of materials at atomic resolution. By recording high-resolution STEM images from many projection directions and then using tomographic reconstruction algorithms, we can use AET to map the 3D positions and species of atoms within complex nanostructures. This method is invaluable for studying defects, interfaces, and other structural intricacies in materials that influence their properties. AET has transformative applications in materials science, catalysis, and nanotechnology, offering unprecedented insights into the atomic-scale architecture of advanced materials.
+
+
+
+### HRTEM Tomography
 
 
 
@@ -85,7 +98,7 @@ Our group pioneered the development of ptychographic atomic electron tomography,
 
 ## Quantum Mechanical Scattering Simulations
 
-### The PRSIM Algorithm
+### The PRISM Algorithm
 
 
 ### The Prismatic Code

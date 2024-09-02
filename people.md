@@ -14,12 +14,12 @@ title: People
 
 - Associate Professor, [Department of Materials Science and Engineering](https://mse.stanford.edu/), [Stanford University](https://www.stanford.edu/)
 - Center Fellow, [Precourt Institute for Energy](https://energy.stanford.edu/), [Stanford University](https://www.stanford.edu/)
-- Staff Scientist, [SLAC National Accelerator Laboratory](https://www6.slac.stanford.edu/)
+- Faculty Scientist, [SLAC National Accelerator Laboratory](https://www6.slac.stanford.edu/)
 - [Google Scholar](https://scholar.google.com/citations?hl=en&user=h5MPYJAAAAAJ)
 
 Colin received his BSc in Engineering Physics, and his PhD in Materials Engineering in [David Mitlin's](https://www.me.utexas.edu/people/faculty-directory/mitlin) group at the [University of Alberta](https://www.ualberta.ca/en/index.html) in Edmonton, Canada. He received an NSERC scholarship to pursue postdoctoral research working for [Velimir "Mimo" Radmilovic](https://www.sanu.ac.rs/en/member/radmilovic-velimir/) at Berkeley Lab and [Mark Asta](https://asta.mse.berkeley.edu/) at UC Berkeley. He then worked as a Project Scientist, Research Scientist, and Staff Scientist at the [National Center for Electron Microscopy](https://foundry.lbl.gov/about/facilities/the-national-center-for-electron-microscopy-ncem/) (NCEM), part of the [Molecular Foundry](https://foundry.lbl.gov/) user facility at [Lawrence Berkeley Lab](https://www.lbl.gov/). 
 
-His research focuses on experimental methods, reconstruction algorithms, and software codes for simulation, analysis, and instrument design of TEM, STEM and 4DSTEM. He was awarded a US Department of Energy (DOE) Early Career award in 2018, and the [Burton Medal](https://microscopy.org/Society-Awards-Recipients#2022) from the [Microscopy Society of America](https://microscopy.org/) (MSA) in 2018. He has published over 200 peer-reviewed publications, and given over 100 invited talks and workshops around the world. Colin advocates for open science and his group develops open-source scientific software such as the [Prismatic STEM simulation](https://prism-em.com/) and [py4DSTEM analysis](https://github.com/py4dstem/py4DSTEM) codes. He is also the editor-in-chief for the interactive web-based scientific journal [Elemental Microscopy](https://www.elementalmicroscopy.com/).
+Colin's research focuses on experimental methods, reconstruction algorithms, and software codes for simulation, analysis, and instrument design of TEM, STEM and 4DSTEM. He was awarded a US Department of Energy (DOE) Early Career award in 2018, and the [Burton Medal](https://microscopy.org/Society-Awards-Recipients#2022) from the [Microscopy Society of America](https://microscopy.org/) (MSA) in 2018. He has published over 200 peer-reviewed publications, and given over 100 invited talks and workshops around the world. Colin advocates for open science and his group develops open-source scientific software such as the [Prismatic STEM simulation](https://prism-em.com/) and [py4DSTEM analysis](https://github.com/py4dstem/py4DSTEM) codes. He is also the editor-in-chief for the interactive web-based scientific journal [Elemental Microscopy](https://www.elementalmicroscopy.com/).
 
 
 
@@ -40,6 +40,21 @@ Steph received her PhD at Northwestern University in the Dravid Group. During he
 
 
 
+### Arthur McCray
+
+```{image} /images/people/McCrayArthur.jpg
+:alt: Colin
+:class: bg-primary
+:width: 200px
+:align: right
+```
+
+Arthur McCray received his PhD in Applied Physics at Northwestern University, supervised by Amanda Petford-Long.
+
+Arthur is the lead developer of the [pyLorenz](https://github.com/PyLorentz/PyLorentz) software package.
+
+
+
 ### Georgios Varnavides
 
 ```{image} /images/people/VarnavidesGeorge.jpg
@@ -56,19 +71,6 @@ Georgios Varnavides is a postdoctoral Miller research fellow at the University o
 
 [George's website](https://gvarnavides.com/about/)
 
-
-### Arthur McCray
-
-```{image} /images/people/McCrayArthur.jpg
-:alt: Colin
-:class: bg-primary
-:width: 200px
-:align: right
-```
-
-Arthur McCray received his PhD in Applied Physics at Northwestern University, supervised by Amanda Petford-Long.
-
-Arthur is the lead developer of the [pyLorenz](https://github.com/PyLorentz/PyLorentz) software package.
 
 
 ## PhD Students
