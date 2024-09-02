@@ -47,6 +47,7 @@ Steph received her PhD at Northwestern University in the Dravid Group. During he
 :image: /images/people/McCrayArthur.jpg
 :github: Art-MC
 :email: armccray@lbl.gov
+:reverse:
 
 Arthur McCray received his PhD in Applied Physics at Northwestern University, supervised by Amanda Petford-Long.
 
@@ -63,7 +64,6 @@ Arthur is the lead developer of the [pyLorenz](https://github.com/PyLorentz/PyLo
 :twitter: g_varnavides
 :orcid: 0000-0001-8338-3323
 :website: https://gvarnavides.com/about/
-:reverse:
 
 Georgios Varnavides is a postdoctoral Miller research fellow at the University of California, Berkeley, where he is developing new computational imaging modalities to observe structure and function in materials with high spatial resolution.
 
