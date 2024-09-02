@@ -31,6 +31,7 @@ We want to thank our funding agencies and the generous individuals for funding o
 
 
 - TRI generously sponsored the development of the [py4DSTEM](https://github.com/py4dstem/py4DSTEM) open-source analysis toolkit for 4DSTEM, developed by our group.
+- Read the TRI [py4DSTEM writeup!](https://www.tri.global/research/py4dstem-software-package-four-dimensional-scanning-transmission-electron-microscopy-data)
 - In 2023,  [py4DSTEM](https://github.com/py4dstem/py4DSTEM) was awarded an [R&D100 award](https://www.rdworldonline.com/rd-100-2023-winner/py4dstem/)!
 
 

@@ -6,13 +6,13 @@ project:
   description: Understanding materials atom by atom
   toc:
     - file: index.md
+    - file: news.md
     - file: people.md
     - file: research.md
     - file: papers.md
     - file: facilities.md
     - file: teaching.md
     - file: funding.md
-    - file: news.md
   abbreviations:
     4DSTEM: four dimensional scanning transmission electron microscopy
     4DSCED: four dimensional scanning confocal electron diffraction
