@@ -12,6 +12,7 @@ project:
     - file: facilities.md
     - file: teaching.md
     - file: funding.md
+    - file: news.md
   abbreviations:
     4DSTEM: four dimensional scanning transmission electron microscopy
     4DSCED: four dimensional scanning confocal electron diffraction
@@ -48,5 +49,6 @@ project:
     XEDS: x-ray energy dispersive spectrometry
 site:
   template: book-theme
+  title: Colin Ophus Lab
   domains:
-    - colab.curve.space
+    - colab-landing.curve.space
