@@ -2,15 +2,15 @@
 title: Research
 ---
 
-
-
-## 4DSTEM 
+## 4DSTEM
 
 ### Experiments
 
++++ {"class": "col-"}
+
 :::{figure} ./videos/research_4DSTEM.mp4
-:align: right
-Comparing conventional ADF-STEM and 4DSTEM. 
+:class: md:float-right ml-4
+Comparing conventional ADF-STEM and 4DSTEM.
 :::
 
 Scanning transmission electron microscopy (STEM) has become an essential tool for materials science research, where it has been applied to atomic-scale imaging, diffraction, spectroscopy, and 3D tomography of many materials. In conventional STEM imaging, we scan a converged electron probe in a 2D grid over the sample, recording 1-5 intensity values from detectors which count the electrons scattered over a large angular range. Complex electron diffraction patterns which encode a lot of atomic-scale sample information are therefore reduced to only a few measurement values in conventional STEM imaging.
@@ -23,26 +23,20 @@ Our group has developed many kinds of 4DSTEM experiments, including nanobeam ori
 - [(2021) 4DSTEM of beam-sensitive Materials](https://doi.org/10.1021/acs.accounts.1c00073)
 - [(2023) Review on STEM in materials science](doi.org/10.1146/annurev-matsci-080921-092646)
 
-
-
-
 ### Analysis with py4DSTEM
 
 ```{image} /images/research/py4DSTEM_logo_54_export.png
 :alt: py4DSTEM
-:class: float-right
+:class: md:float-right ml-4
 :width: 300px
 :align: right
 ```
 
 4DSTEM experiments produce prodigious amounts of data - potentially millions of diffraction pattern images, each with tens of thousands of pixels. We have developed robust and efficient software to analyze these huge 4DSTEM datasets, primarily 
 
-To analyze this data, 
+To analyze this data,
 
 Four-Dimensional Scanning Transmission Electron Microscopy
-
-
-
 
 ## Atomic Electron Tomography
 
@@ -79,35 +73,20 @@ Atomic electron tomography (AET) reconstructs the three-dimensional structures o
 
 <!-- ## Materials Science Characterization -->
 
-
-
 ## Data Analysis for Materials Characterization Science
 
 ## Atomic Resolution Imaging
 
 ## Scanning Probe Drift Correction
 
-
-
 ## ML Inversion of Multiple Scattering
 
-
 ## ML Characterization of Disordered Materials
-
-
 
 ## Quantum Mechanical Scattering Simulations
 
 ### The PRISM Algorithm
 
-
 ### The Prismatic Code
 
-
-
 ### py4DSTEM Diffraction Simulations
-
-
-
-
-
