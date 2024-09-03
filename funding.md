@@ -2,7 +2,7 @@
 title: Funding and Awards
 ---
 
-We want to thank our funding agencies and the generous individuals for funding our research! 
+We want to thank the funding agencies and generous individuals who have funded our research! 
 
 
 ## Department of Energy

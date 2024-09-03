@@ -32,14 +32,27 @@ Our group has developed many kinds of 4DSTEM experiments, including nanobeam ori
 :align: right
 ```
 
-4DSTEM experiments produce prodigious amounts of data - potentially millions of diffraction pattern images, each with tens of thousands of pixels. We have developed robust and efficient software to analyze these huge 4DSTEM datasets, primarily 
+4DSTEM experiments produce prodigious amounts of data - potentially millions of diffraction pattern images, each with tens of thousands of pixels. We have developed robust and efficient algorithms to analyze these huge 4DSTEM datasets, primarily implemented into open-source py4DSTEM python package developed by our group for analysis of 4DSTEM data. py4DSTEM provides researchers with a powerful, flexible, and user-friendly toolkit for processing and interpreting large-scale 4DSTEM data. The code supports a wide range of functionalities, including
 
-To analyze this data,
+#### nanobeam crystalline diffraction data
+- diffraction pattern indexing for orientation and phase mapping
+- strain mapping
+- structure classification
+- ML inversion of multiple scattering
 
-Four-Dimensional Scanning Transmission Electron Microscopy
+#### nanobeam amorphous diffraction data
+- pair distribution function (PDF) mapping
+- fluctuation electron microscopy (FEM)
+- strain mapping
+
+#### phase contrast STEM
+- center of mass-differential phase contrast (CoM-DPC)
+- parallax or tilt-corrected bright field imaging
+- ptychography
+- joint ptychography-tomography
+
 
 ## Atomic Electron Tomography
-
 
 ### 4DSTEM Ptychography
 
