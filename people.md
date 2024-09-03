@@ -100,8 +100,10 @@ Andrew is a PhD candidate in the Department of Physics at the University of Oreg
 :name: Chris Hall
 :position: Administrator
 :pronouns: he/him
+:image: /images/people/HallChris.jpg
+:email: chris.hall@stanford.edu
 
-COLAB admin in the Materials Science and Engineering department at Stanford.
+Chris has worked in MSE Administration for a little over a year, after previous administrative positions at Stanford. Please let him know if he can help with anything.
 :::
 
 ## Former Members
