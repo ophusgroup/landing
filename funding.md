@@ -4,6 +4,7 @@ title: Funding and Awards
 
 We want to thank the funding agencies and generous individuals who have funded our research! 
 
++++ {"class": "col-"}
 
 ## Department of Energy
 
@@ -18,10 +19,6 @@ We want to thank the funding agencies and generous individuals who have funded o
 - The US DOE has funded many of our research projects, including the [4D Camera Distillery](https://foundry.lbl.gov/2020/10/28/foundry-funded-to-lead-aiml/).
 
 
-
-## Toyota Research Institute
-
-
 ```{image} /images/funding/toyota_research_institute.png
 :alt: TRI
 :class: float-right
@@ -29,12 +26,14 @@ We want to thank the funding agencies and generous individuals who have funded o
 :align: right
 ```
 
+## Toyota Research Institute
 
 - TRI generously sponsored the development of the [py4DSTEM](https://github.com/py4dstem/py4DSTEM) open-source analysis toolkit for 4DSTEM, developed by our group.
 - Read the TRI [py4DSTEM writeup!](https://www.tri.global/research/py4dstem-software-package-four-dimensional-scanning-transmission-electron-microscopy-data)
 - In 2023,  [py4DSTEM](https://github.com/py4dstem/py4DSTEM) was awarded an [R&D100 award](https://www.rdworldonline.com/rd-100-2023-winner/py4dstem/)!
 
 
++++ {"class": "col-"}
 
 ## Microscopy Society of America
 
