@@ -52,6 +52,15 @@ Our group has developed many kinds of 4DSTEM experiments, including nanobeam ori
 - joint ptychography-tomography
 
 
+### Custom apertures
+
+Crystalline diffraction patterns
+
+
+
+
+
+
 ## Atomic Electron Tomography
 
 ### 4DSTEM Ptychography

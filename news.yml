@@ -15,10 +15,17 @@ news:
     url: https://foundry.lbl.gov/2024/01/27/solving-complex-nanostructures-with-ptychographic-atomic-electron-tomography/
     date: January 2024
     image: https://foundry.lbl.gov/wp-content/uploads/sites/2/2024/02/Ophus-PAET-268x140.jpg
-  - title: Experimental test of the topological stability of magnetic skyrmions
-    url: https://foundry.lbl.gov/2022/08/27/experimental-test-of-the-topological-stability-of-magnetic-skyrmions/
-    date: August 2022
-    image: https://foundry.lbl.gov/wp-content/uploads/sites/2/2022/08/Chiralityandskyrmionnumberevolution-268x140.png
+  
+  - title: Stephanie Ribet wins MRS gold graduate student award
+    url: https://www.mrs.org/careers-advancement/awards/spring-awards/graduate-student-awards/past-recipients
+    date: Nov 2022
+    image: /images/news/stephanie-ribet-mrs-2022.jpg
+
+
+  # - title: Experimental test of the topological stability of magnetic skyrmions
+  #   url: https://foundry.lbl.gov/2022/08/27/experimental-test-of-the-topological-stability-of-magnetic-skyrmions/
+  #   date: August 2022
+  #   image: https://foundry.lbl.gov/wp-content/uploads/sites/2/2022/08/Chiralityandskyrmionnumberevolution-268x140.png
   - title: Foundry’s Colin Ophus Awarded the Burton Medal from the Microscopy Society of America
     url: https://foundry.lbl.gov/2022/04/21/colin-ophus-awarded-burton-medal/
     date: April 2022
@@ -43,14 +50,14 @@ news:
     url: https://foundry.lbl.gov/2020/10/27/enabling-the-data-driven-future-of-microscopy/
     date: October 2020
     image: https://foundry.lbl.gov/wp-content/uploads/sites/2/2020/10/NPSI_NexTEM_microscopy_1600x1200_hero-268x140.jpg
-  - title: Creation of Skyrmions in van der Waals ferromagnet Fe3GeTe2
-    url: https://foundry.lbl.gov/2020/09/20/first-photo-induced-melting-of-tantalum-ditelluride-2/
-    date: September 2020
-    image: https://foundry.lbl.gov/wp-content/uploads/sites/2/2021/09/Ferromagnet_skyrmions-250x140.jpg
-  - title: Taking Magnetic Memory by Storm
-    url: https://foundry.lbl.gov/2020/09/18/skyrmions/
-    date: September 2020
-    image: https://foundry.lbl.gov/wp-content/uploads/sites/2/2020/07/Skyrmions-Nanoletters-268x140.gif
+  # - title: Creation of Skyrmions in van der Waals ferromagnet Fe3GeTe2
+  #   url: https://foundry.lbl.gov/2020/09/20/first-photo-induced-melting-of-tantalum-ditelluride-2/
+  #   date: September 2020
+  #   image: https://foundry.lbl.gov/wp-content/uploads/sites/2/2021/09/Ferromagnet_skyrmions-250x140.jpg
+  # - title: Taking Magnetic Memory by Storm
+  #   url: https://foundry.lbl.gov/2020/09/18/skyrmions/
+  #   date: September 2020
+  #   image: https://foundry.lbl.gov/wp-content/uploads/sites/2/2020/07/Skyrmions-Nanoletters-268x140.gif
   - title: Short-Range Order and Its Impact on the CrCoNi Medium Entropy Alloy
     url: https://foundry.lbl.gov/2020/05/14/short-range-order-and-its-impact-on-the-crconi-medium-entropy-alloy/
     date: May 2020
@@ -79,10 +86,10 @@ news:
     url: https://foundry.lbl.gov/2019/06/26/researchers-capture-crystal-nucleation-with-atomic-resolution-in-4d/
     date: June 2019
     image: https://foundry.lbl.gov/wp-content/uploads/sites/2/2019/07/4Dtomography-268x140.jpg
-  - title: Dynamic Deformability of Individual PbSe Nanocrystals During Superlattice Phase Transitions
-    url: https://foundry.lbl.gov/2019/06/07/dynamic-deformability-of-individual-pbse-nanocrystals/
-    date: June 2019
-    image: https://foundry.lbl.gov/wp-content/uploads/sites/2/2019/07/PbSeNanocrystals-268x140.jpg
+  # - title: Dynamic Deformability of Individual PbSe Nanocrystals During Superlattice Phase Transitions
+  #   url: https://foundry.lbl.gov/2019/06/07/dynamic-deformability-of-individual-pbse-nanocrystals/
+  #   date: June 2019
+  #   image: https://foundry.lbl.gov/wp-content/uploads/sites/2/2019/07/PbSeNanocrystals-268x140.jpg
   - title: Direct measurement of nanostructural change duringin situ deformation of a bulk metallic glass
     url: https://foundry.lbl.gov/2019/06/04/direct-measurement-of-nanostructural-change-during-in-situ-deformation-of-a-bulk-metallic-glass/
     date: June 2019
@@ -103,14 +110,14 @@ news:
     url: https://foundry.lbl.gov/2018/11/09/bringing-polymers-into-atomic-scale-focus-2/
     date: November 2018
     image: https://foundry.lbl.gov/wp-content/uploads/sites/2/2019/03/2018-11-13_A-268x140.jpg
-  - title: Chiral Ferrimagnetism in Amorphous Thin Films
-    url: https://foundry.lbl.gov/2018/09/11/chiral-ferrimagnetism-in-amorphous-thin-films/
-    date: September 2018
-    image: https://foundry.lbl.gov/wp-content/uploads/sites/2/2019/03/201810b-268x140.jpg
-  - title: 'Non-Crystal Clarity: Scientists Find Ordered Magnetic Patterns in Disordered Magnetic Material'
-    url: https://foundry.lbl.gov/2018/06/28/non-crystal-clarity-scientists-find-ordered-magnetic-patterns-in-disordered-magnetic-material/
-    date: June 2018
-    image: https://foundry.lbl.gov/wp-content/uploads/sites/2/2019/03/magnetic_domains-268x140.jpg
+  # - title: Chiral Ferrimagnetism in Amorphous Thin Films
+  #   url: https://foundry.lbl.gov/2018/09/11/chiral-ferrimagnetism-in-amorphous-thin-films/
+  #   date: September 2018
+  #   image: https://foundry.lbl.gov/wp-content/uploads/sites/2/2019/03/201810b-268x140.jpg
+  # - title: 'Non-Crystal Clarity: Scientists Find Ordered Magnetic Patterns in Disordered Magnetic Material'
+  #   url: https://foundry.lbl.gov/2018/06/28/non-crystal-clarity-scientists-find-ordered-magnetic-patterns-in-disordered-magnetic-material/
+  #   date: June 2018
+  #   image: https://foundry.lbl.gov/wp-content/uploads/sites/2/2019/03/magnetic_domains-268x140.jpg
   - title: Foundry’s Colin Ophus Receives DOE Early Career Research Award
     url: https://foundry.lbl.gov/2018/06/21/foundrys-colin-ophus-receives-doe-early-career-research-award/
     date: June 2018
@@ -123,18 +130,18 @@ news:
     url: https://foundry.lbl.gov/2017/09/13/bringing-atomic-mapping-to-the-mainstream/
     date: September 2017
     image: https://foundry.lbl.gov/wp-content/uploads/sites/2/2019/03/atomic-mapping-400-268x140.jpg
-  - title: Researchers Help Thin-Film Ferroelectrics Go Extreme
-    url: https://foundry.lbl.gov/2017/05/10/researchers-help-thin-film-ferroelectrics-go-extreme/
-    date: May 2017
-    image: https://foundry.lbl.gov/wp-content/uploads/sites/2/2019/05/wifi-space-istock670-433x340-268x140.jpg
-  - title: Scientists Determine Precise 3-D Location and Identity of All 23,000 Atoms in a Nanoparticle
-    url: https://foundry.lbl.gov/2017/02/01/scientists-determine-precise-3-d-location-and-identity-of-all-23000-atoms-in-a-nanoparticle/
-    date: February 2017
-    image: https://foundry.lbl.gov/wp-content/uploads/sites/2/2019/05/pic15b-268x140.jpg
-  - title: Subatomic Microscopy Key to Building New Classes of Materials
-    url: https://foundry.lbl.gov/2016/08/31/subatomic-microscopy-key-to-building-new-classes-of-materials/
-    date: August 2016
-    image: https://foundry.lbl.gov/wp-content/uploads/sites/2/2016/08/2vencat-thumbnail-268x140.jpg
+  # - title: Researchers Help Thin-Film Ferroelectrics Go Extreme
+  #   url: https://foundry.lbl.gov/2017/05/10/researchers-help-thin-film-ferroelectrics-go-extreme/
+  #   date: May 2017
+  #   image: https://foundry.lbl.gov/wp-content/uploads/sites/2/2019/05/wifi-space-istock670-433x340-268x140.jpg
+  # - title: Scientists Determine Precise 3-D Location and Identity of All 23,000 Atoms in a Nanoparticle
+  #   url: https://foundry.lbl.gov/2017/02/01/scientists-determine-precise-3-d-location-and-identity-of-all-23000-atoms-in-a-nanoparticle/
+  #   date: February 2017
+  #   image: https://foundry.lbl.gov/wp-content/uploads/sites/2/2019/05/pic15b-268x140.jpg
+  # - title: Subatomic Microscopy Key to Building New Classes of Materials
+  #   url: https://foundry.lbl.gov/2016/08/31/subatomic-microscopy-key-to-building-new-classes-of-materials/
+  #   date: August 2016
+  #   image: https://foundry.lbl.gov/wp-content/uploads/sites/2/2016/08/2vencat-thumbnail-268x140.jpg
   - title: New Form of Electron-beam Imaging Can See Elements that are ‘Invisible’ to Common Methods
     url: https://foundry.lbl.gov/2016/03/01/new-form-of-electron-beam-imaging-can-see-elements-that-are-invisible-to-common-methods/
     date: March 2016
@@ -147,7 +154,7 @@ news:
     url: https://foundry.lbl.gov/2015/09/30/new-technique-for-imaging-surface-and-bulk-atoms/
     date: September 2015
     image: https://foundry.lbl.gov/wp-content/uploads/sites/2/2019/05/20150917A-268x140.jpg
-  - title: Foundry and NCEM Staff Gather to Identify Scientific Synergies
-    url: https://foundry.lbl.gov/2013/11/30/foundry-and-ncem-staff-gather-to-identify-scientific-synergies/
-    date: November 2013
-    image: https://foundry.lbl.gov/wp-content/uploads/sites/2/2020/02/MFoundry_bldg_1764x1050-268x140.jpg
+  # - title: Foundry and NCEM Staff Gather to Identify Scientific Synergies
+  #   url: https://foundry.lbl.gov/2013/11/30/foundry-and-ncem-staff-gather-to-identify-scientific-synergies/
+  #   date: November 2013
+  #   image: https://foundry.lbl.gov/wp-content/uploads/sites/2/2020/02/MFoundry_bldg_1764x1050-268x140.jpg
