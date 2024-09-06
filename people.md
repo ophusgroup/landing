@@ -11,6 +11,7 @@ title: People
 :email: cophus@stanford.edu
 :github: cophus
 :twitter: ColinOphus
+:reverse:
 
 - Associate Professor, [Department of Materials Science and Engineering](https://mse.stanford.edu/), [Stanford University](https://www.stanford.edu/)
 - Center Fellow, [Precourt Institute for Energy](https://energy.stanford.edu/), [Stanford University](https://www.stanford.edu/)
@@ -33,6 +34,8 @@ Colin Ophus lab's research focuses on experimental methods, reconstruction algor
 :twitter: stephanieribet
 :github: smribet
 :orcid: 0000-0002-7117-066X
+:reverse:
+
 Steph received her PhD at Northwestern University in the Dravid Group. During her PhD, she was award an SCGSR from the US Deptartment of Energy for a research internship at Berkeley Lab. She is currently a postdoc working in Colin's group at Stanford and in Karen Bustillo's group at Berkeley Lab.
 
 ---
@@ -64,6 +67,7 @@ Arthur is the lead developer of the [pyLorenz](https://github.com/PyLorentz/PyLo
 :twitter: g_varnavides
 :orcid: 0000-0001-8338-3323
 :website: https://gvarnavides.com/about/
+:reverse:
 
 Georgios Varnavides is a postdoctoral Miller research fellow at the University of California, Berkeley, where he is developing new computational imaging modalities to observe structure and function in materials with high spatial resolution.
 
@@ -102,6 +106,7 @@ Andrew is a PhD candidate in the Department of Physics at the University of Oreg
 :pronouns: he/him
 :image: /images/people/HallChris.jpg
 :email: chris.hall@stanford.edu
+:reverse:
 
 Chris has worked in MSE Administration for a little over a year, after previous administrative positions at Stanford. Please let him know if he can help with anything.
 :::
@@ -112,6 +117,7 @@ Chris has worked in MSE Administration for a little over a year, after previous 
 :name: Benjamin Savitzky
 :position: Former Member
 :image: /images/people/SavitzkyBen.jpg
+:reverse:
 
 Formerly a PhD student in Lena Kourkoutis' group at Cornell and a postdoc in Colin Ophus' group at Berkeley Lab. Now working as a Principle Research Scientist at hBar Instruments.
 
@@ -163,6 +169,7 @@ Received her PhD in Mary Scott's group at UC Berkeley after interning in Colin's
 :name: Steven Zeltmann
 :position: Former Member
 :image: /images/people/ZeltmannSteven.jpg
+:reverse:
 
 Received his PhD in Andy Minor's group at UC Berkeley. Now working as a Staff Scientist in [PARADIM](@https://www.paradim.org/electronmicroscopy) at Cornell University.
 
@@ -188,6 +195,7 @@ Received PhD in Mary Scott's group at UC Berkeley. Now working as a Research Sci
 :name: Blanka Janicek
 :position: Former Member
 :image: /images/people/JanicekBlanka.jpg
+:reverse:
 
 Received her PhD in Pinshane Huang's group at UIUC. Worked as postdoc in Xi Jiang's group and Colin Ophus' group at Berkeley Lab. Currently a Scientist working at Exponent.
 
@@ -209,6 +217,7 @@ Former intern in Colin Ophus' group. Currently pursuing a PhD in Mary Scott's gr
 :name: Luis Rangel DaCosta
 :position: Former Member
 :image: /images/people/RangelDaCostaLuis.jpg
+:reverse:
 
 Former intern in Colin Ophus' group. Currently pursuing a PhD in Mary Scott's group at UC Berkeley.
 
@@ -237,6 +246,7 @@ Graduated PhD program in Andrew Minor's group at UC Berkeley. Postdoc in Christo
 :name: Rohini Sankaran
 :position: Former Member
 :image: /images/people/SankaranRohini.jpg
+:reverse:
 
 Received her PhD from Andy Minor's group and Daryl Chrzan's group at UC Berkeley. Worked as a Sr. Failure Analysis R&D Engineer at Intel. Currently a Staff Scientist at Lawrence Livermore National Lab.
 
@@ -257,6 +267,7 @@ Received his PhD from Pete Nellist's group at Oxford. Formerly a postdoc in Coli
 :::{person}
 :name: Milena Loper
 :position: Former Member
+:reverse:
 
 Former intern in Colin Ophus' group.
 :::
@@ -264,6 +275,7 @@ Former intern in Colin Ophus' group.
 :::{person}
 :name: Iris You
 :position: Former Member
+:reverse:
 
 Former intern in Colin Ophus' group.
 :::
@@ -271,6 +283,7 @@ Former intern in Colin Ophus' group.
 :::{person}
 :name: Levi Brown
 :position: Former Member
+:reverse:
 
 Former intern in Colin Ophus' group.
 :::

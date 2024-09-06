@@ -32,13 +32,13 @@ Our group has developed many kinds of 4DSTEM experiments, including nanobeam ori
 :align: right
 ```
 
-4DSTEM experiments produce prodigious amounts of data - potentially millions of diffraction pattern images, each with tens of thousands of pixels. We have developed robust and efficient algorithms to analyze these huge 4DSTEM datasets, primarily implemented into open-source py4DSTEM python package developed by our group for analysis of 4DSTEM data. py4DSTEM provides researchers with a powerful, flexible, and user-friendly toolkit for processing and interpreting large-scale 4DSTEM data. The code supports a wide range of functionalities, including
+4DSTEM experiments produce prodigious amounts of data - potentially millions of diffraction pattern images, each with tens of thousands of pixels. We have developed robust and efficient algorithms to analyze these huge 4DSTEM datasets, primarily implemented into open-source py4DSTEM python package developed by our group for analysis of 4DSTEM data. py4DSTEM provides researchers with a powerful, flexible, and user-friendly toolkit for processing and interpreting large-scale 4DSTEM data. The code supports a wide range of functionalities, including:
 
 #### nanobeam crystalline diffraction data
 - diffraction pattern indexing for orientation and phase mapping
 - strain mapping
 - structure classification
-- ML inversion of multiple scattering
+<!-- - ML inversion of multiple scattering -->
 
 #### nanobeam amorphous diffraction data
 - pair distribution function (PDF) mapping
@@ -52,12 +52,24 @@ Our group has developed many kinds of 4DSTEM experiments, including nanobeam ori
 - joint ptychography-tomography
 
 
+### ML Inversion of Multiple Scattering
+
+On of the most powerful aspects of electron microscopy is that electrons interact so strongly with matter - approximately ZZZ times more strongly than photons!  However, this strong interaction means that we need to make our samples extremely thin, thousands of times thinner than the diameter of a human hair. Ideally, we make samples so thin that most electrons *scatter* only a single time when passing through the material; however many samples are either too thick or contain heavy elements, and thus scatter the electron beam multiple times. This multiple scattering creates complex nonlinear contrast in our measured diffraction patterns, which cannot be analyzed with conventional analysis methods.
+
+Our group has devised a way to overcome the limitations of multiple scattering in crystalline samples - we use deep learning methods to predict the single-scattering signal from diffraction patterns which contain strong multiple scattering. This allows us to analyze much thicker samples with electron microscopy, and to measure material structure and properties much more accurately.
+
+[Disentangling multiple scattering with deep learning: application to strain mapping from electron diffraction patterns](@doi.org/10.1038/s41524-022-00939-9)
+
+### ML Characterization of Disordered Materials
+
+In the previous section, we saw how to invert multiple scattering signals from crystalline materials. But what about non-crystalline materials? Many important technological materials are highly disordered, including many functional oxides, silicate glasses, liquid or amorphous electrolytes, soft matter such as polymers, and many others. We are currently working to generalize our inversion methods to work on all materials, from fully disordered random liquids to highly ordered crystalline materials.
+
+
 ### Custom apertures
 
-Crystalline diffraction patterns
+As we saw above, diffraction patterns from crystalline materials which contain multiple scattering are difficult to analyze. We have devised another 4DSTEM method to extract signals such as orientation or deformation strain - we insert patterned membranes into the probe-forming apertures. By stamping "bullseye" patterns into each diffracted probe, we allow our analysis software to extract material properties with much higher accuracy.
 
-
-
+[Patterned probes for high precision 4D-STEM bragg measurements](@doi.org/10.1016/j.ultramic.2019.112890)
 
 
 
@@ -80,16 +92,16 @@ Our group pioneered the development of ptychographic atomic electron tomography,
 - [(2024) Atomic-scale identification of active sites of oxygen reduction nanocatalysts](https://doi.org/10.1038/s41929-024-01175-8)
 
 
-
-
-
 ### ADF-STEM
 
-Atomic electron tomography (AET) reconstructs the three-dimensional structures of materials at atomic resolution. By recording high-resolution STEM images from many projection directions and then using tomographic reconstruction algorithms, we can use AET to map the 3D positions and species of atoms within complex nanostructures. This method is invaluable for studying defects, interfaces, and other structural intricacies in materials that influence their properties. AET has transformative applications in materials science, catalysis, and nanotechnology, offering unprecedented insights into the atomic-scale architecture of advanced materials.
+Atomic electron tomography (AET) reconstructs the three-dimensional structures of materials at atomic resolution. By recording atomic-resolution images from many projection directions and then using tomographic reconstruction algorithms, we can use AET to map the 3D positions and species of atoms within complex nanostructures. This method is invaluable for studying defects, interfaces, and other structural intricacies in materials that influence their properties. AET has transformative applications in materials science, catalysis, and nanotechnology, offering unprecedented insights into the atomic-scale architecture of advanced materials. ADF STEM is particularly useful for AET studies, as it provides approximately linear contrast over a wide range of sample thicknesses, and produces contrast which depends on the atomic species.
 
 
 
 ### HRTEM Tomography
+
+As powerful as ADF-STEM is for AET studies, it has some critical drawbacks: ADF produces little or no contrast for light elements including important species such as C, O, Li and H, and requires a large electron beam dose which may damage beam-sensitive samples. Plane wave HRTEM imaging offers an alternative to STEM. Phase contrast HRTEM is very dose-efficient, and produces contrast for all atomic species. This is why HRTEM is the method of choice for imaging biological samples at high resolution. The problem with HRTEM is that it produces complex non-linear contrast, especially for thicker or strongly-scattering samples. In order to use it for AET, we have developed inverse multislice algorithms in collaboration with Laura Waller at UC Berkeley. We have collaborated with Michael Whittaker at Berkeley Lab to apply this method to solve the 3D structure of clay layers frozen in vitreous ice, even managing to find asymmetric ion concentrations which depend on the curvature of these sheets.
+
 
 
 
@@ -101,9 +113,6 @@ Atomic electron tomography (AET) reconstructs the three-dimensional structures o
 
 ## Scanning Probe Drift Correction
 
-## ML Inversion of Multiple Scattering
-
-## ML Characterization of Disordered Materials
 
 ## Quantum Mechanical Scattering Simulations
 
