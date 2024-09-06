@@ -52,9 +52,9 @@ Steph received her PhD at Northwestern University in the Dravid Group. During he
 :email: armccray@lbl.gov
 :reverse:
 
-Arthur McCray received his PhD in Applied Physics at Northwestern University, supervised by Amanda Petford-Long.
+Arthur McCray received his PhD in Applied Physics at Northwestern University, supervised by Amanda Petford-Long. He has experience in Lorentz TEM, magnetic materials, and is currently developing machine learning methods for solving inverse problems in (S)TEM.
 
-Arthur is the lead developer of the [pyLorenz](https://github.com/PyLorentz/PyLorentz) software package.
+Arthur is also the lead developer of the [pyLorentz](https://github.com/PyLorentz/PyLorentz) software package.
 :::
 
 :::{person}
