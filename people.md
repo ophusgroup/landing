@@ -143,6 +143,7 @@ Received his PhD in Sarah Haigh's group at Manchester, and worked a postdoc in J
 :name: Philipp Pelz
 :position: Former Member
 :image: /images/people/PelzPhilipp.jpg
+:reverse:
 
 Philipp Pelz received Bachelor degrees in Physics (2011) and Informatics (2012), and Master degrees in Applied & Engineering Physics, Materials Science & Chemistry (2013). In 2018 he obtained his Ph.D. in Physics from the University of Hamburg & The Max Planck Institute for the Structure and Dynamics of Matter, Germany. Subsequently, he spent three years as a postdoctoral researcher at the University of California, Berkeley and the National Center for Electron Microscopy. Since August 2022 he is Tenure-Track Professor for Computational Materials Microscopy at FAU Erlangen-Nürnberg.
 

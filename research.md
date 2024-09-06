@@ -62,6 +62,12 @@ Our group has devised a way to overcome the limitations of multiple scattering i
 
 ### ML Characterization of Disordered Materials
 
+
+:::{figure} ./videos/atomic_struct_03_small.mp4
+:class: md:float-right ml-4
+Disordered nanocrystalline silicon.
+:::
+
 In the previous section, we saw how to invert multiple scattering signals from crystalline materials. But what about non-crystalline materials? Many important technological materials are highly disordered, including many functional oxides, silicate glasses, liquid or amorphous electrolytes, soft matter such as polymers, and many others. We are currently working to generalize our inversion methods to work on all materials, from fully disordered random liquids to highly ordered crystalline materials.
 
 
