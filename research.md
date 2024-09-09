@@ -71,7 +71,20 @@ Disordered nanocrystalline silicon.
 In the previous section, we saw how to invert multiple scattering signals from crystalline materials. But what about non-crystalline materials? Many important technological materials are highly disordered, including many functional oxides, silicate glasses, liquid or amorphous electrolytes, soft matter such as polymers, and many others. We are currently working to generalize our inversion methods to work on all materials, from fully disordered random liquids to highly ordered crystalline materials.
 
 
-### Custom apertures
+##### Phase Plates
+
+
+
+
+
+### Amplitude Plates
+
+```{image} /images/research/bullseye_probes_02.png
+:alt: bullseye
+:class: md:float-left ml-4
+:width: 680px
+:align: center
+```
 
 As we saw above, diffraction patterns from crystalline materials which contain multiple scattering are difficult to analyze. We have devised another 4DSTEM method to extract signals such as orientation or deformation strain - we insert patterned membranes into the probe-forming apertures. By stamping "bullseye" patterns into each diffracted probe, we allow our analysis software to extract material properties with much higher accuracy.
 
@@ -86,7 +99,7 @@ As we saw above, diffraction patterns from crystalline materials which contain m
 :::{figure} ./images/research/figure_AET_ZrTe_DWCNT.jpg
 :class: center
 :width: 500px
-ZrTe nanowire encapsulated in double-walled carbon nanotube solved with, from @doi.org/10.1038/s41467-023-43634-z.
+ZrTe nanowire encapsulated in double-walled carbon nanotube solved with PAET, from @doi.org/10.1038/s41467-023-43634-z.
 :::
 
 Our group pioneered the development of ptychographic atomic electron tomography, where we combined ptychography imaging with AET. This approach significantly enhances the precision and sensitivity of atomic structure determination, enabling the visualization of complex nanostructures, including light elements. PAET has the potential to significantly expand the range of nanostructures that can be resolved in 3D at atomic resolution, and provide deeper insights into the atomic-scale underpinnings of material properties

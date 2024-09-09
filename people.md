@@ -89,6 +89,28 @@ Georgios Varnavides is a postdoctoral Miller research fellow at the University o
 Andrew is a PhD candidate in the Department of Physics at the University of Oregon, supervised by Ben McMorran. He was awarded an SCGSR fellowship from the US Department of Energy to work on STEM holography-pytchography in Colin's group at Berkeley Lab and Stanford.
 :::
 
+
+
+:::{person}
+:name: Samuel Gleason
+:position: PhD Student
+:pronouns: he/him
+:image: /images/people/GleasonSam.jpg
+:reverse:
+
+<!-- :github: gvarnavi
+:email: gvarnavides@berkeley.edu
+:orcid: 0000-0001-8338-3323
+ -->
+
+Sam is a PhD candidate in Jim Ciston's group at Berkeley Lab. 
+
+---
+
+[Random Forest Prediction of Crystal Structure from Electron Diffraction Patterns Incorporating Multiple Scattering](https://arxiv.org/abs/2406.16310)
+
+:::
+
 <!-- ## Masters Students
 
 - None current
