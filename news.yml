@@ -3,7 +3,14 @@ news:
     url: https://www.nature.com/articles/d41586-024-02577-1
     date: August 2024
     image: https://media.nature.com/lw767/magazine-assets/d41586-024-02577-1/d41586-024-02577-1_27432946.jpg
-  - title: "*imaging of domains in a block copolymer with 4DSTEM* featured on the cover of Macromolecules"
+    # description: |
+    #   Elemental Microscopy, a publication focused on reviews and methods tutorials, leverages an authoring and
+    #   publishing platform called Curvenote to create rich, interactive, digital papers
+    #   with coding and data analysis at their heart.
+    # tags:
+    #   - journal
+    #   - interactive
+  - title: '*imaging of domains in a block copolymer with 4DSTEM* featured on the cover of Macromolecules'
     url: https://pubs.acs.org/doi/10.1021/acs.macromol.3c02231
     date: June 2024
     image: /images/news/2024_06_cover_macromolecules.jpg
@@ -15,12 +22,11 @@ news:
     url: https://foundry.lbl.gov/2024/01/27/solving-complex-nanostructures-with-ptychographic-atomic-electron-tomography/
     date: January 2024
     image: https://foundry.lbl.gov/wp-content/uploads/sites/2/2024/02/Ophus-PAET-268x140.jpg
-  
+
   - title: Stephanie Ribet wins MRS gold graduate student award
     url: https://www.mrs.org/careers-advancement/awards/spring-awards/graduate-student-awards/past-recipients
     date: Nov 2022
     image: /images/news/stephanie-ribet-mrs-2022.jpg
-
 
   # - title: Experimental test of the topological stability of magnetic skyrmions
   #   url: https://foundry.lbl.gov/2022/08/27/experimental-test-of-the-topological-stability-of-magnetic-skyrmions/
