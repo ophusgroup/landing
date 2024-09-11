@@ -103,7 +103,7 @@ Andrew is a PhD candidate in the Department of Physics at the University of Oreg
 :orcid: 0000-0001-8338-3323
  -->
 
-Sam is a PhD candidate in Jim Ciston's group at Berkeley Lab. 
+Sam is a Physical Chemistry PhD candidate at the University of California, Berkeley. He is a member of the research group of Paul Alivisatos and is completing his doctoral research at the National Center For Electron Microscopy, co-supervised by Colin and Dr Jim Ciston.
 
 ---
 

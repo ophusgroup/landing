@@ -52,3 +52,5 @@ site:
   title: Colin Ophus Lab
   domains:
     - colab-landing.curve.space
+  options:
+    outline_maxdepth: 2
