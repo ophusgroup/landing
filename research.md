@@ -60,24 +60,35 @@ Our group has devised a way to overcome the limitations of multiple scattering i
 
 [Disentangling multiple scattering with deep learning: application to strain mapping from electron diffraction patterns](@doi.org/10.1038/s41524-022-00939-9)
 
-### ML Characterization of Disordered Materials
 
+### ML Characterization of Disordered Materials
 
 :::{figure} ./videos/atomic_struct_03_small.mp4
 :class: md:float-right ml-4
+:width: 300px
 Disordered nanocrystalline silicon.
 :::
 
 In the previous section, we saw how to invert multiple scattering signals from crystalline materials. But what about non-crystalline materials? Many important technological materials are highly disordered, including many functional oxides, silicate glasses, liquid or amorphous electrolytes, soft matter such as polymers, and many others. We are currently working to generalize our inversion methods to work on all materials, from fully disordered random liquids to highly ordered crystalline materials.
 
 
-##### Phase Plates
+### STEM Probe Wavefunction Control
+
+```{image} /images/research/STEM_probes.png
+:alt: STEM probes
+:class: left
+:width: 710px
+```
+
+Most STEM experiments use a very simple electron probe; a metal place with a circular hole is placed in the condenser aperture, which forms the the STEM probe in the far field. Our group has designed many custom STEM wavefunctions by placing patterned structures or devices into the probe-forming aperture. This allows us to design many different optical imaging considitions which module both the phase (the relative position of electron wavefronts) and amplitude (the number of incoming electrons at each angle) of the electron wave.
+
+
+#### Phase Plates
 
 
 
 
-
-### Amplitude Plates
+#### Amplitude Plates
 
 ```{image} /images/research/bullseye_probes_02.png
 :alt: bullseye
@@ -86,9 +97,7 @@ In the previous section, we saw how to invert multiple scattering signals from c
 :align: center
 ```
 
-As we saw above, diffraction patterns from crystalline materials which contain multiple scattering are difficult to analyze. We have devised another 4DSTEM method to extract signals such as orientation or deformation strain - we insert patterned membranes into the probe-forming apertures. By stamping "bullseye" patterns into each diffracted probe, we allow our analysis software to extract material properties with much higher accuracy.
-
-[Patterned probes for high precision 4D-STEM bragg measurements](@doi.org/10.1016/j.ultramic.2019.112890)
+As we saw above, diffraction patterns from crystalline materials which contain multiple scattering are difficult to analyze. We have devised another 4DSTEM method to extract signals such as orientation or deformation strain - we insert patterned membranes into the probe-forming apertures. By stamping "bullseye" patterns into each diffracted probe, we allow our analysis software to extract material properties with much higher accuracy. See our paper [patterned probes for high precision 4D-STEM bragg measurements](@doi.org/10.1016/j.ultramic.2019.112890) for more information.
 
 
 
@@ -117,7 +126,7 @@ Our group pioneered the development of ptychographic atomic electron tomography,
 ```{image} /images/research/AET_FePt_v01.jpg
 :alt: logo
 :class: center
-:width: 700px
+:width: 710px
 ```
 
 Atomic electron tomography (AET) reconstructs the three-dimensional structures of materials at atomic resolution. By recording atomic-resolution images from many projection directions and then using tomographic reconstruction algorithms, we can use AET to map the 3D positions and species of atoms within complex nanostructures. This method is invaluable for studying defects, interfaces, and other structural intricacies in materials that influence their properties. AET has transformative applications in materials science, catalysis, and nanotechnology, offering unprecedented insights into the atomic-scale architecture of advanced materials. ADF STEM is particularly useful for AET studies, as it provides approximately linear contrast over a wide range of sample thicknesses, and produces contrast which depends on the atomic species.
