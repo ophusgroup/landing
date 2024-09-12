@@ -2,7 +2,7 @@
 version: 1
 project:
   title: Colin Ophus Lab
-  short_title: COLAB
+  short_title: COLab
   description: Understanding materials atom by atom
   toc:
     - file: index.md

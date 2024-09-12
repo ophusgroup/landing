@@ -4,7 +4,7 @@ title: Home
 
 ## About
 
-Welcome to the Colin Ophus Lab (**COL**AB) website! Our group performs research in computational imaging, electron microscopy, data analysis, and materials science.
+Welcome to the Colin Ophus Lab (COLab) website! We are a highly collaborative group, hence the name. We perform research in computational imaging, electron microscopy, data analysis, and materials science. Please [contact us](mailto:cophus@stanford.edu) if you're interested in collaborating on these topics.
 
 
 ## News
