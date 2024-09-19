@@ -50,7 +50,7 @@ Our group has developed many kinds of 4DSTEM experiments, including nanobeam ori
 - center of mass-differential phase contrast (CoM-DPC)
 - parallax or tilt-corrected bright field imaging
 - ptychography
-- [mutlislice ptychography]()
+- [mutlislice ptychography](https://doi.org/10.1063/5.0206814)
 - joint ptychography-tomography
 
 
@@ -87,7 +87,17 @@ Most STEM experiments use a very simple electron probe; a metal place with a cir
 
 #### Phase Plates
 
+```{image} /images/research/phase_plate_01.png
+:alt: phase plate
+:class: md:float-right ml-4
+:width: 400px
+:align: right
+Electrostatic phase plate.
+```
 
+In light optics, we have can control the shape of a light wave packet using a very large number of optical elements. However, in electron microscopy we have traditionally been limited to only two beam configurations: plane wave (or parallel) illumination, or converged beams formed from a circular aperture (the Airy disk function on the sample surface). In most TEMs, we can only modify converged electron beams by changing the defocus or the aperture size.
+
+Our group has designed various *phase plates* which sit in the probe-forming aperture of TEM. These include passive phase plates used to enhance contrast, for example using our [MIDI-STEM method](https://doi.org/10.1038/ncomms10719). More recenlty we have designed active apertures which use electrostatic fields to modify the beam as shown in the above figure. These phase plates have a variety of uses, including potentially [aberration correction](https://doi.org/10.1093/micmic/ozad111).
 
 
 #### Amplitude Plates
@@ -113,7 +123,7 @@ As we saw above, diffraction patterns from crystalline materials which contain m
 ZrTe nanowire encapsulated in double-walled carbon nanotube solved with PAET, from @doi.org/10.1038/s41467-023-43634-z.
 :::
 
-Our group pioneered the development of ptychographic atomic electron tomography, where we combined ptychography imaging with AET. This approach significantly enhances the precision and sensitivity of atomic structure determination, enabling the visualization of complex nanostructures, including light elements. PAET has the potential to significantly expand the range of nanostructures that can be resolved in 3D at atomic resolution, and provide deeper insights into the atomic-scale underpinnings of material properties
+Our group pioneered the development of ptychographic atomic electron tomography, where we combine ptychographic imaging with AET. This approach significantly enhances the precision and sensitivity of atomic structure determination, enabling the visualization of complex nanostructures, including light elements. PAET has the potential to significantly expand the range of nanostructures that can be resolved in 3D at atomic resolution, and provide deeper insights into the atomic-scale underpinnings of material properties
 
 - [(2015) 3D positions of individual atoms in materials revealed by electron tomography](https://dx.doi.org/10.1038/nmat4426)
 - [(2017) Deciphering chemical order/disorder and material properties at the single-atom level](dx.doi.org/10.1038/nature21042)
@@ -154,7 +164,7 @@ Analytical STEM is powerful because we can focus the electron beam down to a tin
 
 The answer: use drift correction algorithms!  We have developed a highly accurate method to correct STEM and SPM drift artifacts by combining multiple scans recorded at different scanning directions. This method works essentially by using the more accurate *fast scan* directions from each scan to measure and correct drift in the *slow scan* direction. We also took inspiration from tomographic reconstruction algorithms and developed a unique way to combine the data from different scan directions which reduces or even eliminates artifacts from the slow scan directions. 
 
-There are some commercial programs which fix sample drift. We have chosen instead to release our software freely to the research community. You can find the Matlab implementation of our algorithm on this [github repo]().
+There are some commercial programs which fix sample drift. We have chosen instead to release our software freely to the research community. You can find the Matlab implementation of our algorithm on the [github repo](https://github.com/cophus/scanning-drift-corr).
 
 
 
@@ -168,9 +178,9 @@ One of the most powerful tools for designing TEM experiments, data analysis, and
 
 The most commonly used algorithm for atomic resolution TEM and STEM simulation is the **multislice method**. In this method, we solve the Schrodinger equation using a split-step algorithm. We first divide up the samples into thin *slices*, define the initial wavefunction, and then alternate calculating scattering through each slice (the *transmission* operator) and then compute the wave evolution to the next slice (the *propagation* operator). We repeat these steps until the wavefunction reaches the bottom of the sample, and then compute the microscope transfer function and detector signal(s).
 
-The multislice algorithm is powerful and works amazingly well for TEM experiments where we only need to calculate the scattering from one initial wavefunction. STEM is another matter however; each STEM probe position requires a unique calculation, creating potentially millions of unique calculations for large scan sizes. This can require unreasonably long calculation times. To address this issue, Colin developed the **PRISM algorithm**. PRISM can speed up STEM simulations by a ratio of $f^2$ to $f^4$ for an interpolation factor $f$, which has typical values of 2-10, with a negligible loss in accuracy. This speedup can potentially be orders of magnitude for large scan sizes, and could be many many orders for [inelastic scattering calculations](). 
+The multislice algorithm is powerful and works amazingly well for TEM experiments where we only need to calculate the scattering from one initial wavefunction. STEM is another matter however; each STEM probe position requires a unique calculation, creating potentially millions of unique calculations for large scan sizes. This can require unreasonably long calculation times. To address this issue, Colin developed the **PRISM algorithm**. PRISM can speed up STEM simulations by a ratio of $f^2$ to $f^4$ for an interpolation factor $f$, which has typical values of 2-10, with a negligible loss in accuracy. This speedup can potentially be orders of magnitude for large scan sizes, and could be many many orders for [inelastic scattering calculations](https://doi.org/10.1103/PhysRevResearch.1.033186). 
 
-We have extended this method using the partitioned PRISM algorithm which can provide even higher speedups at some cost to accuracy. Another group, inspired by the PRISM method has developed the related [Lattice Multislice Algorithm](). PRISM has been implemented in our group's [Prismatic simulation code](), and the all-python [abTEM simulation code]().
+We have extended this method using the [partitioned PRISM algorithm](https://doi.org/10.1017/S1431927621012083) which can provide even higher speedups at some cost to accuracy. Another group, inspired by the PRISM method, has developed the related [Lattice Multislice Algorithm](https://arxiv.org/abs/2310.16829). PRISM has been implemented in our group's [Prismatic simulation code](https://doi.org/10.1016/j.micron.2021.103141), and the all-python [abTEM simulation code](https://doi.org/10.12688/openreseurope.13015.2).
 
 
 
