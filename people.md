@@ -73,10 +73,28 @@ Arthur is the lead developer of the [pyLorenz](https://github.com/PyLorentz/PyLo
 Georgios Varnavides is a postdoctoral Miller research fellow at the University of California, Berkeley, where he is developing new computational imaging modalities to observe structure and function in materials with high spatial resolution.
 
 ---
-
 [Iterative Phase Retrieval Algorithms for Scanning Transmission Electron Microscopy](@https://doi.org/10.48550/arXiv.2309.05250)
-
 :::
+
+
+:::{person}
+:name: Serin Lee
+:position: Postdoctoral Researcher
+:pronouns: she/her
+:image: /images/people/LeeSerin.jpg
+:email: serinl@stanford.edu
+:orcid: 0000-0002-3672-5076
+:website: https://scholar.google.com/citations?hl=ko&user=1KinRDsAAAAJ&view_op=list_works&sortby=pubdate
+:reverse:
+
+Serin earned her PhD in Materials Science and Engineering at MIT, advised by Professor Frances Ross, as an MIT Energy Initiative and MathWorks Fellow. She is one of Northwestern's 10 Future Leaders in Materials Science. Her research uses *in situ* electron microscopy to study nanomaterials for sustainability, while her postdoc focuses on enhancing photocatalytic materials' performance and lifetime with advanced techniques like 4D-STEM. Serin is also active in community building and mentorship, serving on the Early Career Committee of the MSA and mentoring through Stanford's Science Small Group program.
+
+---
+[Temperature Dependent Nanochemistry and Growth Kinetics Using Liquid Cell Transmission Electron Microscopy](https://doi.org/10.1021/acsnano.2c11477)
+:::
+
+
+
 
 ## PhD Students
 

@@ -1,7 +1,13 @@
 news:
+
+
+  - title: Manganese Cathodes Could Boost Lithium-ion Batteries [*Nature Nanotechnology*]
+    url: https://newscenter.lbl.gov/2024/09/25/manganese-cathodes-could-boost-lithium-ion-batteries
+    date: 2024 Sept
+    image: https://newscenter.lbl.gov/wp-content/uploads/2024/09/News_Inline_Acr4466611814005122368830.jpg
   - title: Launch of Elemental Microscopy covered in Nature
     url: https://www.nature.com/articles/d41586-024-02577-1
-    date: August 2024
+    date: 2024 August 
     image: https://media.nature.com/lw767/magazine-assets/d41586-024-02577-1/d41586-024-02577-1_27432946.jpg
     # description: |
     #   Elemental Microscopy, a publication focused on reviews and methods tutorials, leverages an authoring and
@@ -10,22 +16,22 @@ news:
     # tags:
     #   - journal
     #   - interactive
-  - title: '*imaging of domains in a block copolymer with 4DSTEM* featured on the cover of Macromolecules'
+  - title: '*imaging of domains in a block copolymer with 4DSTEM* featured on the cover of *Macromolecules*'
     url: https://pubs.acs.org/toc/mamobx/57/12
-    date: June 2024
+    date: 2024 June
     image: /images/news/2024_06_cover_macromolecules.jpg
   - title: New Technique Achieves Unprecedented View of Complex Nanostructure
     url: https://foundry.lbl.gov/2024/02/13/new-technique-achieves-unprecedented-view-of-complex-nanostructure/
-    date: February 2024
+    date: 2024 February
     image: https://foundry.lbl.gov/wp-content/uploads/sites/2/2024/02/ZrTeSandwich-268x140.jpg
-  - title: Solving complex nanostructures with ptychographic atomic electron tomography
+  - title: 'Solving complex nanostructures with ptychographic atomic electron tomography [*Nature Communications*]'
     url: https://foundry.lbl.gov/2024/01/27/solving-complex-nanostructures-with-ptychographic-atomic-electron-tomography/
-    date: January 2024
+    date: 2024 January 
     image: https://foundry.lbl.gov/wp-content/uploads/sites/2/2024/02/Ophus-PAET-268x140.jpg
 
   - title: Stephanie Ribet wins MRS gold graduate student award
     url: https://www.mrs.org/careers-advancement/awards/spring-awards/graduate-student-awards/past-recipients
-    date: Nov 2022
+    date: 2022 Nov 
     image: /images/news/stephanie-ribet-mrs-2022.jpg
 
   # - title: Experimental test of the topological stability of magnetic skyrmions
@@ -34,27 +40,27 @@ news:
   #   image: https://foundry.lbl.gov/wp-content/uploads/sites/2/2022/08/Chiralityandskyrmionnumberevolution-268x140.png
   - title: Colin Ophus Awarded the Burton Medal from the Microscopy Society of America
     url: https://foundry.lbl.gov/2022/04/21/colin-ophus-awarded-burton-medal/
-    date: April 2022
+    date: 2022 April 
     image: https://foundry.lbl.gov/wp-content/uploads/sites/2/2019/03/Colin-Ophus.jpg
   - title: Pulling Magnetic Skyrmions out of Thin Air
     url: https://foundry.lbl.gov/2022/03/21/pulling-magnetic-skyrmions-out-of-thin-air/
-    date: March 2022
+    date: 2022 March
     image: https://foundry.lbl.gov/wp-content/uploads/sites/2/2022/03/spleem-skyrmions-262x140.png
   - title: Combining AI and Atomic-scale Images in Pursuit of Better Batteries
     url: https://foundry.lbl.gov/2022/02/28/combining-ai-and-atomic-scale-images-in-pursuit-of-better-batteries/
-    date: February 2022
+    date: 2022 February 
     image: https://foundry.lbl.gov/wp-content/uploads/sites/2/2022/03/BatteryImageAI-graphic-268x140.jpeg
   - title: First Photo-induced Melting of Tantalum Ditelluride
     url: https://foundry.lbl.gov/2021/08/10/first-photo-induced-melting-of-tantalum-ditelluride/
-    date: August 2021
+    date: 2021 August 
     image: https://foundry.lbl.gov/wp-content/uploads/sites/2/2021/08/tantalumditelluride-268x140.jpg
   - title: ALS and Molecular Foundry Funded to Lead the Development of New Artificial Intelligence and Machine Learning Tools
     url: https://foundry.lbl.gov/2020/10/28/foundry-funded-to-lead-aiml/
-    date: October 2020
+    date: 2020 October 
     image: https://foundry.lbl.gov/wp-content/uploads/sites/2/2020/10/4D-Camera-AI-ML-copy-268x140.jpg
   - title: Enabling the Data-Driven Future of Microscopy
     url: https://foundry.lbl.gov/2020/10/27/enabling-the-data-driven-future-of-microscopy/
-    date: October 2020
+    date: 2020 October 
     image: https://foundry.lbl.gov/wp-content/uploads/sites/2/2020/10/NPSI_NexTEM_microscopy_1600x1200_hero-268x140.jpg
   # - title: Creation of Skyrmions in van der Waals ferromagnet Fe3GeTe2
   #   url: https://foundry.lbl.gov/2020/09/20/first-photo-induced-melting-of-tantalum-ditelluride-2/
@@ -66,31 +72,31 @@ news:
   #   image: https://foundry.lbl.gov/wp-content/uploads/sites/2/2020/07/Skyrmions-Nanoletters-268x140.gif
   - title: Short-Range Order and Its Impact on the CrCoNi Medium Entropy Alloy
     url: https://foundry.lbl.gov/2020/05/14/short-range-order-and-its-impact-on-the-crconi-medium-entropy-alloy/
-    date: May 2020
+    date: 2020 May
     image: https://foundry.lbl.gov/wp-content/uploads/sites/2/2020/07/med-entropy-alloy-254x140.jpg
   - title: Design and synthesis of multigrain nanocrystals via geometric misfit strain
     url: https://foundry.lbl.gov/2020/03/03/geometric-misfit-strain-nanocrystals/
-    date: March 2020
+    date: 2020 March
     image: https://foundry.lbl.gov/wp-content/uploads/sites/2/2020/02/cover-picture-3_350dpi_crop-268x140.jpg
   - title: 'Strained But Perfect: Precise Control of Grain Boundaries in Nanoparticles'
     url: https://foundry.lbl.gov/2020/02/07/border-control/
-    date: February 2020
+    date: 2020 February 
     image: https://foundry.lbl.gov/wp-content/uploads/sites/2/2020/02/nature-cover-268x140.png
   - title: World-Leading Microscopes Take Candid Snapshots of Atoms in Their ‘Neighborhoods’
     url: https://foundry.lbl.gov/2019/11/05/world-leading-microscopes-take-candid-snapshots-of-atoms-in-their-neighborhoods/
-    date: November 2019
+    date: 2019 November 
     image: https://foundry.lbl.gov/wp-content/uploads/sites/2/2019/11/4D-STEM-diffraction-2631px-628x444-268x140.jpg
   - title: A Window into the Hidden Nuclear World
     url: https://foundry.lbl.gov/2019/08/12/a-window-into-the-hidden-nuclear-world/
-    date: August 2019
+    date: 2019 August 
     image: https://foundry.lbl.gov/wp-content/uploads/sites/2/2019/08/Uranium_Imaging-1600x1200-TL-Spurgeon-7-29-19-hero-268x140.jpg
   - title: Scientists Capture Atomic Motion in 4D for the First Time
     url: https://foundry.lbl.gov/2019/06/27/scientists-capture-atomic-motion-in-4d-for-the-first-time/
-    date: June 2019
+    date: 2019 June 
     image: https://foundry.lbl.gov/wp-content/uploads/sites/2/2019/07/Iron-platinumnanoparticle-628x480-268x140.jpg
   - title: Researchers Capture Crystal Nucleation with Atomic Resolution in 4D (3D + time)
     url: https://foundry.lbl.gov/2019/06/26/researchers-capture-crystal-nucleation-with-atomic-resolution-in-4d/
-    date: June 2019
+    date: 2019 June 
     image: https://foundry.lbl.gov/wp-content/uploads/sites/2/2019/07/4Dtomography-268x140.jpg
   # - title: Dynamic Deformability of Individual PbSe Nanocrystals During Superlattice Phase Transitions
   #   url: https://foundry.lbl.gov/2019/06/07/dynamic-deformability-of-individual-pbse-nanocrystals/
@@ -98,23 +104,23 @@ news:
   #   image: https://foundry.lbl.gov/wp-content/uploads/sites/2/2019/07/PbSeNanocrystals-268x140.jpg
   - title: Direct measurement of nanostructural change duringin situ deformation of a bulk metallic glass
     url: https://foundry.lbl.gov/2019/06/04/direct-measurement-of-nanostructural-change-during-in-situ-deformation-of-a-bulk-metallic-glass/
-    date: June 2019
+    date: 2019 June 
     image: https://foundry.lbl.gov/wp-content/uploads/sites/2/2019/07/BulkMetallicGlass-216x140.jpg
   - title: Diffraction imaging of nanocrystalline structure in  organic semiconductor molecular films
     url: https://foundry.lbl.gov/2019/06/03/diffraction-imaging-of-nanocrystalline-structure-in-organic-semiconductor-molecular-films/
-    date: June 2019
+    date: 2019 June 
     image: https://foundry.lbl.gov/wp-content/uploads/sites/2/2019/07/OrganicSemiconductorFilms-213x140.jpg
   - title: Successful Demonstration of Fastest Electron Detector Ever Made
     url: https://foundry.lbl.gov/2019/03/17/successful-demonstration-of-fastest-electron-detector-ever-made/
-    date: March 2019
+    date: 2019 March 
     image: https://foundry.lbl.gov/wp-content/uploads/sites/2/2019/05/201903c-268x140.jpg
   - title: 'Before and After: Grain Boundary Transitions at the Atomic Scale'
     url: https://foundry.lbl.gov/2019/01/26/before-and-after-grain-boundary-transitions-at-the-atomic-scale/
-    date: January 2019
+    date: 2019 January 
     image: https://foundry.lbl.gov/wp-content/uploads/sites/2/2019/03/2019-01-29_A-268x140.jpg
   - title: Bringing Polymers into Atomic-Scale Focus
     url: https://foundry.lbl.gov/2018/11/09/bringing-polymers-into-atomic-scale-focus-2/
-    date: November 2018
+    date: 2018 November 
     image: https://foundry.lbl.gov/wp-content/uploads/sites/2/2019/03/2018-11-13_A-268x140.jpg
   # - title: Chiral Ferrimagnetism in Amorphous Thin Films
   #   url: https://foundry.lbl.gov/2018/09/11/chiral-ferrimagnetism-in-amorphous-thin-films/
@@ -126,15 +132,15 @@ news:
   #   image: https://foundry.lbl.gov/wp-content/uploads/sites/2/2019/03/magnetic_domains-268x140.jpg
   - title: Foundry’s Colin Ophus Receives DOE Early Career Research Award
     url: https://foundry.lbl.gov/2018/06/21/foundrys-colin-ophus-receives-doe-early-career-research-award/
-    date: June 2018
+    date: 2018 June 
     image: https://foundry.lbl.gov/wp-content/uploads/sites/2/2018/06/Ophus-thumbnail-268x140.jpg
   - title: Mapping Battery Materials with Atomic Precision
     url: https://foundry.lbl.gov/2018/04/28/mapping-battery-materials-with-atomic-precision/
-    date: April 2018
+    date: 2018 April 
     image: https://foundry.lbl.gov/wp-content/uploads/sites/2/2019/03/battery-e1553805035218.jpg
   - title: Bringing Atomic Mapping to the Mainstream
     url: https://foundry.lbl.gov/2017/09/13/bringing-atomic-mapping-to-the-mainstream/
-    date: September 2017
+    date: 2017 September 
     image: https://foundry.lbl.gov/wp-content/uploads/sites/2/2019/03/atomic-mapping-400-268x140.jpg
   # - title: Researchers Help Thin-Film Ferroelectrics Go Extreme
   #   url: https://foundry.lbl.gov/2017/05/10/researchers-help-thin-film-ferroelectrics-go-extreme/
@@ -150,15 +156,15 @@ news:
   #   image: https://foundry.lbl.gov/wp-content/uploads/sites/2/2016/08/2vencat-thumbnail-268x140.jpg
   - title: New Form of Electron-beam Imaging Can See Elements that are ‘Invisible’ to Common Methods
     url: https://foundry.lbl.gov/2016/03/01/new-form-of-electron-beam-imaging-can-see-elements-that-are-invisible-to-common-methods/
-    date: March 2016
+    date: 2016 March 
     image: https://foundry.lbl.gov/wp-content/uploads/sites/2/2019/05/MIDI-STEM-setup-300-268x140.jpg
   - title: 'Battery Mystery Solved: Atomic-Resolution Microscopy Answers Longstanding Questions About Lithium-Rich Cathode Material'
     url: https://foundry.lbl.gov/2015/10/29/battery-mystery-solved-atomic-resolution-microscopy-answers-longstanding-questions-about-lithium-rich-cathode-material/
-    date: October 2015
+    date: 2015 October 
     image: https://foundry.lbl.gov/wp-content/uploads/sites/2/2019/05/20151030B-268x140.jpg
   - title: New Technique for Imaging Surface and Bulk Atoms
     url: https://foundry.lbl.gov/2015/09/30/new-technique-for-imaging-surface-and-bulk-atoms/
-    date: September 2015
+    date: 2015 September 
     image: https://foundry.lbl.gov/wp-content/uploads/sites/2/2019/05/20150917A-268x140.jpg
   # - title: Foundry and NCEM Staff Gather to Identify Scientific Synergies
   #   url: https://foundry.lbl.gov/2013/11/30/foundry-and-ncem-staff-gather-to-identify-scientific-synergies/
