@@ -87,10 +87,10 @@ Georgios Varnavides is a postdoctoral Miller research fellow at the University o
 :website: https://scholar.google.com/citations?hl=ko&user=1KinRDsAAAAJ&view_op=list_works&sortby=pubdate
 :reverse:
 
-Serin earned her PhD in Materials Science and Engineering at MIT, advised by Professor Frances Ross, as an MIT Energy Initiative and MathWorks Fellow. She is one of Northwestern's 10 Future Leaders in Materials Science. Her research uses *in situ* electron microscopy to study nanomaterials for sustainability, while her postdoc focuses on enhancing photocatalytic materials' performance and lifetime with advanced techniques like 4D-STEM. Serin is also active in community building and mentorship, serving on the Early Career Committee of the MSA and mentoring through Stanford's Science Small Group program.
+Serin earned her PhD in Materials Science and Engineering at MIT, advised by Professor Frances Ross, as an MIT Energy Initiative and MathWorks Fellow. She is one of Northwestern's 10 Future Leaders in Materials Science. Her research uses *in situ* electron microscopy to study nanomaterials for sustainability, while her postdoc focuses on enhancing photocatalytic materials' performance and lifetime with advanced techniques like 4DSTEM. Serin is also active in community building and mentorship, serving on the Early Career Committee of the MSA and mentoring through Stanford's Science Small Group program.
 
 ---
-[Temperature Dependent Nanochemistry and Growth Kinetics Using Liquid Cell Transmission Electron Microscopy](https://doi.org/10.1021/acsnano.2c11477)
+[Temperature dependent nanochemistry and growth kinetics using liquid cell TEM](https://doi.org/10.1021/acsnano.2c11477)
 :::
 
 
