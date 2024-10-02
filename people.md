@@ -22,7 +22,7 @@ title: People
 
 Colin received his BSc in Engineering Physics, and his PhD in Materials Engineering in [David Mitlin's](https://www.me.utexas.edu/people/faculty-directory/mitlin) group at the [University of Alberta](https://www.ualberta.ca/en/index.html) in Edmonton, Canada. He received an NSERC scholarship to pursue postdoctoral research working for [Velimir "Mimo" Radmilovic](https://www.sanu.ac.rs/en/member/radmilovic-velimir/) at Berkeley Lab and [Mark Asta](https://asta.mse.berkeley.edu/) at UC Berkeley. He then worked as a Project Scientist, Research Scientist, and Staff Scientist at the [National Center for Electron Microscopy](https://foundry.lbl.gov/about/facilities/the-national-center-for-electron-microscopy-ncem/) (NCEM), part of the [Molecular Foundry](https://foundry.lbl.gov/) user facility at [Lawrence Berkeley Lab](https://www.lbl.gov/).
 
-Colin Ophus lab's research focuses on experimental methods, reconstruction algorithms, and software codes for simulation, analysis, and instrument design of TEM, STEM and 4DSTEM. He was awarded a US Department of Energy (DOE) Early Career award in 2018, and the [Burton Medal](https://microscopy.org/Society-Awards-Recipients#2022) from the [Microscopy Society of America](https://microscopy.org/) (MSA) in 2022. He has published over 200 peer-reviewed publications, and given over 100 invited talks and workshops around the world. Colin advocates for open science and his group develops open-source scientific software such as the [py4DSTEM analysis](https://github.com/py4dstem/py4DSTEM) and [Prismatic STEM simulation](https://prism-em.com/). He is also the editor-in-chief for the interactive web-based scientific journal [Elemental Microscopy](https://www.elementalmicroscopy.com/).
+Colin Ophus lab's research focuses on experimental methods, reconstruction algorithms, and software codes for simulation, analysis, and instrument design of TEM, STEM and 4DSTEM. He was awarded a US Department of Energy (DOE) Early Career award in 2018, and the [Burton Medal](https://microscopy.org/Society-Awards-Recipients#2022) from the [MSA](https://microscopy.org/) in 2022. He has published over 200 peer-reviewed publications, and given over 100 invited talks and workshops around the world. Colin advocates for open science and his group develops open-source scientific software such as the [py4DSTEM analysis](https://github.com/py4dstem/py4DSTEM) and [Prismatic STEM simulation](https://prism-em.com/). He is also the editor-in-chief for the interactive web-based scientific journal [Elemental Microscopy](https://www.elementalmicroscopy.com/).
 
 
 ## Postdoctoral Researchers
@@ -73,7 +73,7 @@ Arthur is the lead developer of the [pyLorenz](https://github.com/PyLorentz/PyLo
 Georgios Varnavides is a postdoctoral Miller research fellow at the University of California, Berkeley, where he is developing new computational imaging modalities to observe structure and function in materials with high spatial resolution.
 
 ---
-[Iterative Phase Retrieval Algorithms for Scanning Transmission Electron Microscopy](@https://doi.org/10.48550/arXiv.2309.05250)
+[Iterative phase retrieval algorithms for STEM](@https://doi.org/10.48550/arXiv.2309.05250)
 :::
 
 
@@ -90,7 +90,9 @@ Georgios Varnavides is a postdoctoral Miller research fellow at the University o
 Serin earned her PhD in Materials Science and Engineering at MIT, advised by Professor Frances Ross, as an MIT Energy Initiative and MathWorks Fellow. She is one of Northwestern's 10 Future Leaders in Materials Science. Her research uses *in situ* electron microscopy to study nanomaterials for sustainability, while her postdoc focuses on enhancing photocatalytic materials' performance and lifetime with advanced techniques like 4DSTEM. Serin is also active in community building and mentorship, serving on the Early Career Committee of the MSA and mentoring through Stanford's Science Small Group program.
 
 ---
+
 [Temperature dependent nanochemistry and growth kinetics using liquid cell TEM](https://doi.org/10.1021/acsnano.2c11477)
+
 :::
 
 
@@ -109,7 +111,6 @@ Andrew is a PhD candidate in the Department of Physics at the University of Oreg
 :::
 
 
-
 :::{person}
 :name: Samuel Gleason
 :position: PhD Student
@@ -117,18 +118,36 @@ Andrew is a PhD candidate in the Department of Physics at the University of Oreg
 :image: /images/people/GleasonSam.jpg
 :reverse:
 
-<!-- :github: gvarnavi
-:email: gvarnavides@berkeley.edu
-:orcid: 0000-0001-8338-3323
- -->
-
 Sam is a Physical Chemistry PhD candidate at the University of California, Berkeley. He is a member of the research group of Paul Alivisatos and is completing his doctoral research at the National Center For Electron Microscopy, co-supervised by Colin and Dr Jim Ciston.
 
 ---
 
-[Random Forest Prediction of Crystal Structure from Electron Diffraction Patterns Incorporating Multiple Scattering](https://arxiv.org/abs/2406.16310)
+[Random forest prediction of crystal structure from electron diffraction patterns incorporating multiple scattering](https://arxiv.org/abs/2406.16310)
 
 :::
+
+
+## Student Rotations
+
+
+:::{person}
+:name: Cedric Lim
+:position: Masters Student
+:pronouns: he/him
+:image: /images/people/LimCedric.jpg
+:reverse:
+
+Cedric earned his B.A in Physics at the University of California, Berkeley. He worked with Professor Anatoli Polkovnikov at Boston University proposing a new definition of chaos in both classical and quantum systems. He is currently interested in machine learning and experimental techniques used in 4DSTEM.
+
+
+---
+
+[Defining classical and quantum chaos through adiabatic transformations
+](https://arxiv.org/abs/2401.01927)
+
+:::
+
+
 
 <!-- ## Masters Students
 
