@@ -2,7 +2,7 @@
 version: 1
 project:
   title: Colin Ophus Lab
-  short_title: COLAB
+  short_title: COLab
   description: Understanding materials atom by atom
   toc:
     - file: index.md
@@ -16,6 +16,7 @@ project:
   abbreviations:
     4DSTEM: four dimensional scanning transmission electron microscopy
     4DSCED: four dimensional scanning confocal electron diffraction
+    abTEM: ab initio transmission electron microscopy
     ADF: annular dark field
     AET: atomic electron tomography
     BF: bright field
@@ -38,6 +39,7 @@ project:
     NCEM: National Center for Electron Microscopy
     PAET: ptychographic atomic electron tomography
     PDF: portable document format
+    PRISM: plane-wave reciprocal-space interpolated scattering matrix
     py4DSTEM: python toolkit for 4DSTEM analysis
     SCGSR: science graduate student research
     SLAC: Stanford Linear Accelerator Center
@@ -52,3 +54,5 @@ site:
   title: Colin Ophus Lab
   domains:
     - colab-landing.curve.space
+  options:
+    outline_maxdepth: 2
