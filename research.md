@@ -8,7 +8,7 @@ title: Research
 
 +++ {"class": "col-"}
 
-:::{figure} ./videos/research_4DSTEM.mp4
+:::{figure} ./videos/research_4DSTEM_02.mp4
 :class: md:float-right ml-4
 Comparing conventional ADF-STEM and 4DSTEM.
 :::
@@ -65,7 +65,7 @@ Our group has devised a way to overcome the limitations of multiple scattering i
 
 ### ML Characterization of Disordered Materials
 
-:::{figure} ./videos/atomic_struct_03_small.mp4
+:::{figure} ./videos/atomic_struct_04_small.mp4
 :class: md:float-right ml-4
 :width: 300px
 Disordered nanocrystalline silicon.
