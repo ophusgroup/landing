@@ -36,7 +36,7 @@ Colin Ophus lab's research focuses on experimental methods, reconstruction algor
 :orcid: 0000-0002-7117-066X
 :reverse:
 
-Steph received her PhD at Northwestern University in the Dravid Group. During her PhD, she was award an SCGSR from the US Deptartment of Energy for a research internship at Berkeley Lab. She is currently a postdoc working in Colin's group at Stanford and in Karen Bustillo's group at Berkeley Lab.
+Steph received her PhD at Northwestern University in the Dravid Group. During her PhD, she was award an SCGSR from the US Department of Energy for a research internship at Berkeley Lab. She is currently a postdoc working in Colin's group at Stanford and in Karen Bustillo's group at Berkeley Lab.
 
 [Uncovering the 3D structure of upconverting core–shell nanoparticles with multislice electron ptychography](@doi.org/10.1063/5.0206814)
 :::
