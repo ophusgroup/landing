@@ -1,3 +1,0 @@
----
-title: PRISM SOP placeholder
----
