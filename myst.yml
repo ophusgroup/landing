@@ -57,22 +57,24 @@ site:
       url: /people
     - title: Research
       url: /research
-    - title: Papers
-      url: /papers
-    - title: Facilities
-      url: /facilities
-    - title: Funding
-      url: /funding
     - title: Resources
       children:
         - title: Mallard
           url: /resource-mallard
         - title: PRISM
           url: /resource-prism
+        - title: Prospective students
+          url: /prospective
     - title: Interactive
       children:
         - title: PRISM
           url: /interactive-prism
+    - title: Papers
+      url: /papers
+    - title: Facilities
+      url: /facilities
+    - title: Funding
+      url: /funding
   template: book-theme
   title: Colin Ophus Lab
   domains:
