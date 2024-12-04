@@ -11,6 +11,7 @@ title: People
 :email: cophus@stanford.edu
 :github: cophus
 :twitter: ColinOphus
+:bluesky: cophus.bsky.social
 :reverse:
 
 - Associate Professor, [Department of Materials Science and Engineering](https://mse.stanford.edu/), [Stanford University](https://www.stanford.edu/)
@@ -147,6 +148,28 @@ Cedric earned his B.A in Physics at the University of California, Berkeley. He w
 
 [Defining classical and quantum chaos through adiabatic transformations
 ](https://arxiv.org/abs/2401.01927)
+
+:::
+
+
+
+## Interns
+
+
+:::{person}
+:name: Peiwen Ren
+:position: Intern
+:pronouns: he/him
+:image: /images/people/RenPeiwen.jpg
+:github: rpw199912j 
+:twitter: ColinOphus
+:orcid: 0000-0002-0679-1056
+:website: https://pwren.me/
+:reverse:
+
+Peiwen earned his MS in materials science and engineering at Stanford University, and BA in materials science at Northwestern University. He is interested in scientific visualization and using computational imaging methods to study nanomaterials. 
+
+[Database, Features, and Machine Learning Model to Identify Thermally Driven Metal–Insulator Transition Compounds](https://doi.org/10.1021/acs.chemmater.1c00905)
 
 :::
 
