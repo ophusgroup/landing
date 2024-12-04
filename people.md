@@ -11,7 +11,6 @@ title: People
 :email: cophus@stanford.edu
 :github: cophus
 :twitter: ColinOphus
-:bluesky: cophus.bsky.social
 :reverse:
 
 - Associate Professor, [Department of Materials Science and Engineering](https://mse.stanford.edu/), [Stanford University](https://www.stanford.edu/)

@@ -10,6 +10,7 @@ project:
     - file: people.md
     - file: research.md
     - file: papers.md
+    - file: resources.md
     - file: facilities.md
     - file: teaching.md
     - file: funding.md
