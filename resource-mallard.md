@@ -32,6 +32,7 @@ The use cases of multi-processing or multi-threading is dependent on the specifi
     - Simulating nanoparticles does not require fast I/O operations, but does the bulk of the work on the specified GPU.
 
 2. `torch`
+    - `torch` will also always allocate all available CPU cores so one should limit the number of threads to `N=1` *if* the training is still at small-scale. 
     - In large datasets, especially when individual file sizes are small, spawning more than 1 thread can lead to performance boosts. An example of a use case is using `torch.utils.data.Dataloader`:
         ```python
         train_dataloader = torch.utils.data.DataLoader(
@@ -42,6 +43,8 @@ The use cases of multi-processing or multi-threading is dependent on the specifi
             num_workers = 4, # Enables multi-processed data-loading.
         )
         ```
+        In this case, it is advised to set the number of threads to be the same as `num_workers`. Depending on how large your dataset is, it may be necessary to run an analysis on the number of threads vs runtime.
+    
 
     
 ## Using the GPUs on mallard  
