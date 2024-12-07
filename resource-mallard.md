@@ -2,7 +2,7 @@
 title: Mallard SOP
 ---
 
-Mallard is the group's first GPU server with 4 Nvidia L40s GPUs and 512 GB RAM. 
+Mallard is the group's first GPU server with 4 Nvidia L40s GPUs, 64 cores, 128 threads, and 512 GB RAM. 
 
 ## Getting started with python on mallard
 - Verify your connection and install conda:
@@ -14,6 +14,36 @@ Mallard is the group's first GPU server with 4 Nvidia L40s GPUs and 512 GB RAM.
     1. Download [VS Code](https://code.visualstudio.com/download) and then install the Remote Explorer extension.
     2. In VS Code, open the command prompt (`ctrl + shift + p`) and run `Remote-SSH: Add New SSH Host`, then `Connect to Host`
     3. Thats it! You are now on mallard and can open folders or notebooks and run code as normal.
+
+## Allocating CPUs on mallard
+
+Some packages (`torch`, `abtem`, `ase`, `construction_zone`, ...) may potentially allocate all available [threads](https://www.liquidweb.com/blog/difference-cpu-cores-thread/#h-the-difference-between-cores-vs-threads) which could become problematic performance-wise as mallard is a *shared* server. Unless the script/notebook that is running has intentional multi-processing/multi-threading capabilities, it is good practice to instantiate the following at the top of your script or notebook:
+
+```python
+import os
+os.environ["OMP_NUM_THREADS"] = "N" # Change N to required number of threads, 
+                                    # often N=1 is sufficient for most workloads.
+```
+
+The use cases of multi-processing or multi-threading is dependent on the specific needs of the project. And often before pursuing either options, it is advised to ask someone if there are no other optimizations to be made to boost performance. Here are a few situations where increasing `N` to be greater than 1 makes sense, and should be avoided:
+
+1. `abtem` / `ase` / `construction_zone`
+    - When using these packages one should **always** limit their threads to `N=1`. These packages will always allocate all available CPU cores without substantial performance gains. 
+    - Simulating nanoparticles does not require fast I/O operations, but does the bulk of the work on the specified GPU.
+
+2. `torch`
+    - In large datasets, especially when individual file sizes are small, spawning more than 1 thread can lead to performance boosts. An example of a use case is using `torch.utils.data.Dataloader`:
+        ```python
+        train_dataloader = torch.utils.data.DataLoader(
+            train_set,
+            batch_size = 2 ** self.train_params["batch_size_power"],
+            shuffle = self.train_params["shuffle"],
+            pin_memory = True,
+            num_workers = 4, # Enables multi-processed data-loading.
+        )
+        ```
+
+    
 ## Using the GPUs on mallard  
 We do not currently use a job scheduler on mallard. It is therefore the users' responsibility to not run over each others' jobs.  
 
