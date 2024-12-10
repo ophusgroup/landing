@@ -66,19 +66,24 @@ Whenever using mallard, remember to always:
     - Alternatively, you can limit the accesible GPUs via environment variables, for example:
         ```python
         import torch
-        print("num GPUs a: ", torch.cuda.device_count())
+        print("num GPUs at first: ", torch.cuda.device_count())
 
         import os
         os.environ["CUDA_DEVICE_ORDER"] = "PCI_BUS_ID"  # consistent GPU ordering
         os.environ["CUDA_VISIBLE_DEVICES"] = "1,3" 
-        print("num GPUs b: ", torch.cuda.device_count())
+        print("num GPUs now: ", torch.cuda.device_count())
         ```
-        > num GPUs a: 4  
-        > num GPUs b: 2  
+        > num GPUs at first: 4  
+        > num GPUs now: 2  
 
-        Now running `torch.cuda.set_device(1)` would map torch to GPU 3, as the two visible devices are GPUs 1 and 3.
+        Now running `torch.cuda.set_device(1)` would map torch to GPU 3, as the two visible devices are GPUs 1 and 3. 
 
-### Misc.
-- Use [tmux](https://github.com/tmux/tmux/wiki) to enable long jobs to continue running after disconnecting from mallard. 
-    - You could also potentially set up a [Jupyter server](https://github.com/microsoft/vscode-jupyter/issues/1378#issuecomment-1819466769) and connect to it manually, so that notebooks aren't killed on disconnect. Maybe one day Microsoft will [address the issue](https://github.com/microsoft/vscode-jupyter/issues/3998), but I'm not holding my breath.
+## Misc.
+- Disconnecting from mallard will normally end any running jobs, but you can use a terminal multiplexer such as [tmux](https://github.com/tmux/tmux/wiki) to enable long jobs to continue running regardless.
+    - There are many useful [cheat sheets](https://is.gd/MZGSSw) showing how to get started with tmux, as well as [their own documentation](https://github.com/tmux/tmux/wiki/Getting-Started). Regardless, the most useful commands are: 
+        - Make and connect to a new named session: `tmux new -t <name>`
+        - Disconnect from a session: `ctrl + b` $\rightarrow$ `d`
+        - Reconnect to a named session: `tmux a -t <name>`
+        - List all current sessions: `tmux ls` 
+    - This method works fine for scripts, but does not apply directly to notebooks. I use VS Code for remote developments, and there isn't a super easy way (that I know of) to maintain the jupyter kernel upon disconnect. One potential option would be to set up a [Jupyter server](https://github.com/microsoft/vscode-jupyter/issues/1378#issuecomment-1819466769) and connect to it manually. Maybe one day Microsoft will [address the issue](https://github.com/microsoft/vscode-jupyter/issues/3998), but I'm not holding my breath. Do let me know if you find a good solution...
 - It's possible for hung ipython kernels to not properly disconnect and clear the GPU. Please make sure there are no (unintentional) jobs left running when you are ready to disconnect. 
