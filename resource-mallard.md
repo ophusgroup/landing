@@ -23,6 +23,10 @@ Some packages (`torch`, `abtem`, `ase`, `construction_zone`, ...) may potentiall
 import os
 os.environ["OMP_NUM_THREADS"] = "N" # Change N to required number of threads, 
                                     # often N=1 is sufficient for most workloads.
+
+import torch
+torch.set_num_threads(N) # When using .cpu(), PyTorch will also allocate all cores
+                         # regardless if you set your os environment variable.
 ```
 
 The use cases of multi-processing or multi-threading is dependent on the specific needs of the project. And often before pursuing either options, it is advised to ask someone if there are no other optimizations to be made to boost performance. Here are a few situations where increasing `N` to be greater than 1 makes sense, and should be avoided:
