@@ -143,7 +143,7 @@ Antony is a PhD candidate in Materials Science and Engineering at Stanford Unive
 :image: /images/people/LimCedric.jpg
 :reverse:
 
-Cedric earned his B.A in Physics at the University of California, Berkeley. He worked with Professor Anatoli Polkovnikov at Boston University proposing a new definition of chaos in both classical and quantum systems. He is currently interested in machine learning and experimental techniques used in 4DSTEM.
+Cedric is a Master's student in Materials Science and Engineering at Stanford University. He earned his B.A in Physics at the University of California, Berkeley. He worked with Professor Anatoli Polkovnikov at Boston University proposing a new definition of chaos in both classical and quantum systems. He is currently interested in machine learning and experimental techniques used in 4DSTEM.
 
 [Defining classical and quantum chaos through adiabatic transformations
 ](https://arxiv.org/abs/2401.01927)
