@@ -3,6 +3,16 @@ title: Teaching
 ---
 
 
+
+## Stanford Courses 
+
+
+:::{cn:articles}
+:venue: ophusgroup
+:collection: courses
+:::
+
+
 ## 4DSTEM analysis  
 
 Our group has created many tutorials for 4D-STEM analysis using py4DSTEM, our open source python toolkit for 4DSTEM.  These tutorials and example datasets can be found online:
@@ -29,6 +39,4 @@ One of the most important aspects of scientific research is how we communicate o
 - [Matplotlib tutorials in Google Colab](https://tinyurl.com/progviz)
 
 
-## Stanford Courses Taught
 
-Coming soon! 

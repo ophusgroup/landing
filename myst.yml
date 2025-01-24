@@ -4,15 +4,19 @@ project:
   title: Colin Ophus Lab
   short_title: COLab
   description: Understanding materials atom by atom
-  # toc:
-  #   - file: index.md
-  #   - file: news.md
-  #   - file: people.md
-  #   - file: research.md
-  #   - file: papers.md
-  #   - file: facilities.md
-  #   - file: teaching.md
-  #   - file: funding.md
+  toc:
+    - file: index.md
+    - file: news.md
+    - file: people.md
+    - file: research.md
+    - file: papers.md
+    - file: resources.md
+      children: 
+        - file: resource-mallard.md
+        - file: resource-interactive.md
+    - file: facilities.md
+    - file: teaching.md
+    - file: funding.md
   abbreviations:
     4DSTEM: four dimensional scanning transmission electron microscopy
     4DSCED: four dimensional scanning confocal electron diffraction
@@ -50,31 +54,6 @@ project:
     US: United States
     XEDS: x-ray energy dispersive spectrometry
 site:
-  nav:
-    - title: News
-      url: /news
-    - title: People
-      url: /people
-    - title: Research
-      url: /research
-    - title: Resources
-      children:
-        - title: Mallard
-          url: /resource-mallard
-        - title: PRISM
-          url: /resource-prism
-        - title: Prospective students
-          url: /prospective
-    - title: Interactive
-      children:
-        - title: PRISM
-          url: /interactive-prism
-    - title: Papers
-      url: /papers
-    - title: Facilities
-      url: /facilities
-    - title: Funding
-      url: /funding
   template: book-theme
   title: Colin Ophus Lab
   domains:
