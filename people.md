@@ -183,9 +183,10 @@ Antony is a PhD candidate in Materials Science and Engineering at Stanford Unive
 :image: /images/people/CuiYi.jpg
 :reverse:
 
-Yi is a PhD candidate in the Department of Materials Science and Engineering at Stanford University. His research focuses on the confined synthesis and (S)TEM characterization of ultra thin (nanometer-thick) materials. At COLab, Yi is currently working on machine learning methods for STEM tomography. Yi has been co-organizing the bimonthly Stanford EM-X symposium and the CryoEM FWP meeting since 2022.
-:::
+Yi is a PhD candidate in the Department of Materials Science and Engineering at Stanford University. His research focuses on the confined synthesis and (S)TEM characterization of ultra thin (nanometer-thick) materials. At COLab, Yi is currently working on machine learning methods for STEM tomography. Yi has been co-organizing the bimonthly Stanford [EM-X symposium](https://emx.stanford.edu) and the CryoEM FWP meeting since 2022.
 
+[Twisted epitaxy of gold nanodisks grown between twisted substrate layers of MoS₂](https://www.science.org/doi/10.1126/science.adk5947)
+:::
 
 
 
