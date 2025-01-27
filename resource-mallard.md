@@ -34,6 +34,10 @@ The use cases of multi-processing or multi-threading is dependent on the specifi
 1. `abtem` / `ase` / `construction_zone`
     - When using these packages one should **always** limit their threads to `N=1`. These packages will always allocate all available CPU cores without substantial performance gains. 
     - Simulating nanoparticles does not require fast I/O operations, but does the bulk of the work on the specified GPU.
+    - Note with **modern abtem** (1.0.1 or later) you have to use following config options as they will **ignore** `os.environ` variables.:
+        - `abtem.config.set{{"device":"gpu"}}`: Sets the default device to the gpu.
+        - `abtem.config.set{{"num_workers": 1}}`: Sets the number of CPU cores to use.
+        - More options can be found on this [page](https://abtem.readthedocs.io/en/latest/user_guide/walkthrough/parallelization.html#using-gpus)
 
 2. `torch`
     - `torch` will also always allocate all available CPU cores so one should limit the number of threads to `N=1` *if* the training is still at small-scale. 

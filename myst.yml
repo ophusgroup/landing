@@ -10,6 +10,9 @@ project:
     - file: people.md
     - file: research.md
     - file: resources.md
+      children: 
+        - file: resource-mallard.md
+        - file: resource-interactive.md
     - file: facilities.md
     - file: teaching.md
     - file: funding.md
