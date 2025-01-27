@@ -2,6 +2,9 @@
 title: Research
 ---
 
+[List of publications](/papers)
+
+
 ## 4DSTEM
 
 ### Experiments
