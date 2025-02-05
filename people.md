@@ -2,6 +2,9 @@
 title: People
 ---
 
+## Principal Investigator
+
+
 :::{person}
 :name: Colin Ophus
 :position: Group Leader
@@ -10,7 +13,6 @@ title: People
 :image: /images/people/OphusColin.jpg
 :email: cophus@stanford.edu
 :github: cophus
-:twitter: ColinOphus
 :reverse:
 
 - Associate Professor, [Department of Materials Science and Engineering](https://mse.stanford.edu/), [Stanford University](https://www.stanford.edu/)
@@ -18,9 +20,9 @@ title: People
 - Faculty Scientist, [SLAC National Accelerator Laboratory](https://www6.slac.stanford.edu/)
 - [Google Scholar](https://scholar.google.com/citations?hl=en&user=h5MPYJAAAAAJ)
 
-Colin received his BSc in Engineering Physics, and his PhD in Materials Engineering in [David Mitlin's](https://www.me.utexas.edu/people/faculty-directory/mitlin) group at the [University of Alberta](https://www.ualberta.ca/en/index.html) in Edmonton, Canada. He received an NSERC scholarship to pursue postdoctoral research working for [Velimir "Mimo" Radmilovic](https://www.sanu.ac.rs/en/member/radmilovic-velimir/) at Berkeley Lab and [Mark Asta](https://asta.mse.berkeley.edu/) at UC Berkeley. He then worked as a Project Scientist, Research Scientist, and Staff Scientist at the [National Center for Electron Microscopy](https://foundry.lbl.gov/about/facilities/the-national-center-for-electron-microscopy-ncem/) (NCEM), part of the [Molecular Foundry](https://foundry.lbl.gov/) user facility at [Lawrence Berkeley Lab](https://www.lbl.gov/).
+Colin received his BSc in Engineering Physics, and his PhD in Materials Engineering in [David Mitlin's](https://www.me.utexas.edu/people/faculty-directory/mitlin) group at the [University of Alberta](https://www.ualberta.ca/en/index.html) in Edmonton, Canada. He received an NSERC scholarship to postdoc for [Velimir "Mimo" Radmilovic](https://www.sanu.ac.rs/en/member/radmilovic-velimir/) at Berkeley Lab and [Mark Asta](https://asta.mse.berkeley.edu/) at UC Berkeley. He then worked as a Scientist at the [National Center for Electron Microscopy](https://foundry.lbl.gov/about/facilities/the-national-center-for-electron-microscopy-ncem/) (NCEM), part of the [Molecular Foundry](https://foundry.lbl.gov/) user facility at [Lawrence Berkeley Lab](https://www.lbl.gov/).
 
-Colin Ophus lab's research focuses on experimental methods, reconstruction algorithms, and software codes for simulation, analysis, and instrument design of TEM, STEM and 4DSTEM. He was awarded a US Department of Energy (DOE) Early Career award in 2018, and the [Burton Medal](https://microscopy.org/Society-Awards-Recipients#2022) from the [MSA](https://microscopy.org/) in 2022. He has published over 200 peer-reviewed publications, and given over 100 invited talks and workshops around the world. Colin advocates for open science and his group develops open-source scientific software such as the [py4DSTEM analysis](https://github.com/py4dstem/py4DSTEM) and [Prismatic STEM simulation](https://prism-em.com/). He is also the editor-in-chief for the interactive web-based scientific journal [Elemental Microscopy](https://www.elementalmicroscopy.com/).
+Colin Ophus Lab's research focuses on experimental methods, reconstruction algorithms, and software codes for simulation, analysis, and instrument design of TEM, STEM and 4DSTEM. He was awarded a US DOE Early Career award in 2018, and the [Burton Medal](https://microscopy.org/Society-Awards-Recipients#2022) from the [MSA](https://microscopy.org/) in 2022. He has published over 210 peer-reviewed publications, and given over 100 invited talks and workshops around the world. Colin advocates for open science and his group develops open-source scientific software such as the [py4DSTEM analysis](https://github.com/py4dstem/py4DSTEM) and [Prismatic STEM simulation](https://prism-em.com/). He is also the editor-in-chief for the interactive web-based scientific journal [Elemental Microscopy](https://www.elementalmicroscopy.org/).
 
 :::
 
@@ -36,7 +38,7 @@ Colin Ophus lab's research focuses on experimental methods, reconstruction algor
 :orcid: 0000-0002-7117-066X
 :reverse:
 
-Steph received her PhD at Northwestern University in the Dravid Group. During her PhD, she was award an SCGSR from the US Department of Energy for a research internship at Berkeley Lab. She is currently a postdoc working in Colin's group at Stanford and in Karen Bustillo's group at Berkeley Lab.
+Steph received her PhD at Northwestern University in the Dravid Group. During her PhD, she was award an SCGSR from the US Department of Energy for a research internship at Berkeley Lab. She is currently a postdoc working in Colin's group at Stanford and in Dr Karen Bustillo's group at Berkeley Lab.
 
 [Uncovering the 3D structure of upconverting core–shell nanoparticles with multislice electron ptychography](@doi.org/10.1063/5.0206814)
 :::
@@ -106,23 +108,9 @@ Andrew is a PhD candidate in the Department of Physics at the University of Oreg
 :::
 
 
-:::{person}
-:name: Samuel Gleason
-:position: PhD Student
-:pronouns: he/him
-:image: /images/people/GleasonSam.jpg
-:reverse:
-
-Sam is a Physical Chemistry PhD candidate at the University of California, Berkeley. He is a member of the research group of Paul Alivisatos and is completing his doctoral research at the National Center For Electron Microscopy, co-supervised by Colin and Dr Jim Ciston.
-
-[Random forest prediction of crystal structure from electron diffraction patterns incorporating multiple scattering](https://arxiv.org/abs/2406.16310)
-
-:::
 
 
-## Student Rotations
-
-
+## Masters Students
 
 
 :::{person}
@@ -139,6 +127,41 @@ Cedric is a Master's student in Materials Science and Engineering at Stanford Un
 
 :::
 
+
+
+
+## Student Rotations
+
+
+:::{person}
+:name: Henry Bell
+:position: PhD Student
+:pronouns: he/him
+:image: /images/people/BellHenry.jpg
+:reverse:
+Henry Bell is a PhD student in the Applied Physics program at Stanford. He completed his BA in Physics at Macalester College and his MSc in Physics at ETH Zurich. His Masters research focused on understanding the nonequilibrium photoexcited states of quantum materials. He is currently working on a computational method to reconstruct the topography/strain of thin films from TEM images and an improved Ptychography algorithm.
+:::
+
+
+:::{person}
+:name: Alyssa Xu
+:position: Masters Student
+:pronouns: she/her
+:image: /images/people/XuAlyssa.jpg
+:reverse:
+Alyssa is a Master student in the Department of Materials Science and Engineering at Stanford University. She received her Bachelor degrees from Sichuan University. Her current research interests focus on py4DSTEM and computational method for structure characterization and analysis
+:::
+
+
+
+:::{person}
+:name: Nicholas Marchese
+:position: PhD Student
+:pronouns: she/her
+:image: /images/people/MarcheseNicholas.jpg
+:reverse:
+Nicholas is a PhD student in Materials Science and Engineering at Stanford University. He earned his BA in Materials Science at Northwestern University. During his time at Northwestern, he worked with [Prof Sossina Haile](https://addis.ms.northwestern.edu/) on developing a simulation package for solar thermochemical hydrogen production. Currently, he is interested in polymer systems and using TEM to gain a better understanding of how their microstructure impacts various properties
+:::
 
 
 ## Interns
@@ -160,6 +183,9 @@ Peiwen earned his MS in materials science and engineering at Stanford University
 [Database, Features, and Machine Learning Model to Identify Thermally Driven Metal–Insulator Transition Compounds](https://doi.org/10.1021/acs.chemmater.1c00905)
 
 :::
+
+
+
 
 
 ## Honorary Members
@@ -191,6 +217,8 @@ Yi is a PhD candidate in the Department of Materials Science and Engineering at 
 
 
 
+
+
 <!-- ## Masters Students
 
 - None current
@@ -217,8 +245,21 @@ Chris has worked in MSE Administration for a little over a year, after previous 
 
 
 
-## Former Members
+## Former Group Members
 
+
+:::{person}
+:name: Samuel Gleason
+:position: PhD Student
+:pronouns: he/him
+:image: /images/people/GleasonSam.jpg
+:reverse:
+
+Sam received his PhD from the University of California, Berkeley, working with Dr Paul Alivisatos, Dr Jim Ciston, and Colin. He is now working on AI-driven materials discovery at [ENT$\Delta$LPIC](https://entalpic.ai/).
+
+[Prediction of crystal structure from electron diffraction patterns incorporating multiple scattering](https://doi.org/10.1103/PhysRevMaterials.8.093802)
+
+:::
 
 
 :::{person}
@@ -229,7 +270,7 @@ Chris has worked in MSE Administration for a little over a year, after previous 
 
 Formerly a PhD student in Lena Kourkoutis' group at Cornell and a postdoc in Colin Ophus' group at Berkeley Lab. Now working as a Principle Research Scientist at hBar Instruments.
 
-[py4DSTEM: A Software Package for Four-Dimensional Scanning Transmission Electron Microscopy Data Analysis](@doi.org/10.1017/S1431927621000477)
+[py4DSTEM: A Software Package for 4DSTEM Data Analysis](@doi.org/10.1017/S1431927621000477)
 :::
 
 :::{person}
