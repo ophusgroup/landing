@@ -59,3 +59,20 @@ site:
     - colab-landing.curve.space
   options:
     outline_maxdepth: 2
+  nav:
+    - title: News
+      url: /news
+    - title: People
+      url: /people
+    - title: Research
+      children:
+        - title: Overview
+          url: /research
+        - title: Resources
+          url: /resources
+        - title: Facilities
+          url: /facilities
+        - title: Teaching
+          url: /teaching
+        - title: Funding
+          url: /funding
