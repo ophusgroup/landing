@@ -9,12 +9,13 @@ project:
     - file: news.md
     - file: people.md
     - file: research.md
+    - file: teaching.md
     - file: resources.md
       children: 
+        - file: resource-students.md
         - file: resource-mallard.md
         - file: resource-interactive.md
     - file: facilities.md
-    - file: teaching.md
     - file: funding.md
   abbreviations:
     4DSTEM: four dimensional scanning transmission electron microscopy
@@ -65,14 +66,19 @@ site:
     - title: People
       url: /people
     - title: Research
+      url: /research
+    - title: Teaching
+      url: /teaching
+    - title: Funding
+      url: /funding
+    - title: Resources
       children:
-        - title: Overview
-          url: /research
-        - title: Resources
-          url: /resources
+        - title: Students
+          url: /resource-students
+        - title: Mallard Compute
+          url: /resource-mallard
+        - title: Interactive
+          url: /resource-interactive
         - title: Facilities
           url: /facilities
-        - title: Teaching
-          url: /teaching
-        - title: Funding
-          url: /funding
+
