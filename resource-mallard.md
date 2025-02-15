@@ -2,6 +2,9 @@
 title: Mallard SOP
 ---
 
+
+
+
 Mallard is the group's first GPU server with 4 Nvidia L40s GPUs, 64 cores, 128 threads, and 512 GB RAM. 
 
 ## Getting started with python on mallard
