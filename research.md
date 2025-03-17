@@ -193,7 +193,10 @@ We have extended this method using the [partitioned PRISM algorithm](https://doi
 
 ### py4DSTEM Diffraction Simulations
 
+We can also use py4DSTEM to perform simulations of diffraction patterns, including kinematical, dynamical (non-zero thickness), simple HRTEM, and even position averaged convergent beam electron diffraction (PABCED) experiments. Try out these Google Colab Tutorials:
 
+- [Dynamical Diffraction Simulations](https://drive.google.com/file/d/1NRZpceoicJxsVp_v9RJ_54RzCVN8HrED/view?usp=drive_link)
+- [Kinematical Diffraction Simulations](https://drive.google.com/file/d/1_YONI4P1ylMu4aGWWysYqFhMFdXTd_jw/view?usp=drive_link)
 
 
 

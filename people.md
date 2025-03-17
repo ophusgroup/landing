@@ -98,6 +98,16 @@ Serin earned her PhD in Materials Science and Engineering at MIT, advised by Pro
 ## PhD Students
 
 :::{person}
+:name: Nicholas Marchese
+:position: PhD Student
+:pronouns: he/him
+:image: /images/people/MarcheseNicholas.jpg
+:reverse:
+Nicholas is a PhD student in Materials Science and Engineering at Stanford University. He earned his BA in Materials Science at Northwestern University. During his time at Northwestern, he worked with [Prof Sossina Haile](https://addis.ms.northwestern.edu/) on developing a simulation package for solar thermochemical hydrogen production. Currently, he is interested in polymer systems and using TEM to gain a better understanding of how their microstructure impacts various properties
+:::
+
+
+:::{person}
 :name: Andrew Ducharme
 :position: PhD Student
 :pronouns: he/him
@@ -152,16 +162,6 @@ Henry Bell is a PhD student in the Applied Physics program at Stanford. He compl
 Alyssa is a Master student in the Department of Materials Science and Engineering at Stanford University. She received her Bachelor degrees from Sichuan University. Her current research interests focus on py4DSTEM and computational method for structure characterization and analysis
 :::
 
-
-
-:::{person}
-:name: Nicholas Marchese
-:position: PhD Student
-:pronouns: she/her
-:image: /images/people/MarcheseNicholas.jpg
-:reverse:
-Nicholas is a PhD student in Materials Science and Engineering at Stanford University. He earned his BA in Materials Science at Northwestern University. During his time at Northwestern, he worked with [Prof Sossina Haile](https://addis.ms.northwestern.edu/) on developing a simulation package for solar thermochemical hydrogen production. Currently, he is interested in polymer systems and using TEM to gain a better understanding of how their microstructure impacts various properties
-:::
 
 
 ## Interns
@@ -229,6 +229,19 @@ Yi is a PhD candidate in the Department of Materials Science and Engineering at 
  -->
 
 ## Administrators
+
+:::{person}
+:name: Annie Hall
+:position: Administrator
+:pronouns: she/her
+:image: /images/people/HallAnnie.jpg
+:email: amthall@stanford.edu
+:reverse:
+
+Annie grew up in the suburbs of Chicago and attended Saint Mary’s College in Notre Dame, IN where she pursued a degree in chemistry, played tennis, and enjoyed being a manager of the University of Notre Dame football team.  She later moved to San Francisco and joined the Materials Science and Engineering Department at Stanford University where she is happy to combine her background in and passion for science and business.  Outside of the office, Annie enjoys playing and watching sports, cooking, and traveling.
+:::
+
+
 
 :::{person}
 :name: Chris Hall
