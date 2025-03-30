@@ -139,6 +139,22 @@ Cedric is a Master's student in Materials Science and Engineering at Stanford Un
 
 
 
+:::{person}
+:name: Yemi Uthman
+:position: Masters Student
+:pronouns: he/him
+:image: /images/people/UthmanYemi.jpg
+:reverse:
+
+MS Student, Materials Science and Engineering
+
+BSc, Materials Science and Engineering, Carnegie Mellon University 
+
+Yemi is interested in using computational techniques to analyze 2D TMDC structures.
+
+:::
+
+
 
 ## Student Rotations
 
