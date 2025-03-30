@@ -146,11 +146,7 @@ Cedric is a Master's student in Materials Science and Engineering at Stanford Un
 :image: /images/people/UthmanYemi.jpg
 :reverse:
 
-MS Student, Materials Science and Engineering
-
-BSc, Materials Science and Engineering, Carnegie Mellon University 
-
-Yemi is interested in using computational techniques to analyze 2D TMDC structures.
+Yemi is a Master’s student in Materials Science and Engineering at Stanford University. He earned his BSc in Materials Science at Carnegie Mellon University with a minor in Biomedical Engineering. He is interested in machine learning aided characterization efforts for low dimensional materials.
 
 :::
 
