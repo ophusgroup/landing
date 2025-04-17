@@ -96,6 +96,19 @@ Serin earned her PhD in Materials Science and Engineering at MIT, advised by Pro
 
 
 ## PhD Students
+:::{person}
+:name: Cedric Lim
+:position: PhD Student
+:pronouns: he/him
+:image: /images/people/LimCedric.jpg
+:reverse:
+
+Cedric is a Master's student in Materials Science and Engineering at Stanford University. He earned his B.A in Physics at the University of California, Berkeley, and worked with Professor Anatoli Polkovnikov at Boston University proposing a new definition of chaos in both classical and quantum systems. He is currently interested in applying novel machine learning techniques for reconstructing atomic electron tomography (AET) data, and automating data collection for AET.
+
+[Defining classical and quantum chaos through adiabatic transformations
+](https://arxiv.org/abs/2401.01927)
+
+:::
 
 :::{person}
 :name: Nicholas Marchese
@@ -121,23 +134,6 @@ Andrew is a PhD candidate in the Department of Physics at the University of Oreg
 
 
 ## Masters Students
-
-
-:::{person}
-:name: Cedric Lim
-:position: Masters Student
-:pronouns: he/him
-:image: /images/people/LimCedric.jpg
-:reverse:
-
-Cedric is a Master's student in Materials Science and Engineering at Stanford University. He earned his B.A in Physics at the University of California, Berkeley. He worked with Professor Anatoli Polkovnikov at Boston University proposing a new definition of chaos in both classical and quantum systems. He is currently interested in machine learning and experimental techniques used in 4DSTEM.
-
-[Defining classical and quantum chaos through adiabatic transformations
-](https://arxiv.org/abs/2401.01927)
-
-:::
-
-
 
 :::{person}
 :name: Yemi Uthman
