@@ -103,7 +103,7 @@ Serin earned her PhD in Materials Science and Engineering at MIT, advised by Pro
 :image: /images/people/LimCedric.jpg
 :reverse:
 
-Cedric is a Master's student in Materials Science and Engineering at Stanford University. He earned his B.A in Physics at the University of California, Berkeley, and worked with Professor Anatoli Polkovnikov at Boston University proposing a new definition of chaos in both classical and quantum systems. He is currently interested in applying novel machine learning techniques for reconstructing atomic electron tomography (AET) data, and automating data collection for AET.
+Cedric is a PhD student in Materials Science and Engineering at Stanford University. He earned his B.A in Physics at the University of California, Berkeley, and worked with Professor Anatoli Polkovnikov at Boston University proposing a new definition of chaos in both classical and quantum systems. He is currently interested in applying novel machine learning techniques for reconstructing atomic electron tomography (AET) data, and automating data collection for AET.
 
 [Defining classical and quantum chaos through adiabatic transformations
 ](https://arxiv.org/abs/2401.01927)
