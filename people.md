@@ -419,7 +419,7 @@ Received her PhD from Andy Minor's group and Daryl Chrzan's group at UC Berkeley
 Received his PhD from Pete Nellist's group at Oxford. Formerly a postdoc in Colin Ophus' group. Currently working in industry.
 :::
 
-:::{person}
+<!-- :::{person}
 :name: Milena Loper
 :position: Former Member
 :reverse:
@@ -441,4 +441,4 @@ Former intern in Colin Ophus' group.
 :reverse:
 
 Former intern in Colin Ophus' group.
-:::
+::: -->
