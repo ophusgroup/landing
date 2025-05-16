@@ -96,6 +96,7 @@ Serin earned her PhD in Materials Science and Engineering at MIT, advised by Pro
 
 
 ## PhD Students
+
 :::{person}
 :name: Cedric Lim
 :position: PhD Student
@@ -107,7 +108,6 @@ Cedric is a PhD student in Materials Science and Engineering at Stanford Univers
 
 [Defining classical and quantum chaos through adiabatic transformations
 ](https://arxiv.org/abs/2401.01927)
-
 :::
 
 :::{person}
@@ -118,7 +118,6 @@ Cedric is a PhD student in Materials Science and Engineering at Stanford Univers
 :reverse:
 Nicholas is a PhD student in Materials Science and Engineering at Stanford University. He earned his BA in Materials Science at Northwestern University. During his time at Northwestern, he worked with [Prof Sossina Haile](https://addis.ms.northwestern.edu/) on developing a simulation package for solar thermochemical hydrogen production. Currently, he is interested in polymer systems and using TEM to gain a better understanding of how their microstructure impacts various properties
 :::
-
 
 :::{person}
 :name: Andrew Ducharme
