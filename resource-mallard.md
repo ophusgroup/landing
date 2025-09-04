@@ -7,7 +7,7 @@ Mallard is the group's first GPU server with 4 Nvidia L40s GPUs, a 64-core AMD E
 ## Basics
 Here are a few resources that cover some of the basics that are useful when working on a Linux server like Mallard. 
 - Bash shell
-    - The [Microsoft "Introduction to Bash"](https://learn.microsoft.com/en-us/training/modules/bash-introduction/) is great and covers all the essentials. 
+    - The [Microsoft "Introduction to Bash"](https://learn.microsoft.com/en-us/training/modules/bash-introduction/) is great and covers all the essentials. [Explainshell](https://explainshell.com/) is a useful resource to help one understand the things they copy and paste from StackOverflow.
     - For long-running jobs and generally maximizing productivity, [tmux](https://github.com/tmux/tmux/wiki/Getting-Started) is wonderful and there are lots of [cheat sheets](https://duckduckgo.com/?t=ffab&q=tmux+cheat+sheet&ia=images&iax=images) available.
 - Git & Github
     - It is worth learning the [basics](https://xkcd.com/1597/) of `git` and `GitHub` as these are the tools we use for managing our projects. There are some [excellent interactive resources available](https://learngitbranching.js.org/) (note the tutorials that include a remote) as well as [slides](https://docs.google.com/presentation/d/1WZb3w1SYOxGW1coMqJXrM8yEyLSS9RCl/edit?usp=sharing&ouid=116704770862661131657&rtpof=true&sd=true). 
