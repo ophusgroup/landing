@@ -2,21 +2,38 @@
 title: Mallard SOP
 ---
 
+Mallard is the group's first GPU server with 4 Nvidia L40s GPUs, a 64-core AMD Epyc CPU, and 512 GB RAM. 
 
+## Basics
+Here are a few resources that cover some of the basics that are useful when working on a Linux server like Mallard. 
+- Bash shell
+    - The [Microsoft "Introduction to Bash"](https://learn.microsoft.com/en-us/training/modules/bash-introduction/) is great and covers all the essentials. [Explainshell](https://explainshell.com/) is a useful resource to help one understand the things they copy and paste from StackOverflow.
+    - For long-running jobs and generally maximizing productivity, [tmux](https://github.com/tmux/tmux/wiki/Getting-Started) is wonderful and there are lots of [cheat sheets](https://duckduckgo.com/?t=ffab&q=tmux+cheat+sheet&ia=images&iax=images) available.
+- Git & Github
+    - It is worth learning the [basics](https://xkcd.com/1597/) of `git` and `GitHub` as these are the tools we use for managing our projects. There are some [excellent interactive resources available](https://learngitbranching.js.org/) (note the tutorials that include a remote) as well as [slides](https://docs.google.com/presentation/d/1WZb3w1SYOxGW1coMqJXrM8yEyLSS9RCl/edit?usp=sharing&ouid=116704770862661131657&rtpof=true&sd=true). 
+- Moving data to/from mallard
+    - The fastest way to move large datasets to/from Mallard is using Globus. Install a [local endpoint](https://www.globus.org/globus-connect-personal) on your computer and you can then [transfer files](https://docs.globus.org/guides/tutorials/manage-files/transfer-files/) using the web app as long as you have linked your Stanford account. 
+    - For small transfers you can also use command line tools like SCP or applications like  [CyberDuck](https://cyberduck.io/) or [winSCP](https://winscp.net/eng/index.php).
+- WSL
+    - If your personal computer is a Windows machine, you can also access a Linux distribution (pref. Ubuntu) using the [Windows Subsystem for Linux](https://learn.microsoft.com/en-us/windows/wsl/install). 
 
-
-Mallard is the group's first GPU server with 4 Nvidia L40s GPUs, 64 cores, 128 threads, and 512 GB RAM. 
 
 ## Getting started with python on mallard
 - Verify your connection and install conda:
-    1. ssh into `<username>@mallard.stanford.edu` to verify your connection. You will need to be on Stanford's network or on the VPN if off campus.
-    2. Download the installer for [miniforge](https://conda-forge.org/download/) (preferred) or miniconda for Linux x86_64, and transfer the file to your home folder, e.g. with [CyberDuck](https://cyberduck.io/) or [winSCP](https://winscp.net/eng/index.php).
+    1. ssh into `<username>@mallard.stanford.edu` to verify your connection. You will need to be on the Stanford internal network or on the VPN if off campus.
+    2. Download the installer for [miniforge](https://conda-forge.org/download/) (preferred) or miniconda for Linux x86_64. You can either use the appropriate `curl` command or download to your local computer and transfer the file to your home folder. 
     3. Install conda `$bash <installer>.sh` and follow the prompts
     4. Create a [new environment](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html) for your project as normal.
+    5. If you installed miniforge, it is suggested to use the drop in `mamba` commands rather than `conda` for managing environments.  
+    
 - Connecting from VS Code
     1. Download [VS Code](https://code.visualstudio.com/download) and then install the Remote Explorer extension.
     2. In VS Code, open the command prompt (`ctrl + shift + p`) and run `Remote-SSH: Add New SSH Host`, then `Connect to Host`
     3. Thats it! You are now on mallard and can open folders or notebooks and run code as normal.
+
+- Astral uv package manager
+    - Some projects (including [quantEM](https://github.com/electronmicroscopy/quantem)) use [uv](https://docs.astral.sh/uv/) as a package and environment manager.  
+    - It might be useful to go through their [getting started](https://docs.astral.sh/uv/getting-started/) information if you plan on contributing to quantEM. 
 
 ## Allocating CPUs on mallard
 
@@ -56,7 +73,7 @@ The use cases of multi-processing or multi-threading is dependent on the specifi
         ```
         In this case, it is advised to set the number of threads to be the same as `num_workers`. Depending on how large your dataset is, it may be necessary to run an analysis on the number of threads vs runtime.
     
-
+** There might be cases where these measures aren't sufficient and your program can use more cores than anticipated; if you're doing something heavy it's a good idea to occasionally check `htop` to make sure things are running as expected. 
     
 ## Using the GPUs on mallard  
 We do not currently use a job scheduler on mallard. It is therefore the users' responsibility to not run over each others' jobs.  
@@ -88,6 +105,13 @@ Whenever using mallard, remember to always:
         > num GPUs now: 2  
 
         Now running `torch.cuda.set_device(1)` would map torch to GPU 3, as the two visible devices are GPUs 1 and 3. 
+    - If you are using `quantEM`, you can use the `config` module to set the device for torch, cupy, etc. simultaneously. For example:
+        ```python 
+        from quantem.core import config
+        config.set_device(2)
+        print(config.get_device())
+        ```
+        > cuda:2
 
 ## Misc.
 - Disconnecting from mallard will normally end any running jobs, but you can use a terminal multiplexer such as [tmux](https://github.com/tmux/tmux/wiki) to enable long jobs to continue running regardless.
@@ -96,5 +120,5 @@ Whenever using mallard, remember to always:
         - Disconnect from a session: `ctrl + b` $\rightarrow$ `d`
         - Reconnect to a named session: `tmux a -t <name>`
         - List all current sessions: `tmux ls` 
-    - This method works fine for scripts, but does not apply directly to notebooks. I use VS Code for remote developments, and there isn't a super easy way (that I know of) to maintain the jupyter kernel upon disconnect. One potential option would be to set up a [Jupyter server](https://github.com/microsoft/vscode-jupyter/issues/1378#issuecomment-1819466769) and connect to it manually. Maybe one day Microsoft will [address the issue](https://github.com/microsoft/vscode-jupyter/issues/3998), but I'm not holding my breath. Do let me know if you find a good solution...
+    - This method works fine for scripts, but does not apply directly to notebooks. I use VS Code for remote developments, and there isn't a super easy way (that I know of) to maintain the jupyter kernel upon disconnect. One potential option would be to set up a [Jupyter server](https://github.com/microsoft/vscode-jupyter/issues/1378#issuecomment-1819466769) and connect to it manually. Maybe one day Microsoft will [address the issue](https://github.com/microsoft/vscode-jupyter/issues/3998), but I'm not holding my breath. Do let me know if you find a good solution... <!-- TODO the text of 'jupyter server' and 'address the issue' links are for some reason italicized on the hosted web page, no idea why this only affects those links -->
 - It's possible for hung ipython kernels to not properly disconnect and clear the GPU. Please make sure there are no (unintentional) jobs left running when you are ready to disconnect. 
