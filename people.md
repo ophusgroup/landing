@@ -89,6 +89,15 @@ Cedric is a PhD student in Materials Science and Engineering at Stanford Univers
 Nicholas is a PhD student in Materials Science and Engineering at Stanford University. He earned his BA in Materials Science at Northwestern University. During his time at Northwestern, he worked with [Prof Sossina Haile](https://addis.ms.northwestern.edu/) on developing a simulation package for solar thermochemical hydrogen production. Currently, he is interested in polymer systems and using TEM to gain a better understanding of how their microstructure impacts various properties
 :::
 
+:::{person}
+:name: Henry Bell
+:position: PhD Student
+:pronouns: he/him
+:image: /images/people/BellHenry.jpg
+:reverse:
+Henry Bell is a PhD student in the Applied Physics program at Stanford. He completed his BA in Physics at Macalester College and his MSc in Physics at ETH Zurich. His Masters research focused on understanding the nonequilibrium photoexcited states of quantum materials. He is currently working on a computational method to reconstruct the topography/strain of thin films from TEM images and an improved Ptychography algorithm.
+:::
+
 
 :::{person}
 :name: Sangjoon Bob Lee
@@ -101,6 +110,26 @@ Nicholas is a PhD student in Materials Science and Engineering at Stanford Unive
 Sangjoon, also known as Bob, is a first-year PhD student in the Department of Materials Science and Engineering at Stanford University. He earned his MS in Materials Science and Engineering at Columbia University, where he worked on open-source software with [Prof. Simon Billinge](https://thebillingegroup.com/simon-billinge). Earlier, he earned a BE in Chemical Engineering at The Cooper Union, with minors in Computer Science and Chemistry, and worked in computational chemistry with [Prof. Robert Topper](https://engfac.cooper.edu/topper). Bob can be found on GitHub at @[bobleesj](https://github.com/bobleesj/). His interests include automated workflows for materials imaging and characterization.
 :::
 
+
+
+
+:::{person}
+:name: Caitlyn Obrero
+:position: PhD Student
+:pronouns: she/her
+:image: /images/people/ObreroCaitlyn.jpg
+:linkedin: caitlyn-obrero
+:reverse:
+
+Caitlyn Obrero is a PhD student in Materials Science and Engineering at Stanford University. She earned her BS in Materials Science and Engineering from NC State University, where she developed a broad background in characterizing and studying the properties of materials with a focus on electron microscopy techniques, including SEM and S/TEM. She is currently interested in developing and optimizing in situ STEM techniques to investigate atomic-scale growth mechanisms.
+
+:::
+
+
+
+
+<!-- Will -->
+<!-- Caitlyn -->
 
 
 
@@ -121,27 +150,21 @@ Yemi is a Master’s student in Materials Science and Engineering at Stanford Un
 
 
 
-## Student Rotations
+<!-- ## Student Rotations -->
 
 
-:::{person}
-:name: Henry Bell
-:position: PhD Student
-:pronouns: he/him
-:image: /images/people/BellHenry.jpg
-:reverse:
-Henry Bell is a PhD student in the Applied Physics program at Stanford. He completed his BA in Physics at Macalester College and his MSc in Physics at ETH Zurich. His Masters research focused on understanding the nonequilibrium photoexcited states of quantum materials. He is currently working on a computational method to reconstruct the topography/strain of thin films from TEM images and an improved Ptychography algorithm.
-:::
+<!-- Corrie -->
 
 
-:::{person}
+
+<!-- :::{person}
 :name: Alyssa Xu
 :position: Masters Student
 :pronouns: she/her
 :image: /images/people/XuAlyssa.jpg
 :reverse:
 Alyssa is a Master student in the Department of Materials Science and Engineering at Stanford University. She received her Bachelor degrees from Sichuan University. Her current research interests focus on py4DSTEM and computational method for structure characterization and analysis
-:::
+::: -->
 
 
 
