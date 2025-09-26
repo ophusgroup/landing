@@ -28,20 +28,7 @@ Colin Ophus Lab's research focuses on experimental methods, reconstruction algor
 
 ## Postdoctoral Researchers
 
-:::{person}
-:name: Stephanie Ribet
-:position: Postdoctoral Researcher
-:pronouns: she/her
-:image: /images/people/RibetSteph.jpg
-:twitter: stephanieribet
-:github: smribet
-:orcid: 0000-0002-7117-066X
-:reverse:
 
-Steph received her PhD at Northwestern University in the Dravid Group. During her PhD, she was award an SCGSR from the US Department of Energy for a research internship at Berkeley Lab. She is currently a postdoc working in Colin's group at Stanford and in Dr Karen Bustillo's group at Berkeley Lab.
-
-[Uncovering the 3D structure of upconverting core–shell nanoparticles with multislice electron ptychography](@doi.org/10.1063/5.0206814)
-:::
 
 :::{person}
 :name: Arthur McCray
@@ -56,23 +43,6 @@ Steph received her PhD at Northwestern University in the Dravid Group. During he
 Arthur McCray received his PhD in Applied Physics at Northwestern University, supervised by Amanda Petford-Long. He has experience in Lorentz TEM, magnetic materials, and is currently developing machine learning methods for solving inverse problems in (S)TEM. Arthur is also the lead developer of the [pyLorentz](https://github.com/PyLorentz/PyLorentz) software package.
 
 [AI-enabled Lorentz microscopy for quantitative imaging of nanoscale magnetic spin textures](https://doi.org/10.1038/s41524-024-01285-8)
-:::
-
-:::{person}
-:name: Georgios Varnavides
-:position: Postdoctoral Researcher
-:pronouns: he/him
-:image: /images/people/VarnavidesGeorge.jpg
-:github: gvarnavi
-:email: gvarnavides@berkeley.edu
-:twitter: g_varnavides
-:orcid: 0000-0001-8338-3323
-:website: https://gvarnavides.com/about/
-:reverse:
-
-Georgios Varnavides is a postdoctoral Miller research fellow at the University of California, Berkeley, where he is developing new computational imaging modalities to observe structure and function in materials with high spatial resolution.
-
-[Iterative phase retrieval algorithms for STEM](@https://doi.org/10.48550/arXiv.2309.05250)
 :::
 
 
@@ -119,15 +89,19 @@ Cedric is a PhD student in Materials Science and Engineering at Stanford Univers
 Nicholas is a PhD student in Materials Science and Engineering at Stanford University. He earned his BA in Materials Science at Northwestern University. During his time at Northwestern, he worked with [Prof Sossina Haile](https://addis.ms.northwestern.edu/) on developing a simulation package for solar thermochemical hydrogen production. Currently, he is interested in polymer systems and using TEM to gain a better understanding of how their microstructure impacts various properties
 :::
 
+
 :::{person}
-:name: Andrew Ducharme
+:name: Sangjoon Bob Lee
 :position: PhD Student
 :pronouns: he/him
-:image: /images/people/DucharmeAndrew.jpg
+:image: /images/people/LeeSangjoonBob.jpg
+:github: bobleesj
 :reverse:
 
-Andrew is a PhD candidate in the Department of Physics at the University of Oregon, supervised by Ben McMorran. He was awarded an SCGSR fellowship from the US Department of Energy to work on STEM holography-pytchography in Colin's group at Berkeley Lab and Stanford.
+Sangjoon, also known as Bob, is a first-year PhD student in the Department of Materials Science and Engineering at Stanford University. He earned his MS in Materials Science and Engineering at Columbia University, where he worked on open-source software with [Prof. Simon Billinge](https://thebillingegroup.com/simon-billinge). Earlier, he earned a BE in Chemical Engineering at The Cooper Union, with minors in Computer Science and Chemistry, and worked in computational chemistry with [Prof. Robert Topper](https://engfac.cooper.edu/topper). Bob can be found on GitHub at @[bobleesj](https://github.com/bobleesj/). His interests include automated workflows for materials imaging and characterization.
 :::
+
+
 
 
 
@@ -199,6 +173,39 @@ Peiwen earned his MS in materials science and engineering at Stanford University
 
 
 :::{person}
+:name: Stephanie Ribet
+:position: Postdoctoral Researcher
+:pronouns: she/her
+:image: /images/people/RibetSteph.jpg
+:twitter: stephanieribet
+:github: smribet
+:orcid: 0000-0002-7117-066X
+:reverse:
+
+Steph received her PhD at Northwestern University in the Dravid Group. During her PhD, she was award an SCGSR from the US Department of Energy for a research internship at Berkeley Lab. She is currently a postdoc working in Colin's group at Stanford and in Dr Karen Bustillo's group at Berkeley Lab.
+
+[Uncovering the 3D structure of upconverting core–shell nanoparticles with multislice electron ptychography](@doi.org/10.1063/5.0206814)
+:::
+
+:::{person}
+:name: Georgios Varnavides
+:position: Postdoctoral Researcher
+:pronouns: he/him
+:image: /images/people/VarnavidesGeorge.jpg
+:github: gvarnavi
+:email: gvarnavides@berkeley.edu
+:twitter: g_varnavides
+:orcid: 0000-0001-8338-3323
+:website: https://gvarnavides.com/about/
+:reverse:
+
+Georgios Varnavides is a postdoctoral Miller research fellow at the University of California, Berkeley, where he is developing new computational imaging modalities to observe structure and function in materials with high spatial resolution.
+
+[Iterative phase retrieval algorithms for STEM](@https://doi.org/10.48550/arXiv.2309.05250)
+:::
+
+
+:::{person}
 :name: Antony Georgiadis
 :position: PhD Student
 :pronouns: he/him
@@ -266,6 +273,18 @@ Chris has worked in MSE Administration for a little over a year, after previous 
 
 
 ## Former Group Members
+
+
+:::{person}
+:name: Andrew Ducharme
+:position: PhD Student
+:pronouns: he/him
+:image: /images/people/DucharmeAndrew.jpg
+:reverse:
+
+Andrew is a PhD candidate in the Department of Physics at the University of Oregon, supervised by Ben McMorran. He was awarded an SCGSR fellowship from the US Department of Energy to work on STEM holography-pytchography in Colin's group at Berkeley Lab and Stanford.
+:::
+
 
 
 :::{person}
