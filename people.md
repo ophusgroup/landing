@@ -19,7 +19,8 @@ title: People
 - Center Fellow, [Precourt Institute for Energy](https://energy.stanford.edu/), [Stanford University](https://www.stanford.edu/)
 - Faculty Scientist, [SLAC National Accelerator Laboratory](https://www6.slac.stanford.edu/)
 - [Google Scholar](https://scholar.google.com/citations?hl=en&user=h5MPYJAAAAAJ)
-u.ac.rs/en/member/radmilovic-velimir/) at Berkeley Lab and [Mark Asta](https://asta.mse.berkeley.edu/) at UC Berkeley. He then worked as a Scientist at the [National Center for Electron Microscopy](https://foundry.lbl.gov/about/facilities/the-national-center-for-electron-microscopy-ncem/) (NCEM), part of the [Molecular Foundry](https://foundry.lbl.gov/) user facility at [Lawrence Berkeley Lab](https://www.lbl.gov/).
+
+Colin received his BSc in Engineering Physics, and his PhD in Materials Engineering in [David Mitlin's](https://www.me.utexas.edu/people/faculty-directory/mitlin) group at the [University of Alberta](https://www.ualberta.ca/en/index.html) in Edmonton, Canada. He received an NSERC scholarship to postdoc for [Velimir "Mimo" Radmilovic](https://www.sanu.ac.rs/en/member/radmilovic-velimir/) at Berkeley Lab and [Mark Asta](https://asta.mse.berkeley.edu/) at UC Berkeley. He then worked as a Scientist at the [National Center for Electron Microscopy](https://foundry.lbl.gov/about/facilities/the-national-center-for-electron-microscopy-ncem/) (NCEM), part of the [Molecular Foundry](https://foundry.lbl.gov/) user facility at [Lawrence Berkeley Lab](https://www.lbl.gov/).
 
 Colin Ophus Lab's research focuses on experimental methods, reconstruction algorithms, and software codes for simulation, analysis, and instrument design of TEM, STEM and 4DSTEM. He was awarded a US DOE Early Career award in 2018, and the [Burton Medal](https://microscopy.org/Society-Awards-Recipients#2022) from the [MSA](https://microscopy.org/) in 2022. He has published over 210 peer-reviewed publications, and given over 100 invited talks and workshops around the world. Colin advocates for open science and his group develops open-source scientific software such as the [py4DSTEM analysis](https://github.com/py4dstem/py4DSTEM) and [Prismatic STEM simulation](https://prism-em.com/). He is also the editor-in-chief for the interactive web-based scientific journal [Elemental Microscopy](https://www.elementalmicroscopy.org/).
 
@@ -101,7 +102,7 @@ Henry Bell is a PhD student in the Applied Physics program at Stanford. He compl
 :name: Sangjoon Bob Lee
 :position: PhD Student
 :pronouns: he/him
-:email: cophus@stanford.edu
+:email: bobleesj@stanford.edu
 :image: /images/people/LeeSangjoonBob.jpg
 :orcid: 0000-0002-2367-3932
 :github: bobleesj
@@ -119,7 +120,7 @@ Sangjoon, also known as Bob, is a first-year PhD student in the Department of Ma
 :reverse:
 
 Caitlyn Obrero is a PhD student in Materials Science and Engineering at Stanford University. She earned her BS in Materials Science and Engineering from NC State University, where she developed a broad background in characterizing and studying the properties of materials with a focus on electron microscopy techniques, including SEM and S/TEM. She is currently interested in developing and optimizing in situ STEM techniques to investigate atomic-scale growth mechanisms.
-:::
+::
 
 <!-- Will -->
 
