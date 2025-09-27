@@ -120,11 +120,19 @@ Sangjoon, also known as Bob, is a first-year PhD student in the Department of Ma
 :reverse:
 
 Caitlyn Obrero is a PhD student in Materials Science and Engineering at Stanford University. She earned her BS in Materials Science and Engineering from NC State University, where she developed a broad background in characterizing and studying the properties of materials with a focus on electron microscopy techniques, including SEM and S/TEM. She is currently interested in developing and optimizing in situ STEM techniques to investigate atomic-scale growth mechanisms.
-::
+:::
 
 <!-- Will -->
 
+:::{person}
+:name: Will Millsaps
+:position: PhD Student
+:pronouns: he/him
+:image: /images/people/MillsapsWill.jpg
+:reverse:
 
+TBA
+:::
 
 ## Masters Students
 
@@ -136,7 +144,6 @@ Caitlyn Obrero is a PhD student in Materials Science and Engineering at Stanford
 :pronouns: he/him
 :image: /images/people/MaliDarshan.jpg
 :email: darshanm@stanford.edu
-:linkedin: mali-darshan
 :reverse:
 
 Darshan Mali is a master’s student in Materials Science and Engineering at Stanford University. He earned his B.Tech (Honors) in Metallurgical Engineering and Materials Science from the Indian Institute of Technology Bombay, where he worked with Prof. Tanushree Choudhury on developing single-photon emitters in 2D materials. His current research interests include applying TEM for atomic-scale structure-property analysis.
@@ -153,7 +160,7 @@ Yemi is a Master’s student in Materials Science and Engineering at Stanford Un
 
 :::
 
-<!-- ## Student Rotations -->
+## Student Rotations
 
 :::{person}
 :name: Corrie Barnes
