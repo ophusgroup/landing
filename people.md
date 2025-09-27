@@ -98,20 +98,18 @@ Nicholas is a PhD student in Materials Science and Engineering at Stanford Unive
 Henry Bell is a PhD student in the Applied Physics program at Stanford. He completed his BA in Physics at Macalester College and his MSc in Physics at ETH Zurich. His Masters research focused on understanding the nonequilibrium photoexcited states of quantum materials. He is currently working on a computational method to reconstruct the topography/strain of thin films from TEM images and an improved Ptychography algorithm.
 :::
 
-
 :::{person}
 :name: Sangjoon Bob Lee
 :position: PhD Student
 :pronouns: he/him
+:email: bobleesj@stanford.edu
 :image: /images/people/LeeSangjoonBob.jpg
+:orcid: 0000-0002-2367-3932
 :github: bobleesj
 :reverse:
 
 Sangjoon, also known as Bob, is a first-year PhD student in the Department of Materials Science and Engineering at Stanford University. He earned his MS in Materials Science and Engineering at Columbia University, where he worked on open-source software with [Prof. Simon Billinge](https://thebillingegroup.com/simon-billinge). Earlier, he earned a BE in Chemical Engineering at The Cooper Union, with minors in Computer Science and Chemistry, and worked in computational chemistry with [Prof. Robert Topper](https://engfac.cooper.edu/topper). Bob can be found on GitHub at @[bobleesj](https://github.com/bobleesj/). His interests include automated workflows for materials imaging and characterization.
 :::
-
-
-
 
 :::{person}
 :name: Caitlyn Obrero
@@ -122,20 +120,27 @@ Sangjoon, also known as Bob, is a first-year PhD student in the Department of Ma
 :reverse:
 
 Caitlyn Obrero is a PhD student in Materials Science and Engineering at Stanford University. She earned her BS in Materials Science and Engineering from NC State University, where she developed a broad background in characterizing and studying the properties of materials with a focus on electron microscopy techniques, including SEM and S/TEM. She is currently interested in developing and optimizing in situ STEM techniques to investigate atomic-scale growth mechanisms.
-
-:::
-
-
-
+::
 
 <!-- Will -->
-<!-- Caitlyn -->
-
-
 
 
 
 ## Masters Students
+
+<!-- Darshan -->
+
+:::{person}
+:name: Darshan Mali
+:position: Masters Student
+:pronouns: he/him
+:image: /images/people/MaliDarshan.jpg
+:email: darshanm@stanford.edu
+:linkedin: mali-darshan
+:reverse:
+
+Darshan Mali is a master’s student in Materials Science and Engineering at Stanford University. He earned his B.Tech (Honors) in Metallurgical Engineering and Materials Science from the Indian Institute of Technology Bombay, where he worked with Prof. Tanushree Choudhury on developing single-photon emitters in 2D materials. His current research interests include applying TEM for atomic-scale structure-property analysis.
+:::
 
 :::{person}
 :name: Yemi Uthman
@@ -148,13 +153,16 @@ Yemi is a Master’s student in Materials Science and Engineering at Stanford Un
 
 :::
 
-
-
 <!-- ## Student Rotations -->
 
+:::{person}
+:name: Corrie Barnes
+:position: PhD Student
+:pronouns: she/her
+:image: /images/people/BarnesCorrie.jpg
+:reverse:
 
-<!-- Corrie -->
-
+Corrie is a PhD student in Materials Science and Engineering at Stanford University. She earned her BS in Molecular Engineering (Quantum) at The University of Chicago. As an undergraduate, she worked with [Prof. David Awschalom](https://pme.uchicago.edu/group/awschalom-group) to determine the coherence time of spin-bearing molecular qubits in addition to characterizing the noise environment of nitrogen vacancy centers in delta-doped diamond. Currently, she is interested in using TEM to understand the structure-property relationships of 2-dimensional material heterostructures, more specifically transition metal dichalcogenides, for clean energy technologies.
 
 
 <!-- :::{person}
@@ -166,10 +174,7 @@ Yemi is a Master’s student in Materials Science and Engineering at Stanford Un
 Alyssa is a Master student in the Department of Materials Science and Engineering at Stanford University. She received her Bachelor degrees from Sichuan University. Her current research interests focus on py4DSTEM and computational method for structure characterization and analysis
 ::: -->
 
-
-
 ## Interns
-
 
 :::{person}
 :name: Peiwen Ren
@@ -252,19 +257,6 @@ Yi is a PhD candidate in the Department of Materials Science and Engineering at 
 :::
 
 
-
-
-
-
-<!-- ## Masters Students
-
-- None current
-
-## Undergraduate Interns
-
-- None current
- -->
-
 ## Administrators
 
 :::{person}
@@ -278,8 +270,6 @@ Yi is a PhD candidate in the Department of Materials Science and Engineering at 
 Annie grew up in the suburbs of Chicago and attended Saint Mary’s College in Notre Dame, IN where she pursued a degree in chemistry, played tennis, and enjoyed being a manager of the University of Notre Dame football team.  She later moved to San Francisco and joined the Materials Science and Engineering Department at Stanford University where she is happy to combine her background in and passion for science and business.  Outside of the office, Annie enjoys playing and watching sports, cooking, and traveling.
 :::
 
-
-
 :::{person}
 :name: Chris Hall
 :position: Administrator
@@ -290,8 +280,6 @@ Annie grew up in the suburbs of Chicago and attended Saint Mary’s College in N
 
 Chris has worked in MSE Administration for a little over a year, after previous administrative positions at Stanford. Please let him know if he can help with anything.
 :::
-
-
 
 
 
