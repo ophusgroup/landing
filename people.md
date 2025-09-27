@@ -146,7 +146,7 @@ TBA
 :email: darshanm@stanford.edu
 :reverse:
 
-Darshan Mali is a master’s student in Materials Science and Engineering at Stanford University. He earned his B.Tech (Honors) in Metallurgical Engineering and Materials Science from the Indian Institute of Technology Bombay, where he worked with Prof. Tanushree Choudhury on developing single-photon emitters in 2D materials. His current research interests include applying TEM for atomic-scale structure-property analysis.
+Darshan Mali is a master’s student in Materials Science and Engineering at Stanford University. He earned his BTech (Honors)in Metallurgical Engineering and Materials Science from the Indian Institute of Technology Bombay, where he worked with Prof. Tanushree Choudhury on developing single-photon emitters in 2D materials. His current research interests include applying TEM for atomic-scale structure-property analysis.
 :::
 
 :::{person}
@@ -157,7 +157,6 @@ Darshan Mali is a master’s student in Materials Science and Engineering at Sta
 :reverse:
 
 Yemi is a Master’s student in Materials Science and Engineering at Stanford University. He earned his BSc in Materials Science at Carnegie Mellon University with a minor in Biomedical Engineering. He is interested in machine learning aided characterization efforts for low dimensional materials.
-
 :::
 
 ## Student Rotations
@@ -170,7 +169,7 @@ Yemi is a Master’s student in Materials Science and Engineering at Stanford Un
 :reverse:
 
 Corrie is a PhD student in Materials Science and Engineering at Stanford University. She earned her BS in Molecular Engineering (Quantum) at The University of Chicago. As an undergraduate, she worked with [Prof. David Awschalom](https://pme.uchicago.edu/group/awschalom-group) to determine the coherence time of spin-bearing molecular qubits in addition to characterizing the noise environment of nitrogen vacancy centers in delta-doped diamond. Currently, she is interested in using TEM to understand the structure-property relationships of 2-dimensional material heterostructures, more specifically transition metal dichalcogenides, for clean energy technologies.
-
+:::
 
 <!-- :::{person}
 :name: Alyssa Xu
