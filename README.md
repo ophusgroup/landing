@@ -57,7 +57,7 @@ If you have any questions, please don't hesitate to reach out to @bobleesj.
 
 ### Step 3. Create a pull request to update the original repository
 
-1. Go to [https://github.com/ophusgroup/landing](https://github.com/ophusgroup/landing) and click the green `Pull request` button.
+1. Go to [https://github.com/ophusgroup/landing](https://github.com/ophusgroup/landing) and click the green `Compare & pull request` button.
 1. Create a pull request from your branch to the `main` branch of the original repository (`ophusgroup/main`) from `<your-username>/<branch-name>`.
 1. Write a concise title for your pull request, such as "Add John Doe as a new member," and submit the PR.
 1. Tag a reviewer for your pull request.
