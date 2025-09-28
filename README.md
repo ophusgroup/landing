@@ -29,7 +29,7 @@ If you have any questions, please don't hesitate to reach out to @bobleesj.
     ```
     git remote -v
     ```
-    The term `remote` refers to the repository hosted on GitHub, it could be https://github.com/ophusgroup/landing or https://github.com/<your-username>/landing.
+    The term `remote` refers to the repository hosted on GitHub, it could be `https://github.com/ophusgroup/landing` or `https://github.com/<your-username>/landing`
 
 ### Step 2. Update files locally and push changes to your remote `origin`
 
