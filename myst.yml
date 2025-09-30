@@ -12,11 +12,6 @@ project:
       children: 
         - file: papers.md
     - file: teaching.md
-    - file: resources.md
-      children: 
-        - file: resource-students.md
-        - file: resource-mallard.md
-        - file: resource-interactive.md
     - file: facilities.md
     - file: funding.md
   abbreviations:
