@@ -22,6 +22,7 @@ Ask Colin for the link!
 
 If you are starting out in material science, here are:
 - [Helpful resources collected by Enze Chen](https://enze-chen.github.io/resources/)
+
 ### How to add or edit your bio on the website
 
 To add or edit your bio on the [People](people.md) page, upload a 400x400px JPEG headshot and a short bio. Follow the instructions in the README [here](https://github.com/ophusgroup/landing) for step-by-step guidance.
@@ -33,8 +34,6 @@ Information for using our group computational resources [can be found here.](res
 ### Interactive and educational resources
 
 We are also working to develop a SOP for creating interactive papers, [which can be found here.](resource-interactive.md)
-
-
 
 
 <!-- ## Offices
