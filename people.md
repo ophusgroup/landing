@@ -122,8 +122,6 @@ Sangjoon, also known as Bob, is a first-year PhD student in the Department of Ma
 Caitlyn Obrero is a PhD student in Materials Science and Engineering at Stanford University. She earned her BS in Materials Science and Engineering from NC State University, where she developed a broad background in characterizing and studying the properties of materials with a focus on electron microscopy techniques, including SEM and S/TEM. She is currently interested in developing and optimizing in situ STEM techniques to investigate atomic-scale growth mechanisms.
 :::
 
-<!-- Will -->
-
 :::{person}
 :name: Will Millsaps
 :position: PhD Student
@@ -131,7 +129,7 @@ Caitlyn Obrero is a PhD student in Materials Science and Engineering at Stanford
 :image: /images/people/MillsapsWill.jpg
 :reverse:
 
-TBA
+Will is a PhD student in the Materials Science and Engineering 2025 cohort at Stanford University where he is co-advised by Colin Ophus and Andrew Mannix. He received a B.S.E. in Engineering Physics from the University of Michigan, Ann Arbor, where he worked under Prof. Robert Hovden for 3 years on electron tomography algorithms, custom liquid helium TEM holders, and educational tools. Will is currently working on open source code development for atomic resolution data analysis in 2D and 3D, defect analysis for 2D materials, and scanning tunneling microscopy.
 :::
 
 ## Masters Students
