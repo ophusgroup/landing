@@ -132,6 +132,16 @@ Caitlyn Obrero is a PhD student in Materials Science and Engineering at Stanford
 Will is a PhD student in the Materials Science and Engineering 2025 cohort at Stanford University where he is co-advised by Colin Ophus and Andrew Mannix. He received a B.S.E. in Engineering Physics from the University of Michigan, Ann Arbor, where he worked under Prof. Robert Hovden for 3 years on electron tomography algorithms, custom liquid helium TEM holders, and educational tools. Will is currently working on open source code development for atomic resolution data analysis in 2D and 3D, defect analysis for 2D materials, and scanning tunneling microscopy.
 :::
 
+:::{person}
+:name: Guoliang Hu
+:position: PhD Student
+:pronouns: he/him
+:image: /images/people/HuGuoliang.jpg
+:reverse:
+
+Guoliang Hu is a Ph.D. student in Materials Science and Engineering at Stanford University. He received his B.S. in Chemical Physics from the University of Science and Technology of China (USTC). His research focuses on understanding the structural evolution and electronic behaviors of materials using advanced scanning/transmission electron microscopy (S/TEM) techniques. He is particularly interested in exploring two-dimensional materials, energy-related materials, and quantum phenomena through high-resolution imaging and spectroscopy.
+:::
+
 ## Masters Students
 
 <!-- Darshan -->
