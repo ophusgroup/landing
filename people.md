@@ -139,7 +139,7 @@ Will is a PhD student in the Materials Science and Engineering 2025 cohort at St
 :image: /images/people/HuGuoliang.jpg
 :reverse:
 
-Guoliang Hu is a PhD student in Materials Science and Engineering at Stanford University. He received his BS in Chemical Physics from the University of Science and Technology of China (USTC). His research focuses on understanding the structural evolution and electronic behaviors of materials using advanced scanning/transmission electron microscopy (S/TEM) techniques. He is particularly interested in exploring two-dimensional materials, energy-related materials, and quantum phenomena through high-resolution imaging and spectroscopy.
+Guoliang Hu is a PhD student in Materials Science and Engineering at Stanford University where he is co-advised by Colin Ophus and Yi Cui. He received his BS in Chemical Physics from the University of Science and Technology of China (USTC). His research focuses on understanding the structural evolution and electronic behaviors of materials using advanced scanning/transmission electron microscopy (S/TEM) techniques. He is particularly interested in exploring two-dimensional materials, energy-related materials, and quantum phenomena through high-resolution imaging and spectroscopy.
 :::
 
 ## Masters Students
