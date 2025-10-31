@@ -82,7 +82,7 @@ The use cases of multi-processing or multi-threading is dependent on the specifi
      ```
      In this case, it is advised to set the number of threads to be the same as `num_workers`. Depending on how large your dataset is, it may be necessary to run an analysis on the number of threads vs runtime.
 
-\*\* There might be cases where these measures aren't sufficient and your program can use more cores than anticipated; if you're doing something heavy it's a good idea to occasionally check `htop` to make sure things are running as expected.
+> **Note:** There might be cases where these measures aren't sufficient and your program can use more cores than anticipated. If you're doing something heavy, it's a good idea to occasionally check `htop` to make sure things are running as expected.
 
 ## Using the GPUs on mallard
 

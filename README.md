@@ -12,8 +12,8 @@
   - [For maintainers](#for-maintainers)
     - [How to run the website locally](#how-to-run-the-website-locally)
     - [How to deploy the website](#how-to-deploy-the-website)
+    - [How to lint markdown file](#how-to-lint-markdown-file)
     - [Resources](#resources)
-    - [Link Markdown](#link-markdown)
 
 If you have any questions, please don't hesitate to reach out to @bobleesj.
 
@@ -99,12 +99,15 @@ It is assumed that you have already completed the first tutorial above. First, w
 
 1. When a new commit is made to the `main` branch, a GitHub Action will automatically run and deploy the changes.
 
+### How to lint markdown file
+
+1. The repo uses a `.prettierrc` config file at the project root to control Prettier.
+2. Install and run:
+   - npm install (installs dev deps including prettier)
+   - npm run format       # auto-fix files
+   - npm run format:check # check only
+
 ### Resources
 
 1. [Curvenote GitHub Repository](https://github.com/curvenote/curvenote)
 2. [MyST Markdown Quickstart Guide](https://mystmd.org/guide/quickstart)
-
-### Link Markdown
-
-1. Run `npm install` to install `prettier`
-2. Run `npm run format` to apply auto-fixes. Or, run `npm run format:check` to check only.
