@@ -21,6 +21,7 @@ Ask Colin for the link!
 ## Resources for new students in COLab
 
 If you are starting out in material science, here are:
+
 - [Helpful resources collected by Enze Chen](https://enze-chen.github.io/resources/)
 
 ### How to add or edit your bio on the website
@@ -29,12 +30,11 @@ To add or edit your bio on the [People](people.md) page, upload a 400x400px JPEG
 
 ### Mallard compute cluster
 
-Information for using our group computational resources [can be found here.](resource-mallard.md)  
+Information for using our group computational resources [can be found here.](resource-mallard.md)
 
 ### Interactive and educational resources
 
 We are also working to develop a SOP for creating interactive papers, [which can be found here.](resource-interactive.md)
-
 
 <!-- ## Offices
 

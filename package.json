@@ -1,0 +1,12 @@
+{
+  "name": "landing",
+  "version": "1.0.0",
+  "description": "Colin Ophus Lab Website",
+  "scripts": {
+    "format": "prettier --write \"**/*.md\"",
+    "format:check": "prettier --check \"**/*.md\""
+  },
+  "devDependencies": {
+    "prettier": "^3.0.0"
+  }
+}
