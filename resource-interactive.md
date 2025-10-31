@@ -22,17 +22,17 @@ before uploading to the website.
 2. Decide where you'd like to start with your repository either in the OphusGroup Organization or Personal repository
 3. Create a Fork of the [EM-Quickstart GitHub Repository](https://github.com/msa-em/em-quickstart) and follow the README instructions to setup the environment locally
 
-- You will need a version of python as well as node.js in order to get started with the website
+   - You will need a version of python as well as node.js in order to get started with the website
 
 4. Developing your [ipywidgets](https://ipywidgets.readthedocs.io/en/stable/) demonstrations in jupyter notebooks in the notebooks folder
 5. Add content and widgets into your final document
 6. Test all content in local host version of site
 
-- Adjust myst.yml file
+   - Adjust myst.yml file
 
 7. Upload to the final location
 
-- Make sure to adjust msyt.yml file
+   - Make sure to adjust msyt.yml file
 
 ## Adding Content
 
