@@ -2,6 +2,13 @@
 title: Home
 ---
 
+```{figure} images/news/2025_10_gathering.jpg
+:label: 2025_10_gathering
+:alt: COLab gathering
+:align: center
+COLab and friends gathering for dinner and games in 2025.
+```
+
 ## About
 
 Welcome to the Colin Ophus Lab (COLab) website! We are a highly collaborative group, hence the name. We perform research in computational imaging, electron microscopy, data analysis, and materials science. Please [contact us](mailto:cophus@stanford.edu) if you're interested in collaborating on these topics.
