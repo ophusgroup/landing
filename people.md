@@ -58,6 +58,19 @@ Serin earned her PhD in Materials Science and Engineering at MIT, advised by Pro
 
 :::
 
+:::{person}
+:name: Dasol Yoon
+:position: Postdoctoral Researcher
+:pronouns: she/her
+:image: /images/people/DasolYoon.jpg
+:email: da501@stanford.edu
+:orcid: 0000-0003-2284-7010
+:reverse:
+
+Dasol earned her PhD in Materials Science and Engineering at Cornell University, advised by Professor David Muller. Her research focused on imaging atomic-scale defects in Li-NMC cathodes using electron ptychography and developing related machine learning tools. At Stanford, her work builds upon this foundation, employing electron ptychography and advanced scanning transmission electron microscopy to investigate battery materials and uncover their underlying mechanisms. Outside of research, Dasol enjoys playing tennis, exploring new cuisines, and discovering local attractions.
+
+:::
+
 ## PhD Students
 
 :::{person}
