@@ -2,9 +2,11 @@
 title: News
 ---
 
++++ {"class": "col-page-right"}
+
 ::::{template:list} news.yml
 :path: news
-:parent: {"type": "grid", "columns": [1,2,2,2]}
+:parent: {"type": "grid", "columns": [1,2,2,3]}
 :::{card:blog} {{title}}
 :link: {{url}}
 :image: {{image}}
@@ -14,3 +16,5 @@ title: News
 {% if description -%}{{description}}{%- endif %}
 :::
 ::::
+
++++
