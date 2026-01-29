@@ -9,7 +9,6 @@ site:
 :background-image: ./images/banners/banner.webp
 :max-width: 100, 80, 75, 60
 :overlay: 70
-:actions: [People](./people.md) [Research](./research.md)
 Understanding materials, atom by atom
 :::
 
