@@ -1,6 +1,16 @@
 ---
 title: Home
+site:
+  hide_outline: true
+  hide_title_block: true
 ---
+
+:::{hero .col-screen} Colin Ophus Lab
+:background-image: ./images/banners/banner.webp
+:max-width: 100, 80, 75, 60
+:overlay: 70
+Understanding materials, atom by atom
+:::
 
 ```{figure} images/news/2025_10_gathering.jpg
 :label: 2025_10_gathering
