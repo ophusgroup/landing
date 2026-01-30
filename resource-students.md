@@ -24,7 +24,11 @@ If you are starting out in material science, here are:
 
 - [Helpful resources collected by Enze Chen](https://enze-chen.github.io/resources/)
 
-### How to add or edit your bio on the website
+### How to contribute to open-source projects using Git and GitHub
+
+Please refer to the GitHub repository [here](https://github.com/ophusgroup/dev).
+
+### How to add or edit your bio on the group website
 
 To add or edit your bio on the [People](people.md) page, upload a 400x400px JPEG headshot and a short bio. Follow the instructions in the README [here](https://github.com/ophusgroup/landing) for step-by-step guidance.
 
