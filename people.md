@@ -73,9 +73,9 @@ Dasol earned her PhD in Materials Science and Engineering at Cornell University,
 :name: Karen Ehrhardt
 :position: Postdoctoral Researcher
 :pronouns: she/her
-:image: /images/people/KarenEhrhardt.jpg
+:image: /images/people/EhrhardtKaren.jpg
 :email: ehrdt@stanford.edu
-:orcid: 0000-0002-6988-2959ß
+:orcid: 0000-0002-6988-2959
 :reverse:
 
 Karen received her PhD in Materials Chemistry from the University of North Carolina at Chapel Hill under Professor Scott Warren. Her research focused on the fabrication and structural characterization of disordered ultrathin materials using atomic layer deposition, TEM, and modeling via molecular dynamics and reverse Monte Carlo. Currently, she is applying advanced STEM and developing machine learning methods for solving complex disordered structures. She is the lead developer of the [pyHRMC](https://ehrhardtkm.github.io/pyHRMC/) package.
