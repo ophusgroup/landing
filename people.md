@@ -69,6 +69,17 @@ Serin earned her PhD in Materials Science and Engineering at MIT, advised by Pro
 
 Dasol earned her PhD in Materials Science and Engineering at Cornell University, advised by Professor David Muller. Her research focused on imaging atomic-scale defects in Li-NMC cathodes using electron ptychography and developing related machine learning tools. At Stanford, her work builds upon this foundation, employing electron ptychography and advanced scanning transmission electron microscopy to investigate battery materials and uncover their underlying mechanisms. Outside of research, Dasol enjoys playing tennis, exploring new cuisines, and discovering local attractions.
 
+:::{person}
+:name: Karen Ehrhardt
+:position: Postdoctoral Researcher
+:pronouns: she/her
+:image: /images/people/KarenEhrhardt.jpg
+:email: ehrdt@stanford.edu
+:orcid: 0000-0002-6988-2959ß
+:reverse:
+
+Karen received her PhD in Materials Chemistry from the University of North Carolina at Chapel Hill under Professor Scott Warren. Her research focused on the fabrication and structural characterization of disordered ultrathin materials using atomic layer deposition, TEM, and modeling via molecular dynamics and reverse Monte Carlo. Currently, she is applying advanced STEM and developing machine learning methods for solving complex disordered structures. She is the lead developer of the [pyHRMC](https://ehrhardtkm.github.io/pyHRMC/) package.
+
 :::
 
 ## PhD Students
