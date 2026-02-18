@@ -3,3 +3,6 @@ _build
 images/.DS_Store
 
 .DS_Store
+
+# Node modules
+node_modules/

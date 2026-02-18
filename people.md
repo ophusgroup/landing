@@ -4,7 +4,6 @@ title: People
 
 ## Principal Investigator
 
-
 :::{person}
 :name: Colin Ophus
 :position: Group Leader
@@ -28,8 +27,6 @@ Colin Ophus Lab's research focuses on experimental methods, reconstruction algor
 
 ## Postdoctoral Researchers
 
-
-
 :::{person}
 :name: Arthur McCray
 :position: Postdoctoral Researcher
@@ -45,7 +42,6 @@ Arthur McCray received his PhD in Applied Physics at Northwestern University, su
 [AI-enabled Lorentz microscopy for quantitative imaging of nanoscale magnetic spin textures](https://doi.org/10.1038/s41524-024-01285-8)
 :::
 
-
 :::{person}
 :name: Serin Lee
 :position: Postdoctoral Researcher
@@ -56,14 +52,37 @@ Arthur McCray received his PhD in Applied Physics at Northwestern University, su
 :website: https://scholar.google.com/citations?hl=ko&user=1KinRDsAAAAJ&view_op=list_works&sortby=pubdate
 :reverse:
 
-Serin earned her PhD in Materials Science and Engineering at MIT, advised by Professor Frances Ross, as an MIT Energy Initiative and MathWorks Fellow. She is one of Northwestern's 10 Future Leaders in Materials Science. Her research uses *in situ* electron microscopy to study nanomaterials for sustainability, while her postdoc focuses on enhancing photocatalytic materials' performance and lifetime with advanced techniques like 4DSTEM. Serin is also active in community building and mentorship, serving on the Early Career Committee of the MSA and mentoring through Stanford's Science Small Group program.
+Serin earned her PhD in Materials Science and Engineering at MIT, advised by Professor Frances Ross, as an MIT Energy Initiative and MathWorks Fellow. She is one of Northwestern's 10 Future Leaders in Materials Science. Her research uses _in situ_ electron microscopy to study nanomaterials for sustainability, while her postdoc focuses on enhancing photocatalytic materials' performance and lifetime with advanced techniques like 4DSTEM. Serin is also active in community building and mentorship, serving on the Early Career Committee of the MSA and mentoring through Stanford's Science Small Group program.
 
 [Temperature dependent nanochemistry and growth kinetics using liquid cell TEM](https://doi.org/10.1021/acsnano.2c11477)
 
 :::
 
+:::{person}
+:name: Dasol Yoon
+:position: Postdoctoral Researcher
+:pronouns: she/her
+:image: /images/people/DasolYoon.jpg
+:email: da501@stanford.edu
+:orcid: 0000-0003-2284-7010
+:reverse:
 
+Dasol earned her PhD in Materials Science and Engineering at Cornell University, advised by Professor David Muller. Her research focused on imaging atomic-scale defects in Li-NMC cathodes using electron ptychography and developing related machine learning tools. At Stanford, her work builds upon this foundation, employing electron ptychography and advanced scanning transmission electron microscopy to investigate battery materials and uncover their underlying mechanisms. Outside of research, Dasol enjoys playing tennis, exploring new cuisines, and discovering local attractions.
 
+:::
+
+:::{person}
+:name: Karen Ehrhardt
+:position: Postdoctoral Researcher
+:pronouns: she/her
+:image: /images/people/EhrhardtKaren.jpg
+:email: ehrdt@stanford.edu
+:orcid: 0000-0002-6988-2959
+:reverse:
+
+Karen received her PhD in Materials Chemistry from the University of North Carolina at Chapel Hill under Professor Scott Warren. Her research focused on the fabrication and structural characterization of disordered ultrathin materials using atomic layer deposition, TEM, and modeling via molecular dynamics and reverse Monte Carlo. Currently, she is applying advanced STEM and developing machine learning methods for solving complex disordered structures. She is the lead developer of the [pyHRMC](https://ehrhardtkm.github.io/pyHRMC/) package.
+
+:::
 
 ## PhD Students
 
@@ -195,24 +214,19 @@ Alyssa is a Master student in the Department of Materials Science and Engineerin
 :position: Intern
 :pronouns: he/him
 :image: /images/people/RenPeiwen.jpg
-:github: rpw199912j 
+:github: rpw199912j
 :twitter: ColinOphus
 :orcid: 0000-0002-0679-1056
 :website: https://pwren.me/
 :reverse:
 
-Peiwen earned his MS in materials science and engineering at Stanford University, and BA in materials science at Northwestern University. He is interested in scientific visualization and using computational imaging methods to study nanomaterials. 
+Peiwen earned his MS in materials science and engineering at Stanford University, and BA in materials science at Northwestern University. He is interested in scientific visualization and using computational imaging methods to study nanomaterials.
 
 [Database, Features, and Machine Learning Model to Identify Thermally Driven Metal–Insulator Transition Compounds](https://doi.org/10.1021/acs.chemmater.1c00905)
 
 :::
 
-
-
-
-
 ## Honorary Members
-
 
 :::{person}
 :name: Stephanie Ribet
@@ -246,7 +260,6 @@ Georgios Varnavides is a postdoctoral Miller research fellow at the University o
 [Iterative phase retrieval algorithms for STEM](@https://doi.org/10.48550/arXiv.2309.05250)
 :::
 
-
 :::{person}
 :name: Antony Georgiadis
 :position: PhD Student
@@ -256,7 +269,6 @@ Georgios Varnavides is a postdoctoral Miller research fellow at the University o
 
 Antony is a PhD candidate in Materials Science and Engineering at Stanford University coming from the University of Rochester where he earned a BS and MS in Optics. He is interested in computational imaging applied to materials science, scientific communication, and creating novel devices for environmental sensing.
 :::
-
 
 :::{person}
 :name: Yi Cui
@@ -270,7 +282,6 @@ Yi is a PhD candidate in the Department of Materials Science and Engineering at 
 [Twisted epitaxy of gold nanodisks grown between twisted substrate layers of MoS₂](https://www.science.org/doi/10.1126/science.adk5947)
 :::
 
-
 ## Administrators
 
 :::{person}
@@ -281,7 +292,7 @@ Yi is a PhD candidate in the Department of Materials Science and Engineering at 
 :email: amthall@stanford.edu
 :reverse:
 
-Annie grew up in the suburbs of Chicago and attended Saint Mary’s College in Notre Dame, IN where she pursued a degree in chemistry, played tennis, and enjoyed being a manager of the University of Notre Dame football team.  She later moved to San Francisco and joined the Materials Science and Engineering Department at Stanford University where she is happy to combine her background in and passion for science and business.  Outside of the office, Annie enjoys playing and watching sports, cooking, and traveling.
+Annie grew up in the suburbs of Chicago and attended Saint Mary’s College in Notre Dame, IN where she pursued a degree in chemistry, played tennis, and enjoyed being a manager of the University of Notre Dame football team. She later moved to San Francisco and joined the Materials Science and Engineering Department at Stanford University where she is happy to combine her background in and passion for science and business. Outside of the office, Annie enjoys playing and watching sports, cooking, and traveling.
 :::
 
 :::{person}
@@ -295,10 +306,7 @@ Annie grew up in the suburbs of Chicago and attended Saint Mary’s College in N
 Chris has worked in MSE Administration for a little over a year, after previous administrative positions at Stanford. Please let him know if he can help with anything.
 :::
 
-
-
 ## Former Group Members
-
 
 :::{person}
 :name: Andrew Ducharme
@@ -309,8 +317,6 @@ Chris has worked in MSE Administration for a little over a year, after previous 
 
 Andrew is a PhD candidate in the Department of Physics at the University of Oregon, supervised by Ben McMorran. He was awarded an SCGSR fellowship from the US Department of Energy to work on STEM holography-pytchography in Colin's group at Berkeley Lab and Stanford.
 :::
-
-
 
 :::{person}
 :name: Samuel Gleason
@@ -324,7 +330,6 @@ Sam received his PhD from the University of California, Berkeley, working with D
 [Prediction of crystal structure from electron diffraction patterns incorporating multiple scattering](https://doi.org/10.1103/PhysRevMaterials.8.093802)
 
 :::
-
 
 :::{person}
 :name: Benjamin Savitzky
@@ -345,7 +350,6 @@ Formerly a PhD student in Lena Kourkoutis' group at Cornell and a postdoc in Col
 
 Received his PhD in Sarah Haigh's group at Manchester, and worked a postdoc in Joe Patterson and Colin Ophus' group. Now returned to silicon valley.
 
-
 [Disentangling multiple scattering with deep learning: application to strain mapping from electron diffraction patterns](@doi.org/10.1038/s41524-022-00939-9)
 :::
 
@@ -356,7 +360,6 @@ Received his PhD in Sarah Haigh's group at Manchester, and worked a postdoc in J
 :reverse:
 
 Philipp Pelz received Bachelor degrees in Physics (2011) and Informatics (2012), and Master degrees in Applied & Engineering Physics, Materials Science & Chemistry (2013). In 2018 he obtained his Ph.D. in Physics from the University of Hamburg & The Max Planck Institute for the Structure and Dynamics of Matter, Germany. Subsequently, he spent three years as a postdoctoral researcher at the University of California, Berkeley and the National Center for Electron Microscopy. Since August 2022 he is Tenure-Track Professor for Computational Materials Microscopy at FAU Erlangen-Nürnberg.
-
 
 [Solving complex nanostructures with ptychographic atomic electron tomography
 ](@doi.org/10.1038/s41467-023-43634-z)
@@ -369,7 +372,6 @@ Philipp Pelz received Bachelor degrees in Physics (2011) and Informatics (2012),
 :reverse:
 
 Received her PhD in Mary Scott's group at UC Berkeley after interning in Colin's group and Mary's group. Formerly a postdoc in Kwabena Bediako's group at UC Berkeley, and now working as a postdoc at Los Alamos National Lab.
-
 
 [Tilted fluctuation electron microscopy](@doi.org/10.1063/5.0015532)
 :::

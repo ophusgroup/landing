@@ -2,15 +2,18 @@
 
 ## Table of Contents
 
-1. [How to update the website as a new contributor (Tutorial 1/2)](#how-to-update-the-website-as-a-new-contributor-tutorial-12)
-    1. [Step 1. Fork and clone the repository to your computer](#step-1-fork-and-clone-the-repository-to-your-computer)
-    1. [Step 2. Update files locally and push changes to your remote origin](#step-2-update-files-locally-and-push-changes-to-your-remote-origin)
-    1. [Step 3. Create a pull request to update the original repository](#step-3-create-a-pull-request-to-update-the-original-repository)
-1. [How to update the website after syncing the latest changes (Tutorial 2/2)](#how-to-update-the-website-after-syncing-the-latest-changes-tutorial-22)
-1. [For maintainers](#for-maintainers)
-    1. [How to run the website locally](#how-to-run-the-website-locally)
-    1. [How to deploy the website](#how-to-deploy-the-website)
-    1. [Resources](#resources)
+- [Colin Ophus Lab – Group Website Repository](#colin-ophus-lab--group-website-repository)
+  - [Table of Contents](#table-of-contents)
+  - [How to update the website as a new contributor (Tutorial 1/2)](#how-to-update-the-website-as-a-new-contributor-tutorial-12)
+    - [Step 1. Fork and clone the repository to your computer](#step-1-fork-and-clone-the-repository-to-your-computer)
+    - [Step 2. Update files locally and push changes to your remote `origin`](#step-2-update-files-locally-and-push-changes-to-your-remote-origin)
+    - [Step 3. Create a pull request to update the original repository](#step-3-create-a-pull-request-to-update-the-original-repository)
+  - [How to update the website after syncing the latest changes (Tutorial 2/2)](#how-to-update-the-website-after-syncing-the-latest-changes-tutorial-22)
+  - [For maintainers](#for-maintainers)
+    - [How to run the website locally](#how-to-run-the-website-locally)
+    - [How to deploy the website](#how-to-deploy-the-website)
+    - [How to lint markdown file](#how-to-lint-markdown-file)
+    - [Resources](#resources)
 
 If you have any questions, please don't hesitate to reach out to @bobleesj.
 
@@ -21,39 +24,39 @@ If you have any questions, please don't hesitate to reach out to @bobleesj.
 1. Fork this repository by clicking the `Fork` button on [https://github.com/ophusgroup/landing](https://github.com/ophusgroup/landing). This will create a new repository under your account at `https://github.com/<your-username>/landing`.
 1. Open your terminal window.
 1. Clone your forked repository to your local machine by running:
-    ```
-    git clone https://github.com/<your-username>/landing
-    ```
-    The term `origin` refers to the forked repository on GitHub. "Clone" essentially downloads the `origin` repository in the cloud to your local machine.
+   ```
+   git clone https://github.com/<your-username>/landing
+   ```
+   The term `origin` refers to the forked repository on GitHub. "Clone" essentially downloads the `origin` repository in the cloud to your local machine.
 1. Verify that the `origin` remote is connected by running:
-    ```
-    git remote -v
-    ```
-    The term `remote` refers to the repository hosted on GitHub, it could be `https://github.com/ophusgroup/landing` or `https://github.com/<your-username>/landing`
+   ```
+   git remote -v
+   ```
+   The term `remote` refers to the repository hosted on GitHub, it could be `https://github.com/ophusgroup/landing` or `https://github.com/<your-username>/landing`
 
 ### Step 2. Update files locally and push changes to your remote `origin`
 
 1. Run `git branch` to see which branch you are currently on. You should be on the `main` branch. In general, avoid making direct updates to `main`, as it is considered the "final" version.
 1. Create a new branch based on `main` by running:
-    ```
-    git checkout -b <branch-name>
-    ```
+   ```
+   git checkout -b <branch-name>
+   ```
 1. Open your preferred IDE (e.g., Visual Studio Code) and edit the files as needed.
 1. After making changes, run `git status` to see which files have been modified.
 1. Stage the changes by running:
-    ```
-    git add <file-or-folder-modified>
-    ```
-    You can add multiple files or folders at once if needed.
+   ```
+   git add <file-or-folder-modified>
+   ```
+   You can add multiple files or folders at once if needed.
 1. Commit your changes with a clear and concise message, for example:
-    ```
-    git commit -m "Add John Doe to people section"
-    ```
+   ```
+   git commit -m "Add John Doe to people section"
+   ```
 1. Push your branch to your forked repository on GitHub:
-    ```
-    git push --set-upstream origin <branch-name>
-    ```
-    Visit your forked repository URL to confirm the changes have been uploaded.
+   ```
+   git push --set-upstream origin <branch-name>
+   ```
+   Visit your forked repository URL to confirm the changes have been uploaded.
 
 ### Step 3. Create a pull request to update the original repository
 
@@ -69,18 +72,18 @@ If you have any questions, please don't hesitate to reach out to @bobleesj.
 It is assumed that you have already completed the first tutorial above. First, we want to sync with the latest changes from the original repository.
 
 1. Add the `upstream` repository, which refers to https://github.com/ophusgroup/landing, by running:
-    ```
-    git remote add upstream https://github.com/ophusgroup/landing
-    ```
+   ```
+   git remote add upstream https://github.com/ophusgroup/landing
+   ```
 2. Type `git remote -v` to check that you have both `origin` and `upstream` listed.
 3. Run `git checkout main` to switch to the `main` branch of the repository in your local machine.
 4. Run `git pull upstream main` to pull the latest commits/changes from the `upstream` repository where other people may have contributed.
 5. Run `git checkout -b <another-branch-name>` and start editing files.
 6. Run `git add <file-or-folder-modified>` and `git commit -m "<commit-message>"`, then finally:
-    ```
-    git push --set-upstream origin <another-branch-name>
-    ```
-    to upload the changes to your `origin` forked repository on GitHub.
+   ```
+   git push --set-upstream origin <another-branch-name>
+   ```
+   to upload the changes to your `origin` forked repository on GitHub.
 7. Visit [https://github.com/ophusgroup/landing](https://github.com/ophusgroup/landing), make a pull request, and wait for it to be reviewed and merged.
 
 ## For maintainers
@@ -95,6 +98,14 @@ It is assumed that you have already completed the first tutorial above. First, w
 ### How to deploy the website
 
 1. When a new commit is made to the `main` branch, a GitHub Action will automatically run and deploy the changes.
+
+### How to lint markdown file
+
+1. The repo uses a `.prettierrc` config file at the project root to control Prettier.
+2. Install and run:
+   - npm install (installs dev deps including prettier)
+   - npm run format       # auto-fix files
+   - npm run format:check # check only
 
 ### Resources
 
