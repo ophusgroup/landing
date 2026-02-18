@@ -13,7 +13,6 @@ Understanding materials, atom by atom
 :::
 
 ```{figure} images/news/2025_10_gathering.jpg
-:label: 2025_10_gathering
 :alt: COLab gathering
 :align: center
 COLab and friends gathering for dinner and games in 2025.
