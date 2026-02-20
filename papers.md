@@ -1,9 +1,123 @@
 ---
-title: Peer-Reviewed Publications (200)
+title: Peer-Reviewed Publications (250)
 short_title: Publications
 ---
 
-## 2024 (13)
+
+```{dropdown} 2026 (3)
+:open:
+
+
+- [Locating the atoms at the hard-soft interface of gold nanoparticles](https://doi.org/10.1038/s41467-025-68113-5)
+
+- [Spatial correlations of charge density wave order across the transition in 2H--NbSe$_2$](https://doi.org/10.1103/776d-dnmf)
+
+- [Accelerating electron diffraction analysis using graph neural networks and attention mechanisms](https://doi.org/10.1038/s41524-025-01927-5)
+
+
+```
+
+```{dropdown} 2025 (26)
+:open:
+
+
+- [Fabrication and characterization of boron-terminated tetravacancies in monolayer hBN using STEM, EELS and electron ptychography](https://doi.org/10.1016/j.ultramic.2025.114305)
+
+- [Quantitative structure determination from experimental four-dimensional scanning transmission electron microscopy via the scattering matrix](https://doi.org/10.1093/mam/ozaf119)
+
+- [PhaseT3M: 3D imaging at 1.6 Å resolution via electron cryo-tomography with nonlinear phase retrieval](https://doi.org/10.1038/s41467-025-67303-5)
+
+- [Multi-angle precession electron diffraction (MAPED): A versatile approach to 4D-STEM precession](https://doi.org/10.1093/mam/ozaf103)
+
+- [Neutral but Impactful: Gallium Cluster-Induced Nanopores from Beam-Blanked Gallium Ion Sources](https://doi.org/10.1093/mam/ozaf059)
+
+- [AnyAtom: domain-randomized atomic priors for electron tomography](https://doi.org/10.1364/3D.2025.JW2A.18)
+
+- [Kinetically Controlled Seed-Mediated Synthesis of Colloidal Copper Nanotetrahedra with Intricate Internal Structure](https://doi.org/10.1021/jacs.5c08337)
+
+- [Design Principles in Engineering of Multigrain Nanocatalysts via Multiscale Electronic Structure Characterization](https://doi.org/10.1021/acs.chemmater.5c01154)
+
+- [3D strain field reconstruction by inversion of dynamical scattering](https://doi.org/10.1063/5.0274964)
+
+- [Atomic-Scale Mechanisms of Nucleation and Stabilization in CuCrO$_2$ and CuFeO$_2$ Delafossite Thin Films on Al$_2$O$_3$](https://doi.org/10.1002/admi.202500218)
+
+- [Atomic-scale 3D structural dynamics and functional degradation of Pt alloy nanocatalysts during the oxygen reduction reaction](https://doi.org/10.1038/s41467-025-63448-5)
+
+- [BEACON---automated aberration correction for scanning transmission electron microscopy using Bayesian optimization](https://doi.org/10.1038/s41524-025-01766-4)
+
+- [In Situ 4D-STEM Imaging of the Orientation of Lamellar Clusters in Polymer Crystallization](https://doi.org/10.1002/marc.202500450)
+
+- [Mapping strain and structural heterogeneities around bubbles in amorphous ionically conductive Bi$_2$O$_3$](https://doi.org/10.1016/j.matdes.2025.114282)
+
+- [Observation of nanoparticle coalescence during core--shell metallic nanowire growth in colloids via nanoscale imaging](https://doi.org/10.1038/s41467-025-60135-3)
+
+- [Intermetallic dispersion-strengthened ferritic superalloys with exceptional resistance to radiation-induced hardening](https://doi.org/10.1016/j.actamat.2025.121095)
+
+- [Quantitative phase retrieval and characterization of magnetic nanostructures via Lorentz (scanning) transmission electron microscopy](https://doi.org/10.1088/1361-648X/adc6e3)
+
+- [Decoding the interstitial/vacancy nature of dislocation loops with their morphological fingerprints in face-centered cubic structure](https://doi.org/10.1126/sciadv.adq4070)
+
+- [Accelerating iterative ptychography with an integrated neural network](https://doi.org/10.1111/jmi.13407)
+
+- [Template Matching Approach for Automated Determination of Crystal Phase and Orientation of Grains in 4D-STEM Precession Electron Diffraction Data for Hafnium Zirconium Oxide Ferroelectric Thin Films](https://doi.org/10.1093/mam/ozaf019)
+
+- [Complexions at the iron--magnetite interface](https://doi.org/10.1038/s41467-025-58022-y)
+
+- [Strain release by 3D atomic misfit in fivefold twinned icosahedral nanoparticles with amorphization and dislocations](https://doi.org/10.1038/s41467-025-56842-6)
+
+- [$\pi$-$\pi$ Stacking in Kerogen and Its Mechanical Impact](https://doi.org/10.1021/acsami.4c20652)
+
+- [Tailored topotactic chemistry unlocks heterostructures of magnetic intercalation compounds](https://doi.org/10.1038/s41467-025-56467-9)
+
+- [Dynamics and structure of the B2$\rightarrow$B19' phase transformation in NiTi revealed through in situ 4D-STEM](https://doi.org/10.1016/j.msea.2025.147951)
+
+- [The hierarchical structure of organic mixed ionic--electronic conductors and its evolution in water](https://doi.org/10.1038/s41563-024-02016-6)
+
+
+```
+
+```{dropdown} 2024 (33)
+
+
+- [Considerations for extracting moiré-level strain from dark field intensities in transmission electron microscopy](https://doi.org/10.1063/5.0222102)
+
+- [Uncovering the three-dimensional structure of upconverting core--shell nanoparticles with multislice electron ptychography](https://doi.org/10.1063/5.0206814)
+
+- [Accelerating the Electrochemical Formation of the $\delta$ Phase in Manganese-Rich Rocksalt Cathodes](https://doi.org/10.1002/adma.202412871)
+
+- [The atomic-level structure and stability of interfaces of Pt nanoparticles in alumina: An experimental and computational evaluation](https://doi.org/10.1016/j.actamat.2024.120436)
+
+- [Earth-abundant Li-ion cathode materials with nanoengineered microstructures](https://doi.org/10.1038/s41565-024-01787-y)
+
+- [Reducing crystal symmetry to generate out-of-plane Dzyaloshinskii-Moriya interaction](https://doi.org/10.1038/s41467-024-54521-6)
+
+- [Exploring Structural Anisotropy in Amorphous Tb-Co via Changes in Medium-Range Ordering](https://doi.org/10.1093/mam/ozae113)
+
+- [Streaming Large-Scale Microscopy Data to a Supercomputing Facility](https://doi.org/10.1093/mam/ozae109)
+
+- [Structural Complexities in Sodium Ion Conductive Antiperovskite Revealed by Cryogenic TEM](https://doi.org/10.1021/acs.nanolett.4c01996)
+
+- [Atomic-scale identification of active sites of oxygen reduction nanocatalysts](https://doi.org/10.1038/s41929-024-01175-8)
+
+- [Direct Measurement of the Thermal Expansion Coefficient of Epitaxial WSe$_2$ by 4DSTEM](https://doi.org/10.1021/acsnano.4c02996)
+
+- [Reversible phase transformations between Pb nanocrystals and a viscous liquid-like phase](https://doi.org/10.1126/sciadv.adn6426)
+
+- [Chemical Environment and Structural Variations in High Entropy Oxide Thin Film Probed with Electron Microscopy](https://doi.org/10.1021/acsnano.4c00787)
+
+- [Ion Implantation-Induced Plastic Phenomena in Metallic Alloys](https://doi.org/10.1007/s11837-024-06418-4)
+
+- [Direct Imaging of the Crystalline Domains and Their Orientation in the PS-b-PEO Block Copolymer with 4DSTEM](https://doi.org/10.1021/acs.macromol.3c02231)
+
+- [Electronic structure along Sm$_2$Co$_3$Ge$_5$ twin boundaries](https://doi.org/10.1016/j.actamat.2024.119831)
+
+- [How the AI-assisted discovery and synthesis of a ternary oxide highlights capability gaps in materials science](https://doi.org/10.1039/D3SC04823C)
+
+- [Rejuvenation as the origin of planar defects in the CrCoNi medium entropy alloy](https://doi.org/10.1038/s41467-024-45696-z)
+
+- [A method for crystallographic mapping of an alpha‐beta titanium alloy with nanometre resolution using scanning precession electron diffraction and open‐source software libraries](https://doi.org/10.1111/jmi.13275)
+
+- [Uneven Strain Distribution Induces Consecutive Dislocation Slipping, Plane Gliding, and Subsequent Detwinning of Penta-Twinned Nanoparticles](https://doi.org/10.1021/acs.nanolett.3c03788)
 
 - [Structural Complexities in Sodium Ion Conductive Antiperovskite Revealed by Cryogenic TEM](https://doi.org/10.1021/acs.nanolett.4c01996)
 
@@ -31,7 +145,11 @@ short_title: Publications
 
 - [Uneven Strain Distribution Induces Consecutive Dislocation Slipping, Plane Gliding, and Subsequent Detwinning of Penta-Twinned Nanoparticles](https://doi.org/10.1021/acs.nanolett.3c03788)
 
-## 2023 (30)
+
+```
+
+```{dropdown} 2023 (30)
+
 
 - [Design of Electrostatic Aberration Correctors for Scanning Transmission Electron Microscopy](https://doi.org/10.1093/micmic/ozad111)
 
@@ -74,8 +192,12 @@ short_title: Publications
 
 - [Characterization of the atomic-level structure of $\gamma$-alumina and (111) Pt/$\gamma$-alumina interfaces](https://doi.org/10.1016/j.actamat.2022.118609)
 
-## 2022 (19)
 
+```
+
+```{dropdown} 2022 (19)
+
+        
 - [Disentangling multiple scattering with deep learning: application to strain mapping from electron diffraction patterns](https://doi.org/10.1038/s41524-022-00939-9)
 - [Strong structural and electronic coupling in metavalent PbS moir\'e superlattices](https://doi.org/10.1021/jacs.2c09947)
 - [Accurate quantification of lattice temperature dynamics from ultrafast electron diffraction of single-crystal films using dynamical scattering simulations](https://doi.org/10.1063/4.0000170)
@@ -103,7 +225,11 @@ short_title: Publications
 - [Stabilization and control of persistent current magnets using variable inductance](https://doi.org/10.1088/1361-6668/ac549b)
 - [Visualizing Grain Statistics in MOCVD WSe$_2$ through Four-Dimensional Scanning Transmission Electron Microscopy](https://doi.org/10.1021/acs.nanolett.1c04315)
 
-## 2021 (24)
+
+```
+
+```{dropdown} 2021 (25)
+
 
 - [Imaging atomic-scale chemistry from fused multi-modal electron microscopy](https://doi.org/10.1038/s41524-021-00692-5)
 - [Correlative analysis of structure and chemistry of Li$_x$FePO$_4$ platelets using 4DSTEM and x-ray ptychography](https://doi.org/10.1016/j.mattod.2021.10.031)
@@ -142,8 +268,12 @@ short_title: Publications
 - [Local Lattice Deformation of Tellurene Grain Boundaries by Four-Dimensional Electron Microscopy](https://doi.org/10.1017/S1431927620024770)
 - [Intrinsic helical twist and chirality in ultrathin tellurium nanowires](https://doi.org/10.1039/D1NR01442K)
 
-## 2020 (16)
 
+```
+
+```{dropdown} 2020 (16)
+
+    
 - [Towards data-driven next-generation transmission electron microscopy](https://doi.org/10.1038/s41563-020-00833-z)
 
 - [1D to 2D Transition in Tellurium Observed by Four-Dimensional Electron Microscopy](https://doi.org/10.1002/smll.202005447)
@@ -169,7 +299,11 @@ short_title: Publications
 
 - [A multiple scattering algorithm for 3D phase contrast AET](https://doi.org/10.1016/j.ultramic.2019.112860)
 
-## 2019 (20)
+
+```
+
+```{dropdown} 2019 (20)
+
 
 - [Functional Materials Under Stress: In Situ TEM Observations of Structural Evolution](https://doi.org/10.1002/adma.201906105)
 
@@ -204,8 +338,12 @@ short_title: Publications
 - [Resolving the Morphology of Peptoid Vesicles at the One Nanometer Length-Scale Using Cryogenic Electron Microscopy](https://doi.org/10.1021/acs.jpcb.8b11752)
 - [Nanoscale mosaicity revealed in peptide microcrystals by scanning electron nanodiffraction](https://doi.org/10.1038/s42003-018-0263-8)
 
-## 2018 (14)
 
+```
+
+```{dropdown} 2018 (14)
+
+    
 - [Interpretable and efficient interferometric contrast in scanning transmission electron microscopy with a diffraction grating beamsplitter](https://doi.org/10.1103/PhysRevApplied.10.061001)
 
 - [Structure retrieval at atomic resolution in the presence of multiple scattering of the electron probe](https://doi.org/10.1103/PhysRevLett.121.266102)
@@ -230,8 +368,12 @@ short_title: Publications
 - [Multiscale analysis of nanoindentation-induced defect structures in gum metal](https://doi.org/10.1016/j.actamat.2018.03.048)
 - [Determination of the structural phase and octahedral rotation angle in halide perovskites](https://doi.org/10.1063/1.5017537)
 
-## 2017 (16)
 
+```
+
+```{dropdown} 2017 (16)
+
+    
 - [A streaming multi-GPU implementation of image simulation algorithms for STEM](https://doi.org/10.1186/s40679-017-0048-z)
 - [_In situ_ nanobeam electron diffraction strain mapping of planar slip in stainless steel](https://doi.org/10.1016/j.scriptamat.2017.11.005)
 - [A fast image simulation algorithm for STEM](https://dx.doi.org/10.1186/s40679-017-0046-1)
@@ -254,8 +396,12 @@ short_title: Publications
 - [Non-spectroscopic composition measurements of SrTiO$_3$-La$_{0.7}$Sr$_{0.3}$MnO$_3$ multilayers using scanning convergent beam electron diffraction](http://dx.doi.org/10.1063/1.4975932)
 - [Deciphering chemical order/disorder and material properties at the single-atom level](http://dx.doi.org/10.1038/nature21042)
 
-## 2016 (12)
 
+```
+
+```{dropdown} 2016 (12)
+
+    
 - [Automatic software correction of residual aberrations in reconstructed HRTEM exit waves of crystalline samples](http://dx.doi.org/10.1186/s40679-016-0030-1)
 - [Characterization of Ordering in A-Site Deficient Perovskite Ca$_{1-x}$La$_{2x/3}$TiO$_3$ Using STEM/EELS](http://dx.doi.org/10.1021/acs.inorgchem.6b02087)
 - [Atomic scale imaging of competing polar states in a Ruddlesden-Popper layered oxide](https://dx.doi.org/10.1038/ncomms12572)
@@ -272,8 +418,12 @@ short_title: Publications
 - [Correcting nonlinear drift distortion of SPM and STEM from image pairs with orthogonal scan directions](http://dx.doi.org/doi:10.1016/j.ultramic.2015.12.002)
 - [Identifying different stacking sequences in few-layer {CVD}-grown {MoS}$_2$ by low-energy atomic-resolution scanning transmission electron microscopy](http://dx.doi.org/10.1103/PhysRevB.93.041420)
 
-## 2015 (7)
 
+```
+
+```{dropdown} 2015 (7)
+
+    
 - [Large-scale experimental and theoretical study of graphene grain boundary structures](http://dx.doi.org/10.1103/PhysRevB.92.205402)
 
 - [Three-dimensional positions of individual atoms in materials revealed by electron tomography](https://dx.doi.org/10.1038/nmat4426)
@@ -288,14 +438,22 @@ short_title: Publications
 
 - [Analysis of grain boundary dynamics using event detection and cumulative averaging](http://dx.doi.org/10.1016/j.ultramic.2014.11.008)
 
-## 2014 (3)
 
+```
+
+```{dropdown} 2014 (3)
+
+   
 - [Conserved atomic bonding sequences and strain organization of graphene grain boundaries](http://dx.doi.org/10.1021/nl503450r)
 - [HAADF imaging of the omega ($\omega$) phase in a gum metal-related alloy](http://dx.doi.org/10.1080/14786435.2014.937839)
 
 - [Direct Observation of a long-lived single-atom catalyst chiseling atomic structures in graphene](http://dx.doi.org/10.1021/nl403327u)
 
-## 2013 (7)
+
+```
+
+```{dropdown} 2013 (7)
+
 
 - [Measurement of the intrinsic strength of crystalline and polycrystalline graphene](http://dx.doi.org/10.1038/ncomms3811)
 
@@ -308,16 +466,28 @@ short_title: Publications
 
 - [Direct atomic imaging of antiphase boundaries and orthotwins in orientation-patterned GaAs](http://dx.doi.org/10.1063/1.4793651)
 
-## 2012 (2)
 
+```
+
+```{dropdown} 2012 (2)
+
+	
 - [Mechanism and dynamics of shrinking island grains in mazed bicrystal thin films of Au](http://dx.doi.org/10.1016/j.actamat.2012.09.012)
 - [Guidelines for quantitative reconstruction of complex exit waves in HRTEM](http://dx.doi.org/10.1016/j.ultramic.2011.10.016)
 
-## 2011 (1)
+
+```
+
+```{dropdown} 2011 (1)
+
 
 - [Highly monodisperse core--shell particles created by solid-state reactions](http://dx.doi.org/doi:10.1038/nmat3077)
 
-## 2010 (5)
+
+```
+
+```{dropdown} 2010 (5)
+
 
 - [A systematic neutron reflectometry study on hydrogen absorption in thin Mg$_{1-x}$Al$_x$ alloy films](http://dx.doi.org/10.1139/P09-085)
 - [The role of self-shadowing on growth and scaling laws of faceted polycrystalline thin films](http://dx.doi.org/10.1016/j.actamat.2010.05.051)
@@ -325,6 +495,9 @@ short_title: Publications
 - [Solid-state dewetting mechanisms of ultrathin Ni films revealed by combining in-situ time-resolved differential reflectometry monitoring and atomic force microscopy](http://dx.doi.org/10.1103/PhysRevB.82.085407)
 - [Hydrogen storage in binary and ternary Mg-based alloys: A comprehensive experimental study](http://dx.doi.org/10.1016/j.ijhydene.2009.12.013)
 - [Analytic description of competitive grain growth](http://dx.doi.org/10.1103/PhysRevE.81.011601)
+	
+	
+```{dropdown} 2009 (5)
 
 ## 2009 (5)
 
@@ -337,7 +510,11 @@ short_title: Publications
 
 - [Structural changes of thin MgAl films during hydrogen desorption](http://dx.doi.org/10.1016/j.nima.2008.11.113)
 
-## 2008 (4)
+
+```
+
+```{dropdown} 2008 (4)
+
 
 - [Tailoring the microstructure and surface morphology of metal thin films for nanoelectromechanical systems applications](http://dx.doi.org/10.1088/0957-4484/19/12/125705)
 
@@ -347,10 +524,21 @@ short_title: Publications
 
 - [Transmission electron microscopy and nanoindentation study of the weld zone microstructure of diode-laser-joined automotive transformation-induced plasticity steel](http://dx.doi.org/10.1007/s11661-007-9389-x)
 
-## 2007 (1)
+
+```
+
+```{dropdown} 2007 (1)
+
 
 - [Synthesis and characterization of Au-Ta nanocomposites for nanomechanical cantilever devices](http://dx.doi.org/10.1088/0957-4484/18/35/355303)
 
-## 2006 (1)
+
+```
+
+```{dropdown} 2006 (1)
+
 
 - [Metallic NEMS components fabricated from nanocomposite Al-Mo films](http://dx.doi.org/10.1088/0957-4484/17/12/042)
+```
+
+```
