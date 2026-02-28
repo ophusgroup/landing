@@ -36,6 +36,10 @@ To add or edit your bio on the [People](people.md) page, upload a 400x400px JPEG
 
 Ask one of the group members for the latest PTA Google Sheets link. Bring this up to Colin during your one-on-one. Complete and submit the form [here](https://stanforduniversity.qualtrics.com/jfe/form/SV_3sBDozeGtF0K0EC). Once the request is submitted and reviewed, you will receive a confirmation email from nanoadmin@lists.stanford.edu.
 
+### How to book additional TEM time at nano@stanford
+
+Discuss with Colin and submit the following form [here](https://docs.google.com/forms/d/e/1FAIpQLSeHohlFVhiFzT8PDJ1naY3MUKVIMZ_sRuBIBcHckWXi4fZpdA/viewform)
+
 ### Mallard compute cluster
 
 Information for using our group computational resources [can be found here.](resource-mallard.md)
