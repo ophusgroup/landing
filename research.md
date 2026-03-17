@@ -27,12 +27,13 @@ Our group has developed many kinds of 4DSTEM experiments, including nanobeam ori
 
 ### Analysis with py4DSTEM
 
-```{image} /images/research/py4DSTEM_logo_54_export.png
+::::{div}
+:::{image} /images/research/py4DSTEM_logo_54_export.png
 :alt: py4DSTEM
-:class: md:float-right ml-4
-:width: 200px
-:align: right
-```
+:class: float-right
+:width: 20%
+:::
+::::
 
 4DSTEM experiments produce prodigious amounts of data - potentially millions of diffraction pattern images, each with tens of thousands of pixels. We have developed robust and efficient algorithms to analyze these huge 4DSTEM datasets, primarily implemented into open-source py4DSTEM python package developed by our group for analysis of 4DSTEM data. py4DSTEM provides researchers with a powerful, flexible, and user-friendly toolkit for processing and interpreting large-scale 4DSTEM data. The code supports a wide range of functionalities, including:
 
@@ -79,21 +80,20 @@ In the previous section, we saw how to invert multiple scattering signals from c
 
 ```{image} /images/research/STEM_probes.png
 :alt: STEM probes
-:class: left
-:width: 710px
+:width: 100%
 ```
 
 Most STEM experiments use a very simple electron probe; a metal place with a circular hole is placed in the condenser aperture, which forms the the STEM probe in the far field. Our group has designed many custom STEM wavefunctions by placing patterned structures or devices into the probe-forming aperture. This allows us to design many different optical imaging considitions which module both the phase (the relative position of electron wavefronts) and amplitude (the number of incoming electrons at each angle) of the electron wave.
 
 #### Phase Plates
 
-```{image} /images/research/phase_plate_01.png
-:alt: phase plate
-:class: md:float-right ml-4
-:width: 400px
-:align: right
-Electrostatic phase plate.
-```
+::::{div}
+:::{image} /images/research/phase_plate_01.png
+:alt: Electrostatic phase plate
+:class: float-right
+:width: 50%
+:::
+::::
 
 In light optics, we have can control the shape of a light wave packet using a very large number of optical elements. However, in electron microscopy we have traditionally been limited to only two beam configurations: plane wave (or parallel) illumination, or converged beams formed from a circular aperture (the Airy disk function on the sample surface). In most TEMs, we can only modify converged electron beams by changing the defocus or the aperture size.
 
@@ -102,10 +102,8 @@ Our group has designed various _phase plates_ which sit in the probe-forming ape
 #### Amplitude Plates
 
 ```{image} /images/research/bullseye_probes_02.png
-:alt: bullseye
-:class: md:float-left ml-4
-:width: 680px
-:align: center
+:alt: Amplitude plates with bullseye probe patterns
+:width: 100%
 ```
 
 As we saw above, diffraction patterns from crystalline materials which contain multiple scattering are difficult to analyze. We have devised another 4DSTEM method to extract signals such as orientation or deformation strain - we insert patterned membranes into the probe-forming apertures. By stamping "bullseye" patterns into each diffracted probe, we allow our analysis software to extract material properties with much higher accuracy. See our paper [patterned probes for high precision 4D-STEM bragg measurements](@doi.org/10.1016/j.ultramic.2019.112890) for more information.
@@ -115,8 +113,7 @@ As we saw above, diffraction patterns from crystalline materials which contain m
 ### 4DSTEM Ptychography
 
 :::{figure} ./images/research/figure_AET_ZrTe_DWCNT.jpg
-:class: center
-:width: 500px
+:width: 100%
 ZrTe nanowire encapsulated in double-walled carbon nanotube solved with PAET, from @doi.org/10.1038/s41467-023-43634-z.
 :::
 
@@ -130,11 +127,11 @@ Our group pioneered the development of ptychographic atomic electron tomography,
 
 ### ADF-STEM
 
-```{image} /images/research/AET_FePt_v01.jpg
-:alt: logo
-:class: center
-:width: 710px
-```
+:::{figure} /images/research/AET_FePt_v01.jpg
+:alt: ADF STEM AET tomography of FePt nanoparticle
+:width: 100%
+CAPTION_PLACEHOLDER
+:::
 
 Atomic electron tomography (AET) reconstructs the three-dimensional structures of materials at atomic resolution. By recording atomic-resolution images from many projection directions and then using tomographic reconstruction algorithms, we can use AET to map the 3D positions and species of atoms within complex nanostructures. This method is invaluable for studying defects, interfaces, and other structural intricacies in materials that influence their properties. AET has transformative applications in materials science, catalysis, and nanotechnology, offering unprecedented insights into the atomic-scale architecture of advanced materials. ADF STEM is particularly useful for AET studies, as it provides approximately linear contrast over a wide range of sample thicknesses, and produces contrast which depends on the atomic species.
 
