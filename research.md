@@ -8,10 +8,10 @@ title: Research
 
 ### Experiments
 
-+++ {"class": "col-"}
-
+::::{div}
 :::{figure} ./videos/research_4DSTEM_02.mp4
-:class: md:float-right ml-4
+:class: float-right
+:width: 50%
 Comparing conventional ADF-STEM and 4DSTEM.
 :::
 
@@ -24,6 +24,7 @@ Our group has developed many kinds of 4DSTEM experiments, including nanobeam ori
 - [(2023) Review of STEM in materials science](doi.org/10.1146/annurev-matsci-080921-092646)
 - [(2021) 4DSTEM of beam-sensitive Materials](https://doi.org/10.1021/acs.accounts.1c00073)
 - [(2019) Review of 4DSTEM](doi.org/10.1017/S1431927619000497)
+::::
 
 ### Analysis with py4DSTEM
 
@@ -33,9 +34,10 @@ Our group has developed many kinds of 4DSTEM experiments, including nanobeam ori
 :class: float-right
 :width: 20%
 :::
-::::
 
 4DSTEM experiments produce prodigious amounts of data - potentially millions of diffraction pattern images, each with tens of thousands of pixels. We have developed robust and efficient algorithms to analyze these huge 4DSTEM datasets, primarily implemented into open-source py4DSTEM python package developed by our group for analysis of 4DSTEM data. py4DSTEM provides researchers with a powerful, flexible, and user-friendly toolkit for processing and interpreting large-scale 4DSTEM data. The code supports a wide range of functionalities, including:
+
+::::
 
 #### nanobeam crystalline diffraction data
 
@@ -68,13 +70,15 @@ Our group has devised a way to overcome the limitations of multiple scattering i
 
 ### ML Characterization of Disordered Materials
 
+::::{div}
 :::{figure} ./videos/atomic_struct_04_small.mp4
-:class: md:float-right ml-4
-:width: 300px
+:class: float-right
+:width: 40%
 Disordered nanocrystalline silicon.
 :::
 
 In the previous section, we saw how to invert multiple scattering signals from crystalline materials. But what about non-crystalline materials? Many important technological materials are highly disordered, including many functional oxides, silicate glasses, liquid or amorphous electrolytes, soft matter such as polymers, and many others. We are currently working to generalize our inversion methods to work on all materials, from fully disordered random liquids to highly ordered crystalline materials.
+::::
 
 ### STEM Probe Wavefunction Control
 
@@ -93,11 +97,11 @@ Most STEM experiments use a very simple electron probe; a metal place with a cir
 :class: float-right
 :width: 50%
 :::
-::::
 
 In light optics, we have can control the shape of a light wave packet using a very large number of optical elements. However, in electron microscopy we have traditionally been limited to only two beam configurations: plane wave (or parallel) illumination, or converged beams formed from a circular aperture (the Airy disk function on the sample surface). In most TEMs, we can only modify converged electron beams by changing the defocus or the aperture size.
 
 Our group has designed various _phase plates_ which sit in the probe-forming aperture of TEM. These include passive phase plates used to enhance contrast, for example using our [MIDI-STEM method](https://doi.org/10.1038/ncomms10719). More recenlty we have designed active apertures which use electrostatic fields to modify the beam as shown in the above figure. These phase plates have a variety of uses, including potentially [aberration correction](https://doi.org/10.1093/micmic/ozad111).
+::::
 
 #### Amplitude Plates
 
