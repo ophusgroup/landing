@@ -33,7 +33,6 @@ Our group has developed many kinds of 4DSTEM experiments, including nanobeam ori
 :alt: py4DSTEM
 :class: float-right
 :width: 20%
-:figwidth: 30%
 The py4DSTEM open-source analysis toolkit.
 :::
 
