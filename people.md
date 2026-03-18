@@ -17,7 +17,7 @@ title: People
 - Associate Professor, [Department of Materials Science and Engineering](https://mse.stanford.edu/), [Stanford University](https://www.stanford.edu/)
 - Center Fellow, [Precourt Institute for Energy](https://energy.stanford.edu/), [Stanford University](https://www.stanford.edu/)
 - Faculty Scientist, [SLAC National Accelerator Laboratory](https://www6.slac.stanford.edu/)
-- [Google Scholar](https://scholar.google.com/citations?hl=en&user=h5MPYJAAAAAJ)
+- [Google Scholar](https://scholar.google.com/citations?hl=en&user=h5MPYJAAAAAJ&view_op=list_works&sortby=pubdate)
 
 Colin received his BSc in Engineering Physics, and his PhD in Materials Engineering in [David Mitlin's](https://www.me.utexas.edu/people/faculty-directory/mitlin) group at the [University of Alberta](https://www.ualberta.ca/en/index.html) in Edmonton, Canada. He received an NSERC scholarship to postdoc for [Velimir "Mimo" Radmilovic](https://www.sanu.ac.rs/en/member/radmilovic-velimir/) at Berkeley Lab and [Mark Asta](https://asta.mse.berkeley.edu/) at UC Berkeley. He then worked as a Scientist at the [National Center for Electron Microscopy](https://foundry.lbl.gov/about/facilities/the-national-center-for-electron-microscopy-ncem/) (NCEM), part of the [Molecular Foundry](https://foundry.lbl.gov/) user facility at [Lawrence Berkeley Lab](https://www.lbl.gov/).
 
@@ -26,6 +26,8 @@ Colin Ophus Lab's research focuses on experimental methods, reconstruction algor
 :::
 
 ## Postdoctoral Researchers
+
+::::{grid} 1 1 2 3
 
 :::{person}
 :name: Arthur McCray
@@ -84,7 +86,11 @@ Karen received her PhD in Materials Chemistry from the University of North Carol
 
 :::
 
+::::
+
 ## PhD Students
+
+::::{grid} 1 1 2 3
 
 :::{person}
 :name: Cedric Lim
@@ -161,9 +167,23 @@ Will is a PhD student in the Materials Science and Engineering 2025 cohort at St
 Guoliang Hu is a PhD student in Materials Science and Engineering at Stanford University where he is co-advised by Colin Ophus and Yi Cui. He received his BS in Chemical Physics from the University of Science and Technology of China (USTC). His research focuses on understanding the structural evolution and electronic behaviors of materials using advanced scanning/transmission electron microscopy (S/TEM) techniques. He is particularly interested in exploring two-dimensional materials, energy-related materials, and quantum phenomena through high-resolution imaging and spectroscopy.
 :::
 
+:::{person}
+:name: Corrie Barnes
+:position: PhD Student
+:pronouns: she/her
+:image: /images/people/BarnesCorrie.jpg
+:reverse:
+
+Corrie is a PhD student in Materials Science and Engineering at Stanford University. She earned her BS in Molecular Engineering (Quantum) at The University of Chicago. As an undergraduate, she worked with [Prof. David Awschalom](https://pme.uchicago.edu/group/awschalom-group) to determine the coherence time of spin-bearing molecular qubits in addition to characterizing the noise environment of nitrogen vacancy centers in delta-doped diamond. Currently, she is interested in using TEM to understand the structure-property relationships of 2-dimensional material heterostructures, more specifically transition metal dichalcogenides, for clean energy technologies.
+:::
+
+::::
+
 ## Masters Students
 
 <!-- Darshan -->
+
+::::{grid} 1 1 2 3
 
 :::{person}
 :name: Darshan Mali
@@ -176,17 +196,11 @@ Guoliang Hu is a PhD student in Materials Science and Engineering at Stanford Un
 Darshan Mali is a master’s student in Materials Science and Engineering at Stanford University. He earned his BTech (Honors)in Metallurgical Engineering and Materials Science from the Indian Institute of Technology Bombay, where he worked with Prof. Tanushree Choudhury on developing single-photon emitters in 2D materials. His current research interests include applying TEM for atomic-scale structure-property analysis.
 :::
 
-:::{person}
-:name: Yemi Uthman
-:position: Masters Student
-:pronouns: he/him
-:image: /images/people/UthmanYemi.jpg
-:reverse:
+::::
 
-Yemi is a Master’s student in Materials Science and Engineering at Stanford University. He earned his BSc in Materials Science at Carnegie Mellon University with a minor in Biomedical Engineering. He is interested in machine learning aided characterization efforts for low dimensional materials.
-:::
+<!-- ## Student Rotations
 
-## Student Rotations
+::::{grid} 1 1 2 3
 
 :::{person}
 :name: Corrie Barnes
@@ -198,7 +212,9 @@ Yemi is a Master’s student in Materials Science and Engineering at Stanford Un
 Corrie is a PhD student in Materials Science and Engineering at Stanford University. She earned her BS in Molecular Engineering (Quantum) at The University of Chicago. As an undergraduate, she worked with [Prof. David Awschalom](https://pme.uchicago.edu/group/awschalom-group) to determine the coherence time of spin-bearing molecular qubits in addition to characterizing the noise environment of nitrogen vacancy centers in delta-doped diamond. Currently, she is interested in using TEM to understand the structure-property relationships of 2-dimensional material heterostructures, more specifically transition metal dichalcogenides, for clean energy technologies.
 :::
 
-<!-- :::{person}
+::::
+
+:::{person}
 :name: Alyssa Xu
 :position: Masters Student
 :pronouns: she/her
@@ -207,7 +223,9 @@ Corrie is a PhD student in Materials Science and Engineering at Stanford Univers
 Alyssa is a Master student in the Department of Materials Science and Engineering at Stanford University. She received her Bachelor degrees from Sichuan University. Her current research interests focus on py4DSTEM and computational method for structure characterization and analysis
 ::: -->
 
-## Interns
+<!-- ## Interns
+
+::::{grid} 1 1 2 3
 
 :::{person}
 :name: Peiwen Ren
@@ -226,7 +244,11 @@ Peiwen earned his MS in materials science and engineering at Stanford University
 
 :::
 
+:::: -->
+
 ## Honorary Members
+
+::::{grid} 1 1 2 3
 
 :::{person}
 :name: Stephanie Ribet
@@ -282,7 +304,11 @@ Yi is a PhD candidate in the Department of Materials Science and Engineering at 
 [Twisted epitaxy of gold nanodisks grown between twisted substrate layers of MoS₂](https://www.science.org/doi/10.1126/science.adk5947)
 :::
 
+::::
+
 ## Administrators
+
+::::{grid} 1 1 2 3
 
 :::{person}
 :name: Annie Hall
@@ -306,7 +332,37 @@ Annie grew up in the suburbs of Chicago and attended Saint Mary’s College in N
 Chris has worked in MSE Administration for a little over a year, after previous administrative positions at Stanford. Please let him know if he can help with anything.
 :::
 
+::::
+
 ## Former Group Members
+
+::::{grid} 1 1 2 3
+
+:::{person}
+:name: Yemi Uthman
+:position: Former Member
+:pronouns: he/him
+:image: /images/people/UthmanYemi.jpg
+:reverse:
+
+Yemi is a Master's student in Materials Science and Engineering at Stanford University. He earned his BSc in Materials Science at Carnegie Mellon University with a minor in Biomedical Engineering. He is interested in machine learning aided characterization efforts for low dimensional materials.
+:::
+
+:::{person}
+:name: Peiwen Ren
+:position: Former Member
+:pronouns: he/him
+:image: /images/people/RenPeiwen.jpg
+:github: rpw199912j
+:orcid: 0000-0002-0679-1056
+:website: https://pwren.me/
+:reverse:
+
+Peiwen earned his MS in materials science and engineering at Stanford University, and BA in materials science at Northwestern University. He is interested in scientific visualization and using computational imaging methods to study nanomaterials.
+
+[Database, Features, and Machine Learning Model to Identify Thermally Driven Metal–Insulator Transition Compounds](https://doi.org/10.1021/acs.chemmater.1c00905)
+
+:::
 
 :::{person}
 :name: Andrew Ducharme
@@ -464,6 +520,8 @@ Received her PhD from Andy Minor's group and Daryl Chrzan's group at UC Berkeley
 
 Received his PhD from Pete Nellist's group at Oxford. Formerly a postdoc in Colin Ophus' group. Currently working in industry.
 :::
+
+::::
 
 <!-- :::{person}
 :name: Milena Loper
