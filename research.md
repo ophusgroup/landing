@@ -121,7 +121,7 @@ As we saw above, diffraction patterns from crystalline materials which contain m
 ### 4DSTEM Ptychography
 
 :::{figure} ./images/research/figure_AET_ZrTe_DWCNT.jpg
-:width: 100%
+:width: 70%
 ZrTe nanowire encapsulated in double-walled carbon nanotube solved with PAET, from @doi.org/10.1038/s41467-023-43634-z.
 :::
 
@@ -138,7 +138,7 @@ Our group pioneered the development of ptychographic atomic electron tomography,
 :::{figure} /images/research/AET_FePt_v01.jpg
 :alt: ADF STEM AET tomography of FePt nanoparticle
 :width: 100%
-Atomic electron tomography reconstruction of an FePt nanoparticle, revealing 3D atomic positions and chemical species.
+AET reconstruction of an FePt nanoparticle [Yang et al. (2017)](https://doi.org/10.1038/nature21042).
 :::
 
 Atomic electron tomography (AET) reconstructs the three-dimensional structures of materials at atomic resolution. By recording atomic-resolution images from many projection directions and then using tomographic reconstruction algorithms, we can use AET to map the 3D positions and species of atoms within complex nanostructures. This method is invaluable for studying defects, interfaces, and other structural intricacies in materials that influence their properties. AET has transformative applications in materials science, catalysis, and nanotechnology, offering unprecedented insights into the atomic-scale architecture of advanced materials. ADF STEM is particularly useful for AET studies, as it provides approximately linear contrast over a wide range of sample thicknesses, and produces contrast which depends on the atomic species.

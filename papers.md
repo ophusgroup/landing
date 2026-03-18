@@ -1,12 +1,20 @@
 ---
-title: Peer-Reviewed Publications (250)
+title: Peer-Reviewed Publications (251)
 short_title: Publications
 ---
 
 
-```{dropdown} 2026 (3)
+```{dropdown} 2026 (9)
 :open:
 
+
+- [Identifying Strain Stacking Boundaries between Multiphase Domains in Atomically Thin Two-Dimensional Magnets](https://doi.org/10.1021/acsnano.5c14666)
+
+- [Comparing Multislice Projections of MD Simulations with CryoEM Exposes Structural Prediction Errors](https://doi.org/10.1016/j.bpj.2026.02.016)
+
+- [Strain mapping of three-dimensionally structured two-dimensional materials](https://doi.org/10.1126/sciadv.adz7908)
+
+- [Atomic-Scale Moiré and Electronic Structure Analysis of Twisted Epitaxial MoS$_2$--Au--MoS$_2$ Heterostructures](https://doi.org/10.1021/acs.nanolett.5c04205)
 
 - [Locating the atoms at the hard-soft interface of gold nanoparticles](https://doi.org/10.1038/s41467-025-68113-5)
 
@@ -14,18 +22,20 @@ short_title: Publications
 
 - [Accelerating electron diffraction analysis using graph neural networks and attention mechanisms](https://doi.org/10.1038/s41524-025-01927-5)
 
-
-```
-
-```{dropdown} 2025 (26)
-:open:
-
+- [PhaseT3M: 3D imaging at 1.6 Å resolution via electron cryo-tomography with nonlinear phase retrieval](https://doi.org/10.1038/s41467-025-67303-5)
 
 - [Fabrication and characterization of boron-terminated tetravacancies in monolayer hBN using STEM, EELS and electron ptychography](https://doi.org/10.1016/j.ultramic.2025.114305)
 
-- [Quantitative structure determination from experimental four-dimensional scanning transmission electron microscopy via the scattering matrix](https://doi.org/10.1093/mam/ozaf119)
 
-- [PhaseT3M: 3D imaging at 1.6 Å resolution via electron cryo-tomography with nonlinear phase retrieval](https://doi.org/10.1038/s41467-025-67303-5)
+```
+
+```{dropdown} 2025 (25)
+:open:
+
+
+- [A large interlaboratory electron diffraction study of monolayer graphene](https://doi.org/10.1088/2053-1583/ae2ca1)
+
+- [Quantitative structure determination from experimental four-dimensional scanning transmission electron microscopy via the scattering matrix](https://doi.org/10.1093/mam/ozaf119)
 
 - [Multi-angle precession electron diffraction (MAPED): A versatile approach to 4D-STEM precession](https://doi.org/10.1093/mam/ozaf103)
 
@@ -76,8 +86,9 @@ short_title: Publications
 
 ```
 
-```{dropdown} 2024 (33)
+```{dropdown} 2024 (28)
 
+- [The 4D camera: An 87 kHz direct electron detector for scanning/transmission electron microscopy](https://doi.org/10.1093/mam/ozae086)
 
 - [Considerations for extracting moiré-level strain from dark field intensities in transmission electron microscopy](https://doi.org/10.1063/5.0222102)
 
@@ -95,29 +106,19 @@ short_title: Publications
 
 - [Streaming Large-Scale Microscopy Data to a Supercomputing Facility](https://doi.org/10.1093/mam/ozae109)
 
-- [Structural Complexities in Sodium Ion Conductive Antiperovskite Revealed by Cryogenic TEM](https://doi.org/10.1021/acs.nanolett.4c01996)
+- [Digital Dark Field---Higher Contrast and Greater Specificity Dark Field Imaging Using a 4DSTEM Approach](https://doi.org/10.1093/mam/ozae104)
 
-- [Atomic-scale identification of active sites of oxygen reduction nanocatalysts](https://doi.org/10.1038/s41929-024-01175-8)
+- [Defect Self-Elimination in Nanocube Superlattices Through the Interplay of Brownian, van der Waals, and Ligand-Based Forces and Torques](https://doi.org/10.1021/acsnano.3c08610)
 
-- [Direct Measurement of the Thermal Expansion Coefficient of Epitaxial WSe$_2$ by 4DSTEM](https://doi.org/10.1021/acsnano.4c02996)
+- [Grain boundary engineering for efficient and durable electrocatalysis](https://doi.org/10.1038/s41467-024-52919-w)
 
-- [Reversible phase transformations between Pb nanocrystals and a viscous liquid-like phase](https://doi.org/10.1126/sciadv.adn6426)
+- [Random forest prediction of crystal structure from electron diffraction patterns incorporating multiple scattering](https://doi.org/10.1103/PhysRevMaterials.8.093802)
 
-- [Chemical Environment and Structural Variations in High Entropy Oxide Thin Film Probed with Electron Microscopy](https://doi.org/10.1021/acsnano.4c00787)
+- [Low-dose cryo-electron ptychography of proteins at sub-nanometer resolution](https://doi.org/10.1038/s41467-024-52403-5)
 
-- [Ion Implantation-Induced Plastic Phenomena in Metallic Alloys](https://doi.org/10.1007/s11837-024-06418-4)
+- [Observation of antiferroelectric domain walls in a uniaxial hyperferroelectric](https://doi.org/10.1002/adma.202405150)
 
-- [Direct Imaging of the Crystalline Domains and Their Orientation in the PS-b-PEO Block Copolymer with 4DSTEM](https://doi.org/10.1021/acs.macromol.3c02231)
-
-- [Electronic structure along Sm$_2$Co$_3$Ge$_5$ twin boundaries](https://doi.org/10.1016/j.actamat.2024.119831)
-
-- [How the AI-assisted discovery and synthesis of a ternary oxide highlights capability gaps in materials science](https://doi.org/10.1039/D3SC04823C)
-
-- [Rejuvenation as the origin of planar defects in the CrCoNi medium entropy alloy](https://doi.org/10.1038/s41467-024-45696-z)
-
-- [A method for crystallographic mapping of an alpha‐beta titanium alloy with nanometre resolution using scanning precession electron diffraction and open‐source software libraries](https://doi.org/10.1111/jmi.13275)
-
-- [Uneven Strain Distribution Induces Consecutive Dislocation Slipping, Plane Gliding, and Subsequent Detwinning of Penta-Twinned Nanoparticles](https://doi.org/10.1021/acs.nanolett.3c03788)
+- [Integrated rocksalt--polyanion cathodes with excess lithium and stabilized cycling](https://doi.org/10.1038/s41560-024-01615-6)
 
 - [Structural Complexities in Sodium Ion Conductive Antiperovskite Revealed by Cryogenic TEM](https://doi.org/10.1021/acs.nanolett.4c01996)
 
@@ -134,8 +135,6 @@ short_title: Publications
 - [Direct Imaging of the Crystalline Domains and Their Orientation in the PS-b-PEO Block Copolymer with 4DSTEM](https://doi.org/10.1021/acs.macromol.3c02231)
 
 - [Electronic structure along Sm$_2$Co$_3$Ge$_5$ twin boundaries](https://doi.org/10.1016/j.actamat.2024.119831)
-
-- [Ion Implantation-Induced Plastic Phenomena in Metallic Alloys](https://doi.org/10.1007/s11837-024-06418-4)
 
 - [How the AI-assisted discovery and synthesis of a ternary oxide highlights capability gaps in materials science](https://doi.org/10.1039/D3SC04823C)
 
@@ -228,8 +227,10 @@ short_title: Publications
 
 ```
 
-```{dropdown} 2021 (25)
+```{dropdown} 2021 (26)
 
+
+- [Scattering matrix determination in crystalline materials from 4D scanning transmission electron microscopy at a single defocus value](https://doi.org/10.1017/S1431927621000490)
 
 - [Imaging atomic-scale chemistry from fused multi-modal electron microscopy](https://doi.org/10.1038/s41524-021-00692-5)
 - [Correlative analysis of structure and chemistry of Li$_x$FePO$_4$ platelets using 4DSTEM and x-ray ptychography](https://doi.org/10.1016/j.mattod.2021.10.031)
