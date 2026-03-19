@@ -11,6 +11,7 @@ We want to thank the funding agencies and generous individuals who have funded o
 :::::{grid} 1 1 2 2
 ::::{grid-item}
 :columns: 8
+- We are a member of the [SLAC ESTEEM center](https://esteem.slac.stanford.edu/), a DOE-funded Energy Frontier Research Center for electron microscopy.
 - In 2018, Colin received an [Early Career Research Award](https://foundry.lbl.gov/2018/06/21/foundrys-colin-ophus-receives-doe-early-career-research-award/) from the US DOE.
 - The US DOE has funded many of our research projects, including the [4D Camera Distillery](https://foundry.lbl.gov/2020/10/28/foundry-funded-to-lead-aiml/).
 ::::
