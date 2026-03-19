@@ -2,6 +2,8 @@
 title: People
 ---
 
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/custom.css" />
+
 ## Principal Investigator
 
 ::::{card}
