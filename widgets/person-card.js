@@ -1,5 +1,5 @@
 // person-card.js — anywidget ESM module for interactive person cards
-// Hover on desktop, tap on mobile to show info popup
+// Hover on desktop, tap on mobile to show info popup overlay
 
 function render({ model, el }) {
   const name = model.get("name") || "";
@@ -9,7 +9,6 @@ function render({ model, el }) {
   const links = model.get("links") || [];
   const popupWidth = model.get("popup_width") || 300;
 
-  // Scoped class prefix to avoid collisions
   const id = "pc-" + Math.random().toString(36).slice(2, 8);
 
   const style = document.createElement("style");
@@ -35,16 +34,15 @@ function render({ model, el }) {
       visibility: hidden;
       opacity: 0;
       position: absolute;
-      top: 0;
-      left: calc(100% + 0.75em);
+      left: 0;
       width: ${popupWidth}px;
-      max-height: 80vh;
+      max-height: 60vh;
       overflow-y: auto;
       background: #fff;
       border: 1px solid #d1d5db;
       border-radius: 10px;
       padding: 1em;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.14);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.18);
       z-index: 9999;
       text-align: left;
       transition: opacity 0.18s ease, visibility 0.18s ease;
@@ -55,15 +53,10 @@ function render({ model, el }) {
       opacity: 1;
       pointer-events: auto;
     }
-    .${id}-popup.flip {
-      left: auto;
-      right: calc(100% + 0.75em);
-    }
-    .${id}-popup.below {
-      left: 50%;
-      right: auto;
-      top: calc(100% + 0.5em);
-      transform: translateX(-50%);
+    .${id}-popup-name {
+      font-weight: 700;
+      font-size: 0.95em;
+      margin-bottom: 0.3em;
     }
     .${id}-pronouns {
       color: #6b7280;
@@ -75,7 +68,7 @@ function render({ model, el }) {
       line-height: 1.7;
     }
     .${id}-links a {
-      color: #2563eb;
+      color: #8C1515;
       text-decoration: none;
       white-space: nowrap;
     }
@@ -101,6 +94,7 @@ function render({ model, el }) {
     <img src="${image}" alt="${name}" />
     <div class="${id}-name">${name}</div>
     <div class="${id}-popup">
+      <div class="${id}-popup-name">${name}</div>
       ${pronouns ? `<div class="${id}-pronouns">${pronouns}</div>` : ""}
       ${linksHtml ? `<div class="${id}-links">${linksHtml}</div>` : ""}
       ${bio ? `<div class="${id}-bio">${bio}</div>` : ""}
@@ -108,19 +102,11 @@ function render({ model, el }) {
   `;
 
   const popup = card.querySelector(`.${id}-popup`);
+  const nameEl = card.querySelector(`.${id}-name`);
 
   function positionPopup() {
-    popup.classList.remove("flip", "below");
-    const rect = card.getBoundingClientRect();
-    const spaceRight = window.innerWidth - rect.right;
-    const spaceLeft = rect.left;
-    if (spaceRight >= popupWidth + 20) {
-      // default right
-    } else if (spaceLeft >= popupWidth + 20) {
-      popup.classList.add("flip");
-    } else {
-      popup.classList.add("below");
-    }
+    // Align popup top with the name element
+    popup.style.top = nameEl.offsetTop + "px";
   }
 
   function showPopup() {
