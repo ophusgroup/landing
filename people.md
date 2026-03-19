@@ -2,8 +2,6 @@
 title: People
 ---
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/custom.css" />
-
 ## Principal Investigator
 
 ::::{card}
@@ -30,45 +28,59 @@ Colin is an Associate Professor in the [Department of Materials Science and Engi
 
 ::::::{grid} 1 2 3 4
 
-<div class="phc">
-<img src="/images/people/McCrayArthur.jpg" alt="Arthur McCray" />
-<div class="phc-n">Arthur McCray</div>
-<div class="phc-p">
-<div class="phc-pr">he/him</div>
-<div class="phc-l"><a href="mailto:amccray@stanford.edu">Email</a> · <a href="https://github.com/Art-MC">GitHub</a> · <a href="https://orcid.org/0000-0001-6077-4698">ORCID</a></div>
-<div class="phc-b">Arthur McCray received his PhD in Applied Physics at Northwestern University, supervised by Amanda Petford-Long. He has experience in Lorentz TEM, magnetic materials, and is currently developing machine learning methods for solving inverse problems in (S)TEM. Arthur is also the lead developer of the <a href="https://github.com/PyLorentz/PyLorentz">pyLorentz</a> software package.</div>
-</div>
-</div>
+:::{any:bundle} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/person-card.js
+{
+  "name": "Arthur McCray",
+  "image": "/images/people/McCrayArthur.jpg",
+  "pronouns": "he/him",
+  "links": [
+    {"label": "Email", "url": "mailto:amccray@stanford.edu"},
+    {"label": "GitHub", "url": "https://github.com/Art-MC"},
+    {"label": "ORCID", "url": "https://orcid.org/0000-0001-6077-4698"}
+  ],
+  "bio": "Arthur McCray received his PhD in Applied Physics at Northwestern University, supervised by Amanda Petford-Long. He has experience in Lorentz TEM, magnetic materials, and is currently developing machine learning methods for solving inverse problems in (S)TEM. Arthur is also the lead developer of the pyLorentz software package."
+}
+:::
 
-<div class="phc">
-<img src="/images/people/LeeSerin.jpg" alt="Serin Lee" />
-<div class="phc-n">Serin Lee</div>
-<div class="phc-p">
-<div class="phc-pr">she/her</div>
-<div class="phc-l"><a href="mailto:serinl@stanford.edu">Email</a> · <a href="https://orcid.org/0000-0002-3672-5076">ORCID</a> · <a href="https://scholar.google.com/citations?hl=ko&user=1KinRDsAAAAJ&view_op=list_works&sortby=pubdate">Scholar</a></div>
-<div class="phc-b">Serin earned her PhD in Materials Science and Engineering at MIT, advised by Professor Frances Ross, as an MIT Energy Initiative and MathWorks Fellow. Her research uses <em>in situ</em> electron microscopy to study nanomaterials for sustainability, while her postdoc focuses on enhancing photocatalytic materials' performance and lifetime with advanced techniques like 4DSTEM.</div>
-</div>
-</div>
+:::{any:bundle} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/person-card.js
+{
+  "name": "Serin Lee",
+  "image": "/images/people/LeeSerin.jpg",
+  "pronouns": "she/her",
+  "links": [
+    {"label": "Email", "url": "mailto:serinl@stanford.edu"},
+    {"label": "ORCID", "url": "https://orcid.org/0000-0002-3672-5076"},
+    {"label": "Scholar", "url": "https://scholar.google.com/citations?hl=ko&user=1KinRDsAAAAJ&view_op=list_works&sortby=pubdate"}
+  ],
+  "bio": "Serin earned her PhD in Materials Science and Engineering at MIT, advised by Professor Frances Ross, as an MIT Energy Initiative and MathWorks Fellow. Her research uses in situ electron microscopy to study nanomaterials for sustainability, while her postdoc focuses on enhancing photocatalytic materials' performance and lifetime with advanced techniques like 4DSTEM."
+}
+:::
 
-<div class="phc">
-<img src="/images/people/DasolYoon.jpg" alt="Dasol Yoon" />
-<div class="phc-n">Dasol Yoon</div>
-<div class="phc-p">
-<div class="phc-pr">she/her</div>
-<div class="phc-l"><a href="mailto:da501@stanford.edu">Email</a> · <a href="https://orcid.org/0000-0003-2284-7010">ORCID</a></div>
-<div class="phc-b">Dasol earned her PhD in Materials Science and Engineering at Cornell University, advised by Professor David Muller. Her research focused on imaging atomic-scale defects in Li-NMC cathodes using electron ptychography and developing related machine learning tools. At Stanford, her work builds upon this foundation, employing electron ptychography and advanced scanning transmission electron microscopy to investigate battery materials and uncover their underlying mechanisms.</div>
-</div>
-</div>
+:::{any:bundle} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/person-card.js
+{
+  "name": "Dasol Yoon",
+  "image": "/images/people/DasolYoon.jpg",
+  "pronouns": "she/her",
+  "links": [
+    {"label": "Email", "url": "mailto:da501@stanford.edu"},
+    {"label": "ORCID", "url": "https://orcid.org/0000-0003-2284-7010"}
+  ],
+  "bio": "Dasol earned her PhD in Materials Science and Engineering at Cornell University, advised by Professor David Muller. Her research focused on imaging atomic-scale defects in Li-NMC cathodes using electron ptychography and developing related machine learning tools. At Stanford, her work builds upon this foundation, employing electron ptychography and advanced scanning transmission electron microscopy to investigate battery materials and uncover their underlying mechanisms."
+}
+:::
 
-<div class="phc">
-<img src="/images/people/EhrhardtKaren.jpg" alt="Karen Ehrhardt" />
-<div class="phc-n">Karen Ehrhardt</div>
-<div class="phc-p">
-<div class="phc-pr">she/her</div>
-<div class="phc-l"><a href="mailto:ehrdt@stanford.edu">Email</a> · <a href="https://orcid.org/0000-0002-6988-2959">ORCID</a></div>
-<div class="phc-b">Karen received her PhD in Materials Chemistry from the University of North Carolina at Chapel Hill under Professor Scott Warren. Her research focused on the fabrication and structural characterization of disordered ultrathin materials using atomic layer deposition, TEM, and modeling via molecular dynamics and reverse Monte Carlo. Currently, she is applying advanced STEM and developing machine learning methods for solving complex disordered structures. She is the lead developer of the <a href="https://ehrhardtkm.github.io/pyHRMC/">pyHRMC</a> package.</div>
-</div>
-</div>
+:::{any:bundle} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/person-card.js
+{
+  "name": "Karen Ehrhardt",
+  "image": "/images/people/EhrhardtKaren.jpg",
+  "pronouns": "she/her",
+  "links": [
+    {"label": "Email", "url": "mailto:ehrdt@stanford.edu"},
+    {"label": "ORCID", "url": "https://orcid.org/0000-0002-6988-2959"}
+  ],
+  "bio": "Karen received her PhD in Materials Chemistry from the University of North Carolina at Chapel Hill under Professor Scott Warren. Her research focused on the fabrication and structural characterization of disordered ultrathin materials using atomic layer deposition, TEM, and modeling via molecular dynamics and reverse Monte Carlo. Currently, she is applying advanced STEM and developing machine learning methods for solving complex disordered structures. She is the lead developer of the pyHRMC package."
+}
+:::
 
 ::::::
 
