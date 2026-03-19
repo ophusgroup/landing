@@ -33,10 +33,7 @@ We want to thank the funding agencies and generous individuals who have funded o
 ::::
 ::::{grid-item}
 :columns: 4
-:::{image} /images/funding/toyota_research_institute.png
-:alt: TRI
-:width: 60%
-:::
+<div style="width: 60%;"><img src="/images/funding/toyota_research_institute.png" alt="TRI" style="width: 100%;" /></div>
 ::::
 :::::
 
@@ -53,10 +50,7 @@ We want to thank the funding agencies and generous individuals who have funded o
 ::::
 ::::{grid-item}
 :columns: 4
-:::{image} /images/funding/microscopy_society_america.png
-:alt: MSA
-:width: 60%
-:::
+<div style="width: 60%;"><img src="/images/funding/microscopy_society_america.png" alt="MSA" style="width: 100%;" /></div>
 ::::
 :::::
 

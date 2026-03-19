@@ -29,11 +29,7 @@ Our group has developed many kinds of 4DSTEM experiments, including nanobeam ori
 ### Analysis with py4DSTEM
 
 ::::{div}
-:::{image} /images/research/py4DSTEM_logo_54_export.png
-:alt: py4DSTEM
-:class: float-right
-:width: 10%
-:::
+<div style="width: 10%; float: right; margin-left: 1em;"><img src="/images/research/py4DSTEM_logo_54_export.png" alt="py4DSTEM" style="width: 100%;" /></div>
 
 4DSTEM experiments produce prodigious amounts of data - potentially millions of diffraction pattern images, each with tens of thousands of pixels. We have developed robust and efficient algorithms to analyze these huge 4DSTEM datasets, primarily implemented into open-source py4DSTEM python package developed by our group for analysis of 4DSTEM data. py4DSTEM provides researchers with a powerful, flexible, and user-friendly toolkit for processing and interpreting large-scale 4DSTEM data. The code supports a wide range of functionalities, including:
 
@@ -93,11 +89,7 @@ Most STEM experiments use a very simple electron probe; a metal place with a cir
 #### Phase Plates
 
 ::::{div}
-:::{image} /images/research/phase_plate_01.png
-:alt: Electrostatic phase plate
-:class: float-right
-:width: 40%
-:::
+<div style="width: 40%; float: right; margin-left: 1em;"><img src="/images/research/phase_plate_01.png" alt="Electrostatic phase plate" style="width: 100%;" /></div>
 
 In light optics, we have can control the shape of a light wave packet using a very large number of optical elements. However, in electron microscopy we have traditionally been limited to only two beam configurations: plane wave (or parallel) illumination, or converged beams formed from a circular aperture (the Airy disk function on the sample surface). In most TEMs, we can only modify converged electron beams by changing the defocus or the aperture size.
 
@@ -118,10 +110,7 @@ As we saw above, diffraction patterns from crystalline materials which contain m
 
 ### 4DSTEM Ptychography
 
-:::{image} ./images/research/figure_AET_ZrTe_DWCNT.jpg
-:alt: ZrTe nanowire encapsulated in double-walled carbon nanotube solved with PAET
-:width: 40%
-:::
+<div style="width: 40%;"><img src="./images/research/figure_AET_ZrTe_DWCNT.jpg" alt="ZrTe nanowire encapsulated in double-walled carbon nanotube solved with PAET" style="width: 100%;" /></div>
 
 Our group pioneered the development of ptychographic atomic electron tomography, where we combine ptychographic imaging with AET. This approach significantly enhances the precision and sensitivity of atomic structure determination, enabling the visualization of complex nanostructures, including light elements. PAET has the potential to significantly expand the range of nanostructures that can be resolved in 3D at atomic resolution, and provide deeper insights into the atomic-scale underpinnings of material properties
 
