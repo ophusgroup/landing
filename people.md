@@ -4,9 +4,50 @@ title: People
 
 ## Principal Investigator
 
+**Method 1: HTML img with width attribute**
+
+<img src="/images/people/OphusColin.jpg" width="200" />
+
+**Method 2: HTML img with inline style**
+
+<img src="/images/people/OphusColin.jpg" style="width: 200px; max-width: 200px;" />
+
+**Method 3: HTML div wrapper constraining width**
+
+<div style="width: 200px;"><img src="/images/people/OphusColin.jpg" style="width: 100%;" /></div>
+
+**Method 4: MyST image directive with px**
+
+:::{image} /images/people/OphusColin.jpg
+:width: 200px
+:::
+
+**Method 5: MyST image directive with em**
+
+:::{image} /images/people/OphusColin.jpg
+:width: 12em
+:::
+
+**Method 6: Markdown image with MyST attrs**
+
+![Colin Ophus](/images/people/OphusColin.jpg){width=200px}
+
+**Method 7: MyST figure directive with figwidth**
+
+:::{figure} /images/people/OphusColin.jpg
+:figwidth: 200px
+:width: 200px
+:::
+
+**Method 8: HTML img with both width and style + !important**
+
+<img src="/images/people/OphusColin.jpg" width="200" style="width: 200px !important; max-width: 200px !important;" />
+
+---
+
 ::::{card}
 
-<img src="/images/people/OphusColin.jpg" width="200px" class="pi-photo" />
+<img src="/images/people/OphusColin.jpg" width="200" style="width: 200px !important; max-width: 200px !important;" />
 
 **Colin Ophus**
 
