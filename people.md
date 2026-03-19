@@ -6,10 +6,7 @@ title: People
 
 ::::{card}
 
-:::{image} /images/people/OphusColin.jpg
-:width: 200px
-:class: pi-photo
-:::
+<img src="/images/people/OphusColin.jpg" width="200px" class="pi-photo" />
 
 **Colin Ophus**
 
