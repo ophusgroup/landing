@@ -6,22 +6,18 @@ title: People
 
 ::::{card}
 
-<div style="display: flex; align-items: flex-start; gap: 1.5em;">
-<div style="width: 200px; flex-shrink: 0;">
+<div style="width: 200px;">
 <img src="/images/people/OphusColin.jpg" style="width: 100%; border-radius: 4px;" />
-<strong>Colin Ophus</strong>
 </div>
-<div>
-<ul>
-<li>Associate Professor, <a href="https://mse.stanford.edu/">Department of Materials Science and Engineering</a>, <a href="https://www.stanford.edu/">Stanford University</a></li>
-<li>Center Fellow, <a href="https://energy.stanford.edu/">Precourt Institute for Energy</a>, <a href="https://www.stanford.edu/">Stanford University</a></li>
-<li>Faculty Scientist, <a href="https://www6.slac.stanford.edu/">SLAC National Accelerator Laboratory</a></li>
-</ul>
-</div>
-</div>
+
+**Colin Ophus**
 
 :::{dropdown} Info
 (he/him) · [Email](mailto:cophus@stanford.edu) · [GitHub](https://github.com/cophus) · [ORCID](https://orcid.org/0000-0003-2348-8558) · [Scholar](https://scholar.google.com/citations?hl=en&user=h5MPYJAAAAAJ&view_op=list_works&sortby=pubdate)
+
+- Associate Professor, [Department of Materials Science and Engineering](https://mse.stanford.edu/), [Stanford University](https://www.stanford.edu/)
+- Center Fellow, [Precourt Institute for Energy](https://energy.stanford.edu/), [Stanford University](https://www.stanford.edu/)
+- Faculty Scientist, [SLAC National Accelerator Laboratory](https://www6.slac.stanford.edu/)
 
 Colin is an Associate Professor in the [Department of Materials Science and Engineering](https://mse.stanford.edu/) and a Center Fellow at the [Precourt Institute for Energy](https://energy.stanford.edu/), [Stanford University](https://www.stanford.edu/). He previously worked as a Staff Scientist at the [National Center for Electron Microscopy](https://foundry.lbl.gov/about/facilities/the-national-center-for-electron-microscopy-ncem/) (NCEM), part of the [Molecular Foundry](https://foundry.lbl.gov/), at [Lawrence Berkeley Lab](https://www.lbl.gov/). He was awarded a US [DOE](https://www.energy.gov/) Early Career award in 2018, and the [Burton Medal](https://microscopy.org/Society-Awards-Recipients#2022) from the [MSA](https://microscopy.org/) in 2022. His research focuses on experimental methods, reconstruction algorithms, and software codes for simulation, analysis, and instrument design of scanning transmission electron microscopy (STEM). He advocates for open science and develops open-source scientific software such as [quantEM](https://github.com/electronmicroscopy/quantem), [py4DSTEM](https://github.com/py4dstem/py4DSTEM), and [Prismatic](https://prism-em.com/). He is also the editor-in-chief for the interactive web-based scientific journal [Elemental Microscopy](https://www.elementalmicroscopy.org/).
 :::
