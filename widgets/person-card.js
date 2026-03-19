@@ -1,5 +1,5 @@
 // person-card.js — anywidget ESM module for interactive person cards
-// Hover on desktop, tap on mobile to show info popup overlay
+// Hover on desktop, tap on mobile to show info popup below name
 
 function render({ model, el }) {
   const name = model.get("name") || "";
@@ -7,6 +7,7 @@ function render({ model, el }) {
   const pronouns = model.get("pronouns") || "";
   const bio = model.get("bio") || "";
   const links = model.get("links") || [];
+  const papers = model.get("papers") || [];
   const popupWidth = model.get("popup_width") || 300;
 
   const id = "pc-" + Math.random().toString(36).slice(2, 8);
@@ -53,11 +54,6 @@ function render({ model, el }) {
       opacity: 1;
       pointer-events: auto;
     }
-    .${id}-popup-name {
-      font-weight: 700;
-      font-size: 0.95em;
-      margin-bottom: 0.3em;
-    }
     .${id}-pronouns {
       color: #6b7280;
       font-size: 0.85em;
@@ -80,6 +76,20 @@ function render({ model, el }) {
       line-height: 1.55;
       color: #374151;
     }
+    .${id}-papers {
+      margin-top: 0.6em;
+      padding-top: 0.5em;
+      border-top: 1px solid #e5e7eb;
+      font-size: 0.85em;
+      line-height: 1.5;
+    }
+    .${id}-papers a {
+      color: #8C1515;
+      text-decoration: none;
+    }
+    .${id}-papers a:hover {
+      text-decoration: underline;
+    }
   `;
   el.appendChild(style);
 
@@ -90,14 +100,18 @@ function render({ model, el }) {
     .map((l) => `<a href="${l.url}" target="_blank" rel="noopener">${l.label}</a>`)
     .join(" &middot; ");
 
+  const papersHtml = papers
+    .map((p) => `<div><a href="${p.url}" target="_blank" rel="noopener">${p.title}</a></div>`)
+    .join("");
+
   card.innerHTML = `
     <img src="${image}" alt="${name}" />
     <div class="${id}-name">${name}</div>
     <div class="${id}-popup">
-      <div class="${id}-popup-name">${name}</div>
       ${pronouns ? `<div class="${id}-pronouns">${pronouns}</div>` : ""}
       ${linksHtml ? `<div class="${id}-links">${linksHtml}</div>` : ""}
       ${bio ? `<div class="${id}-bio">${bio}</div>` : ""}
+      ${papersHtml ? `<div class="${id}-papers">${papersHtml}</div>` : ""}
     </div>
   `;
 
@@ -105,8 +119,8 @@ function render({ model, el }) {
   const nameEl = card.querySelector(`.${id}-name`);
 
   function positionPopup() {
-    // Align popup top with the name element
-    popup.style.top = nameEl.offsetTop + "px";
+    // Place popup below the name so name remains visible
+    popup.style.top = (nameEl.offsetTop + nameEl.offsetHeight + 4) + "px";
   }
 
   function showPopup() {
