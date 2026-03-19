@@ -4,12 +4,14 @@ title: People
 
 ## Principal Investigator
 
+::::::{grid} 1 2 3 4
+
 :::{any:bundle} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/person-card.js
 {
   "name": "Colin Ophus",
   "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/OphusColin.jpg",
   "pronouns": "he/him",
-  "popup_width": 450,
+  "popup_width": 400,
   "links": [
     {"label": "Email", "url": "mailto:cophus@stanford.edu"},
     {"label": "GitHub", "url": "https://github.com/cophus"},
@@ -19,6 +21,8 @@ title: People
   "bio": "Associate Professor, Department of Materials Science and Engineering, Stanford University. Center Fellow, Precourt Institute for Energy, Stanford University. Faculty Scientist, SLAC National Accelerator Laboratory.\n\nColin is an Associate Professor in the Department of Materials Science and Engineering and a Center Fellow at the Precourt Institute for Energy, Stanford University. He previously worked as a Staff Scientist at the National Center for Electron Microscopy (NCEM), part of the Molecular Foundry, at Lawrence Berkeley Lab. He was awarded a US DOE Early Career award in 2018, and the Burton Medal from the MSA in 2022. His research focuses on experimental methods, reconstruction algorithms, and software codes for simulation, analysis, and instrument design of scanning transmission electron microscopy (STEM). He advocates for open science and develops open-source scientific software such as quantEM, py4DSTEM, and Prismatic. He is also the editor-in-chief for the interactive web-based scientific journal Elemental Microscopy."
 }
 :::
+
+::::::
 
 ## Postdoctoral Researchers
 
@@ -34,7 +38,10 @@ title: People
     {"label": "GitHub", "url": "https://github.com/Art-MC"},
     {"label": "ORCID", "url": "https://orcid.org/0000-0001-6077-4698"}
   ],
-  "bio": "Arthur McCray received his PhD in Applied Physics at Northwestern University, supervised by Amanda Petford-Long. He has experience in Lorentz TEM, magnetic materials, and is currently developing machine learning methods for solving inverse problems in (S)TEM. Arthur is also the lead developer of the pyLorentz software package."
+  "bio": "Arthur McCray received his PhD in Applied Physics at Northwestern University, supervised by Amanda Petford-Long. He has experience in Lorentz TEM, magnetic materials, and is currently developing machine learning methods for solving inverse problems in (S)TEM. Arthur is also the lead developer of the pyLorentz software package.",
+  "papers": [
+    {"title": "AI-enabled Lorentz microscopy for quantitative imaging of nanoscale magnetic spin textures", "url": "https://doi.org/10.1038/s41524-024-01285-8"}
+  ]
 }
 :::
 
@@ -48,7 +55,10 @@ title: People
     {"label": "ORCID", "url": "https://orcid.org/0000-0002-3672-5076"},
     {"label": "Scholar", "url": "https://scholar.google.com/citations?hl=ko&user=1KinRDsAAAAJ&view_op=list_works&sortby=pubdate"}
   ],
-  "bio": "Serin earned her PhD in Materials Science and Engineering at MIT, advised by Professor Frances Ross, as an MIT Energy Initiative and MathWorks Fellow. Her research uses in situ electron microscopy to study nanomaterials for sustainability, while her postdoc focuses on enhancing photocatalytic materials' performance and lifetime with advanced techniques like 4DSTEM."
+  "bio": "Serin earned her PhD in Materials Science and Engineering at MIT, advised by Professor Frances Ross, as an MIT Energy Initiative and MathWorks Fellow. Her research uses in situ electron microscopy to study nanomaterials for sustainability, while her postdoc focuses on enhancing photocatalytic materials' performance and lifetime with advanced techniques like 4DSTEM.",
+  "papers": [
+    {"title": "Temperature dependent nanochemistry and growth kinetics using liquid cell TEM", "url": "https://doi.org/10.1021/acsnano.2c11477"}
+  ]
 }
 :::
 
@@ -89,7 +99,10 @@ title: People
   "name": "Cedric Lim",
   "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/LimCedric.jpg",
   "pronouns": "he/him",
-  "bio": "Cedric is a PhD student in Materials Science and Engineering at Stanford University. He earned his B.A in Physics at the University of California, Berkeley, and worked with Professor Anatoli Polkovnikov at Boston University proposing a new definition of chaos in both classical and quantum systems. He is currently interested in applying novel machine learning techniques for reconstructing atomic electron tomography (AET) data, and automating data collection for AET."
+  "bio": "Cedric is a PhD student in Materials Science and Engineering at Stanford University. He earned his B.A in Physics at the University of California, Berkeley, and worked with Professor Anatoli Polkovnikov at Boston University proposing a new definition of chaos in both classical and quantum systems. He is currently interested in applying novel machine learning techniques for reconstructing atomic electron tomography (AET) data, and automating data collection for AET.",
+  "papers": [
+    {"title": "Defining classical and quantum chaos through adiabatic transformations", "url": "https://arxiv.org/abs/2401.01927"}
+  ]
 }
 :::
 
@@ -201,7 +214,10 @@ title: People
     {"label": "GitHub", "url": "https://github.com/smribet"},
     {"label": "ORCID", "url": "https://orcid.org/0000-0002-7117-066X"}
   ],
-  "bio": "Steph received her PhD at Northwestern University in the Dravid Group. During her PhD, she was awarded an SCGSR from the US Department of Energy for a research internship at Berkeley Lab. She is currently a postdoc working in Colin's group at Stanford and in Dr Karen Bustillo's group at Berkeley Lab."
+  "bio": "Steph received her PhD at Northwestern University in the Dravid Group. During her PhD, she was awarded an SCGSR from the US Department of Energy for a research internship at Berkeley Lab. She is currently a postdoc working in Colin's group at Stanford and in Dr Karen Bustillo's group at Berkeley Lab.",
+  "papers": [
+    {"title": "Uncovering the 3D structure of upconverting core-shell nanoparticles with multislice electron ptychography", "url": "https://doi.org/10.1063/5.0206814"}
+  ]
 }
 :::
 
@@ -216,7 +232,10 @@ title: People
     {"label": "ORCID", "url": "https://orcid.org/0000-0001-8338-3323"},
     {"label": "Website", "url": "https://gvarnavides.com/about/"}
   ],
-  "bio": "Georgios Varnavides is a postdoctoral Miller research fellow at the University of California, Berkeley, where he is developing new computational imaging modalities to observe structure and function in materials with high spatial resolution."
+  "bio": "Georgios Varnavides is a postdoctoral Miller research fellow at the University of California, Berkeley, where he is developing new computational imaging modalities to observe structure and function in materials with high spatial resolution.",
+  "papers": [
+    {"title": "Iterative phase retrieval algorithms for STEM", "url": "https://doi.org/10.48550/arXiv.2309.05250"}
+  ]
 }
 :::
 
@@ -270,7 +289,10 @@ title: People
   "name": "Yi Cui",
   "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/CuiYi.jpg",
   "pronouns": "he/him",
-  "bio": "Yi is a PhD candidate in the Department of Materials Science and Engineering at Stanford University. His research focuses on the confined synthesis and (S)TEM characterization of ultra thin (nanometer-thick) materials. At COLab, Yi is currently working on machine learning methods for STEM tomography. Yi has been co-organizing the bimonthly Stanford EM-X symposium and the CryoEM FWP meeting since 2022."
+  "bio": "Yi is a PhD candidate in the Department of Materials Science and Engineering at Stanford University. His research focuses on the confined synthesis and (S)TEM characterization of ultra thin (nanometer-thick) materials. At COLab, Yi is currently working on machine learning methods for STEM tomography. Yi has been co-organizing the bimonthly Stanford EM-X symposium and the CryoEM FWP meeting since 2022.",
+  "papers": [
+    {"title": "Twisted epitaxy of gold nanodisks grown between twisted substrate layers of MoS₂", "url": "https://www.science.org/doi/10.1126/science.adk5947"}
+  ]
 }
 :::
 
@@ -293,7 +315,10 @@ title: People
     {"label": "ORCID", "url": "https://orcid.org/0000-0002-0679-1056"},
     {"label": "Website", "url": "https://pwren.me/"}
   ],
-  "bio": "Peiwen earned his MS in materials science and engineering at Stanford University, and BA in materials science at Northwestern University. He is interested in scientific visualization and using computational imaging methods to study nanomaterials."
+  "bio": "Peiwen earned his MS in materials science and engineering at Stanford University, and BA in materials science at Northwestern University. He is interested in scientific visualization and using computational imaging methods to study nanomaterials.",
+  "papers": [
+    {"title": "Database, features, and ML model to identify thermally driven metal-insulator transition compounds", "url": "https://doi.org/10.1021/acs.chemmater.1c00905"}
+  ]
 }
 :::
 
@@ -311,7 +336,10 @@ title: People
   "name": "Samuel Gleason",
   "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/GleasonSam.jpg",
   "pronouns": "he/him",
-  "bio": "Sam received his PhD from the University of California, Berkeley, working with Dr Paul Alivisatos, Dr Jim Ciston, and Colin. He is now working on AI-driven materials discovery at Entalpic."
+  "bio": "Sam received his PhD from the University of California, Berkeley, working with Dr Paul Alivisatos, Dr Jim Ciston, and Colin. He is now working on AI-driven materials discovery at Entalpic.",
+  "papers": [
+    {"title": "Prediction of crystal structure from electron diffraction patterns incorporating multiple scattering", "url": "https://doi.org/10.1103/PhysRevMaterials.8.093802"}
+  ]
 }
 :::
 
@@ -319,7 +347,10 @@ title: People
 {
   "name": "Benjamin Savitzky",
   "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/SavitzkyBen.jpg",
-  "bio": "Formerly a PhD student in Lena Kourkoutis' group at Cornell and a postdoc in Colin Ophus' group at Berkeley Lab. Now working as a Principle Research Scientist at hBar Instruments."
+  "bio": "Formerly a PhD student in Lena Kourkoutis' group at Cornell and a postdoc in Colin Ophus' group at Berkeley Lab. Now working as a Principle Research Scientist at hBar Instruments.",
+  "papers": [
+    {"title": "py4DSTEM: A software package for 4DSTEM data analysis", "url": "https://doi.org/10.1017/S1431927621000477"}
+  ]
 }
 :::
 
@@ -327,7 +358,10 @@ title: People
 {
   "name": "Alexander Rakowski",
   "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/RakowskiAlex.jpg",
-  "bio": "Received his PhD in Sarah Haigh's group at Manchester, and worked a postdoc in Joe Patterson and Colin Ophus' group. Now returned to silicon valley."
+  "bio": "Received his PhD in Sarah Haigh's group at Manchester, and worked a postdoc in Joe Patterson and Colin Ophus' group. Now returned to silicon valley.",
+  "papers": [
+    {"title": "Disentangling multiple scattering with deep learning", "url": "https://doi.org/10.1038/s41524-022-00939-9"}
+  ]
 }
 :::
 
@@ -335,7 +369,10 @@ title: People
 {
   "name": "Philipp Pelz",
   "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/PelzPhilipp.jpg",
-  "bio": "Philipp Pelz received Bachelor degrees in Physics (2011) and Informatics (2012), and Master degrees in Applied & Engineering Physics, Materials Science & Chemistry (2013). In 2018 he obtained his Ph.D. in Physics from the University of Hamburg & The Max Planck Institute for the Structure and Dynamics of Matter, Germany. Subsequently, he spent three years as a postdoctoral researcher at the University of California, Berkeley and the National Center for Electron Microscopy. Since August 2022 he is Tenure-Track Professor for Computational Materials Microscopy at FAU Erlangen-Nürnberg."
+  "bio": "Philipp Pelz received Bachelor degrees in Physics (2011) and Informatics (2012), and Master degrees in Applied & Engineering Physics, Materials Science & Chemistry (2013). In 2018 he obtained his Ph.D. in Physics from the University of Hamburg & The Max Planck Institute for the Structure and Dynamics of Matter, Germany. Subsequently, he spent three years as a postdoctoral researcher at the University of California, Berkeley and the National Center for Electron Microscopy. Since August 2022 he is Tenure-Track Professor for Computational Materials Microscopy at FAU Erlangen-Nürnberg.",
+  "papers": [
+    {"title": "Solving complex nanostructures with ptychographic atomic electron tomography", "url": "https://doi.org/10.1038/s41467-023-43634-z"}
+  ]
 }
 :::
 
@@ -343,7 +380,10 @@ title: People
 {
   "name": "Ellis Kennedy",
   "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/KennedyEllis.jpg",
-  "bio": "Received her PhD in Mary Scott's group at UC Berkeley after interning in Colin's group and Mary's group. Formerly a postdoc in Kwabena Bediako's group at UC Berkeley, and now working as a postdoc at Los Alamos National Lab."
+  "bio": "Received her PhD in Mary Scott's group at UC Berkeley after interning in Colin's group and Mary's group. Formerly a postdoc in Kwabena Bediako's group at UC Berkeley, and now working as a postdoc at Los Alamos National Lab.",
+  "papers": [
+    {"title": "Tilted fluctuation electron microscopy", "url": "https://doi.org/10.1063/5.0015532"}
+  ]
 }
 :::
 
@@ -351,7 +391,10 @@ title: People
 {
   "name": "Steven Zeltmann",
   "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/ZeltmannSteven.jpg",
-  "bio": "Received his PhD in Andy Minor's group at UC Berkeley. Now working as a Staff Scientist in PARADIM at Cornell University."
+  "bio": "Received his PhD in Andy Minor's group at UC Berkeley. Now working as a Staff Scientist in PARADIM at Cornell University.",
+  "papers": [
+    {"title": "Patterned probes for high precision 4D-STEM bragg measurements", "url": "https://doi.org/10.1016/j.ultramic.2019.112890"}
+  ]
 }
 :::
 
@@ -359,7 +402,10 @@ title: People
 {
   "name": "Alexandra Bruefach",
   "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/BruefachAlexandra.jpg",
-  "bio": "Received PhD in Mary Scott's group at UC Berkeley. Now working as a Research Scientist at Meta."
+  "bio": "Received PhD in Mary Scott's group at UC Berkeley. Now working as a Research Scientist at Meta.",
+  "papers": [
+    {"title": "Automated crystal orientation mapping in py4DSTEM using sparse correlation matching", "url": "https://doi.org/10.1017/S1431927622000101"}
+  ]
 }
 :::
 
@@ -367,7 +413,10 @@ title: People
 {
   "name": "Blanka Janicek",
   "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/JanicekBlanka.jpg",
-  "bio": "Received her PhD in Pinshane Huang's group at UIUC. Worked as postdoc in Xi Jiang's group and Colin Ophus' group at Berkeley Lab. Currently a Scientist working at Exponent."
+  "bio": "Received her PhD in Pinshane Huang's group at UIUC. Worked as postdoc in Xi Jiang's group and Colin Ophus' group at Berkeley Lab. Currently a Scientist working at Exponent.",
+  "papers": [
+    {"title": "Structural complexities in sodium ion conductive antiperovskite revealed by cryo-TEM", "url": "https://doi.org/10.1021/acs.nanolett.4c01996"}
+  ]
 }
 :::
 
@@ -383,7 +432,10 @@ title: People
 {
   "name": "Luis Rangel DaCosta",
   "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/RangelDaCostaLuis.jpg",
-  "bio": "Former intern in Colin Ophus' group. Currently pursuing a PhD in Mary Scott's group at UC Berkeley."
+  "bio": "Former intern in Colin Ophus' group. Currently pursuing a PhD in Mary Scott's group at UC Berkeley.",
+  "papers": [
+    {"title": "Prismatic 2.0 – Simulation software for STEM and HRTEM", "url": "https://doi.org/10.1016/j.micron.2021.103141"}
+  ]
 }
 :::
 
@@ -395,7 +447,10 @@ title: People
     {"label": "GitHub", "url": "https://github.com/tcpekin"},
     {"label": "Website", "url": "https://tcpekin.com/about"}
   ],
-  "bio": "Graduated PhD program in Andrew Minor's group at UC Berkeley. Postdoc in Christoph Koch's group at Humboldt Universität zu Berlin. Now a Team Product Owner at Carl Zeiss SMS."
+  "bio": "Graduated PhD program in Andrew Minor's group at UC Berkeley. Postdoc in Christoph Koch's group at Humboldt Universität zu Berlin. Now a Team Product Owner at Carl Zeiss SMS.",
+  "papers": [
+    {"title": "Optimizing disk registration algorithms for nanobeam electron diffraction strain mapping", "url": "https://doi.org/10.1016/j.ultramic.2016.12.021"}
+  ]
 }
 :::
 
@@ -403,7 +458,10 @@ title: People
 {
   "name": "Rohini Sankaran",
   "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/SankaranRohini.jpg",
-  "bio": "Received her PhD from Andy Minor's group and Daryl Chrzan's group at UC Berkeley. Worked as a Sr. Failure Analysis R&D Engineer at Intel. Currently a Staff Scientist at Lawrence Livermore National Lab."
+  "bio": "Received her PhD from Andy Minor's group and Daryl Chrzan's group at UC Berkeley. Worked as a Sr. Failure Analysis R&D Engineer at Intel. Currently a Staff Scientist at Lawrence Livermore National Lab.",
+  "papers": [
+    {"title": "HAADF imaging of the omega phase in a gum metal-related alloy", "url": "https://doi.org/10.1080/14786435.2014.937839"}
+  ]
 }
 :::
 
