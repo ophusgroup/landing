@@ -31,7 +31,7 @@ Colin is an Associate Professor in the [Department of Materials Science and Engi
 :::{any:bundle} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/person-card.js
 {
   "name": "Arthur McCray",
-  "image": "/images/people/McCrayArthur.jpg",
+  "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/McCrayArthur.jpg",
   "pronouns": "he/him",
   "links": [
     {"label": "Email", "url": "mailto:amccray@stanford.edu"},
@@ -45,7 +45,7 @@ Colin is an Associate Professor in the [Department of Materials Science and Engi
 :::{any:bundle} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/person-card.js
 {
   "name": "Serin Lee",
-  "image": "/images/people/LeeSerin.jpg",
+  "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/LeeSerin.jpg",
   "pronouns": "she/her",
   "links": [
     {"label": "Email", "url": "mailto:serinl@stanford.edu"},
@@ -59,7 +59,7 @@ Colin is an Associate Professor in the [Department of Materials Science and Engi
 :::{any:bundle} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/person-card.js
 {
   "name": "Dasol Yoon",
-  "image": "/images/people/DasolYoon.jpg",
+  "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/DasolYoon.jpg",
   "pronouns": "she/her",
   "links": [
     {"label": "Email", "url": "mailto:da501@stanford.edu"},
@@ -72,7 +72,7 @@ Colin is an Associate Professor in the [Department of Materials Science and Engi
 :::{any:bundle} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/person-card.js
 {
   "name": "Karen Ehrhardt",
-  "image": "/images/people/EhrhardtKaren.jpg",
+  "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/EhrhardtKaren.jpg",
   "pronouns": "she/her",
   "links": [
     {"label": "Email", "url": "mailto:ehrdt@stanford.edu"},
