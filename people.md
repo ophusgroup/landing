@@ -6,13 +6,19 @@ title: People
 
 ::::{card}
 
-<div style="width: 200px;"><img src="/images/people/OphusColin.jpg" style="width: 100%;" /></div>
-
-**Colin Ophus**
-
-- Associate Professor, [Department of Materials Science and Engineering](https://mse.stanford.edu/), [Stanford University](https://www.stanford.edu/)
-- Center Fellow, [Precourt Institute for Energy](https://energy.stanford.edu/), [Stanford University](https://www.stanford.edu/)
-- Faculty Scientist, [SLAC National Accelerator Laboratory](https://www6.slac.stanford.edu/)
+<div style="display: flex; align-items: flex-start; gap: 1.5em;">
+<div style="width: 200px; flex-shrink: 0;">
+<img src="/images/people/OphusColin.jpg" style="width: 100%; border-radius: 4px;" />
+<strong>Colin Ophus</strong>
+</div>
+<div>
+<ul>
+<li>Associate Professor, <a href="https://mse.stanford.edu/">Department of Materials Science and Engineering</a>, <a href="https://www.stanford.edu/">Stanford University</a></li>
+<li>Center Fellow, <a href="https://energy.stanford.edu/">Precourt Institute for Energy</a>, <a href="https://www.stanford.edu/">Stanford University</a></li>
+<li>Faculty Scientist, <a href="https://www6.slac.stanford.edu/">SLAC National Accelerator Laboratory</a></li>
+</ul>
+</div>
+</div>
 
 :::{dropdown} Info
 (he/him) · [Email](mailto:cophus@stanford.edu) · [GitHub](https://github.com/cophus) · [ORCID](https://orcid.org/0000-0003-2348-8558) · [Scholar](https://scholar.google.com/citations?hl=en&user=h5MPYJAAAAAJ&view_op=list_works&sortby=pubdate)
