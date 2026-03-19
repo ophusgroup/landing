@@ -12,7 +12,7 @@ We want to thank the funding agencies and generous individuals who have funded o
 :::{figure} /images/funding/DOE_Color_Seal_Green_Logo_Clear_2860×719.png
 :alt: DOE
 :class: float-right
-:width: 30%
+:width: 15%
 :::
 
 - In 2018, Colin received an [Early Career Research Award](https://foundry.lbl.gov/2018/06/21/foundrys-colin-ophus-receives-doe-early-career-research-award/) from the US DOE.
@@ -25,7 +25,7 @@ We want to thank the funding agencies and generous individuals who have funded o
 :::{figure} /images/funding/toyota_research_institute.png
 :alt: TRI
 :class: float-right
-:width: 30%
+:width: 15%
 :::
 
 - TRI generously sponsored the development of the [py4DSTEM](https://github.com/py4dstem/py4DSTEM) open-source analysis toolkit for 4DSTEM, developed by our group.
@@ -41,7 +41,7 @@ We want to thank the funding agencies and generous individuals who have funded o
 :::{figure} /images/funding/microscopy_society_america.png
 :alt: MSA
 :class: float-right
-:width: 30%
+:width: 15%
 :::
 
 - In 2022, Colin was awarded the [Burton Medal](https://www.microscopy.org/awards/bios/burton_physical_2022.cfm) in physical sciences, for _distinguished contributions to the field of microscopy and microanalysis by a scientist who is less than 40 years of age._

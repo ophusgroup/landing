@@ -7,7 +7,7 @@ title: People
 ::::{card}
 
 ```{image} /images/people/OphusColin.jpg
-:width: 200px
+:width: 100px
 :class: pi-photo
 ```
 
@@ -35,9 +35,9 @@ Colin is an Associate Professor in the [Department of Materials Science and Engi
 
 **Arthur McCray** (he/him)
 
+:::{dropdown} Bio
 [Email](mailto:amccray@stanford.edu) · [GitHub](https://github.com/Art-MC) · [ORCID](https://orcid.org/0000-0001-6077-4698)
 
-:::{dropdown} Bio
 Arthur McCray received his PhD in Applied Physics at Northwestern University, supervised by Amanda Petford-Long. He has experience in Lorentz TEM, magnetic materials, and is currently developing machine learning methods for solving inverse problems in (S)TEM. Arthur is also the lead developer of the [pyLorentz](https://github.com/PyLorentz/PyLorentz) software package.
 
 [AI-enabled Lorentz microscopy for quantitative imaging of nanoscale magnetic spin textures](https://doi.org/10.1038/s41524-024-01285-8)
@@ -49,9 +49,9 @@ Arthur McCray received his PhD in Applied Physics at Northwestern University, su
 
 **Serin Lee** (she/her)
 
+:::{dropdown} Bio
 [Email](mailto:serinl@stanford.edu) · [ORCID](https://orcid.org/0000-0002-3672-5076) · [Scholar](https://scholar.google.com/citations?hl=ko&user=1KinRDsAAAAJ&view_op=list_works&sortby=pubdate)
 
-:::{dropdown} Bio
 Serin earned her PhD in Materials Science and Engineering at MIT, advised by Professor Frances Ross, as an MIT Energy Initiative and MathWorks Fellow. She is one of Northwestern's 10 Future Leaders in Materials Science. Her research uses _in situ_ electron microscopy to study nanomaterials for sustainability, while her postdoc focuses on enhancing photocatalytic materials' performance and lifetime with advanced techniques like 4DSTEM. Serin is also active in community building and mentorship, serving on the Early Career Committee of the MSA and mentoring through Stanford's Science Small Group program.
 
 [Temperature dependent nanochemistry and growth kinetics using liquid cell TEM](https://doi.org/10.1021/acsnano.2c11477)
@@ -63,9 +63,9 @@ Serin earned her PhD in Materials Science and Engineering at MIT, advised by Pro
 
 **Dasol Yoon** (she/her)
 
+:::{dropdown} Bio
 [Email](mailto:da501@stanford.edu) · [ORCID](https://orcid.org/0000-0003-2284-7010)
 
-:::{dropdown} Bio
 Dasol earned her PhD in Materials Science and Engineering at Cornell University, advised by Professor David Muller. Her research focused on imaging atomic-scale defects in Li-NMC cathodes using electron ptychography and developing related machine learning tools. At Stanford, her work builds upon this foundation, employing electron ptychography and advanced scanning transmission electron microscopy to investigate battery materials and uncover their underlying mechanisms. Outside of research, Dasol enjoys playing tennis, exploring new cuisines, and discovering local attractions.
 :::
 ::::
@@ -75,9 +75,9 @@ Dasol earned her PhD in Materials Science and Engineering at Cornell University,
 
 **Karen Ehrhardt** (she/her)
 
+:::{dropdown} Bio
 [Email](mailto:ehrdt@stanford.edu) · [ORCID](https://orcid.org/0000-0002-6988-2959)
 
-:::{dropdown} Bio
 Karen received her PhD in Materials Chemistry from the University of North Carolina at Chapel Hill under Professor Scott Warren. Her research focused on the fabrication and structural characterization of disordered ultrathin materials using atomic layer deposition, TEM, and modeling via molecular dynamics and reverse Monte Carlo. Currently, she is applying advanced STEM and developing machine learning methods for solving complex disordered structures. She is the lead developer of the [pyHRMC](https://ehrhardtkm.github.io/pyHRMC/) package.
 :::
 ::::
@@ -125,9 +125,9 @@ Henry Bell is a PhD student in the Applied Physics program at Stanford. He compl
 
 **Sangjoon Bob Lee** (he/him)
 
+:::{dropdown} Bio
 [Email](mailto:bobleesj@stanford.edu) · [GitHub](https://github.com/bobleesj) · [ORCID](https://orcid.org/0000-0002-2367-3932)
 
-:::{dropdown} Bio
 Sangjoon, also known as Bob, is a first-year PhD student in the Department of Materials Science and Engineering at Stanford University. He earned his MS in Materials Science and Engineering at Columbia University, where he worked on open-source software with [Prof. Simon Billinge](https://thebillingegroup.com/simon-billinge). Earlier, he earned a BE in Chemical Engineering at The Cooper Union, with minors in Computer Science and Chemistry, and worked in computational chemistry with [Prof. Robert Topper](https://engfac.cooper.edu/topper). Bob can be found on GitHub at @[bobleesj](https://github.com/bobleesj/). His interests include automated workflows for materials imaging and characterization.
 :::
 ::::
@@ -137,9 +137,9 @@ Sangjoon, also known as Bob, is a first-year PhD student in the Department of Ma
 
 **Caitlyn Obrero** (she/her)
 
+:::{dropdown} Bio
 [LinkedIn](https://www.linkedin.com/in/caitlyn-obrero)
 
-:::{dropdown} Bio
 Caitlyn Obrero is a PhD student in Materials Science and Engineering at Stanford University. She earned her BS in Materials Science and Engineering from NC State University, where she developed a broad background in characterizing and studying the properties of materials with a focus on electron microscopy techniques, including SEM and S/TEM. She is currently interested in developing and optimizing in situ STEM techniques to investigate atomic-scale growth mechanisms.
 :::
 ::::
@@ -187,9 +187,9 @@ Corrie is a PhD student in Materials Science and Engineering at Stanford Univers
 
 **Darshan Mali** (he/him)
 
+:::{dropdown} Bio
 [Email](mailto:darshanm@stanford.edu)
 
-:::{dropdown} Bio
 Darshan Mali is a master's student in Materials Science and Engineering at Stanford University. He earned his BTech (Honors)in Metallurgical Engineering and Materials Science from the Indian Institute of Technology Bombay, where he worked with Prof. Tanushree Choudhury on developing single-photon emitters in 2D materials. His current research interests include applying TEM for atomic-scale structure-property analysis.
 :::
 ::::
@@ -253,9 +253,9 @@ Peiwen earned his MS in materials science and engineering at Stanford University
 
 **Stephanie Ribet** (she/her)
 
+:::{dropdown} Bio
 [GitHub](https://github.com/smribet) · [ORCID](https://orcid.org/0000-0002-7117-066X)
 
-:::{dropdown} Bio
 Steph received her PhD at Northwestern University in the Dravid Group. During her PhD, she was award an SCGSR from the US Department of Energy for a research internship at Berkeley Lab. She is currently a postdoc working in Colin's group at Stanford and in Dr Karen Bustillo's group at Berkeley Lab.
 
 [Uncovering the 3D structure of upconverting core–shell nanoparticles with multislice electron ptychography](@doi.org/10.1063/5.0206814)
@@ -267,9 +267,9 @@ Steph received her PhD at Northwestern University in the Dravid Group. During he
 
 **Georgios Varnavides** (he/him)
 
+:::{dropdown} Bio
 [Email](mailto:gvarnavides@berkeley.edu) · [GitHub](https://github.com/gvarnavi) · [ORCID](https://orcid.org/0000-0001-8338-3323) · [Website](https://gvarnavides.com/about/)
 
-:::{dropdown} Bio
 Georgios Varnavides is a postdoctoral Miller research fellow at the University of California, Berkeley, where he is developing new computational imaging modalities to observe structure and function in materials with high spatial resolution.
 
 [Iterative phase retrieval algorithms for STEM](@https://doi.org/10.48550/arXiv.2309.05250)
@@ -297,9 +297,9 @@ Antony is a PhD candidate in Materials Science and Engineering at Stanford Unive
 
 **Annie Hall** (she/her)
 
+:::{dropdown} Bio
 [Email](mailto:amthall@stanford.edu)
 
-:::{dropdown} Bio
 Annie grew up in the suburbs of Chicago and attended Saint Mary's College in Notre Dame, IN where she pursued a degree in chemistry, played tennis, and enjoyed being a manager of the University of Notre Dame football team. She later moved to San Francisco and joined the Materials Science and Engineering Department at Stanford University where she is happy to combine her background in and passion for science and business. Outside of the office, Annie enjoys playing and watching sports, cooking, and traveling.
 :::
 ::::
@@ -309,9 +309,9 @@ Annie grew up in the suburbs of Chicago and attended Saint Mary's College in Not
 
 **Chris Hall** (he/him)
 
+:::{dropdown} Bio
 [Email](mailto:chris.hall@stanford.edu)
 
-:::{dropdown} Bio
 Chris has worked in MSE Administration for a little over a year, after previous administrative positions at Stanford. Please let him know if he can help with anything.
 :::
 ::::
@@ -349,9 +349,9 @@ Yemi is a Master's student in Materials Science and Engineering at Stanford Univ
 
 **Peiwen Ren** (he/him)
 
+:::{dropdown} Bio
 [GitHub](https://github.com/rpw199912j) · [ORCID](https://orcid.org/0000-0002-0679-1056) · [Website](https://pwren.me/)
 
-:::{dropdown} Bio
 Peiwen earned his MS in materials science and engineering at Stanford University, and BA in materials science at Northwestern University. He is interested in scientific visualization and using computational imaging methods to study nanomaterials.
 
 [Database, Features, and Machine Learning Model to Identify Thermally Driven Metal–Insulator Transition Compounds](https://doi.org/10.1021/acs.chemmater.1c00905)
@@ -482,9 +482,9 @@ Former intern in Colin Ophus' group. Currently pursuing a PhD in Mary Scott's gr
 
 **Thomas Pekin**
 
+:::{dropdown} Bio
 [GitHub](https://github.com/tcpekin) · [Website](https://tcpekin.com/about)
 
-:::{dropdown} Bio
 Graduated PhD program in Andrew Minor's group at UC Berkeley. Postdoc in Christoph Koch's group at Humboldt Universität zu Berlin. Now a Team Product Owner at Carl Zeiss SMS.
 
 [Optimizing disk registration algorithms for nanobeam electron diffraction strain mapping](@doi.org/10.1016/j.ultramic.2016.12.021)

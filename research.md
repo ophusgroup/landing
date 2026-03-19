@@ -32,7 +32,7 @@ Our group has developed many kinds of 4DSTEM experiments, including nanobeam ori
 :::{figure} /images/research/py4DSTEM_logo_54_export.png
 :alt: py4DSTEM
 :class: float-right
-:width: 20%
+:width: 10%
 The py4DSTEM open-source analysis toolkit.
 :::
 
@@ -97,7 +97,7 @@ Most STEM experiments use a very simple electron probe; a metal place with a cir
 :::{figure} /images/research/phase_plate_01.png
 :alt: Electrostatic phase plate
 :class: float-right
-:width: 80%
+:width: 40%
 Active electrostatic phase plate device designed for programmable electron beam shaping.
 :::
 
@@ -121,7 +121,7 @@ As we saw above, diffraction patterns from crystalline materials which contain m
 ### 4DSTEM Ptychography
 
 :::{figure} ./images/research/figure_AET_ZrTe_DWCNT.jpg
-:width: 80%
+:width: 40%
 ZrTe nanowire encapsulated in double-walled carbon nanotube solved with PAET, from @doi.org/10.1038/s41467-023-43634-z.
 :::
 
