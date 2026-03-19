@@ -26,28 +26,6 @@ Colin is an Associate Professor in the [Department of Materials Science and Engi
 
 ## Postdoctoral Researchers
 
-<style>
-.phc { position: relative; display: inline-block; text-align: center; cursor: pointer; }
-.phc img { width: 100%; border-radius: 4px; display: block; }
-.phc .phc-n { font-weight: 700; margin-top: 0.4em; font-size: 0.95em; }
-.phc .phc-p {
-  visibility: hidden; opacity: 0;
-  position: absolute; top: 0; left: calc(100% + 0.75em);
-  width: 300px; max-height: 80vh; overflow-y: auto;
-  background: #fff; border: 1px solid #d1d5db; border-radius: 10px;
-  padding: 1em; box-shadow: 0 8px 24px rgba(0,0,0,0.14);
-  z-index: 9999; text-align: left;
-  transition: opacity 0.18s ease, visibility 0.18s ease;
-  pointer-events: none;
-}
-.phc:hover .phc-p { visibility: visible; opacity: 1; pointer-events: auto; }
-.phc .phc-pr { color: #6b7280; font-size: 0.85em; margin-bottom: 0.4em; }
-.phc .phc-l { margin-bottom: 0.6em; line-height: 1.7; }
-.phc .phc-l a { color: #2563eb; text-decoration: none; white-space: nowrap; }
-.phc .phc-l a:hover { text-decoration: underline; }
-.phc .phc-b { font-size: 0.88em; line-height: 1.55; color: #374151; }
-</style>
-
 ::::::{grid} 1 2 3 4
 
 <div class="phc">
