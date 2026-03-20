@@ -35,7 +35,7 @@ title: People
   "pronouns": "he/him",
   "links": [
     {"label": "Email", "url": "mailto:amccray@stanford.edu"},
-    {"label": "GitHub", "url": "https://github.com/Art-MC"},
+    {"label": "GitHub", "url": "https://github.com/arthurmccray"},
     {"label": "ORCID", "url": "https://orcid.org/0000-0001-6077-4698"}
   ],
   "bio": "Arthur McCray received his PhD in Applied Physics at Northwestern University, supervised by Amanda Petford-Long. He has experience in Lorentz TEM, magnetic materials, and is currently developing machine learning methods for solving inverse problems in (S)TEM. Arthur is also the lead developer of the pyLorentz software package.",
