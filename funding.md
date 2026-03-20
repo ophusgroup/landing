@@ -46,7 +46,7 @@ We want to thank the funding agencies and generous individuals who have funded o
 ::::{grid-item}
 :columns: 8
 - In 2022, Colin was awarded the [Burton Medal](https://www.microscopy.org/awards/bios/burton_physical_2022.cfm) in physical sciences, for _distinguished contributions to the field of microscopy and microanalysis by a scientist who is less than 40 years of age._
-- The [MSA](https://microscopy.org/) is the sponor of [Elemental Microscopy](https://www.elementalmicroscopy.com/).
+- The [MSA](https://microscopy.org/) is the sponsor of [Elemental Microscopy](https://www.elementalmicroscopy.com/).
 - The [MSA](https://microscopy.org/) has also awarded our group members travel grants to attend the Microscopy and Microanalysis annual meeting and other conferences.
 ::::
 ::::{grid-item}

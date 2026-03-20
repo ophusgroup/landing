@@ -4,7 +4,7 @@ title: People
 
 ## Principal Investigator
 
-::::::{grid} 1 2 3 4
+::::::{grid} 2 3 4 4
 
 :::{any:bundle} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/person-card.js
 {
@@ -18,7 +18,7 @@ title: People
     {"label": "ORCID", "url": "https://orcid.org/0000-0003-2348-8558"},
     {"label": "Scholar", "url": "https://scholar.google.com/citations?hl=en&user=h5MPYJAAAAAJ&view_op=list_works&sortby=pubdate"}
   ],
-  "bio": "Associate Professor, Department of Materials Science and Engineering, Stanford University.\nCenter Fellow, Precourt Institute for Energy, Stanford University.\nFaculty Scientist, SLAC National Accelerator Laboratory.\n\nHe previously worked as a Staff Scientist at the National Center for Electron Microscopy (NCEM), part of the Molecular Foundry, at Lawrence Berkeley Lab. He was awarded a US DOE Early Career award in 2018, and the Burton Medal from the MSA in 2022. His research focuses on experimental methods, reconstruction algorithms, and software codes for simulation, analysis, and instrument design of scanning transmission electron microscopy (STEM). He advocates for open science and develops open-source scientific software such as quantEM, py4DSTEM, and Prismatic. He is also the editor-in-chief for the interactive web-based scientific journal Elemental Microscopy."
+  "bio": "Associate Professor, Department of Materials Science and Engineering, Stanford University.\nCenter Fellow, Precourt Institute for Energy, Stanford University.\nFaculty Scientist, SLAC National Accelerator Laboratory.\n\nColin previously worked as a Staff Scientist at the National Center for Electron Microscopy (NCEM), part of the Molecular Foundry, at Lawrence Berkeley Lab. He was awarded a US DOE Early Career award in 2018, and the Burton Medal from the MSA in 2022. His research focuses on experimental methods, reconstruction algorithms, and software codes for simulation, analysis, and instrument design of scanning transmission electron microscopy (STEM). He advocates for open science and develops open-source scientific software such as quantEM, py4DSTEM, and Prismatic. He is also the editor-in-chief for the interactive web-based scientific journal Elemental Microscopy."
 }
 :::
 
@@ -347,6 +347,7 @@ title: People
 {
   "name": "Benjamin Savitzky",
   "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/SavitzkyBen.jpg",
+  "pronouns": "he/him",
   "bio": "Formerly a PhD student in Lena Kourkoutis' group at Cornell and a postdoc in Colin Ophus' group at Berkeley Lab. Now working as a Principle Research Scientist at hBar Instruments.",
   "papers": [
     {"title": "py4DSTEM: A software package for 4DSTEM data analysis", "url": "https://doi.org/10.1017/S1431927621000477"}
@@ -358,6 +359,7 @@ title: People
 {
   "name": "Alexander Rakowski",
   "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/RakowskiAlex.jpg",
+  "pronouns": "he/him",
   "bio": "Received his PhD in Sarah Haigh's group at Manchester, and worked a postdoc in Joe Patterson and Colin Ophus' group. Now returned to silicon valley.",
   "papers": [
     {"title": "Disentangling multiple scattering with deep learning", "url": "https://doi.org/10.1038/s41524-022-00939-9"}
@@ -369,6 +371,7 @@ title: People
 {
   "name": "Philipp Pelz",
   "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/PelzPhilipp.jpg",
+  "pronouns": "he/him",
   "bio": "Philipp Pelz received Bachelor degrees in Physics (2011) and Informatics (2012), and Master degrees in Applied & Engineering Physics, Materials Science & Chemistry (2013). In 2018 he obtained his Ph.D. in Physics from the University of Hamburg & The Max Planck Institute for the Structure and Dynamics of Matter, Germany. Subsequently, he spent three years as a postdoctoral researcher at the University of California, Berkeley and the National Center for Electron Microscopy. Since August 2022 he is Tenure-Track Professor for Computational Materials Microscopy at FAU Erlangen-Nürnberg.",
   "papers": [
     {"title": "Solving complex nanostructures with ptychographic atomic electron tomography", "url": "https://doi.org/10.1038/s41467-023-43634-z"}
@@ -380,6 +383,7 @@ title: People
 {
   "name": "Ellis Kennedy",
   "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/KennedyEllis.jpg",
+  "pronouns": "she/her",
   "bio": "Received her PhD in Mary Scott's group at UC Berkeley after interning in Colin's group and Mary's group. Formerly a postdoc in Kwabena Bediako's group at UC Berkeley, and now working as a postdoc at Los Alamos National Lab.",
   "papers": [
     {"title": "Tilted fluctuation electron microscopy", "url": "https://doi.org/10.1063/5.0015532"}
@@ -391,6 +395,7 @@ title: People
 {
   "name": "Steven Zeltmann",
   "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/ZeltmannSteven.jpg",
+  "pronouns": "he/him",
   "bio": "Received his PhD in Andy Minor's group at UC Berkeley. Now working as a Staff Scientist in PARADIM at Cornell University.",
   "papers": [
     {"title": "Patterned probes for high precision 4D-STEM bragg measurements", "url": "https://doi.org/10.1016/j.ultramic.2019.112890"}
@@ -402,6 +407,7 @@ title: People
 {
   "name": "Alexandra Bruefach",
   "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/BruefachAlexandra.jpg",
+  "pronouns": "she/her",
   "bio": "Received PhD in Mary Scott's group at UC Berkeley. Now working as a Research Scientist at Meta.",
   "papers": [
     {"title": "Automated crystal orientation mapping in py4DSTEM using sparse correlation matching", "url": "https://doi.org/10.1017/S1431927622000101"}
@@ -413,6 +419,7 @@ title: People
 {
   "name": "Blanka Janicek",
   "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/JanicekBlanka.jpg",
+  "pronouns": "she/her",
   "bio": "Received her PhD in Pinshane Huang's group at UIUC. Worked as postdoc in Xi Jiang's group and Colin Ophus' group at Berkeley Lab. Currently a Scientist working at Exponent.",
   "papers": [
     {"title": "Structural complexities in sodium ion conductive antiperovskite revealed by cryo-TEM", "url": "https://doi.org/10.1021/acs.nanolett.4c01996"}
@@ -424,6 +431,7 @@ title: People
 {
   "name": "Hannah Devyldere",
   "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/DevyldereHannah.jpg",
+  "pronouns": "she/her",
   "bio": "Former intern in Colin Ophus' group. Currently pursuing a PhD in Mary Scott's group at UC Berkeley."
 }
 :::
@@ -432,6 +440,7 @@ title: People
 {
   "name": "Luis Rangel DaCosta",
   "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/RangelDaCostaLuis.jpg",
+  "pronouns": "he/him",
   "bio": "Former intern in Colin Ophus' group. Currently pursuing a PhD in Mary Scott's group at UC Berkeley.",
   "papers": [
     {"title": "Prismatic 2.0 – Simulation software for STEM and HRTEM", "url": "https://doi.org/10.1016/j.micron.2021.103141"}
@@ -469,6 +478,7 @@ title: People
 {
   "name": "Hao Yang",
   "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/YangHao.jpg",
+  "pronouns": "he/him",
   "bio": "Received his PhD from Pete Nellist's group at Oxford. Formerly a postdoc in Colin Ophus' group. Currently working in industry."
 }
 :::

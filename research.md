@@ -53,7 +53,7 @@ Our group has developed many kinds of 4DSTEM experiments, including nanobeam ori
 - center of mass-differential phase contrast (CoM-DPC)
 - parallax or tilt-corrected bright field imaging
 - ptychography
-- [mutlislice ptychography](https://doi.org/10.1063/5.0206814)
+- [multislice ptychography](https://doi.org/10.1063/5.0206814)
 - joint ptychography-tomography
 
 ### ML Inversion of Multiple Scattering
@@ -84,7 +84,7 @@ In the previous section, we saw how to invert multiple scattering signals from c
 Various STEM probe wavefunctions formed by custom apertures, showing control over both phase and amplitude of the electron beam.
 :::
 
-Most STEM experiments use a very simple electron probe; a metal place with a circular hole is placed in the condenser aperture, which forms the the STEM probe in the far field. Our group has designed many custom STEM wavefunctions by placing patterned structures or devices into the probe-forming aperture. This allows us to design many different optical imaging considitions which module both the phase (the relative position of electron wavefronts) and amplitude (the number of incoming electrons at each angle) of the electron wave.
+Most STEM experiments use a very simple electron probe; a metal place with a circular hole is placed in the condenser aperture, which forms the the STEM probe in the far field. Our group has designed many custom STEM wavefunctions by placing patterned structures or devices into the probe-forming aperture. This allows us to design many different optical imaging conditions which modulate both the phase (the relative position of electron wavefronts) and amplitude (the number of incoming electrons at each angle) of the electron wave.
 
 #### Phase Plates
 
