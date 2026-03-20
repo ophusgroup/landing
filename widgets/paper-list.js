@@ -112,7 +112,7 @@ function render({ model, el }) {
       line-height: 1.5;
     }
     .${id}-paper a {
-      color: ${accentColor};
+      color: #6b1010;
       text-decoration: none;
     }
     .${id}-paper a:hover {
@@ -161,36 +161,36 @@ function render({ model, el }) {
     [data-theme="dark"] .${id}-tag,
     .dark .${id}-tag {
       background: #1f2937;
-      color: #d1d5db;
-      border-color: #4b5563;
+      color: #6b7280;
+      border-color: #374151;
     }
     [data-theme="dark"] .${id}-tag:hover,
     .dark .${id}-tag:hover {
-      border-color: ${accentColorDark};
-      color: ${accentColorDark};
+      border-color: #b05050;
+      color: #d4a0a0;
     }
     [data-theme="dark"] .${id}-tag.active,
     .dark .${id}-tag.active {
-      background: ${accentColorDark};
-      color: #111;
-      border-color: ${accentColorDark};
+      background: #6b2020;
+      color: #e5d0d0;
+      border-color: #8C1515;
     }
     [data-theme="dark"] .${id}-year-btn,
     .dark .${id}-year-btn {
       background: #1f2937;
-      color: #9ca3af;
-      border-color: #4b5563;
+      color: #6b7280;
+      border-color: #374151;
     }
     [data-theme="dark"] .${id}-year-btn:hover,
     .dark .${id}-year-btn:hover {
-      border-color: ${accentColorDark};
-      color: ${accentColorDark};
+      border-color: #b05050;
+      color: #d4a0a0;
     }
     [data-theme="dark"] .${id}-year-btn.active,
     .dark .${id}-year-btn.active {
-      background: ${accentColorDark};
-      color: #111;
-      border-color: ${accentColorDark};
+      background: #6b2020;
+      color: #e5d0d0;
+      border-color: #8C1515;
     }
     [data-theme="dark"] .${id}-year-heading,
     .dark .${id}-year-heading {
@@ -215,8 +215,8 @@ function render({ model, el }) {
     }
     [data-theme="dark"] .${id}-paper-tag,
     .dark .${id}-paper-tag {
-      background: #374151;
-      color: #9ca3af;
+      background: #1f2937;
+      color: #6b7280;
     }
     [data-theme="dark"] .${id}-loading,
     .dark .${id}-loading {
