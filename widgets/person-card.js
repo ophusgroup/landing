@@ -6,6 +6,7 @@ function render({ model, el }) {
   const image = model.get("image") || "";
   const pronouns = model.get("pronouns") || "";
   const bio = model.get("bio") || "";
+  const titles = model.get("titles") || [];
   const links = model.get("links") || [];
   const papers = model.get("papers") || [];
   const popupWidth = model.get("popup_width") || 380;
@@ -54,6 +55,14 @@ function render({ model, el }) {
       opacity: 1;
       pointer-events: auto;
     }
+    .${id}-titles {
+      font-size: 0.85em;
+      line-height: 1.5;
+      color: #374151;
+      margin-bottom: 0.5em;
+      padding-bottom: 0.5em;
+      border-bottom: 1px solid #e5e7eb;
+    }
     .${id}-pronouns {
       color: #6b7280;
       font-size: 0.85em;
@@ -96,6 +105,10 @@ function render({ model, el }) {
   const card = document.createElement("div");
   card.className = `${id}-wrap`;
 
+  const titlesHtml = titles
+    .map((t) => `<div>${t}</div>`)
+    .join("");
+
   const linksHtml = links
     .map((l) => `<a href="${l.url}" target="_blank" rel="noopener">${l.label}</a>`)
     .join(" &middot; ");
@@ -108,6 +121,7 @@ function render({ model, el }) {
     <img src="${image}" alt="${name}" />
     <div class="${id}-name">${name}</div>
     <div class="${id}-popup">
+      ${titlesHtml ? `<div class="${id}-titles">${titlesHtml}</div>` : ""}
       ${pronouns ? `<div class="${id}-pronouns">${pronouns}</div>` : ""}
       ${linksHtml ? `<div class="${id}-links">${linksHtml}</div>` : ""}
       ${bio ? `<div class="${id}-bio">${bio.replace(/\n/g, "<br>")}</div>` : ""}
