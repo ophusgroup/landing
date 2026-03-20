@@ -67,6 +67,9 @@ site:
       url: /people
     - title: Research
       url: /research
+      children:
+          - title: Publications
+            url: /papers
     - title: Teaching
       url: /teaching
     - title: Funding

@@ -1,0 +1,2155 @@
+[
+  {
+    "title": "Identifying Strain Stacking Boundaries between Multiphase Domains in Atomically Thin Two-Dimensional Magnets",
+    "url": "https://doi.org/10.1021/acsnano.5c14666",
+    "year": 2026,
+    "tags": [
+      "Strain",
+      "2D Materials",
+      "Crystallography"
+    ]
+  },
+  {
+    "title": "Comparing Multislice Projections of MD Simulations with CryoEM Exposes Structural Prediction Errors",
+    "url": "https://doi.org/10.1016/j.bpj.2026.02.016",
+    "year": 2026,
+    "tags": [
+      "Simulation"
+    ]
+  },
+  {
+    "title": "Strain mapping of three-dimensionally structured two-dimensional materials",
+    "url": "https://doi.org/10.1126/sciadv.adz7908",
+    "year": 2026,
+    "tags": [
+      "Tomography",
+      "Strain",
+      "2D Materials"
+    ]
+  },
+  {
+    "title": "Atomic-Scale Moir\u00e9 and Electronic Structure Analysis of Twisted Epitaxial MoS$_2$--Au--MoS$_2$ Heterostructures",
+    "url": "https://doi.org/10.1021/acs.nanolett.5c04205",
+    "year": 2026,
+    "tags": [
+      "2D Materials",
+      "Spectroscopy"
+    ]
+  },
+  {
+    "title": "Locating the atoms at the hard-soft interface of gold nanoparticles",
+    "url": "https://doi.org/10.1038/s41467-025-68113-5",
+    "year": 2026,
+    "tags": [
+      "Nanoparticles",
+      "Crystallography"
+    ]
+  },
+  {
+    "title": "Spatial correlations of charge density wave order across the transition in 2H--NbSe$_2$",
+    "url": "https://doi.org/10.1103/776d-dnmf",
+    "year": 2026,
+    "tags": []
+  },
+  {
+    "title": "Accelerating electron diffraction analysis using graph neural networks and attention mechanisms",
+    "url": "https://doi.org/10.1038/s41524-025-01927-5",
+    "year": 2026,
+    "tags": [
+      "Machine Learning"
+    ]
+  },
+  {
+    "title": "PhaseT3M: 3D imaging at 1.6 \u00c5 resolution via electron cryo-tomography with nonlinear phase retrieval",
+    "url": "https://doi.org/10.1038/s41467-025-67303-5",
+    "year": 2026,
+    "tags": [
+      "Ptychography",
+      "Tomography",
+      "Imaging"
+    ]
+  },
+  {
+    "title": "Fabrication and characterization of boron-terminated tetravacancies in monolayer hBN using STEM, EELS and electron ptychography",
+    "url": "https://doi.org/10.1016/j.ultramic.2025.114305",
+    "year": 2026,
+    "tags": [
+      "Ptychography",
+      "2D Materials",
+      "Spectroscopy",
+      "Instrumentation"
+    ]
+  },
+  {
+    "title": "A large interlaboratory electron diffraction study of monolayer graphene",
+    "url": "https://doi.org/10.1088/2053-1583/ae2ca1",
+    "year": 2025,
+    "tags": [
+      "2D Materials"
+    ]
+  },
+  {
+    "title": "Quantitative structure determination from experimental four-dimensional scanning transmission electron microscopy via the scattering matrix",
+    "url": "https://doi.org/10.1093/mam/ozaf119",
+    "year": 2025,
+    "tags": [
+      "Simulation"
+    ]
+  },
+  {
+    "title": "Multi-angle precession electron diffraction (MAPED): A versatile approach to 4D-STEM precession",
+    "url": "https://doi.org/10.1093/mam/ozaf103",
+    "year": 2025,
+    "tags": [
+      "4DSTEM"
+    ]
+  },
+  {
+    "title": "Neutral but Impactful: Gallium Cluster-Induced Nanopores from Beam-Blanked Gallium Ion Sources",
+    "url": "https://doi.org/10.1093/mam/ozaf059",
+    "year": 2025,
+    "tags": []
+  },
+  {
+    "title": "AnyAtom: domain-randomized atomic priors for electron tomography",
+    "url": "https://doi.org/10.1364/3D.2025.JW2A.18",
+    "year": 2025,
+    "tags": [
+      "Tomography"
+    ]
+  },
+  {
+    "title": "Kinetically Controlled Seed-Mediated Synthesis of Colloidal Copper Nanotetrahedra with Intricate Internal Structure",
+    "url": "https://doi.org/10.1021/jacs.5c08337",
+    "year": 2025,
+    "tags": [
+      "Nanoparticles"
+    ]
+  },
+  {
+    "title": "Design Principles in Engineering of Multigrain Nanocatalysts via Multiscale Electronic Structure Characterization",
+    "url": "https://doi.org/10.1021/acs.chemmater.5c01154",
+    "year": 2025,
+    "tags": [
+      "Materials",
+      "Nanoparticles",
+      "Spectroscopy"
+    ]
+  },
+  {
+    "title": "3D strain field reconstruction by inversion of dynamical scattering",
+    "url": "https://doi.org/10.1063/5.0274964",
+    "year": 2025,
+    "tags": [
+      "Tomography",
+      "Strain"
+    ]
+  },
+  {
+    "title": "Atomic-Scale Mechanisms of Nucleation and Stabilization in CuCrO$_2$ and CuFeO$_2$ Delafossite Thin Films on Al$_2$O$_3$",
+    "url": "https://doi.org/10.1002/admi.202500218",
+    "year": 2025,
+    "tags": [
+      "In Situ",
+      "Materials"
+    ]
+  },
+  {
+    "title": "Atomic-scale 3D structural dynamics and functional degradation of Pt alloy nanocatalysts during the oxygen reduction reaction",
+    "url": "https://doi.org/10.1038/s41467-025-63448-5",
+    "year": 2025,
+    "tags": [
+      "In Situ",
+      "Materials"
+    ]
+  },
+  {
+    "title": "BEACON---automated aberration correction for scanning transmission electron microscopy using Bayesian optimization",
+    "url": "https://doi.org/10.1038/s41524-025-01766-4",
+    "year": 2025,
+    "tags": [
+      "Machine Learning",
+      "Instrumentation"
+    ]
+  },
+  {
+    "title": "In Situ 4D-STEM Imaging of the Orientation of Lamellar Clusters in Polymer Crystallization",
+    "url": "https://doi.org/10.1002/marc.202500450",
+    "year": 2025,
+    "tags": [
+      "4DSTEM",
+      "In Situ",
+      "Materials",
+      "Imaging"
+    ]
+  },
+  {
+    "title": "Mapping strain and structural heterogeneities around bubbles in amorphous ionically conductive Bi$_2$O$_3$",
+    "url": "https://doi.org/10.1016/j.matdes.2025.114282",
+    "year": 2025,
+    "tags": [
+      "Strain"
+    ]
+  },
+  {
+    "title": "Observation of nanoparticle coalescence during core--shell metallic nanowire growth in colloids via nanoscale imaging",
+    "url": "https://doi.org/10.1038/s41467-025-60135-3",
+    "year": 2025,
+    "tags": [
+      "In Situ",
+      "Nanoparticles",
+      "Imaging"
+    ]
+  },
+  {
+    "title": "Intermetallic dispersion-strengthened ferritic superalloys with exceptional resistance to radiation-induced hardening",
+    "url": "https://doi.org/10.1016/j.actamat.2025.121095",
+    "year": 2025,
+    "tags": [
+      "Materials"
+    ]
+  },
+  {
+    "title": "Quantitative phase retrieval and characterization of magnetic nanostructures via Lorentz (scanning) transmission electron microscopy",
+    "url": "https://doi.org/10.1088/1361-648X/adc6e3",
+    "year": 2025,
+    "tags": [
+      "Ptychography",
+      "Magnetism",
+      "Nanoparticles"
+    ]
+  },
+  {
+    "title": "Decoding the interstitial/vacancy nature of dislocation loops with their morphological fingerprints in face-centered cubic structure",
+    "url": "https://doi.org/10.1126/sciadv.adq4070",
+    "year": 2025,
+    "tags": [
+      "Strain"
+    ]
+  },
+  {
+    "title": "Accelerating iterative ptychography with an integrated neural network",
+    "url": "https://doi.org/10.1111/jmi.13407",
+    "year": 2025,
+    "tags": [
+      "Ptychography",
+      "Machine Learning"
+    ]
+  },
+  {
+    "title": "Template Matching Approach for Automated Determination of Crystal Phase and Orientation of Grains in 4D-STEM Precession Electron Diffraction Data for Hafnium Zirconium Oxide Ferroelectric Thin Films",
+    "url": "https://doi.org/10.1093/mam/ozaf019",
+    "year": 2025,
+    "tags": [
+      "4DSTEM",
+      "Materials",
+      "Crystallography"
+    ]
+  },
+  {
+    "title": "Complexions at the iron--magnetite interface",
+    "url": "https://doi.org/10.1038/s41467-025-58022-y",
+    "year": 2025,
+    "tags": [
+      "Crystallography"
+    ]
+  },
+  {
+    "title": "Strain release by 3D atomic misfit in fivefold twinned icosahedral nanoparticles with amorphization and dislocations",
+    "url": "https://doi.org/10.1038/s41467-025-56842-6",
+    "year": 2025,
+    "tags": [
+      "Strain",
+      "Nanoparticles"
+    ]
+  },
+  {
+    "title": "$\\pi$-$\\pi$ Stacking in Kerogen and Its Mechanical Impact",
+    "url": "https://doi.org/10.1021/acsami.4c20652",
+    "year": 2025,
+    "tags": [
+      "Materials",
+      "Crystallography"
+    ]
+  },
+  {
+    "title": "Tailored topotactic chemistry unlocks heterostructures of magnetic intercalation compounds",
+    "url": "https://doi.org/10.1038/s41467-025-56467-9",
+    "year": 2025,
+    "tags": [
+      "Magnetism"
+    ]
+  },
+  {
+    "title": "Dynamics and structure of the B2$\\rightarrow$B19' phase transformation in NiTi revealed through in situ 4D-STEM",
+    "url": "https://doi.org/10.1016/j.msea.2025.147951",
+    "year": 2025,
+    "tags": [
+      "4DSTEM",
+      "In Situ"
+    ]
+  },
+  {
+    "title": "The hierarchical structure of organic mixed ionic--electronic conductors and its evolution in water",
+    "url": "https://doi.org/10.1038/s41563-024-02016-6",
+    "year": 2025,
+    "tags": []
+  },
+  {
+    "title": "The 4D camera: An 87 kHz direct electron detector for scanning/transmission electron microscopy",
+    "url": "https://doi.org/10.1093/mam/ozae086",
+    "year": 2024,
+    "tags": [
+      "4DSTEM",
+      "Instrumentation"
+    ]
+  },
+  {
+    "title": "Considerations for extracting moir\u00e9-level strain from dark field intensities in transmission electron microscopy",
+    "url": "https://doi.org/10.1063/5.0222102",
+    "year": 2024,
+    "tags": [
+      "Strain",
+      "2D Materials",
+      "Imaging"
+    ]
+  },
+  {
+    "title": "Uncovering the three-dimensional structure of upconverting core--shell nanoparticles with multislice electron ptychography",
+    "url": "https://doi.org/10.1063/5.0206814",
+    "year": 2024,
+    "tags": [
+      "Ptychography",
+      "Tomography",
+      "Simulation",
+      "Nanoparticles"
+    ]
+  },
+  {
+    "title": "Accelerating the Electrochemical Formation of the $\\delta$ Phase in Manganese-Rich Rocksalt Cathodes",
+    "url": "https://doi.org/10.1002/adma.202412871",
+    "year": 2024,
+    "tags": [
+      "In Situ",
+      "Materials"
+    ]
+  },
+  {
+    "title": "The atomic-level structure and stability of interfaces of Pt nanoparticles in alumina: An experimental and computational evaluation",
+    "url": "https://doi.org/10.1016/j.actamat.2024.120436",
+    "year": 2024,
+    "tags": [
+      "Nanoparticles",
+      "Crystallography"
+    ]
+  },
+  {
+    "title": "Earth-abundant Li-ion cathode materials with nanoengineered microstructures",
+    "url": "https://doi.org/10.1038/s41565-024-01787-y",
+    "year": 2024,
+    "tags": [
+      "Materials",
+      "Nanoparticles"
+    ]
+  },
+  {
+    "title": "Reducing crystal symmetry to generate out-of-plane Dzyaloshinskii-Moriya interaction",
+    "url": "https://doi.org/10.1038/s41467-024-54521-6",
+    "year": 2024,
+    "tags": [
+      "Magnetism"
+    ]
+  },
+  {
+    "title": "Exploring Structural Anisotropy in Amorphous Tb-Co via Changes in Medium-Range Ordering",
+    "url": "https://doi.org/10.1093/mam/ozae113",
+    "year": 2024,
+    "tags": [
+      "Crystallography"
+    ]
+  },
+  {
+    "title": "Streaming Large-Scale Microscopy Data to a Supercomputing Facility",
+    "url": "https://doi.org/10.1093/mam/ozae109",
+    "year": 2024,
+    "tags": []
+  },
+  {
+    "title": "Digital Dark Field---Higher Contrast and Greater Specificity Dark Field Imaging Using a 4DSTEM Approach",
+    "url": "https://doi.org/10.1093/mam/ozae104",
+    "year": 2024,
+    "tags": [
+      "4DSTEM",
+      "Imaging"
+    ]
+  },
+  {
+    "title": "Defect Self-Elimination in Nanocube Superlattices Through the Interplay of Brownian, van der Waals, and Ligand-Based Forces and Torques",
+    "url": "https://doi.org/10.1021/acsnano.3c08610",
+    "year": 2024,
+    "tags": [
+      "Strain",
+      "2D Materials",
+      "Nanoparticles",
+      "Crystallography"
+    ]
+  },
+  {
+    "title": "Grain boundary engineering for efficient and durable electrocatalysis",
+    "url": "https://doi.org/10.1038/s41467-024-52919-w",
+    "year": 2024,
+    "tags": [
+      "Crystallography"
+    ]
+  },
+  {
+    "title": "Random forest prediction of crystal structure from electron diffraction patterns incorporating multiple scattering",
+    "url": "https://doi.org/10.1103/PhysRevMaterials.8.093802",
+    "year": 2024,
+    "tags": [
+      "Machine Learning",
+      "Simulation",
+      "Crystallography"
+    ]
+  },
+  {
+    "title": "Low-dose cryo-electron ptychography of proteins at sub-nanometer resolution",
+    "url": "https://doi.org/10.1038/s41467-024-52403-5",
+    "year": 2024,
+    "tags": [
+      "Ptychography",
+      "Imaging"
+    ]
+  },
+  {
+    "title": "Observation of antiferroelectric domain walls in a uniaxial hyperferroelectric",
+    "url": "https://doi.org/10.1002/adma.202405150",
+    "year": 2024,
+    "tags": [
+      "Magnetism"
+    ]
+  },
+  {
+    "title": "Integrated rocksalt--polyanion cathodes with excess lithium and stabilized cycling",
+    "url": "https://doi.org/10.1038/s41560-024-01615-6",
+    "year": 2024,
+    "tags": [
+      "Materials"
+    ]
+  },
+  {
+    "title": "Structural Complexities in Sodium Ion Conductive Antiperovskite Revealed by Cryogenic TEM",
+    "url": "https://doi.org/10.1021/acs.nanolett.4c01996",
+    "year": 2024,
+    "tags": [
+      "Materials"
+    ]
+  },
+  {
+    "title": "Atomic-scale identification of active sites of oxygen reduction nanocatalysts",
+    "url": "https://doi.org/10.1038/s41929-024-01175-8",
+    "year": 2024,
+    "tags": [
+      "Materials"
+    ]
+  },
+  {
+    "title": "Direct Measurement of the Thermal Expansion Coefficient of Epitaxial WSe$_2$ by 4DSTEM",
+    "url": "https://doi.org/10.1021/acsnano.4c02996",
+    "year": 2024,
+    "tags": [
+      "4DSTEM",
+      "2D Materials"
+    ]
+  },
+  {
+    "title": "Reversible phase transformations between Pb nanocrystals and a viscous liquid-like phase",
+    "url": "https://doi.org/10.1126/sciadv.adn6426",
+    "year": 2024,
+    "tags": [
+      "In Situ",
+      "Nanoparticles",
+      "Crystallography"
+    ]
+  },
+  {
+    "title": "Chemical Environment and Structural Variations in High Entropy Oxide Thin Film Probed with Electron Microscopy",
+    "url": "https://doi.org/10.1021/acsnano.4c00787",
+    "year": 2024,
+    "tags": [
+      "Materials",
+      "Instrumentation"
+    ]
+  },
+  {
+    "title": "Ion Implantation-Induced Plastic Phenomena in Metallic Alloys",
+    "url": "https://doi.org/10.1007/s11837-024-06418-4",
+    "year": 2024,
+    "tags": [
+      "Materials"
+    ]
+  },
+  {
+    "title": "Direct Imaging of the Crystalline Domains and Their Orientation in the PS-b-PEO Block Copolymer with 4DSTEM",
+    "url": "https://doi.org/10.1021/acs.macromol.3c02231",
+    "year": 2024,
+    "tags": [
+      "4DSTEM",
+      "Materials",
+      "Imaging"
+    ]
+  },
+  {
+    "title": "Electronic structure along Sm$_2$Co$_3$Ge$_5$ twin boundaries",
+    "url": "https://doi.org/10.1016/j.actamat.2024.119831",
+    "year": 2024,
+    "tags": [
+      "Strain",
+      "Spectroscopy"
+    ]
+  },
+  {
+    "title": "How the AI-assisted discovery and synthesis of a ternary oxide highlights capability gaps in materials science",
+    "url": "https://doi.org/10.1039/D3SC04823C",
+    "year": 2024,
+    "tags": [
+      "Machine Learning",
+      "Materials"
+    ]
+  },
+  {
+    "title": "Rejuvenation as the origin of planar defects in the CrCoNi medium entropy alloy",
+    "url": "https://doi.org/10.1038/s41467-024-45696-z",
+    "year": 2024,
+    "tags": [
+      "Strain",
+      "Materials"
+    ]
+  },
+  {
+    "title": "A method for crystallographic mapping of an alpha\u2010beta titanium alloy with nanometre resolution using scanning precession electron diffraction and open\u2010source software libraries",
+    "url": "https://doi.org/10.1111/jmi.13275",
+    "year": 2024,
+    "tags": [
+      "4DSTEM",
+      "Materials",
+      "Imaging"
+    ]
+  },
+  {
+    "title": "Uneven Strain Distribution Induces Consecutive Dislocation Slipping, Plane Gliding, and Subsequent Detwinning of Penta-Twinned Nanoparticles",
+    "url": "https://doi.org/10.1021/acs.nanolett.3c03788",
+    "year": 2024,
+    "tags": [
+      "Strain",
+      "Nanoparticles"
+    ]
+  },
+  {
+    "title": "Design of Electrostatic Aberration Correctors for Scanning Transmission Electron Microscopy",
+    "url": "https://doi.org/10.1093/micmic/ozad111",
+    "year": 2023,
+    "tags": [
+      "Instrumentation"
+    ]
+  },
+  {
+    "title": "Solving complex nanostructures with ptychographic atomic electron tomography",
+    "url": "https://doi.org/10.1038/s41467-023-43634-z",
+    "year": 2023,
+    "tags": [
+      "Ptychography",
+      "Tomography",
+      "Nanoparticles"
+    ]
+  },
+  {
+    "title": "Enabling Oxidation Protection and Carrier-Type Switching for Bismuth Telluride Nanoribbons via in Situ Organic Molecule Coating",
+    "url": "https://doi.org/10.1021/acs.nanolett.3c02000",
+    "year": 2023,
+    "tags": [
+      "In Situ"
+    ]
+  },
+  {
+    "title": "Energy Funneling in a Noninteger Two-Dimensional Perovskite",
+    "url": "https://doi.org/10.1021/acs.nanolett.3c03058",
+    "year": 2023,
+    "tags": [
+      "Materials",
+      "2D Materials"
+    ]
+  },
+  {
+    "title": "Atomic-scale probing of short-range order and its impact on electrochemical properties in cation-disordered oxide cathodes",
+    "url": "https://doi.org/10.1038/s41467-023-43356-2",
+    "year": 2023,
+    "tags": [
+      "Materials"
+    ]
+  },
+  {
+    "title": "Analysis of strain and defects in Tellurium-{WSe}$_2$ Moir\\'{e} heterostructures using scanning nanodiffraction",
+    "url": "https://doi.org/10.1021/acsnano.3c04283",
+    "year": 2023,
+    "tags": [
+      "4DSTEM",
+      "Strain",
+      "2D Materials"
+    ]
+  },
+  {
+    "title": "Relativistic ultrafast electron diffraction at high repetition rates",
+    "url": "https://doi.org/10.1063/4.0000203",
+    "year": 2023,
+    "tags": []
+  },
+  {
+    "title": "Encoding multistate charge order and chirality in endotaxial heterostructures",
+    "url": "https://doi.org/10.1038/s41467-023-41780-y",
+    "year": 2023,
+    "tags": [
+      "Magnetism"
+    ]
+  },
+  {
+    "title": "Role of structural defects in mediating disordering processes at irradiated epitaxial Fe$_3$O$_4$ / Cr$_2$O$_3$ interfaces",
+    "url": "https://doi.org/10.1103/PhysRevMaterials.7.093604",
+    "year": 2023,
+    "tags": [
+      "Strain",
+      "Crystallography"
+    ]
+  },
+  {
+    "title": "Measurement of Atomic Modulation Direction Using the Azimuthal Variation of First-Order Laue Zone Electron Diffraction",
+    "url": "https://doi.org/10.1093/micmic/ozad089",
+    "year": 2023,
+    "tags": []
+  },
+  {
+    "title": "Quantitative scanning transmission electron microscopy for materials science: imaging, diffraction, spectroscopy, & tomography",
+    "url": "https://doi.org/10.1146/annurev-matsci-080921-092646",
+    "year": 2023,
+    "tags": [
+      "4DSTEM",
+      "Tomography",
+      "Spectroscopy",
+      "Imaging"
+    ]
+  },
+  {
+    "title": "Mapping nanoscale electrostatic field fluctuations around graphene dislocation cores using 4DSTEM",
+    "url": "https://doi.org/10.1021/acs.nanolett.3c00328",
+    "year": 2023,
+    "tags": [
+      "4DSTEM",
+      "Strain",
+      "2D Materials"
+    ]
+  },
+  {
+    "title": "Observing ion diffusion and reciprocating hopping motion in water",
+    "url": "https://doi.org/10.1126/sciadv.adf8436",
+    "year": 2023,
+    "tags": []
+  },
+  {
+    "title": "The emergence of three-dimensional chiral domain walls in polar vortices",
+    "url": "https://doi.org/10.1038/s41467-023-40009-2",
+    "year": 2023,
+    "tags": [
+      "Magnetism"
+    ]
+  },
+  {
+    "title": "Uncovering polar vortex structures by inversion of multiple scattering with a stacked Bloch wave model",
+    "url": "https://doi.org/10.1016/j.ultramic.2023.113732",
+    "year": 2023,
+    "tags": [
+      "Simulation"
+    ]
+  },
+  {
+    "title": "Multimodal Characterization of Crystal Structure and Formation in Rubrene Thin Films Reveals Erasure of Orientational Discontinuities",
+    "url": "https://doi.org/10.1002/adfm.202207867",
+    "year": 2023,
+    "tags": [
+      "In Situ",
+      "Crystallography"
+    ]
+  },
+  {
+    "title": "Resolution of Virtual Depth Sectioning from Four-Dimensional Scanning Transmission Electron Microscopy",
+    "url": "https://doi.org/10.1093/micmic/ozad068",
+    "year": 2023,
+    "tags": [
+      "Imaging"
+    ]
+  },
+  {
+    "title": "Atomic motifs govern the decoration of grain boundaries by interstitial solutes",
+    "url": "https://doi.org/10.1038/s41467-023-39302-x",
+    "year": 2023,
+    "tags": [
+      "Strain",
+      "Crystallography"
+    ]
+  },
+  {
+    "title": "Probing the atomically diffuse interfaces in Pd\\@Pt core-shell nanoparticles in three dimensions",
+    "url": "https://doi.org/10.1038/s41467-023-38536-z",
+    "year": 2023,
+    "tags": [
+      "Nanoparticles",
+      "Crystallography"
+    ]
+  },
+  {
+    "title": "Defect contrast with 4DSTEM: Understanding crystalline order with virtual detectors and beam modification",
+    "url": "https://doi.org/10.1093/micmic/ozad045",
+    "year": 2023,
+    "tags": [
+      "4DSTEM",
+      "Strain",
+      "Instrumentation",
+      "Imaging"
+    ]
+  },
+  {
+    "title": "The mechanism of twin thickening and the elastic strain state of TWIP steel nanotwins",
+    "url": "https://doi.org/10.1016/j.msea.2023.145005",
+    "year": 2023,
+    "tags": [
+      "Strain",
+      "Materials"
+    ]
+  },
+  {
+    "title": "Rotational and dilational reconstruction in transition Metal dichalcogenide moir\u00e9 bilayers",
+    "url": "https://doi.org/10.1038/s41467-023-38504-7",
+    "year": 2023,
+    "tags": [
+      "2D Materials"
+    ]
+  },
+  {
+    "title": "Multislice electron tomography using four-dimensional scanning transmission electron microscopy",
+    "url": "https://doi.org/10.1103/PhysRevApplied.19.054062",
+    "year": 2023,
+    "tags": [
+      "Tomography",
+      "Simulation"
+    ]
+  },
+  {
+    "title": "60$^\\circ$ and 120$^\\circ$ domain walls in epitaxial BaTiO$_3$(111)/Co multiferroic heterostructures",
+    "url": "https://doi.org/10.1103/PhysRevB.107.L140407",
+    "year": 2023,
+    "tags": [
+      "Magnetism"
+    ]
+  },
+  {
+    "title": "Competition between exchange and magnetostatic energies in domain pattern transfer from BaTiO$_3$(111) to a Ni thin film",
+    "url": "https://doi.org/10.1103/PhysRevMaterials.7.034403",
+    "year": 2023,
+    "tags": []
+  },
+  {
+    "title": "Robust design of semi-automated clustering models for 4DSTEM datasets",
+    "url": "https://doi.org/10.1063/5.0130546",
+    "year": 2023,
+    "tags": [
+      "4DSTEM",
+      "Machine Learning"
+    ]
+  },
+  {
+    "title": "4DSTEM reveals crystallization mechanisms of organic semiconductors on graphene",
+    "url": "https://doi.org/10.1557/s43579-022-00310-5",
+    "year": 2023,
+    "tags": [
+      "4DSTEM",
+      "2D Materials"
+    ]
+  },
+  {
+    "title": "Formation of hierarchically ordered structures in conductive polymers to enhance the performances of lithium-ion batteries",
+    "url": "https://doi.org/10.1038/s41560-022-01176-6",
+    "year": 2023,
+    "tags": [
+      "In Situ",
+      "Materials"
+    ]
+  },
+  {
+    "title": "Spatially resolved structural order in low-temperature liquid electrolyte",
+    "url": "https://doi.org/10.1126/sciadv.adc9721",
+    "year": 2023,
+    "tags": [
+      "Materials"
+    ]
+  },
+  {
+    "title": "Characterization of the atomic-level structure of $\\gamma$-alumina and (111) Pt/$\\gamma$-alumina interfaces",
+    "url": "https://doi.org/10.1016/j.actamat.2022.118609",
+    "year": 2023,
+    "tags": [
+      "Crystallography"
+    ]
+  },
+  {
+    "title": "Disentangling multiple scattering with deep learning: application to strain mapping from electron diffraction patterns",
+    "url": "https://doi.org/10.1038/s41524-022-00939-9",
+    "year": 2022,
+    "tags": [
+      "Machine Learning",
+      "Simulation",
+      "Strain"
+    ]
+  },
+  {
+    "title": "Strong structural and electronic coupling in metavalent PbS moir\\'e superlattices",
+    "url": "https://doi.org/10.1021/jacs.2c09947",
+    "year": 2022,
+    "tags": [
+      "2D Materials",
+      "Crystallography"
+    ]
+  },
+  {
+    "title": "Accurate quantification of lattice temperature dynamics from ultrafast electron diffraction of single-crystal films using dynamical scattering simulations",
+    "url": "https://doi.org/10.1063/4.0000170",
+    "year": 2022,
+    "tags": [
+      "Simulation",
+      "In Situ",
+      "Crystallography"
+    ]
+  },
+  {
+    "title": "Analysis of Interpretable Data Representations for 4DSTEM Using Unsupervised Learning",
+    "url": "https://doi.org/10.1017/S1431927622012259",
+    "year": 2022,
+    "tags": [
+      "4DSTEM",
+      "Machine Learning"
+    ]
+  },
+  {
+    "title": "Flexible CO$_2$ Sensor Architecture with Selective Nitrogen Functionalities by One-Step Laser-Induced Conversion of Versatile Organic Ink",
+    "url": "https://doi.org/10.1002/adfm.202207406",
+    "year": 2022,
+    "tags": []
+  },
+  {
+    "title": "Deep learning for electron and scanning probe microscopy: From materials design to atomic fabrication",
+    "url": "https://doi.org/10.1557/s43577-022-00413-3",
+    "year": 2022,
+    "tags": [
+      "Machine Learning",
+      "Instrumentation"
+    ]
+  },
+  {
+    "title": "Direct strain correlations at the single-atom level in three-dimensional core-shell interface structures",
+    "url": "https://doi.org/10.1038/s41467-022-33236-6",
+    "year": 2022,
+    "tags": [
+      "Tomography",
+      "Strain",
+      "Nanoparticles",
+      "Crystallography"
+    ]
+  },
+  {
+    "title": "Ultrasensitive Sub-monolayer Palladium Induced Chirality Switching and Topological Evolution of Skyrmions",
+    "url": "https://doi.org/10.1021/acs.nanolett.2c02043",
+    "year": 2022,
+    "tags": [
+      "Magnetism",
+      "2D Materials"
+    ]
+  },
+  {
+    "title": "A three-dimensional reconstruction algorithm for scanning transmission electron microscopy data from a single sample orientation",
+    "url": "https://doi.org/10.1017/S1431927622012090",
+    "year": 2022,
+    "tags": [
+      "Simulation"
+    ]
+  },
+  {
+    "title": "Automated Crystal orientation mapping in py4DSTEM using sparse correlation matching",
+    "url": "https://doi.org/10.1017/S1431927622000101",
+    "year": 2022,
+    "tags": [
+      "4DSTEM",
+      "py4DSTEM",
+      "Crystallography"
+    ]
+  },
+  {
+    "title": "Ion complexation waves emerge at the curved interfaces of layered minerals",
+    "url": "https://doi.org/10.1038/s41467-022-31004-0",
+    "year": 2022,
+    "tags": [
+      "Crystallography"
+    ]
+  },
+  {
+    "title": "Seeing structural evolution of organic molecular nano-crystallites using 4DSCED",
+    "url": "https://doi.org/10.5281/zenodo.5831202",
+    "year": 2022,
+    "tags": [
+      "4DSTEM"
+    ]
+  },
+  {
+    "title": "Correlative image learning of chemo-mechanics in phase-transforming solids",
+    "url": "https://doi.org/10.1038/s41563-021-01191-0",
+    "year": 2022,
+    "tags": []
+  },
+  {
+    "title": "Mapping 1D Confined Electromagnetic Edge States in 2D Monolayer Semiconducting MoS$_2$ Using 4DSTEM",
+    "url": "https://doi.org/10.1021/acsnano.2c01170",
+    "year": 2022,
+    "tags": [
+      "4DSTEM",
+      "Magnetism",
+      "2D Materials"
+    ]
+  },
+  {
+    "title": "Cryogenic 4DSTEM analysis of an amorphous-crystalline polymer blend: combined nanocrystalline and amorphous phase mapping",
+    "url": "https://doi.org/10.1016/j.isci.2022.103882",
+    "year": 2022,
+    "tags": [
+      "4DSTEM",
+      "Materials",
+      "Nanoparticles",
+      "Crystallography"
+    ]
+  },
+  {
+    "title": "Reversible writing/deleting of magnetic skyrmions through hydrogen adsorption/desorption",
+    "url": "https://doi.org/10.1038/s41467-022-28968-4",
+    "year": 2022,
+    "tags": [
+      "Magnetism"
+    ]
+  },
+  {
+    "title": "Machine learning in scanning transmission electron microscopy",
+    "url": "https://doi.org/10.1038/s43586-022-00095-w",
+    "year": 2022,
+    "tags": [
+      "Machine Learning"
+    ]
+  },
+  {
+    "title": "Stabilization and control of persistent current magnets using variable inductance",
+    "url": "https://doi.org/10.1088/1361-6668/ac549b",
+    "year": 2022,
+    "tags": []
+  },
+  {
+    "title": "Visualizing Grain Statistics in MOCVD WSe$_2$ through Four-Dimensional Scanning Transmission Electron Microscopy",
+    "url": "https://doi.org/10.1021/acs.nanolett.1c04315",
+    "year": 2022,
+    "tags": [
+      "2D Materials"
+    ]
+  },
+  {
+    "title": "Scattering matrix determination in crystalline materials from 4D scanning transmission electron microscopy at a single defocus value",
+    "url": "https://doi.org/10.1017/S1431927621000490",
+    "year": 2021,
+    "tags": [
+      "Simulation"
+    ]
+  },
+  {
+    "title": "Imaging atomic-scale chemistry from fused multi-modal electron microscopy",
+    "url": "https://doi.org/10.1038/s41524-021-00692-5",
+    "year": 2021,
+    "tags": [
+      "Imaging"
+    ]
+  },
+  {
+    "title": "Correlative analysis of structure and chemistry of Li$_x$FePO$_4$ platelets using 4DSTEM and x-ray ptychography",
+    "url": "https://doi.org/10.1016/j.mattod.2021.10.031",
+    "year": 2021,
+    "tags": [
+      "4DSTEM",
+      "Ptychography",
+      "Spectroscopy"
+    ]
+  },
+  {
+    "title": "A Fast Algorithm for Scanning Transmission Electron Microscopy Imaging and 4DSTEM Diffraction Simulations",
+    "url": "https://doi.org/10.1017/S1431927621012083",
+    "year": 2021,
+    "tags": [
+      "4DSTEM",
+      "Simulation",
+      "Imaging"
+    ]
+  },
+  {
+    "title": "Prismatic 2.0 - Simulation Software for STEM and HRTEM",
+    "url": "https://doi.org/10.1016/j.micron.2021.103141",
+    "year": 2021,
+    "tags": [
+      "Simulation",
+      "Imaging"
+    ]
+  },
+  {
+    "title": "Simultaneous Successive Twinning Captured by Atomic Electron Tomography",
+    "url": "https://doi.org/10.1021/acsnano.1c07772",
+    "year": 2021,
+    "tags": [
+      "Tomography",
+      "Strain"
+    ]
+  },
+  {
+    "title": "Atomic scale crystal field mapping of polar vortices in oxide superlattices",
+    "url": "https://doi.org/10.1038/s41467-021-26476-5",
+    "year": 2021,
+    "tags": [
+      "Materials",
+      "Crystallography"
+    ]
+  },
+  {
+    "title": "Real-Time Interactive 4DSTEM Phase-Contrast Imaging From Electron Event Representation Data",
+    "url": "https://doi.org/10.1109/MSP.2021.3120981",
+    "year": 2021,
+    "tags": [
+      "4DSTEM",
+      "In Situ",
+      "Imaging"
+    ]
+  },
+  {
+    "title": "Electric-Field Control of Chirality",
+    "url": "https://doi.org/10.1126/sciadv.abj8030",
+    "year": 2021,
+    "tags": [
+      "Magnetism"
+    ]
+  },
+  {
+    "title": "Switching between Magnetic Bloch and N\u00e9el Domain Walls with Anisotropy Modulations",
+    "url": "https://doi.org/10.1103/PhysRevLett.127.127203",
+    "year": 2021,
+    "tags": [
+      "Magnetism"
+    ]
+  },
+  {
+    "title": "Nanoscale characterization of crystalline and amorphous phases in silicon oxycarbide ceramics using 4DSTEM",
+    "url": "https://doi.org/10.1016/j.matchar.2021.111512",
+    "year": 2021,
+    "tags": [
+      "4DSTEM",
+      "Materials",
+      "Crystallography"
+    ]
+  },
+  {
+    "title": "Theory and application of the vector pair correlation function for real-space crystallographic analysis of order/disorder correlations from STEM images",
+    "url": "https://doi.org/10.1063/5.0058928",
+    "year": 2021,
+    "tags": []
+  },
+  {
+    "title": "Crystallization by Amorphous Particle Attachment: On the Evolution of Texture",
+    "url": "https://doi.org/10.1002/adma.202101358",
+    "year": 2021,
+    "tags": []
+  },
+  {
+    "title": "Fast Grain Mapping with Sub-Nanometer Resolution Using 4DSTEM with Grain Classification by Principal Component Analysis and Non-Negative Matrix Factorization",
+    "url": "https://doi.org/10.1017/S1431927621011946",
+    "year": 2021,
+    "tags": [
+      "4DSTEM",
+      "Imaging"
+    ]
+  },
+  {
+    "title": "Deep Learning Segmentation of Complex Features in Atomic-Resolution Phase-Contrast Transmission Electron Microscopy Images",
+    "url": "https://doi.org/10.1017/S1431927621000167",
+    "year": 2021,
+    "tags": [
+      "Machine Learning",
+      "Imaging"
+    ]
+  },
+  {
+    "title": "4DSTEM of beam-sensitive Materials",
+    "url": "https://doi.org/10.1021/acs.accounts.1c00073",
+    "year": 2021,
+    "tags": [
+      "4DSTEM"
+    ]
+  },
+  {
+    "title": "Percolation of Ion-Irradiation-Induced Disorder in Complex Oxide Interfaces",
+    "url": "https://doi.org/10.1021/acs.nanolett.1c01651",
+    "year": 2021,
+    "tags": [
+      "Materials",
+      "Crystallography"
+    ]
+  },
+  {
+    "title": "Phase-contrast imaging of multiply-scattering extended objects at atomic resolution by reconstruction of the scattering matrix",
+    "url": "https://doi.org/10.1103/PhysRevResearch.3.023159",
+    "year": 2021,
+    "tags": [
+      "Simulation",
+      "Imaging"
+    ]
+  },
+  {
+    "title": "py4DSTEM: A Software Package for 4DSTEM Data Analysis",
+    "url": "https://doi.org/10.1017/S1431927621000477",
+    "year": 2021,
+    "tags": [
+      "4DSTEM",
+      "py4DSTEM"
+    ]
+  },
+  {
+    "title": "The chain of chirality transfer in tellurium nanocrystals",
+    "url": "https://doi.org/10.1126/science.abf9645",
+    "year": 2021,
+    "tags": [
+      "Magnetism",
+      "2D Materials",
+      "Nanoparticles"
+    ]
+  },
+  {
+    "title": "Extreme mixing in nanoscale transition metal alloys",
+    "url": "https://doi.org/10.1016/j.matt.2021.04.014",
+    "year": 2021,
+    "tags": [
+      "Materials"
+    ]
+  },
+  {
+    "title": "Strain fields in twisted bilayer graphene",
+    "url": "https://doi.org/10.1038/s41563-021-00973-w",
+    "year": 2021,
+    "tags": [
+      "Strain",
+      "2D Materials"
+    ]
+  },
+  {
+    "title": "Observation of Hydrogen-Induced Dzyaloshinskii-Moriya Interaction and Reversible Switching of Magnetic Chirality",
+    "url": "https://doi.org/10.1103/PhysRevX.11.021015",
+    "year": 2021,
+    "tags": [
+      "Magnetism"
+    ]
+  },
+  {
+    "title": "Multibeam Electron Diffraction",
+    "url": "https://doi.org/10.1017/S1431927620024770",
+    "year": 2021,
+    "tags": []
+  },
+  {
+    "title": "Local Lattice Deformation of Tellurene Grain Boundaries by Four-Dimensional Electron Microscopy",
+    "url": "https://doi.org/10.1017/S1431927620024770",
+    "year": 2021,
+    "tags": [
+      "In Situ",
+      "Strain",
+      "Crystallography"
+    ]
+  },
+  {
+    "title": "Intrinsic helical twist and chirality in ultrathin tellurium nanowires",
+    "url": "https://doi.org/10.1039/D1NR01442K",
+    "year": 2021,
+    "tags": [
+      "Magnetism",
+      "2D Materials",
+      "Nanoparticles"
+    ]
+  },
+  {
+    "title": "Towards data-driven next-generation transmission electron microscopy",
+    "url": "https://doi.org/10.1038/s41563-020-00833-z",
+    "year": 2020,
+    "tags": [
+      "Machine Learning"
+    ]
+  },
+  {
+    "title": "1D to 2D Transition in Tellurium Observed by Four-Dimensional Electron Microscopy",
+    "url": "https://doi.org/10.1002/smll.202005447",
+    "year": 2020,
+    "tags": [
+      "2D Materials"
+    ]
+  },
+  {
+    "title": "Origins of the transformability of nickel-titanium shape memory alloys",
+    "url": "https://doi.org/10.1103/PhysRevMaterials.4.103611",
+    "year": 2020,
+    "tags": [
+      "Materials"
+    ]
+  },
+  {
+    "title": "Orientation and morphology of Pt nanoparticles in $\\gamma$-alumina processed via ion implantation and thermal annealing",
+    "url": "https://doi.org/10.1016/j.scriptamat.2020.06.058",
+    "year": 2020,
+    "tags": [
+      "Nanoparticles"
+    ]
+  },
+  {
+    "title": "Hybrid nanocapsules for _in situ_ TEM imaging of gas evolution reactions in confined liquids",
+    "url": "https://doi.org/10.1039/D0NR05281G",
+    "year": 2020,
+    "tags": [
+      "In Situ",
+      "Imaging"
+    ]
+  },
+  {
+    "title": "Creation of skyrmions in van der Waals ferromagnet Fe$_3$GeTe$_2$ on (Co/Pd)$_n$ superlattice",
+    "url": "https://doi.org/10.1126/sciadv.abb5157",
+    "year": 2020,
+    "tags": [
+      "Magnetism",
+      "2D Materials",
+      "Crystallography"
+    ]
+  },
+  {
+    "title": "Tilted fluctuation electron microscopy",
+    "url": "https://doi.org/10.1063/5.0015532",
+    "year": 2020,
+    "tags": []
+  },
+  {
+    "title": "Highly Active Rutile TiO$_2$ Nanocrystalline Photocatalysts",
+    "url": "https://doi.org/10.1021/acsami.0c03150",
+    "year": 2020,
+    "tags": [
+      "Materials",
+      "Nanoparticles"
+    ]
+  },
+  {
+    "title": "Short-range order and its impact on the CrCoNi medium-entropy alloy",
+    "url": "https://doi.org/10.1038/s41586-020-2275-z",
+    "year": 2020,
+    "tags": [
+      "Materials"
+    ]
+  },
+  {
+    "title": "Tuning the Properties of Zero-Field Room Temperature Ferromagnetic Skyrmions by Interlayer Exchange Coupling",
+    "url": "https://doi.org/10.1021/acs.nanolett.0c00137",
+    "year": 2020,
+    "tags": [
+      "Magnetism"
+    ]
+  },
+  {
+    "title": "Atomic structures determined from digitally defined nanocrystalline regions",
+    "url": "https://doi.org/10.1107/S2052252520004030",
+    "year": 2020,
+    "tags": [
+      "Nanoparticles"
+    ]
+  },
+  {
+    "title": "Structural Implications of Interfacial Hydrogen Bonding in Hydrated Wyoming-Montmorillonite Clay",
+    "url": "https://doi.org/10.1021/acs.jpcc.9b11339",
+    "year": 2020,
+    "tags": []
+  },
+  {
+    "title": "Patterned Probes for High Precision 4DSTEM Bragg Measurements",
+    "url": "https://doi.org/10.1016/j.ultramic.2019.112890",
+    "year": 2020,
+    "tags": [
+      "4DSTEM",
+      "Instrumentation"
+    ]
+  },
+  {
+    "title": "Design and Synthesis of Multigrain Nanocrystals via Geometric Misfit Strain",
+    "url": "https://doi.org/10.1038/s41586-019-1899-3",
+    "year": 2020,
+    "tags": [
+      "Strain",
+      "Nanoparticles"
+    ]
+  },
+  {
+    "title": "Linear-scaling algorithm for rapid computation of inelastic transitions in the presence of multiple electron scattering",
+    "url": "https://doi.org/10.1103/PhysRevResearch.1.033186",
+    "year": 2020,
+    "tags": [
+      "Simulation"
+    ]
+  },
+  {
+    "title": "A multiple scattering algorithm for 3D phase contrast AET",
+    "url": "https://doi.org/10.1016/j.ultramic.2019.112860",
+    "year": 2020,
+    "tags": [
+      "Tomography",
+      "Simulation",
+      "Phase Contrast",
+      "Imaging"
+    ]
+  },
+  {
+    "title": "Functional Materials Under Stress: In Situ TEM Observations of Structural Evolution",
+    "url": "https://doi.org/10.1002/adma.201906105",
+    "year": 2019,
+    "tags": [
+      "In Situ"
+    ]
+  },
+  {
+    "title": "Real time imaging of two-dimensional iron oxide spherulite nanostructure formation",
+    "url": "https://doi.org/10.1007/s12274-019-2531-4",
+    "year": 2019,
+    "tags": [
+      "In Situ",
+      "Materials",
+      "2D Materials",
+      "Nanoparticles",
+      "Imaging"
+    ]
+  },
+  {
+    "title": "The Materials Research Platform: Defining the Requirements from User Stories",
+    "url": "https://doi.org/10.1016/j.matt.2019.10.024",
+    "year": 2019,
+    "tags": []
+  },
+  {
+    "title": "Hierarchically-structured large superelastic deformation in ferroelastic-ferroelectrics",
+    "url": "https://doi.org/10.1016/j.actamat.2019.10.018",
+    "year": 2019,
+    "tags": [
+      "In Situ",
+      "Strain"
+    ]
+  },
+  {
+    "title": "Direct imaging of short-range order and its relationship to deformation in Ti$_6$Al",
+    "url": "https://dx.doi.org/10.1126/sciadv.aax2799",
+    "year": 2019,
+    "tags": [
+      "In Situ",
+      "Strain",
+      "Imaging"
+    ]
+  },
+  {
+    "title": "Nanoscale stacking-fault-assisted room temperature plasticity in flash-sintered TiO$_2$",
+    "url": "https://doi.org/10.1126/sciadv.aaw5519",
+    "year": 2019,
+    "tags": [
+      "Crystallography"
+    ]
+  },
+  {
+    "title": "Nanoscale oxygen defect gradients in UO$_{2+x}$ surfaces",
+    "url": "https://doi.org/10.1073/pnas.1905056116",
+    "year": 2019,
+    "tags": [
+      "Strain"
+    ]
+  },
+  {
+    "title": "Simultaneous Identification of Low and High Atomic Number Atoms in Monolayer 2D Materials Using 4D Scanning Transmission Electron Microscopy",
+    "url": "https://doi.org/10.1021/acs.nanolett.9b02717",
+    "year": 2019,
+    "tags": [
+      "2D Materials"
+    ]
+  },
+  {
+    "title": "Formation of two-dimensional transition metal oxide nanosheets with nanoparticles as intermediates",
+    "url": "https://doi.org/10.1038/s41563-019-0415-3",
+    "year": 2019,
+    "tags": [
+      "In Situ",
+      "Materials",
+      "2D Materials",
+      "Nanoparticles"
+    ]
+  },
+  {
+    "title": "Observing crystal nucleation in four dimensions using atomic electron tomography",
+    "url": "https://doi.org/10.1038/s41586-019-1317-x",
+    "year": 2019,
+    "tags": [
+      "Tomography",
+      "In Situ"
+    ]
+  },
+  {
+    "title": "4DSTEM: From scanning nanodiffraction to ptychography and beyond",
+    "url": "https://doi.org/10.1017/S1431927619000497",
+    "year": 2019,
+    "tags": [
+      "4DSTEM",
+      "Ptychography"
+    ]
+  },
+  {
+    "title": "Interplay between Short\u2010and Long\u2010Ranged Forces Leading to the Formation of Ag Nanoparticle Superlattice",
+    "url": "https://doi.org/10.1002/smll.201901966",
+    "year": 2019,
+    "tags": [
+      "In Situ",
+      "Nanoparticles",
+      "Crystallography"
+    ]
+  },
+  {
+    "title": "Dynamic deformability of individual PbSe nanocrystals during superlattice phase transitions",
+    "url": "https://dx.doi.org/10.1126/sciadv.aaw5623",
+    "year": 2019,
+    "tags": [
+      "Nanoparticles",
+      "Crystallography"
+    ]
+  },
+  {
+    "title": "Diffraction imaging of nanocrystalline structures in organic semiconductor molecular thin films",
+    "url": "https://doi.org/10.1038/s41563-019-0387-3",
+    "year": 2019,
+    "tags": [
+      "Nanoparticles",
+      "Crystallography",
+      "Imaging"
+    ]
+  },
+  {
+    "title": "Direct measurement of nanostructural change during in situ deformation of a bulk metallic glass",
+    "url": "https://doi.org/10.1038/s41467-019-10416-5",
+    "year": 2019,
+    "tags": [
+      "In Situ",
+      "Strain"
+    ]
+  },
+  {
+    "title": "Observation of room-temperature polar skyrmions",
+    "url": "https://doi.org/10.1038/s41586-019-1092-8",
+    "year": 2019,
+    "tags": [
+      "Magnetism"
+    ]
+  },
+  {
+    "title": "Atomic electrostatic maps of 1D channels in 2D semiconductors using 4D scanning transmission electron microscopy",
+    "url": "https://doi.org/10.1038/s41467-019-08904-9",
+    "year": 2019,
+    "tags": [
+      "2D Materials"
+    ]
+  },
+  {
+    "title": "Hidden structural and chemical order controls lithium transport in cation-disordered oxides for rechargeable batteries",
+    "url": "https://doi.org/10.1038/s41467-019-08490-w",
+    "year": 2019,
+    "tags": [
+      "Materials"
+    ]
+  },
+  {
+    "title": "Resolving the Morphology of Peptoid Vesicles at the One Nanometer Length-Scale Using Cryogenic Electron Microscopy",
+    "url": "https://doi.org/10.1021/acs.jpcb.8b11752",
+    "year": 2019,
+    "tags": []
+  },
+  {
+    "title": "Nanoscale mosaicity revealed in peptide microcrystals by scanning electron nanodiffraction",
+    "url": "https://doi.org/10.1038/s42003-018-0263-8",
+    "year": 2019,
+    "tags": [
+      "4DSTEM"
+    ]
+  },
+  {
+    "title": "Interpretable and efficient interferometric contrast in scanning transmission electron microscopy with a diffraction grating beamsplitter",
+    "url": "https://doi.org/10.1103/PhysRevApplied.10.061001",
+    "year": 2018,
+    "tags": [
+      "4DSTEM",
+      "Phase Contrast",
+      "Instrumentation",
+      "Imaging"
+    ]
+  },
+  {
+    "title": "Structure retrieval at atomic resolution in the presence of multiple scattering of the electron probe",
+    "url": "https://doi.org/10.1103/PhysRevLett.121.266102",
+    "year": 2018,
+    "tags": [
+      "Simulation",
+      "Instrumentation",
+      "Imaging"
+    ]
+  },
+  {
+    "title": "Segregation-Induced Nanofaceting Transition at an Asymmetric Tilt Grain Boundary in Copper",
+    "url": "https://doi.org/10.1103/PhysRevLett.121.255502",
+    "year": 2018,
+    "tags": [
+      "Crystallography"
+    ]
+  },
+  {
+    "title": "ScienceSearch: Enabling Search through Automatic Metadata Generation",
+    "url": "https://doi.org/10.1109/eScience.2018.00025",
+    "year": 2018,
+    "tags": []
+  },
+  {
+    "title": "Subsampled STEM-ptychography",
+    "url": "https://doi.org/10.1063/1.5040496",
+    "year": 2018,
+    "tags": [
+      "Ptychography"
+    ]
+  },
+  {
+    "title": "Imaging Unstained Synthetic Polymer Crystals and Defects on Atomic Length Scales Using Cryogenic Electron Microscopy",
+    "url": "https://doi.org/10.1021/acs.macromol.8b01508",
+    "year": 2018,
+    "tags": [
+      "Strain",
+      "Materials",
+      "Imaging"
+    ]
+  },
+  {
+    "title": "Dynamics of Nanoscale Dendrite Formation in Solution Growth Revealed Through in Situ Liquid Cell Electron Microscopy",
+    "url": "https://doi.org/10.1021/acs.nanolett.8b02819",
+    "year": 2018,
+    "tags": [
+      "In Situ"
+    ]
+  },
+  {
+    "title": "Probing Light Atoms at Subnanometer Resolution: Realization of Scanning Transmission Electron Microscope Holography",
+    "url": "https://doi.org/10.1021/acs.nanolett.8b03166",
+    "year": 2018,
+    "tags": [
+      "Imaging"
+    ]
+  },
+  {
+    "title": "Effect of composition on the structure of lithium- and manganese-rich transition metal oxides",
+    "url": "https://doi.org/10.1039/C7EE02443F",
+    "year": 2018,
+    "tags": [
+      "Materials"
+    ]
+  },
+  {
+    "title": "Towards bend-contour-free dislocation imaging via diffraction contrast STEM",
+    "url": "https://doi.org/10.1016/j.ultramic.2018.06.001",
+    "year": 2018,
+    "tags": [
+      "Strain",
+      "Imaging"
+    ]
+  },
+  {
+    "title": "Experimental Evidence of Chiral Ferrimagnetism in Amorphous GdCo Films",
+    "url": "https://doi.org/10.1002/adma.201800199",
+    "year": 2018,
+    "tags": [
+      "Magnetism"
+    ]
+  },
+  {
+    "title": "Local nanoscale strain mapping of a metallic glass during in situ testing",
+    "url": "https://doi.org/10.1063/1.5025686",
+    "year": 2018,
+    "tags": [
+      "In Situ",
+      "Strain"
+    ]
+  },
+  {
+    "title": "Multiscale analysis of nanoindentation-induced defect structures in gum metal",
+    "url": "https://doi.org/10.1016/j.actamat.2018.03.048",
+    "year": 2018,
+    "tags": [
+      "Strain",
+      "Nanoparticles"
+    ]
+  },
+  {
+    "title": "Determination of the structural phase and octahedral rotation angle in halide perovskites",
+    "url": "https://doi.org/10.1063/1.5017537",
+    "year": 2018,
+    "tags": [
+      "Materials"
+    ]
+  },
+  {
+    "title": "A streaming multi-GPU implementation of image simulation algorithms for STEM",
+    "url": "https://doi.org/10.1186/s40679-017-0048-z",
+    "year": 2017,
+    "tags": [
+      "Simulation"
+    ]
+  },
+  {
+    "title": "_In situ_ nanobeam electron diffraction strain mapping of planar slip in stainless steel",
+    "url": "https://doi.org/10.1016/j.scriptamat.2017.11.005",
+    "year": 2017,
+    "tags": [
+      "4DSTEM",
+      "In Situ",
+      "Strain",
+      "Materials"
+    ]
+  },
+  {
+    "title": "A fast image simulation algorithm for STEM",
+    "url": "https://dx.doi.org/10.1186/s40679-017-0046-1",
+    "year": 2017,
+    "tags": [
+      "Simulation"
+    ]
+  },
+  {
+    "title": "Formation of Oxygen Radical Sites on MoVNbTeOx by Cooperative Electron Redistribution",
+    "url": "https://dx.doi.org/10.1021/jacs.7b05240",
+    "year": 2017,
+    "tags": [
+      "In Situ"
+    ]
+  },
+  {
+    "title": "Dynamics of Symmetry-Breaking Stacking Boundaries in Bilayer MoS$_2$",
+    "url": "https://dx.doi.org/10.1021/acs.jpcc.7b08398",
+    "year": 2017,
+    "tags": [
+      "In Situ",
+      "2D Materials",
+      "Crystallography"
+    ]
+  },
+  {
+    "title": "Near-concentric Fabry-P\u00e9rot cavity for continuous-wave laser control of electron waves",
+    "url": "https://doi.org/10.1364/OE.25.014453",
+    "year": 2017,
+    "tags": []
+  },
+  {
+    "title": "Low Temperature Solid-State Wetting and Formation of Nanowelds in Silver Nanowires",
+    "url": "https://doi.org/10.1088/1361-6528/aa7eb8",
+    "year": 2017,
+    "tags": [
+      "In Situ",
+      "Nanoparticles"
+    ]
+  },
+  {
+    "title": "The effect of film thickness on Curie temperature distribution and magnetization reversal mechanism for granular L1$_0$ FePt films",
+    "url": "https://doi.org/10.1088/1361-6463/aa7503",
+    "year": 2017,
+    "tags": []
+  },
+  {
+    "title": "Out-of-plane chiral domain wall spin-structures in ultrathin in-plane magnets",
+    "url": "http://dx.doi.org/doi:10.1038/ncomms15302",
+    "year": 2017,
+    "tags": [
+      "Magnetism"
+    ]
+  },
+  {
+    "title": "Multi-pass transmission electron microscopy",
+    "url": "http://dx.doi.org/10.1038/s41598-017-01841-x",
+    "year": 2017,
+    "tags": []
+  },
+  {
+    "title": "Large polarization gradients and temperature-stable responses in compositionally-graded ferroelectrics",
+    "url": "http://dx.doi.org/10.1038/ncomms14961",
+    "year": 2017,
+    "tags": []
+  },
+  {
+    "title": "Streamlined approach to mapping the magnetic induction of skyrmionic materials",
+    "url": "http://dx.doi.org/10.1016/j.ultramic.2017.02.004",
+    "year": 2017,
+    "tags": [
+      "Magnetism"
+    ]
+  },
+  {
+    "title": "Optimizing disk registration algorithms for nanobeam electron diffraction strain mapping",
+    "url": "http://dx.doi.org/10.1016/j.ultramic.2016.12.021",
+    "year": 2017,
+    "tags": [
+      "4DSTEM",
+      "Simulation",
+      "Strain"
+    ]
+  },
+  {
+    "title": "Electron ptychographic phase imaging of light elements in crystalline materials using Wigner distribution deconvolution",
+    "url": "http://dx.doi.org/10.1016/j.ultramic.2017.02.006",
+    "year": 2017,
+    "tags": [
+      "Ptychography",
+      "Imaging"
+    ]
+  },
+  {
+    "title": "Non-spectroscopic composition measurements of SrTiO$_3$-La$_{0.7}$Sr$_{0.3}$MnO$_3$ multilayers using scanning convergent beam electron diffraction",
+    "url": "http://dx.doi.org/10.1063/1.4975932",
+    "year": 2017,
+    "tags": [
+      "4DSTEM",
+      "Spectroscopy"
+    ]
+  },
+  {
+    "title": "Deciphering chemical order/disorder and material properties at the single-atom level",
+    "url": "http://dx.doi.org/10.1038/nature21042",
+    "year": 2017,
+    "tags": []
+  },
+  {
+    "title": "Automatic software correction of residual aberrations in reconstructed HRTEM exit waves of crystalline samples",
+    "url": "http://dx.doi.org/10.1186/s40679-016-0030-1",
+    "year": 2016,
+    "tags": [
+      "Phase Contrast",
+      "Instrumentation",
+      "Imaging"
+    ]
+  },
+  {
+    "title": "Characterization of Ordering in A-Site Deficient Perovskite Ca$_{1-x}$La$_{2x/3}$TiO$_3$ Using STEM/EELS",
+    "url": "http://dx.doi.org/10.1021/acs.inorgchem.6b02087",
+    "year": 2016,
+    "tags": [
+      "Materials",
+      "Spectroscopy",
+      "Crystallography"
+    ]
+  },
+  {
+    "title": "Atomic scale imaging of competing polar states in a Ruddlesden-Popper layered oxide",
+    "url": "https://dx.doi.org/10.1038/ncomms12572",
+    "year": 2016,
+    "tags": [
+      "Materials",
+      "Imaging"
+    ]
+  },
+  {
+    "title": "Enhanced phase contrast transfer using ptychography combined with a pre-specimen phase plate in a scanning transmission electron microscope",
+    "url": "http://dx.doi.org/10.1016/j.ultramic.2016.09.002",
+    "year": 2016,
+    "tags": [
+      "Ptychography",
+      "Phase Contrast",
+      "Imaging"
+    ]
+  },
+  {
+    "title": "Orientation mapping of semicrystalline polymers using scanning electron nanobeam diffraction",
+    "url": "http://dx.doi.org/10.1016/j.micron.2016.05.008",
+    "year": 2016,
+    "tags": [
+      "4DSTEM",
+      "Materials",
+      "Crystallography"
+    ]
+  },
+  {
+    "title": "A Generalized Read-Shockley Model and Large Scale Simulations for the Energy and Structure of Graphene Grain Boundaries",
+    "url": "http://dx.doi.org/10.1039/C6RA07584C",
+    "year": 2016,
+    "tags": [
+      "Simulation",
+      "2D Materials",
+      "Crystallography"
+    ]
+  },
+  {
+    "title": "Demonstration of hexagonal phase silicon carbide nanowire arrays with vertical alignment",
+    "url": "https://doi.org/10.1021/acs.cgd.6b00203",
+    "year": 2016,
+    "tags": [
+      "Nanoparticles"
+    ]
+  },
+  {
+    "title": "Nanomaterial datasets to advance tomography in scanning transmission electron microscopy",
+    "url": "https://doi.org/10.1038/sdata.2016.41",
+    "year": 2016,
+    "tags": [
+      "Tomography"
+    ]
+  },
+  {
+    "title": "Step Coalescence by Collective Motion at an Incommensurate Grain Boundary",
+    "url": "http://dx.doi.org/10.1103/PhysRevLett.116.106102",
+    "year": 2016,
+    "tags": [
+      "In Situ",
+      "Crystallography"
+    ]
+  },
+  {
+    "title": "Efficient linear phase contrast in STEM with MIDI",
+    "url": "http://dx.doi.org/10.1038/ncomms10719",
+    "year": 2016,
+    "tags": [
+      "Phase Contrast",
+      "Imaging"
+    ]
+  },
+  {
+    "title": "Correcting nonlinear drift distortion of SPM and STEM from image pairs with orthogonal scan directions",
+    "url": "http://dx.doi.org/doi:10.1016/j.ultramic.2015.12.002",
+    "year": 2016,
+    "tags": [
+      "Strain"
+    ]
+  },
+  {
+    "title": "Identifying different stacking sequences in few-layer {CVD}-grown {MoS}$_2$ by low-energy atomic-resolution scanning transmission electron microscopy",
+    "url": "http://dx.doi.org/10.1103/PhysRevB.93.041420",
+    "year": 2016,
+    "tags": [
+      "2D Materials",
+      "Crystallography",
+      "Imaging"
+    ]
+  },
+  {
+    "title": "Large-scale experimental and theoretical study of graphene grain boundary structures",
+    "url": "http://dx.doi.org/10.1103/PhysRevB.92.205402",
+    "year": 2015,
+    "tags": [
+      "2D Materials",
+      "Crystallography"
+    ]
+  },
+  {
+    "title": "Three-dimensional positions of individual atoms in materials revealed by electron tomography",
+    "url": "https://dx.doi.org/10.1038/nmat4426",
+    "year": 2015,
+    "tags": [
+      "Tomography"
+    ]
+  },
+  {
+    "title": "Unravelling structural ambiguities in lithium-and manganese-rich transition metal oxides",
+    "url": "http://dx.doi.org/10.1038/ncomms9711",
+    "year": 2015,
+    "tags": [
+      "Materials"
+    ]
+  },
+  {
+    "title": "Strain mapping at nanometer resolution using advanced nano-beam electron diffraction",
+    "url": "http://dx.doi.org/10.1063/1.4922994",
+    "year": 2015,
+    "tags": [
+      "Strain",
+      "Imaging"
+    ]
+  },
+  {
+    "title": "Surface determination through atomically resolved secondary-electron imaging",
+    "url": "http://dx.doi.org/10.1038/ncomms8358",
+    "year": 2015,
+    "tags": [
+      "Imaging"
+    ]
+  },
+  {
+    "title": "Atomic defects in two dimensional materials",
+    "url": "http://dx.doi.org/10.1002/adma.201500231",
+    "year": 2015,
+    "tags": [
+      "Strain"
+    ]
+  },
+  {
+    "title": "Analysis of grain boundary dynamics using event detection and cumulative averaging",
+    "url": "http://dx.doi.org/10.1016/j.ultramic.2014.11.008",
+    "year": 2015,
+    "tags": [
+      "In Situ",
+      "Crystallography"
+    ]
+  },
+  {
+    "title": "Conserved atomic bonding sequences and strain organization of graphene grain boundaries",
+    "url": "http://dx.doi.org/10.1021/nl503450r",
+    "year": 2014,
+    "tags": [
+      "Strain",
+      "2D Materials",
+      "Crystallography"
+    ]
+  },
+  {
+    "title": "HAADF imaging of the omega ($\\omega$) phase in a gum metal-related alloy",
+    "url": "http://dx.doi.org/10.1080/14786435.2014.937839",
+    "year": 2014,
+    "tags": [
+      "Materials",
+      "Imaging"
+    ]
+  },
+  {
+    "title": "Direct Observation of a long-lived single-atom catalyst chiseling atomic structures in graphene",
+    "url": "http://dx.doi.org/10.1021/nl403327u",
+    "year": 2014,
+    "tags": [
+      "Materials",
+      "2D Materials"
+    ]
+  },
+  {
+    "title": "Measurement of the intrinsic strength of crystalline and polycrystalline graphene",
+    "url": "http://dx.doi.org/10.1038/ncomms3811",
+    "year": 2013,
+    "tags": [
+      "2D Materials"
+    ]
+  },
+  {
+    "title": "Momentum-resolved electronic structure at a buried interface from soft X-ray standing-wave angle-resolved photoemission",
+    "url": "http://dx.doi.org/10.1209/0295-5075/104/17004",
+    "year": 2013,
+    "tags": [
+      "Spectroscopy",
+      "Crystallography"
+    ]
+  },
+  {
+    "title": "Interface lattice displacement measurement to 1pm by geometric phase analysis on aberration-corrected HAADF STEM images",
+    "url": "http://dx.doi.org/10.1016/j.actamat.2013.06.006",
+    "year": 2013,
+    "tags": [
+      "Crystallography",
+      "Instrumentation",
+      "Imaging"
+    ]
+  },
+  {
+    "title": "Atomic structure characterization of an incommensurate grain boundary",
+    "url": "http://dx.doi.org/10.1016/j.actamat.2013.04.028",
+    "year": 2013,
+    "tags": [
+      "Crystallography"
+    ]
+  },
+  {
+    "title": "Structure and phase transitions at the interface between $\\alpha$-Al$_2$O$_3$ and Pt",
+    "url": "doi.org/10.1088/0953-8984/25/23/232202",
+    "year": 2013,
+    "tags": [
+      "Crystallography"
+    ]
+  },
+  {
+    "title": "Tensile behavior of Al$_{1-x}$Mo$_x$ crystalline and amorphous thin films",
+    "url": "http://dx.doi.org/10.1016/j.actamat.2012.11.020",
+    "year": 2013,
+    "tags": []
+  },
+  {
+    "title": "Direct atomic imaging of antiphase boundaries and orthotwins in orientation-patterned GaAs",
+    "url": "http://dx.doi.org/10.1063/1.4793651",
+    "year": 2013,
+    "tags": [
+      "Strain",
+      "Imaging"
+    ]
+  },
+  {
+    "title": "Mechanism and dynamics of shrinking island grains in mazed bicrystal thin films of Au",
+    "url": "http://dx.doi.org/10.1016/j.actamat.2012.09.012",
+    "year": 2012,
+    "tags": [
+      "In Situ"
+    ]
+  },
+  {
+    "title": "Guidelines for quantitative reconstruction of complex exit waves in HRTEM",
+    "url": "http://dx.doi.org/10.1016/j.ultramic.2011.10.016",
+    "year": 2012,
+    "tags": [
+      "Phase Contrast",
+      "Imaging"
+    ]
+  },
+  {
+    "title": "Highly monodisperse core--shell particles created by solid-state reactions",
+    "url": "http://dx.doi.org/doi:10.1038/nmat3077",
+    "year": 2011,
+    "tags": []
+  },
+  {
+    "title": "A systematic neutron reflectometry study on hydrogen absorption in thin Mg$_{1-x}$Al$_x$ alloy films",
+    "url": "http://dx.doi.org/10.1139/P09-085",
+    "year": 2010,
+    "tags": [
+      "Materials"
+    ]
+  },
+  {
+    "title": "The role of self-shadowing on growth and scaling laws of faceted polycrystalline thin films",
+    "url": "http://dx.doi.org/10.1016/j.actamat.2010.05.051",
+    "year": 2010,
+    "tags": [
+      "In Situ",
+      "Crystallography"
+    ]
+  },
+  {
+    "title": "Solid-state dewetting mechanisms of ultrathin Ni films revealed by combining in-situ time-resolved differential reflectometry monitoring and atomic force microscopy",
+    "url": "http://dx.doi.org/10.1103/PhysRevB.82.085407",
+    "year": 2010,
+    "tags": [
+      "In Situ"
+    ]
+  },
+  {
+    "title": "Hydrogen storage in binary and ternary Mg-based alloys: A comprehensive experimental study",
+    "url": "http://dx.doi.org/10.1016/j.ijhydene.2009.12.013",
+    "year": 2010,
+    "tags": [
+      "Materials"
+    ]
+  },
+  {
+    "title": "Analytic description of competitive grain growth",
+    "url": "http://dx.doi.org/10.1103/PhysRevE.81.011601",
+    "year": 2010,
+    "tags": [
+      "In Situ"
+    ]
+  },
+  {
+    "title": "All-metal AFM probes fabricated from microstructurally tailored Cu-Hf thin films",
+    "url": "http://dx.doi.org/10.1088/0957-4484/20/34/345703",
+    "year": 2009,
+    "tags": [
+      "Instrumentation"
+    ]
+  },
+  {
+    "title": "Nanocrystalline-amorphous transitions in Al-Mo thin films: Bulk and surface evolution",
+    "url": "http://dx.doi.org/10.1016/j.actamat.2009.05.029",
+    "year": 2009,
+    "tags": [
+      "Nanoparticles"
+    ]
+  },
+  {
+    "title": "Low temperature hydrogen desorption in MgAl thin films achieved by using a nanoscale Ta/Pd bilayer catalyst",
+    "url": "http://dx.doi.org/10.1063/1.3154550",
+    "year": 2009,
+    "tags": [
+      "Materials",
+      "2D Materials"
+    ]
+  },
+  {
+    "title": "Simulations of faceted polycrystalline thin films: asymptotic analysis",
+    "url": "http://dx.doi.org/10.1016/j.actamat.2008.11.014",
+    "year": 2009,
+    "tags": [
+      "Simulation",
+      "Crystallography"
+    ]
+  },
+  {
+    "title": "Structural changes of thin MgAl films during hydrogen desorption",
+    "url": "http://dx.doi.org/10.1016/j.nima.2008.11.113",
+    "year": 2009,
+    "tags": []
+  },
+  {
+    "title": "Tailoring the microstructure and surface morphology of metal thin films for nanoelectromechanical systems applications",
+    "url": "http://dx.doi.org/10.1088/0957-4484/19/12/125705",
+    "year": 2008,
+    "tags": []
+  },
+  {
+    "title": "Resonance properties and microstructure of ultracompliant metallic nanoelectromechanical systems resonators synthesized from Al-32 at.% Mo amorphous-nanocrystalline metallic composites",
+    "url": "http://dx.doi.org/10.1063/1.2841849",
+    "year": 2008,
+    "tags": [
+      "Nanoparticles",
+      "Instrumentation"
+    ]
+  },
+  {
+    "title": "Neutron reflectometry study of hydrogen desorption in destabilized MgAl alloy thin films",
+    "url": "http://dx.doi.org/10.1063/1.2899936",
+    "year": 2008,
+    "tags": [
+      "Materials"
+    ]
+  },
+  {
+    "title": "Transmission electron microscopy and nanoindentation study of the weld zone microstructure of diode-laser-joined automotive transformation-induced plasticity steel",
+    "url": "http://dx.doi.org/10.1007/s11661-007-9389-x",
+    "year": 2008,
+    "tags": [
+      "In Situ",
+      "Materials",
+      "Nanoparticles"
+    ]
+  },
+  {
+    "title": "Synthesis and characterization of Au-Ta nanocomposites for nanomechanical cantilever devices",
+    "url": "http://dx.doi.org/10.1088/0957-4484/18/35/355303",
+    "year": 2007,
+    "tags": [
+      "Instrumentation"
+    ]
+  },
+  {
+    "title": "Metallic NEMS components fabricated from nanocomposite Al-Mo films",
+    "url": "http://dx.doi.org/10.1088/0957-4484/17/12/042",
+    "year": 2006,
+    "tags": [
+      "Instrumentation"
+    ]
+  }
+]
