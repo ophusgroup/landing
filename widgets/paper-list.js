@@ -146,75 +146,17 @@ function render({ model, el }) {
       font-style: italic;
     }
 
-    /* Dark mode */
-    @media (prefers-color-scheme: dark) {
-      .${id}-search {
-        background: #1f2937;
-        color: #e5e7eb;
-        border-color: #4b5563;
-      }
-      .${id}-search:focus {
-        border-color: ${accentColorDark};
-        box-shadow: 0 0 0 2px ${accentColorDark}33;
-      }
-      .${id}-tag {
-        background: #1f2937;
-        color: #d1d5db;
-        border-color: #4b5563;
-      }
-      .${id}-tag:hover {
-        border-color: ${accentColorDark};
-        color: ${accentColorDark};
-      }
-      .${id}-tag.active {
-        background: ${accentColorDark};
-        color: #111;
-        border-color: ${accentColorDark};
-      }
-      .${id}-year-btn {
-        background: #1f2937;
-        color: #9ca3af;
-        border-color: #4b5563;
-      }
-      .${id}-year-btn:hover {
-        border-color: ${accentColorDark};
-        color: ${accentColorDark};
-      }
-      .${id}-year-btn.active {
-        background: ${accentColorDark};
-        color: #111;
-        border-color: ${accentColorDark};
-      }
-      .${id}-year-heading {
-        color: #e5e7eb;
-        border-bottom-color: ${accentColorDark};
-      }
-      .${id}-paper a {
-        color: ${accentColorDark};
-      }
-      .${id}-paper-meta {
-        color: #9ca3af;
-      }
-      .${id}-clear {
-        color: ${accentColorDark};
-      }
-      .${id}-stats {
-        color: #9ca3af;
-      }
-      .${id}-paper-tag {
-        background: #374151;
-        color: #9ca3af;
-      }
-      .${id}-loading {
-        color: #9ca3af;
-      }
-    }
-    /* Class-based dark mode (Curvenote) */
+    /* Dark mode (class-based for Curvenote) */
     [data-theme="dark"] .${id}-search,
     .dark .${id}-search {
       background: #1f2937;
       color: #e5e7eb;
       border-color: #4b5563;
+    }
+    [data-theme="dark"] .${id}-search:focus,
+    .dark .${id}-search:focus {
+      border-color: ${accentColorDark};
+      box-shadow: 0 0 0 2px ${accentColorDark}33;
     }
     [data-theme="dark"] .${id}-tag,
     .dark .${id}-tag {
@@ -274,6 +216,10 @@ function render({ model, el }) {
     [data-theme="dark"] .${id}-paper-tag,
     .dark .${id}-paper-tag {
       background: #374151;
+      color: #9ca3af;
+    }
+    [data-theme="dark"] .${id}-loading,
+    .dark .${id}-loading {
       color: #9ca3af;
     }
   `;

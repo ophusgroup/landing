@@ -100,23 +100,7 @@ function render({ model, el }) {
       text-decoration: underline;
     }
 
-    /* Dark mode */
-    @media (prefers-color-scheme: dark) {
-      .${id}-popup {
-        background: #1f2937;
-        border-color: #4b5563;
-        box-shadow: 0 8px 24px rgba(0,0,0,0.4);
-      }
-      .${id}-titles {
-        color: #d1d5db;
-        border-bottom-color: #4b5563;
-      }
-      .${id}-pronouns { color: #9ca3af; }
-      .${id}-links a { color: #E8A0A0; }
-      .${id}-bio { color: #d1d5db; }
-      .${id}-papers { border-top-color: #4b5563; }
-      .${id}-papers a { color: #E8A0A0; }
-    }
+    /* Dark mode (class-based for Curvenote) */
     [data-theme="dark"] .${id}-popup,
     .dark .${id}-popup {
       background: #1f2937;
