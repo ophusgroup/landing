@@ -9,7 +9,7 @@ function render({ model, el }) {
   const titles = model.get("titles") || [];
   const links = model.get("links") || [];
   const papers = model.get("papers") || [];
-  const popupWidth = model.get("popup_width") || 380;
+  const popupWidth = model.get("popup_width") || 420;
 
   const id = "pc-" + Math.random().toString(36).slice(2, 8);
 
@@ -38,7 +38,7 @@ function render({ model, el }) {
       position: absolute;
       left: 0;
       width: ${popupWidth}px;
-      max-height: 80vh;
+      max-height: 90vh;
       overflow-y: auto;
       background: #fff;
       border: 1px solid #d1d5db;
