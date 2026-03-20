@@ -18,7 +18,12 @@ title: People
     {"label": "ORCID", "url": "https://orcid.org/0000-0003-2348-8558"},
     {"label": "Scholar", "url": "https://scholar.google.com/citations?hl=en&user=h5MPYJAAAAAJ&view_op=list_works&sortby=pubdate"}
   ],
-  "bio": "Associate Professor, Department of Materials Science and Engineering, Stanford University.\nCenter Fellow, Precourt Institute for Energy, Stanford University.\nFaculty Scientist, SLAC National Accelerator Laboratory.\n\nColin previously worked as a Staff Scientist at the National Center for Electron Microscopy (NCEM), part of the Molecular Foundry, at Lawrence Berkeley Lab. He was awarded a US DOE Early Career award in 2018, and the Burton Medal from the MSA in 2022. His research focuses on experimental methods, reconstruction algorithms, and software codes for simulation, analysis, and instrument design of scanning transmission electron microscopy (STEM). He advocates for open science and develops open-source scientific software such as quantEM, py4DSTEM, and Prismatic. He is also the editor-in-chief for the interactive web-based scientific journal Elemental Microscopy."
+  "titles": [
+    "Associate Professor, Department of Materials Science and Engineering, Stanford University",
+    "Center Fellow, Precourt Institute for Energy, Stanford University",
+    "Faculty Scientist, SLAC National Accelerator Laboratory"
+  ],
+  "bio": "Colin previously worked as a Staff Scientist at the National Center for Electron Microscopy (NCEM), part of the Molecular Foundry, at Lawrence Berkeley Lab. He was awarded a US DOE Early Career award in 2018, and the Burton Medal from the MSA in 2022. His research focuses on experimental methods, reconstruction algorithms, and software codes for simulation, analysis, and instrument design of scanning transmission electron microscopy (STEM). He advocates for open science and develops open-source scientific software such as quantEM, py4DSTEM, and Prismatic. He is also the editor-in-chief for the interactive web-based scientific journal Elemental Microscopy."
 }
 :::
 
