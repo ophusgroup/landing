@@ -2,8 +2,6 @@
 title: Research Projects
 ---
 
-[List of publications](/papers)
-
 ## 4DSTEM
 
 ### Experiments

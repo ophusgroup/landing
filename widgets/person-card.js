@@ -1,4 +1,4 @@
-// person-card.js — anywidget ESM module for interactive person cards
+// person-card.js — ESM module for interactive person cards (MyST any:bundle)
 // Hover on desktop, tap on mobile to show info popup below name
 
 function render({ model, el }) {
@@ -99,6 +99,45 @@ function render({ model, el }) {
     .${id}-papers a:hover {
       text-decoration: underline;
     }
+
+    /* Dark mode */
+    @media (prefers-color-scheme: dark) {
+      .${id}-popup {
+        background: #1f2937;
+        border-color: #4b5563;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+      }
+      .${id}-titles {
+        color: #d1d5db;
+        border-bottom-color: #4b5563;
+      }
+      .${id}-pronouns { color: #9ca3af; }
+      .${id}-links a { color: #E8A0A0; }
+      .${id}-bio { color: #d1d5db; }
+      .${id}-papers { border-top-color: #4b5563; }
+      .${id}-papers a { color: #E8A0A0; }
+    }
+    [data-theme="dark"] .${id}-popup,
+    .dark .${id}-popup {
+      background: #1f2937;
+      border-color: #4b5563;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+    }
+    [data-theme="dark"] .${id}-titles,
+    .dark .${id}-titles {
+      color: #d1d5db;
+      border-bottom-color: #4b5563;
+    }
+    [data-theme="dark"] .${id}-pronouns,
+    .dark .${id}-pronouns { color: #9ca3af; }
+    [data-theme="dark"] .${id}-links a,
+    .dark .${id}-links a { color: #E8A0A0; }
+    [data-theme="dark"] .${id}-bio,
+    .dark .${id}-bio { color: #d1d5db; }
+    [data-theme="dark"] .${id}-papers,
+    .dark .${id}-papers { border-top-color: #4b5563; }
+    [data-theme="dark"] .${id}-papers a,
+    .dark .${id}-papers a { color: #E8A0A0; }
   `;
   el.appendChild(style);
 
@@ -133,7 +172,6 @@ function render({ model, el }) {
   const nameEl = card.querySelector(`.${id}-name`);
 
   function positionPopup() {
-    // Place popup below the name so name remains visible
     popup.style.top = (nameEl.offsetTop + nameEl.offsetHeight + 4) + "px";
   }
 

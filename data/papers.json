@@ -6,8 +6,28 @@
     "tags": [
       "Strain",
       "2D Materials",
-      "Crystallography"
-    ]
+      "Crystallography",
+      "Magnetism"
+    ],
+    "authors": [
+      "Hem Prasad Bhusal",
+      "Koichi Tanaka",
+      "Steven Zeltmann",
+      "Chris Hanley",
+      "Colin Ophus",
+      "Karen C. Bustillo",
+      "Stephanie M. Ribet",
+      "Carlos A. Gonzalez",
+      "Belinda Zhen",
+      "Jim Ciston",
+      "Zhehao Ge",
+      "Jason C. Lashley",
+      "Alex K. Zettl",
+      "Jairo Velasco Jr",
+      "Wei Chen",
+      "Aiming Yan"
+    ],
+    "journal": "ACS Nano"
   },
   {
     "title": "Comparing Multislice Projections of MD Simulations with CryoEM Exposes Structural Prediction Errors",
@@ -15,7 +35,17 @@
     "year": 2026,
     "tags": [
       "Simulation"
-    ]
+    ],
+    "authors": [
+      "Arshad Mohammed",
+      "James Lincoff",
+      "Andrew Natale",
+      "Colin Ophus",
+      "Michael Grabe",
+      "Adam Frost",
+      "Frank R. Moss"
+    ],
+    "journal": "Biophysical Journal"
   },
   {
     "title": "Strain mapping of three-dimensionally structured two-dimensional materials",
@@ -25,16 +55,59 @@
       "Tomography",
       "Strain",
       "2D Materials"
-    ]
+    ],
+    "authors": [
+      "Adan Mireles",
+      "Jeongwon Park",
+      "Suk Hyun Sung",
+      "Chuqiao Shi",
+      "Bongki Shin",
+      "Jun Lou",
+      "Colin Ophus",
+      "Robert Hovden",
+      "Kibum Kang",
+      "Yimo Han"
+    ],
+    "journal": "Science Advances"
   },
   {
-    "title": "Atomic-Scale Moir\u00e9 and Electronic Structure Analysis of Twisted Epitaxial MoS$_2$--Au--MoS$_2$ Heterostructures",
+    "title": "Atomic-Scale Moiré and Electronic Structure Analysis of Twisted Epitaxial MoS₂–Au–MoS₂ Heterostructures",
     "url": "https://doi.org/10.1021/acs.nanolett.5c04205",
     "year": 2026,
     "tags": [
       "2D Materials",
       "Spectroscopy"
-    ]
+    ],
+    "authors": [
+      "Yi Cui",
+      "Kun Xu",
+      "Peiwen Ren",
+      "Lin Yuan",
+      "Pawel Czaja",
+      "Andrew Barnum",
+      "Prasanna Sarkar",
+      "Aaron Altman",
+      "Karen Bustillo",
+      "Sudipta Kundu",
+      "Akash Ramdas",
+      "Xueji Wang",
+      "Gang Wan",
+      "Yu Wang",
+      "Jiayue Wang",
+      "Chengyu Song",
+      "Cedric Lim",
+      "Qi Zheng",
+      "Helen Yao",
+      "Tony Heinz",
+      "Harold Y. Hwang",
+      "Arun Majumdar",
+      "Jennifer A. Dionne",
+      "Colin Ophus",
+      "Felipe H. da Jornada",
+      "Robert Sinclair",
+      "Yi Cui"
+    ],
+    "journal": "Nano Letters"
   },
   {
     "title": "Locating the atoms at the hard-soft interface of gold nanoparticles",
@@ -43,31 +116,85 @@
     "tags": [
       "Nanoparticles",
       "Crystallography"
-    ]
+    ],
+    "authors": [
+      "Weilun Li",
+      "Bryan D. Esser",
+      "Wenming Tong",
+      "Zifei Chen",
+      "Zhi Tong Liew",
+      "Georgios Varnavides",
+      "Anchal Yadav",
+      "Colin Ophus",
+      "Paul Mulvaney",
+      "Changlin Zheng",
+      "Scott D. Findlay",
+      "Timothy Petersen",
+      "Alison M. Funston",
+      "Joanne Etheridge"
+    ],
+    "journal": "Nature Communications"
   },
   {
-    "title": "Spatial correlations of charge density wave order across the transition in 2H--NbSe$_2$",
+    "title": "Spatial correlations of charge density wave order across the transition in 2H–NbSe₂",
     "url": "https://doi.org/10.1103/776d-dnmf",
     "year": 2026,
-    "tags": []
+    "tags": [],
+    "authors": [
+      "Seokjo Hong",
+      "Jaewhan Oh",
+      "Jemin Park",
+      "Woohyun Cho",
+      "Soyoung Lee",
+      "Colin Ophus",
+      "Yeongkwan Kim",
+      "Heejun Yang",
+      "SungBin Lee",
+      "Yongsoo Yang"
+    ],
+    "journal": "Physical Review Letters"
   },
   {
     "title": "Accelerating electron diffraction analysis using graph neural networks and attention mechanisms",
     "url": "https://doi.org/10.1038/s41524-025-01927-5",
     "year": 2026,
     "tags": [
-      "Machine Learning"
-    ]
+      "Machine Learning",
+      "Diffraction"
+    ],
+    "authors": [
+      "Anvesh Nathani",
+      "Arthur RC McCray",
+      "Yingtao Liu",
+      "Hanping Ding",
+      "Pejman Kazempoor",
+      "Shuozhi Xu",
+      "Colin Ophus",
+      "Iman Ghamarian"
+    ],
+    "journal": "npj Computational Materials"
   },
   {
-    "title": "PhaseT3M: 3D imaging at 1.6 \u00c5 resolution via electron cryo-tomography with nonlinear phase retrieval",
+    "title": "PhaseT3M: 3D imaging at 1.6 Å resolution via electron cryo-tomography with nonlinear phase retrieval",
     "url": "https://doi.org/10.1038/s41467-025-67303-5",
     "year": 2026,
     "tags": [
       "Ptychography",
       "Tomography",
-      "Imaging"
-    ]
+      "Imaging",
+      "Phase Contrast"
+    ],
+    "authors": [
+      "Juhyeok Lee",
+      "Samuel W. Song",
+      "Min Gee Cho",
+      "Georgios Varnavides",
+      "Stephanie M. Ribet",
+      "Colin Ophus",
+      "Mary C. Scott",
+      "Michael L. Whittaker"
+    ],
+    "journal": "Nature Communications"
   },
   {
     "title": "Fabrication and characterization of boron-terminated tetravacancies in monolayer hBN using STEM, EELS and electron ptychography",
@@ -77,38 +204,123 @@
       "Ptychography",
       "2D Materials",
       "Spectroscopy",
-      "Instrumentation"
-    ]
+      "Instrumentation",
+      "EELS"
+    ],
+    "authors": [
+      "Dana O. Byrne",
+      "Stephanie M. Ribet",
+      "Demie Kepaptsoglou",
+      "Quentin M. Ramasse",
+      "Colin Ophus",
+      "Frances I. Allen"
+    ],
+    "journal": "Ultramicroscopy"
   },
   {
     "title": "A large interlaboratory electron diffraction study of monolayer graphene",
     "url": "https://doi.org/10.1088/2053-1583/ae2ca1",
     "year": 2025,
     "tags": [
-      "2D Materials"
-    ]
+      "2D Materials",
+      "Diffraction"
+    ],
+    "authors": [
+      "Evan Tillotson",
+      "William Thornley",
+      "William Talbott",
+      "Alexander S Eggeman",
+      "Daria Kriuchkova",
+      "Sam Sullivan-Allsop",
+      "Matt Smith",
+      "Xuzhao Liu",
+      "Ashley Slattery",
+      "Pei Lay Yap",
+      "Dusan Losic",
+      "Zhun Xu",
+      "Huan Wang",
+      "Jim Ciston",
+      "Alexander Rakowski",
+      "Stephanie M Ribet",
+      "Benjamin H Savitzky",
+      "Manfred E Schuster",
+      "Christopher S Allen",
+      "Danielle Douglas-Henry",
+      "Valeria Nicolosi",
+      "Andrew Herzing",
+      "Jacques O’Connell",
+      "Ezra J Olivier",
+      "Jan Neethling",
+      "Yi-Chao Zou",
+      "Ercin Duran",
+      "Rongsheng Cai",
+      "Duc-The Ngo",
+      "Roman Gorbachev",
+      "Jonas Haas",
+      "Michael Schlegel",
+      "Jannik Meyer",
+      "Alba Centeno",
+      "Amaia Pesquera",
+      "Amaia Zurutuza",
+      "Sungsu Kang",
+      "Jungwon Park",
+      "Ivan Erofeev",
+      "Utkur Mirsaidov",
+      "Colin Ophus",
+      "Christian Rentenberger",
+      "Thomas Waitz",
+      "Jani Kotakoski",
+      "Abhijit Roy",
+      "Raul Arenal",
+      "Andrew J Pollard",
+      "Sarah J Haigh"
+    ],
+    "journal": "2D Materials"
   },
   {
     "title": "Quantitative structure determination from experimental four-dimensional scanning transmission electron microscopy via the scattering matrix",
     "url": "https://doi.org/10.1093/mam/ozaf119",
     "year": 2025,
     "tags": [
-      "Simulation"
-    ]
+      "Simulation",
+      "4DSTEM"
+    ],
+    "authors": [
+      "Emmanuel W C Terzoudis-Lumsden",
+      "Alireza Sadri",
+      "Matthew Weyland",
+      "Laure Bourgeois",
+      "Stephanie M Ribet",
+      "Georgios Varnavides",
+      "Colin Ophus",
+      "Timothy C Petersen",
+      "Scott D Findlay"
+    ],
+    "journal": "Microscopy and Microanalysis"
   },
   {
     "title": "Multi-angle precession electron diffraction (MAPED): A versatile approach to 4D-STEM precession",
     "url": "https://doi.org/10.1093/mam/ozaf103",
     "year": 2025,
     "tags": [
-      "4DSTEM"
-    ]
+      "4DSTEM",
+      "Diffraction"
+    ],
+    "authors": [
+      "Stephanie M Ribet",
+      "Rohan Dhall",
+      "Colin Ophus",
+      "Karen C Bustillo"
+    ],
+    "journal": "Microscopy and Microanalysis"
   },
   {
     "title": "Neutral but Impactful: Gallium Cluster-Induced Nanopores from Beam-Blanked Gallium Ion Sources",
     "url": "https://doi.org/10.1093/mam/ozaf059",
     "year": 2025,
-    "tags": []
+    "tags": [],
+    "authors": [],
+    "journal": ""
   },
   {
     "title": "AnyAtom: domain-randomized atomic priors for electron tomography",
@@ -116,7 +328,15 @@
     "year": 2025,
     "tags": [
       "Tomography"
-    ]
+    ],
+    "authors": [
+      "Krishna Mani",
+      "Nalini Singh",
+      "Tiffany Chien",
+      "Colin Ophus",
+      "Laura Waller"
+    ],
+    "journal": "Optica Imaging Congress 2025 (3D, DH, COSI, IS, pcAOP,RadIT)"
   },
   {
     "title": "Kinetically Controlled Seed-Mediated Synthesis of Colloidal Copper Nanotetrahedra with Intricate Internal Structure",
@@ -124,7 +344,26 @@
     "year": 2025,
     "tags": [
       "Nanoparticles"
-    ]
+    ],
+    "authors": [
+      "Bo Dai",
+      "Zichuang Li",
+      "Wenqian Li",
+      "Jiang Li",
+      "Xiaojun Lu",
+      "Kailong Qian",
+      "Ruoqian Jiang",
+      "Ying Zou",
+      "Yangfan Lu",
+      "Qing Zhang",
+      "Yanpeng Qi",
+      "Miao Xu",
+      "Feng Ryan Wang",
+      "Hideo Hosono",
+      "Jie-Sheng Chen",
+      "Tian-Nan Ye"
+    ],
+    "journal": "Journal of the American Chemical Society"
   },
   {
     "title": "Design Principles in Engineering of Multigrain Nanocatalysts via Multiscale Electronic Structure Characterization",
@@ -133,8 +372,25 @@
     "tags": [
       "Materials",
       "Nanoparticles",
-      "Spectroscopy"
-    ]
+      "Spectroscopy",
+      "Catalysis"
+    ],
+    "authors": [
+      "Min Gee Cho",
+      "Colin Ophus",
+      "Jung-Hoon Lee",
+      "Inchul Park",
+      "Dong Young Chung",
+      "Jeong Hyun Kim",
+      "Dokyoon Kim",
+      "Yung-Eun Sung",
+      "Kisuk Kang",
+      "Mary C. Scott",
+      "A. Paul Alivisatos",
+      "Taeghwan Hyeon",
+      "Myoung Hwan Oh"
+    ],
+    "journal": "Chemistry of Materials"
   },
   {
     "title": "3D strain field reconstruction by inversion of dynamical scattering",
@@ -143,16 +399,34 @@
     "tags": [
       "Tomography",
       "Strain"
-    ]
+    ],
+    "authors": [
+      "Laura Niermann",
+      "Tore Niermann",
+      "Chengyu Song",
+      "Colin Ophus"
+    ],
+    "journal": "Applied Physics Letters"
   },
   {
-    "title": "Atomic-Scale Mechanisms of Nucleation and Stabilization in CuCrO$_2$ and CuFeO$_2$ Delafossite Thin Films on Al$_2$O$_3$",
+    "title": "Atomic-Scale Mechanisms of Nucleation and Stabilization in CuCrO₂ and CuFeO₂ Delafossite Thin Films on Al₂O₃",
     "url": "https://doi.org/10.1002/admi.202500218",
     "year": 2025,
     "tags": [
       "In Situ",
       "Materials"
-    ]
+    ],
+    "authors": [
+      "Anna Scheid",
+      "Qi Song",
+      "Stephanie Ribet",
+      "Colin Ophus",
+      "Y. Eren Suyolcu",
+      "Darrell G. Schlom",
+      "Tobias Heil",
+      "Peter A. van Aken"
+    ],
+    "journal": "Advanced Materials Interfaces"
   },
   {
     "title": "Atomic-scale 3D structural dynamics and functional degradation of Pt alloy nanocatalysts during the oxygen reduction reaction",
@@ -160,17 +434,42 @@
     "year": 2025,
     "tags": [
       "In Situ",
-      "Materials"
-    ]
+      "Materials",
+      "Catalysis"
+    ],
+    "authors": [
+      "Chaehwa Jeong",
+      "Juhyeok Lee",
+      "Hyesung Jo",
+      "KwangHo Lee",
+      "SangJae Lee",
+      "Colin Ophus",
+      "Peter Ercius",
+      "EunAe Cho",
+      "Yongsoo Yang"
+    ],
+    "journal": "Nature Communications"
   },
   {
-    "title": "BEACON---automated aberration correction for scanning transmission electron microscopy using Bayesian optimization",
+    "title": "BEACON—automated aberration correction for scanning transmission electron microscopy using Bayesian optimization",
     "url": "https://doi.org/10.1038/s41524-025-01766-4",
     "year": 2025,
     "tags": [
       "Machine Learning",
       "Instrumentation"
-    ]
+    ],
+    "authors": [
+      "Alexander J. Pattison",
+      "Stephanie M. Ribet",
+      "Marcus M. Noack",
+      "Georgios Varnavides",
+      "Kunwoo Park",
+      "Earl J. Kirkland",
+      "Jungwon Park",
+      "Colin Ophus",
+      "Peter Ercius"
+    ],
+    "journal": "npj Computational Materials"
   },
   {
     "title": "In Situ 4D-STEM Imaging of the Orientation of Lamellar Clusters in Polymer Crystallization",
@@ -181,25 +480,67 @@
       "In Situ",
       "Materials",
       "Imaging"
-    ]
+    ],
+    "authors": [
+      "Min Chen",
+      "Karen C. Bustillo",
+      "Yen Jea Lee",
+      "Colin Ophus",
+      "Jim Ciston",
+      "Brooks A. Abel",
+      "Xi Jiang",
+      "Nitash P. Balsara",
+      "Andrew M. Minor"
+    ],
+    "journal": "Macromolecular Rapid Communications"
   },
   {
-    "title": "Mapping strain and structural heterogeneities around bubbles in amorphous ionically conductive Bi$_2$O$_3$",
+    "title": "Mapping strain and structural heterogeneities around bubbles in amorphous ionically conductive Bi₂O₃",
     "url": "https://doi.org/10.1016/j.matdes.2025.114282",
     "year": 2025,
     "tags": [
       "Strain"
-    ]
+    ],
+    "authors": [
+      "Ellis Rae Kennedy",
+      "Stephanie M. Ribet",
+      "Ian S. Winter",
+      "Caitlin A. Kohnert",
+      "Yongqiang Wang",
+      "Karen C. Bustillo",
+      "Colin Ophus",
+      "Benjamin K. Derby"
+    ],
+    "journal": "Materials & Design"
   },
   {
-    "title": "Observation of nanoparticle coalescence during core--shell metallic nanowire growth in colloids via nanoscale imaging",
+    "title": "Observation of nanoparticle coalescence during core–shell metallic nanowire growth in colloids via nanoscale imaging",
     "url": "https://doi.org/10.1038/s41467-025-60135-3",
     "year": 2025,
     "tags": [
       "In Situ",
       "Nanoparticles",
       "Imaging"
-    ]
+    ],
+    "authors": [
+      "Dahai Yang",
+      "Xingyu Zhang",
+      "Ruijie Yang",
+      "Bolin Zou",
+      "Rui Huang",
+      "Colin Ophus",
+      "Chengyu Song",
+      "Sheng Cheng",
+      "Juyeong Kim",
+      "Hui Xiong",
+      "Xianqi Wu",
+      "Mufan Li",
+      "Yong Wang",
+      "Hongfa Xiang",
+      "Zihao Ou",
+      "Xiaohui Song"
+    ],
+    "journal": "Nature Communications"
   },
   {
     "title": "Intermetallic dispersion-strengthened ferritic superalloys with exceptional resistance to radiation-induced hardening",
@@ -207,7 +548,26 @@
     "year": 2025,
     "tags": [
       "Materials"
-    ]
+    ],
+    "authors": [
+      "Kan Ma",
+      "Pedro A. Ferreirós",
+      "Thomas W. Pfeifer",
+      "Robert G. Abernethy",
+      "Sophia von Tiedemann",
+      "Nianhua Peng",
+      "Graeme Greaves",
+      "Colin Ophus",
+      "Kai Sun",
+      "Anamul H Mir",
+      "Lumin Wang",
+      "Shasha Huang",
+      "Shijun Zhao",
+      "Patrick E. Hopkins",
+      "Christopher D. Hardie",
+      "Alexander J. Knowles"
+    ],
+    "journal": "Acta Materialia"
   },
   {
     "title": "Quantitative phase retrieval and characterization of magnetic nanostructures via Lorentz (scanning) transmission electron microscopy",
@@ -216,8 +576,19 @@
     "tags": [
       "Ptychography",
       "Magnetism",
-      "Nanoparticles"
-    ]
+      "Nanoparticles",
+      "Phase Contrast"
+    ],
+    "authors": [
+      "Kayna L Mendoza",
+      "Haoyang Ni",
+      "Georgios Varnavides",
+      "Miaofang Chi",
+      "Colin Ophus",
+      "Amanda Petford-Long",
+      "Charudatta Phatak"
+    ],
+    "journal": "Journal of Physics: Condensed Matter"
   },
   {
     "title": "Decoding the interstitial/vacancy nature of dislocation loops with their morphological fingerprints in face-centered cubic structure",
@@ -225,7 +596,24 @@
     "year": 2025,
     "tags": [
       "Strain"
-    ]
+    ],
+    "authors": [
+      "Kan Ma",
+      "Long Guo",
+      "Antoine Dartois",
+      "Estelle Meslin",
+      "Colin Ophus",
+      "Brigitte Décamps",
+      "Anna Fraczkiewicz",
+      "Alexander J. Knowles",
+      "Lumin Wang",
+      "Olivier Tissot",
+      "Frédéric Prima",
+      "Fei Gao",
+      "Huiqiu Deng",
+      "Marie Loyer-Prost"
+    ],
+    "journal": "Science Advances"
   },
   {
     "title": "Accelerating iterative ptychography with an integrated neural network",
@@ -234,7 +622,14 @@
     "tags": [
       "Ptychography",
       "Machine Learning"
-    ]
+    ],
+    "authors": [
+      "Arthur R. C. McCray",
+      "Stephanie M. Ribet",
+      "Georgios Varnavides",
+      "Colin Ophus"
+    ],
+    "journal": "Journal of Microscopy"
   },
   {
     "title": "Template Matching Approach for Automated Determination of Crystal Phase and Orientation of Grains in 4D-STEM Precession Electron Diffraction Data for Hafnium Zirconium Oxide Ferroelectric Thin Films",
@@ -243,16 +638,43 @@
     "tags": [
       "4DSTEM",
       "Materials",
-      "Crystallography"
-    ]
+      "Crystallography",
+      "Diffraction"
+    ],
+    "authors": [
+      "Alain C Diebold",
+      "Colin Ophus",
+      "Amir Kordijazi",
+      "Steven Consiglio",
+      "Sarah Lombardo",
+      "Dina Triyoso",
+      "Kandabara Tapily",
+      "Anna Mian",
+      "Nithin B V I Shankar",
+      "Tomáš Morávek",
+      "Narendraraj Chandran",
+      "Robert Stroud",
+      "Gert Leusink"
+    ],
+    "journal": "Microscopy and Microanalysis"
   },
   {
-    "title": "Complexions at the iron--magnetite interface",
+    "title": "Complexions at the iron–magnetite interface",
     "url": "https://doi.org/10.1038/s41467-025-58022-y",
     "year": 2025,
     "tags": [
-      "Crystallography"
-    ]
+      "Crystallography",
+      "Magnetism"
+    ],
+    "authors": [
+      "Xuyang Zhou",
+      "Baptiste Bienvenu",
+      "Yuxiang Wu",
+      "Alisson Kwiatkowski da Silva",
+      "Colin Ophus",
+      "Dierk Raabe"
+    ],
+    "journal": "Nature Communications"
   },
   {
     "title": "Strain release by 3D atomic misfit in fivefold twinned icosahedral nanoparticles with amorphization and dislocations",
@@ -261,39 +683,115 @@
     "tags": [
       "Strain",
       "Nanoparticles"
-    ]
+    ],
+    "authors": [
+      "Zhen Sun",
+      "Yao Zhang",
+      "Zezhou Li",
+      "Zhiheng Xie",
+      "Yiheng Dai",
+      "Xuanxuan Du",
+      "Colin Ophus",
+      "Jihan Zhou"
+    ],
+    "journal": "Nature Communications"
   },
   {
-    "title": "$\\pi$-$\\pi$ Stacking in Kerogen and Its Mechanical Impact",
+    "title": "π-π Stacking in Kerogen and Its Mechanical Impact",
     "url": "https://doi.org/10.1021/acsami.4c20652",
     "year": 2025,
     "tags": [
       "Materials",
       "Crystallography"
-    ]
+    ],
+    "authors": [
+      "Yujun Xie",
+      "Ruopeng Zhang",
+      "Yule Xie",
+      "Xi Huang",
+      "Karen C. Bustillo",
+      "Danielle M Jorgens",
+      "Younane Abousleiman",
+      "Colin Ophus",
+      "Katherine L. Hull",
+      "Andrew M. Minor",
+      "Peter Hosemann"
+    ],
+    "journal": "ACS Applied Materials & Interfaces"
   },
   {
     "title": "Tailored topotactic chemistry unlocks heterostructures of magnetic intercalation compounds",
     "url": "https://doi.org/10.1038/s41467-025-56467-9",
     "year": 2025,
     "tags": [
-      "Magnetism"
-    ]
+      "Magnetism",
+      "2D Materials"
+    ],
+    "authors": [
+      "Samra Husremović",
+      "Oscar Gonzalez",
+      "Berit H. Goodge",
+      "Lilia S. Xie",
+      "Zhizhi Kong",
+      "Wanlin Zhang",
+      "Sae Hee Ryu",
+      "Stephanie M. Ribet",
+      "Shannon S. Fender",
+      "Karen C. Bustillo",
+      "Chengyu Song",
+      "Jim Ciston",
+      "Takashi Taniguchi",
+      "Kenji Watanabe",
+      "Colin Ophus",
+      "Chris Jozwiak",
+      "Aaron Bostwick",
+      "Eli Rotenberg",
+      "D. Kwabena Bediako"
+    ],
+    "journal": "Nature Communications"
   },
   {
-    "title": "Dynamics and structure of the B2$\\rightarrow$B19' phase transformation in NiTi revealed through in situ 4D-STEM",
+    "title": "Dynamics and structure of the B2→B19' phase transformation in NiTi revealed through in situ 4D-STEM",
     "url": "https://doi.org/10.1016/j.msea.2025.147951",
     "year": 2025,
     "tags": [
       "4DSTEM",
       "In Situ"
-    ]
+    ],
+    "authors": [
+      "Jennifer Donohue",
+      "Sean H. Mills",
+      "Benjamin H. Savitzky",
+      "Steven E. Zeltmann",
+      "Colin Ophus",
+      "Andrew M. Minor"
+    ],
+    "journal": "Materials Science and Engineering: A"
   },
   {
-    "title": "The hierarchical structure of organic mixed ionic--electronic conductors and its evolution in water",
+    "title": "The hierarchical structure of organic mixed ionic–electronic conductors and its evolution in water",
     "url": "https://doi.org/10.1038/s41563-024-02016-6",
     "year": 2025,
-    "tags": []
+    "tags": [
+      "Energy Storage"
+    ],
+    "authors": [
+      "Yael Tsarfati",
+      "Karen C. Bustillo",
+      "Benjamin H. Savitzky",
+      "Luke Balhorn",
+      "Tyler J. Quill",
+      "Adam Marks",
+      "Jennifer Donohue",
+      "Steven E. Zeltmann",
+      "Christopher J. Takacs",
+      "Alexander Giovannitti",
+      "Iain McCulloch",
+      "Colin Ophus",
+      "Andrew M. Minor",
+      "Alberto Salleo"
+    ],
+    "journal": "Nature Materials"
   },
   {
     "title": "The 4D camera: An 87 kHz direct electron detector for scanning/transmission electron microscopy",
@@ -302,20 +800,52 @@
     "tags": [
       "4DSTEM",
       "Instrumentation"
-    ]
+    ],
+    "authors": [
+      "Peter Ercius",
+      "Ian J Johnson",
+      "Philipp Pelz",
+      "Benjamin H Savitzky",
+      "Lauren Hughes",
+      "Hamish G Brown",
+      "Steven E Zeltmann",
+      "Shang-Lin Hsu",
+      "Cassio C S Pedroso",
+      "Bruce E Cohen",
+      "Ramamoorthy Ramesh",
+      "David Paul",
+      "John M Joseph",
+      "Thorsten Stezelberger",
+      "Cory Czarnik",
+      "Matthew Lent",
+      "Erin Fong",
+      "Jim Ciston",
+      "Mary C Scott",
+      "Colin Ophus",
+      "Andrew M Minor",
+      "Peter Denes"
+    ],
+    "journal": "Microscopy and Microanalysis"
   },
   {
-    "title": "Considerations for extracting moir\u00e9-level strain from dark field intensities in transmission electron microscopy",
+    "title": "Considerations for extracting moiré-level strain from dark field intensities in transmission electron microscopy",
     "url": "https://doi.org/10.1063/5.0222102",
     "year": 2024,
     "tags": [
       "Strain",
       "2D Materials",
       "Imaging"
-    ]
+    ],
+    "authors": [
+      "Isaac M. Craig",
+      "Madeline Van Winkle",
+      "Colin Ophus",
+      "D. Kwabena Bediako"
+    ],
+    "journal": "Journal of Applied Physics"
   },
   {
-    "title": "Uncovering the three-dimensional structure of upconverting core--shell nanoparticles with multislice electron ptychography",
+    "title": "Uncovering the three-dimensional structure of upconverting core–shell nanoparticles with multislice electron ptychography",
     "url": "https://doi.org/10.1063/5.0206814",
     "year": 2024,
     "tags": [
@@ -323,16 +853,41 @@
       "Tomography",
       "Simulation",
       "Nanoparticles"
-    ]
+    ],
+    "authors": [
+      "Stephanie M. Ribet",
+      "Georgios Varnavides",
+      "Cassio C. S. Pedroso",
+      "Bruce E. Cohen",
+      "Peter Ercius",
+      "Mary C. Scott",
+      "Colin Ophus"
+    ],
+    "journal": "Applied Physics Letters"
   },
   {
-    "title": "Accelerating the Electrochemical Formation of the $\\delta$ Phase in Manganese-Rich Rocksalt Cathodes",
+    "title": "Accelerating the Electrochemical Formation of the δ Phase in Manganese-Rich Rocksalt Cathodes",
     "url": "https://doi.org/10.1002/adma.202412871",
     "year": 2024,
     "tags": [
       "In Situ",
-      "Materials"
-    ]
+      "Materials",
+      "Energy Storage"
+    ],
+    "authors": [
+      "Tucker Holstun",
+      "Tara P Mishra",
+      "Liliang Huang",
+      "Han‐Ming Hau",
+      "Shashwat Anand",
+      "Xiaochen Yang",
+      "Colin Ophus",
+      "Karen Bustillo",
+      "Lu ma",
+      "Steven Ehrlich",
+      "Gerbrand Ceder"
+    ],
+    "journal": "Advanced Materials"
   },
   {
     "title": "The atomic-level structure and stability of interfaces of Pt nanoparticles in alumina: An experimental and computational evaluation",
@@ -341,7 +896,17 @@
     "tags": [
       "Nanoparticles",
       "Crystallography"
-    ]
+    ],
+    "authors": [
+      "A.L. Clauser",
+      "K. Oware Sarfo",
+      "C. Ophus",
+      "J. Ciston",
+      "R. Giulian",
+      "L. Árnadóttir",
+      "M.K. Santala"
+    ],
+    "journal": "Acta Materialia"
   },
   {
     "title": "Earth-abundant Li-ion cathode materials with nanoengineered microstructures",
@@ -349,8 +914,34 @@
     "year": 2024,
     "tags": [
       "Materials",
-      "Nanoparticles"
-    ]
+      "Nanoparticles",
+      "Energy Storage"
+    ],
+    "authors": [
+      "Han-Ming Hau",
+      "Tara Mishra",
+      "Colin Ophus",
+      "Tzu-Yang Huang",
+      "Karen Bustilo",
+      "Yingzhi Sun",
+      "Xiaochen Yang",
+      "Tucker Holstun",
+      "Xinye Zhao",
+      "Shilong Wang",
+      "Yang Ha",
+      "Gi-Hyeok Lee",
+      "Chengyu Song",
+      "John Turner",
+      "Jianming Bai",
+      "Lu Ma",
+      "Ke Chen",
+      "Feng Wang",
+      "Wanli Yang",
+      "Bryan D. McCloskey",
+      "Zijian Cai",
+      "Gerbrand Ceder"
+    ],
+    "journal": "Nature Nanotechnology"
   },
   {
     "title": "Reducing crystal symmetry to generate out-of-plane Dzyaloshinskii-Moriya interaction",
@@ -358,7 +949,24 @@
     "year": 2024,
     "tags": [
       "Magnetism"
-    ]
+    ],
+    "authors": [
+      "Heng Niu",
+      "Hee Young Kwon",
+      "Tianping Ma",
+      "Zhiyuan Cheng",
+      "Colin Ophus",
+      "Bingfeng Miao",
+      "Liang Sun",
+      "Yizheng Wu",
+      "Kai Liu",
+      "Stuart S. P. Parkin",
+      "Changyeon Won",
+      "Andreas K. Schmid",
+      "Haifeng Ding",
+      "Gong Chen"
+    ],
+    "journal": "Nature Communications"
   },
   {
     "title": "Exploring Structural Anisotropy in Amorphous Tb-Co via Changes in Medium-Range Ordering",
@@ -366,22 +974,49 @@
     "year": 2024,
     "tags": [
       "Crystallography"
-    ]
+    ],
+    "authors": [
+      "Ellis Kennedy",
+      "Emily Hollingworth",
+      "Alejandro Ceballos",
+      "Daisy O’Mahoney",
+      "Colin Ophus",
+      "Frances Hellman",
+      "Mary Scott"
+    ],
+    "journal": "Microscopy and Microanalysis"
   },
   {
     "title": "Streaming Large-Scale Microscopy Data to a Supercomputing Facility",
     "url": "https://doi.org/10.1093/mam/ozae109",
     "year": 2024,
-    "tags": []
+    "tags": [],
+    "authors": [
+      "Samuel S Welborn",
+      "Chris Harris",
+      "Stephanie M Ribet",
+      "Georgios Varnavides",
+      "Colin Ophus",
+      "Bjoern Enders",
+      "Peter Ercius"
+    ],
+    "journal": "Microscopy and Microanalysis"
   },
   {
-    "title": "Digital Dark Field---Higher Contrast and Greater Specificity Dark Field Imaging Using a 4DSTEM Approach",
+    "title": "Digital Dark Field—Higher Contrast and Greater Specificity Dark Field Imaging Using a 4DSTEM Approach",
     "url": "https://doi.org/10.1093/mam/ozae104",
     "year": 2024,
     "tags": [
       "4DSTEM",
       "Imaging"
-    ]
+    ],
+    "authors": [
+      "Ian MacLaren",
+      "Andrew T Fraser",
+      "Matthew R Lipsett",
+      "Colin Ophus"
+    ],
+    "journal": "Microscopy and Microanalysis"
   },
   {
     "title": "Defect Self-Elimination in Nanocube Superlattices Through the Interplay of Brownian, van der Waals, and Ligand-Based Forces and Torques",
@@ -392,7 +1027,18 @@
       "2D Materials",
       "Nanoparticles",
       "Crystallography"
-    ]
+    ],
+    "authors": [
+      "Jaewon Lee",
+      "Zexi Lu",
+      "Zhigang Wu",
+      "Colin Ophus",
+      "Gregory K. Schenter",
+      "James J. De Yoreo",
+      "Jaehun Chun",
+      "Dongsheng Li"
+    ],
+    "journal": "ACS Nano"
   },
   {
     "title": "Grain boundary engineering for efficient and durable electrocatalysis",
@@ -400,7 +1046,20 @@
     "year": 2024,
     "tags": [
       "Crystallography"
-    ]
+    ],
+    "authors": [
+      "Xin Geng",
+      "Miquel Vega-Paredes",
+      "Zhenyu Wang",
+      "Colin Ophus",
+      "Pengfei Lu",
+      "Yan Ma",
+      "Siyuan Zhang",
+      "Christina Scheu",
+      "Christian H. Liebscher",
+      "Baptiste Gault"
+    ],
+    "journal": "Nature Communications"
   },
   {
     "title": "Random forest prediction of crystal structure from electron diffraction patterns incorporating multiple scattering",
@@ -409,8 +1068,20 @@
     "tags": [
       "Machine Learning",
       "Simulation",
-      "Crystallography"
-    ]
+      "Crystallography",
+      "Diffraction"
+    ],
+    "authors": [
+      "Samuel P. Gleason",
+      "Alexander Rakowski",
+      "Stephanie M. Ribet",
+      "Steven E. Zeltmann",
+      "Benjamin H. Savitzky",
+      "Matthew Henderson",
+      "Jim Ciston",
+      "Colin Ophus"
+    ],
+    "journal": "Physical Review Materials"
   },
   {
     "title": "Low-dose cryo-electron ptychography of proteins at sub-nanometer resolution",
@@ -419,7 +1090,25 @@
     "tags": [
       "Ptychography",
       "Imaging"
-    ]
+    ],
+    "authors": [
+      "Berk Küçükoğlu",
+      "Inayathulla Mohammed",
+      "Ricardo C. Guerrero-Ferreira",
+      "Stephanie M. Ribet",
+      "Georgios Varnavides",
+      "Max Leo Leidl",
+      "Kelvin Lau",
+      "Sergey Nazarov",
+      "Alexander Myasnikov",
+      "Massimo Kube",
+      "Julika Radecke",
+      "Carsten Sachse",
+      "Knut Müller-Caspary",
+      "Colin Ophus",
+      "Henning Stahlberg"
+    ],
+    "journal": "Nature Communications"
   },
   {
     "title": "Observation of antiferroelectric domain walls in a uniaxial hyperferroelectric",
@@ -427,15 +1116,70 @@
     "year": 2024,
     "tags": [
       "Magnetism"
-    ]
+    ],
+    "authors": [
+      "Michele Conroy",
+      "Didrik René Småbråten",
+      "Colin Ophus",
+      "Konstantin Shapovalov",
+      "Quentin M. Ramasse",
+      "Kasper Aas Hunnestad",
+      "Sverre M. Selbach",
+      "Ulrich Aschauer",
+      "Kalani Moore",
+      "J. Marty Gregg",
+      "Ursel Bangert",
+      "Massimiliano Stengel",
+      "Alexei Gruverman",
+      "Dennis Meier"
+    ],
+    "journal": "Advanced Materials"
   },
   {
-    "title": "Integrated rocksalt--polyanion cathodes with excess lithium and stabilized cycling",
+    "title": "Integrated rocksalt–polyanion cathodes with excess lithium and stabilized cycling",
     "url": "https://doi.org/10.1038/s41560-024-01615-6",
     "year": 2024,
     "tags": [
-      "Materials"
-    ]
+      "Materials",
+      "Energy Storage"
+    ],
+    "authors": [
+      "Yimeng Huang",
+      "Yanhao Dong",
+      "Yang Yang",
+      "Tongchao Liu",
+      "Moonsu Yoon",
+      "Sipei Li",
+      "Baoming Wang",
+      "Ethan Yupeng Zheng",
+      "Jinhyuk Lee",
+      "Yongwen Sun",
+      "Ying Han",
+      "Jim Ciston",
+      "Colin Ophus",
+      "Chengyu Song",
+      "Aubrey Penn",
+      "Yaqi Liao",
+      "Haijin Ji",
+      "Ting Shi",
+      "Mengyi Liao",
+      "Zexiao Cheng",
+      "Jingwei Xiang",
+      "Yu Peng",
+      "Lu Ma",
+      "Xianghui Xiao",
+      "Wang Hay Kan",
+      "Huaican Chen",
+      "Wen Yin",
+      "Lingling Guo",
+      "Wei-Ren Liu",
+      "Rasu Muruganantham",
+      "Chun-Chuen Yang",
+      "Yuntong Zhu",
+      "Qingjie Li",
+      "Ju Li"
+    ],
+    "journal": "Nature Energy"
   },
   {
     "title": "Structural Complexities in Sodium Ion Conductive Antiperovskite Revealed by Cryogenic TEM",
@@ -443,24 +1187,69 @@
     "year": 2024,
     "tags": [
       "Materials"
-    ]
+    ],
+    "authors": [
+      "Blanka E. Janicek",
+      "Sunil Mair",
+      "Yet-Ming Chiang",
+      "Colin Ophus",
+      "Xi Jiang"
+    ],
+    "journal": "Nano Letters"
   },
   {
     "title": "Atomic-scale identification of active sites of oxygen reduction nanocatalysts",
     "url": "https://doi.org/10.1038/s41929-024-01175-8",
     "year": 2024,
     "tags": [
-      "Materials"
-    ]
+      "Materials",
+      "Catalysis"
+    ],
+    "authors": [
+      "Yao Yang",
+      "Jihan Zhou",
+      "Zipeng Zhao",
+      "Geng Sun",
+      "Saman Moniri",
+      "Colin Ophus",
+      "Yongsoo Yang",
+      "Ziyang Wei",
+      "Yakun Yuan",
+      "Cheng Zhu",
+      "Yang Liu",
+      "Qiang Sun",
+      "Qingying Jia",
+      "Hendrik Heinz",
+      "Jim Ciston",
+      "Peter Ercius",
+      "Philippe Sautet",
+      "Yu Huang",
+      "Jianwei Miao"
+    ],
+    "journal": "Nature Catalysis"
   },
   {
-    "title": "Direct Measurement of the Thermal Expansion Coefficient of Epitaxial WSe$_2$ by 4DSTEM",
+    "title": "Direct Measurement of the Thermal Expansion Coefficient of Epitaxial WSe₂ by 4DSTEM",
     "url": "https://doi.org/10.1021/acsnano.4c02996",
     "year": 2024,
     "tags": [
       "4DSTEM",
       "2D Materials"
-    ]
+    ],
+    "authors": [
+      "Theresa M. Kucinski",
+      "Rohan Dhall",
+      "Benjamin H. Savitzky",
+      "Colin Ophus",
+      "Rijan Karkee",
+      "Avanish Mishra",
+      "Enkeleda Dervishi",
+      "Jung Hoon Kang",
+      "Chul-Ho Lee",
+      "Jinkyoung Yoo",
+      "Michael T. Pettes"
+    ],
+    "journal": "ACS Nano"
   },
   {
     "title": "Reversible phase transformations between Pb nanocrystals and a viscous liquid-like phase",
@@ -470,7 +1259,19 @@
       "In Situ",
       "Nanoparticles",
       "Crystallography"
-    ]
+    ],
+    "authors": [
+      "Wenjing Zheng",
+      "Jun Kang",
+      "Kaiyang Niu",
+      "Colin Ophus",
+      "Emory M. Chan",
+      "Peter Ercius",
+      "Lin-Wang Wang",
+      "Junqiao Wu",
+      "Haimei Zheng"
+    ],
+    "journal": "Science Advances"
   },
   {
     "title": "Chemical Environment and Structural Variations in High Entropy Oxide Thin Film Probed with Electron Microscopy",
@@ -479,7 +1280,19 @@
     "tags": [
       "Materials",
       "Instrumentation"
-    ]
+    ],
+    "authors": [
+      "Leixin Miao",
+      "Jacob T. Sivak",
+      "George Kotsonis",
+      "Jim Ciston",
+      "Colin L. Ophus",
+      "Ismaila Dabo",
+      "Jon-Paul Maria",
+      "Susan B. Sinnott",
+      "Nasim Alem"
+    ],
+    "journal": "ACS Nano"
   },
   {
     "title": "Ion Implantation-Induced Plastic Phenomena in Metallic Alloys",
@@ -487,7 +1300,17 @@
     "year": 2024,
     "tags": [
       "Materials"
-    ]
+    ],
+    "authors": [
+      "Patrick H. Warren",
+      "Caleb D. Clement",
+      "Yongwen Sun",
+      "Jim Ciston",
+      "Colin Ophus",
+      "Yang Yang",
+      "Janelle P. Wharry"
+    ],
+    "journal": "JOM"
   },
   {
     "title": "Direct Imaging of the Crystalline Domains and Their Orientation in the PS-b-PEO Block Copolymer with 4DSTEM",
@@ -497,16 +1320,40 @@
       "4DSTEM",
       "Materials",
       "Imaging"
-    ]
+    ],
+    "authors": [
+      "Min Chen",
+      "Karen C. Bustillo",
+      "Vivaan Patel",
+      "Benjamin H. Savitzky",
+      "Hadas Sternlicht",
+      "Jacqueline A. Maslyn",
+      "Whitney S. Loo",
+      "Jim Ciston",
+      "Colin Ophus",
+      "Xi Jiang",
+      "Nitash P. Balsara",
+      "Andrew M. Minor"
+    ],
+    "journal": "Macromolecules"
   },
   {
-    "title": "Electronic structure along Sm$_2$Co$_3$Ge$_5$ twin boundaries",
+    "title": "Electronic structure along Sm₂Co₃Ge₅ twin boundaries",
     "url": "https://doi.org/10.1016/j.actamat.2024.119831",
     "year": 2024,
     "tags": [
       "Strain",
       "Spectroscopy"
-    ]
+    ],
+    "authors": [
+      "Ellis Kennedy",
+      "Trent M. Kyrk",
+      "Colin Ophus",
+      "Gregory T. McCandless",
+      "Julia Y. Chan",
+      "M.C. Scott"
+    ],
+    "journal": "Acta Materialia"
   },
   {
     "title": "How the AI-assisted discovery and synthesis of a ternary oxide highlights capability gaps in materials science",
@@ -515,7 +1362,22 @@
     "tags": [
       "Machine Learning",
       "Materials"
-    ]
+    ],
+    "authors": [
+      "Joseph H. Montoya",
+      "Carolyn Grimley",
+      "Muratahan Aykol",
+      "Colin Ophus",
+      "Hadas Sternlicht",
+      "Benjamin H. Savitzky",
+      "Andrew M. Minor",
+      "Steven B. Torrisi",
+      "Jackson Goedjen",
+      "Ching-Chang Chung",
+      "Andrew H. Comstock",
+      "Shijing Sun"
+    ],
+    "journal": "Chemical Science"
   },
   {
     "title": "Rejuvenation as the origin of planar defects in the CrCoNi medium entropy alloy",
@@ -524,17 +1386,38 @@
     "tags": [
       "Strain",
       "Materials"
-    ]
+    ],
+    "authors": [
+      "Yang Yang",
+      "Sheng Yin",
+      "Qin Yu",
+      "Yingxin Zhu",
+      "Jun Ding",
+      "Ruopeng Zhang",
+      "Colin Ophus",
+      "Mark Asta",
+      "Robert O. Ritchie",
+      "Andrew M. Minor"
+    ],
+    "journal": "Nature Communications"
   },
   {
-    "title": "A method for crystallographic mapping of an alpha\u2010beta titanium alloy with nanometre resolution using scanning precession electron diffraction and open\u2010source software libraries",
+    "title": "A method for crystallographic mapping of an alpha‐beta titanium alloy with nanometre resolution using scanning precession electron diffraction and open‐source software libraries",
     "url": "https://doi.org/10.1111/jmi.13275",
     "year": 2024,
     "tags": [
       "4DSTEM",
       "Materials",
-      "Imaging"
-    ]
+      "Imaging",
+      "Diffraction"
+    ],
+    "authors": [
+      "Ian MacLaren",
+      "Enrique Frutos‐Myro",
+      "Steven Zeltmann",
+      "Colin Ophus"
+    ],
+    "journal": "Journal of Microscopy"
   },
   {
     "title": "Uneven Strain Distribution Induces Consecutive Dislocation Slipping, Plane Gliding, and Subsequent Detwinning of Penta-Twinned Nanoparticles",
@@ -543,7 +1426,17 @@
     "tags": [
       "Strain",
       "Nanoparticles"
-    ]
+    ],
+    "authors": [
+      "Miao Song",
+      "Jianming Cui",
+      "Colin Ophus",
+      "Jaewon Lee",
+      "Tianyu Yan",
+      "Kristen A. Fichthorn",
+      "Dongsheng Li"
+    ],
+    "journal": "Nano Letters"
   },
   {
     "title": "Design of Electrostatic Aberration Correctors for Scanning Transmission Electron Microscopy",
@@ -551,7 +1444,19 @@
     "year": 2023,
     "tags": [
       "Instrumentation"
-    ]
+    ],
+    "authors": [
+      "Stephanie M Ribet",
+      "Steven E Zeltmann",
+      "Karen C Bustillo",
+      "Rohan Dhall",
+      "Peter Denes",
+      "Andrew M Minor",
+      "Roberto dos Reis",
+      "Vinayak P Dravid",
+      "Colin Ophus"
+    ],
+    "journal": "Microscopy and Microanalysis"
   },
   {
     "title": "Solving complex nanostructures with ptychographic atomic electron tomography",
@@ -561,7 +1466,19 @@
       "Ptychography",
       "Tomography",
       "Nanoparticles"
-    ]
+    ],
+    "authors": [
+      "Philipp M. Pelz",
+      "Sinéad M. Griffin",
+      "Scott Stonemeyer",
+      "Derek Popple",
+      "Hannah DeVyldere",
+      "Peter Ercius",
+      "Alex Zettl",
+      "Mary C. Scott",
+      "Colin Ophus"
+    ],
+    "journal": "Nature Communications"
   },
   {
     "title": "Enabling Oxidation Protection and Carrier-Type Switching for Bismuth Telluride Nanoribbons via in Situ Organic Molecule Coating",
@@ -569,7 +1486,20 @@
     "year": 2023,
     "tags": [
       "In Situ"
-    ]
+    ],
+    "authors": [
+      "Jun Beom Park",
+      "Wei Wu",
+      "Jason Yingzhi Wu",
+      "Rijan Karkee",
+      "Theresa Marie Kucinski",
+      "Karen C. Bustillo",
+      "Matthew M. Schneider",
+      "David A. Strubbe",
+      "Colin Ophus",
+      "Michael Thompson Pettes"
+    ],
+    "journal": "Nano Letters"
   },
   {
     "title": "Energy Funneling in a Noninteger Two-Dimensional Perovskite",
@@ -578,54 +1508,157 @@
     "tags": [
       "Materials",
       "2D Materials"
-    ]
+    ],
+    "authors": [
+      "Alexander M. Oddo",
+      "Mengyu Gao",
+      "Daniel Weinberg",
+      "Jianbo Jin",
+      "Maria C. Folgueras",
+      "Chengyu Song",
+      "Colin Ophus",
+      "Tomoyasu Mani",
+      "Eran Rabani",
+      "Peidong Yang"
+    ],
+    "journal": "Nano Letters"
   },
   {
     "title": "Atomic-scale probing of short-range order and its impact on electrochemical properties in cation-disordered oxide cathodes",
     "url": "https://doi.org/10.1038/s41467-023-43356-2",
     "year": 2023,
     "tags": [
-      "Materials"
-    ]
+      "Materials",
+      "Energy Storage"
+    ],
+    "authors": [
+      "Linze Li",
+      "Bin Ouyang",
+      "Zhengyan Lun",
+      "Haoyan Huo",
+      "Dongchang Chen",
+      "Yuan Yue",
+      "Colin Ophus",
+      "Wei Tong",
+      "Guoying Chen",
+      "Gerbrand Ceder",
+      "Chongmin Wang"
+    ],
+    "journal": "Nature Communications"
   },
   {
-    "title": "Analysis of strain and defects in Tellurium-{WSe}$_2$ Moir\\'{e} heterostructures using scanning nanodiffraction",
+    "title": "Analysis of strain and defects in Tellurium-WSe₂ Moiré heterostructures using scanning nanodiffraction",
     "url": "https://doi.org/10.1021/acsnano.3c04283",
     "year": 2023,
     "tags": [
       "4DSTEM",
       "Strain",
-      "2D Materials"
-    ]
+      "2D Materials",
+      "Diffraction"
+    ],
+    "authors": [
+      "Bengisu Sari",
+      "Steven E. Zeltmann",
+      "Chunsong Zhao",
+      "Philipp M. Pelz",
+      "Ali Javey",
+      "Andrew M. Minor",
+      "Colin Ophus",
+      "Mary C. Scott"
+    ],
+    "journal": "ACS Nano"
   },
   {
     "title": "Relativistic ultrafast electron diffraction at high repetition rates",
     "url": "https://doi.org/10.1063/4.0000203",
     "year": 2023,
-    "tags": []
+    "tags": [
+      "Diffraction"
+    ],
+    "authors": [
+      "K. M. Siddiqui",
+      "D. B. Durham",
+      "F. Cropp",
+      "F. Ji",
+      "S. Paiagua",
+      "C. Ophus",
+      "N. C. Andresen",
+      "L. Jin",
+      "J. Wu",
+      "S. Wang",
+      "X. Zhang",
+      "W. You",
+      "M. Murnane",
+      "M. Centurion",
+      "X. Wang",
+      "D. S. Slaughter",
+      "R. A. Kaindl",
+      "P. Musumeci",
+      "A. M. Minor",
+      "D. Filippetto"
+    ],
+    "journal": "Structural Dynamics"
   },
   {
     "title": "Encoding multistate charge order and chirality in endotaxial heterostructures",
     "url": "https://doi.org/10.1038/s41467-023-41780-y",
     "year": 2023,
     "tags": [
-      "Magnetism"
-    ]
+      "Magnetism",
+      "2D Materials"
+    ],
+    "authors": [
+      "Samra Husremović",
+      "Berit H. Goodge",
+      "Matthew P. Erodici",
+      "Katherine Inzani",
+      "Alberto Mier",
+      "Stephanie M. Ribet",
+      "Karen C. Bustillo",
+      "Takashi Taniguchi",
+      "Kenji Watanabe",
+      "Colin Ophus",
+      "Sinéad M. Griffin",
+      "D. Kwabena Bediako"
+    ],
+    "journal": "Nature Communications"
   },
   {
-    "title": "Role of structural defects in mediating disordering processes at irradiated epitaxial Fe$_3$O$_4$ / Cr$_2$O$_3$ interfaces",
+    "title": "Role of structural defects in mediating disordering processes at irradiated epitaxial Fe₃O₄ / Cr₂O₃ interfaces",
     "url": "https://doi.org/10.1103/PhysRevMaterials.7.093604",
     "year": 2023,
     "tags": [
       "Strain",
       "Crystallography"
-    ]
+    ],
+    "authors": [
+      "Tiffany C. Kaspar",
+      "Steven R. Spurgeon",
+      "Kayla H. Yano",
+      "Bethany E. Matthews",
+      "Mark E. Bowden",
+      "Colin Ophus",
+      "Hyosim Kim",
+      "Yongqiang Wang",
+      "Daniel K. Schreiber"
+    ],
+    "journal": "Physical Review Materials"
   },
   {
     "title": "Measurement of Atomic Modulation Direction Using the Azimuthal Variation of First-Order Laue Zone Electron Diffraction",
     "url": "https://doi.org/10.1093/micmic/ozad089",
     "year": 2023,
-    "tags": []
+    "tags": [
+      "Diffraction"
+    ],
+    "authors": [
+      "Aurys Silinga",
+      "Christopher S Allen",
+      "Juri Barthel",
+      "Colin Ophus",
+      "Ian MacLaren"
+    ],
+    "journal": "Microscopy and Microanalysis"
   },
   {
     "title": "Quantitative scanning transmission electron microscopy for materials science: imaging, diffraction, spectroscopy, & tomography",
@@ -635,8 +1668,13 @@
       "4DSTEM",
       "Tomography",
       "Spectroscopy",
-      "Imaging"
-    ]
+      "Imaging",
+      "Diffraction"
+    ],
+    "authors": [
+      "Colin Ophus"
+    ],
+    "journal": "Annual Review of Materials Research"
   },
   {
     "title": "Mapping nanoscale electrostatic field fluctuations around graphene dislocation cores using 4DSTEM",
@@ -646,13 +1684,42 @@
       "4DSTEM",
       "Strain",
       "2D Materials"
-    ]
+    ],
+    "authors": [
+      "Matthew J. Coupin",
+      "Yi Wen",
+      "Sungwoo Lee",
+      "Anshul Saxena",
+      "Colin Ophus",
+      "Christopher S. Allen",
+      "Angus I. Kirkland",
+      "Narayana R. Aluru",
+      "Gun-Do Lee",
+      "Jamie H. Warner"
+    ],
+    "journal": "Nano Letters"
   },
   {
     "title": "Observing ion diffusion and reciprocating hopping motion in water",
     "url": "https://doi.org/10.1126/sciadv.adf8436",
     "year": 2023,
-    "tags": []
+    "tags": [],
+    "authors": [
+      "Sangui Liu",
+      "Xinbao Han",
+      "Colin Ophus",
+      "Shiyuan Zhou",
+      "You-Hong Jiang",
+      "Yue Sun",
+      "Tiqing Zhao",
+      "Fei Yang",
+      "Meng Gu",
+      "Yuan-Zhi Tan",
+      "Shi-Gang Sun",
+      "Haimei Zheng",
+      "Hong-Gang Liao"
+    ],
+    "journal": "Science Advances"
   },
   {
     "title": "The emergence of three-dimensional chiral domain walls in polar vortices",
@@ -660,7 +1727,21 @@
     "year": 2023,
     "tags": [
       "Magnetism"
-    ]
+    ],
+    "authors": [
+      "Sandhya Susarla",
+      "Shanglin Hsu",
+      "Fernando Gómez-Ortiz",
+      "Pablo García-Fernández",
+      "Benjamin H. Savitzky",
+      "Sujit Das",
+      "Piush Behera",
+      "Javier Junquera",
+      "Peter Ercius",
+      "Ramamoorthy Ramesh",
+      "Colin Ophus"
+    ],
+    "journal": "Nature Communications"
   },
   {
     "title": "Uncovering polar vortex structures by inversion of multiple scattering with a stacked Bloch wave model",
@@ -668,7 +1749,17 @@
     "year": 2023,
     "tags": [
       "Simulation"
-    ]
+    ],
+    "authors": [
+      "Steven E. Zeltmann",
+      "Shang-Lin Hsu",
+      "Hamish G. Brown",
+      "Sandhya Susarla",
+      "Ramamoorthy Ramesh",
+      "Andrew M. Minor",
+      "Colin Ophus"
+    ],
+    "journal": "Ultramicroscopy"
   },
   {
     "title": "Multimodal Characterization of Crystal Structure and Formation in Rubrene Thin Films Reveals Erasure of Orientational Discontinuities",
@@ -677,15 +1768,49 @@
     "tags": [
       "In Situ",
       "Crystallography"
-    ]
+    ],
+    "authors": [
+      "Jenna A. Tan",
+      "Jordan T. Dull",
+      "Steven E. Zeltmann",
+      "Jakhangirkhodja A. Tulyagankhodjaev",
+      "Holly M. Johnson",
+      "Alex Liebman‐Peláez",
+      "Brendan D. Folie",
+      "Sven A. Dönges",
+      "Omar Khatib",
+      "Jonathan G. Raybin",
+      "Trevor D. Roberts",
+      "Leo M. Hamerlynck",
+      "Christian P. N. Tanner",
+      "Jina Lee",
+      "Colin Ophus",
+      "Karen C. Bustillo",
+      "Markus B. Raschke",
+      "Hendrik Ohldag",
+      "Andrew M. Minor",
+      "Barry P. Rand",
+      "Naomi S. Ginsberg"
+    ],
+    "journal": "Advanced Functional Materials"
   },
   {
     "title": "Resolution of Virtual Depth Sectioning from Four-Dimensional Scanning Transmission Electron Microscopy",
     "url": "https://doi.org/10.1093/micmic/ozad068",
     "year": 2023,
     "tags": [
-      "Imaging"
-    ]
+      "Imaging",
+      "4DSTEM"
+    ],
+    "authors": [
+      "E W C Terzoudis-Lumsden",
+      "T C Petersen",
+      "H G Brown",
+      "P M Pelz",
+      "C Ophus",
+      "S D Findlay"
+    ],
+    "journal": "Microscopy and Microanalysis"
   },
   {
     "title": "Atomic motifs govern the decoration of grain boundaries by interstitial solutes",
@@ -694,7 +1819,17 @@
     "tags": [
       "Strain",
       "Crystallography"
-    ]
+    ],
+    "authors": [
+      "Xuyang Zhou",
+      "Ali Ahmadian",
+      "Baptiste Gault",
+      "Colin Ophus",
+      "Christian H. Liebscher",
+      "Gerhard Dehm",
+      "Dierk Raabe"
+    ],
+    "journal": "Nature Communications"
   },
   {
     "title": "Probing the atomically diffuse interfaces in Pd\\@Pt core-shell nanoparticles in three dimensions",
@@ -703,7 +1838,19 @@
     "tags": [
       "Nanoparticles",
       "Crystallography"
-    ]
+    ],
+    "authors": [
+      "Zezhou Li",
+      "Zhiheng Xie",
+      "Yao Zhang",
+      "Xilong Mu",
+      "Jisheng Xie",
+      "Hai-Jing Yin",
+      "Ya-Wen Zhang",
+      "Colin Ophus",
+      "Jihan Zhou"
+    ],
+    "journal": "Nature Communications"
   },
   {
     "title": "Defect contrast with 4DSTEM: Understanding crystalline order with virtual detectors and beam modification",
@@ -714,7 +1861,14 @@
       "Strain",
       "Instrumentation",
       "Imaging"
-    ]
+    ],
+    "authors": [
+      "Stephanie M Ribet",
+      "Colin Ophus",
+      "Roberto dos Reis",
+      "Vinayak P Dravid"
+    ],
+    "journal": "Microscopy and Microanalysis"
   },
   {
     "title": "The mechanism of twin thickening and the elastic strain state of TWIP steel nanotwins",
@@ -723,15 +1877,40 @@
     "tags": [
       "Strain",
       "Materials"
-    ]
+    ],
+    "authors": [
+      "T.W.J. Kwok",
+      "T.P. McAuliffe",
+      "A.K. Ackerman",
+      "B.H. Savitzky",
+      "M. Danaie",
+      "C. Ophus",
+      "D. Dye"
+    ],
+    "journal": "Materials Science and Engineering: A"
   },
   {
-    "title": "Rotational and dilational reconstruction in transition Metal dichalcogenide moir\u00e9 bilayers",
+    "title": "Rotational and dilational reconstruction in transition Metal dichalcogenide moiré bilayers",
     "url": "https://doi.org/10.1038/s41467-023-38504-7",
     "year": 2023,
     "tags": [
       "2D Materials"
-    ]
+    ],
+    "authors": [
+      "Madeline Van Winkle",
+      "Isaac M. Craig",
+      "Stephen Carr",
+      "Medha Dandu",
+      "Karen C. Bustillo",
+      "Jim Ciston",
+      "Colin Ophus",
+      "Takashi Taniguchi",
+      "Kenji Watanabe",
+      "Archana Raja",
+      "Sinéad M. Griffin",
+      "D. Kwabena Bediako"
+    ],
+    "journal": "Nature Communications"
   },
   {
     "title": "Multislice electron tomography using four-dimensional scanning transmission electron microscopy",
@@ -739,22 +1918,48 @@
     "year": 2023,
     "tags": [
       "Tomography",
-      "Simulation"
-    ]
+      "Simulation",
+      "4DSTEM"
+    ],
+    "authors": [
+      "Juhyeok Lee",
+      "Moosung Lee",
+      "YongKeun Park",
+      "Colin Ophus",
+      "Yongsoo Yang"
+    ],
+    "journal": "Physical Review Applied"
   },
   {
-    "title": "60$^\\circ$ and 120$^\\circ$ domain walls in epitaxial BaTiO$_3$(111)/Co multiferroic heterostructures",
+    "title": "60° and 120° domain walls in epitaxial BaTiO₃(111)/Co multiferroic heterostructures",
     "url": "https://doi.org/10.1103/PhysRevB.107.L140407",
     "year": 2023,
     "tags": [
-      "Magnetism"
-    ]
+      "Magnetism",
+      "2D Materials"
+    ],
+    "authors": [
+      "Kévin J. A. Franke",
+      "Colin Ophus",
+      "Andreas K. Schmid",
+      "Christopher H. Marrows"
+    ],
+    "journal": "Physical Review B"
   },
   {
-    "title": "Competition between exchange and magnetostatic energies in domain pattern transfer from BaTiO$_3$(111) to a Ni thin film",
+    "title": "Competition between exchange and magnetostatic energies in domain pattern transfer from BaTiO₃(111) to a Ni thin film",
     "url": "https://doi.org/10.1103/PhysRevMaterials.7.034403",
     "year": 2023,
-    "tags": []
+    "tags": [
+      "Magnetism"
+    ],
+    "authors": [
+      "Kévin J. A. Franke",
+      "Colin Ophus",
+      "Andreas K. Schmid",
+      "Christopher H. Marrows"
+    ],
+    "journal": "Physical Review Materials"
   },
   {
     "title": "Robust design of semi-automated clustering models for 4DSTEM datasets",
@@ -763,7 +1968,13 @@
     "tags": [
       "4DSTEM",
       "Machine Learning"
-    ]
+    ],
+    "authors": [
+      "Alexandra Bruefach",
+      "Colin Ophus",
+      "M. C. Scott"
+    ],
+    "journal": "APL Machine Learning"
   },
   {
     "title": "4DSTEM reveals crystallization mechanisms of organic semiconductors on graphene",
@@ -772,7 +1983,17 @@
     "tags": [
       "4DSTEM",
       "2D Materials"
-    ]
+    ],
+    "authors": [
+      "Zixuan Guo",
+      "Colin Ophus",
+      "Karen C. Bustillo",
+      "Ryan Fair",
+      "Stefan C. B. Mannsfeld",
+      "Alejandro L. Briseno",
+      "Enrique D. Gomez"
+    ],
+    "journal": "MRS Communications"
   },
   {
     "title": "Formation of hierarchically ordered structures in conductive polymers to enhance the performances of lithium-ion batteries",
@@ -780,8 +2001,26 @@
     "year": 2023,
     "tags": [
       "In Situ",
-      "Materials"
-    ]
+      "Materials",
+      "Energy Storage"
+    ],
+    "authors": [
+      "Tianyu Zhu",
+      "Hadas Sternlicht",
+      "Yang Ha",
+      "Chen Fang",
+      "Dongye Liu",
+      "Benjamin H. Savitzky",
+      "Xiao Zhao",
+      "Yanying Lu",
+      "Yanbao Fu",
+      "Colin Ophus",
+      "Chenhui Zhu",
+      "Wanli Yang",
+      "Andrew M. Minor",
+      "Gao Liu"
+    ],
+    "journal": "Nature Energy"
   },
   {
     "title": "Spatially resolved structural order in low-temperature liquid electrolyte",
@@ -789,15 +2028,41 @@
     "year": 2023,
     "tags": [
       "Materials"
-    ]
+    ],
+    "authors": [
+      "Yujun Xie",
+      "Jingyang Wang",
+      "Benjamin H. Savitzky",
+      "Zheng Chen",
+      "Yu Wang",
+      "Sophia Betzler",
+      "Karen Bustillo",
+      "Kristin Persson",
+      "Yi Cui",
+      "Lin-Wang Wang",
+      "Colin Ophus",
+      "Peter Ercius",
+      "Haimei Zheng"
+    ],
+    "journal": "Science Advances"
   },
   {
-    "title": "Characterization of the atomic-level structure of $\\gamma$-alumina and (111) Pt/$\\gamma$-alumina interfaces",
+    "title": "Characterization of the atomic-level structure of γ-alumina and (111) Pt/γ-alumina interfaces",
     "url": "https://doi.org/10.1016/j.actamat.2022.118609",
     "year": 2023,
     "tags": [
       "Crystallography"
-    ]
+    ],
+    "authors": [
+      "A.L. Clauser",
+      "K. Oware Sarfo",
+      "R. Giulian",
+      "C. Ophus",
+      "J. Ciston",
+      "L. Árnadóttir",
+      "M.K. Santala"
+    ],
+    "journal": "Acta Materialia"
   },
   {
     "title": "Disentangling multiple scattering with deep learning: application to strain mapping from electron diffraction patterns",
@@ -806,17 +2071,44 @@
     "tags": [
       "Machine Learning",
       "Simulation",
-      "Strain"
-    ]
+      "Strain",
+      "Diffraction"
+    ],
+    "authors": [
+      "Joydeep Munshi",
+      "Alexander Rakowski",
+      "Benjamin H. Savitzky",
+      "Steven E. Zeltmann",
+      "Jim Ciston",
+      "Matthew Henderson",
+      "Shreyas Cholia",
+      "Andrew M. Minor",
+      "Maria K. Y. Chan",
+      "Colin Ophus"
+    ],
+    "journal": "npj Computational Materials"
   },
   {
-    "title": "Strong structural and electronic coupling in metavalent PbS moir\\'e superlattices",
+    "title": "Strong structural and electronic coupling in metavalent PbS moiré superlattices",
     "url": "https://doi.org/10.1021/jacs.2c09947",
     "year": 2022,
     "tags": [
       "2D Materials",
       "Crystallography"
-    ]
+    ],
+    "authors": [
+      "Yu Wang",
+      "Zhigang Song",
+      "Jiawei Wan",
+      "Sophia Betzler",
+      "Yujun Xie",
+      "Colin Ophus",
+      "Karen C. Bustillo",
+      "Peter Ercius",
+      "Lin-Wang Wang",
+      "Haimei Zheng"
+    ],
+    "journal": "Journal of the American Chemical Society"
   },
   {
     "title": "Accurate quantification of lattice temperature dynamics from ultrafast electron diffraction of single-crystal films using dynamical scattering simulations",
@@ -825,8 +2117,17 @@
     "tags": [
       "Simulation",
       "In Situ",
-      "Crystallography"
-    ]
+      "Crystallography",
+      "Diffraction"
+    ],
+    "authors": [
+      "Daniel B. Durham",
+      "Colin Ophus",
+      "Khalid M. Siddiqui",
+      "Andrew M. Minor",
+      "Daniele Filippetto"
+    ],
+    "journal": "Structural Dynamics"
   },
   {
     "title": "Analysis of Interpretable Data Representations for 4DSTEM Using Unsupervised Learning",
@@ -835,13 +2136,35 @@
     "tags": [
       "4DSTEM",
       "Machine Learning"
-    ]
+    ],
+    "authors": [
+      "Alexandra Bruefach",
+      "Colin Ophus",
+      "Mary C Scott"
+    ],
+    "journal": "Microscopy and Microanalysis"
   },
   {
-    "title": "Flexible CO$_2$ Sensor Architecture with Selective Nitrogen Functionalities by One-Step Laser-Induced Conversion of Versatile Organic Ink",
+    "title": "Flexible CO₂ Sensor Architecture with Selective Nitrogen Functionalities by One-Step Laser-Induced Conversion of Versatile Organic Ink",
     "url": "https://doi.org/10.1002/adfm.202207406",
     "year": 2022,
-    "tags": []
+    "tags": [],
+    "authors": [
+      "Huize Wang",
+      "Charles Otieno Ogolla",
+      "Gyanendra Panchal",
+      "Marco Hepp",
+      "Simon Delacroix",
+      "Daniel Cruz",
+      "Danny Kojda",
+      "Jim Ciston",
+      "Colin Ophus",
+      "Axel Knop‐Gericke",
+      "Klaus Habicht",
+      "Benjamin Butz",
+      "Volker Strauss"
+    ],
+    "journal": "Advanced Functional Materials"
   },
   {
     "title": "Deep learning for electron and scanning probe microscopy: From materials design to atomic fabrication",
@@ -850,7 +2173,18 @@
     "tags": [
       "Machine Learning",
       "Instrumentation"
-    ]
+    ],
+    "authors": [
+      "Sergei V. Kalinin",
+      "Maxim Ziatdinov",
+      "Steven R. Spurgeon",
+      "Colin Ophus",
+      "Eric A. Stach",
+      "Toma Susi",
+      "Josh Agar",
+      "John Randall"
+    ],
+    "journal": "MRS Bulletin"
   },
   {
     "title": "Direct strain correlations at the single-atom level in three-dimensional core-shell interface structures",
@@ -861,7 +2195,25 @@
       "Strain",
       "Nanoparticles",
       "Crystallography"
-    ]
+    ],
+    "authors": [
+      "Hyesung Jo",
+      "Dae Han Wi",
+      "Taegu Lee",
+      "Yongmin Kwon",
+      "Chaehwa Jeong",
+      "Juhyeok Lee",
+      "Hionsuck Baik",
+      "Alexander J. Pattison",
+      "Wolfgang Theis",
+      "Colin Ophus",
+      "Peter Ercius",
+      "Yea-Lee Lee",
+      "Seunghwa Ryu",
+      "Sang Woo Han",
+      "Yongsoo Yang"
+    ],
+    "journal": "Nature Communications"
   },
   {
     "title": "Ultrasensitive Sub-monolayer Palladium Induced Chirality Switching and Topological Evolution of Skyrmions",
@@ -870,7 +2222,17 @@
     "tags": [
       "Magnetism",
       "2D Materials"
-    ]
+    ],
+    "authors": [
+      "Gong Chen",
+      "Colin Ophus",
+      "Roberto Lo Conte",
+      "Roland Wiesendanger",
+      "Gen Yin",
+      "Andreas K. Schmid",
+      "Kai Liu"
+    ],
+    "journal": "Nano Letters"
   },
   {
     "title": "A three-dimensional reconstruction algorithm for scanning transmission electron microscopy data from a single sample orientation",
@@ -878,7 +2240,26 @@
     "year": 2022,
     "tags": [
       "Simulation"
-    ]
+    ],
+    "authors": [
+      "Hamish G Brown",
+      "Philipp M Pelz",
+      "Shang-Lin Hsu",
+      "Zimeng Zhang",
+      "Ramamoorthy Ramesh",
+      "Katherine Inzani",
+      "Evan Sheridan",
+      "Sinéad M Griffin",
+      "Marcel Schloz",
+      "Thomas C Pekin",
+      "Christoph T Koch",
+      "Scott D Findlay",
+      "Leslie J Allen",
+      "Mary C Scott",
+      "Colin Ophus",
+      "Jim Ciston"
+    ],
+    "journal": "Microscopy and Microanalysis"
   },
   {
     "title": "Automated Crystal orientation mapping in py4DSTEM using sparse correlation matching",
@@ -888,7 +2269,17 @@
       "4DSTEM",
       "py4DSTEM",
       "Crystallography"
-    ]
+    ],
+    "authors": [
+      "Colin Ophus",
+      "Steven E. Zeltmann",
+      "Alexandra Bruefach",
+      "Alexander Rakowski",
+      "Benjamin H. Savitzky",
+      "Andrew M. Minor",
+      "Mary C. Scott"
+    ],
+    "journal": "Microscopy and Microanalysis"
   },
   {
     "title": "Ion complexation waves emerge at the curved interfaces of layered minerals",
@@ -896,7 +2287,17 @@
     "year": 2022,
     "tags": [
       "Crystallography"
-    ]
+    ],
+    "authors": [
+      "Michael L. Whittaker",
+      "David Ren",
+      "Colin Ophus",
+      "Yugang Zhang",
+      "Laura Waller",
+      "Benjamin Gilbert",
+      "Jillian F. Banfield"
+    ],
+    "journal": "Nature Communications"
   },
   {
     "title": "Seeing structural evolution of organic molecular nano-crystallites using 4DSCED",
@@ -904,23 +2305,55 @@
     "year": 2022,
     "tags": [
       "4DSTEM"
-    ]
+    ],
+    "authors": [],
+    "journal": ""
   },
   {
     "title": "Correlative image learning of chemo-mechanics in phase-transforming solids",
     "url": "https://doi.org/10.1038/s41563-021-01191-0",
     "year": 2022,
-    "tags": []
+    "tags": [],
+    "authors": [
+      "Haitao D. Deng",
+      "Hongbo Zhao",
+      "Norman Jin",
+      "Lauren Hughes",
+      "Benjamin H. Savitzky",
+      "Colin Ophus",
+      "Dimitrios Fraggedakis",
+      "András Borbély",
+      "Young-Sang Yu",
+      "Eder G. Lomeli",
+      "Rui Yan",
+      "Jueyi Liu",
+      "David A. Shapiro",
+      "Wei Cai",
+      "Martin Z. Bazant",
+      "Andrew M. Minor",
+      "William C. Chueh"
+    ],
+    "journal": "Nature Materials"
   },
   {
-    "title": "Mapping 1D Confined Electromagnetic Edge States in 2D Monolayer Semiconducting MoS$_2$ Using 4DSTEM",
+    "title": "Mapping 1D Confined Electromagnetic Edge States in 2D Monolayer Semiconducting MoS₂ Using 4DSTEM",
     "url": "https://doi.org/10.1021/acsnano.2c01170",
     "year": 2022,
     "tags": [
       "4DSTEM",
       "Magnetism",
       "2D Materials"
-    ]
+    ],
+    "authors": [
+      "Yi Wen",
+      "Shiang Fang",
+      "Matthew Coupin",
+      "Yang Lu",
+      "Colin Ophus",
+      "Efthimios Kaxiras",
+      "Jamie H. Warner"
+    ],
+    "journal": "ACS Nano"
   },
   {
     "title": "Cryogenic 4DSTEM analysis of an amorphous-crystalline polymer blend: combined nanocrystalline and amorphous phase mapping",
@@ -931,7 +2364,18 @@
       "Materials",
       "Nanoparticles",
       "Crystallography"
-    ]
+    ],
+    "authors": [
+      "Jennifer Donohue",
+      "Steven E. Zeltmann",
+      "Karen C. Bustillo",
+      "Benjamin Savitzky",
+      "Mary Ann Jones",
+      "Gregory F. Meyers",
+      "Colin Ophus",
+      "Andrew M. Minor"
+    ],
+    "journal": "iScience"
   },
   {
     "title": "Reversible writing/deleting of magnetic skyrmions through hydrogen adsorption/desorption",
@@ -939,7 +2383,19 @@
     "year": 2022,
     "tags": [
       "Magnetism"
-    ]
+    ],
+    "authors": [
+      "Gong Chen",
+      "Colin Ophus",
+      "Alberto Quintana",
+      "Heeyoung Kwon",
+      "Changyeon Won",
+      "Haifeng Ding",
+      "Yizheng Wu",
+      "Andreas K. Schmid",
+      "Kai Liu"
+    ],
+    "journal": "Nature Communications"
   },
   {
     "title": "Machine learning in scanning transmission electron microscopy",
@@ -947,21 +2403,74 @@
     "year": 2022,
     "tags": [
       "Machine Learning"
-    ]
+    ],
+    "authors": [
+      "Sergei V. Kalinin",
+      "Colin Ophus",
+      "Paul M. Voyles",
+      "Rolf Erni",
+      "Demie Kepaptsoglou",
+      "Vincenzo Grillo",
+      "Andrew R. Lupini",
+      "Mark P. Oxley",
+      "Eric Schwenker",
+      "Maria K. Y. Chan",
+      "Joanne Etheridge",
+      "Xiang Li",
+      "Grace G. D. Han",
+      "Maxim Ziatdinov",
+      "Naoya Shibata",
+      "Stephen J. Pennycook"
+    ],
+    "journal": "Nature Reviews Methods Primers"
   },
   {
     "title": "Stabilization and control of persistent current magnets using variable inductance",
     "url": "https://doi.org/10.1088/1361-6668/ac549b",
     "year": 2022,
-    "tags": []
+    "tags": [
+      "Magnetism"
+    ],
+    "authors": [
+      "Lucas Brouwer",
+      "Tengming Shen",
+      "Ryan Norris",
+      "Aurelio Hafalia",
+      "Ross Schlueter",
+      "Li Wang",
+      "Jim Ciston",
+      "Peter Ercius",
+      "Qing Ji",
+      "Marian Mankos",
+      "Colin Ophus",
+      "Alexander Stibor",
+      "Andreas Schmid",
+      "Andrew M Minor",
+      "Peter Denes"
+    ],
+    "journal": "Superconductor Science and Technology"
   },
   {
-    "title": "Visualizing Grain Statistics in MOCVD WSe$_2$ through Four-Dimensional Scanning Transmission Electron Microscopy",
+    "title": "Visualizing Grain Statistics in MOCVD WSe₂ through Four-Dimensional Scanning Transmission Electron Microscopy",
     "url": "https://doi.org/10.1021/acs.nanolett.1c04315",
     "year": 2022,
     "tags": [
-      "2D Materials"
-    ]
+      "2D Materials",
+      "4DSTEM"
+    ],
+    "authors": [
+      "Alejandra Londoño-Calderon",
+      "Rohan Dhall",
+      "Colin Ophus",
+      "Matthew Schneider",
+      "Yongqiang Wang",
+      "Enkeleda Dervishi",
+      "Hee Seong Kang",
+      "Chul-Ho Lee",
+      "Jinkyoung Yoo",
+      "Michael T. Pettes"
+    ],
+    "journal": "Nano Letters"
   },
   {
     "title": "Scattering matrix determination in crystalline materials from 4D scanning transmission electron microscopy at a single defocus value",
@@ -969,7 +2478,16 @@
     "year": 2021,
     "tags": [
       "Simulation"
-    ]
+    ],
+    "authors": [
+      "Scott D. Findlay",
+      "Hamish G. Brown",
+      "Philipp M. Pelz",
+      "Colin Ophus",
+      "Jim Ciston",
+      "Leslie J. Allen"
+    ],
+    "journal": "Microscopy and Microanalysis"
   },
   {
     "title": "Imaging atomic-scale chemistry from fused multi-modal electron microscopy",
@@ -977,17 +2495,47 @@
     "year": 2021,
     "tags": [
       "Imaging"
-    ]
+    ],
+    "authors": [
+      "Jonathan Schwartz",
+      "Zichao Wendy Di",
+      "Yi Jiang",
+      "Alyssa J. Fielitz",
+      "Don-Hyung Ha",
+      "Sanjaya D. Perera",
+      "Ismail El Baggari",
+      "Richard D. Robinson",
+      "Jeffrey A. Fessler",
+      "Colin Ophus",
+      "Steve Rozeveld",
+      "Robert Hovden"
+    ],
+    "journal": "npj Computational Materials"
   },
   {
-    "title": "Correlative analysis of structure and chemistry of Li$_x$FePO$_4$ platelets using 4DSTEM and x-ray ptychography",
+    "title": "Correlative analysis of structure and chemistry of LiₓFePO₄ platelets using 4DSTEM and x-ray ptychography",
     "url": "https://doi.org/10.1016/j.mattod.2021.10.031",
     "year": 2021,
     "tags": [
       "4DSTEM",
       "Ptychography",
       "Spectroscopy"
-    ]
+    ],
+    "authors": [
+      "L.A. Hughes",
+      "Benjamin H. Savitzky",
+      "Haitao D. Deng",
+      "Norman L. Jin",
+      "Eder G. Lomeli",
+      "Young-Sang Yu",
+      "David A. Shapiro",
+      "Patrick Herring",
+      "Abraham Anapolsky",
+      "William C. Chueh",
+      "Colin Ophus",
+      "Andrew M. Minor"
+    ],
+    "journal": "Materials Today"
   },
   {
     "title": "A Fast Algorithm for Scanning Transmission Electron Microscopy Imaging and 4DSTEM Diffraction Simulations",
@@ -996,8 +2544,18 @@
     "tags": [
       "4DSTEM",
       "Simulation",
-      "Imaging"
-    ]
+      "Imaging",
+      "Diffraction"
+    ],
+    "authors": [
+      "Philipp M. Pelz",
+      "Alexander Rakowski",
+      "Luis Rangel DaCosta",
+      "Benjamin H. Savitzky",
+      "Mary C. Scott",
+      "Colin Ophus"
+    ],
+    "journal": "Microscopy and Microanalysis"
   },
   {
     "title": "Prismatic 2.0 - Simulation Software for STEM and HRTEM",
@@ -1006,7 +2564,21 @@
     "tags": [
       "Simulation",
       "Imaging"
-    ]
+    ],
+    "authors": [
+      "Luis Rangel DaCosta",
+      "Hamish G. Brown",
+      "Philipp M. Pelz",
+      "Alexander Rakowski",
+      "Natolya Barber",
+      "Peter O’Donovan",
+      "Patrick McBean",
+      "Lewys Jones",
+      "Jim Ciston",
+      "M.C. Scott",
+      "Colin Ophus"
+    ],
+    "journal": "Micron"
   },
   {
     "title": "Simultaneous Successive Twinning Captured by Atomic Electron Tomography",
@@ -1015,7 +2587,16 @@
     "tags": [
       "Tomography",
       "Strain"
-    ]
+    ],
+    "authors": [
+      "Philipp M. Pelz",
+      "Catherine Groschner",
+      "Alexandra Bruefach",
+      "Adam Satariano",
+      "Colin Ophus",
+      "Mary C. Scott"
+    ],
+    "journal": "ACS Nano"
   },
   {
     "title": "Atomic scale crystal field mapping of polar vortices in oxide superlattices",
@@ -1024,7 +2605,20 @@
     "tags": [
       "Materials",
       "Crystallography"
-    ]
+    ],
+    "authors": [
+      "Sandhya Susarla",
+      "Pablo García-Fernández",
+      "Colin Ophus",
+      "Sujit Das",
+      "Pablo Aguado-Puente",
+      "Margaret McCarter",
+      "Peter Ercius",
+      "Lane W. Martin",
+      "Ramamoorthy Ramesh",
+      "Javier Junquera"
+    ],
+    "journal": "Nature Communications"
   },
   {
     "title": "Real-Time Interactive 4DSTEM Phase-Contrast Imaging From Electron Event Representation Data",
@@ -1034,7 +2628,15 @@
       "4DSTEM",
       "In Situ",
       "Imaging"
-    ]
+    ],
+    "authors": [
+      "Philipp M. Pelz",
+      "Ian Johnson",
+      "Colin Ophus",
+      "Peter Ercius",
+      "Mary C. Scott"
+    ],
+    "journal": "IEEE Signal Processing Magazine"
   },
   {
     "title": "Electric-Field Control of Chirality",
@@ -1042,15 +2644,47 @@
     "year": 2021,
     "tags": [
       "Magnetism"
-    ]
+    ],
+    "authors": [
+      "Piush Behera",
+      "Molly A. May",
+      "Fernando Gómez-Ortiz",
+      "Sandhya Susarla",
+      "Sujit Das",
+      "Christopher T. Nelson",
+      "Lucas Caretta",
+      "Shang-Lin Hsu",
+      "Margaret R. McCarter",
+      "Benjamin H. Savitzky",
+      "Edward S. Barnard",
+      "Archana Raja",
+      "Zijian Hong",
+      "Pablo García-Fernandez",
+      "Stephen W. Lovesey",
+      "Gerrit van der Laan",
+      "Peter Ercius",
+      "Colin Ophus",
+      "Lane W. Martin",
+      "Javier Junquera",
+      "Markus B. Raschke",
+      "Ramamoorthy Ramesh"
+    ],
+    "journal": "Science Advances"
   },
   {
-    "title": "Switching between Magnetic Bloch and N\u00e9el Domain Walls with Anisotropy Modulations",
+    "title": "Switching between Magnetic Bloch and Néel Domain Walls with Anisotropy Modulations",
     "url": "https://doi.org/10.1103/PhysRevLett.127.127203",
     "year": 2021,
     "tags": [
       "Magnetism"
-    ]
+    ],
+    "authors": [
+      "Kévin J. A. Franke",
+      "Colin Ophus",
+      "Andreas K. Schmid",
+      "Christopher H. Marrows"
+    ],
+    "journal": "Physical Review Letters"
   },
   {
     "title": "Nanoscale characterization of crystalline and amorphous phases in silicon oxycarbide ceramics using 4DSTEM",
@@ -1060,19 +2694,51 @@
       "4DSTEM",
       "Materials",
       "Crystallography"
-    ]
+    ],
+    "authors": [
+      "Ni Yang",
+      "Colin Ophus",
+      "Benjamin H. Savitzky",
+      "Mary C. Scott",
+      "Karen Bustillo",
+      "Kathy Lu"
+    ],
+    "journal": "Materials Characterization"
   },
   {
     "title": "Theory and application of the vector pair correlation function for real-space crystallographic analysis of order/disorder correlations from STEM images",
     "url": "https://doi.org/10.1063/5.0058928",
     "year": 2021,
-    "tags": []
+    "tags": [],
+    "authors": [
+      "Stephen D. Funni",
+      "Zi Jin Yang",
+      "Matthew J. Cabral",
+      "Colin Ophus",
+      "Xiang M. Chen",
+      "Elizabeth C. Dickey"
+    ],
+    "journal": "APL Materials"
   },
   {
     "title": "Crystallization by Amorphous Particle Attachment: On the Evolution of Texture",
     "url": "https://doi.org/10.1002/adma.202101358",
     "year": 2021,
-    "tags": []
+    "tags": [],
+    "authors": [
+      "Vanessa Schoeppler",
+      "Deborah Stier",
+      "Richard J. Best",
+      "Chengyu Song",
+      "John Turner",
+      "Benjamin H. Savitzky",
+      "Colin Ophus",
+      "Matthew A. Marcus",
+      "Shiteng Zhao",
+      "Karen Bustillo",
+      "Igor Zlotnikov"
+    ],
+    "journal": "Advanced Materials"
   },
   {
     "title": "Fast Grain Mapping with Sub-Nanometer Resolution Using 4DSTEM with Grain Classification by Principal Component Analysis and Non-Negative Matrix Factorization",
@@ -1081,7 +2747,18 @@
     "tags": [
       "4DSTEM",
       "Imaging"
-    ]
+    ],
+    "authors": [
+      "Frances I. Allen",
+      "Thomas C. Pekin",
+      "Arun Persaud",
+      "Steven J. Rozeveld",
+      "Gregory F. Meyers",
+      "Jim Ciston",
+      "Colin Ophus",
+      "Andrew M. Minor"
+    ],
+    "journal": "Microscopy and Microanalysis"
   },
   {
     "title": "Deep Learning Segmentation of Complex Features in Atomic-Resolution Phase-Contrast Transmission Electron Microscopy Images",
@@ -1090,7 +2767,14 @@
     "tags": [
       "Machine Learning",
       "Imaging"
-    ]
+    ],
+    "authors": [
+      "Robbie Sadre",
+      "Colin Ophus",
+      "Anastasiia Butko",
+      "Gunther H. Weber"
+    ],
+    "journal": "Microscopy and Microanalysis"
   },
   {
     "title": "4DSTEM of beam-sensitive Materials",
@@ -1098,7 +2782,17 @@
     "year": 2021,
     "tags": [
       "4DSTEM"
-    ]
+    ],
+    "authors": [
+      "Karen C. Bustillo",
+      "Steven E. Zeltmann",
+      "Min Chen",
+      "Jennifer Donohue",
+      "Jim Ciston",
+      "Colin Ophus",
+      "Andrew M. Minor"
+    ],
+    "journal": "Accounts of Chemical Research"
   },
   {
     "title": "Percolation of Ion-Irradiation-Induced Disorder in Complex Oxide Interfaces",
@@ -1107,7 +2801,18 @@
     "tags": [
       "Materials",
       "Crystallography"
-    ]
+    ],
+    "authors": [
+      "Bethany E. Matthews",
+      "Michel Sassi",
+      "Christopher Barr",
+      "Colin Ophus",
+      "Tiffany C. Kaspar",
+      "Weilin Jiang",
+      "Khalid Hattar",
+      "Steven R. Spurgeon"
+    ],
+    "journal": "Nano Letters"
   },
   {
     "title": "Phase-contrast imaging of multiply-scattering extended objects at atomic resolution by reconstruction of the scattering matrix",
@@ -1116,7 +2821,20 @@
     "tags": [
       "Simulation",
       "Imaging"
-    ]
+    ],
+    "authors": [
+      "Philipp M. Pelz",
+      "Hamish G. Brown",
+      "Scott Stonemeyer",
+      "Scott D. Findlay",
+      "Alex Zettl",
+      "Peter Ercius",
+      "Yaqian Zhang",
+      "Jim Ciston",
+      "M. C. Scott",
+      "Colin Ophus"
+    ],
+    "journal": "Physical Review Research"
   },
   {
     "title": "py4DSTEM: A Software Package for 4DSTEM Data Analysis",
@@ -1125,7 +2843,34 @@
     "tags": [
       "4DSTEM",
       "py4DSTEM"
-    ]
+    ],
+    "authors": [
+      "Benjamin H. Savitzky",
+      "Steven E. Zeltmann",
+      "Lauren A. Hughes",
+      "Hamish G. Brown",
+      "Shiteng Zhao",
+      "Philipp M. Pelz",
+      "Thomas C. Pekin",
+      "Edward S. Barnard",
+      "Jennifer Donohue",
+      "Luis Rangel DaCosta",
+      "Ellis Kennedy",
+      "Yujun Xie",
+      "Matthew T. Janish",
+      "Matthew M. Schneider",
+      "Patrick Herring",
+      "Chirranjeevi Gopal",
+      "Abraham Anapolsky",
+      "Rohan Dhall",
+      "Karen C. Bustillo",
+      "Peter Ercius",
+      "Mary C. Scott",
+      "Jim Ciston",
+      "Andrew M. Minor",
+      "Colin Ophus"
+    ],
+    "journal": "Microscopy and Microanalysis"
   },
   {
     "title": "The chain of chirality transfer in tellurium nanocrystals",
@@ -1135,7 +2880,23 @@
       "Magnetism",
       "2D Materials",
       "Nanoparticles"
-    ]
+    ],
+    "authors": [
+      "Assaf Ben-Moshe",
+      "Alessandra da Silva",
+      "Alexander Müller",
+      "Anas Abu-Odeh",
+      "Patrick Harrison",
+      "Jacob Waelder",
+      "Farnaz Niroui",
+      "Colin Ophus",
+      "Andrew M. Minor",
+      "Mark Asta",
+      "Wolfgang Theis",
+      "Peter Ercius",
+      "A. Paul Alivisatos"
+    ],
+    "journal": "Science"
   },
   {
     "title": "Extreme mixing in nanoscale transition metal alloys",
@@ -1143,7 +2904,29 @@
     "year": 2021,
     "tags": [
       "Materials"
-    ]
+    ],
+    "authors": [
+      "Yonggang Yao",
+      "Zhennan Huang",
+      "Lauren A. Hughes",
+      "Jinlong Gao",
+      "Tangyuan Li",
+      "David Morris",
+      "Steven Eric Zeltmann",
+      "Benjamin H. Savitzky",
+      "Colin Ophus",
+      "Y. Zou Finfrock",
+      "Qi Dong",
+      "Miaolun Jiao",
+      "Yimin Mao",
+      "Miaofang Chi",
+      "Peng Zhang",
+      "Ju Li",
+      "Andrew M. Minor",
+      "Reza Shahbazian-Yassar",
+      "Liangbing Hu"
+    ],
+    "journal": "Matter"
   },
   {
     "title": "Strain fields in twisted bilayer graphene",
@@ -1152,7 +2935,20 @@
     "tags": [
       "Strain",
       "2D Materials"
-    ]
+    ],
+    "authors": [
+      "Nathanael P. Kazmierczak",
+      "Madeline Van Winkle",
+      "Colin Ophus",
+      "Karen C. Bustillo",
+      "Stephen Carr",
+      "Hamish G. Brown",
+      "Jim Ciston",
+      "Takashi Taniguchi",
+      "Kenji Watanabe",
+      "D. Kwabena Bediako"
+    ],
+    "journal": "Nature Materials"
   },
   {
     "title": "Observation of Hydrogen-Induced Dzyaloshinskii-Moriya Interaction and Reversible Switching of Magnetic Chirality",
@@ -1160,13 +2956,40 @@
     "year": 2021,
     "tags": [
       "Magnetism"
-    ]
+    ],
+    "authors": [
+      "Gong Chen",
+      "MacCallum Robertson",
+      "Markus Hoffmann",
+      "Colin Ophus",
+      "André L. Fernandes Cauduro",
+      "Roberto Lo Conte",
+      "Haifeng Ding",
+      "Roland Wiesendanger",
+      "Stefan Blügel",
+      "Andreas K. Schmid",
+      "Kai Liu"
+    ],
+    "journal": "Physical Review X"
   },
   {
     "title": "Multibeam Electron Diffraction",
     "url": "https://doi.org/10.1017/S1431927620024770",
     "year": 2021,
-    "tags": []
+    "tags": [
+      "Diffraction"
+    ],
+    "authors": [
+      "Xuhao Hong",
+      "Steven E. Zeltmann",
+      "Benjamin H. Savitzky",
+      "Luis Rangel DaCosta",
+      "Alexander Müller",
+      "Andrew M. Minor",
+      "Karen C. Bustillo",
+      "Colin Ophus"
+    ],
+    "journal": "Microscopy and Microanalysis"
   },
   {
     "title": "Local Lattice Deformation of Tellurene Grain Boundaries by Four-Dimensional Electron Microscopy",
@@ -1176,7 +2999,18 @@
       "In Situ",
       "Strain",
       "Crystallography"
-    ]
+    ],
+    "authors": [
+      "Xuhao Hong",
+      "Steven E. Zeltmann",
+      "Benjamin H. Savitzky",
+      "Luis Rangel DaCosta",
+      "Alexander Müller",
+      "Andrew M. Minor",
+      "Karen C. Bustillo",
+      "Colin Ophus"
+    ],
+    "journal": "Microscopy and Microanalysis"
   },
   {
     "title": "Intrinsic helical twist and chirality in ultrathin tellurium nanowires",
@@ -1186,7 +3020,18 @@
       "Magnetism",
       "2D Materials",
       "Nanoparticles"
-    ]
+    ],
+    "authors": [
+      "Alejandra Londoño-Calderon",
+      "Darrick J. Williams",
+      "Matthew M. Schneider",
+      "Benjamin H. Savitzky",
+      "Colin Ophus",
+      "Sijie Ma",
+      "Hanyu Zhu",
+      "Michael T. Pettes"
+    ],
+    "journal": "Nanoscale"
   },
   {
     "title": "Towards data-driven next-generation transmission electron microscopy",
@@ -1194,7 +3039,31 @@
     "year": 2020,
     "tags": [
       "Machine Learning"
-    ]
+    ],
+    "authors": [
+      "Steven R. Spurgeon",
+      "Colin Ophus",
+      "Lewys Jones",
+      "Amanda Petford-Long",
+      "Sergei V. Kalinin",
+      "Matthew J. Olszta",
+      "Rafal E. Dunin-Borkowski",
+      "Norman Salmon",
+      "Khalid Hattar",
+      "Wei-Chang D. Yang",
+      "Renu Sharma",
+      "Yingge Du",
+      "Ann Chiaramonti",
+      "Haimei Zheng",
+      "Edgar C. Buck",
+      "Libor Kovarik",
+      "R. Lee Penn",
+      "Dongsheng Li",
+      "Xin Zhang",
+      "Mitsuhiro Murayama",
+      "Mitra L. Taheri"
+    ],
+    "journal": "Nature Materials"
   },
   {
     "title": "1D to 2D Transition in Tellurium Observed by Four-Dimensional Electron Microscopy",
@@ -1202,7 +3071,14 @@
     "year": 2020,
     "tags": [
       "2D Materials"
-    ]
+    ],
+    "authors": [
+      "Alejandra Londoño‐Calderon",
+      "Darrick J. Williams",
+      "Colin Ophus",
+      "Michael T. Pettes"
+    ],
+    "journal": "Small"
   },
   {
     "title": "Origins of the transformability of nickel-titanium shape memory alloys",
@@ -1210,15 +3086,39 @@
     "year": 2020,
     "tags": [
       "Materials"
-    ]
+    ],
+    "authors": [
+      "Xian Chen",
+      "Colin Ophus",
+      "Chengyu Song",
+      "Jim Ciston",
+      "Sambit Das",
+      "Yintao Song",
+      "Yuriy Chumlyakov",
+      "Andrew M. Minor",
+      "Vikram Gavini",
+      "Richard D. James"
+    ],
+    "journal": "Physical Review Materials"
   },
   {
-    "title": "Orientation and morphology of Pt nanoparticles in $\\gamma$-alumina processed via ion implantation and thermal annealing",
+    "title": "Orientation and morphology of Pt nanoparticles in γ-alumina processed via ion implantation and thermal annealing",
     "url": "https://doi.org/10.1016/j.scriptamat.2020.06.058",
     "year": 2020,
     "tags": [
       "Nanoparticles"
-    ]
+    ],
+    "authors": [
+      "Arielle L. Clauser",
+      "Raquel Giulian",
+      "Zachary D. McClure",
+      "Kofi Oware Sarfo",
+      "Colin Ophus",
+      "Jim Ciston",
+      "Líney Árnadóttir",
+      "Melissa K. Santala"
+    ],
+    "journal": "Scripta Materialia"
   },
   {
     "title": "Hybrid nanocapsules for _in situ_ TEM imaging of gas evolution reactions in confined liquids",
@@ -1227,32 +3127,83 @@
     "tags": [
       "In Situ",
       "Imaging"
-    ]
+    ],
+    "authors": [
+      "Sardar B. Alam",
+      "Jiwoong Yang",
+      "Karen C. Bustillo",
+      "Colin Ophus",
+      "Peter Ercius",
+      "Haimei Zheng",
+      "Emory M. Chan"
+    ],
+    "journal": "Nanoscale"
   },
   {
-    "title": "Creation of skyrmions in van der Waals ferromagnet Fe$_3$GeTe$_2$ on (Co/Pd)$_n$ superlattice",
+    "title": "Creation of skyrmions in van der Waals ferromagnet Fe₃GeTe₂ on (Co/Pd)ₙ superlattice",
     "url": "https://doi.org/10.1126/sciadv.abb5157",
     "year": 2020,
     "tags": [
       "Magnetism",
       "2D Materials",
       "Crystallography"
-    ]
+    ],
+    "authors": [
+      "M. Yang",
+      "Q. Li",
+      "R. V. Chopdekar",
+      "R. Dhall",
+      "J. Turner",
+      "J. D. Carlström",
+      "C. Ophus",
+      "C. Klewe",
+      "P. Shafer",
+      "A. T. N’Diaye",
+      "J. W. Choi",
+      "G. Chen",
+      "Y. Z. Wu",
+      "C. Hwang",
+      "F. Wang",
+      "Z. Q. Qiu"
+    ],
+    "journal": "Science Advances"
   },
   {
     "title": "Tilted fluctuation electron microscopy",
     "url": "https://doi.org/10.1063/5.0015532",
     "year": 2020,
-    "tags": []
+    "tags": [],
+    "authors": [
+      "Ellis Kennedy",
+      "Neal Reynolds",
+      "Luis Rangel DaCosta",
+      "Frances Hellman",
+      "Colin Ophus",
+      "M. C. Scott"
+    ],
+    "journal": "Applied Physics Letters"
   },
   {
-    "title": "Highly Active Rutile TiO$_2$ Nanocrystalline Photocatalysts",
+    "title": "Highly Active Rutile TiO₂ Nanocrystalline Photocatalysts",
     "url": "https://doi.org/10.1021/acsami.0c03150",
     "year": 2020,
     "tags": [
       "Materials",
-      "Nanoparticles"
-    ]
+      "Nanoparticles",
+      "Catalysis"
+    ],
+    "authors": [
+      "Veljko R. Djokić",
+      "Aleksandar D. Marinković",
+      "Rada D. Petrović",
+      "Ovidiu Ersen",
+      "Spyridon Zafeiratos",
+      "Miodrag Mitrić",
+      "Colin Ophus",
+      "Velimir R. Radmilović",
+      "Djordje T. Janaćković"
+    ],
+    "journal": "ACS Applied Materials & Interfaces"
   },
   {
     "title": "Short-range order and its impact on the CrCoNi medium-entropy alloy",
@@ -1260,7 +3211,19 @@
     "year": 2020,
     "tags": [
       "Materials"
-    ]
+    ],
+    "authors": [
+      "Ruopeng Zhang",
+      "Shiteng Zhao",
+      "Jun Ding",
+      "Yan Chong",
+      "Tao Jia",
+      "Colin Ophus",
+      "Mark Asta",
+      "Robert O. Ritchie",
+      "Andrew M. Minor"
+    ],
+    "journal": "Nature"
   },
   {
     "title": "Tuning the Properties of Zero-Field Room Temperature Ferromagnetic Skyrmions by Interlayer Exchange Coupling",
@@ -1268,7 +3231,21 @@
     "year": 2020,
     "tags": [
       "Magnetism"
-    ]
+    ],
+    "authors": [
+      "Roberto Lo Conte",
+      "Ashis K. Nandy",
+      "Gong Chen",
+      "Andre L. Fernandes Cauduro",
+      "Ajanta Maity",
+      "Colin Ophus",
+      "Zhijie Chen",
+      "Alpha T. N’Diaye",
+      "Kai Liu",
+      "Andreas K. Schmid",
+      "Roland Wiesendanger"
+    ],
+    "journal": "Nano Letters"
   },
   {
     "title": "Atomic structures determined from digitally defined nanocrystalline regions",
@@ -1276,13 +3253,31 @@
     "year": 2020,
     "tags": [
       "Nanoparticles"
-    ]
+    ],
+    "authors": [
+      "Marcus Gallagher-Jones",
+      "Karen C. Bustillo",
+      "Colin Ophus",
+      "Logan S. Richards",
+      "Jim Ciston",
+      "Sangho Lee",
+      "Andrew M. Minor",
+      "Jose A. Rodriguez"
+    ],
+    "journal": "IUCrJ"
   },
   {
     "title": "Structural Implications of Interfacial Hydrogen Bonding in Hydrated Wyoming-Montmorillonite Clay",
     "url": "https://doi.org/10.1021/acs.jpcc.9b11339",
     "year": 2020,
-    "tags": []
+    "tags": [],
+    "authors": [
+      "Nithya Subramanian",
+      "Michael L. Whittaker",
+      "Colin Ophus",
+      "Laura N. Lammers"
+    ],
+    "journal": "The Journal of Physical Chemistry C"
   },
   {
     "title": "Patterned Probes for High Precision 4DSTEM Bragg Measurements",
@@ -1291,7 +3286,17 @@
     "tags": [
       "4DSTEM",
       "Instrumentation"
-    ]
+    ],
+    "authors": [
+      "Steven E Zeltmann",
+      "Alexander Müller",
+      "Karen C Bustillo",
+      "Benjamin Savitzky",
+      "Lauren Hughes",
+      "Andrew M Minor",
+      "Colin Ophus"
+    ],
+    "journal": "Ultramicroscopy"
   },
   {
     "title": "Design and Synthesis of Multigrain Nanocrystals via Geometric Misfit Strain",
@@ -1300,7 +3305,28 @@
     "tags": [
       "Strain",
       "Nanoparticles"
-    ]
+    ],
+    "authors": [
+      "Myoung Hwan Oh",
+      "Min Gee Cho",
+      "Dong Young Chung",
+      "Inchul Park",
+      "Youngwook Paul Kwon",
+      "Colin Ophus",
+      "Dokyoon Kim",
+      "Min Gyu Kim",
+      "Beomgyun Jeong",
+      "X. Wendy Gu",
+      "Jinwoung Jo",
+      "Ji Mun Yoo",
+      "Jaeyoung Hong",
+      "Sara McMains",
+      "Kisuk Kang",
+      "Yung-Eun Sung",
+      "A. Paul Alivisatos",
+      "Taeghwan Hyeon"
+    ],
+    "journal": "Nature"
   },
   {
     "title": "Linear-scaling algorithm for rapid computation of inelastic transitions in the presence of multiple electron scattering",
@@ -1308,7 +3334,13 @@
     "year": 2020,
     "tags": [
       "Simulation"
-    ]
+    ],
+    "authors": [
+      "Hamish G. Brown",
+      "Jim Ciston",
+      "Colin Ophus"
+    ],
+    "journal": "Physical Review Research"
   },
   {
     "title": "A multiple scattering algorithm for 3D phase contrast AET",
@@ -1319,7 +3351,14 @@
       "Simulation",
       "Phase Contrast",
       "Imaging"
-    ]
+    ],
+    "authors": [
+      "David Ren",
+      "Colin Ophus",
+      "Michael Chen",
+      "Laura Waller"
+    ],
+    "journal": "Ultramicroscopy"
   },
   {
     "title": "Functional Materials Under Stress: In Situ TEM Observations of Structural Evolution",
@@ -1327,7 +3366,25 @@
     "year": 2019,
     "tags": [
       "In Situ"
-    ]
+    ],
+    "authors": [
+      "Yu Deng",
+      "Ruopeng Zhang",
+      "Thomas C. Pekin",
+      "Christoph Gammer",
+      "Jim Ciston",
+      "Peter Ercius",
+      "Colin Ophus",
+      "Karen Bustillo",
+      "Chengyu Song",
+      "Shiteng Zhao",
+      "Hua Guo",
+      "Yunlei Zhao",
+      "Hongliang Dong",
+      "Zhiqiang Chen",
+      "Andrew M. Minor"
+    ],
+    "journal": "Advanced Materials"
   },
   {
     "title": "Real time imaging of two-dimensional iron oxide spherulite nanostructure formation",
@@ -1339,13 +3396,74 @@
       "2D Materials",
       "Nanoparticles",
       "Imaging"
-    ]
+    ],
+    "authors": [
+      "Wenjing Zheng",
+      "Matthew R. Hauwiller",
+      "Wen-I Liang",
+      "Colin Ophus",
+      "Peter Ercius",
+      "Emory M. Chan",
+      "Ying-Hao Chu",
+      "Mark Asta",
+      "Xiwen Du",
+      "A. Paul Alivisatos",
+      "Haimei Zheng"
+    ],
+    "journal": "Nano Research"
   },
   {
     "title": "The Materials Research Platform: Defining the Requirements from User Stories",
     "url": "https://doi.org/10.1016/j.matt.2019.10.024",
     "year": 2019,
-    "tags": []
+    "tags": [],
+    "authors": [
+      "Muratahan Aykol",
+      "Jens S. Hummelshøj",
+      "Abraham Anapolsky",
+      "Koutarou Aoyagi",
+      "Martin Z. Bazant",
+      "Thomas Bligaard",
+      "Richard D. Braatz",
+      "Scott Broderick",
+      "Daniel Cogswell",
+      "John Dagdelen",
+      "Walter Drisdell",
+      "Edwin Garcia",
+      "Krishna Garikipati",
+      "Vikram Gavini",
+      "William E. Gent",
+      "Livia Giordano",
+      "Carla P. Gomes",
+      "Rafael Gomez-Bombarelli",
+      "Chirranjeevi Balaji Gopal",
+      "John M. Gregoire",
+      "Jeffrey C. Grossman",
+      "Patrick Herring",
+      "Linda Hung",
+      "Thomas F. Jaramillo",
+      "Laurie King",
+      "Ha-Kyung Kwon",
+      "Ryosuke Maekawa",
+      "Andrew M. Minor",
+      "Joseph H. Montoya",
+      "Tim Mueller",
+      "Colin Ophus",
+      "Krishna Rajan",
+      "Rampi Ramprasad",
+      "Brian Rohr",
+      "Daniel Schweigert",
+      "Yang Shao-Horn",
+      "Yoshinori Suga",
+      "Santosh K. Suram",
+      "Venkatasubramanian Viswanathan",
+      "Jay F. Whitacre",
+      "Adam P. Willard",
+      "Olga Wodo",
+      "Chris Wolverton",
+      "Brian D. Storey"
+    ],
+    "journal": "Matter"
   },
   {
     "title": "Hierarchically-structured large superelastic deformation in ferroelastic-ferroelectrics",
@@ -1354,33 +3472,94 @@
     "tags": [
       "In Situ",
       "Strain"
-    ]
+    ],
+    "authors": [
+      "Yu Deng",
+      "Christoph Gammer",
+      "Jim Ciston",
+      "Peter Ercius",
+      "Colin Ophus",
+      "Karen Bustillo",
+      "Chengyu Song",
+      "Ruopeng Zhang",
+      "Di Wu",
+      "Youwei Du",
+      "Zhiqiang Chen",
+      "Hongliang Dong",
+      "Armen G. Khachaturyan",
+      "Andrew M. Minor"
+    ],
+    "journal": "Acta Materialia"
   },
   {
-    "title": "Direct imaging of short-range order and its relationship to deformation in Ti$_6$Al",
+    "title": "Direct imaging of short-range order and its relationship to deformation in Ti₆Al",
     "url": "https://dx.doi.org/10.1126/sciadv.aax2799",
     "year": 2019,
     "tags": [
       "In Situ",
       "Strain",
       "Imaging"
-    ]
+    ],
+    "authors": [
+      "Ruopeng Zhang",
+      "Shiteng Zhao",
+      "Colin Ophus",
+      "Yu Deng",
+      "Shraddha J. Vachhani",
+      "Burak Ozdol",
+      "Rachel Traylor",
+      "Karen C. Bustillo",
+      "J. W. Morris",
+      "Daryl C. Chrzan",
+      "Mark Asta",
+      "Andrew M. Minor"
+    ],
+    "journal": "Science Advances"
   },
   {
-    "title": "Nanoscale stacking-fault-assisted room temperature plasticity in flash-sintered TiO$_2$",
+    "title": "Nanoscale stacking-fault-assisted room temperature plasticity in flash-sintered TiO₂",
     "url": "https://doi.org/10.1126/sciadv.aaw5519",
     "year": 2019,
     "tags": [
       "Crystallography"
-    ]
+    ],
+    "authors": [
+      "Jin Li",
+      "Jaehun Cho",
+      "Jie Ding",
+      "Harry Charalambous",
+      "Sichuang Xue",
+      "Han Wang",
+      "Xin Li Phuah",
+      "Jie Jian",
+      "Xuejing Wang",
+      "Colin Ophus",
+      "Thomas Tsakalakos",
+      "R. Edwin García",
+      "Amiya K. Mukherjee",
+      "Noam Bernstein",
+      "C. Stephen Hellberg",
+      "Haiyan Wang",
+      "Xinghang Zhang"
+    ],
+    "journal": "Science Advances"
   },
   {
-    "title": "Nanoscale oxygen defect gradients in UO$_{2+x}$ surfaces",
+    "title": "Nanoscale oxygen defect gradients in UO₂₊ₓ surfaces",
     "url": "https://doi.org/10.1073/pnas.1905056116",
     "year": 2019,
     "tags": [
       "Strain"
-    ]
+    ],
+    "authors": [
+      "Steven R. Spurgeon",
+      "Michel Sassi",
+      "Colin Ophus",
+      "Joanne E. Stubbs",
+      "Eugene S. Ilton",
+      "Edgar C. Buck"
+    ],
+    "journal": "Proceedings of the National Academy of Sciences"
   },
   {
     "title": "Simultaneous Identification of Low and High Atomic Number Atoms in Monolayer 2D Materials Using 4D Scanning Transmission Electron Microscopy",
@@ -1388,7 +3567,18 @@
     "year": 2019,
     "tags": [
       "2D Materials"
-    ]
+    ],
+    "authors": [
+      "Yi Wen",
+      "Colin Ophus",
+      "Christopher S. Allen",
+      "Shiang Fang",
+      "Jun Chen",
+      "Efthimios Kaxiras",
+      "Angus I. Kirkland",
+      "Jamie H. Warner"
+    ],
+    "journal": "Nano Letters"
   },
   {
     "title": "Formation of two-dimensional transition metal oxide nanosheets with nanoparticles as intermediates",
@@ -1399,7 +3589,23 @@
       "Materials",
       "2D Materials",
       "Nanoparticles"
-    ]
+    ],
+    "authors": [
+      "Juan Yang",
+      "Zhiyuan Zeng",
+      "Jun Kang",
+      "Sophia Betzler",
+      "Cory Czarnik",
+      "Xiaowei Zhang",
+      "Colin Ophus",
+      "Chang Yu",
+      "Karen Bustillo",
+      "Ming Pan",
+      "Jieshan Qiu",
+      "Lin-Wang Wang",
+      "Haimei Zheng"
+    ],
+    "journal": "Nature Materials"
   },
   {
     "title": "Observing crystal nucleation in four dimensions using atomic electron tomography",
@@ -1408,7 +3614,25 @@
     "tags": [
       "Tomography",
       "In Situ"
-    ]
+    ],
+    "authors": [
+      "Jihan Zhou",
+      "Yongsoo Yang",
+      "Yao Yang",
+      "Dennis S. Kim",
+      "Andrew Yuan",
+      "Xuezeng Tian",
+      "Colin Ophus",
+      "Fan Sun",
+      "Andreas K. Schmid",
+      "Michael Nathanson",
+      "Hendrik Heinz",
+      "Qi An",
+      "Hao Zeng",
+      "Peter Ercius",
+      "Jianwei Miao"
+    ],
+    "journal": "Nature"
   },
   {
     "title": "4DSTEM: From scanning nanodiffraction to ptychography and beyond",
@@ -1416,18 +3640,34 @@
     "year": 2019,
     "tags": [
       "4DSTEM",
-      "Ptychography"
-    ]
+      "Ptychography",
+      "Diffraction"
+    ],
+    "authors": [
+      "Colin Ophus"
+    ],
+    "journal": "Microscopy and Microanalysis"
   },
   {
-    "title": "Interplay between Short\u2010and Long\u2010Ranged Forces Leading to the Formation of Ag Nanoparticle Superlattice",
+    "title": "Interplay between Short‐and Long‐Ranged Forces Leading to the Formation of Ag Nanoparticle Superlattice",
     "url": "https://doi.org/10.1002/smll.201901966",
     "year": 2019,
     "tags": [
       "In Situ",
       "Nanoparticles",
       "Crystallography"
-    ]
+    ],
+    "authors": [
+      "Jaewon Lee",
+      "Elias Nakouzi",
+      "Dongdong Xiao",
+      "Zhigang Wu",
+      "Miao Song",
+      "Colin Ophus",
+      "Jaehun Chun",
+      "Dongsheng Li"
+    ],
+    "journal": "Small"
   },
   {
     "title": "Dynamic deformability of individual PbSe nanocrystals during superlattice phase transitions",
@@ -1436,7 +3676,21 @@
     "tags": [
       "Nanoparticles",
       "Crystallography"
-    ]
+    ],
+    "authors": [
+      "Yu Wang",
+      "Xinxing Peng",
+      "Alex Abelson",
+      "Penghao Xiao",
+      "Caroline Qian",
+      "Lei Yu",
+      "Colin Ophus",
+      "Peter Ercius",
+      "Lin-Wang Wang",
+      "Matt Law",
+      "Haimei Zheng"
+    ],
+    "journal": "Science Advances"
   },
   {
     "title": "Diffraction imaging of nanocrystalline structures in organic semiconductor molecular thin films",
@@ -1445,8 +3699,20 @@
     "tags": [
       "Nanoparticles",
       "Crystallography",
-      "Imaging"
-    ]
+      "Imaging",
+      "Diffraction"
+    ],
+    "authors": [
+      "Ouliana Panova",
+      "Colin Ophus",
+      "Christopher J. Takacs",
+      "Karen C. Bustillo",
+      "Luke Balhorn",
+      "Alberto Salleo",
+      "Nitash Balsara",
+      "Andrew M. Minor"
+    ],
+    "journal": "Nature Materials"
   },
   {
     "title": "Direct measurement of nanostructural change during in situ deformation of a bulk metallic glass",
@@ -1455,7 +3721,18 @@
     "tags": [
       "In Situ",
       "Strain"
-    ]
+    ],
+    "authors": [
+      "Thomas C. Pekin",
+      "Jun Ding",
+      "Christoph Gammer",
+      "Burak Ozdol",
+      "Colin Ophus",
+      "Mark Asta",
+      "Robert O. Ritchie",
+      "Andrew M. Minor"
+    ],
+    "journal": "Nature Communications"
   },
   {
     "title": "Observation of room-temperature polar skyrmions",
@@ -1463,7 +3740,37 @@
     "year": 2019,
     "tags": [
       "Magnetism"
-    ]
+    ],
+    "authors": [
+      "S. Das",
+      "Y. L. Tang",
+      "Z. Hong",
+      "M. A. P. Gonçalves",
+      "M. R. McCarter",
+      "C. Klewe",
+      "K. X. Nguyen",
+      "F. Gómez-Ortiz",
+      "P. Shafer",
+      "E. Arenholz",
+      "V. A. Stoica",
+      "S.-L. Hsu",
+      "B. Wang",
+      "C. Ophus",
+      "J. F. Liu",
+      "C. T. Nelson",
+      "S. Saremi",
+      "B. Prasad",
+      "A. B. Mei",
+      "D. G. Schlom",
+      "J. Íñiguez",
+      "P. García-Fernández",
+      "D. A. Muller",
+      "L. Q. Chen",
+      "J. Junquera",
+      "L. W. Martin",
+      "R. Ramesh"
+    ],
+    "journal": "Nature"
   },
   {
     "title": "Atomic electrostatic maps of 1D channels in 2D semiconductors using 4D scanning transmission electron microscopy",
@@ -1471,29 +3778,81 @@
     "year": 2019,
     "tags": [
       "2D Materials"
-    ]
+    ],
+    "authors": [
+      "Shiang Fang",
+      "Yi Wen",
+      "Christopher S. Allen",
+      "Colin Ophus",
+      "Grace G. D. Han",
+      "Angus I. Kirkland",
+      "Efthimios Kaxiras",
+      "Jamie H. Warner"
+    ],
+    "journal": "Nature Communications"
   },
   {
     "title": "Hidden structural and chemical order controls lithium transport in cation-disordered oxides for rechargeable batteries",
     "url": "https://doi.org/10.1038/s41467-019-08490-w",
     "year": 2019,
     "tags": [
-      "Materials"
-    ]
+      "Materials",
+      "Energy Storage"
+    ],
+    "authors": [
+      "Huiwen Ji",
+      "Alexander Urban",
+      "Daniil A. Kitchaev",
+      "Deok-Hwang Kwon",
+      "Nongnuch Artrith",
+      "Colin Ophus",
+      "Wenxuan Huang",
+      "Zijian Cai",
+      "Tan Shi",
+      "Jae Chul Kim",
+      "Haegyeom Kim",
+      "Gerbrand Ceder"
+    ],
+    "journal": "Nature Communications"
   },
   {
     "title": "Resolving the Morphology of Peptoid Vesicles at the One Nanometer Length-Scale Using Cryogenic Electron Microscopy",
     "url": "https://doi.org/10.1021/acs.jpcb.8b11752",
     "year": 2019,
-    "tags": []
+    "tags": [],
+    "authors": [
+      "Xi Jiang",
+      "Ryan K. Spencer",
+      "Jing Sun",
+      "Colin Ophus",
+      "Ronald N. Zuckermann",
+      "Kenneth H. Downing",
+      "Nitash P. Balsara"
+    ],
+    "journal": "The Journal of Physical Chemistry B"
   },
   {
     "title": "Nanoscale mosaicity revealed in peptide microcrystals by scanning electron nanodiffraction",
     "url": "https://doi.org/10.1038/s42003-018-0263-8",
     "year": 2019,
     "tags": [
-      "4DSTEM"
-    ]
+      "4DSTEM",
+      "Diffraction"
+    ],
+    "authors": [
+      "Marcus Gallagher-Jones",
+      "Colin Ophus",
+      "Karen C. Bustillo",
+      "David R. Boyer",
+      "Ouliana Panova",
+      "Calina Glynn",
+      "Chih-Te Zee",
+      "Jim Ciston",
+      "Kevin Canton Mancia",
+      "Andrew M. Minor",
+      "Jose A. Rodriguez"
+    ],
+    "journal": "Communications Biology"
   },
   {
     "title": "Interpretable and efficient interferometric contrast in scanning transmission electron microscopy with a diffraction grating beamsplitter",
@@ -1503,8 +3862,24 @@
       "4DSTEM",
       "Phase Contrast",
       "Instrumentation",
-      "Imaging"
-    ]
+      "Imaging",
+      "Diffraction"
+    ],
+    "authors": [
+      "Tyler R. Harvey",
+      "Fehmi S. Yasin",
+      "Jordan J. Chess",
+      "Jordan S. Pierce",
+      "Roberto M. S. dos Reis",
+      "Vasfi Burak Özdöl",
+      "Peter Ercius",
+      "Jim Ciston",
+      "Wenchun Feng",
+      "Nicholas A. Kotov",
+      "Benjamin J. McMorran",
+      "Colin Ophus"
+    ],
+    "journal": "Physical Review Applied"
   },
   {
     "title": "Structure retrieval at atomic resolution in the presence of multiple scattering of the electron probe",
@@ -1514,7 +3889,17 @@
       "Simulation",
       "Instrumentation",
       "Imaging"
-    ]
+    ],
+    "authors": [
+      "H. G. Brown",
+      "Z. Chen",
+      "M. Weyland",
+      "C. Ophus",
+      "J. Ciston",
+      "L. J. Allen",
+      "S. D. Findlay"
+    ],
+    "journal": "Physical Review Letters"
   },
   {
     "title": "Segregation-Induced Nanofaceting Transition at an Asymmetric Tilt Grain Boundary in Copper",
@@ -1522,13 +3907,33 @@
     "year": 2018,
     "tags": [
       "Crystallography"
-    ]
+    ],
+    "authors": [
+      "Nicolas J. Peter",
+      "Timofey Frolov",
+      "Maria J. Duarte",
+      "Raheleh Hadian",
+      "Colin Ophus",
+      "Christoph Kirchlechner",
+      "Christian H. Liebscher",
+      "Gerhard Dehm"
+    ],
+    "journal": "Physical Review Letters"
   },
   {
     "title": "ScienceSearch: Enabling Search through Automatic Metadata Generation",
     "url": "https://doi.org/10.1109/eScience.2018.00025",
     "year": 2018,
-    "tags": []
+    "tags": [],
+    "authors": [
+      "Gonzalo P. Rodrigo",
+      "Matt Henderson",
+      "Gunther H. Weber",
+      "Colin Ophus",
+      "Katie Antypas",
+      "Lavanya Ramakrishnan"
+    ],
+    "journal": "2018 IEEE 14th International Conference on e-Science (e-Science)"
   },
   {
     "title": "Subsampled STEM-ptychography",
@@ -1536,7 +3941,17 @@
     "year": 2018,
     "tags": [
       "Ptychography"
-    ]
+    ],
+    "authors": [
+      "Andrew Stevens",
+      "Hao Yang",
+      "Weituo Hao",
+      "Lewys Jones",
+      "Colin Ophus",
+      "Peter D. Nellist",
+      "Nigel D. Browning"
+    ],
+    "journal": "Applied Physics Letters"
   },
   {
     "title": "Imaging Unstained Synthetic Polymer Crystals and Defects on Atomic Length Scales Using Cryogenic Electron Microscopy",
@@ -1546,7 +3961,19 @@
       "Strain",
       "Materials",
       "Imaging"
-    ]
+    ],
+    "authors": [
+      "Xi Jiang",
+      "Douglas R. Greer",
+      "Joyjit Kundu",
+      "Colin Ophus",
+      "Andrew M. Minor",
+      "David Prendergast",
+      "Ronald N. Zuckermann",
+      "Nitash P. Balsara",
+      "Kenneth H. Downing"
+    ],
+    "journal": "Macromolecules"
   },
   {
     "title": "Dynamics of Nanoscale Dendrite Formation in Solution Growth Revealed Through in Situ Liquid Cell Electron Microscopy",
@@ -1554,7 +3981,27 @@
     "year": 2018,
     "tags": [
       "In Situ"
-    ]
+    ],
+    "authors": [
+      "Matthew R. Hauwiller",
+      "Xiaowei Zhang",
+      "Wen-I Liang",
+      "Chung-Hua Chiu",
+      "Qian Zhang",
+      "Wenjing Zheng",
+      "Colin Ophus",
+      "Emory M. Chan",
+      "Cory Czarnik",
+      "Ming Pan",
+      "Frances M. Ross",
+      "Wen-Wei Wu",
+      "Yin-Hao Chu",
+      "Mark Asta",
+      "Peter W. Voorhees",
+      "A. Paul Alivisatos",
+      "Haimei Zheng"
+    ],
+    "journal": "Nano Letters"
   },
   {
     "title": "Probing Light Atoms at Subnanometer Resolution: Realization of Scanning Transmission Electron Microscope Holography",
@@ -1562,15 +4009,38 @@
     "year": 2018,
     "tags": [
       "Imaging"
-    ]
+    ],
+    "authors": [
+      "Fehmi S. Yasin",
+      "Tyler R. Harvey",
+      "Jordan J. Chess",
+      "Jordan S. Pierce",
+      "Colin Ophus",
+      "Peter Ercius",
+      "Benjamin J. McMorran"
+    ],
+    "journal": "Nano Letters"
   },
   {
     "title": "Effect of composition on the structure of lithium- and manganese-rich transition metal oxides",
     "url": "https://doi.org/10.1039/C7EE02443F",
     "year": 2018,
     "tags": [
-      "Materials"
-    ]
+      "Materials",
+      "Energy Storage"
+    ],
+    "authors": [
+      "Alpesh Khushalchand Shukla",
+      "Quentin M. Ramasse",
+      "Colin Ophus",
+      "Despoina Maria Kepaptsoglou",
+      "Fredrik S. Hage",
+      "Christoph Gammer",
+      "Charles Bowling",
+      "Pedro Alejandro Hernández Gallegos",
+      "Subramanian Venkatachalam"
+    ],
+    "journal": "Energy & Environmental Science"
   },
   {
     "title": "Towards bend-contour-free dislocation imaging via diffraction contrast STEM",
@@ -1578,8 +4048,16 @@
     "year": 2018,
     "tags": [
       "Strain",
-      "Imaging"
-    ]
+      "Imaging",
+      "Diffraction"
+    ],
+    "authors": [
+      "Yuanyuan Zhu",
+      "Colin Ophus",
+      "Mychailo B. Toloczko",
+      "Danny J. Edwards"
+    ],
+    "journal": "Ultramicroscopy"
   },
   {
     "title": "Experimental Evidence of Chiral Ferrimagnetism in Amorphous GdCo Films",
@@ -1587,7 +4065,18 @@
     "year": 2018,
     "tags": [
       "Magnetism"
-    ]
+    ],
+    "authors": [
+      "Robert Streubel",
+      "Charles‐Henri Lambert",
+      "Noah Kent",
+      "Peter Ercius",
+      "Alpha T. N'Diaye",
+      "Colin Ophus",
+      "Sayeef Salahuddin",
+      "Peter Fischer"
+    ],
+    "journal": "Advanced Materials"
   },
   {
     "title": "Local nanoscale strain mapping of a metallic glass during in situ testing",
@@ -1596,7 +4085,15 @@
     "tags": [
       "In Situ",
       "Strain"
-    ]
+    ],
+    "authors": [
+      "Christoph Gammer",
+      "Colin Ophus",
+      "Thomas C. Pekin",
+      "Jürgen Eckert",
+      "Andrew M. Minor"
+    ],
+    "journal": "Applied Physics Letters"
   },
   {
     "title": "Multiscale analysis of nanoindentation-induced defect structures in gum metal",
@@ -1605,7 +4102,18 @@
     "tags": [
       "Strain",
       "Nanoparticles"
-    ]
+    ],
+    "authors": [
+      "R.P. Sankaran",
+      "V.B. Ozdol",
+      "C. Ophus",
+      "J. Kacher",
+      "C. Gammer",
+      "S. Govindjee",
+      "A.M. Minor",
+      "J.W. Morris"
+    ],
+    "journal": "Acta Materialia"
   },
   {
     "title": "Determination of the structural phase and octahedral rotation angle in halide perovskites",
@@ -1613,7 +4121,20 @@
     "year": 2018,
     "tags": [
       "Materials"
-    ]
+    ],
+    "authors": [
+      "Roberto dos Reis",
+      "Hao Yang",
+      "Colin Ophus",
+      "Peter Ercius",
+      "Gregory Bizarri",
+      "Didier Perrodin",
+      "Tetiana Shalapska",
+      "Edith Bourret",
+      "Jim Ciston",
+      "Ulrich Dahmen"
+    ],
+    "journal": "Applied Physics Letters"
   },
   {
     "title": "A streaming multi-GPU implementation of image simulation algorithms for STEM",
@@ -1621,7 +4142,13 @@
     "year": 2017,
     "tags": [
       "Simulation"
-    ]
+    ],
+    "authors": [
+      "Alan Pryor",
+      "Colin Ophus",
+      "Jianwei Miao"
+    ],
+    "journal": "Advanced Structural and Chemical Imaging"
   },
   {
     "title": "_In situ_ nanobeam electron diffraction strain mapping of planar slip in stainless steel",
@@ -1631,8 +4158,17 @@
       "4DSTEM",
       "In Situ",
       "Strain",
-      "Materials"
-    ]
+      "Materials",
+      "Diffraction"
+    ],
+    "authors": [
+      "Thomas C. Pekin",
+      "Christoph Gammer",
+      "Jim Ciston",
+      "Colin Ophus",
+      "Andrew M. Minor"
+    ],
+    "journal": "Scripta Materialia"
   },
   {
     "title": "A fast image simulation algorithm for STEM",
@@ -1640,7 +4176,11 @@
     "year": 2017,
     "tags": [
       "Simulation"
-    ]
+    ],
+    "authors": [
+      "Colin Ophus"
+    ],
+    "journal": "Advanced Structural and Chemical Imaging"
   },
   {
     "title": "Formation of Oxygen Radical Sites on MoVNbTeOx by Cooperative Electron Redistribution",
@@ -1648,23 +4188,56 @@
     "year": 2017,
     "tags": [
       "In Situ"
-    ]
+    ],
+    "authors": [
+      "Yuanyuan Zhu",
+      "Peter V. Sushko",
+      "Daniel Melzer",
+      "Eric Jensen",
+      "Libor Kovarik",
+      "Colin Ophus",
+      "Maricruz Sanchez-Sanchez",
+      "Johannes A. Lercher",
+      "Nigel D. Browning"
+    ],
+    "journal": "Journal of the American Chemical Society"
   },
   {
-    "title": "Dynamics of Symmetry-Breaking Stacking Boundaries in Bilayer MoS$_2$",
+    "title": "Dynamics of Symmetry-Breaking Stacking Boundaries in Bilayer MoS₂",
     "url": "https://dx.doi.org/10.1021/acs.jpcc.7b08398",
     "year": 2017,
     "tags": [
       "In Situ",
       "2D Materials",
       "Crystallography"
-    ]
+    ],
+    "authors": [
+      "Aiming Yan",
+      "Chin Shen Ong",
+      "Diana Y. Qiu",
+      "Colin Ophus",
+      "Jim Ciston",
+      "Christian Merino",
+      "Steven G. Louie",
+      "Alex Zettl"
+    ],
+    "journal": "The Journal of Physical Chemistry C"
   },
   {
-    "title": "Near-concentric Fabry-P\u00e9rot cavity for continuous-wave laser control of electron waves",
+    "title": "Near-concentric Fabry-Pérot cavity for continuous-wave laser control of electron waves",
     "url": "https://doi.org/10.1364/OE.25.014453",
     "year": 2017,
-    "tags": []
+    "tags": [],
+    "authors": [
+      "O. Schwartz",
+      "J.J. Axelrod",
+      "D. R. Tuthill",
+      "P. Haslinger",
+      "C. Ophus",
+      "R.M. Glaeser",
+      "H. Müller"
+    ],
+    "journal": "Optics Express"
   },
   {
     "title": "Low Temperature Solid-State Wetting and Formation of Nanowelds in Silver Nanowires",
@@ -1673,13 +4246,34 @@
     "tags": [
       "In Situ",
       "Nanoparticles"
-    ]
+    ],
+    "authors": [
+      "Vuk V Radmilović",
+      "Manuela Göbelt",
+      "Colin Ophus",
+      "Silke Christiansen",
+      "Erdmann Spiecker",
+      "Velimir R Radmilović"
+    ],
+    "journal": "Nanotechnology"
   },
   {
-    "title": "The effect of film thickness on Curie temperature distribution and magnetization reversal mechanism for granular L1$_0$ FePt films",
+    "title": "The effect of film thickness on Curie temperature distribution and magnetization reversal mechanism for granular L1₀ FePt films",
     "url": "https://doi.org/10.1088/1361-6463/aa7503",
     "year": 2017,
-    "tags": []
+    "tags": [
+      "Magnetism"
+    ],
+    "authors": [
+      "C Papusoi",
+      "S Jain",
+      "R Admana",
+      "B Ozdol",
+      "C Ophus",
+      "M Desai",
+      "R Acharya"
+    ],
+    "journal": "Journal of Physics D: Applied Physics"
   },
   {
     "title": "Out-of-plane chiral domain wall spin-structures in ultrathin in-plane magnets",
@@ -1687,19 +4281,60 @@
     "year": 2017,
     "tags": [
       "Magnetism"
-    ]
+    ],
+    "authors": [
+      "Gong Chen",
+      "Sang Pyo Kang",
+      "Colin Ophus",
+      "Alpha T. N’Diaye",
+      "Hee Young Kwon",
+      "Ryan T. Qiu",
+      "Changyeon Won",
+      "Kai Liu",
+      "Yizheng Wu",
+      "Andreas K. Schmid"
+    ],
+    "journal": "Nature Communications"
   },
   {
     "title": "Multi-pass transmission electron microscopy",
     "url": "http://dx.doi.org/10.1038/s41598-017-01841-x",
     "year": 2017,
-    "tags": []
+    "tags": [],
+    "authors": [
+      "Thomas Juffmann",
+      "Stewart A. Koppell",
+      "Brannon B. Klopfer",
+      "Colin Ophus",
+      "Robert M. Glaeser",
+      "Mark A. Kasevich"
+    ],
+    "journal": "Scientific Reports"
   },
   {
     "title": "Large polarization gradients and temperature-stable responses in compositionally-graded ferroelectrics",
     "url": "http://dx.doi.org/10.1038/ncomms14961",
     "year": 2017,
-    "tags": []
+    "tags": [],
+    "authors": [
+      "Anoop R. Damodaran",
+      "Shishir Pandya",
+      "Yubo Qi",
+      "Shang-Lin Hsu",
+      "Shi Liu",
+      "Christopher Nelson",
+      "Arvind Dasgupta",
+      "Peter Ercius",
+      "Colin Ophus",
+      "Liv R. Dedon",
+      "Josh C. Agar",
+      "Hongling Lu",
+      "Jialan Zhang",
+      "Andrew M. Minor",
+      "Andrew M. Rappe",
+      "Lane W. Martin"
+    ],
+    "journal": "Nature Communications"
   },
   {
     "title": "Streamlined approach to mapping the magnetic induction of skyrmionic materials",
@@ -1707,7 +4342,18 @@
     "year": 2017,
     "tags": [
       "Magnetism"
-    ]
+    ],
+    "authors": [
+      "Jordan J. Chess",
+      "Sergio A. Montoya",
+      "Tyler R. Harvey",
+      "Colin Ophus",
+      "Simon Couture",
+      "Vitaliy Lomakin",
+      "Eric E. Fullerton",
+      "Benjamin J. McMorran"
+    ],
+    "journal": "Ultramicroscopy"
   },
   {
     "title": "Optimizing disk registration algorithms for nanobeam electron diffraction strain mapping",
@@ -1716,8 +4362,17 @@
     "tags": [
       "4DSTEM",
       "Simulation",
-      "Strain"
-    ]
+      "Strain",
+      "Diffraction"
+    ],
+    "authors": [
+      "Thomas C. Pekin",
+      "Christoph Gammer",
+      "Jim Ciston",
+      "Andrew M. Minor",
+      "Colin Ophus"
+    ],
+    "journal": "Ultramicroscopy"
   },
   {
     "title": "Electron ptychographic phase imaging of light elements in crystalline materials using Wigner distribution deconvolution",
@@ -1726,22 +4381,67 @@
     "tags": [
       "Ptychography",
       "Imaging"
-    ]
+    ],
+    "authors": [
+      "Hao Yang",
+      "Ian MacLaren",
+      "Lewys Jones",
+      "Gerardo T. Martinez",
+      "Martin Simson",
+      "Martin Huth",
+      "Henning Ryll",
+      "Heike Soltau",
+      "Ryusuke Sagawa",
+      "Yukihito Kondo",
+      "Colin Ophus",
+      "Peter Ercius",
+      "Lei Jin",
+      "András Kovács",
+      "Peter D. Nellist"
+    ],
+    "journal": "Ultramicroscopy"
   },
   {
-    "title": "Non-spectroscopic composition measurements of SrTiO$_3$-La$_{0.7}$Sr$_{0.3}$MnO$_3$ multilayers using scanning convergent beam electron diffraction",
+    "title": "Non-spectroscopic composition measurements of SrTiO₃-La₀.₇Sr₀.₃MnO₃ multilayers using scanning convergent beam electron diffraction",
     "url": "http://dx.doi.org/10.1063/1.4975932",
     "year": 2017,
     "tags": [
       "4DSTEM",
-      "Spectroscopy"
-    ]
+      "Spectroscopy",
+      "Diffraction"
+    ],
+    "authors": [
+      "Colin Ophus",
+      "Peter Ercius",
+      "Mark Huijben",
+      "Jim Ciston"
+    ],
+    "journal": "Applied Physics Letters"
   },
   {
     "title": "Deciphering chemical order/disorder and material properties at the single-atom level",
     "url": "http://dx.doi.org/10.1038/nature21042",
     "year": 2017,
-    "tags": []
+    "tags": [],
+    "authors": [
+      "Yongsoo Yang",
+      "Chien-Chun Chen",
+      "M. C. Scott",
+      "Colin Ophus",
+      "Rui Xu",
+      "Alan Pryor",
+      "Li Wu",
+      "Fan Sun",
+      "Wolfgang Theis",
+      "Jihan Zhou",
+      "Markus Eisenbach",
+      "Paul R. C. Kent",
+      "Renat F. Sabirianov",
+      "Hao Zeng",
+      "Peter Ercius",
+      "Jianwei Miao"
+    ],
+    "journal": "Nature"
   },
   {
     "title": "Automatic software correction of residual aberrations in reconstructed HRTEM exit waves of crystalline samples",
@@ -1751,17 +4451,39 @@
       "Phase Contrast",
       "Instrumentation",
       "Imaging"
-    ]
+    ],
+    "authors": [
+      "Colin Ophus",
+      "Haider I Rasool",
+      "Martin Linck",
+      "Alex Zettl",
+      "Jim Ciston"
+    ],
+    "journal": "Advanced Structural and Chemical Imaging"
   },
   {
-    "title": "Characterization of Ordering in A-Site Deficient Perovskite Ca$_{1-x}$La$_{2x/3}$TiO$_3$ Using STEM/EELS",
+    "title": "Characterization of Ordering in A-Site Deficient Perovskite Ca₁₋ₓLa₂ₓ/₃TiO₃ Using STEM/EELS",
     "url": "http://dx.doi.org/10.1021/acs.inorgchem.6b02087",
     "year": 2016,
     "tags": [
       "Materials",
       "Spectroscopy",
-      "Crystallography"
-    ]
+      "Crystallography",
+      "EELS"
+    ],
+    "authors": [
+      "Mohsen Danaie",
+      "Demie Kepaptsoglou",
+      "Quentin M. Ramasse",
+      "Colin Ophus",
+      "Karl R. Whittle",
+      "Sebastian M. Lawson",
+      "Stella Pedrazzini",
+      "Neil P. Young",
+      "Paul A. J. Bagot",
+      "Philip D. Edmondson"
+    ],
+    "journal": "Inorganic Chemistry"
   },
   {
     "title": "Atomic scale imaging of competing polar states in a Ruddlesden-Popper layered oxide",
@@ -1770,7 +4492,20 @@
     "tags": [
       "Materials",
       "Imaging"
-    ]
+    ],
+    "authors": [
+      "Greg Stone",
+      "Colin Ophus",
+      "Turan Birol",
+      "Jim Ciston",
+      "Che-Hui Lee",
+      "Ke Wang",
+      "Craig J. Fennie",
+      "Darrell G. Schlom",
+      "Nasim Alem",
+      "Venkatraman Gopalan"
+    ],
+    "journal": "Nature Communications"
   },
   {
     "title": "Enhanced phase contrast transfer using ptychography combined with a pre-specimen phase plate in a scanning transmission electron microscope",
@@ -1780,7 +4515,14 @@
       "Ptychography",
       "Phase Contrast",
       "Imaging"
-    ]
+    ],
+    "authors": [
+      "Hao Yang",
+      "Peter Ercius",
+      "Peter D. Nellist",
+      "Colin Ophus"
+    ],
+    "journal": "Ultramicroscopy"
   },
   {
     "title": "Orientation mapping of semicrystalline polymers using scanning electron nanobeam diffraction",
@@ -1789,8 +4531,19 @@
     "tags": [
       "4DSTEM",
       "Materials",
-      "Crystallography"
-    ]
+      "Crystallography",
+      "Diffraction"
+    ],
+    "authors": [
+      "Ouliana Panova",
+      "X. Chelsea Chen",
+      "Karen C. Bustillo",
+      "Colin Ophus",
+      "Mahesh P. Bhatt",
+      "Nitash Balsara",
+      "Andrew M. Minor"
+    ],
+    "journal": "Micron"
   },
   {
     "title": "A Generalized Read-Shockley Model and Large Scale Simulations for the Energy and Structure of Graphene Grain Boundaries",
@@ -1800,7 +4553,13 @@
       "Simulation",
       "2D Materials",
       "Crystallography"
-    ]
+    ],
+    "authors": [
+      "Ashivni Shekhawat",
+      "Colin Ophus",
+      "Robert O. Ritchie"
+    ],
+    "journal": "RSC Advances"
   },
   {
     "title": "Demonstration of hexagonal phase silicon carbide nanowire arrays with vertical alignment",
@@ -1808,7 +4567,15 @@
     "year": 2016,
     "tags": [
       "Nanoparticles"
-    ]
+    ],
+    "authors": [
+      "Lunet E. Luna",
+      "Colin Ophus",
+      "Jonas Johansson",
+      "Roya Maboudian",
+      "Carlo Carraro"
+    ],
+    "journal": "Crystal Growth & Design"
   },
   {
     "title": "Nanomaterial datasets to advance tomography in scanning transmission electron microscopy",
@@ -1816,7 +4583,30 @@
     "year": 2016,
     "tags": [
       "Tomography"
-    ]
+    ],
+    "authors": [
+      "Barnaby D.A. Levin",
+      "Elliot Padgett",
+      "Chien-Chun Chen",
+      "M.C. Scott",
+      "Rui Xu",
+      "Wolfgang Theis",
+      "Yi Jiang",
+      "Yongsoo Yang",
+      "Colin Ophus",
+      "Haitao Zhang",
+      "Don-Hyung Ha",
+      "Deli Wang",
+      "Yingchao Yu",
+      "Hector D. Abruña",
+      "Richard D. Robinson",
+      "Peter Ercius",
+      "Lena F. Kourkoutis",
+      "Jianwei Miao",
+      "David A. Muller",
+      "Robert Hovden"
+    ],
+    "journal": "Scientific Data"
   },
   {
     "title": "Step Coalescence by Collective Motion at an Incommensurate Grain Boundary",
@@ -1825,7 +4615,15 @@
     "tags": [
       "In Situ",
       "Crystallography"
-    ]
+    ],
+    "authors": [
+      "M. L. Bowers",
+      "C. Ophus",
+      "A. Gautam",
+      "F. Lançon",
+      "U. Dahmen"
+    ],
+    "journal": "Physical Review Letters"
   },
   {
     "title": "Efficient linear phase contrast in STEM with MIDI",
@@ -1834,7 +4632,19 @@
     "tags": [
       "Phase Contrast",
       "Imaging"
-    ]
+    ],
+    "authors": [
+      "Colin Ophus",
+      "Jim Ciston",
+      "Jordan Pierce",
+      "Tyler R. Harvey",
+      "Jordan Chess",
+      "Benjamin J. McMorran",
+      "Cory Czarnik",
+      "Harald H. Rose",
+      "Peter Ercius"
+    ],
+    "journal": "Nature Communications"
   },
   {
     "title": "Correcting nonlinear drift distortion of SPM and STEM from image pairs with orthogonal scan directions",
@@ -1842,17 +4652,33 @@
     "year": 2016,
     "tags": [
       "Strain"
-    ]
+    ],
+    "authors": [
+      "Colin Ophus",
+      "Jim Ciston",
+      "Chris T. Nelson"
+    ],
+    "journal": "Ultramicroscopy"
   },
   {
-    "title": "Identifying different stacking sequences in few-layer {CVD}-grown {MoS}$_2$ by low-energy atomic-resolution scanning transmission electron microscopy",
+    "title": "Identifying different stacking sequences in few-layer CVD-grown MoS₂ by low-energy atomic-resolution scanning transmission electron microscopy",
     "url": "http://dx.doi.org/10.1103/PhysRevB.93.041420",
     "year": 2016,
     "tags": [
       "2D Materials",
       "Crystallography",
       "Imaging"
-    ]
+    ],
+    "authors": [
+      "Aiming Yan",
+      "Wei Chen",
+      "Colin Ophus",
+      "Jim Ciston",
+      "Yuyuan Lin",
+      "Kristin Persson",
+      "Alex Zettl"
+    ],
+    "journal": "Physical Review B"
   },
   {
     "title": "Large-scale experimental and theoretical study of graphene grain boundary structures",
@@ -1861,7 +4687,14 @@
     "tags": [
       "2D Materials",
       "Crystallography"
-    ]
+    ],
+    "authors": [
+      "Colin Ophus",
+      "Ashivni Shekhawat",
+      "Haider Rasool",
+      "Alex Zettl"
+    ],
+    "journal": "Physical Review B"
   },
   {
     "title": "Three-dimensional positions of individual atoms in materials revealed by electron tomography",
@@ -1869,15 +4702,42 @@
     "year": 2015,
     "tags": [
       "Tomography"
-    ]
+    ],
+    "authors": [
+      "Rui Xu",
+      "Chien-Chun Chen",
+      "Li Wu",
+      "M. C. Scott",
+      "W. Theis",
+      "Colin Ophus",
+      "Matthias Bartels",
+      "Yongsoo Yang",
+      "Hadi Ramezani-Dakhel",
+      "Michael R. Sawaya",
+      "Hendrik Heinz",
+      "Laurence D. Marks",
+      "Peter Ercius",
+      "Jianwei Miao"
+    ],
+    "journal": "Nature Materials"
   },
   {
     "title": "Unravelling structural ambiguities in lithium-and manganese-rich transition metal oxides",
     "url": "http://dx.doi.org/10.1038/ncomms9711",
     "year": 2015,
     "tags": [
-      "Materials"
-    ]
+      "Materials",
+      "Energy Storage"
+    ],
+    "authors": [
+      "Alpesh Khushalchand Shukla",
+      "Quentin M. Ramasse",
+      "Colin Ophus",
+      "Hugues Duncan",
+      "Fredrik Hage",
+      "Guoying Chen"
+    ],
+    "journal": "Nature Communications"
   },
   {
     "title": "Strain mapping at nanometer resolution using advanced nano-beam electron diffraction",
@@ -1885,8 +4745,19 @@
     "year": 2015,
     "tags": [
       "Strain",
-      "Imaging"
-    ]
+      "Imaging",
+      "Diffraction"
+    ],
+    "authors": [
+      "V. B. Ozdol",
+      "C. Gammer",
+      "X. G. Jin",
+      "P. Ercius",
+      "C. Ophus",
+      "J. Ciston",
+      "A. M. Minor"
+    ],
+    "journal": "Applied Physics Letters"
   },
   {
     "title": "Surface determination through atomically resolved secondary-electron imaging",
@@ -1894,7 +4765,21 @@
     "year": 2015,
     "tags": [
       "Imaging"
-    ]
+    ],
+    "authors": [
+      "J. Ciston",
+      "H. G. Brown",
+      "A. J. D’Alfonso",
+      "P. Koirala",
+      "C. Ophus",
+      "Y. Lin",
+      "Y. Suzuki",
+      "H. Inada",
+      "Y. Zhu",
+      "L. J. Allen",
+      "L. D. Marks"
+    ],
+    "journal": "Nature Communications"
   },
   {
     "title": "Atomic defects in two dimensional materials",
@@ -1902,7 +4787,13 @@
     "year": 2015,
     "tags": [
       "Strain"
-    ]
+    ],
+    "authors": [
+      "Haider I. Rasool",
+      "Colin Ophus",
+      "Alex Zettl"
+    ],
+    "journal": "Advanced Materials"
   },
   {
     "title": "Analysis of grain boundary dynamics using event detection and cumulative averaging",
@@ -1911,7 +4802,15 @@
     "tags": [
       "In Situ",
       "Crystallography"
-    ]
+    ],
+    "authors": [
+      "A. Gautam",
+      "C. Ophus",
+      "F. Lançon",
+      "P. Denes",
+      "U. Dahmen"
+    ],
+    "journal": "Ultramicroscopy"
   },
   {
     "title": "Conserved atomic bonding sequences and strain organization of graphene grain boundaries",
@@ -1921,16 +4820,34 @@
       "Strain",
       "2D Materials",
       "Crystallography"
-    ]
+    ],
+    "authors": [
+      "Haider I. Rasool",
+      "Colin Ophus",
+      "Ziang Zhang",
+      "Michael F. Crommie",
+      "Boris I. Yakobson",
+      "Alex Zettl"
+    ],
+    "journal": "Nano Letters"
   },
   {
-    "title": "HAADF imaging of the omega ($\\omega$) phase in a gum metal-related alloy",
+    "title": "HAADF imaging of the omega (ω) phase in a gum metal-related alloy",
     "url": "http://dx.doi.org/10.1080/14786435.2014.937839",
     "year": 2014,
     "tags": [
       "Materials",
       "Imaging"
-    ]
+    ],
+    "authors": [
+      "R.P. Sankaran",
+      "C. Ophus",
+      "B. Ozdol",
+      "V.R. Radmilovic",
+      "A.M. Minor",
+      "J.W. Morris"
+    ],
+    "journal": "Philosophical Magazine"
   },
   {
     "title": "Direct Observation of a long-lived single-atom catalyst chiseling atomic structures in graphene",
@@ -1938,8 +4855,23 @@
     "year": 2014,
     "tags": [
       "Materials",
-      "2D Materials"
-    ]
+      "2D Materials",
+      "Catalysis"
+    ],
+    "authors": [
+      "Wei Li Wang",
+      "Elton J. G. Santos",
+      "Bin Jiang",
+      "Ekin Dogus Cubuk",
+      "Colin Ophus",
+      "Alba Centeno",
+      "Amaia Pesquera",
+      "Amaia Zurutuza",
+      "Jim Ciston",
+      "Robert Westervelt",
+      "Efthimios Kaxiras"
+    ],
+    "journal": "Nano Letters"
   },
   {
     "title": "Measurement of the intrinsic strength of crystalline and polycrystalline graphene",
@@ -1947,7 +4879,15 @@
     "year": 2013,
     "tags": [
       "2D Materials"
-    ]
+    ],
+    "authors": [
+      "Haider I. Rasool",
+      "Colin Ophus",
+      "William S. Klug",
+      "A. Zettl",
+      "James K. Gimzewski"
+    ],
+    "journal": "Nature Communications"
   },
   {
     "title": "Momentum-resolved electronic structure at a buried interface from soft X-ray standing-wave angle-resolved photoemission",
@@ -1956,7 +4896,33 @@
     "tags": [
       "Spectroscopy",
       "Crystallography"
-    ]
+    ],
+    "authors": [
+      "A. X. Gray",
+      "J. Minár",
+      "L. Plucinski",
+      "M. Huijben",
+      "A. Bostwick",
+      "E. Rotenberg",
+      "S.‐H. Yang",
+      "J. Braun",
+      "A. Winkelmann",
+      "G. Conti",
+      "D. Eiteneer",
+      "A. Rattanachata",
+      "A. A. Greer",
+      "J. Ciston",
+      "C. Ophus",
+      "G. Rijnders",
+      "D. H. A. Blank",
+      "D. Doennig",
+      "R. Pentcheva",
+      "J. B. Kortright",
+      "C. M. Schneider",
+      "H. Ebert",
+      "C. S. Fadley"
+    ],
+    "journal": "EPL (Europhysics Letters)"
   },
   {
     "title": "Interface lattice displacement measurement to 1pm by geometric phase analysis on aberration-corrected HAADF STEM images",
@@ -1966,7 +4932,14 @@
       "Crystallography",
       "Instrumentation",
       "Imaging"
-    ]
+    ],
+    "authors": [
+      "Yuanyuan Zhu",
+      "Colin Ophus",
+      "Jim Ciston",
+      "Haiyan Wang"
+    ],
+    "journal": "Acta Materialia"
   },
   {
     "title": "Atomic structure characterization of an incommensurate grain boundary",
@@ -1974,21 +4947,47 @@
     "year": 2013,
     "tags": [
       "Crystallography"
-    ]
+    ],
+    "authors": [
+      "A. Gautam",
+      "C. Ophus",
+      "F. Lançon",
+      "V. Radmilovic",
+      "U. Dahmen"
+    ],
+    "journal": "Acta Materialia"
   },
   {
-    "title": "Structure and phase transitions at the interface between $\\alpha$-Al$_2$O$_3$ and Pt",
+    "title": "Structure and phase transitions at the interface between α-Al₂O₃ and Pt",
     "url": "doi.org/10.1088/0953-8984/25/23/232202",
     "year": 2013,
     "tags": [
       "Crystallography"
-    ]
+    ],
+    "authors": [
+      "Colin Ophus",
+      "Melissa K Santala",
+      "Mark Asta",
+      "Velimir Radmilovic"
+    ],
+    "journal": "Journal of Physics: Condensed Matter"
   },
   {
-    "title": "Tensile behavior of Al$_{1-x}$Mo$_x$ crystalline and amorphous thin films",
+    "title": "Tensile behavior of Al₁₋ₓMoₓ crystalline and amorphous thin films",
     "url": "http://dx.doi.org/10.1016/j.actamat.2012.11.020",
     "year": 2013,
-    "tags": []
+    "tags": [],
+    "authors": [
+      "D.S. Gianola",
+      "Z. Lee",
+      "C. Ophus",
+      "E.J. Luber",
+      "D. Mitlin",
+      "U. Dahmen",
+      "K.J. Hemker",
+      "V.R. Radmilović"
+    ],
+    "journal": "Acta Materialia"
   },
   {
     "title": "Direct atomic imaging of antiphase boundaries and orthotwins in orientation-patterned GaAs",
@@ -1997,7 +4996,16 @@
     "tags": [
       "Strain",
       "Imaging"
-    ]
+    ],
+    "authors": [
+      "R. dos Reis",
+      "C. Ophus",
+      "J. Jimenez",
+      "M. Snure",
+      "B. Gérard",
+      "Z. Liliental-Weber"
+    ],
+    "journal": "Applied Physics Letters"
   },
   {
     "title": "Mechanism and dynamics of shrinking island grains in mazed bicrystal thin films of Au",
@@ -2005,7 +5013,15 @@
     "year": 2012,
     "tags": [
       "In Situ"
-    ]
+    ],
+    "authors": [
+      "T. Radetic",
+      "C. Ophus",
+      "D.L. Olmsted",
+      "M. Asta",
+      "U. Dahmen"
+    ],
+    "journal": "Acta Materialia"
   },
   {
     "title": "Guidelines for quantitative reconstruction of complex exit waves in HRTEM",
@@ -2014,21 +5030,47 @@
     "tags": [
       "Phase Contrast",
       "Imaging"
-    ]
+    ],
+    "authors": [
+      "Colin Ophus",
+      "Timo Ewalds"
+    ],
+    "journal": "Ultramicroscopy"
   },
   {
-    "title": "Highly monodisperse core--shell particles created by solid-state reactions",
+    "title": "Highly monodisperse core–shell particles created by solid-state reactions",
     "url": "http://dx.doi.org/doi:10.1038/nmat3077",
     "year": 2011,
-    "tags": []
+    "tags": [],
+    "authors": [
+      "V. Radmilovic",
+      "C. Ophus",
+      "E. A. Marquis",
+      "M. D. Rossell",
+      "A. Tolley",
+      "A. Gautam",
+      "M. Asta",
+      "U. Dahmen"
+    ],
+    "journal": "Nature Materials"
   },
   {
-    "title": "A systematic neutron reflectometry study on hydrogen absorption in thin Mg$_{1-x}$Al$_x$ alloy films",
+    "title": "A systematic neutron reflectometry study on hydrogen absorption in thin Mg₁₋ₓAlₓ alloy films",
     "url": "http://dx.doi.org/10.1139/P09-085",
     "year": 2010,
     "tags": [
       "Materials"
-    ]
+    ],
+    "authors": [
+      "H. Fritzsche",
+      "E. Poirier",
+      "J. Haagsma",
+      "C. Ophus",
+      "E. Luber",
+      "C. T. Harrower",
+      "D. Mitlin"
+    ],
+    "journal": "Canadian Journal of Physics"
   },
   {
     "title": "The role of self-shadowing on growth and scaling laws of faceted polycrystalline thin films",
@@ -2037,7 +5079,14 @@
     "tags": [
       "In Situ",
       "Crystallography"
-    ]
+    ],
+    "authors": [
+      "Colin Ophus",
+      "Timo Ewalds",
+      "Erik J. Luber",
+      "David Mitlin"
+    ],
+    "journal": "Acta Materialia"
   },
   {
     "title": "Solid-state dewetting mechanisms of ultrathin Ni films revealed by combining in-situ time-resolved differential reflectometry monitoring and atomic force microscopy",
@@ -2045,7 +5094,14 @@
     "year": 2010,
     "tags": [
       "In Situ"
-    ]
+    ],
+    "authors": [
+      "Erik J. Luber",
+      "Brian C. Olsen",
+      "Colin Ophus",
+      "David Mitlin"
+    ],
+    "journal": "Physical Review B"
   },
   {
     "title": "Hydrogen storage in binary and ternary Mg-based alloys: A comprehensive experimental study",
@@ -2053,7 +5109,19 @@
     "year": 2010,
     "tags": [
       "Materials"
-    ]
+    ],
+    "authors": [
+      "W.P. Kalisvaart",
+      "C.T. Harrower",
+      "J. Haagsma",
+      "B. Zahiri",
+      "E.J. Luber",
+      "C. Ophus",
+      "E. Poirier",
+      "H. Fritzsche",
+      "D. Mitlin"
+    ],
+    "journal": "International Journal of Hydrogen Energy"
   },
   {
     "title": "Analytic description of competitive grain growth",
@@ -2061,7 +5129,13 @@
     "year": 2010,
     "tags": [
       "In Situ"
-    ]
+    ],
+    "authors": [
+      "Colin Ophus",
+      "Erik J. Luber",
+      "David Mitlin"
+    ],
+    "journal": "Physical Review E"
   },
   {
     "title": "All-metal AFM probes fabricated from microstructurally tailored Cu-Hf thin films",
@@ -2069,7 +5143,15 @@
     "year": 2009,
     "tags": [
       "Instrumentation"
-    ]
+    ],
+    "authors": [
+      "E J Luber",
+      "B C Olsen",
+      "C Ophus",
+      "V Radmilovic",
+      "D Mitlin"
+    ],
+    "journal": "Nanotechnology"
   },
   {
     "title": "Nanocrystalline-amorphous transitions in Al-Mo thin films: Bulk and surface evolution",
@@ -2077,7 +5159,20 @@
     "year": 2009,
     "tags": [
       "Nanoparticles"
-    ]
+    ],
+    "authors": [
+      "C. Ophus",
+      "E.J. Luber",
+      "M. Edelen",
+      "Z. Lee",
+      "L.M. Fischer",
+      "S. Evoy",
+      "D. Lewis",
+      "U. Dahmen",
+      "V. Radmilovic",
+      "D. Mitlin"
+    ],
+    "journal": "Acta Materialia"
   },
   {
     "title": "Low temperature hydrogen desorption in MgAl thin films achieved by using a nanoscale Ta/Pd bilayer catalyst",
@@ -2085,8 +5180,17 @@
     "year": 2009,
     "tags": [
       "Materials",
-      "2D Materials"
-    ]
+      "2D Materials",
+      "Catalysis"
+    ],
+    "authors": [
+      "Helmut Fritzsche",
+      "Colin Ophus",
+      "Chris T. Harrower",
+      "Erik Luber",
+      "David Mitlin"
+    ],
+    "journal": "Applied Physics Letters"
   },
   {
     "title": "Simulations of faceted polycrystalline thin films: asymptotic analysis",
@@ -2095,19 +5199,47 @@
     "tags": [
       "Simulation",
       "Crystallography"
-    ]
+    ],
+    "authors": [
+      "Colin Ophus",
+      "Erik Luber",
+      "David Mitlin"
+    ],
+    "journal": "Acta Materialia"
   },
   {
     "title": "Structural changes of thin MgAl films during hydrogen desorption",
     "url": "http://dx.doi.org/10.1016/j.nima.2008.11.113",
     "year": 2009,
-    "tags": []
+    "tags": [],
+    "authors": [
+      "Helmut Fritzsche",
+      "Mouna Saoudi",
+      "Julian Haagsma",
+      "Colin Ophus",
+      "Chris T. Harrower",
+      "David Mitlin"
+    ],
+    "journal": "Nuclear Instruments and Methods in Physics Research Section A: Accelerators, Spectrometers, Detectors and Associated Equipment"
   },
   {
     "title": "Tailoring the microstructure and surface morphology of metal thin films for nanoelectromechanical systems applications",
     "url": "http://dx.doi.org/10.1088/0957-4484/19/12/125705",
     "year": 2008,
-    "tags": []
+    "tags": [],
+    "authors": [
+      "E Luber",
+      "R Mohammadi",
+      "C Ophus",
+      "Z Lee",
+      "N Nelson-Fitzpatrick",
+      "K Westra",
+      "S Evoy",
+      "U Dahmen",
+      "V Radmilovic",
+      "D Mitlin"
+    ],
+    "journal": "Nanotechnology"
   },
   {
     "title": "Resonance properties and microstructure of ultracompliant metallic nanoelectromechanical systems resonators synthesized from Al-32 at.% Mo amorphous-nanocrystalline metallic composites",
@@ -2116,7 +5248,20 @@
     "tags": [
       "Nanoparticles",
       "Instrumentation"
-    ]
+    ],
+    "authors": [
+      "C. Ophus",
+      "N. Nelson Fitzpatrick",
+      "Z. Lee",
+      "E. Luber",
+      "C. Harrower",
+      "K. Westra",
+      "U. Dahmen",
+      "V. Radmilovic",
+      "S. Evoy",
+      "D. Mitlin"
+    ],
+    "journal": "Applied Physics Letters"
   },
   {
     "title": "Neutron reflectometry study of hydrogen desorption in destabilized MgAl alloy thin films",
@@ -2124,7 +5269,17 @@
     "year": 2008,
     "tags": [
       "Materials"
-    ]
+    ],
+    "authors": [
+      "H. Fritzsche",
+      "M. Saoudi",
+      "J. Haagsma",
+      "C. Ophus",
+      "E. Luber",
+      "C. T. Harrower",
+      "D. Mitlin"
+    ],
+    "journal": "Applied Physics Letters"
   },
   {
     "title": "Transmission electron microscopy and nanoindentation study of the weld zone microstructure of diode-laser-joined automotive transformation-induced plasticity steel",
@@ -2134,7 +5289,18 @@
       "In Situ",
       "Materials",
       "Nanoparticles"
-    ]
+    ],
+    "authors": [
+      "J. Chen",
+      "K. Sand",
+      "M.S. Xia",
+      "C. Ophus",
+      "R. Mohammadi",
+      "M.L. Kuntz",
+      "Y. Zhou",
+      "D. Mitlin"
+    ],
+    "journal": "Metallurgical and Materials Transactions A"
   },
   {
     "title": "Synthesis and characterization of Au-Ta nanocomposites for nanomechanical cantilever devices",
@@ -2142,7 +5308,18 @@
     "year": 2007,
     "tags": [
       "Instrumentation"
-    ]
+    ],
+    "authors": [
+      "N Nelson-Fitzpatrick",
+      "C Ophus",
+      "E Luber",
+      "L Gervais",
+      "Z Lee",
+      "V Radmilovic",
+      "D Mitlin",
+      "S Evoy"
+    ],
+    "journal": "Nanotechnology"
   },
   {
     "title": "Metallic NEMS components fabricated from nanocomposite Al-Mo films",
@@ -2150,6 +5327,18 @@
     "year": 2006,
     "tags": [
       "Instrumentation"
-    ]
+    ],
+    "authors": [
+      "Z Lee",
+      "C Ophus",
+      "L M Fischer",
+      "N Nelson-Fitzpatrick",
+      "K L Westra",
+      "S Evoy",
+      "V Radmilovic",
+      "U Dahmen",
+      "D Mitlin"
+    ],
+    "journal": "Nanotechnology"
   }
 ]

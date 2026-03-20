@@ -3,6 +3,7 @@
 function render({ model, el }) {
   const dataUrl = model.get("data_url") || "";
   const accentColor = model.get("accent_color") || "#8C1515";
+  const accentColorDark = model.get("accent_color_dark") || "#E8A0A0";
 
   const id = "pl-" + Math.random().toString(36).slice(2, 8);
 
@@ -24,6 +25,8 @@ function render({ model, el }) {
       outline: none;
       box-sizing: border-box;
       margin-bottom: 0.8em;
+      background: #fff;
+      color: #111;
     }
     .${id}-search:focus {
       border-color: ${accentColor};
@@ -105,7 +108,7 @@ function render({ model, el }) {
       color: #111;
     }
     .${id}-paper {
-      padding: 0.4em 0;
+      padding: 0.5em 0;
       line-height: 1.5;
     }
     .${id}-paper a {
@@ -114,6 +117,15 @@ function render({ model, el }) {
     }
     .${id}-paper a:hover {
       text-decoration: underline;
+    }
+    .${id}-paper-meta {
+      font-size: 0.82em;
+      color: #6b7280;
+      margin-top: 0.15em;
+      line-height: 1.4;
+    }
+    .${id}-paper-journal {
+      font-style: italic;
     }
     .${id}-paper-tags {
       display: inline;
@@ -127,10 +139,142 @@ function render({ model, el }) {
       background: #f3f4f6;
       color: #6b7280;
       margin-left: 0.25em;
+      vertical-align: middle;
     }
     .${id}-loading {
       color: #6b7280;
       font-style: italic;
+    }
+
+    /* Dark mode */
+    @media (prefers-color-scheme: dark) {
+      .${id}-search {
+        background: #1f2937;
+        color: #e5e7eb;
+        border-color: #4b5563;
+      }
+      .${id}-search:focus {
+        border-color: ${accentColorDark};
+        box-shadow: 0 0 0 2px ${accentColorDark}33;
+      }
+      .${id}-tag {
+        background: #1f2937;
+        color: #d1d5db;
+        border-color: #4b5563;
+      }
+      .${id}-tag:hover {
+        border-color: ${accentColorDark};
+        color: ${accentColorDark};
+      }
+      .${id}-tag.active {
+        background: ${accentColorDark};
+        color: #111;
+        border-color: ${accentColorDark};
+      }
+      .${id}-year-btn {
+        background: #1f2937;
+        color: #9ca3af;
+        border-color: #4b5563;
+      }
+      .${id}-year-btn:hover {
+        border-color: ${accentColorDark};
+        color: ${accentColorDark};
+      }
+      .${id}-year-btn.active {
+        background: ${accentColorDark};
+        color: #111;
+        border-color: ${accentColorDark};
+      }
+      .${id}-year-heading {
+        color: #e5e7eb;
+        border-bottom-color: ${accentColorDark};
+      }
+      .${id}-paper a {
+        color: ${accentColorDark};
+      }
+      .${id}-paper-meta {
+        color: #9ca3af;
+      }
+      .${id}-clear {
+        color: ${accentColorDark};
+      }
+      .${id}-stats {
+        color: #9ca3af;
+      }
+      .${id}-paper-tag {
+        background: #374151;
+        color: #9ca3af;
+      }
+      .${id}-loading {
+        color: #9ca3af;
+      }
+    }
+    /* Class-based dark mode (Curvenote) */
+    [data-theme="dark"] .${id}-search,
+    .dark .${id}-search {
+      background: #1f2937;
+      color: #e5e7eb;
+      border-color: #4b5563;
+    }
+    [data-theme="dark"] .${id}-tag,
+    .dark .${id}-tag {
+      background: #1f2937;
+      color: #d1d5db;
+      border-color: #4b5563;
+    }
+    [data-theme="dark"] .${id}-tag:hover,
+    .dark .${id}-tag:hover {
+      border-color: ${accentColorDark};
+      color: ${accentColorDark};
+    }
+    [data-theme="dark"] .${id}-tag.active,
+    .dark .${id}-tag.active {
+      background: ${accentColorDark};
+      color: #111;
+      border-color: ${accentColorDark};
+    }
+    [data-theme="dark"] .${id}-year-btn,
+    .dark .${id}-year-btn {
+      background: #1f2937;
+      color: #9ca3af;
+      border-color: #4b5563;
+    }
+    [data-theme="dark"] .${id}-year-btn:hover,
+    .dark .${id}-year-btn:hover {
+      border-color: ${accentColorDark};
+      color: ${accentColorDark};
+    }
+    [data-theme="dark"] .${id}-year-btn.active,
+    .dark .${id}-year-btn.active {
+      background: ${accentColorDark};
+      color: #111;
+      border-color: ${accentColorDark};
+    }
+    [data-theme="dark"] .${id}-year-heading,
+    .dark .${id}-year-heading {
+      color: #e5e7eb;
+      border-bottom-color: ${accentColorDark};
+    }
+    [data-theme="dark"] .${id}-paper a,
+    .dark .${id}-paper a {
+      color: ${accentColorDark};
+    }
+    [data-theme="dark"] .${id}-paper-meta,
+    .dark .${id}-paper-meta {
+      color: #9ca3af;
+    }
+    [data-theme="dark"] .${id}-clear,
+    .dark .${id}-clear {
+      color: ${accentColorDark};
+    }
+    [data-theme="dark"] .${id}-stats,
+    .dark .${id}-stats {
+      color: #9ca3af;
+    }
+    [data-theme="dark"] .${id}-paper-tag,
+    .dark .${id}-paper-tag {
+      background: #374151;
+      color: #9ca3af;
     }
   `;
   el.appendChild(style);
@@ -148,6 +292,15 @@ function render({ model, el }) {
     });
 
   function buildUI(papers) {
+    // Pre-build search index: lowercase title + authors + journal
+    for (const p of papers) {
+      p._search = [
+        p.title,
+        (p.authors || []).join(" "),
+        p.journal || ""
+      ].join(" ").toLowerCase();
+    }
+
     // Collect all tags and years
     const allTags = {};
     const allYears = new Set();
@@ -168,7 +321,7 @@ function render({ model, el }) {
 
     wrap.innerHTML = `
       <div class="${id}-controls">
-        <input class="${id}-search" type="text" placeholder="Search papers by title..." />
+        <input class="${id}-search" type="text" placeholder="Search by title, author, or journal..." />
         <div class="${id}-tags"></div>
         <div class="${id}-years"></div>
         <div class="${id}-stats"></div>
@@ -238,8 +391,8 @@ function render({ model, el }) {
 
     function filterPapers() {
       return papers.filter((p) => {
-        // Search filter
-        if (searchText && !p.title.toLowerCase().includes(searchText)) {
+        // Search filter — matches title, authors, and journal
+        if (searchText && !p._search.includes(searchText)) {
           return false;
         }
         // Tag filter (AND: paper must have ALL active tags)
@@ -254,6 +407,16 @@ function render({ model, el }) {
         }
         return true;
       });
+    }
+
+    function escHtml(s) {
+      return s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+    }
+
+    function formatAuthors(authors) {
+      if (!authors || authors.length === 0) return "";
+      if (authors.length <= 6) return authors.join(", ");
+      return authors.slice(0, 5).join(", ") + ", ... " + authors[authors.length - 1];
     }
 
     function renderResults() {
@@ -293,11 +456,20 @@ function render({ model, el }) {
         html += `<div class="${id}-year-heading">${year} (${byYear[year].length})</div>`;
         for (const p of byYear[year]) {
           const tagsHtml = p.tags
-            .map((t) => `<span class="${id}-paper-tag">${t}</span>`)
+            .map((t) => `<span class="${id}-paper-tag">${escHtml(t)}</span>`)
             .join("");
-          // Clean up LaTeX in title for display
-          const displayTitle = p.title;
-          html += `<div class="${id}-paper"><a href="${p.url}" target="_blank" rel="noopener">${displayTitle}</a>${tagsHtml ? `<span class="${id}-paper-tags">${tagsHtml}</span>` : ""}</div>`;
+
+          const authorsStr = formatAuthors(p.authors || []);
+          const journal = p.journal || "";
+          let metaParts = [];
+          if (authorsStr) metaParts.push(escHtml(authorsStr));
+          if (journal) metaParts.push(`<span class="${id}-paper-journal">${escHtml(journal)}</span>`);
+
+          html += `<div class="${id}-paper">`;
+          html += `<a href="${p.url}" target="_blank" rel="noopener">${escHtml(p.title)}</a>`;
+          if (tagsHtml) html += `<span class="${id}-paper-tags">${tagsHtml}</span>`;
+          if (metaParts.length) html += `<div class="${id}-paper-meta">${metaParts.join(" · ")}</div>`;
+          html += `</div>`;
         }
       }
 
