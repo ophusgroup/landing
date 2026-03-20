@@ -1,5 +1,5 @@
 ---
-title: Research
+title: Research Projects
 ---
 
 [List of publications](/papers)

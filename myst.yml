@@ -9,14 +9,14 @@ project:
     - file: news.md
     - file: people.md
     - file: research.md
-      children: 
+      children:
         - file: papers.md
+        - file: funding.md
     - file: teaching.md
     - file: resource-students.md
     - file: resource-mallard.md
     - file: resource-interactive.md
     - file: facilities.md
-    - file: funding.md
   abbreviations:
     4DSTEM: four dimensional scanning transmission electron microscopy
     4DSCED: four dimensional scanning confocal electron diffraction
@@ -66,14 +66,15 @@ site:
     - title: People
       url: /people
     - title: Research
-      url: /research
       children:
-          - title: Publications
-            url: /papers
+        - title: Projects
+          url: /research
+        - title: Publications
+          url: /papers
+        - title: Funding
+          url: /funding
     - title: Teaching
       url: /teaching
-    - title: Funding
-      url: /funding
     - title: Resources
       children:
         - title: Students
