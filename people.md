@@ -4,7 +4,7 @@ title: People
 
 ## Principal Investigator
 
-::::::{grid} 2 3 4 4
+::::::{grid} 1 2 3 4
 
 :::{any:bundle} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/person-card.js
 {
