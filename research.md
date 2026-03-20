@@ -2,8 +2,6 @@
 title: Research Projects
 ---
 
-<!-- updated 2026-03-20 -->
-
 ## 4DSTEM
 
 ### Experiments
