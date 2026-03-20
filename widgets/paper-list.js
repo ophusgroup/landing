@@ -146,82 +146,22 @@ function render({ model, el }) {
       font-style: italic;
     }
 
-    /* Dark mode (class-based for Curvenote) */
-    [data-theme="dark"] .${id}-search,
-    .dark .${id}-search {
-      background: #1f2937;
-      color: #e5e7eb;
-      border-color: #4b5563;
-    }
-    [data-theme="dark"] .${id}-search:focus,
-    .dark .${id}-search:focus {
-      border-color: ${accentColorDark};
-      box-shadow: 0 0 0 2px ${accentColorDark}33;
-    }
-    [data-theme="dark"] .${id}-tag,
-    .dark .${id}-tag {
-      background: #1f2937;
-      color: #6b7280;
-      border-color: #374151;
-    }
-    [data-theme="dark"] .${id}-tag:hover,
-    .dark .${id}-tag:hover {
-      border-color: #b05050;
-      color: #d4a0a0;
-    }
-    [data-theme="dark"] .${id}-tag.active,
-    .dark .${id}-tag.active {
-      background: #6b2020;
-      color: #e5d0d0;
-      border-color: #8C1515;
-    }
-    [data-theme="dark"] .${id}-year-btn,
-    .dark .${id}-year-btn {
-      background: #1f2937;
-      color: #6b7280;
-      border-color: #374151;
-    }
-    [data-theme="dark"] .${id}-year-btn:hover,
-    .dark .${id}-year-btn:hover {
-      border-color: #b05050;
-      color: #d4a0a0;
-    }
-    [data-theme="dark"] .${id}-year-btn.active,
-    .dark .${id}-year-btn.active {
-      background: #6b2020;
-      color: #e5d0d0;
-      border-color: #8C1515;
-    }
-    [data-theme="dark"] .${id}-year-heading,
-    .dark .${id}-year-heading {
-      color: #e5e7eb;
-      border-bottom-color: ${accentColorDark};
-    }
-    [data-theme="dark"] .${id}-paper a,
-    .dark .${id}-paper a {
-      color: ${accentColorDark};
-    }
-    [data-theme="dark"] .${id}-paper-meta,
-    .dark .${id}-paper-meta {
-      color: #9ca3af;
-    }
-    [data-theme="dark"] .${id}-clear,
-    .dark .${id}-clear {
-      color: ${accentColorDark};
-    }
-    [data-theme="dark"] .${id}-stats,
-    .dark .${id}-stats {
-      color: #9ca3af;
-    }
-    [data-theme="dark"] .${id}-paper-tag,
-    .dark .${id}-paper-tag {
-      background: #1f2937;
-      color: #6b7280;
-    }
-    [data-theme="dark"] .${id}-loading,
-    .dark .${id}-loading {
-      color: #9ca3af;
-    }
+    /* Dark mode — detected via JS, applied as .${id}-dark on wrapper */
+    .${id}-dark .${id}-search { background: #1f2937; color: #e5e7eb; border-color: #4b5563; }
+    .${id}-dark .${id}-search:focus { border-color: ${accentColorDark}; box-shadow: 0 0 0 2px ${accentColorDark}33; }
+    .${id}-dark .${id}-tag { background: #1f2937; color: #6b7280; border-color: #374151; }
+    .${id}-dark .${id}-tag:hover { border-color: #b05050; color: #d4a0a0; }
+    .${id}-dark .${id}-tag.active { background: #6b2020; color: #e5d0d0; border-color: #8C1515; }
+    .${id}-dark .${id}-year-btn { background: #1f2937; color: #6b7280; border-color: #374151; }
+    .${id}-dark .${id}-year-btn:hover { border-color: #b05050; color: #d4a0a0; }
+    .${id}-dark .${id}-year-btn.active { background: #6b2020; color: #e5d0d0; border-color: #8C1515; }
+    .${id}-dark .${id}-year-heading { color: #e5e7eb; border-bottom-color: ${accentColorDark}; }
+    .${id}-dark .${id}-paper a { color: ${accentColorDark}; }
+    .${id}-dark .${id}-paper-meta { color: #9ca3af; }
+    .${id}-dark .${id}-clear { color: ${accentColorDark}; }
+    .${id}-dark .${id}-stats { color: #9ca3af; }
+    .${id}-dark .${id}-paper-tag { background: #1f2937; color: #6b7280; }
+    .${id}-dark .${id}-loading { color: #9ca3af; }
   `;
   el.appendChild(style);
 
@@ -229,6 +169,24 @@ function render({ model, el }) {
   wrap.className = `${id}-wrap`;
   wrap.innerHTML = `<div class="${id}-loading">Loading publications...</div>`;
   el.appendChild(wrap);
+
+  // Detect dark mode by checking actual page background luminance
+  function detectDark() {
+    const bg = getComputedStyle(document.body).backgroundColor;
+    const m = bg.match(/\d+/g);
+    if (m) {
+      const lum = (0.299 * +m[0] + 0.587 * +m[1] + 0.114 * +m[2]) / 255;
+      return lum < 0.5;
+    }
+    return false;
+  }
+  function applyTheme() {
+    wrap.classList.toggle(`${id}-dark`, detectDark());
+  }
+  applyTheme();
+  // Re-check when theme changes
+  new MutationObserver(applyTheme).observe(document.documentElement, { attributes: true });
+  window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", applyTheme);
 
   fetch(dataUrl)
     .then((r) => r.json())

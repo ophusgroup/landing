@@ -100,33 +100,35 @@ function render({ model, el }) {
       text-decoration: underline;
     }
 
-    /* Dark mode (class-based for Curvenote) */
-    [data-theme="dark"] .${id}-popup,
-    .dark .${id}-popup {
-      background: #1f2937;
-      border-color: #4b5563;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.4);
-    }
-    [data-theme="dark"] .${id}-titles,
-    .dark .${id}-titles {
-      color: #d1d5db;
-      border-bottom-color: #4b5563;
-    }
-    [data-theme="dark"] .${id}-pronouns,
-    .dark .${id}-pronouns { color: #9ca3af; }
-    [data-theme="dark"] .${id}-links a,
-    .dark .${id}-links a { color: #E8A0A0; }
-    [data-theme="dark"] .${id}-bio,
-    .dark .${id}-bio { color: #d1d5db; }
-    [data-theme="dark"] .${id}-papers,
-    .dark .${id}-papers { border-top-color: #4b5563; }
-    [data-theme="dark"] .${id}-papers a,
-    .dark .${id}-papers a { color: #E8A0A0; }
+    /* Dark mode — detected via JS, applied as .${id}-dark on wrapper */
+    .${id}-dark .${id}-popup { background: #1f2937; border-color: #4b5563; box-shadow: 0 8px 24px rgba(0,0,0,0.4); }
+    .${id}-dark .${id}-titles { color: #d1d5db; border-bottom-color: #4b5563; }
+    .${id}-dark .${id}-pronouns { color: #9ca3af; }
+    .${id}-dark .${id}-links a { color: #E8A0A0; }
+    .${id}-dark .${id}-bio { color: #d1d5db; }
+    .${id}-dark .${id}-papers { border-top-color: #4b5563; }
+    .${id}-dark .${id}-papers a { color: #E8A0A0; }
   `;
   el.appendChild(style);
 
+  // Detect dark mode by checking actual page background luminance
+  function detectDark() {
+    const bg = getComputedStyle(document.body).backgroundColor;
+    const m = bg.match(/\d+/g);
+    if (m) {
+      const lum = (0.299 * +m[0] + 0.587 * +m[1] + 0.114 * +m[2]) / 255;
+      return lum < 0.5;
+    }
+    return false;
+  }
   const card = document.createElement("div");
   card.className = `${id}-wrap`;
+  function applyTheme() {
+    card.classList.toggle(`${id}-dark`, detectDark());
+  }
+  applyTheme();
+  new MutationObserver(applyTheme).observe(document.documentElement, { attributes: true });
+  window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", applyTheme);
 
   const titlesHtml = titles
     .map((t) => `<div>${t}</div>`)
