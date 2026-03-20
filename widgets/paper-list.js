@@ -105,7 +105,7 @@ function render({ model, el }) {
       margin: 1em 0 0.4em 0;
       padding-bottom: 0.3em;
       border-bottom: 2px solid ${accentColor};
-      color: #111;
+      color: inherit;
     }
     .${id}-paper {
       padding: 0.5em 0;
