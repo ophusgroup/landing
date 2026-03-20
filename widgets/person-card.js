@@ -8,7 +8,7 @@ function render({ model, el }) {
   const bio = model.get("bio") || "";
   const links = model.get("links") || [];
   const papers = model.get("papers") || [];
-  const popupWidth = model.get("popup_width") || 300;
+  const popupWidth = model.get("popup_width") || 380;
 
   const id = "pc-" + Math.random().toString(36).slice(2, 8);
 
@@ -37,7 +37,7 @@ function render({ model, el }) {
       position: absolute;
       left: 0;
       width: ${popupWidth}px;
-      max-height: 60vh;
+      max-height: 80vh;
       overflow-y: auto;
       background: #fff;
       border: 1px solid #d1d5db;
@@ -110,7 +110,7 @@ function render({ model, el }) {
     <div class="${id}-popup">
       ${pronouns ? `<div class="${id}-pronouns">${pronouns}</div>` : ""}
       ${linksHtml ? `<div class="${id}-links">${linksHtml}</div>` : ""}
-      ${bio ? `<div class="${id}-bio">${bio}</div>` : ""}
+      ${bio ? `<div class="${id}-bio">${bio.replace(/\n/g, "<br>")}</div>` : ""}
       ${papersHtml ? `<div class="${id}-papers">${papersHtml}</div>` : ""}
     </div>
   `;
