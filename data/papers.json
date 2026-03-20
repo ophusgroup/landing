@@ -139,7 +139,11 @@
     "title": "Spatial correlations of charge density wave order across the transition in 2H–NbSe₂",
     "url": "https://doi.org/10.1103/776d-dnmf",
     "year": 2026,
-    "tags": [],
+    "tags": [
+      "4DSTEM",
+      "2D Materials",
+      "Strain"
+    ],
     "authors": [
       "Seokjo Hong",
       "Jaewhan Oh",
@@ -318,7 +322,11 @@
     "title": "Neutral but Impactful: Gallium Cluster-Induced Nanopores from Beam-Blanked Gallium Ion Sources",
     "url": "https://doi.org/10.1093/mam/ozaf059",
     "year": 2025,
-    "tags": [],
+    "tags": [
+      "Ptychography",
+      "EELS",
+      "Instrumentation"
+    ],
     "authors": [],
     "journal": ""
   },
@@ -990,7 +998,10 @@
     "title": "Streaming Large-Scale Microscopy Data to a Supercomputing Facility",
     "url": "https://doi.org/10.1093/mam/ozae109",
     "year": 2024,
-    "tags": [],
+    "tags": [
+      "4DSTEM",
+      "Instrumentation"
+    ],
     "authors": [
       "Samuel S Welborn",
       "Chris Harris",
@@ -1573,7 +1584,8 @@
     "url": "https://doi.org/10.1063/4.0000203",
     "year": 2023,
     "tags": [
-      "Diffraction"
+      "Diffraction",
+      "Instrumentation"
     ],
     "authors": [
       "K. M. Siddiqui",
@@ -1649,7 +1661,8 @@
     "url": "https://doi.org/10.1093/micmic/ozad089",
     "year": 2023,
     "tags": [
-      "Diffraction"
+      "Diffraction",
+      "Crystallography"
     ],
     "authors": [
       "Aurys Silinga",
@@ -1703,7 +1716,10 @@
     "title": "Observing ion diffusion and reciprocating hopping motion in water",
     "url": "https://doi.org/10.1126/sciadv.adf8436",
     "year": 2023,
-    "tags": [],
+    "tags": [
+      "In Situ",
+      "Imaging"
+    ],
     "authors": [
       "Sangui Liu",
       "Xinbao Han",
@@ -2148,7 +2164,10 @@
     "title": "Flexible CO₂ Sensor Architecture with Selective Nitrogen Functionalities by One-Step Laser-Induced Conversion of Versatile Organic Ink",
     "url": "https://doi.org/10.1002/adfm.202207406",
     "year": 2022,
-    "tags": [],
+    "tags": [
+      "4DSTEM",
+      "Materials"
+    ],
     "authors": [
       "Huize Wang",
       "Charles Otieno Ogolla",
@@ -2313,7 +2332,12 @@
     "title": "Correlative image learning of chemo-mechanics in phase-transforming solids",
     "url": "https://doi.org/10.1038/s41563-021-01191-0",
     "year": 2022,
-    "tags": [],
+    "tags": [
+      "4DSTEM",
+      "Machine Learning",
+      "Energy Storage",
+      "Strain"
+    ],
     "authors": [
       "Haitao D. Deng",
       "Hongbo Zhao",
@@ -2709,7 +2733,10 @@
     "title": "Theory and application of the vector pair correlation function for real-space crystallographic analysis of order/disorder correlations from STEM images",
     "url": "https://doi.org/10.1063/5.0058928",
     "year": 2021,
-    "tags": [],
+    "tags": [
+      "Crystallography",
+      "Imaging"
+    ],
     "authors": [
       "Stephen D. Funni",
       "Zi Jin Yang",
@@ -2724,7 +2751,10 @@
     "title": "Crystallization by Amorphous Particle Attachment: On the Evolution of Texture",
     "url": "https://doi.org/10.1002/adma.202101358",
     "year": 2021,
-    "tags": [],
+    "tags": [
+      "Crystallography",
+      "Materials"
+    ],
     "authors": [
       "Vanessa Schoeppler",
       "Deborah Stier",
@@ -3172,7 +3202,11 @@
     "title": "Tilted fluctuation electron microscopy",
     "url": "https://doi.org/10.1063/5.0015532",
     "year": 2020,
-    "tags": [],
+    "tags": [
+      "Simulation",
+      "Imaging",
+      "Crystallography"
+    ],
     "authors": [
       "Ellis Kennedy",
       "Neal Reynolds",
@@ -3270,7 +3304,11 @@
     "title": "Structural Implications of Interfacial Hydrogen Bonding in Hydrated Wyoming-Montmorillonite Clay",
     "url": "https://doi.org/10.1021/acs.jpcc.9b11339",
     "year": 2020,
-    "tags": [],
+    "tags": [
+      "Simulation",
+      "Materials",
+      "Imaging"
+    ],
     "authors": [
       "Nithya Subramanian",
       "Michael L. Whittaker",
@@ -3416,7 +3454,9 @@
     "title": "The Materials Research Platform: Defining the Requirements from User Stories",
     "url": "https://doi.org/10.1016/j.matt.2019.10.024",
     "year": 2019,
-    "tags": [],
+    "tags": [
+      "Machine Learning"
+    ],
     "authors": [
       "Muratahan Aykol",
       "Jens S. Hummelshøj",
@@ -3819,7 +3859,10 @@
     "title": "Resolving the Morphology of Peptoid Vesicles at the One Nanometer Length-Scale Using Cryogenic Electron Microscopy",
     "url": "https://doi.org/10.1021/acs.jpcb.8b11752",
     "year": 2019,
-    "tags": [],
+    "tags": [
+      "Simulation",
+      "Imaging"
+    ],
     "authors": [
       "Xi Jiang",
       "Ryan K. Spencer",
@@ -3924,7 +3967,9 @@
     "title": "ScienceSearch: Enabling Search through Automatic Metadata Generation",
     "url": "https://doi.org/10.1109/eScience.2018.00025",
     "year": 2018,
-    "tags": [],
+    "tags": [
+      "Machine Learning"
+    ],
     "authors": [
       "Gonzalo P. Rodrigo",
       "Matt Henderson",
@@ -4227,7 +4272,10 @@
     "title": "Near-concentric Fabry-Pérot cavity for continuous-wave laser control of electron waves",
     "url": "https://doi.org/10.1364/OE.25.014453",
     "year": 2017,
-    "tags": [],
+    "tags": [
+      "Instrumentation",
+      "Phase Contrast"
+    ],
     "authors": [
       "O. Schwartz",
       "J.J. Axelrod",
@@ -4300,7 +4348,10 @@
     "title": "Multi-pass transmission electron microscopy",
     "url": "http://dx.doi.org/10.1038/s41598-017-01841-x",
     "year": 2017,
-    "tags": [],
+    "tags": [
+      "Instrumentation",
+      "Simulation"
+    ],
     "authors": [
       "Thomas Juffmann",
       "Stewart A. Koppell",
@@ -4315,7 +4366,10 @@
     "title": "Large polarization gradients and temperature-stable responses in compositionally-graded ferroelectrics",
     "url": "http://dx.doi.org/10.1038/ncomms14961",
     "year": 2017,
-    "tags": [],
+    "tags": [
+      "Materials",
+      "Imaging"
+    ],
     "authors": [
       "Anoop R. Damodaran",
       "Shishir Pandya",
@@ -4422,7 +4476,12 @@
     "title": "Deciphering chemical order/disorder and material properties at the single-atom level",
     "url": "http://dx.doi.org/10.1038/nature21042",
     "year": 2017,
-    "tags": [],
+    "tags": [
+      "Tomography",
+      "Nanoparticles",
+      "Magnetism",
+      "Crystallography"
+    ],
     "authors": [
       "Yongsoo Yang",
       "Chien-Chun Chen",
@@ -4976,7 +5035,10 @@
     "title": "Tensile behavior of Al₁₋ₓMoₓ crystalline and amorphous thin films",
     "url": "http://dx.doi.org/10.1016/j.actamat.2012.11.020",
     "year": 2013,
-    "tags": [],
+    "tags": [
+      "Materials",
+      "Strain"
+    ],
     "authors": [
       "D.S. Gianola",
       "Z. Lee",
@@ -5041,7 +5103,10 @@
     "title": "Highly monodisperse core–shell particles created by solid-state reactions",
     "url": "http://dx.doi.org/doi:10.1038/nmat3077",
     "year": 2011,
-    "tags": [],
+    "tags": [
+      "Nanoparticles",
+      "Materials"
+    ],
     "authors": [
       "V. Radmilovic",
       "C. Ophus",
@@ -5211,7 +5276,9 @@
     "title": "Structural changes of thin MgAl films during hydrogen desorption",
     "url": "http://dx.doi.org/10.1016/j.nima.2008.11.113",
     "year": 2009,
-    "tags": [],
+    "tags": [
+      "Materials"
+    ],
     "authors": [
       "Helmut Fritzsche",
       "Mouna Saoudi",
@@ -5226,7 +5293,11 @@
     "title": "Tailoring the microstructure and surface morphology of metal thin films for nanoelectromechanical systems applications",
     "url": "http://dx.doi.org/10.1088/0957-4484/19/12/125705",
     "year": 2008,
-    "tags": [],
+    "tags": [
+      "Materials",
+      "Instrumentation",
+      "Nanoparticles"
+    ],
     "authors": [
       "E Luber",
       "R Mohammadi",
