@@ -26,7 +26,7 @@ Our group has developed many 4DSTEM methods, including nanobeam orientation and 
 
 ::::
 
-::::{dropdown} 4DSTEM Analysis with py4DSTEM
+::::::{dropdown} 4DSTEM Analysis with py4DSTEM
 
 ::::{div}
 <div style="width: 20%; float: right; margin-left: 1em;"><img src="/images/research/py4DSTEM_logo_54_export.png" alt="py4DSTEM" style="width: 100%;" /></div>
@@ -56,7 +56,7 @@ Our group has developed many 4DSTEM methods, including nanobeam orientation and 
 - [multislice ptychography](https://doi.org/10.1063/5.0206814)
 - joint ptychography-tomography
 
-::::
+::::::
 
 ### ML Inversion of Multiple Scattering
 

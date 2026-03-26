@@ -537,14 +537,15 @@ function render({ model, el }) {
       background: #111;
       color: #ccc;
       border-radius: 8px;
-      padding: 16px;
+      padding: 8px 16px;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
       font-size: 14px;
       max-width: 100%;
       box-sizing: border-box;
     }
-    .${id}-title { font-size: 18px; font-weight: 600; color: #eee; margin-bottom: 12px; }
+    .${id}-title { font-size: 16px; font-weight: 600; color: #ddd; margin-bottom: 4px; text-align: center; padding-right: 20%; }
     .${id}-main { display: flex; gap: 16px; }
+    .${id}-bottom-hint { font-size: 11px; color: #555; text-align: center; margin-top: 4px; padding-right: 20%; }
     .${id}-controls { flex: 0 0 200px; display: flex; flex-direction: column; gap: 12px; }
     .${id}-canvas-wrap { flex: 1; min-width: 0; }
     .${id}-canvas { width: 100%; display: block; border-radius: 4px; cursor: crosshair; }
@@ -570,7 +571,6 @@ function render({ model, el }) {
   const wrap = document.createElement("div");
   wrap.className = `${id}-wrap`;
   wrap.innerHTML = `
-    <div class="${id}-title">4DSTEM Diffraction</div>
     <div class="${id}-loading">Generating polycrystalline sample...</div>
     <div class="${id}-main" style="display:none;">
       <div class="${id}-controls">
@@ -590,10 +590,11 @@ function render({ model, el }) {
           <div class="${id}-slider-val" id="${id}-gamma-val">0.25</div>
         </div>
         <div id="${id}-scan" class="${id}-btn">▶ Scan</div>
-        <div class="${id}-hint">Drag on the 3D view to move the electron probe.</div>
       </div>
       <div class="${id}-canvas-wrap">
+        <div class="${id}-title">4DSTEM Diffraction</div>
         <canvas class="${id}-canvas" id="${id}-scene"></canvas>
+        <div class="${id}-bottom-hint">Drag on the 3D view to move the electron probe</div>
       </div>
     </div>
   `;
