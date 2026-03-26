@@ -4,14 +4,19 @@ title: Research Projects
 
 ## 4DSTEM
 
+:::{any:bundle} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/stem4d-sim.js
+{}
+:::
+
 ### Experiments
 
-::::{div}
+<!-- ::::{div}
 :::{figure} ./videos/research_4DSTEM_02.mp4
 :class: float-right
 :width: 50%
 Comparing conventional ADF-STEM and 4DSTEM.
 :::
+-->
 
 In conventional STEM, a focused electron probe is scanned over the sample while detectors record just a few intensity values per position, discarding most of the information encoded in each diffraction pattern. Modern direct electron detectors now operate at up to 120,000 frames/second, allowing us to capture a full 2D diffraction image at every probe position — producing a 4D dataset. We coined the term four-dimensional scanning transmission electron microscopy (4DSTEM) to describe this family of experiments.
 
@@ -20,7 +25,6 @@ Our group has developed many 4DSTEM methods, including nanobeam orientation and 
 - [(2023) Review of STEM in materials science](doi.org/10.1146/annurev-matsci-080921-092646)
 - [(2021) 4DSTEM of beam-sensitive materials](https://doi.org/10.1021/acs.accounts.1c00073)
 - [(2019) Review of 4DSTEM](doi.org/10.1017/S1431927619000497)
-::::
 
 ### Analysis with py4DSTEM
 
