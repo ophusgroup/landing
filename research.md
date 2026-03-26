@@ -2,13 +2,11 @@
 title: Research Projects
 ---
 
-## 4DSTEM
-
 :::{any:bundle} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/stem4d-sim.js
 {}
 :::
 
-### Experiments
+::::{dropdown} 4DSTEM Experiments
 
 <!-- ::::{div}
 :::{figure} ./videos/research_4DSTEM_02.mp4
@@ -26,7 +24,9 @@ Our group has developed many 4DSTEM methods, including nanobeam orientation and 
 - [(2021) 4DSTEM of beam-sensitive materials](https://doi.org/10.1021/acs.accounts.1c00073)
 - [(2019) Review of 4DSTEM](doi.org/10.1017/S1431927619000497)
 
-### Analysis with py4DSTEM
+::::
+
+::::{dropdown} 4DSTEM Analysis with py4DSTEM
 
 ::::{div}
 <div style="width: 20%; float: right; margin-left: 1em;"><img src="/images/research/py4DSTEM_logo_54_export.png" alt="py4DSTEM" style="width: 100%;" /></div>
@@ -55,6 +55,8 @@ Our group has developed many 4DSTEM methods, including nanobeam orientation and 
 - ptychography
 - [multislice ptychography](https://doi.org/10.1063/5.0206814)
 - joint ptychography-tomography
+
+::::
 
 ### ML Inversion of Multiple Scattering
 
