@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>4DSTEM Widget Test</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 20px;
+      background: #1a1a1a;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+    #root {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+  <script type="module">
+    import widget from './stem4d-sim.js';
+
+    // Mock the model.get() interface that MyST any:bundle provides
+    const params = {
+      pixel_size: 0.2,
+      cell_dim_x: 150,
+      cell_dim_y: 40,
+      cell_dim_z: 40,
+      a_lattice: 4.0,
+      sigma: 0.2,
+      lambda: 0.0197,
+      crop_size: 128,
+      probe_q_max: 0.15,
+    };
+
+    const model = {
+      get: (key) => params[key],
+    };
+
+    widget.render({ model, el: document.getElementById('root') });
+  </script>
+</body>
+</html>
