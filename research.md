@@ -78,6 +78,10 @@ Disordered nanocrystalline silicon.
 Many important materials are highly disordered — functional oxides, silicate glasses, amorphous electrolytes, polymers, and more. We are generalizing our ML inversion methods to work across the full spectrum, from disordered liquids to crystalline materials.
 ::::
 
+:::{any:bundle} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/amorphous-si.js
+{}
+:::
+
 ### STEM Probe Wavefunction Control
 
 :::{figure} /images/research/STEM_probes.png

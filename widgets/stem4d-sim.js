@@ -543,28 +543,25 @@ function render({ model, el }) {
       max-width: 100%;
       box-sizing: border-box;
     }
-    .${id}-title { font-size: 16px; font-weight: 600; color: #ddd; margin-bottom: 4px; text-align: center; padding-right: 20%; }
-    .${id}-main { display: flex; gap: 16px; }
-    .${id}-bottom-hint { font-size: 11px; color: #555; text-align: center; margin-top: 4px; padding-right: 20%; }
-    .${id}-controls { flex: 0 0 200px; display: flex; flex-direction: column; gap: 12px; }
-    .${id}-canvas-wrap { flex: 1; min-width: 0; }
+    .${id}-title { font-size: 16px; font-weight: 600; color: #ddd; margin-bottom: 4px; text-align: center; }
+    .${id}-main { display: flex; flex-direction: column; gap: 8px; }
+    .${id}-bottom-hint { font-size: 11px; color: #555; text-align: center; margin-top: 4px; }
+    .${id}-controls { display: flex; flex-direction: row; flex-wrap: wrap; gap: 8px 16px; align-items: flex-end; }
+    .${id}-canvas-wrap { min-width: 0; }
     .${id}-canvas { width: 100%; display: block; border-radius: 4px; cursor: crosshair; }
+    .${id}-slider-group { flex: 1; min-width: 140px; }
     .${id}-slider-group label { display: block; font-size: 12px; color: #aaa; margin-bottom: 2px; }
     .${id}-slider-group input[type=range] { width: 100%; accent-color: #00cc66; }
     .${id}-slider-val { font-size: 11px; color: #666; margin-top: 1px; }
     .${id}-btn {
       padding: 6px 12px; border: 1px solid #444; background: #222;
       color: #ccc; border-radius: 4px; cursor: pointer; font-size: 13px; text-align: center;
+      align-self: center;
     }
     .${id}-btn:hover { background: #333; }
     .${id}-btn.active { background: #1a4d2e; border-color: #00cc66; color: #00ff88; }
     .${id}-hint { font-size: 11px; color: #555; line-height: 1.4; }
     .${id}-loading { color: #888; padding: 40px; text-align: center; }
-    @media (max-width: 768px) {
-      .${id}-main { flex-direction: column-reverse; }
-      .${id}-controls { flex: none; flex-direction: row; flex-wrap: wrap; gap: 8px; }
-      .${id}-slider-group { flex: 1; min-width: 140px; }
-    }
   `;
   el.appendChild(style);
 
@@ -573,6 +570,11 @@ function render({ model, el }) {
   wrap.innerHTML = `
     <div class="${id}-loading">Generating polycrystalline sample...</div>
     <div class="${id}-main" style="display:none;">
+      <div class="${id}-canvas-wrap">
+        <div class="${id}-title">4DSTEM Diffraction</div>
+        <canvas class="${id}-canvas" id="${id}-scene"></canvas>
+        <div class="${id}-bottom-hint">Drag on the 3D view to move the electron probe</div>
+      </div>
       <div class="${id}-controls">
         <div class="${id}-slider-group">
           <label>Convergence Semiangle</label>
@@ -590,11 +592,6 @@ function render({ model, el }) {
           <div class="${id}-slider-val" id="${id}-gamma-val">0.25</div>
         </div>
         <div id="${id}-scan" class="${id}-btn">▶ Scan</div>
-      </div>
-      <div class="${id}-canvas-wrap">
-        <div class="${id}-title">4DSTEM Diffraction</div>
-        <canvas class="${id}-canvas" id="${id}-scene"></canvas>
-        <div class="${id}-bottom-hint">Drag on the 3D view to move the electron probe</div>
       </div>
     </div>
   `;
