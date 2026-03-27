@@ -572,22 +572,24 @@ function render({ model, el }) {
   el.innerHTML = `
     <style>
       .${id}-wrap { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #111; border-radius: 12px; overflow: hidden; color: #ccc; }
-      .${id}-panels { display: flex; gap: 0; }
-      .${id}-panel { flex: 1; display: flex; flex-direction: column; align-items: center; padding: 8px 4px; min-width: 0; }
-      .${id}-panel canvas { border-radius: 6px; cursor: default; image-rendering: pixelated; }
+      .${id}-wrap { overflow: visible; }
+      .${id}-panels { display: flex; gap: 0; width: 100%; }
+      .${id}-panel { flex: 1; display: flex; flex-direction: column; align-items: center; padding: 4px 2px; min-width: 0; overflow: hidden; }
+      .${id}-panel canvas { border-radius: 6px; cursor: default; image-rendering: pixelated; display: block; width: 100%; height: auto; }
+      .${id}-mid { flex: 1.4; }
       .${id}-mid canvas { cursor: grab; }
       .${id}-mid canvas:active { cursor: grabbing; }
-      .${id}-label { font-size: 11px; color: #aaa; margin-bottom: 4px; text-align: center; letter-spacing: 0.5px; text-transform: uppercase; }
-      .${id}-controls { display: flex; flex-wrap: wrap; gap: 8px 16px; padding: 10px 16px; background: #222; align-items: center; justify-content: center; border-top: 1px solid #444; }
-      .${id}-ctrl { display: flex; align-items: center; gap: 6px; font-size: 12px; }
-      .${id}-ctrl input[type="range"] { width: 120px; accent-color: #00cc66; }
-      .${id}-ctrl .val { min-width: 54px; text-align: right; font-variant-numeric: tabular-nums; color: #00ff88; }
-      .${id}-btn { background: #222; border: 1px solid #444; color: #ccc; padding: 4px 12px; border-radius: 4px; cursor: pointer; font-size: 12px; min-width: 72px; text-align: center; }
+      .${id}-label { font-size: 10px; color: #aaa; margin-bottom: 3px; text-align: center; letter-spacing: 0.3px; text-transform: uppercase; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100%; }
+      .${id}-controls { display: flex; flex-wrap: wrap; gap: 6px 14px; padding: 8px 12px; background: #222; align-items: center; justify-content: center; border-top: 1px solid #444; }
+      .${id}-ctrl { display: flex; align-items: center; gap: 4px; font-size: 11px; }
+      .${id}-ctrl input[type="range"] { width: 100px; accent-color: #00cc66; }
+      .${id}-ctrl .val { min-width: 50px; text-align: right; font-variant-numeric: tabular-nums; color: #00ff88; font-size: 11px; }
+      .${id}-btn { background: #222; border: 1px solid #444; color: #ccc; padding: 3px 10px; border-radius: 4px; cursor: pointer; font-size: 11px; min-width: 64px; text-align: center; }
       .${id}-btn:hover { background: #333; }
       .${id}-btn.active { background: #1a4d2e; border-color: #00cc66; color: #00ff88; }
       .${id}-loading { text-align: center; padding: 40px; color: #888; font-size: 14px; }
       .${id}-main { display: none; }
-      @media (max-width: 768px) { .${id}-panels { flex-direction: column; } .${id}-controls { flex-direction: column; align-items: flex-start; } }
+      @media (max-width: 500px) { .${id}-panels { flex-direction: column; align-items: center; } .${id}-panel canvas { width: 80%; } }
     </style>
     <div class="${id}-wrap">
       <div class="${id}-loading" id="${id}-loading">Generating atomic structures…</div>

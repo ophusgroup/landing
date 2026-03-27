@@ -546,21 +546,21 @@ function render({ model, el }) {
     .${id}-title { font-size: 16px; font-weight: 600; color: #ddd; margin-bottom: 4px; text-align: center; }
     .${id}-main { display: flex; flex-direction: column; gap: 8px; }
     .${id}-bottom-hint { font-size: 11px; color: #555; text-align: center; margin-top: 4px; }
-    .${id}-controls { display: flex; flex-direction: row; flex-wrap: wrap; gap: 8px 16px; align-items: flex-end; }
+    .${id}-controls { display: flex; flex-direction: row; flex-wrap: wrap; gap: 10px 20px; align-items: flex-end; padding: 8px 4px; }
     .${id}-canvas-wrap { min-width: 0; }
     .${id}-canvas { width: 100%; display: block; border-radius: 4px; cursor: crosshair; }
-    .${id}-slider-group { flex: 1; min-width: 140px; }
-    .${id}-slider-group label { display: block; font-size: 12px; color: #aaa; margin-bottom: 2px; }
+    .${id}-slider-group { flex: 1; min-width: 160px; }
+    .${id}-slider-group label { display: block; font-size: 14px; color: #aaa; margin-bottom: 3px; }
     .${id}-slider-group input[type=range] { width: 100%; accent-color: #00cc66; }
-    .${id}-slider-val { font-size: 11px; color: #666; margin-top: 1px; }
+    .${id}-slider-val { font-size: 13px; color: #666; margin-top: 2px; }
     .${id}-btn {
-      padding: 6px 12px; border: 1px solid #444; background: #222;
-      color: #ccc; border-radius: 4px; cursor: pointer; font-size: 13px; text-align: center;
+      padding: 8px 16px; border: 1px solid #444; background: #222;
+      color: #ccc; border-radius: 4px; cursor: pointer; font-size: 14px; text-align: center;
       align-self: center;
     }
     .${id}-btn:hover { background: #333; }
     .${id}-btn.active { background: #1a4d2e; border-color: #00cc66; color: #00ff88; }
-    .${id}-hint { font-size: 11px; color: #555; line-height: 1.4; }
+    .${id}-hint { font-size: 12px; color: #555; line-height: 1.4; }
     .${id}-loading { color: #888; padding: 40px; text-align: center; }
   `;
   el.appendChild(style);
