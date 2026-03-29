@@ -38,6 +38,18 @@ function render({ model, el }) {
       gap: 0.4em;
       margin-bottom: 0.6em;
     }
+    .${id}-tag-cat {
+      display: inline-block;
+      font-size: 0.7em;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: #9ca3af;
+      margin-right: 0.3em;
+      margin-left: 0.6em;
+      vertical-align: middle;
+    }
+    .${id}-tag-cat:first-child { margin-left: 0; }
     .${id}-tag {
       display: inline-block;
       padding: 0.25em 0.7em;
@@ -149,6 +161,7 @@ function render({ model, el }) {
     /* Dark mode — detected via JS, applied as .${id}-dark on wrapper */
     .${id}-dark .${id}-search { background: #1f2937; color: #e5e7eb; border-color: #4b5563; }
     .${id}-dark .${id}-search:focus { border-color: ${accentColorDark}; box-shadow: 0 0 0 2px ${accentColorDark}33; }
+    .${id}-dark .${id}-tag-cat { color: #6b7280; }
     .${id}-dark .${id}-tag { background: #1f2937; color: #6b7280; border-color: #374151; }
     .${id}-dark .${id}-tag:hover { border-color: #b05050; color: #d4a0a0; }
     .${id}-dark .${id}-tag.active { background: #6b2020; color: #e5d0d0; border-color: #8C1515; }
@@ -214,8 +227,30 @@ function render({ model, el }) {
         allTags[t] = (allTags[t] || 0) + 1;
       }
     }
+    // Tag category ordering
+    const TAG_ORDER = {
+      "4DSTEM":0,"Ptychography":1,"Tomography":2,"Imaging":3,"Diffraction":4,
+      "Phase Contrast":5,"Strain":6,"Spectroscopy":7,"EELS":8,"XEDS":9,
+      "Simulation":10,"Machine Learning":11,"In Situ":12,"Cryo-EM":13,
+      "Fluctuation EM":14,"Lorentz TEM":15,"Holography":16,
+      "Aberration Correction":17,"Interferometry":18,"Image Processing":19,
+      "FIB":20,"Ion Irradiation":21,
+      "2D Materials":100,"Nanoparticles":101,"Oxides":102,"Metals & Alloys":103,
+      "Perovskites":104,"Disordered":105,"Polymers":106,"Semiconductor":107,
+      "Catalysis":108,"Energy Materials":109,"Biological":110,"Nuclear Materials":111,
+      "Moiré":112,
+      "Crystallography":200,"Magnetism":201,
+      "Software":202,"py4DSTEM":203,"Data Science":204,
+    };
+    const TAG_CAT = (t) => {
+      const o = TAG_ORDER[t]; if (o == null) return 3;
+      return o < 100 ? 0 : o < 200 ? 1 : 2;
+    };
+    const TAG_CAT_LABELS = ["Technique", "Material", "Field"];
+    const MIN_TAG_COUNT = 3;
     const sortedTags = Object.entries(allTags)
-      .sort((a, b) => b[1] - a[1])
+      .filter(([, c]) => c >= MIN_TAG_COUNT)
+      .sort((a, b) => (TAG_ORDER[a[0]] ?? 999) - (TAG_ORDER[b[0]] ?? 999))
       .map(([t]) => t);
     const sortedYears = [...allYears].sort((a, b) => b - a);
 
@@ -239,8 +274,17 @@ function render({ model, el }) {
     const statsContainer = wrap.querySelector(`.${id}-stats`);
     const resultsContainer = wrap.querySelector(`.${id}-results`);
 
-    // Render tag pills
+    // Render tag pills with category labels
+    let lastCat = -1;
     for (const tag of sortedTags) {
+      const cat = TAG_CAT(tag);
+      if (cat !== lastCat) {
+        lastCat = cat;
+        const label = document.createElement("span");
+        label.className = `${id}-tag-cat`;
+        label.textContent = TAG_CAT_LABELS[cat] || "";
+        tagsContainer.appendChild(label);
+      }
       const pill = document.createElement("span");
       pill.className = `${id}-tag`;
       pill.textContent = `${tag} (${allTags[tag]})`;

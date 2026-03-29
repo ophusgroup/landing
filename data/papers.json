@@ -4,10 +4,10 @@
     "url": "https://doi.org/10.1021/acsnano.5c14666",
     "year": 2026,
     "tags": [
-      "Strain",
       "2D Materials",
       "Crystallography",
-      "Magnetism"
+      "Magnetism",
+      "Strain"
     ],
     "authors": [
       "Hem Prasad Bhusal",
@@ -34,6 +34,9 @@
     "url": "https://doi.org/10.1016/j.bpj.2026.02.016",
     "year": 2026,
     "tags": [
+      "Biological",
+      "Cryo-EM",
+      "Phase Contrast",
       "Simulation"
     ],
     "authors": [
@@ -52,9 +55,11 @@
     "url": "https://doi.org/10.1126/sciadv.adz7908",
     "year": 2026,
     "tags": [
-      "Tomography",
+      "2D Materials",
+      "4DSTEM",
+      "Diffraction",
       "Strain",
-      "2D Materials"
+      "Tomography"
     ],
     "authors": [
       "Adan Mireles",
@@ -76,6 +81,9 @@
     "year": 2026,
     "tags": [
       "2D Materials",
+      "Crystallography",
+      "Moiré",
+      "Semiconductor",
       "Spectroscopy"
     ],
     "authors": [
@@ -114,8 +122,12 @@
     "url": "https://doi.org/10.1038/s41467-025-68113-5",
     "year": 2026,
     "tags": [
+      "4DSTEM",
+      "Crystallography",
+      "Diffraction",
       "Nanoparticles",
-      "Crystallography"
+      "Ptychography",
+      "XEDS"
     ],
     "authors": [
       "Weilun Li",
@@ -140,8 +152,9 @@
     "url": "https://doi.org/10.1103/776d-dnmf",
     "year": 2026,
     "tags": [
-      "4DSTEM",
       "2D Materials",
+      "4DSTEM",
+      "Semiconductor",
       "Strain"
     ],
     "authors": [
@@ -163,8 +176,11 @@
     "url": "https://doi.org/10.1038/s41524-025-01927-5",
     "year": 2026,
     "tags": [
+      "Crystallography",
+      "Diffraction",
       "Machine Learning",
-      "Diffraction"
+      "Nanoparticles",
+      "Simulation"
     ],
     "authors": [
       "Anvesh Nathani",
@@ -183,10 +199,16 @@
     "url": "https://doi.org/10.1038/s41467-025-67303-5",
     "year": 2026,
     "tags": [
-      "Ptychography",
-      "Tomography",
+      "Aberration Correction",
+      "Biological",
+      "Cryo-EM",
       "Imaging",
-      "Phase Contrast"
+      "Machine Learning",
+      "Nanoparticles",
+      "Phase Contrast",
+      "Ptychography",
+      "Simulation",
+      "Tomography"
     ],
     "authors": [
       "Juhyeok Lee",
@@ -205,11 +227,11 @@
     "url": "https://doi.org/10.1016/j.ultramic.2025.114305",
     "year": 2026,
     "tags": [
-      "Ptychography",
       "2D Materials",
-      "Spectroscopy",
-      "Instrumentation",
-      "EELS"
+      "4DSTEM",
+      "EELS",
+      "Ptychography",
+      "Spectroscopy"
     ],
     "authors": [
       "Dana O. Byrne",
@@ -286,8 +308,10 @@
     "url": "https://doi.org/10.1093/mam/ozaf119",
     "year": 2025,
     "tags": [
-      "Simulation",
-      "4DSTEM"
+      "4DSTEM",
+      "Oxides",
+      "Ptychography",
+      "Simulation"
     ],
     "authors": [
       "Emmanuel W C Terzoudis-Lumsden",
@@ -308,7 +332,8 @@
     "year": 2025,
     "tags": [
       "4DSTEM",
-      "Diffraction"
+      "Diffraction",
+      "Strain"
     ],
     "authors": [
       "Stephanie M Ribet",
@@ -323,9 +348,10 @@
     "url": "https://doi.org/10.1093/mam/ozaf059",
     "year": 2025,
     "tags": [
-      "Ptychography",
       "EELS",
-      "Instrumentation"
+      "FIB",
+      "Nanoparticles",
+      "Ptychography"
     ],
     "authors": [],
     "journal": ""
@@ -335,6 +361,7 @@
     "url": "https://doi.org/10.1364/3D.2025.JW2A.18",
     "year": 2025,
     "tags": [
+      "Machine Learning",
       "Tomography"
     ],
     "authors": [
@@ -378,10 +405,10 @@
     "url": "https://doi.org/10.1021/acs.chemmater.5c01154",
     "year": 2025,
     "tags": [
-      "Materials",
+      "Catalysis",
       "Nanoparticles",
-      "Spectroscopy",
-      "Catalysis"
+      "Semiconductor",
+      "Spectroscopy"
     ],
     "authors": [
       "Min Gee Cho",
@@ -405,8 +432,12 @@
     "url": "https://doi.org/10.1063/5.0274964",
     "year": 2025,
     "tags": [
-      "Tomography",
-      "Strain"
+      "4DSTEM",
+      "Catalysis",
+      "In Situ",
+      "Simulation",
+      "Strain",
+      "Tomography"
     ],
     "authors": [
       "Laura Niermann",
@@ -421,8 +452,11 @@
     "url": "https://doi.org/10.1002/admi.202500218",
     "year": 2025,
     "tags": [
+      "2D Materials",
+      "Crystallography",
       "In Situ",
-      "Materials"
+      "Oxides",
+      "Strain"
     ],
     "authors": [
       "Anna Scheid",
@@ -441,9 +475,12 @@
     "url": "https://doi.org/10.1038/s41467-025-63448-5",
     "year": 2025,
     "tags": [
+      "Catalysis",
       "In Situ",
-      "Materials",
-      "Catalysis"
+      "Machine Learning",
+      "Metals & Alloys",
+      "Strain",
+      "Tomography"
     ],
     "authors": [
       "Chaehwa Jeong",
@@ -463,8 +500,11 @@
     "url": "https://doi.org/10.1038/s41524-025-01766-4",
     "year": 2025,
     "tags": [
+      "Aberration Correction",
       "Machine Learning",
-      "Instrumentation"
+      "Nanoparticles",
+      "Oxides",
+      "Ptychography"
     ],
     "authors": [
       "Alexander J. Pattison",
@@ -485,9 +525,10 @@
     "year": 2025,
     "tags": [
       "4DSTEM",
+      "Crystallography",
+      "Imaging",
       "In Situ",
-      "Materials",
-      "Imaging"
+      "Polymers"
     ],
     "authors": [
       "Min Chen",
@@ -507,6 +548,8 @@
     "url": "https://doi.org/10.1016/j.matdes.2025.114282",
     "year": 2025,
     "tags": [
+      "Disordered",
+      "Oxides",
       "Strain"
     ],
     "authors": [
@@ -526,9 +569,13 @@
     "url": "https://doi.org/10.1038/s41467-025-60135-3",
     "year": 2025,
     "tags": [
+      "Catalysis",
+      "Cryo-EM",
+      "Imaging",
       "In Situ",
+      "Metals & Alloys",
       "Nanoparticles",
-      "Imaging"
+      "Tomography"
     ],
     "authors": [
       "Dahai Yang",
@@ -555,7 +602,9 @@
     "url": "https://doi.org/10.1016/j.actamat.2025.121095",
     "year": 2025,
     "tags": [
-      "Materials"
+      "Ion Irradiation",
+      "Metals & Alloys",
+      "Nuclear Materials"
     ],
     "authors": [
       "Kan Ma",
@@ -582,10 +631,14 @@
     "url": "https://doi.org/10.1088/1361-648X/adc6e3",
     "year": 2025,
     "tags": [
-      "Ptychography",
+      "4DSTEM",
+      "Holography",
+      "Lorentz TEM",
       "Magnetism",
       "Nanoparticles",
-      "Phase Contrast"
+      "Phase Contrast",
+      "Ptychography",
+      "Simulation"
     ],
     "authors": [
       "Kayna L Mendoza",
@@ -603,6 +656,9 @@
     "url": "https://doi.org/10.1126/sciadv.adq4070",
     "year": 2025,
     "tags": [
+      "Crystallography",
+      "Metals & Alloys",
+      "Nuclear Materials",
       "Strain"
     ],
     "authors": [
@@ -628,8 +684,11 @@
     "url": "https://doi.org/10.1111/jmi.13407",
     "year": 2025,
     "tags": [
+      "4DSTEM",
+      "Machine Learning",
+      "Nanoparticles",
       "Ptychography",
-      "Machine Learning"
+      "Simulation"
     ],
     "authors": [
       "Arthur R. C. McCray",
@@ -645,9 +704,14 @@
     "year": 2025,
     "tags": [
       "4DSTEM",
-      "Materials",
       "Crystallography",
-      "Diffraction"
+      "Diffraction",
+      "In Situ",
+      "Oxides",
+      "Perovskites",
+      "Simulation",
+      "Software",
+      "py4DSTEM"
     ],
     "authors": [
       "Alain C Diebold",
@@ -671,8 +735,14 @@
     "url": "https://doi.org/10.1038/s41467-025-58022-y",
     "year": 2025,
     "tags": [
+      "Catalysis",
       "Crystallography",
-      "Magnetism"
+      "In Situ",
+      "Magnetism",
+      "Metals & Alloys",
+      "Oxides",
+      "Phase Contrast",
+      "Strain"
     ],
     "authors": [
       "Xuyang Zhou",
@@ -689,8 +759,11 @@
     "url": "https://doi.org/10.1038/s41467-025-56842-6",
     "year": 2025,
     "tags": [
+      "Crystallography",
+      "Disordered",
+      "Nanoparticles",
       "Strain",
-      "Nanoparticles"
+      "Tomography"
     ],
     "authors": [
       "Zhen Sun",
@@ -709,8 +782,12 @@
     "url": "https://doi.org/10.1021/acsami.4c20652",
     "year": 2025,
     "tags": [
-      "Materials",
-      "Crystallography"
+      "4DSTEM",
+      "Crystallography",
+      "Diffraction",
+      "Polymers",
+      "Simulation",
+      "Strain"
     ],
     "authors": [
       "Yujun Xie",
@@ -732,8 +809,10 @@
     "url": "https://doi.org/10.1038/s41467-025-56467-9",
     "year": 2025,
     "tags": [
+      "2D Materials",
+      "Energy Materials",
       "Magnetism",
-      "2D Materials"
+      "Oxides"
     ],
     "authors": [
       "Samra Husremović",
@@ -764,7 +843,9 @@
     "year": 2025,
     "tags": [
       "4DSTEM",
-      "In Situ"
+      "Crystallography",
+      "In Situ",
+      "Metals & Alloys"
     ],
     "authors": [
       "Jennifer Donohue",
@@ -781,7 +862,10 @@
     "url": "https://doi.org/10.1038/s41563-024-02016-6",
     "year": 2025,
     "tags": [
-      "Energy Storage"
+      "4DSTEM",
+      "Diffraction",
+      "Energy Materials",
+      "Polymers"
     ],
     "authors": [
       "Yael Tsarfati",
@@ -807,7 +891,7 @@
     "year": 2024,
     "tags": [
       "4DSTEM",
-      "Instrumentation"
+      "Software"
     ],
     "authors": [
       "Peter Ercius",
@@ -840,9 +924,13 @@
     "url": "https://doi.org/10.1063/5.0222102",
     "year": 2024,
     "tags": [
-      "Strain",
       "2D Materials",
-      "Imaging"
+      "4DSTEM",
+      "Diffraction",
+      "Interferometry",
+      "Moiré",
+      "Ptychography",
+      "Strain"
     ],
     "authors": [
       "Isaac M. Craig",
@@ -857,10 +945,13 @@
     "url": "https://doi.org/10.1063/5.0206814",
     "year": 2024,
     "tags": [
+      "4DSTEM",
+      "Crystallography",
+      "Nanoparticles",
       "Ptychography",
-      "Tomography",
       "Simulation",
-      "Nanoparticles"
+      "Strain",
+      "Tomography"
     ],
     "authors": [
       "Stephanie M. Ribet",
@@ -878,9 +969,10 @@
     "url": "https://doi.org/10.1002/adma.202412871",
     "year": 2024,
     "tags": [
-      "In Situ",
-      "Materials",
-      "Energy Storage"
+      "Energy Materials",
+      "Imaging",
+      "Magnetism",
+      "Oxides"
     ],
     "authors": [
       "Tucker Holstun",
@@ -902,8 +994,9 @@
     "url": "https://doi.org/10.1016/j.actamat.2024.120436",
     "year": 2024,
     "tags": [
+      "Crystallography",
       "Nanoparticles",
-      "Crystallography"
+      "Oxides"
     ],
     "authors": [
       "A.L. Clauser",
@@ -921,9 +1014,13 @@
     "url": "https://doi.org/10.1038/s41565-024-01787-y",
     "year": 2024,
     "tags": [
-      "Materials",
+      "4DSTEM",
+      "Disordered",
+      "Energy Materials",
+      "In Situ",
+      "Magnetism",
       "Nanoparticles",
-      "Energy Storage"
+      "Oxides"
     ],
     "authors": [
       "Han-Ming Hau",
@@ -956,7 +1053,9 @@
     "url": "https://doi.org/10.1038/s41467-024-54521-6",
     "year": 2024,
     "tags": [
-      "Magnetism"
+      "Crystallography",
+      "Magnetism",
+      "Strain"
     ],
     "authors": [
       "Heng Niu",
@@ -981,7 +1080,11 @@
     "url": "https://doi.org/10.1093/mam/ozae113",
     "year": 2024,
     "tags": [
-      "Crystallography"
+      "4DSTEM",
+      "Crystallography",
+      "Disordered",
+      "Fluctuation EM",
+      "Magnetism"
     ],
     "authors": [
       "Ellis Kennedy",
@@ -1000,7 +1103,8 @@
     "year": 2024,
     "tags": [
       "4DSTEM",
-      "Instrumentation"
+      "Data Science",
+      "In Situ"
     ],
     "authors": [
       "Samuel S Welborn",
@@ -1019,7 +1123,10 @@
     "year": 2024,
     "tags": [
       "4DSTEM",
-      "Imaging"
+      "Diffraction",
+      "Imaging",
+      "Nanoparticles",
+      "Perovskites"
     ],
     "authors": [
       "Ian MacLaren",
@@ -1034,10 +1141,10 @@
     "url": "https://doi.org/10.1021/acsnano.3c08610",
     "year": 2024,
     "tags": [
-      "Strain",
       "2D Materials",
+      "Crystallography",
       "Nanoparticles",
-      "Crystallography"
+      "Strain"
     ],
     "authors": [
       "Jaewon Lee",
@@ -1056,7 +1163,10 @@
     "url": "https://doi.org/10.1038/s41467-024-52919-w",
     "year": 2024,
     "tags": [
-      "Crystallography"
+      "Catalysis",
+      "Crystallography",
+      "Energy Materials",
+      "Nanoparticles"
     ],
     "authors": [
       "Xin Geng",
@@ -1077,10 +1187,10 @@
     "url": "https://doi.org/10.1103/PhysRevMaterials.8.093802",
     "year": 2024,
     "tags": [
-      "Machine Learning",
-      "Simulation",
       "Crystallography",
-      "Diffraction"
+      "Diffraction",
+      "Machine Learning",
+      "Simulation"
     ],
     "authors": [
       "Samuel P. Gleason",
@@ -1099,8 +1209,12 @@
     "url": "https://doi.org/10.1038/s41467-024-52403-5",
     "year": 2024,
     "tags": [
+      "4DSTEM",
+      "Biological",
+      "Cryo-EM",
+      "Diffraction",
       "Ptychography",
-      "Imaging"
+      "Tomography"
     ],
     "authors": [
       "Berk Küçükoğlu",
@@ -1126,7 +1240,10 @@
     "url": "https://doi.org/10.1002/adma.202405150",
     "year": 2024,
     "tags": [
-      "Magnetism"
+      "Crystallography",
+      "Magnetism",
+      "Oxides",
+      "Perovskites"
     ],
     "authors": [
       "Michele Conroy",
@@ -1151,8 +1268,8 @@
     "url": "https://doi.org/10.1038/s41560-024-01615-6",
     "year": 2024,
     "tags": [
-      "Materials",
-      "Energy Storage"
+      "Energy Materials",
+      "Oxides"
     ],
     "authors": [
       "Yimeng Huang",
@@ -1197,7 +1314,9 @@
     "url": "https://doi.org/10.1021/acs.nanolett.4c01996",
     "year": 2024,
     "tags": [
-      "Materials"
+      "Cryo-EM",
+      "Energy Materials",
+      "Perovskites"
     ],
     "authors": [
       "Blanka E. Janicek",
@@ -1213,8 +1332,12 @@
     "url": "https://doi.org/10.1038/s41929-024-01175-8",
     "year": 2024,
     "tags": [
-      "Materials",
-      "Catalysis"
+      "Catalysis",
+      "Energy Materials",
+      "Machine Learning",
+      "Nanoparticles",
+      "Strain",
+      "Tomography"
     ],
     "authors": [
       "Yao Yang",
@@ -1244,8 +1367,9 @@
     "url": "https://doi.org/10.1021/acsnano.4c02996",
     "year": 2024,
     "tags": [
+      "2D Materials",
       "4DSTEM",
-      "2D Materials"
+      "Crystallography"
     ],
     "authors": [
       "Theresa M. Kucinski",
@@ -1267,9 +1391,10 @@
     "url": "https://doi.org/10.1126/sciadv.adn6426",
     "year": 2024,
     "tags": [
+      "Crystallography",
+      "Disordered",
       "In Situ",
-      "Nanoparticles",
-      "Crystallography"
+      "Nanoparticles"
     ],
     "authors": [
       "Wenjing Zheng",
@@ -1289,8 +1414,8 @@
     "url": "https://doi.org/10.1021/acsnano.4c00787",
     "year": 2024,
     "tags": [
-      "Materials",
-      "Instrumentation"
+      "Metals & Alloys",
+      "Oxides"
     ],
     "authors": [
       "Leixin Miao",
@@ -1310,7 +1435,10 @@
     "url": "https://doi.org/10.1007/s11837-024-06418-4",
     "year": 2024,
     "tags": [
-      "Materials"
+      "Ion Irradiation",
+      "Metals & Alloys",
+      "Semiconductor",
+      "Strain"
     ],
     "authors": [
       "Patrick H. Warren",
@@ -1329,8 +1457,8 @@
     "year": 2024,
     "tags": [
       "4DSTEM",
-      "Materials",
-      "Imaging"
+      "Imaging",
+      "Polymers"
     ],
     "authors": [
       "Min Chen",
@@ -1353,8 +1481,10 @@
     "url": "https://doi.org/10.1016/j.actamat.2024.119831",
     "year": 2024,
     "tags": [
-      "Strain",
-      "Spectroscopy"
+      "Crystallography",
+      "Semiconductor",
+      "Spectroscopy",
+      "Strain"
     ],
     "authors": [
       "Ellis Kennedy",
@@ -1372,7 +1502,7 @@
     "year": 2024,
     "tags": [
       "Machine Learning",
-      "Materials"
+      "Oxides"
     ],
     "authors": [
       "Joseph H. Montoya",
@@ -1395,8 +1525,13 @@
     "url": "https://doi.org/10.1038/s41467-024-45696-z",
     "year": 2024,
     "tags": [
-      "Strain",
-      "Materials"
+      "4DSTEM",
+      "Crystallography",
+      "Disordered",
+      "In Situ",
+      "Metals & Alloys",
+      "Simulation",
+      "Strain"
     ],
     "authors": [
       "Yang Yang",
@@ -1418,9 +1553,11 @@
     "year": 2024,
     "tags": [
       "4DSTEM",
-      "Materials",
-      "Imaging",
-      "Diffraction"
+      "Crystallography",
+      "Diffraction",
+      "Metals & Alloys",
+      "Nanoparticles",
+      "Software"
     ],
     "authors": [
       "Ian MacLaren",
@@ -1435,8 +1572,9 @@
     "url": "https://doi.org/10.1021/acs.nanolett.3c03788",
     "year": 2024,
     "tags": [
-      "Strain",
-      "Nanoparticles"
+      "Crystallography",
+      "Nanoparticles",
+      "Strain"
     ],
     "authors": [
       "Miao Song",
@@ -1454,7 +1592,9 @@
     "url": "https://doi.org/10.1093/micmic/ozad111",
     "year": 2023,
     "tags": [
-      "Instrumentation"
+      "Aberration Correction",
+      "Magnetism",
+      "Ptychography"
     ],
     "authors": [
       "Stephanie M Ribet",
@@ -1474,9 +1614,13 @@
     "url": "https://doi.org/10.1038/s41467-023-43634-z",
     "year": 2023,
     "tags": [
+      "4DSTEM",
+      "Biological",
+      "Diffraction",
+      "Nanoparticles",
+      "Phase Contrast",
       "Ptychography",
-      "Tomography",
-      "Nanoparticles"
+      "Tomography"
     ],
     "authors": [
       "Philipp M. Pelz",
@@ -1496,7 +1640,8 @@
     "url": "https://doi.org/10.1021/acs.nanolett.3c02000",
     "year": 2023,
     "tags": [
-      "In Situ"
+      "In Situ",
+      "Nanoparticles"
     ],
     "authors": [
       "Jun Beom Park",
@@ -1517,8 +1662,8 @@
     "url": "https://doi.org/10.1021/acs.nanolett.3c03058",
     "year": 2023,
     "tags": [
-      "Materials",
-      "2D Materials"
+      "2D Materials",
+      "Perovskites"
     ],
     "authors": [
       "Alexander M. Oddo",
@@ -1539,8 +1684,11 @@
     "url": "https://doi.org/10.1038/s41467-023-43356-2",
     "year": 2023,
     "tags": [
-      "Materials",
-      "Energy Storage"
+      "Diffraction",
+      "Disordered",
+      "Energy Materials",
+      "Oxides",
+      "Simulation"
     ],
     "authors": [
       "Linze Li",
@@ -1562,10 +1710,11 @@
     "url": "https://doi.org/10.1021/acsnano.3c04283",
     "year": 2023,
     "tags": [
-      "4DSTEM",
-      "Strain",
       "2D Materials",
-      "Diffraction"
+      "4DSTEM",
+      "Diffraction",
+      "Moiré",
+      "Strain"
     ],
     "authors": [
       "Bengisu Sari",
@@ -1584,8 +1733,9 @@
     "url": "https://doi.org/10.1063/4.0000203",
     "year": 2023,
     "tags": [
+      "Biological",
       "Diffraction",
-      "Instrumentation"
+      "In Situ"
     ],
     "authors": [
       "K. M. Siddiqui",
@@ -1616,8 +1766,11 @@
     "url": "https://doi.org/10.1038/s41467-023-41780-y",
     "year": 2023,
     "tags": [
+      "2D Materials",
+      "Crystallography",
       "Magnetism",
-      "2D Materials"
+      "Semiconductor",
+      "Strain"
     ],
     "authors": [
       "Samra Husremović",
@@ -1640,8 +1793,9 @@
     "url": "https://doi.org/10.1103/PhysRevMaterials.7.093604",
     "year": 2023,
     "tags": [
-      "Strain",
-      "Crystallography"
+      "Crystallography",
+      "Oxides",
+      "Strain"
     ],
     "authors": [
       "Tiffany C. Kaspar",
@@ -1661,8 +1815,9 @@
     "url": "https://doi.org/10.1093/micmic/ozad089",
     "year": 2023,
     "tags": [
-      "Diffraction",
-      "Crystallography"
+      "4DSTEM",
+      "Crystallography",
+      "Diffraction"
     ],
     "authors": [
       "Aurys Silinga",
@@ -1679,10 +1834,13 @@
     "year": 2023,
     "tags": [
       "4DSTEM",
-      "Tomography",
-      "Spectroscopy",
+      "Aberration Correction",
+      "Diffraction",
       "Imaging",
-      "Diffraction"
+      "Simulation",
+      "Software",
+      "Spectroscopy",
+      "Tomography"
     ],
     "authors": [
       "Colin Ophus"
@@ -1694,9 +1852,10 @@
     "url": "https://doi.org/10.1021/acs.nanolett.3c00328",
     "year": 2023,
     "tags": [
+      "2D Materials",
       "4DSTEM",
-      "Strain",
-      "2D Materials"
+      "Crystallography",
+      "Strain"
     ],
     "authors": [
       "Matthew J. Coupin",
@@ -1717,8 +1876,9 @@
     "url": "https://doi.org/10.1126/sciadv.adf8436",
     "year": 2023,
     "tags": [
+      "Disordered",
       "In Situ",
-      "Imaging"
+      "Polymers"
     ],
     "authors": [
       "Sangui Liu",
@@ -1742,7 +1902,11 @@
     "url": "https://doi.org/10.1038/s41467-023-40009-2",
     "year": 2023,
     "tags": [
-      "Magnetism"
+      "4DSTEM",
+      "Biological",
+      "Magnetism",
+      "Oxides",
+      "Perovskites"
     ],
     "authors": [
       "Sandhya Susarla",
@@ -1764,6 +1928,7 @@
     "url": "https://doi.org/10.1016/j.ultramic.2023.113732",
     "year": 2023,
     "tags": [
+      "Perovskites",
       "Simulation"
     ],
     "authors": [
@@ -1782,8 +1947,9 @@
     "url": "https://doi.org/10.1002/adfm.202207867",
     "year": 2023,
     "tags": [
+      "Crystallography",
       "In Situ",
-      "Crystallography"
+      "Polymers"
     ],
     "authors": [
       "Jenna A. Tan",
@@ -1815,8 +1981,10 @@
     "url": "https://doi.org/10.1093/micmic/ozad068",
     "year": 2023,
     "tags": [
-      "Imaging",
-      "4DSTEM"
+      "4DSTEM",
+      "Ptychography",
+      "Simulation",
+      "Tomography"
     ],
     "authors": [
       "E W C Terzoudis-Lumsden",
@@ -1833,8 +2001,10 @@
     "url": "https://doi.org/10.1038/s41467-023-39302-x",
     "year": 2023,
     "tags": [
+      "Crystallography",
+      "Imaging",
       "Strain",
-      "Crystallography"
+      "Tomography"
     ],
     "authors": [
       "Xuyang Zhou",
@@ -1852,8 +2022,11 @@
     "url": "https://doi.org/10.1038/s41467-023-38536-z",
     "year": 2023,
     "tags": [
+      "Catalysis",
+      "Cryo-EM",
+      "Crystallography",
       "Nanoparticles",
-      "Crystallography"
+      "Tomography"
     ],
     "authors": [
       "Zezhou Li",
@@ -1873,10 +2046,12 @@
     "url": "https://doi.org/10.1093/micmic/ozad045",
     "year": 2023,
     "tags": [
+      "2D Materials",
       "4DSTEM",
-      "Strain",
-      "Instrumentation",
-      "Imaging"
+      "Diffraction",
+      "Disordered",
+      "Simulation",
+      "Strain"
     ],
     "authors": [
       "Stephanie M Ribet",
@@ -1891,8 +2066,9 @@
     "url": "https://doi.org/10.1016/j.msea.2023.145005",
     "year": 2023,
     "tags": [
-      "Strain",
-      "Materials"
+      "Crystallography",
+      "Metals & Alloys",
+      "Strain"
     ],
     "authors": [
       "T.W.J. Kwok",
@@ -1910,7 +2086,13 @@
     "url": "https://doi.org/10.1038/s41467-023-38504-7",
     "year": 2023,
     "tags": [
-      "2D Materials"
+      "2D Materials",
+      "4DSTEM",
+      "Interferometry",
+      "Moiré",
+      "Semiconductor",
+      "Simulation",
+      "Strain"
     ],
     "authors": [
       "Madeline Van Winkle",
@@ -1933,9 +2115,9 @@
     "url": "https://doi.org/10.1103/PhysRevApplied.19.054062",
     "year": 2023,
     "tags": [
-      "Tomography",
+      "4DSTEM",
       "Simulation",
-      "4DSTEM"
+      "Tomography"
     ],
     "authors": [
       "Juhyeok Lee",
@@ -1951,8 +2133,10 @@
     "url": "https://doi.org/10.1103/PhysRevB.107.L140407",
     "year": 2023,
     "tags": [
+      "2D Materials",
+      "Crystallography",
       "Magnetism",
-      "2D Materials"
+      "Perovskites"
     ],
     "authors": [
       "Kévin J. A. Franke",
@@ -1967,7 +2151,8 @@
     "url": "https://doi.org/10.1103/PhysRevMaterials.7.034403",
     "year": 2023,
     "tags": [
-      "Magnetism"
+      "Magnetism",
+      "Perovskites"
     ],
     "authors": [
       "Kévin J. A. Franke",
@@ -1983,6 +2168,8 @@
     "year": 2023,
     "tags": [
       "4DSTEM",
+      "Crystallography",
+      "Data Science",
       "Machine Learning"
     ],
     "authors": [
@@ -1997,8 +2184,11 @@
     "url": "https://doi.org/10.1557/s43579-022-00310-5",
     "year": 2023,
     "tags": [
+      "2D Materials",
       "4DSTEM",
-      "2D Materials"
+      "Diffraction",
+      "Polymers",
+      "Semiconductor"
     ],
     "authors": [
       "Zixuan Guo",
@@ -2016,9 +2206,10 @@
     "url": "https://doi.org/10.1038/s41560-022-01176-6",
     "year": 2023,
     "tags": [
-      "In Situ",
-      "Materials",
-      "Energy Storage"
+      "Energy Materials",
+      "Nanoparticles",
+      "Polymers",
+      "Semiconductor"
     ],
     "authors": [
       "Tianyu Zhu",
@@ -2043,7 +2234,14 @@
     "url": "https://doi.org/10.1126/sciadv.adc9721",
     "year": 2023,
     "tags": [
-      "Materials"
+      "4DSTEM",
+      "Biological",
+      "Cryo-EM",
+      "Disordered",
+      "Energy Materials",
+      "In Situ",
+      "Machine Learning",
+      "Simulation"
     ],
     "authors": [
       "Yujun Xie",
@@ -2067,7 +2265,8 @@
     "url": "https://doi.org/10.1016/j.actamat.2022.118609",
     "year": 2023,
     "tags": [
-      "Crystallography"
+      "Crystallography",
+      "Oxides"
     ],
     "authors": [
       "A.L. Clauser",
@@ -2085,10 +2284,14 @@
     "url": "https://doi.org/10.1038/s41524-022-00939-9",
     "year": 2022,
     "tags": [
+      "4DSTEM",
+      "Crystallography",
+      "Diffraction",
+      "In Situ",
       "Machine Learning",
       "Simulation",
-      "Strain",
-      "Diffraction"
+      "Software",
+      "Strain"
     ],
     "authors": [
       "Joydeep Munshi",
@@ -2110,7 +2313,8 @@
     "year": 2022,
     "tags": [
       "2D Materials",
-      "Crystallography"
+      "Crystallography",
+      "Moiré"
     ],
     "authors": [
       "Yu Wang",
@@ -2131,10 +2335,10 @@
     "url": "https://doi.org/10.1063/4.0000170",
     "year": 2022,
     "tags": [
-      "Simulation",
-      "In Situ",
       "Crystallography",
-      "Diffraction"
+      "Diffraction",
+      "In Situ",
+      "Simulation"
     ],
     "authors": [
       "Daniel B. Durham",
@@ -2151,7 +2355,9 @@
     "year": 2022,
     "tags": [
       "4DSTEM",
-      "Machine Learning"
+      "Image Processing",
+      "Machine Learning",
+      "Simulation"
     ],
     "authors": [
       "Alexandra Bruefach",
@@ -2166,7 +2372,9 @@
     "year": 2022,
     "tags": [
       "4DSTEM",
-      "Materials"
+      "In Situ",
+      "Spectroscopy",
+      "Strain"
     ],
     "authors": [
       "Huize Wang",
@@ -2190,8 +2398,7 @@
     "url": "https://doi.org/10.1557/s43577-022-00413-3",
     "year": 2022,
     "tags": [
-      "Machine Learning",
-      "Instrumentation"
+      "Machine Learning"
     ],
     "authors": [
       "Sergei V. Kalinin",
@@ -2210,10 +2417,12 @@
     "url": "https://doi.org/10.1038/s41467-022-33236-6",
     "year": 2022,
     "tags": [
-      "Tomography",
-      "Strain",
+      "Catalysis",
+      "Crystallography",
       "Nanoparticles",
-      "Crystallography"
+      "Simulation",
+      "Strain",
+      "Tomography"
     ],
     "authors": [
       "Hyesung Jo",
@@ -2239,8 +2448,8 @@
     "url": "https://doi.org/10.1021/acs.nanolett.2c02043",
     "year": 2022,
     "tags": [
-      "Magnetism",
-      "2D Materials"
+      "2D Materials",
+      "Magnetism"
     ],
     "authors": [
       "Gong Chen",
@@ -2258,6 +2467,11 @@
     "url": "https://doi.org/10.1017/S1431927622012090",
     "year": 2022,
     "tags": [
+      "4DSTEM",
+      "Crystallography",
+      "Nanoparticles",
+      "Phase Contrast",
+      "Ptychography",
       "Simulation"
     ],
     "authors": [
@@ -2286,8 +2500,13 @@
     "year": 2022,
     "tags": [
       "4DSTEM",
-      "py4DSTEM",
-      "Crystallography"
+      "Crystallography",
+      "Diffraction",
+      "In Situ",
+      "Nanoparticles",
+      "Simulation",
+      "Software",
+      "py4DSTEM"
     ],
     "authors": [
       "Colin Ophus",
@@ -2305,7 +2524,11 @@
     "url": "https://doi.org/10.1038/s41467-022-31004-0",
     "year": 2022,
     "tags": [
-      "Crystallography"
+      "Cryo-EM",
+      "Crystallography",
+      "Energy Materials",
+      "In Situ",
+      "Tomography"
     ],
     "authors": [
       "Michael L. Whittaker",
@@ -2334,9 +2557,12 @@
     "year": 2022,
     "tags": [
       "4DSTEM",
+      "Data Science",
+      "Energy Materials",
       "Machine Learning",
-      "Energy Storage",
-      "Strain"
+      "Ptychography",
+      "Strain",
+      "XEDS"
     ],
     "authors": [
       "Haitao D. Deng",
@@ -2364,9 +2590,9 @@
     "url": "https://doi.org/10.1021/acsnano.2c01170",
     "year": 2022,
     "tags": [
+      "2D Materials",
       "4DSTEM",
-      "Magnetism",
-      "2D Materials"
+      "Magnetism"
     ],
     "authors": [
       "Yi Wen",
@@ -2385,9 +2611,11 @@
     "year": 2022,
     "tags": [
       "4DSTEM",
-      "Materials",
+      "Crystallography",
+      "Diffraction",
+      "Disordered",
       "Nanoparticles",
-      "Crystallography"
+      "Polymers"
     ],
     "authors": [
       "Jennifer Donohue",
@@ -2406,7 +2634,9 @@
     "url": "https://doi.org/10.1038/s41467-022-28968-4",
     "year": 2022,
     "tags": [
-      "Magnetism"
+      "Crystallography",
+      "Magnetism",
+      "Simulation"
     ],
     "authors": [
       "Gong Chen",
@@ -2426,7 +2656,11 @@
     "url": "https://doi.org/10.1038/s43586-022-00095-w",
     "year": 2022,
     "tags": [
-      "Machine Learning"
+      "4DSTEM",
+      "Aberration Correction",
+      "EELS",
+      "Machine Learning",
+      "Spectroscopy"
     ],
     "authors": [
       "Sergei V. Kalinin",
@@ -2453,6 +2687,8 @@
     "url": "https://doi.org/10.1088/1361-6668/ac549b",
     "year": 2022,
     "tags": [
+      "Imaging",
+      "In Situ",
       "Magnetism"
     ],
     "authors": [
@@ -2501,6 +2737,8 @@
     "url": "https://doi.org/10.1017/S1431927621000490",
     "year": 2021,
     "tags": [
+      "4DSTEM",
+      "Ptychography",
       "Simulation"
     ],
     "authors": [
@@ -2518,7 +2756,11 @@
     "url": "https://doi.org/10.1038/s41524-021-00692-5",
     "year": 2021,
     "tags": [
-      "Imaging"
+      "EELS",
+      "Imaging",
+      "Simulation",
+      "Spectroscopy",
+      "XEDS"
     ],
     "authors": [
       "Jonathan Schwartz",
@@ -2567,9 +2809,9 @@
     "year": 2021,
     "tags": [
       "4DSTEM",
-      "Simulation",
+      "Diffraction",
       "Imaging",
-      "Diffraction"
+      "Simulation"
     ],
     "authors": [
       "Philipp M. Pelz",
@@ -2586,8 +2828,9 @@
     "url": "https://doi.org/10.1016/j.micron.2021.103141",
     "year": 2021,
     "tags": [
+      "Imaging",
       "Simulation",
-      "Imaging"
+      "Software"
     ],
     "authors": [
       "Luis Rangel DaCosta",
@@ -2609,8 +2852,9 @@
     "url": "https://doi.org/10.1021/acsnano.1c07772",
     "year": 2021,
     "tags": [
-      "Tomography",
-      "Strain"
+      "Crystallography",
+      "Strain",
+      "Tomography"
     ],
     "authors": [
       "Philipp M. Pelz",
@@ -2627,8 +2871,11 @@
     "url": "https://doi.org/10.1038/s41467-021-26476-5",
     "year": 2021,
     "tags": [
-      "Materials",
-      "Crystallography"
+      "Crystallography",
+      "EELS",
+      "Oxides",
+      "Semiconductor",
+      "Simulation"
     ],
     "authors": [
       "Sandhya Susarla",
@@ -2650,8 +2897,10 @@
     "year": 2021,
     "tags": [
       "4DSTEM",
+      "Diffraction",
+      "Imaging",
       "In Situ",
-      "Imaging"
+      "Phase Contrast"
     ],
     "authors": [
       "Philipp M. Pelz",
@@ -2667,7 +2916,9 @@
     "url": "https://doi.org/10.1126/sciadv.abj8030",
     "year": 2021,
     "tags": [
-      "Magnetism"
+      "Magnetism",
+      "Oxides",
+      "Perovskites"
     ],
     "authors": [
       "Piush Behera",
@@ -2716,8 +2967,9 @@
     "year": 2021,
     "tags": [
       "4DSTEM",
-      "Materials",
-      "Crystallography"
+      "Crystallography",
+      "Disordered",
+      "Semiconductor"
     ],
     "authors": [
       "Ni Yang",
@@ -2735,7 +2987,9 @@
     "year": 2021,
     "tags": [
       "Crystallography",
-      "Imaging"
+      "Disordered",
+      "Imaging",
+      "Oxides"
     ],
     "authors": [
       "Stephen D. Funni",
@@ -2752,8 +3006,11 @@
     "url": "https://doi.org/10.1002/adma.202101358",
     "year": 2021,
     "tags": [
+      "Biological",
       "Crystallography",
-      "Materials"
+      "Disordered",
+      "In Situ",
+      "Software"
     ],
     "authors": [
       "Vanessa Schoeppler",
@@ -2776,7 +3033,11 @@
     "year": 2021,
     "tags": [
       "4DSTEM",
-      "Imaging"
+      "Catalysis",
+      "Diffraction",
+      "Image Processing",
+      "Machine Learning",
+      "Nanoparticles"
     ],
     "authors": [
       "Frances I. Allen",
@@ -2795,8 +3056,12 @@
     "url": "https://doi.org/10.1017/S1431927621000167",
     "year": 2021,
     "tags": [
+      "2D Materials",
+      "Diffraction",
+      "Image Processing",
+      "Imaging",
       "Machine Learning",
-      "Imaging"
+      "Phase Contrast"
     ],
     "authors": [
       "Robbie Sadre",
@@ -2829,8 +3094,10 @@
     "url": "https://doi.org/10.1021/acs.nanolett.1c01651",
     "year": 2021,
     "tags": [
-      "Materials",
-      "Crystallography"
+      "Crystallography",
+      "Ion Irradiation",
+      "Nuclear Materials",
+      "Oxides"
     ],
     "authors": [
       "Bethany E. Matthews",
@@ -2849,8 +3116,9 @@
     "url": "https://doi.org/10.1103/PhysRevResearch.3.023159",
     "year": 2021,
     "tags": [
-      "Simulation",
-      "Imaging"
+      "Imaging",
+      "Phase Contrast",
+      "Simulation"
     ],
     "authors": [
       "Philipp M. Pelz",
@@ -2872,6 +3140,10 @@
     "year": 2021,
     "tags": [
       "4DSTEM",
+      "Magnetism",
+      "Software",
+      "Spectroscopy",
+      "Strain",
       "py4DSTEM"
     ],
     "authors": [
@@ -2907,9 +3179,11 @@
     "url": "https://doi.org/10.1126/science.abf9645",
     "year": 2021,
     "tags": [
-      "Magnetism",
       "2D Materials",
-      "Nanoparticles"
+      "Crystallography",
+      "Magnetism",
+      "Nanoparticles",
+      "Strain"
     ],
     "authors": [
       "Assaf Ben-Moshe",
@@ -2933,7 +3207,7 @@
     "url": "https://doi.org/10.1016/j.matt.2021.04.014",
     "year": 2021,
     "tags": [
-      "Materials"
+      "Metals & Alloys"
     ],
     "authors": [
       "Yonggang Yao",
@@ -2963,8 +3237,12 @@
     "url": "https://doi.org/10.1038/s41563-021-00973-w",
     "year": 2021,
     "tags": [
-      "Strain",
-      "2D Materials"
+      "2D Materials",
+      "4DSTEM",
+      "Crystallography",
+      "Interferometry",
+      "Moiré",
+      "Strain"
     ],
     "authors": [
       "Nathanael P. Kazmierczak",
@@ -3026,9 +3304,9 @@
     "url": "https://doi.org/10.1017/S1431927620024770",
     "year": 2021,
     "tags": [
-      "In Situ",
-      "Strain",
-      "Crystallography"
+      "2D Materials",
+      "Crystallography",
+      "Strain"
     ],
     "authors": [
       "Xuhao Hong",
@@ -3047,8 +3325,8 @@
     "url": "https://doi.org/10.1039/D1NR01442K",
     "year": 2021,
     "tags": [
-      "Magnetism",
       "2D Materials",
+      "Magnetism",
       "Nanoparticles"
     ],
     "authors": [
@@ -3068,6 +3346,7 @@
     "url": "https://doi.org/10.1038/s41563-020-00833-z",
     "year": 2020,
     "tags": [
+      "Data Science",
       "Machine Learning"
     ],
     "authors": [
@@ -3100,7 +3379,11 @@
     "url": "https://doi.org/10.1002/smll.202005447",
     "year": 2020,
     "tags": [
-      "2D Materials"
+      "2D Materials",
+      "4DSTEM",
+      "Crystallography",
+      "Imaging",
+      "Nanoparticles"
     ],
     "authors": [
       "Alejandra Londoño‐Calderon",
@@ -3115,7 +3398,7 @@
     "url": "https://doi.org/10.1103/PhysRevMaterials.4.103611",
     "year": 2020,
     "tags": [
-      "Materials"
+      "Metals & Alloys"
     ],
     "authors": [
       "Xian Chen",
@@ -3136,7 +3419,9 @@
     "url": "https://doi.org/10.1016/j.scriptamat.2020.06.058",
     "year": 2020,
     "tags": [
-      "Nanoparticles"
+      "Ion Irradiation",
+      "Nanoparticles",
+      "Oxides"
     ],
     "authors": [
       "Arielle L. Clauser",
@@ -3155,8 +3440,8 @@
     "url": "https://doi.org/10.1039/D0NR05281G",
     "year": 2020,
     "tags": [
-      "In Situ",
-      "Imaging"
+      "Imaging",
+      "In Situ"
     ],
     "authors": [
       "Sardar B. Alam",
@@ -3174,9 +3459,9 @@
     "url": "https://doi.org/10.1126/sciadv.abb5157",
     "year": 2020,
     "tags": [
-      "Magnetism",
       "2D Materials",
-      "Crystallography"
+      "Crystallography",
+      "Magnetism"
     ],
     "authors": [
       "M. Yang",
@@ -3203,9 +3488,13 @@
     "url": "https://doi.org/10.1063/5.0015532",
     "year": 2020,
     "tags": [
+      "4DSTEM",
+      "Crystallography",
+      "Diffraction",
+      "Disordered",
+      "Fluctuation EM",
       "Simulation",
-      "Imaging",
-      "Crystallography"
+      "Strain"
     ],
     "authors": [
       "Ellis Kennedy",
@@ -3222,9 +3511,9 @@
     "url": "https://doi.org/10.1021/acsami.0c03150",
     "year": 2020,
     "tags": [
-      "Materials",
+      "Catalysis",
       "Nanoparticles",
-      "Catalysis"
+      "Oxides"
     ],
     "authors": [
       "Veljko R. Djokić",
@@ -3244,7 +3533,8 @@
     "url": "https://doi.org/10.1038/s41586-020-2275-z",
     "year": 2020,
     "tags": [
-      "Materials"
+      "Disordered",
+      "Metals & Alloys"
     ],
     "authors": [
       "Ruopeng Zhang",
@@ -3286,7 +3576,11 @@
     "url": "https://doi.org/10.1107/S2052252520004030",
     "year": 2020,
     "tags": [
-      "Nanoparticles"
+      "4DSTEM",
+      "Biological",
+      "Diffraction",
+      "Nanoparticles",
+      "Tomography"
     ],
     "authors": [
       "Marcus Gallagher-Jones",
@@ -3305,9 +3599,7 @@
     "url": "https://doi.org/10.1021/acs.jpcc.9b11339",
     "year": 2020,
     "tags": [
-      "Simulation",
-      "Materials",
-      "Imaging"
+      "Simulation"
     ],
     "authors": [
       "Nithya Subramanian",
@@ -3323,7 +3615,7 @@
     "year": 2020,
     "tags": [
       "4DSTEM",
-      "Instrumentation"
+      "Diffraction"
     ],
     "authors": [
       "Steven E Zeltmann",
@@ -3341,8 +3633,10 @@
     "url": "https://doi.org/10.1038/s41586-019-1899-3",
     "year": 2020,
     "tags": [
-      "Strain",
-      "Nanoparticles"
+      "Crystallography",
+      "Magnetism",
+      "Nanoparticles",
+      "Strain"
     ],
     "authors": [
       "Myoung Hwan Oh",
@@ -3385,10 +3679,9 @@
     "url": "https://doi.org/10.1016/j.ultramic.2019.112860",
     "year": 2020,
     "tags": [
-      "Tomography",
-      "Simulation",
       "Phase Contrast",
-      "Imaging"
+      "Simulation",
+      "Tomography"
     ],
     "authors": [
       "David Ren",
@@ -3403,7 +3696,8 @@
     "url": "https://doi.org/10.1002/adma.201906105",
     "year": 2019,
     "tags": [
-      "In Situ"
+      "In Situ",
+      "Strain"
     ],
     "authors": [
       "Yu Deng",
@@ -3429,11 +3723,11 @@
     "url": "https://doi.org/10.1007/s12274-019-2531-4",
     "year": 2019,
     "tags": [
-      "In Situ",
-      "Materials",
       "2D Materials",
+      "Imaging",
+      "In Situ",
       "Nanoparticles",
-      "Imaging"
+      "Oxides"
     ],
     "authors": [
       "Wenjing Zheng",
@@ -3510,7 +3804,7 @@
     "url": "https://doi.org/10.1016/j.actamat.2019.10.018",
     "year": 2019,
     "tags": [
-      "In Situ",
+      "Oxides",
       "Strain"
     ],
     "authors": [
@@ -3536,9 +3830,10 @@
     "url": "https://dx.doi.org/10.1126/sciadv.aax2799",
     "year": 2019,
     "tags": [
-      "In Situ",
-      "Strain",
-      "Imaging"
+      "Disordered",
+      "Imaging",
+      "Metals & Alloys",
+      "Strain"
     ],
     "authors": [
       "Ruopeng Zhang",
@@ -3561,7 +3856,8 @@
     "url": "https://doi.org/10.1126/sciadv.aaw5519",
     "year": 2019,
     "tags": [
-      "Crystallography"
+      "Crystallography",
+      "Oxides"
     ],
     "authors": [
       "Jin Li",
@@ -3589,6 +3885,12 @@
     "url": "https://doi.org/10.1073/pnas.1905056116",
     "year": 2019,
     "tags": [
+      "Catalysis",
+      "EELS",
+      "Nuclear Materials",
+      "Oxides",
+      "Simulation",
+      "Spectroscopy",
       "Strain"
     ],
     "authors": [
@@ -3606,7 +3908,8 @@
     "url": "https://doi.org/10.1021/acs.nanolett.9b02717",
     "year": 2019,
     "tags": [
-      "2D Materials"
+      "2D Materials",
+      "4DSTEM"
     ],
     "authors": [
       "Yi Wen",
@@ -3625,10 +3928,11 @@
     "url": "https://doi.org/10.1038/s41563-019-0415-3",
     "year": 2019,
     "tags": [
-      "In Situ",
-      "Materials",
       "2D Materials",
-      "Nanoparticles"
+      "Disordered",
+      "In Situ",
+      "Nanoparticles",
+      "Oxides"
     ],
     "authors": [
       "Juan Yang",
@@ -3652,8 +3956,12 @@
     "url": "https://doi.org/10.1038/s41586-019-1317-x",
     "year": 2019,
     "tags": [
-      "Tomography",
-      "In Situ"
+      "Biological",
+      "Crystallography",
+      "In Situ",
+      "Metals & Alloys",
+      "Nanoparticles",
+      "Tomography"
     ],
     "authors": [
       "Jihan Zhou",
@@ -3680,8 +3988,12 @@
     "year": 2019,
     "tags": [
       "4DSTEM",
+      "Diffraction",
+      "Disordered",
+      "Phase Contrast",
       "Ptychography",
-      "Diffraction"
+      "Spectroscopy",
+      "Strain"
     ],
     "authors": [
       "Colin Ophus"
@@ -3693,9 +4005,10 @@
     "url": "https://doi.org/10.1002/smll.201901966",
     "year": 2019,
     "tags": [
+      "2D Materials",
+      "Crystallography",
       "In Situ",
-      "Nanoparticles",
-      "Crystallography"
+      "Nanoparticles"
     ],
     "authors": [
       "Jaewon Lee",
@@ -3714,8 +4027,11 @@
     "url": "https://dx.doi.org/10.1126/sciadv.aaw5623",
     "year": 2019,
     "tags": [
+      "Crystallography",
+      "In Situ",
       "Nanoparticles",
-      "Crystallography"
+      "Semiconductor",
+      "Strain"
     ],
     "authors": [
       "Yu Wang",
@@ -3737,10 +4053,13 @@
     "url": "https://doi.org/10.1038/s41563-019-0387-3",
     "year": 2019,
     "tags": [
-      "Nanoparticles",
+      "4DSTEM",
       "Crystallography",
+      "Diffraction",
       "Imaging",
-      "Diffraction"
+      "Nanoparticles",
+      "Polymers",
+      "Semiconductor"
     ],
     "authors": [
       "Ouliana Panova",
@@ -3759,7 +4078,14 @@
     "url": "https://doi.org/10.1038/s41467-019-10416-5",
     "year": 2019,
     "tags": [
+      "4DSTEM",
+      "Biological",
+      "Crystallography",
+      "Diffraction",
+      "Disordered",
       "In Situ",
+      "Metals & Alloys",
+      "Simulation",
       "Strain"
     ],
     "authors": [
@@ -3779,7 +4105,10 @@
     "url": "https://doi.org/10.1038/s41586-019-1092-8",
     "year": 2019,
     "tags": [
-      "Magnetism"
+      "Crystallography",
+      "Magnetism",
+      "Oxides",
+      "Perovskites"
     ],
     "authors": [
       "S. Das",
@@ -3817,7 +4146,10 @@
     "url": "https://doi.org/10.1038/s41467-019-08904-9",
     "year": 2019,
     "tags": [
-      "2D Materials"
+      "2D Materials",
+      "4DSTEM",
+      "Imaging",
+      "Semiconductor"
     ],
     "authors": [
       "Shiang Fang",
@@ -3836,8 +4168,10 @@
     "url": "https://doi.org/10.1038/s41467-019-08490-w",
     "year": 2019,
     "tags": [
-      "Materials",
-      "Energy Storage"
+      "Crystallography",
+      "Disordered",
+      "Energy Materials",
+      "Oxides"
     ],
     "authors": [
       "Huiwen Ji",
@@ -3860,8 +4194,8 @@
     "url": "https://doi.org/10.1021/acs.jpcb.8b11752",
     "year": 2019,
     "tags": [
-      "Simulation",
-      "Imaging"
+      "Cryo-EM",
+      "Simulation"
     ],
     "authors": [
       "Xi Jiang",
@@ -3880,7 +4214,9 @@
     "year": 2019,
     "tags": [
       "4DSTEM",
-      "Diffraction"
+      "Biological",
+      "Diffraction",
+      "Nanoparticles"
     ],
     "authors": [
       "Marcus Gallagher-Jones",
@@ -3903,10 +4239,9 @@
     "year": 2018,
     "tags": [
       "4DSTEM",
-      "Phase Contrast",
-      "Instrumentation",
-      "Imaging",
-      "Diffraction"
+      "Diffraction",
+      "Interferometry",
+      "Phase Contrast"
     ],
     "authors": [
       "Tyler R. Harvey",
@@ -3929,9 +4264,8 @@
     "url": "https://doi.org/10.1103/PhysRevLett.121.266102",
     "year": 2018,
     "tags": [
-      "Simulation",
-      "Instrumentation",
-      "Imaging"
+      "Imaging",
+      "Simulation"
     ],
     "authors": [
       "H. G. Brown",
@@ -3985,6 +4319,11 @@
     "url": "https://doi.org/10.1063/1.5040496",
     "year": 2018,
     "tags": [
+      "4DSTEM",
+      "Diffraction",
+      "Image Processing",
+      "In Situ",
+      "Phase Contrast",
       "Ptychography"
     ],
     "authors": [
@@ -4003,9 +4342,10 @@
     "url": "https://doi.org/10.1021/acs.macromol.8b01508",
     "year": 2018,
     "tags": [
-      "Strain",
-      "Materials",
-      "Imaging"
+      "Cryo-EM",
+      "Imaging",
+      "Polymers",
+      "Strain"
     ],
     "authors": [
       "Xi Jiang",
@@ -4053,7 +4393,7 @@
     "url": "https://doi.org/10.1021/acs.nanolett.8b03166",
     "year": 2018,
     "tags": [
-      "Imaging"
+      "Holography"
     ],
     "authors": [
       "Fehmi S. Yasin",
@@ -4071,8 +4411,8 @@
     "url": "https://doi.org/10.1039/C7EE02443F",
     "year": 2018,
     "tags": [
-      "Materials",
-      "Energy Storage"
+      "Energy Materials",
+      "Oxides"
     ],
     "authors": [
       "Alpesh Khushalchand Shukla",
@@ -4092,9 +4432,10 @@
     "url": "https://doi.org/10.1016/j.ultramic.2018.06.001",
     "year": 2018,
     "tags": [
-      "Strain",
+      "Crystallography",
+      "Diffraction",
       "Imaging",
-      "Diffraction"
+      "Strain"
     ],
     "authors": [
       "Yuanyuan Zhu",
@@ -4109,7 +4450,11 @@
     "url": "https://doi.org/10.1002/adma.201800199",
     "year": 2018,
     "tags": [
-      "Magnetism"
+      "Crystallography",
+      "Disordered",
+      "Lorentz TEM",
+      "Magnetism",
+      "Spectroscopy"
     ],
     "authors": [
       "Robert Streubel",
@@ -4128,7 +4473,12 @@
     "url": "https://doi.org/10.1063/1.5025686",
     "year": 2018,
     "tags": [
+      "4DSTEM",
+      "Diffraction",
+      "Disordered",
+      "Fluctuation EM",
       "In Situ",
+      "Metals & Alloys",
       "Strain"
     ],
     "authors": [
@@ -4145,8 +4495,9 @@
     "url": "https://doi.org/10.1016/j.actamat.2018.03.048",
     "year": 2018,
     "tags": [
-      "Strain",
-      "Nanoparticles"
+      "Metals & Alloys",
+      "Nanoparticles",
+      "Strain"
     ],
     "authors": [
       "R.P. Sankaran",
@@ -4165,7 +4516,12 @@
     "url": "https://doi.org/10.1063/1.5017537",
     "year": 2018,
     "tags": [
-      "Materials"
+      "Cryo-EM",
+      "Diffraction",
+      "Perovskites",
+      "Phase Contrast",
+      "Ptychography",
+      "Simulation"
     ],
     "authors": [
       "Roberto dos Reis",
@@ -4186,7 +4542,12 @@
     "url": "https://doi.org/10.1186/s40679-017-0048-z",
     "year": 2017,
     "tags": [
-      "Simulation"
+      "Data Science",
+      "Imaging",
+      "Ptychography",
+      "Simulation",
+      "Software",
+      "Tomography"
     ],
     "authors": [
       "Alan Pryor",
@@ -4201,10 +4562,10 @@
     "year": 2017,
     "tags": [
       "4DSTEM",
+      "Diffraction",
       "In Situ",
-      "Strain",
-      "Materials",
-      "Diffraction"
+      "Metals & Alloys",
+      "Strain"
     ],
     "authors": [
       "Thomas C. Pekin",
@@ -4220,6 +4581,9 @@
     "url": "https://dx.doi.org/10.1186/s40679-017-0046-1",
     "year": 2017,
     "tags": [
+      "Disordered",
+      "Imaging",
+      "Nanoparticles",
       "Simulation"
     ],
     "authors": [
@@ -4231,9 +4595,7 @@
     "title": "Formation of Oxygen Radical Sites on MoVNbTeOx by Cooperative Electron Redistribution",
     "url": "https://dx.doi.org/10.1021/jacs.7b05240",
     "year": 2017,
-    "tags": [
-      "In Situ"
-    ],
+    "tags": [],
     "authors": [
       "Yuanyuan Zhu",
       "Peter V. Sushko",
@@ -4252,9 +4614,9 @@
     "url": "https://dx.doi.org/10.1021/acs.jpcc.7b08398",
     "year": 2017,
     "tags": [
-      "In Situ",
       "2D Materials",
-      "Crystallography"
+      "Crystallography",
+      "In Situ"
     ],
     "authors": [
       "Aiming Yan",
@@ -4273,7 +4635,7 @@
     "url": "https://doi.org/10.1364/OE.25.014453",
     "year": 2017,
     "tags": [
-      "Instrumentation",
+      "Interferometry",
       "Phase Contrast"
     ],
     "authors": [
@@ -4292,7 +4654,7 @@
     "url": "https://doi.org/10.1088/1361-6528/aa7eb8",
     "year": 2017,
     "tags": [
-      "In Situ",
+      "Metals & Alloys",
       "Nanoparticles"
     ],
     "authors": [
@@ -4310,7 +4672,8 @@
     "url": "https://doi.org/10.1088/1361-6463/aa7503",
     "year": 2017,
     "tags": [
-      "Magnetism"
+      "Magnetism",
+      "Metals & Alloys"
     ],
     "authors": [
       "C Papusoi",
@@ -4328,6 +4691,8 @@
     "url": "http://dx.doi.org/doi:10.1038/ncomms15302",
     "year": 2017,
     "tags": [
+      "Crystallography",
+      "In Situ",
       "Magnetism"
     ],
     "authors": [
@@ -4349,8 +4714,11 @@
     "url": "http://dx.doi.org/10.1038/s41598-017-01841-x",
     "year": 2017,
     "tags": [
-      "Instrumentation",
-      "Simulation"
+      "Biological",
+      "Imaging",
+      "Polymers",
+      "Simulation",
+      "Spectroscopy"
     ],
     "authors": [
       "Thomas Juffmann",
@@ -4367,8 +4735,10 @@
     "url": "http://dx.doi.org/10.1038/ncomms14961",
     "year": 2017,
     "tags": [
-      "Materials",
-      "Imaging"
+      "Crystallography",
+      "Oxides",
+      "Perovskites",
+      "Strain"
     ],
     "authors": [
       "Anoop R. Damodaran",
@@ -4415,9 +4785,10 @@
     "year": 2017,
     "tags": [
       "4DSTEM",
+      "Diffraction",
+      "Image Processing",
       "Simulation",
-      "Strain",
-      "Diffraction"
+      "Strain"
     ],
     "authors": [
       "Thomas C. Pekin",
@@ -4433,8 +4804,9 @@
     "url": "http://dx.doi.org/10.1016/j.ultramic.2017.02.006",
     "year": 2017,
     "tags": [
-      "Ptychography",
-      "Imaging"
+      "4DSTEM",
+      "Imaging",
+      "Ptychography"
     ],
     "authors": [
       "Hao Yang",
@@ -4461,8 +4833,13 @@
     "year": 2017,
     "tags": [
       "4DSTEM",
-      "Spectroscopy",
-      "Diffraction"
+      "Aberration Correction",
+      "Crystallography",
+      "Diffraction",
+      "Oxides",
+      "Perovskites",
+      "Simulation",
+      "Spectroscopy"
     ],
     "authors": [
       "Colin Ophus",
@@ -4477,10 +4854,13 @@
     "url": "http://dx.doi.org/10.1038/nature21042",
     "year": 2017,
     "tags": [
-      "Tomography",
-      "Nanoparticles",
+      "Catalysis",
+      "Crystallography",
       "Magnetism",
-      "Crystallography"
+      "Metals & Alloys",
+      "Nanoparticles",
+      "Strain",
+      "Tomography"
     ],
     "authors": [
       "Yongsoo Yang",
@@ -4507,9 +4887,13 @@
     "url": "http://dx.doi.org/10.1186/s40679-016-0030-1",
     "year": 2016,
     "tags": [
+      "2D Materials",
+      "Crystallography",
+      "Holography",
+      "Imaging",
       "Phase Contrast",
-      "Instrumentation",
-      "Imaging"
+      "Ptychography",
+      "Software"
     ],
     "authors": [
       "Colin Ophus",
@@ -4525,10 +4909,10 @@
     "url": "http://dx.doi.org/10.1021/acs.inorgchem.6b02087",
     "year": 2016,
     "tags": [
-      "Materials",
-      "Spectroscopy",
       "Crystallography",
-      "EELS"
+      "EELS",
+      "Perovskites",
+      "Spectroscopy"
     ],
     "authors": [
       "Mohsen Danaie",
@@ -4549,8 +4933,11 @@
     "url": "https://dx.doi.org/10.1038/ncomms12572",
     "year": 2016,
     "tags": [
-      "Materials",
-      "Imaging"
+      "Imaging",
+      "Magnetism",
+      "Oxides",
+      "Perovskites",
+      "Strain"
     ],
     "authors": [
       "Greg Stone",
@@ -4571,9 +4958,9 @@
     "url": "http://dx.doi.org/10.1016/j.ultramic.2016.09.002",
     "year": 2016,
     "tags": [
-      "Ptychography",
+      "4DSTEM",
       "Phase Contrast",
-      "Imaging"
+      "Ptychography"
     ],
     "authors": [
       "Hao Yang",
@@ -4589,9 +4976,9 @@
     "year": 2016,
     "tags": [
       "4DSTEM",
-      "Materials",
       "Crystallography",
-      "Diffraction"
+      "Diffraction",
+      "Polymers"
     ],
     "authors": [
       "Ouliana Panova",
@@ -4609,9 +4996,9 @@
     "url": "http://dx.doi.org/10.1039/C6RA07584C",
     "year": 2016,
     "tags": [
-      "Simulation",
       "2D Materials",
-      "Crystallography"
+      "Crystallography",
+      "Simulation"
     ],
     "authors": [
       "Ashivni Shekhawat",
@@ -4625,7 +5012,8 @@
     "url": "https://doi.org/10.1021/acs.cgd.6b00203",
     "year": 2016,
     "tags": [
-      "Nanoparticles"
+      "Nanoparticles",
+      "Semiconductor"
     ],
     "authors": [
       "Lunet E. Luna",
@@ -4641,6 +5029,9 @@
     "url": "https://doi.org/10.1038/sdata.2016.41",
     "year": 2016,
     "tags": [
+      "Imaging",
+      "Metals & Alloys",
+      "Nanoparticles",
       "Tomography"
     ],
     "authors": [
@@ -4672,7 +5063,6 @@
     "url": "http://dx.doi.org/10.1103/PhysRevLett.116.106102",
     "year": 2016,
     "tags": [
-      "In Situ",
       "Crystallography"
     ],
     "authors": [
@@ -4689,8 +5079,11 @@
     "url": "http://dx.doi.org/10.1038/ncomms10719",
     "year": 2016,
     "tags": [
+      "Biological",
+      "Disordered",
+      "Nanoparticles",
       "Phase Contrast",
-      "Imaging"
+      "Simulation"
     ],
     "authors": [
       "Colin Ophus",
@@ -4710,6 +5103,8 @@
     "url": "http://dx.doi.org/doi:10.1016/j.ultramic.2015.12.002",
     "year": 2016,
     "tags": [
+      "Image Processing",
+      "Imaging",
       "Strain"
     ],
     "authors": [
@@ -4760,6 +5155,8 @@
     "url": "https://dx.doi.org/10.1038/nmat4426",
     "year": 2015,
     "tags": [
+      "Biological",
+      "Strain",
       "Tomography"
     ],
     "authors": [
@@ -4785,8 +5182,11 @@
     "url": "http://dx.doi.org/10.1038/ncomms9711",
     "year": 2015,
     "tags": [
-      "Materials",
-      "Energy Storage"
+      "Crystallography",
+      "Energy Materials",
+      "Magnetism",
+      "Oxides",
+      "Spectroscopy"
     ],
     "authors": [
       "Alpesh Khushalchand Shukla",
@@ -4803,9 +5203,10 @@
     "url": "http://dx.doi.org/10.1063/1.4922994",
     "year": 2015,
     "tags": [
-      "Strain",
-      "Imaging",
-      "Diffraction"
+      "4DSTEM",
+      "Crystallography",
+      "Diffraction",
+      "Strain"
     ],
     "authors": [
       "V. B. Ozdol",
@@ -4823,7 +5224,9 @@
     "url": "http://dx.doi.org/10.1038/ncomms8358",
     "year": 2015,
     "tags": [
-      "Imaging"
+      "2D Materials",
+      "Imaging",
+      "Simulation"
     ],
     "authors": [
       "J. Ciston",
@@ -4845,6 +5248,9 @@
     "url": "http://dx.doi.org/10.1002/adma.201500231",
     "year": 2015,
     "tags": [
+      "2D Materials",
+      "Crystallography",
+      "In Situ",
       "Strain"
     ],
     "authors": [
@@ -4859,8 +5265,8 @@
     "url": "http://dx.doi.org/10.1016/j.ultramic.2014.11.008",
     "year": 2015,
     "tags": [
-      "In Situ",
-      "Crystallography"
+      "Crystallography",
+      "In Situ"
     ],
     "authors": [
       "A. Gautam",
@@ -4876,9 +5282,9 @@
     "url": "http://dx.doi.org/10.1021/nl503450r",
     "year": 2014,
     "tags": [
-      "Strain",
       "2D Materials",
-      "Crystallography"
+      "Crystallography",
+      "Strain"
     ],
     "authors": [
       "Haider I. Rasool",
@@ -4895,8 +5301,8 @@
     "url": "http://dx.doi.org/10.1080/14786435.2014.937839",
     "year": 2014,
     "tags": [
-      "Materials",
-      "Imaging"
+      "Imaging",
+      "Metals & Alloys"
     ],
     "authors": [
       "R.P. Sankaran",
@@ -4913,9 +5319,9 @@
     "url": "http://dx.doi.org/10.1021/nl403327u",
     "year": 2014,
     "tags": [
-      "Materials",
       "2D Materials",
-      "Catalysis"
+      "Catalysis",
+      "Imaging"
     ],
     "authors": [
       "Wei Li Wang",
@@ -4937,7 +5343,9 @@
     "url": "http://dx.doi.org/10.1038/ncomms3811",
     "year": 2013,
     "tags": [
-      "2D Materials"
+      "2D Materials",
+      "Crystallography",
+      "Strain"
     ],
     "authors": [
       "Haider I. Rasool",
@@ -4953,8 +5361,9 @@
     "url": "http://dx.doi.org/10.1209/0295-5075/104/17004",
     "year": 2013,
     "tags": [
-      "Spectroscopy",
-      "Crystallography"
+      "Crystallography",
+      "Semiconductor",
+      "Spectroscopy"
     ],
     "authors": [
       "A. X. Gray",
@@ -4989,8 +5398,8 @@
     "year": 2013,
     "tags": [
       "Crystallography",
-      "Instrumentation",
-      "Imaging"
+      "Imaging",
+      "Strain"
     ],
     "authors": [
       "Yuanyuan Zhu",
@@ -5021,7 +5430,8 @@
     "url": "doi.org/10.1088/0953-8984/25/23/232202",
     "year": 2013,
     "tags": [
-      "Crystallography"
+      "Crystallography",
+      "Oxides"
     ],
     "authors": [
       "Colin Ophus",
@@ -5036,7 +5446,7 @@
     "url": "http://dx.doi.org/10.1016/j.actamat.2012.11.020",
     "year": 2013,
     "tags": [
-      "Materials",
+      "Disordered",
       "Strain"
     ],
     "authors": [
@@ -5056,8 +5466,9 @@
     "url": "http://dx.doi.org/10.1063/1.4793651",
     "year": 2013,
     "tags": [
-      "Strain",
-      "Imaging"
+      "Crystallography",
+      "Imaging",
+      "Strain"
     ],
     "authors": [
       "R. dos Reis",
@@ -5090,8 +5501,9 @@
     "url": "http://dx.doi.org/10.1016/j.ultramic.2011.10.016",
     "year": 2012,
     "tags": [
+      "Imaging",
       "Phase Contrast",
-      "Imaging"
+      "Ptychography"
     ],
     "authors": [
       "Colin Ophus",
@@ -5104,8 +5516,7 @@
     "url": "http://dx.doi.org/doi:10.1038/nmat3077",
     "year": 2011,
     "tags": [
-      "Nanoparticles",
-      "Materials"
+      "Nanoparticles"
     ],
     "authors": [
       "V. Radmilovic",
@@ -5124,7 +5535,8 @@
     "url": "http://dx.doi.org/10.1139/P09-085",
     "year": 2010,
     "tags": [
-      "Materials"
+      "Catalysis",
+      "Metals & Alloys"
     ],
     "authors": [
       "H. Fritzsche",
@@ -5142,7 +5554,6 @@
     "url": "http://dx.doi.org/10.1016/j.actamat.2010.05.051",
     "year": 2010,
     "tags": [
-      "In Situ",
       "Crystallography"
     ],
     "authors": [
@@ -5173,7 +5584,7 @@
     "url": "http://dx.doi.org/10.1016/j.ijhydene.2009.12.013",
     "year": 2010,
     "tags": [
-      "Materials"
+      "Metals & Alloys"
     ],
     "authors": [
       "W.P. Kalisvaart",
@@ -5192,9 +5603,7 @@
     "title": "Analytic description of competitive grain growth",
     "url": "http://dx.doi.org/10.1103/PhysRevE.81.011601",
     "year": 2010,
-    "tags": [
-      "In Situ"
-    ],
+    "tags": [],
     "authors": [
       "Colin Ophus",
       "Erik J. Luber",
@@ -5206,9 +5615,7 @@
     "title": "All-metal AFM probes fabricated from microstructurally tailored Cu-Hf thin films",
     "url": "http://dx.doi.org/10.1088/0957-4484/20/34/345703",
     "year": 2009,
-    "tags": [
-      "Instrumentation"
-    ],
+    "tags": [],
     "authors": [
       "E J Luber",
       "B C Olsen",
@@ -5223,6 +5630,7 @@
     "url": "http://dx.doi.org/10.1016/j.actamat.2009.05.029",
     "year": 2009,
     "tags": [
+      "Disordered",
       "Nanoparticles"
     ],
     "authors": [
@@ -5244,9 +5652,9 @@
     "url": "http://dx.doi.org/10.1063/1.3154550",
     "year": 2009,
     "tags": [
-      "Materials",
       "2D Materials",
-      "Catalysis"
+      "Catalysis",
+      "Crystallography"
     ],
     "authors": [
       "Helmut Fritzsche",
@@ -5262,8 +5670,8 @@
     "url": "http://dx.doi.org/10.1016/j.actamat.2008.11.014",
     "year": 2009,
     "tags": [
-      "Simulation",
-      "Crystallography"
+      "Crystallography",
+      "Simulation"
     ],
     "authors": [
       "Colin Ophus",
@@ -5276,9 +5684,7 @@
     "title": "Structural changes of thin MgAl films during hydrogen desorption",
     "url": "http://dx.doi.org/10.1016/j.nima.2008.11.113",
     "year": 2009,
-    "tags": [
-      "Materials"
-    ],
+    "tags": [],
     "authors": [
       "Helmut Fritzsche",
       "Mouna Saoudi",
@@ -5294,8 +5700,6 @@
     "url": "http://dx.doi.org/10.1088/0957-4484/19/12/125705",
     "year": 2008,
     "tags": [
-      "Materials",
-      "Instrumentation",
       "Nanoparticles"
     ],
     "authors": [
@@ -5317,8 +5721,9 @@
     "url": "http://dx.doi.org/10.1063/1.2841849",
     "year": 2008,
     "tags": [
-      "Nanoparticles",
-      "Instrumentation"
+      "Disordered",
+      "Metals & Alloys",
+      "Nanoparticles"
     ],
     "authors": [
       "C. Ophus",
@@ -5339,7 +5744,8 @@
     "url": "http://dx.doi.org/10.1063/1.2899936",
     "year": 2008,
     "tags": [
-      "Materials"
+      "In Situ",
+      "Metals & Alloys"
     ],
     "authors": [
       "H. Fritzsche",
@@ -5357,9 +5763,9 @@
     "url": "http://dx.doi.org/10.1007/s11661-007-9389-x",
     "year": 2008,
     "tags": [
-      "In Situ",
-      "Materials",
-      "Nanoparticles"
+      "Metals & Alloys",
+      "Nanoparticles",
+      "Oxides"
     ],
     "authors": [
       "J. Chen",
@@ -5377,9 +5783,7 @@
     "title": "Synthesis and characterization of Au-Ta nanocomposites for nanomechanical cantilever devices",
     "url": "http://dx.doi.org/10.1088/0957-4484/18/35/355303",
     "year": 2007,
-    "tags": [
-      "Instrumentation"
-    ],
+    "tags": [],
     "authors": [
       "N Nelson-Fitzpatrick",
       "C Ophus",
@@ -5397,7 +5801,7 @@
     "url": "http://dx.doi.org/10.1088/0957-4484/17/12/042",
     "year": 2006,
     "tags": [
-      "Instrumentation"
+      "Metals & Alloys"
     ],
     "authors": [
       "Z Lee",
