@@ -262,7 +262,7 @@ function render({ model, el }) {
       <div class="${id}-controls">
         <input class="${id}-search" type="text" placeholder="Search by title, author, or journal..." />
         <div class="${id}-tags"></div>
-        <div class="${id}-years"></div>
+        <!-- years removed -->
         <div class="${id}-stats"></div>
       </div>
       <div class="${id}-results"></div>
@@ -301,23 +301,7 @@ function render({ model, el }) {
       tagsContainer.appendChild(pill);
     }
 
-    // Render year buttons
-    for (const year of sortedYears) {
-      const btn = document.createElement("span");
-      btn.className = `${id}-year-btn`;
-      btn.textContent = year;
-      btn.addEventListener("click", () => {
-        if (activeYears.has(year)) {
-          activeYears.delete(year);
-        } else {
-          activeYears.add(year);
-        }
-        updateYearStyles();
-        renderResults();
-      });
-      btn.dataset.year = year;
-      yearsContainer.appendChild(btn);
-    }
+    // Year buttons removed to save space
 
     // Search input
     searchInput.addEventListener("input", (e) => {

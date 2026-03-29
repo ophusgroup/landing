@@ -11,6 +11,7 @@ project:
     - file: research.md
       children:
         - file: papers.md
+        - file: preprints.md
         - file: funding.md
         - file: interactive.md
     - file: teaching.md
@@ -72,6 +73,8 @@ site:
           url: /research
         - title: Publications
           url: /papers
+        - title: Preprints
+          url: /preprints
         - title: Funding
           url: /funding
         - title: Interactive

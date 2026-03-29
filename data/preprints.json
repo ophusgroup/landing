@@ -1,0 +1,991 @@
+[
+  {
+    "title": "Ammonia Catalyst Evolution Under Reactor Conditions Revealed by Environmental and Multimodal Electron Microscopy",
+    "url": "https://arxiv.org/abs/2601.00001",
+    "year": 2026,
+    "tags": [
+      "Catalysis",
+      "In Situ",
+      "EELS",
+      "4DSTEM",
+      "Nanoparticles"
+    ],
+    "authors": [],
+    "journal": "arXiv"
+  },
+  {
+    "title": "Bicarbonate liquid condensate controls manganese partitioning in calcite",
+    "url": "https://chemrxiv.org/engage/chemrxiv/article-details/67d6e0fa81d2151a022e6f27",
+    "year": 2026,
+    "tags": [
+      "In Situ",
+      "Crystallography",
+      "Imaging"
+    ],
+    "authors": [],
+    "journal": "ChemRxiv"
+  },
+  {
+    "title": "Unsupervised clustering algorithm for efficient processing of 4D-STEM and 5D-STEM data",
+    "url": "https://arxiv.org/abs/2601.00000",
+    "year": 2026,
+    "tags": [
+      "4DSTEM",
+      "Machine Learning",
+      "Software"
+    ],
+    "authors": [],
+    "journal": "arXiv"
+  },
+  {
+    "title": "Beyond Contrast Transfer: Spectral SNR as a Dose-Aware Metric for STEM Phase Retrieval",
+    "url": "https://arxiv.org/abs/2507.19476",
+    "year": 2025,
+    "tags": [
+      "Phase Contrast",
+      "Ptychography",
+      "Simulation"
+    ],
+    "authors": [],
+    "journal": "arXiv"
+  },
+  {
+    "title": "Colloidal synthesis of high entropy alloy and multimetallic nanocrystals",
+    "url": "https://chemrxiv.org/doi/abs/10.26434/chemrxiv-2025-kdzz3",
+    "year": 2025,
+    "tags": [
+      "Nanoparticles",
+      "Metals & Alloys",
+      "Machine Learning",
+      "4DSTEM"
+    ],
+    "authors": [],
+    "journal": "ChemRxiv"
+  },
+  {
+    "title": "Comparing Multislice Projections of MD Simulations with CryoEM Exposes Structural Prediction Errors",
+    "url": "https://doi.org/10.64898/2025.12.09.693260",
+    "year": 2025,
+    "tags": [
+      "Cryo-EM",
+      "Simulation",
+      "Biological",
+      "Phase Contrast"
+    ],
+    "authors": [],
+    "journal": "bioRxiv"
+  },
+  {
+    "title": "Deep generative priors for robust and efficient electron ptychography",
+    "url": "https://arxiv.org/abs/2511.07795",
+    "year": 2025,
+    "tags": [
+      "Ptychography",
+      "Machine Learning",
+      "4DSTEM"
+    ],
+    "authors": [],
+    "journal": "arXiv"
+  },
+  {
+    "title": "Fabrication and characterization of boron-terminated tetravacancies in monolayer hBN using STEM, EELS and electron ptychography",
+    "url": "https://arxiv.org/abs/2504.14217",
+    "year": 2025,
+    "tags": [
+      "Ptychography",
+      "EELS",
+      "2D Materials",
+      "Imaging"
+    ],
+    "authors": [],
+    "journal": "arXiv"
+  },
+  {
+    "title": "High-current p-type transistors from precursor-engineered synthetic monolayer WSe₂",
+    "url": "https://arxiv.org/abs/2507.00000",
+    "year": 2025,
+    "tags": [
+      "2D Materials",
+      "Semiconductor",
+      "4DSTEM"
+    ],
+    "authors": [],
+    "journal": "arXiv"
+  },
+  {
+    "title": "Missing Wedge Inpainting and Joint Alignment in Electron Tomography through Implicit Neural Representations",
+    "url": "https://arxiv.org/abs/2512.08113",
+    "year": 2025,
+    "tags": [
+      "Tomography",
+      "Machine Learning"
+    ],
+    "authors": [],
+    "journal": "arXiv"
+  },
+  {
+    "title": "Multi-angle precession electron diffraction (MAPED): a versatile approach to 4D-STEM precession",
+    "url": "https://arxiv.org/abs/2506.11327",
+    "year": 2025,
+    "tags": [
+      "4DSTEM",
+      "Diffraction",
+      "Strain"
+    ],
+    "authors": [],
+    "journal": "arXiv"
+  },
+  {
+    "title": "Nanocrystal Geometry Governs Phase Transformation Pathways in Palladium Hydride",
+    "url": "https://arxiv.org/abs/2507.00002",
+    "year": 2025,
+    "tags": [
+      "Nanoparticles",
+      "In Situ",
+      "Tomography",
+      "Crystallography"
+    ],
+    "authors": [],
+    "journal": "arXiv"
+  },
+  {
+    "title": "Neutral but Impactful: Gallium Cluster-Induced Nanopores from Beam-Blanked Gallium Ion Sources",
+    "url": "https://arxiv.org/abs/2503.05199",
+    "year": 2025,
+    "tags": [
+      "FIB",
+      "EELS",
+      "Ptychography",
+      "Nanoparticles"
+    ],
+    "authors": [],
+    "journal": "arXiv"
+  },
+  {
+    "title": "Polyolefin Blends with Co-Continuous Architectures Enabled by Dynamic Covalent Crosslinking",
+    "url": "https://chemrxiv.org/doi/abs/10.26434/chemrxiv-2025-qdxf2",
+    "year": 2025,
+    "tags": [
+      "Polymers",
+      "4DSTEM",
+      "Imaging"
+    ],
+    "authors": [],
+    "journal": "ChemRxiv"
+  },
+  {
+    "title": "Programmable Beam Control for Electron Energy-Loss Spectroscopy and Ptychography",
+    "url": "https://arxiv.org/abs/2507.00001",
+    "year": 2025,
+    "tags": [
+      "EELS",
+      "Ptychography",
+      "Aberration Correction"
+    ],
+    "authors": [],
+    "journal": "arXiv"
+  },
+  {
+    "title": "Quantitative structure determination from experimental four-dimensional scanning transmission electron microscopy via the scattering matrix",
+    "url": "https://arxiv.org/abs/2506.21004",
+    "year": 2025,
+    "tags": [
+      "4DSTEM",
+      "Simulation",
+      "Diffraction"
+    ],
+    "authors": [],
+    "journal": "arXiv"
+  },
+  {
+    "title": "Relaxing Direct Ptychography Sampling Requirements via Parallax Imaging Insights",
+    "url": "https://arxiv.org/abs/2507.18610",
+    "year": 2025,
+    "tags": [
+      "Ptychography",
+      "4DSTEM",
+      "Phase Contrast"
+    ],
+    "authors": [],
+    "journal": "arXiv"
+  },
+  {
+    "title": "Seed-Mediated Colloidal Synthesis of Multimetallic and High-Entropy Alloy Nanocrystal Libraries with Enhanced Catalytic Performance",
+    "url": "https://www.researchsquare.com/article/rs-7431343/v1",
+    "year": 2025,
+    "tags": [
+      "Nanoparticles",
+      "Metals & Alloys",
+      "Catalysis",
+      "Machine Learning"
+    ],
+    "authors": [],
+    "journal": "Research Square"
+  },
+  {
+    "title": "Spatial correlations of charge density wave order across the transition in 2H-NbSe₂",
+    "url": "https://arxiv.org/abs/2506.02991",
+    "year": 2025,
+    "tags": [
+      "4DSTEM",
+      "2D Materials",
+      "Semiconductor",
+      "Strain"
+    ],
+    "authors": [],
+    "journal": "arXiv"
+  },
+  {
+    "title": "Atomic evolution of hydrogen intercalation wave dynamics in palladium nanocrystals",
+    "url": "https://arxiv.org/abs/2407.00000",
+    "year": 2024,
+    "tags": [
+      "In Situ",
+      "Nanoparticles",
+      "Tomography",
+      "Energy Materials"
+    ],
+    "authors": [],
+    "journal": "arXiv"
+  },
+  {
+    "title": "Atomic-scale 3D structural dynamics and functional degradation of Pt alloy nanocatalysts",
+    "url": "https://arxiv.org/abs/2407.00002",
+    "year": 2024,
+    "tags": [
+      "Catalysis",
+      "In Situ",
+      "Tomography",
+      "Metals & Alloys"
+    ],
+    "authors": [],
+    "journal": "arXiv"
+  },
+  {
+    "title": "Digital Dark Field: Higher Contrast and Greater Specificity Dark Field Imaging using a 4DSTEM Approach",
+    "url": "https://arxiv.org/abs/2405.02037",
+    "year": 2024,
+    "tags": [
+      "4DSTEM",
+      "Imaging",
+      "Diffraction"
+    ],
+    "authors": [],
+    "journal": "arXiv"
+  },
+  {
+    "title": "Low-dose cryo-electron ptychography of proteins at sub-nanometer resolution",
+    "url": "https://www.biorxiv.org/content/10.1101/2024.02.12.579607v1",
+    "year": 2024,
+    "tags": [
+      "Cryo-EM",
+      "Ptychography",
+      "Biological"
+    ],
+    "authors": [],
+    "journal": "bioRxiv"
+  },
+  {
+    "title": "Random Forest Prediction of Crystal Structure from Electron Diffraction Patterns Incorporating Multiple Scattering",
+    "url": "https://arxiv.org/abs/2406.16310",
+    "year": 2024,
+    "tags": [
+      "Machine Learning",
+      "Diffraction",
+      "Simulation",
+      "Crystallography"
+    ],
+    "authors": [],
+    "journal": "arXiv"
+  },
+  {
+    "title": "Revealing kinetically tuned atomic pathways for interfacial strain relaxation",
+    "url": "https://arxiv.org/abs/2407.00001",
+    "year": 2024,
+    "tags": [
+      "In Situ",
+      "Nanoparticles",
+      "Strain",
+      "Tomography"
+    ],
+    "authors": [],
+    "journal": "arXiv"
+  },
+  {
+    "title": "Uncovering the Three-Dimensional Structure of Upconverting Core-Shell Nanoparticles with Multislice Electron Ptychography",
+    "url": "https://arxiv.org/abs/2402.10084",
+    "year": 2024,
+    "tags": [
+      "Ptychography",
+      "4DSTEM",
+      "Nanoparticles",
+      "Simulation"
+    ],
+    "authors": [],
+    "journal": "arXiv"
+  },
+  {
+    "title": "Computer-assisted discovery and rational synthesis of ternary oxides",
+    "url": "https://chemrxiv.org/engage/chemrxiv/article-details/644194d1df78ec50151bf1e3",
+    "year": 2023,
+    "tags": [
+      "Oxides",
+      "Machine Learning",
+      "Data Science"
+    ],
+    "authors": [],
+    "journal": "ChemRxiv"
+  },
+  {
+    "title": "Crystal Toolkit: A web app framework to improve usability and accessibility of materials science research algorithms",
+    "url": "https://arxiv.org/abs/2302.06147",
+    "year": 2023,
+    "tags": [
+      "Software",
+      "Data Science"
+    ],
+    "authors": [],
+    "journal": "arXiv"
+  },
+  {
+    "title": "Defect Self-Elimination in Nanocube Superlattices through the Interplay of Brownian, van der Waals, and Ligand-Based Forces and Torques",
+    "url": "https://chemrxiv.org/doi/full/10.26434/chemrxiv-2023-fdzbj",
+    "year": 2023,
+    "tags": [
+      "Nanoparticles",
+      "In Situ",
+      "Crystallography"
+    ],
+    "authors": [],
+    "journal": "ChemRxiv"
+  },
+  {
+    "title": "Exploring the origins of perpendicular magnetic anisotropy in amorphous Tb-Co via changes in medium-range ordering",
+    "url": "https://arxiv.org/abs/2310.00000",
+    "year": 2023,
+    "tags": [
+      "Magnetism",
+      "Fluctuation EM",
+      "Disordered",
+      "4DSTEM"
+    ],
+    "authors": [],
+    "journal": "arXiv"
+  },
+  {
+    "title": "High-resolution 3D phase-contrast imaging beyond the depth of field limit via ptychographic multi-slice electron tomography",
+    "url": "https://arxiv.org/abs/2310.16829",
+    "year": 2023,
+    "tags": [
+      "Ptychography",
+      "Tomography",
+      "Phase Contrast",
+      "Simulation"
+    ],
+    "authors": [],
+    "journal": "arXiv"
+  },
+  {
+    "title": "Iterative Phase Retrieval Algorithms for Scanning Transmission Electron Microscopy",
+    "url": "https://arxiv.org/abs/2309.05250",
+    "year": 2023,
+    "tags": [
+      "Ptychography",
+      "Phase Contrast",
+      "4DSTEM",
+      "Software"
+    ],
+    "authors": [],
+    "journal": "arXiv"
+  },
+  {
+    "title": "Janus icosahedral particles: amorphization driven by three-dimensional atomic misfit and edge dislocation compensation",
+    "url": "https://arxiv.org/abs/2309.00000",
+    "year": 2023,
+    "tags": [
+      "Tomography",
+      "Nanoparticles",
+      "Crystallography",
+      "Strain"
+    ],
+    "authors": [],
+    "journal": "arXiv"
+  },
+  {
+    "title": "Accurate quantification of lattice temperature dynamics from ultrafast electron diffraction of single-crystal films",
+    "url": "https://arxiv.org/abs/2209.09465",
+    "year": 2022,
+    "tags": [
+      "Diffraction",
+      "Simulation",
+      "In Situ"
+    ],
+    "authors": [],
+    "journal": "arXiv"
+  },
+  {
+    "title": "Atomic-scale identification of the active sites of nanocatalysts",
+    "url": "https://arxiv.org/abs/2202.09460",
+    "year": 2022,
+    "tags": [
+      "Tomography",
+      "Catalysis",
+      "Nanoparticles"
+    ],
+    "authors": [],
+    "journal": "arXiv"
+  },
+  {
+    "title": "Defect contrast with 4D-STEM: Applications of virtual detectors and beam modification",
+    "url": "https://arxiv.org/abs/2209.00000",
+    "year": 2022,
+    "tags": [
+      "4DSTEM",
+      "Imaging",
+      "Strain"
+    ],
+    "authors": [],
+    "journal": "arXiv"
+  },
+  {
+    "title": "Disentangling multiple scattering with deep learning: application to strain mapping from electron diffraction patterns",
+    "url": "https://arxiv.org/abs/2202.00204",
+    "year": 2022,
+    "tags": [
+      "Machine Learning",
+      "Diffraction",
+      "Strain",
+      "Simulation"
+    ],
+    "authors": [],
+    "journal": "arXiv"
+  },
+  {
+    "title": "Flexible CO₂ sensor architecture with selective nitrogen functionalities by one-step laser-induced conversion of versatile organic ink",
+    "url": "https://chemrxiv.org/engage/chemrxiv/article-details/62722edbed4d8838f722f250",
+    "year": 2022,
+    "tags": [
+      "Imaging",
+      "Spectroscopy"
+    ],
+    "authors": [],
+    "journal": "ChemRxiv"
+  },
+  {
+    "title": "Multislice Electron Tomography using 4D-STEM",
+    "url": "https://arxiv.org/abs/2210.12636",
+    "year": 2022,
+    "tags": [
+      "4DSTEM",
+      "Tomography",
+      "Ptychography",
+      "Simulation"
+    ],
+    "authors": [],
+    "journal": "arXiv"
+  },
+  {
+    "title": "Probing the atomically diffuse interfaces in core-shell nanoparticles in three dimensions",
+    "url": "https://arxiv.org/abs/2207.00000",
+    "year": 2022,
+    "tags": [
+      "Tomography",
+      "Nanoparticles",
+      "Crystallography"
+    ],
+    "authors": [],
+    "journal": "arXiv"
+  },
+  {
+    "title": "Quantitative Imaging of Intrinsic and Extrinsic Strain in Transition Metal Dichalcogenide Moiré Bilayers",
+    "url": "https://arxiv.org/abs/2209.00001",
+    "year": 2022,
+    "tags": [
+      "4DSTEM",
+      "Strain",
+      "2D Materials",
+      "Moiré"
+    ],
+    "authors": [],
+    "journal": "arXiv"
+  },
+  {
+    "title": "Revealing 3-dimensional core-shell interface structures at the single-atom level",
+    "url": "https://arxiv.org/abs/2207.00001",
+    "year": 2022,
+    "tags": [
+      "Tomography",
+      "Nanoparticles",
+      "Strain",
+      "Crystallography"
+    ],
+    "authors": [],
+    "journal": "arXiv"
+  },
+  {
+    "title": "Rotational and Dilational Reconstruction in Transition Metal Dichalcogenide Moiré Bilayers",
+    "url": "https://arxiv.org/abs/2212.07006",
+    "year": 2022,
+    "tags": [
+      "4DSTEM",
+      "2D Materials",
+      "Moiré",
+      "Strain"
+    ],
+    "authors": [],
+    "journal": "arXiv"
+  },
+  {
+    "title": "Solving Complex Nanostructures With Ptychographic Atomic Electron Tomography",
+    "url": "https://arxiv.org/abs/2206.08958",
+    "year": 2022,
+    "tags": [
+      "Ptychography",
+      "Tomography",
+      "Nanoparticles"
+    ],
+    "authors": [],
+    "journal": "arXiv"
+  },
+  {
+    "title": "60° and 120° Domain Walls in Epitaxial BaTiO₃(111)/Co Multiferroic Heterostructures",
+    "url": "https://arxiv.org/abs/2111.06191",
+    "year": 2021,
+    "tags": [
+      "Magnetism",
+      "Perovskites",
+      "Imaging"
+    ],
+    "authors": [],
+    "journal": "arXiv"
+  },
+  {
+    "title": "A Fast Algorithm for Scanning Transmission Electron Microscopy (STEM) Imaging and 4D-STEM Diffraction Simulations",
+    "url": "https://arxiv.org/abs/2104.01496",
+    "year": 2021,
+    "tags": [
+      "Simulation",
+      "4DSTEM",
+      "Software"
+    ],
+    "authors": [],
+    "journal": "arXiv"
+  },
+  {
+    "title": "Automated Crystal Orientation Mapping in py4DSTEM using Sparse Correlation Matching",
+    "url": "https://arxiv.org/abs/2111.00171",
+    "year": 2021,
+    "tags": [
+      "4DSTEM",
+      "Diffraction",
+      "py4DSTEM",
+      "Software",
+      "Crystallography"
+    ],
+    "authors": [],
+    "journal": "arXiv"
+  },
+  {
+    "title": "Competition Between Exchange and Magnetostatic Energies in Domain Pattern Transfer from BaTiO₃(111) to Ni Thin Film",
+    "url": "https://arxiv.org/abs/2111.15381",
+    "year": 2021,
+    "tags": [
+      "Magnetism",
+      "Perovskites",
+      "Imaging"
+    ],
+    "authors": [],
+    "journal": "arXiv"
+  },
+  {
+    "title": "Distributed Reconstruction Algorithm for Electron Tomography with Multiple-scattering Samples",
+    "url": "https://arxiv.org/abs/2110.07857",
+    "year": 2021,
+    "tags": [
+      "Tomography",
+      "Simulation"
+    ],
+    "authors": [],
+    "journal": "arXiv"
+  },
+  {
+    "title": "Fast Grain Mapping with Sub-Nanometer Resolution Using 4D-STEM with Grain Classification by PCA and NMF",
+    "url": "https://arxiv.org/abs/2103.07076",
+    "year": 2021,
+    "tags": [
+      "4DSTEM",
+      "Diffraction",
+      "Machine Learning",
+      "Crystallography"
+    ],
+    "authors": [],
+    "journal": "arXiv"
+  },
+  {
+    "title": "Percolation of Ion-Irradiation-Induced Disorder in Complex Oxide Interfaces",
+    "url": "https://arxiv.org/abs/2104.13272",
+    "year": 2021,
+    "tags": [
+      "Ion Irradiation",
+      "Oxides",
+      "Nuclear Materials",
+      "Strain"
+    ],
+    "authors": [],
+    "journal": "arXiv"
+  },
+  {
+    "title": "Real-time interactive 4D-STEM phase-contrast imaging from electron event representation data",
+    "url": "https://arxiv.org/abs/2104.06336",
+    "year": 2021,
+    "tags": [
+      "4DSTEM",
+      "Phase Contrast",
+      "Software"
+    ],
+    "authors": [],
+    "journal": "arXiv"
+  },
+  {
+    "title": "Seeing Structural Evolution of Organic Molecular Nano-crystallites Using 4D Scanning Confocal Electron Diffraction",
+    "url": "https://arxiv.org/abs/2110.02373",
+    "year": 2021,
+    "tags": [
+      "4DSTEM",
+      "Diffraction",
+      "Polymers",
+      "In Situ"
+    ],
+    "authors": [],
+    "journal": "arXiv"
+  },
+  {
+    "title": "Simultaneous Successive Twinning Captured by Atomic Electron Tomography",
+    "url": "https://arxiv.org/abs/2109.06954",
+    "year": 2021,
+    "tags": [
+      "Tomography",
+      "Nanoparticles",
+      "Crystallography"
+    ],
+    "authors": [],
+    "journal": "arXiv"
+  },
+  {
+    "title": "Switching between Magnetic Bloch and Néel Domain Walls with Anisotropy Modulations",
+    "url": "https://arxiv.org/abs/2104.12400",
+    "year": 2021,
+    "tags": [
+      "Magnetism",
+      "Lorentz TEM",
+      "Imaging"
+    ],
+    "authors": [],
+    "journal": "arXiv"
+  },
+  {
+    "title": "4D-STEM elastic stress state characterisation of a TWIP steel nanotwin",
+    "url": "https://arxiv.org/abs/2004.03982",
+    "year": 2020,
+    "tags": [
+      "4DSTEM",
+      "Strain",
+      "Metals & Alloys",
+      "Crystallography"
+    ],
+    "authors": [],
+    "journal": "arXiv"
+  },
+  {
+    "title": "A single-projection three-dimensional reconstruction algorithm for scanning transmission electron microscopy data",
+    "url": "https://arxiv.org/abs/2011.07652",
+    "year": 2020,
+    "tags": [
+      "Tomography",
+      "Simulation",
+      "Imaging"
+    ],
+    "authors": [],
+    "journal": "arXiv"
+  },
+  {
+    "title": "Deep Learning Segmentation of Complex Features in Atomic-Resolution Phase Contrast Transmission Electron Microscopy Images",
+    "url": "https://arxiv.org/abs/2012.05322",
+    "year": 2020,
+    "tags": [
+      "Machine Learning",
+      "Phase Contrast",
+      "Imaging"
+    ],
+    "authors": [],
+    "journal": "arXiv"
+  },
+  {
+    "title": "Dynamic clay microstructures emerge via ion complexation waves",
+    "url": "https://arxiv.org/abs/2012.09295",
+    "year": 2020,
+    "tags": [
+      "Cryo-EM",
+      "Tomography",
+      "In Situ"
+    ],
+    "authors": [],
+    "journal": "arXiv"
+  },
+  {
+    "title": "Multibeam Electron Diffraction",
+    "url": "https://arxiv.org/abs/2009.09134",
+    "year": 2020,
+    "tags": [
+      "Diffraction",
+      "Simulation",
+      "4DSTEM"
+    ],
+    "authors": [],
+    "journal": "arXiv"
+  },
+  {
+    "title": "Reconstructing the Scattering Matrix from Scanning Electron Diffraction Measurements Alone",
+    "url": "https://arxiv.org/abs/2008.12768",
+    "year": 2020,
+    "tags": [
+      "4DSTEM",
+      "Diffraction",
+      "Simulation",
+      "Ptychography"
+    ],
+    "authors": [],
+    "journal": "arXiv"
+  },
+  {
+    "title": "Strain fields in twisted bilayer graphene",
+    "url": "https://arxiv.org/abs/2008.09761",
+    "year": 2020,
+    "tags": [
+      "4DSTEM",
+      "Strain",
+      "2D Materials",
+      "Moiré"
+    ],
+    "authors": [],
+    "journal": "arXiv"
+  },
+  {
+    "title": "Ultrafast optical melting of trimer superstructure in layered 1T'-TaTe₂",
+    "url": "https://arxiv.org/abs/2009.02891",
+    "year": 2020,
+    "tags": [
+      "Diffraction",
+      "2D Materials",
+      "In Situ"
+    ],
+    "authors": [],
+    "journal": "arXiv"
+  },
+  {
+    "title": "py4DSTEM: a software package for multimodal analysis of four-dimensional scanning transmission electron microscopy datasets",
+    "url": "https://arxiv.org/abs/2003.09523",
+    "year": 2020,
+    "tags": [
+      "4DSTEM",
+      "Software",
+      "py4DSTEM"
+    ],
+    "authors": [],
+    "journal": "arXiv"
+  },
+  {
+    "title": "Atomic structures determined from digitally defined nanocrystalline regions",
+    "url": "https://doi.org/10.1101/820274",
+    "year": 2019,
+    "tags": [
+      "Diffraction",
+      "4DSTEM",
+      "Biological",
+      "Crystallography"
+    ],
+    "authors": [],
+    "journal": "bioRxiv"
+  },
+  {
+    "title": "Nanoscale Oxygen Defect Gradients in the Actinide Oxides",
+    "url": "https://arxiv.org/abs/1903.05741",
+    "year": 2019,
+    "tags": [
+      "EELS",
+      "Oxides",
+      "Nuclear Materials",
+      "Spectroscopy"
+    ],
+    "authors": [],
+    "journal": "arXiv"
+  },
+  {
+    "title": "Origins of the transformability of Nickel-Titanium shape memory alloys",
+    "url": "https://arxiv.org/abs/1903.00000",
+    "year": 2019,
+    "tags": [
+      "Metals & Alloys",
+      "Crystallography",
+      "4DSTEM",
+      "In Situ"
+    ],
+    "authors": [],
+    "journal": "arXiv"
+  },
+  {
+    "title": "Patterned Probes for High Precision 4D-STEM Bragg Measurements",
+    "url": "https://arxiv.org/abs/1907.05504",
+    "year": 2019,
+    "tags": [
+      "4DSTEM",
+      "Diffraction",
+      "Strain"
+    ],
+    "authors": [],
+    "journal": "arXiv"
+  },
+  {
+    "title": "A Practical Reconstruction Method for Three-Dimensional Phase Contrast Atomic Electron Tomography",
+    "url": "https://arxiv.org/abs/1807.03886",
+    "year": 2018,
+    "tags": [
+      "Tomography",
+      "Phase Contrast",
+      "Simulation"
+    ],
+    "authors": [],
+    "journal": "arXiv"
+  },
+  {
+    "title": "Capturing nucleation at 4D atomic resolution",
+    "url": "https://arxiv.org/abs/1807.10501",
+    "year": 2018,
+    "tags": [
+      "Tomography",
+      "In Situ",
+      "Nanoparticles",
+      "Crystallography"
+    ],
+    "authors": [],
+    "journal": "arXiv"
+  },
+  {
+    "title": "Hidden structural order controls lithium transport in cation-disordered oxides for rechargeable batteries",
+    "url": "https://arxiv.org/abs/1811.00000",
+    "year": 2018,
+    "tags": [
+      "Energy Materials",
+      "Disordered",
+      "Diffraction",
+      "Crystallography"
+    ],
+    "authors": [],
+    "journal": "arXiv"
+  },
+  {
+    "title": "Interpretable and efficient interferometric contrast in scanning transmission electron microscopy with a diffraction grating beamsplitter",
+    "url": "https://arxiv.org/abs/1808.00370",
+    "year": 2018,
+    "tags": [
+      "Interferometry",
+      "Phase Contrast",
+      "Imaging"
+    ],
+    "authors": [],
+    "journal": "arXiv"
+  },
+  {
+    "title": "Lattice nano-ripples revealed in peptide microcrystals by scanning electron nanodiffraction",
+    "url": "https://arxiv.org/abs/1810.01561",
+    "year": 2018,
+    "tags": [
+      "4DSTEM",
+      "Diffraction",
+      "Biological"
+    ],
+    "authors": [],
+    "journal": "arXiv"
+  },
+  {
+    "title": "Probing Light Atoms at Sub-nanometer Resolution: Realization of Scanning Transmission Electron Microscope Holography",
+    "url": "https://arxiv.org/abs/1808.01016",
+    "year": 2018,
+    "tags": [
+      "Holography",
+      "4DSTEM",
+      "Imaging"
+    ],
+    "authors": [],
+    "journal": "arXiv"
+  },
+  {
+    "title": "A Fast Image Simulation Algorithm for Scanning Transmission Electron Microscopy",
+    "url": "https://arxiv.org/abs/1702.01904",
+    "year": 2017,
+    "tags": [
+      "Simulation",
+      "Software"
+    ],
+    "authors": [],
+    "journal": "arXiv"
+  },
+  {
+    "title": "A Streaming Multi-GPU Implementation of Image Simulation Algorithms for Scanning Transmission Electron Microscopy",
+    "url": "https://arxiv.org/abs/1706.08563",
+    "year": 2017,
+    "tags": [
+      "Simulation",
+      "Software"
+    ],
+    "authors": [],
+    "journal": "arXiv"
+  },
+  {
+    "title": "Continuous 40 GW/cm² laser intensity in a near-concentric optical cavity",
+    "url": "https://arxiv.org/abs/1610.02261",
+    "year": 2016,
+    "tags": [
+      "Interferometry",
+      "Phase Contrast"
+    ],
+    "authors": [],
+    "journal": "arXiv"
+  },
+  {
+    "title": "Correcting nonlinear drift distortion of scanning probe microscopy from image pairs with orthogonal scan directions",
+    "url": "https://arxiv.org/abs/1507.00320",
+    "year": 2015,
+    "tags": [
+      "Image Processing",
+      "Software"
+    ],
+    "authors": [],
+    "journal": "arXiv"
+  },
+  {
+    "title": "Large-Scale Experimental and Theoretical Study of Graphene Grain Boundary Structures",
+    "url": "https://arxiv.org/abs/1508.00497",
+    "year": 2015,
+    "tags": [
+      "2D Materials",
+      "Crystallography",
+      "Simulation",
+      "Strain"
+    ],
+    "authors": [],
+    "journal": "arXiv"
+  },
+  {
+    "title": "Three-dimensional coordinates of individual atoms in materials revealed by electron tomography",
+    "url": "https://arxiv.org/abs/1505.05938",
+    "year": 2015,
+    "tags": [
+      "Tomography",
+      "Nanoparticles",
+      "Crystallography"
+    ],
+    "authors": [],
+    "journal": "arXiv"
+  }
+]

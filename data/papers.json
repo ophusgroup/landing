@@ -246,7 +246,7 @@
   {
     "title": "A large interlaboratory electron diffraction study of monolayer graphene",
     "url": "https://doi.org/10.1088/2053-1583/ae2ca1",
-    "year": 2025,
+    "year": 2026,
     "tags": [
       "2D Materials",
       "Diffraction"
@@ -302,6 +302,28 @@
       "Sarah J Haigh"
     ],
     "journal": "2D Materials"
+  },
+  {
+    "title": "Defect-assisted refinement of nanoscale alpha in titanium alloys",
+    "url": "https://doi.org/10.1038/s43246-026-01096-y",
+    "year": 2026,
+    "tags": [
+      "4DSTEM",
+      "Imaging",
+      "Diffraction",
+      "Strain",
+      "Metals & Alloys",
+      "Crystallography"
+    ],
+    "authors": [
+      "Abigail K. Ackerman",
+      "Benjamin H. Savitzky",
+      "Colin Ophus",
+      "Mohsen Danaie",
+      "Phani Karamched",
+      "David Dye"
+    ],
+    "journal": "Communications Materials"
   },
   {
     "title": "Quantitative structure determination from experimental four-dimensional scanning transmission electron microscopy via the scattering matrix",
