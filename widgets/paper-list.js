@@ -246,7 +246,7 @@ function render({ model, el }) {
       const o = TAG_ORDER[t]; if (o == null) return 3;
       return o < 100 ? 0 : o < 200 ? 1 : 2;
     };
-    const TAG_CAT_LABELS = ["Technique", "Material", "Field"];
+    const TAG_CAT_LABELS = ["", "", ""];
     const MIN_TAG_COUNT = 3;
     const sortedTags = Object.entries(allTags)
       .filter(([, c]) => c >= MIN_TAG_COUNT)
