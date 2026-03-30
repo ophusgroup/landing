@@ -18,6 +18,7 @@ project:
     - file: resource-students.md
     - file: resource-mallard.md
     - file: resource-interactive.md
+    - file: resource-code.md
     - file: facilities.md
   abbreviations:
     4DSTEM: four dimensional scanning transmission electron microscopy
@@ -89,6 +90,8 @@ site:
           url: /resource-mallard
         - title: Interactive
           url: /resource-interactive
+        - title: Code
+          url: /resource-code
         - title: Facilities
           url: /facilities
 
