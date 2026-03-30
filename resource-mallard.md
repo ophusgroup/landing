@@ -1,5 +1,6 @@
 ---
 title: Mallard SOP
+description: Setup and usage guide for Mallard, the COLab GPU compute server.
 ---
 
 Mallard is the group's first GPU server with 4 Nvidia L40s GPUs, a 64-core AMD Epyc CPU, and 512 GB RAM.

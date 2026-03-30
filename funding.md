@@ -1,5 +1,6 @@
 ---
 title: Funding and Awards
+description: Funding sources and awards supporting COLab research.
 ---
 
 We want to thank the funding agencies and generous individuals who have funded our research!

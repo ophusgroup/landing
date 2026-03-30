@@ -1,5 +1,6 @@
 ---
 title: People
+description: Current members and alumni of the Colin Ophus Lab at Stanford University.
 ---
 
 ## Principal Investigator
@@ -216,10 +217,11 @@ title: People
   "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/RibetSteph.jpg",
   "pronouns": "she/her",
   "links": [
+    {"label": "Website", "url": "https://foundry.lbl.gov/about/staff/stephanie-ribet/"},
     {"label": "GitHub", "url": "https://github.com/smribet"},
     {"label": "ORCID", "url": "https://orcid.org/0000-0002-7117-066X"}
   ],
-  "bio": "Steph received her PhD at Northwestern University in the Dravid Group. During her PhD, she was awarded an SCGSR from the US Department of Energy for a research internship at Berkeley Lab. She is currently a postdoc working in Colin's group at Stanford and in Dr Karen Bustillo's group at Berkeley Lab.",
+  "bio": "Steph is a Staff Scientist at the National Center for Electron Microscopy (NCEM) at the Molecular Foundry. She received her PhD in Materials Science & Engineering from Northwestern University, and was previously a postdoc with Colin Ophus and Karen Bustillo. Her research focuses on S/TEM development at the intersection of computational, experimental, and hardware advances, with particular interest in imaging weakly scattering structures using 4D-STEM and electron ptychography.",
   "papers": [
     {"title": "Uncovering the 3D structure of upconverting core-shell nanoparticles with multislice electron ptychography", "url": "https://doi.org/10.1063/5.0206814"}
   ]
@@ -232,12 +234,11 @@ title: People
   "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/VarnavidesGeorge.jpg",
   "pronouns": "he/him",
   "links": [
-    {"label": "Email", "url": "mailto:gvarnavides@berkeley.edu"},
+    {"label": "Website", "url": "https://cbl.curve.space/team"},
     {"label": "GitHub", "url": "https://github.com/gvarnavi"},
-    {"label": "ORCID", "url": "https://orcid.org/0000-0001-8338-3323"},
-    {"label": "Website", "url": "https://gvarnavides.com/about/"}
+    {"label": "ORCID", "url": "https://orcid.org/0000-0001-8338-3323"}
   ],
-  "bio": "Georgios Varnavides is a postdoctoral Miller research fellow at the University of California, Berkeley, where he is developing new computational imaging modalities to observe structure and function in materials with high spatial resolution.",
+  "bio": "Georgios is Assistant Professor of Imaging Physics at Delft University of Technology, where he leads the Curious Beams Lab. He is a lead developer of open-source electron microscopy analysis tools (py4DSTEM and quantEM) and co-editor of Elemental Microscopy.",
   "papers": [
     {"title": "Iterative phase retrieval algorithms for STEM", "url": "https://doi.org/10.48550/arXiv.2309.05250"}
   ]
@@ -249,7 +250,10 @@ title: People
   "name": "Antony Georgiadis",
   "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/GeorgiadisAntony.jpg",
   "pronouns": "he/him",
-  "bio": "Antony is a PhD candidate in Materials Science and Engineering at Stanford University coming from the University of Rochester where he earned a BS and MS in Optics. He is interested in computational imaging applied to materials science, scientific communication, and creating novel devices for environmental sensing."
+  "links": [
+    {"label": "Website", "url": "https://dionne.stanford.edu/members/antony-georgiadis/"}
+  ],
+  "bio": "Antony is a PhD student in Materials Science and Engineering in the Jen Dionne Lab at Stanford. He earned his BS and MS in Optics from the Institute of Optics at the University of Rochester. He is interested in optics and photonics, education, and creating novel sensing devices."
 }
 :::
 
@@ -377,7 +381,10 @@ title: People
   "name": "Philipp Pelz",
   "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/PelzPhilipp.jpg",
   "pronouns": "he/him",
-  "bio": "Philipp Pelz received Bachelor degrees in Physics (2011) and Informatics (2012), and Master degrees in Applied & Engineering Physics, Materials Science & Chemistry (2013). In 2018 he obtained his Ph.D. in Physics from the University of Hamburg & The Max Planck Institute for the Structure and Dynamics of Matter, Germany. Subsequently, he spent three years as a postdoctoral researcher at the University of California, Berkeley and the National Center for Electron Microscopy. Since August 2022 he is Tenure-Track Professor for Computational Materials Microscopy at FAU Erlangen-Nürnberg.",
+  "links": [
+    {"label": "Website", "url": "https://pelzlab.science/people/staff/00_pelz_philipp.html"}
+  ],
+  "bio": "Philipp is W2 Professor (Tenure Track) for Computational Materials Microscopy at Friedrich-Alexander Universität Erlangen-Nürnberg. He received his PhD in Physics from the University of Hamburg and the Max Planck Institute for the Structure and Dynamics of Matter, and was previously a postdoc at UC Berkeley and NCEM. His research focuses on computational imaging, autonomous systems, large-scale inverse problems, and electron and X-ray microscopy.",
   "papers": [
     {"title": "Solving complex nanostructures with ptychographic atomic electron tomography", "url": "https://doi.org/10.1038/s41467-023-43634-z"}
   ]

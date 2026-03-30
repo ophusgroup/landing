@@ -1,5 +1,6 @@
 ---
 title: Teaching
+description: Courses, tutorials, and educational resources from the Colin Ophus Lab.
 ---
 
 ## Stanford Courses
@@ -8,6 +9,10 @@ title: Teaching
 :venue: ophusgroup
 :collection: courses
 :::
+
+### MATSCI 327: Transmission Electron Microscopy Analysis and Simulation
+
+Interpretation, analysis, and simulation of nanoscale and atomic resolution experiments. Topics include incoherent and phase contrast imaging, diffraction-based methods for strain, orientation and phase, spectroscopy for chemical analysis, and 3D reconstruction. Interactive learning through lectures and tutorials. It is recommended that students take MATSCI 321 or MATSCI 324 prior to enrolling in MATSCI 327, but this is not mandatory.
 
 ## 4DSTEM analysis
 

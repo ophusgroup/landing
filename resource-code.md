@@ -1,14 +1,15 @@
 ---
 title: Open Source Code
 short_title: Code
+description: Open-source software packages from COLab for electron microscopy simulation and analysis.
 ---
 
-Our group develops and maintains several open-source software packages for electron microscopy simulation, data analysis, and materials characterization.
+Our group develops or has previously developed several open-source software packages for electron microscopy simulation, data analysis, and materials characterization.
 
 ## quantEM
 
 ::::{div}
-<div style="width: 30%; float: right; margin-left: 1em;"><img src="/images/research/quantem_logo_53.png" alt="quantEM" style="width: 100%;" /></div>
+<div style="width: 60%; float: right; margin-left: 1em;"><img src="/images/research/quantem_logo_53.png" alt="quantEM" style="width: 100%;" /></div>
 
 [quantEM](https://github.com/electronmicroscopy/quantem) is a unified Python toolkit for quantitative electron microscopy analysis. It provides a modular framework for processing, simulating, and analyzing electron microscopy data, with GPU acceleration via CuPy and PyTorch.
 

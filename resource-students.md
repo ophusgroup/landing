@@ -1,5 +1,6 @@
 ---
 title: Resources
+description: Resources and onboarding information for new and prospective COLab members.
 ---
 
 :::{attention}

@@ -1,5 +1,6 @@
 ---
 title: Research Projects
+description: Research in 4DSTEM, atomic electron tomography, STEM probe design, quantum mechanical simulations, and computational materials science.
 ---
 
 :::{any:bundle} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/stem4d-sim.js
@@ -21,7 +22,7 @@ In conventional STEM, a focused electron probe is scanned over the sample while 
 Our group has developed many 4DSTEM methods, including nanobeam orientation and phase mapping, inversion of multiple scattering, ptychographic imaging, and ptychographic atomic electron tomography.
 
 - [(2023) Review of STEM in materials science](doi.org/10.1146/annurev-matsci-080921-092646)
-- [(2021) 4DSTEM of beam-sensitive materials](https://doi.org/10.1021/acs.accounts.1c00073)
+- [(2021) 4DSTEM of beam-sensitive materials](doi.org/10.1021/acs.accounts.1c00073)
 - [(2019) Review of 4DSTEM](doi.org/10.1017/S1431927619000497)
 
 ::::
@@ -37,15 +38,15 @@ Our group has developed many 4DSTEM methods, including nanobeam orientation and 
 
 #### nanobeam crystalline diffraction data
 
-- [diffraction pattern indexing for orientation and phase mapping](https://doi.org/10.1017/S1431927622000101)
-- [strain mapping](http://dx.doi.org/10.1016/j.ultramic.2016.12.021)
+- [diffraction pattern indexing for orientation and phase mapping](doi.org/10.1017/S1431927622000101)
+- [strain mapping](doi.org/10.1016/j.ultramic.2016.12.021)
 - structure classification
 <!-- - ML inversion of multiple scattering -->
 
 #### nanobeam amorphous diffraction data
 
 - pair distribution function (PDF) mapping
-- [fluctuation electron microscopy](https://doi.org/10.1063/5.0015532) (FEM)
+- [fluctuation electron microscopy](doi.org/10.1063/5.0015532) (FEM)
 - strain mapping
 
 #### phase contrast STEM
@@ -53,7 +54,7 @@ Our group has developed many 4DSTEM methods, including nanobeam orientation and 
 - center of mass-differential phase contrast (CoM-DPC)
 - parallax or tilt-corrected bright field imaging
 - ptychography
-- [multislice ptychography](https://doi.org/10.1063/5.0206814)
+- [multislice ptychography](doi.org/10.1063/5.0206814)
 - joint ptychography-tomography
 
 ::::::
@@ -64,12 +65,12 @@ Electrons interact roughly an order of magnitude more strongly with matter than 
 
 We use deep learning to predict single-scattering signals from multiply-scattered diffraction patterns, enabling accurate analysis of much thicker crystalline samples.
 
-[Disentangling multiple scattering with deep learning: application to strain mapping from electron diffraction patterns](@doi.org/10.1038/s41524-022-00939-9)
+[Disentangling multiple scattering with deep learning: application to strain mapping from electron diffraction patterns](doi.org/10.1038/s41524-022-00939-9)
 
 ### ML Characterization of Disordered Materials
 
 ::::{div}
-:::{figure} ./videos/atomic_struct_04_small.mp4
+:::{figure} /videos/atomic_struct_04_small.mp4
 :class: float-right
 :width: 40%
 Disordered nanocrystalline silicon.
@@ -97,7 +98,7 @@ Most STEM experiments use a simple circular aperture to form the electron probe.
 ::::{div}
 <div style="width: 48%; float: right; margin-left: 1em;"><img src="/images/research/phase_plate_01.png" alt="Electrostatic phase plate" style="width: 100%;" /></div>
 
-Unlike light optics, electron microscopy has traditionally been limited to plane wave illumination or simple circular apertures. Our group designs _phase plates_ that sit in the probe-forming aperture to reshape the electron beam. These include passive phase plates for contrast enhancement via our [MIDI-STEM method](https://doi.org/10.1038/ncomms10719), and active electrostatic apertures that can dynamically modify the beam for applications including [aberration correction](https://doi.org/10.1093/micmic/ozad111).
+Unlike light optics, electron microscopy has traditionally been limited to plane wave illumination or simple circular apertures. Our group designs _phase plates_ that sit in the probe-forming aperture to reshape the electron beam. These include passive phase plates for contrast enhancement via our [MIDI-STEM method](doi.org/10.1038/ncomms10719), and active electrostatic apertures that can dynamically modify the beam for applications including [aberration correction](doi.org/10.1093/micmic/ozad111).
 ::::
 
 #### Amplitude Plates
@@ -108,28 +109,33 @@ Unlike light optics, electron microscopy has traditionally been limited to plane
 Bullseye patterned probes stamp identifiable patterns onto diffracted beams, enabling high-precision strain and orientation measurements.
 :::
 
-We also design _amplitude plates_ — patterned membranes inserted into the probe-forming aperture that stamp identifiable "bullseye" patterns onto each diffracted beam. This enables our analysis software to extract orientation and strain with much higher precision than conventional methods. See [patterned probes for high precision 4D-STEM bragg measurements](@doi.org/10.1016/j.ultramic.2019.112890).
+We also design _amplitude plates_ — patterned membranes inserted into the probe-forming aperture that stamp identifiable "bullseye" patterns onto each diffracted beam. This enables our analysis software to extract orientation and strain with much higher precision than conventional methods. See [patterned probes for high precision 4D-STEM bragg measurements](doi.org/10.1016/j.ultramic.2019.112890).
 
 ## Atomic Electron Tomography
 
 ### 4DSTEM Ptychography
 
-<div style="width: 80%; margin: 0 auto;"><img src="./images/research/figure_AET_ZrTe_DWCNT.jpg" alt="ZrTe nanowire encapsulated in double-walled carbon nanotube solved with PAET" style="width: 100%;" /></div>
+:::{figure} /images/research/figure_AET_ZrTe_DWCNT.jpg
+:alt: ZrTe nanowire encapsulated in double-walled carbon nanotube solved with PAET
+:width: 80%
+:align: center
+ZrTe nanowire encapsulated in a double-walled carbon nanotube, solved with PAET.
+:::
 
 Our group pioneered ptychographic atomic electron tomography (PAET), combining ptychographic imaging with AET to significantly enhance precision and sensitivity for 3D atomic structure determination — including light elements that are invisible to conventional methods.
 
-- [(2015) 3D positions of individual atoms in materials revealed by electron tomography](https://dx.doi.org/10.1038/nmat4426)
-- [(2017) Deciphering chemical order/disorder and material properties at the single-atom level](dx.doi.org/10.1038/nature21042)
-- [(2019) Observing crystal nucleation in four dimensions using AET](https://doi.org/10.1038/s41586-019-1317-x)
+- [(2015) 3D positions of individual atoms in materials revealed by electron tomography](doi.org/10.1038/nmat4426)
+- [(2017) Deciphering chemical order/disorder and material properties at the single-atom level](doi.org/10.1038/nature21042)
+- [(2019) Observing crystal nucleation in four dimensions using AET](doi.org/10.1038/s41586-019-1317-x)
 - [(2023) Solving complex nanostructures with PAET](doi.org/10.1038/s41467-023-43634-z)
-- [(2024) Atomic-scale identification of active sites of oxygen reduction nanocatalysts](https://doi.org/10.1038/s41929-024-01175-8)
+- [(2024) Atomic-scale identification of active sites of oxygen reduction nanocatalysts](doi.org/10.1038/s41929-024-01175-8)
 
 ### ADF-STEM
 
 :::{figure} /images/research/AET_FePt_v01.jpg
 :alt: ADF STEM AET tomography of FePt nanoparticle
 :width: 100%
-AET reconstruction of an FePt nanoparticle [Yang et al. (2017)](https://doi.org/10.1038/nature21042).
+AET reconstruction of an FePt nanoparticle [Yang et al. (2017)](doi.org/10.1038/nature21042).
 :::
 
 Atomic electron tomography (AET) maps the 3D positions and species of individual atoms by recording atomic-resolution images from many projection directions and applying tomographic reconstruction. ADF-STEM is particularly useful for AET because it provides approximately linear contrast over a wide thickness range, with contrast that depends on atomic species.
@@ -142,7 +148,16 @@ ADF-STEM provides little contrast for light elements (C, O, Li, H) and requires 
 
 ## Data Analysis for Materials Characterization Science
 
+Our group develops computational tools and algorithms for automated, quantitative analysis of electron microscopy data at scale. Central to this effort is [py4DSTEM](https://github.com/py4dstem/py4DSTEM), our open-source Python toolkit for analyzing 4DSTEM datasets, which enables automated mapping of crystal phase, orientation, strain, and other material properties. We also apply deep learning to materials characterization challenges, including segmentation of atomic-resolution images and graph neural network frameworks for accelerated crystal structure classification from electron diffraction data.
+
+- [(2021) py4DSTEM: a software package for 4DSTEM data analysis](doi.org/10.1017/S1431927621000477)
+- [(2021) Deep learning segmentation of complex features in atomic-resolution phase-contrast TEM images](doi.org/10.1017/S1431927621000167)
+
 ## Atomic Resolution Imaging
+
+Our group develops methods for imaging and analyzing materials at atomic resolution, combining advances in both experiment and computation. We use fused multi-modal electron microscopy to combine elastic and inelastic scattering signals, mapping chemistry at atomic resolution with significantly reduced dose. We also develop image analysis techniques for precisely measuring atomic positions, displacements, and local symmetry from STEM and HRTEM images.
+
+- [(2022) Imaging atomic-scale chemistry from fused multi-modal electron microscopy](doi.org/10.1038/s41524-021-00692-5)
 
 ## Scanning Probe Drift Correction
 
@@ -158,7 +173,7 @@ TEM simulation algorithms are essential tools for experiment design, data analys
 
 The standard **multislice method** solves the Schrödinger equation with a split-step algorithm, alternating transmission (scattering through each slice) and propagation operators. While efficient for single-wavefunction TEM simulations, STEM requires a separate calculation for each probe position — potentially millions per scan.
 
-Colin developed the **PRISM algorithm** to address this, achieving speedups of f² to f⁴ (with interpolation factor f typically 2–10) at negligible accuracy cost. For large scans, this can be orders of magnitude faster, especially for [inelastic scattering](https://doi.org/10.1103/PhysRevResearch.1.033186). Extensions include the [partitioned PRISM algorithm](https://doi.org/10.1017/S1431927621012083) and the related [Lattice Multislice Algorithm](https://arxiv.org/abs/2310.16829). PRISM is implemented in our [Prismatic code](https://doi.org/10.1016/j.micron.2021.103141) and in [abTEM](https://doi.org/10.12688/openreseurope.13015.2).
+Colin developed the **PRISM algorithm** to address this, achieving speedups of f² to f⁴ (with interpolation factor f typically 2–10) at negligible accuracy cost. For large scans, this can be orders of magnitude faster, especially for [inelastic scattering](doi.org/10.1103/PhysRevResearch.1.033186). Extensions include the [partitioned PRISM algorithm](doi.org/10.1017/S1431927621012083) and the related [Lattice Multislice Algorithm](https://arxiv.org/abs/2310.16829). PRISM is implemented in our [Prismatic code](doi.org/10.1016/j.micron.2021.103141) and in [abTEM](doi.org/10.12688/openreseurope.13015.2).
 
 <!-- ### The Prismatic Code -->
 

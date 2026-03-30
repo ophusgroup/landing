@@ -1,5 +1,6 @@
 ---
 title: Interactive Paper/Demo SOP
+description: Standard operating procedure for creating interactive papers and demos on the MyST Markdown platform.
 ---
 
 :::{attention}
