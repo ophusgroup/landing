@@ -4,7 +4,7 @@ short_title: Publications
 ---
 
 ::::{dropdown} Co-Author Network
-:::{any:bundle} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/coauthor-network.js
+:::{anywidget} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/coauthor-network.js
 {
   "data_url": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/data/coauthors.json",
   "accent_color": "#8C1515"
@@ -12,7 +12,7 @@ short_title: Publications
 :::
 ::::
 
-:::{any:bundle} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/paper-list.js
+:::{anywidget} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/paper-list.js
 {
   "data_url": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/data/papers.json",
   "accent_color": "#8C1515",

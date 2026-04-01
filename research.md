@@ -3,7 +3,7 @@ title: Research Projects
 description: Research in 4DSTEM, atomic electron tomography, STEM probe design, quantum mechanical simulations, and computational materials science.
 ---
 
-:::{any:bundle} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/stem4d-sim.js
+:::{anywidget} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/stem4d-sim.js
 {}
 :::
 
@@ -79,7 +79,7 @@ Disordered nanocrystalline silicon.
 Many important materials are highly disordered — functional oxides, silicate glasses, amorphous electrolytes, polymers, and more. We are generalizing our ML inversion methods to work across the full spectrum, from disordered liquids to crystalline materials.
 ::::
 
-:::{any:bundle} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/amorphous-si.js
+:::{anywidget} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/amorphous-si.js
 {}
 :::
 

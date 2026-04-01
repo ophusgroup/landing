@@ -7,7 +7,7 @@ description: Current members and alumni of the Colin Ophus Lab at Stanford Unive
 
 ::::::{grid} 1 2 3 4
 
-:::{any:bundle} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/person-card.js
+:::{anywidget} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/person-card.js
 {
   "name": "Colin Ophus",
   "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/OphusColin.jpg",
@@ -34,7 +34,7 @@ description: Current members and alumni of the Colin Ophus Lab at Stanford Unive
 
 ::::::{grid} 1 2 3 4
 
-:::{any:bundle} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/person-card.js
+:::{anywidget} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/person-card.js
 {
   "name": "Arthur McCray",
   "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/McCrayArthur.jpg",
@@ -51,7 +51,7 @@ description: Current members and alumni of the Colin Ophus Lab at Stanford Unive
 }
 :::
 
-:::{any:bundle} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/person-card.js
+:::{anywidget} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/person-card.js
 {
   "name": "Serin Lee",
   "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/LeeSerin.jpg",
@@ -68,7 +68,7 @@ description: Current members and alumni of the Colin Ophus Lab at Stanford Unive
 }
 :::
 
-:::{any:bundle} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/person-card.js
+:::{anywidget} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/person-card.js
 {
   "name": "Dasol Yoon",
   "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/DasolYoon.jpg",
@@ -81,7 +81,7 @@ description: Current members and alumni of the Colin Ophus Lab at Stanford Unive
 }
 :::
 
-:::{any:bundle} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/person-card.js
+:::{anywidget} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/person-card.js
 {
   "name": "Karen Ehrhardt",
   "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/EhrhardtKaren.jpg",
@@ -100,7 +100,7 @@ description: Current members and alumni of the Colin Ophus Lab at Stanford Unive
 
 ::::::{grid} 1 2 3 4
 
-:::{any:bundle} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/person-card.js
+:::{anywidget} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/person-card.js
 {
   "name": "Cedric Lim",
   "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/LimCedric.jpg",
@@ -112,7 +112,7 @@ description: Current members and alumni of the Colin Ophus Lab at Stanford Unive
 }
 :::
 
-:::{any:bundle} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/person-card.js
+:::{anywidget} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/person-card.js
 {
   "name": "Nicholas Marchese",
   "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/MarcheseNicholas.jpg",
@@ -121,7 +121,7 @@ description: Current members and alumni of the Colin Ophus Lab at Stanford Unive
 }
 :::
 
-:::{any:bundle} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/person-card.js
+:::{anywidget} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/person-card.js
 {
   "name": "Henry Bell",
   "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/BellHenry.jpg",
@@ -130,7 +130,7 @@ description: Current members and alumni of the Colin Ophus Lab at Stanford Unive
 }
 :::
 
-:::{any:bundle} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/person-card.js
+:::{anywidget} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/person-card.js
 {
   "name": "Sangjoon Bob Lee",
   "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/LeeSangjoonBob.jpg",
@@ -144,7 +144,7 @@ description: Current members and alumni of the Colin Ophus Lab at Stanford Unive
 }
 :::
 
-:::{any:bundle} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/person-card.js
+:::{anywidget} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/person-card.js
 {
   "name": "Caitlyn Obrero",
   "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/ObreroCaitlyn.jpg",
@@ -156,7 +156,7 @@ description: Current members and alumni of the Colin Ophus Lab at Stanford Unive
 }
 :::
 
-:::{any:bundle} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/person-card.js
+:::{anywidget} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/person-card.js
 {
   "name": "Will Millsaps",
   "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/MillsapsWill.jpg",
@@ -165,7 +165,7 @@ description: Current members and alumni of the Colin Ophus Lab at Stanford Unive
 }
 :::
 
-:::{any:bundle} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/person-card.js
+:::{anywidget} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/person-card.js
 {
   "name": "Guoliang Hu",
   "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/HuGuoliang.jpg",
@@ -174,7 +174,7 @@ description: Current members and alumni of the Colin Ophus Lab at Stanford Unive
 }
 :::
 
-:::{any:bundle} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/person-card.js
+:::{anywidget} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/person-card.js
 {
   "name": "Corrie Barnes",
   "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/BarnesCorrie.jpg",
@@ -189,7 +189,7 @@ description: Current members and alumni of the Colin Ophus Lab at Stanford Unive
 
 ::::::{grid} 1 2 3 4
 
-:::{any:bundle} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/person-card.js
+:::{anywidget} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/person-card.js
 {
   "name": "Darshan Mali",
   "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/MaliDarshan.jpg",
@@ -211,7 +211,7 @@ description: Current members and alumni of the Colin Ophus Lab at Stanford Unive
 
 ::::::{grid} 1 2 3 4
 
-:::{any:bundle} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/person-card.js
+:::{anywidget} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/person-card.js
 {
   "name": "Stephanie Ribet",
   "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/RibetSteph.jpg",
@@ -228,7 +228,7 @@ description: Current members and alumni of the Colin Ophus Lab at Stanford Unive
 }
 :::
 
-:::{any:bundle} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/person-card.js
+:::{anywidget} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/person-card.js
 {
   "name": "Georgios Varnavides",
   "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/VarnavidesGeorge.jpg",
@@ -245,7 +245,7 @@ description: Current members and alumni of the Colin Ophus Lab at Stanford Unive
 }
 :::
 
-:::{any:bundle} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/person-card.js
+:::{anywidget} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/person-card.js
 {
   "name": "Antony Georgiadis",
   "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/GeorgiadisAntony.jpg",
@@ -263,7 +263,7 @@ description: Current members and alumni of the Colin Ophus Lab at Stanford Unive
 
 ::::::{grid} 1 2 3 4
 
-:::{any:bundle} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/person-card.js
+:::{anywidget} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/person-card.js
 {
   "name": "Annie Hall",
   "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/HallAnnie.jpg",
@@ -275,7 +275,7 @@ description: Current members and alumni of the Colin Ophus Lab at Stanford Unive
 }
 :::
 
-:::{any:bundle} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/person-card.js
+:::{anywidget} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/person-card.js
 {
   "name": "Chris Hall",
   "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/HallChris.jpg",
@@ -293,7 +293,7 @@ description: Current members and alumni of the Colin Ophus Lab at Stanford Unive
 
 ::::::{grid} 1 2 3 4
 
-:::{any:bundle} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/person-card.js
+:::{anywidget} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/person-card.js
 {
   "name": "Yi Cui",
   "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/CuiYi.jpg",
@@ -305,7 +305,7 @@ description: Current members and alumni of the Colin Ophus Lab at Stanford Unive
 }
 :::
 
-:::{any:bundle} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/person-card.js
+:::{anywidget} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/person-card.js
 {
   "name": "Yemi Uthman",
   "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/UthmanYemi.jpg",
@@ -314,7 +314,7 @@ description: Current members and alumni of the Colin Ophus Lab at Stanford Unive
 }
 :::
 
-:::{any:bundle} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/person-card.js
+:::{anywidget} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/person-card.js
 {
   "name": "Peiwen Ren",
   "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/RenPeiwen.jpg",
@@ -331,7 +331,7 @@ description: Current members and alumni of the Colin Ophus Lab at Stanford Unive
 }
 :::
 
-:::{any:bundle} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/person-card.js
+:::{anywidget} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/person-card.js
 {
   "name": "Andrew Ducharme",
   "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/DucharmeAndrew.jpg",
@@ -340,7 +340,7 @@ description: Current members and alumni of the Colin Ophus Lab at Stanford Unive
 }
 :::
 
-:::{any:bundle} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/person-card.js
+:::{anywidget} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/person-card.js
 {
   "name": "Samuel Gleason",
   "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/GleasonSam.jpg",
@@ -352,7 +352,7 @@ description: Current members and alumni of the Colin Ophus Lab at Stanford Unive
 }
 :::
 
-:::{any:bundle} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/person-card.js
+:::{anywidget} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/person-card.js
 {
   "name": "Benjamin Savitzky",
   "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/SavitzkyBen.jpg",
@@ -364,7 +364,7 @@ description: Current members and alumni of the Colin Ophus Lab at Stanford Unive
 }
 :::
 
-:::{any:bundle} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/person-card.js
+:::{anywidget} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/person-card.js
 {
   "name": "Alexander Rakowski",
   "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/RakowskiAlex.jpg",
@@ -376,7 +376,7 @@ description: Current members and alumni of the Colin Ophus Lab at Stanford Unive
 }
 :::
 
-:::{any:bundle} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/person-card.js
+:::{anywidget} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/person-card.js
 {
   "name": "Philipp Pelz",
   "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/PelzPhilipp.jpg",
@@ -391,7 +391,7 @@ description: Current members and alumni of the Colin Ophus Lab at Stanford Unive
 }
 :::
 
-:::{any:bundle} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/person-card.js
+:::{anywidget} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/person-card.js
 {
   "name": "Ellis Kennedy",
   "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/KennedyEllis.jpg",
@@ -403,7 +403,7 @@ description: Current members and alumni of the Colin Ophus Lab at Stanford Unive
 }
 :::
 
-:::{any:bundle} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/person-card.js
+:::{anywidget} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/person-card.js
 {
   "name": "Steven Zeltmann",
   "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/ZeltmannSteven.jpg",
@@ -415,7 +415,7 @@ description: Current members and alumni of the Colin Ophus Lab at Stanford Unive
 }
 :::
 
-:::{any:bundle} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/person-card.js
+:::{anywidget} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/person-card.js
 {
   "name": "Alexandra Bruefach",
   "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/BruefachAlexandra.jpg",
@@ -427,7 +427,7 @@ description: Current members and alumni of the Colin Ophus Lab at Stanford Unive
 }
 :::
 
-:::{any:bundle} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/person-card.js
+:::{anywidget} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/person-card.js
 {
   "name": "Blanka Janicek",
   "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/JanicekBlanka.jpg",
@@ -439,7 +439,7 @@ description: Current members and alumni of the Colin Ophus Lab at Stanford Unive
 }
 :::
 
-:::{any:bundle} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/person-card.js
+:::{anywidget} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/person-card.js
 {
   "name": "Hannah Devyldere",
   "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/DevyldereHannah.jpg",
@@ -448,7 +448,7 @@ description: Current members and alumni of the Colin Ophus Lab at Stanford Unive
 }
 :::
 
-:::{any:bundle} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/person-card.js
+:::{anywidget} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/person-card.js
 {
   "name": "Luis Rangel DaCosta",
   "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/RangelDaCostaLuis.jpg",
@@ -460,7 +460,7 @@ description: Current members and alumni of the Colin Ophus Lab at Stanford Unive
 }
 :::
 
-:::{any:bundle} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/person-card.js
+:::{anywidget} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/person-card.js
 {
   "name": "Thomas Pekin",
   "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/PekinThomas.jpg",
@@ -475,7 +475,7 @@ description: Current members and alumni of the Colin Ophus Lab at Stanford Unive
 }
 :::
 
-:::{any:bundle} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/person-card.js
+:::{anywidget} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/person-card.js
 {
   "name": "Rohini Sankaran",
   "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/SankaranRohini.jpg",
@@ -486,7 +486,7 @@ description: Current members and alumni of the Colin Ophus Lab at Stanford Unive
 }
 :::
 
-:::{any:bundle} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/person-card.js
+:::{anywidget} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/person-card.js
 {
   "name": "Hao Yang",
   "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/YangHao.jpg",
