@@ -101,7 +101,7 @@ description: Current members and alumni of the Colin Ophus Lab at Stanford Unive
   "links": [
     {"label": "Email", "url": "mailto:ldpalmer@stanford.edu"},
     {"label": "ORCID", "url": "https://orcid.org/0000-0002-7228-4263"},
-    {"label": "Scholar", "url": "https://scholar.google.com/citations?user=s-yHlNMAAAAJ&hl=en"}
+    {"label": "Scholar", "url": "https://scholar.google.com/citations?hl=en&user=s-yHlNMAAAAJ&view_op=list_works&sortby=pubdate"}
   ],
   "bio": "Levi earned his PhD in Chemistry at Caltech, where he was advised by Professor Scott Cushing as an NSF Graduate Research Fellow, and he also held a DOE SCGSR Fellowship to conduct research at Argonne National Laboratory with Dr. Thomas Gage. He is now an Arnold O. Beckman Postdoctoral Fellow and GLAM Postdoctoral Fellow developing in/ex situ microscopy methods for imaging the growth, performance, and failure of hybrid materials at atomic scales."
 }
