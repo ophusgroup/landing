@@ -94,6 +94,14 @@ description: Current members and alumni of the Colin Ophus Lab at Stanford Unive
 }
 :::
 
+:::{anywidget} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/person-card.js
+{
+  "name": "Levi Palmer",
+  "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/PalmerLevi.png",
+  "bio": "Arnold O. Beckman Postdoctoral Fellow, working in the groups of Colin Ophus, Stacey Bent, and Kate Reidy.\n\nLevi earned a B.S. in Chemistry from the University of Minnesota – Twin Cities in 2020 studying under Prof. Renee Frontiera. He develops optically coupled electron microscopy to study photocatalysts at nanometer length scales while under illumination. Outside the lab, he enjoys baking desserts, weight lifting, and playing with his two kittens."
+}
+:::
+
 ::::::
 
 ## PhD Students
