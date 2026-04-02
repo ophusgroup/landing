@@ -98,7 +98,12 @@ description: Current members and alumni of the Colin Ophus Lab at Stanford Unive
 {
   "name": "Levi Palmer",
   "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/PalmerLevi.png",
-  "bio": "Arnold O. Beckman Postdoctoral Fellow, working in the groups of Colin Ophus, Stacey Bent, and Kate Reidy.\n\nLevi earned a B.S. in Chemistry from the University of Minnesota – Twin Cities in 2020 studying under Prof. Renee Frontiera. He develops optically coupled electron microscopy to study photocatalysts at nanometer length scales while under illumination. Outside the lab, he enjoys baking desserts, weight lifting, and playing with his two kittens."
+  "links": [
+    {"label": "Email", "url": "mailto:ldpalmer@stanford.edu"},
+    {"label": "ORCID", "url": "https://orcid.org/0000-0002-7228-4263"},
+    {"label": "Scholar", "url": "https://scholar.google.com/citations?user=s-yHlNMAAAAJ&hl=en"}
+  ],
+  "bio": "Levi earned his PhD in Chemistry at Caltech, where he was advised by Professor Scott Cushing as an NSF Graduate Research Fellow, and he also held a DOE SCGSR Fellowship to conduct research at Argonne National Laboratory with Dr. Thomas Gage. He is now an Arnold O. Beckman Postdoctoral Fellow and GLAM Postdoctoral Fellow developing in/ex situ microscopy methods for imaging the growth, performance, and failure of hybrid materials at atomic scales."
 }
 :::
 
