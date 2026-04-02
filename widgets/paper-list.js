@@ -1,4 +1,4 @@
-// paper-list.js — ESM module for searchable/filterable publication list (MyST any:bundle)
+// paper-list.js — ESM module for searchable/filterable publication list (MyST anywidget)
 
 function render({ model, el }) {
   const dataUrl = model.get("data_url") || "";

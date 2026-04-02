@@ -1,4 +1,4 @@
-// person-card.js — ESM module for interactive person cards (MyST any:bundle)
+// person-card.js — ESM module for interactive person cards (MyST anywidget)
 // Hover on desktop, tap on mobile to show info popup below name
 
 function render({ model, el }) {
