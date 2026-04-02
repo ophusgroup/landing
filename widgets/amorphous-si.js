@@ -563,11 +563,11 @@ function renderDPToCanvas(ctx, w, h, dp, fftSize, gamma, maxI) {
 // ============================================================
 function render({ model, el }) {
   const id = 'asi_' + Math.random().toString(36).slice(2, 8);
-  const sphereRadius = model?.get?.('sphere_radius') ?? 50;
+  const sphereRadius = model?.get?.('sphere_radius') ?? 32;
   const latticeConst = model?.get?.('lattice_constant') ?? 5.43;
-  const numRawSteps = 150, totalOps = 2400;
+  const numRawSteps = 80, totalOps = 1200;
   const maxRotR = 10, minRotR = 4, rBond = 2.8;
-  const fftSize = 256, pixelSize = 0.5, seed = 42, lambda = 0.0197;
+  const fftSize = 128, pixelSize = 0.5, seed = 42, lambda = 0.0197;
 
   el.innerHTML = `
     <style>
@@ -609,7 +609,7 @@ function render({ model, el }) {
       </div>
     </div>`;
 
-  setTimeout(() => {
+  setTimeout(async () => {
     const $ = s => document.getElementById(`${id}-${s}`);
     const loadEl = $('loading'), mainEl = $('main');
     const b3C = $('body3'), grC = $('gr'), scC = $('scene'), dpC = $('dp');
@@ -617,18 +617,51 @@ function render({ model, el }) {
     const gSlid = $('gamma'), gVal = $('gv'), dmSlid = $('dpmax'), dmVal = $('dmv'), rBtn = $('rb');
     const b3Ctx = b3C.getContext('2d'), grCtx = grC.getContext('2d'), scCtx = scC.getContext('2d'), dpCtx = dpC.getContext('2d');
 
+    // Helper to yield to browser between heavy steps
+    const yieldFrame = () => new Promise(r => setTimeout(r, 0));
+
     const crystal = generateCrystalSphere(sphereRadius, latticeConst);
     const nAtoms = crystal.length;
+    if (loadEl) loadEl.textContent = `Generating ${nAtoms} atoms (${numRawSteps} disorder steps)…`;
+    await yieldFrame();
+
     const rng = makeRng(seed);
     const ops = generateDisorderOps(rng, totalOps, sphereRadius, maxRotR, minRotR);
-    const minDist = 1.5; // minimum physical spacing in Angstroms
-    const states = precomputeStates(crystal, ops, numRawSteps, minDist);
+    const minDist = 1.5;
 
-    // Calibrate: crystalline fraction at sampled states → remap for linear slider
+    // Async precompute: yield every 10 steps
+    const states = new Array(numRawSteps + 1);
+    states[0] = new Float32Array(nAtoms * 3);
+    for (let i = 0; i < nAtoms; i++) { states[0][i * 3] = crystal[i][0]; states[0][i * 3 + 1] = crystal[i][1]; states[0][i * 3 + 2] = crystal[i][2]; }
+    const opsPS = ops.length / numRawSteps;
+    for (let step = 1; step <= numRawSteps; step++) {
+      states[step] = new Float32Array(states[step - 1]);
+      const a = states[step], s0 = Math.floor((step - 1) * opsPS), s1 = Math.floor(step * opsPS);
+      for (let oi = s0; oi < s1; oi++) {
+        const op = ops[oi];
+        for (let i = 0; i < nAtoms; i++) {
+          const dx = a[i * 3] - op.cx, dy = a[i * 3 + 1] - op.cy, dz = a[i * 3 + 2] - op.cz;
+          if (dx * dx + dy * dy + dz * dz <= op.r2) {
+            const [rx, ry, rz] = rotatePoint(dx, dy, dz, op.ax, op.ay, op.az, op.angle);
+            a[i * 3] = op.cx + rx; a[i * 3 + 1] = op.cy + ry; a[i * 3 + 2] = op.cz + rz;
+          }
+        }
+      }
+      relaxMinDist(a, nAtoms, minDist, 2);
+      if (step % 10 === 0) {
+        if (loadEl) loadEl.textContent = `Generating structures… ${Math.round(step / numRawSteps * 100)}%`;
+        await yieldFrame();
+      }
+    }
+
+    if (loadEl) loadEl.textContent = 'Calibrating disorder levels…';
+    await yieldFrame();
+
+    // Calibrate crystalline fraction
     const nc0 = countCrystalline(states[0], nAtoms, rBond);
-    const sI = 6; // sample interval
+    const sI = 10;
     const cF = new Float64Array(numRawSteps + 1);
-    for (let s = 0; s <= numRawSteps; s += sI) cF[s] = countCrystalline(states[s], nAtoms, rBond) / nc0;
+    for (let s = 0; s <= numRawSteps; s += sI) { cF[s] = countCrystalline(states[s], nAtoms, rBond) / nc0; }
     cF[numRawSteps] = countCrystalline(states[numRawSteps], nAtoms, rBond) / nc0;
     for (let s = 0; s <= numRawSteps; s++) if (s % sI !== 0 && s !== numRawSteps) {
       const lo = Math.floor(s / sI) * sI, hi = Math.min(lo + sI, numRawSteps);
@@ -641,8 +674,6 @@ function render({ model, el }) {
       remap[p] = best; remapPct[p] = Math.round(cF[best] * 100);
     }
 
-    // Compute vacuum center beam intensity for DP normalization
-    // This is |FFT(probe)|^2 at DC — the probe with no sample
     function vacuumPeakIntensity(semiVal) {
       const aRe = new Float64Array(fftSize * fftSize), aIm = new Float64Array(fftSize * fftSize);
       const half = fftSize / 2, sR = semiVal * 0.001;
