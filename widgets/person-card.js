@@ -189,8 +189,11 @@ function render({ model, el }) {
     popup.classList.toggle("show");
     if (popup.classList.contains("show")) positionPopup();
   });
-  document.addEventListener("click", (e) => {
-    if (!card.contains(e.target)) hidePopup();
+  // Use composedPath so clicks inside the shadow root (retargeted to the host
+  // at the document level) are still recognised as "inside the card".
+  el.ownerDocument.addEventListener("click", (e) => {
+    const path = e.composedPath ? e.composedPath() : [];
+    if (!path.includes(card)) hidePopup();
   });
 
   el.appendChild(card);

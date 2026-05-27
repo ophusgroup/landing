@@ -610,7 +610,7 @@ function render({ model, el }) {
     </div>`;
 
   setTimeout(async () => {
-    const $ = s => document.getElementById(`${id}-${s}`);
+    const $ = s => el.querySelector(`#${id}-${s}`);
     const loadEl = $('loading'), mainEl = $('main');
     const b3C = $('body3'), grC = $('gr'), scC = $('scene'), dpC = $('dp');
     const dSlid = $('disorder'), dVal = $('dv'), sSlid = $('semi'), sVal = $('sv');

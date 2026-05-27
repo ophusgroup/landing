@@ -548,7 +548,7 @@ function render({ model, el }) {
     .${id}-bottom-hint { font-size: 11px; color: #555; text-align: center; margin-top: 4px; }
     .${id}-controls { display: flex; flex-direction: row; flex-wrap: wrap; gap: 10px 20px; align-items: flex-end; padding: 8px 4px; }
     .${id}-canvas-wrap { min-width: 0; }
-    .${id}-canvas { width: 100%; display: block; border-radius: 4px; cursor: crosshair; }
+    .${id}-canvas { width: 100%; display: block; border-radius: 4px; cursor: crosshair; touch-action: none; }
     .${id}-slider-group { flex: 1; min-width: 160px; }
     .${id}-slider-group label { display: block; font-size: 14px; color: #aaa; margin-bottom: 3px; }
     .${id}-slider-group input[type=range] { width: 100%; accent-color: #00cc66; }
@@ -672,12 +672,16 @@ function render({ model, el }) {
       }
     }
 
-    canvas.addEventListener("mousedown", (e) => { isDragging = true; if(scanning)stopScan(); onPointerMove(e.clientX, e.clientY); });
-    document.addEventListener("mousemove", (e) => { if(isDragging) onPointerMove(e.clientX, e.clientY); });
-    document.addEventListener("mouseup", () => { isDragging = false; });
-    canvas.addEventListener("touchstart", (e) => { isDragging=true; if(scanning)stopScan(); onPointerMove(e.touches[0].clientX,e.touches[0].clientY); e.preventDefault(); }, {passive:false});
-    canvas.addEventListener("touchmove", (e) => { if(isDragging){onPointerMove(e.touches[0].clientX,e.touches[0].clientY);e.preventDefault();} }, {passive:false});
-    canvas.addEventListener("touchend", () => { isDragging = false; });
+    // Pointer events (Shadow DOM-safe: pointer capture replaces document-level mousemove/mouseup)
+    canvas.addEventListener("pointerdown", (e) => {
+      isDragging = true;
+      canvas.setPointerCapture(e.pointerId);
+      if(scanning) stopScan();
+      onPointerMove(e.clientX, e.clientY);
+    });
+    canvas.addEventListener("pointermove", (e) => { if(isDragging) onPointerMove(e.clientX, e.clientY); });
+    canvas.addEventListener("pointerup", () => { isDragging = false; });
+    canvas.addEventListener("pointercancel", () => { isDragging = false; });
 
     // Sliders
     qmaxSlider.addEventListener("input", () => {
