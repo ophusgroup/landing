@@ -1,5 +1,77 @@
 [
   {
+    "title": "Seed-Mediated Colloidal Synthesis of Multimetallic and High-Entropy Alloy Nanocrystal Libraries with Enhanced Catalytic Performance",
+    "url": "https://doi.org/10.1021/jacs.5c21040",
+    "year": 2026,
+    "tags": [
+      "Nanoparticles",
+      "Catalysis",
+      "High Entropy Materials",
+      "Crystallography"
+    ],
+    "authors": [
+      "Jinwon Oh",
+      "Shuang Han",
+      "Evan J. Gardner",
+      "Rohan Parekh",
+      "Audrey Dannar",
+      "Pin-Hung Chung",
+      "Kaifeng Zheng",
+      "Anna Mian",
+      "Karen C. Bustillo",
+      "Christian Reece",
+      "Anatoly I. Frenkel",
+      "Colin Ophus",
+      "Carlos Lizandara-Pueyo",
+      "Sandip De",
+      "Matteo Cargnello"
+    ],
+    "journal": "Journal of the American Chemical Society"
+  },
+  {
+    "title": "Beyond Contrast Transfer: Spectral SNR as a Finite-Dose Metric for STEM Phase Retrieval",
+    "url": "https://doi.org/10.1093/mam/ozag005",
+    "year": 2026,
+    "tags": [
+      "4DSTEM",
+      "Imaging",
+      "Ptychography",
+      "Phase Contrast",
+      "Simulation"
+    ],
+    "authors": [
+      "Georgios Varnavides",
+      "Julie Marie Bekkevold",
+      "Stephanie M. Ribet",
+      "Arthur RC McCray",
+      "Mary C. Scott",
+      "Lewys Jones",
+      "Colin Ophus"
+    ],
+    "journal": "Microscopy and Microanalysis"
+  },
+  {
+    "title": "Relaxing direct ptychography sampling requirements via parallax imaging insights",
+    "url": "https://doi.org/10.1093/mam/ozaf139",
+    "year": 2026,
+    "tags": [
+      "4DSTEM",
+      "Imaging",
+      "Ptychography",
+      "Phase Contrast",
+      "Simulation"
+    ],
+    "authors": [
+      "Georgios Varnavides",
+      "Julie Marie Bekkevold",
+      "Stephanie M. Ribet",
+      "Mary C. Scott",
+      "Lewys Jones",
+      "Colin Ophus"
+    ],
+    "journal": "Microscopy and Microanalysis"
+  },
+  {
     "title": "Identifying Strain Stacking Boundaries between Multiphase Domains in Atomically Thin Two-Dimensional Magnets",
     "url": "https://doi.org/10.1021/acsnano.5c14666",
     "year": 2026,
@@ -193,6 +265,29 @@
       "Iman Ghamarian"
     ],
     "journal": "npj Computational Materials"
+  },
+  {
+    "title": "Multislice-based nonlinear phase retrieval for high-resolution cryo-electron tomography",
+    "url": "https://doi.org/10.1117/12.3080120",
+    "year": 2026,
+    "tags": [
+      "Biological",
+      "Cryo-EM",
+      "Phase Contrast",
+      "Ptychography",
+      "Tomography"
+    ],
+    "authors": [
+      "Juhyeok Lee",
+      "Samuel W. Song",
+      "Min Gee Cho",
+      "Georgios Varnavides",
+      "Stephanie M. Ribet",
+      "Colin Ophus",
+      "Mary C. Scott",
+      "Michael L. Whittaker"
+    ],
+    "journal": "Quantitative Phase Imaging XII"
   },
   {
     "title": "PhaseT3M: 3D imaging at 1.6 Å resolution via electron cryo-tomography with nonlinear phase retrieval",

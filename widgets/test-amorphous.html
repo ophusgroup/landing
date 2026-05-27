@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amorphous Si Widget Test</title>
+  <style>body { margin: 0; padding: 20px; background: #1a1a1a; }</style>
+</head>
+<body>
+  <div id="root" style="max-width: 1000px; margin: 0 auto;"></div>
+  <script type="module">
+    import widget from './amorphous-si.js';
+    const model = { get: (k) => ({ sphere_radius: 32, lattice_constant: 5.43 })[k] };
+    widget.render({ model, el: document.getElementById('root') });
+  </script>
+</body>
+</html>

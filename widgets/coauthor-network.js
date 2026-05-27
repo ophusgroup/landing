@@ -9,7 +9,7 @@ function render({ model, el }) {
   const style = document.createElement("style");
   style.textContent = `
     .${id}-wrap { background: #0a0a0f; border-radius: 8px; overflow: hidden; position: relative; }
-    .${id}-canvas { width: 100%; display: block; cursor: grab; }
+    .${id}-canvas { width: 100%; display: block; cursor: grab; touch-action: none; }
     .${id}-canvas:active { cursor: grabbing; }
     .${id}-info {
       position: absolute; bottom: 12px; left: 12px;
@@ -378,10 +378,10 @@ function render({ model, el }) {
       return closest;
     }
 
-    // Mouse events
+    // Pointer events (Shadow DOM-safe: pointer capture replaces document-level mouseup)
     let isDragging = false, dragDist = 0, lastMx, lastMy;
 
-    canvas.addEventListener("mousemove", (e) => {
+    canvas.addEventListener("pointermove", (e) => {
       const rect = canvas.getBoundingClientRect();
       const mx = e.clientX - rect.left, my = e.clientY - rect.top;
 
@@ -407,12 +407,14 @@ function render({ model, el }) {
       }
     });
 
-    canvas.addEventListener("mousedown", (e) => {
+    canvas.addEventListener("pointerdown", (e) => {
       const rect = canvas.getBoundingClientRect();
       lastMx = e.clientX - rect.left; lastMy = e.clientY - rect.top;
       isDragging = true; dragDist = 0;
+      canvas.setPointerCapture(e.pointerId);
     });
-    document.addEventListener("mouseup", () => { isDragging = false; });
+    canvas.addEventListener("pointerup", () => { isDragging = false; });
+    canvas.addEventListener("pointercancel", () => { isDragging = false; });
 
     canvas.addEventListener("click", (e) => {
       if (dragDist > 5) return; // was a drag, not a click
@@ -427,46 +429,6 @@ function render({ model, el }) {
         targetZoom = zoomToFitNetwork(hit);
         resetBtn.style.display = "block";
         simAlpha = Math.max(simAlpha, 0.4); // re-energize to reorganize around new center
-      }
-    });
-
-    // Touch events
-    let touchStartX, touchStartY;
-    canvas.addEventListener("touchstart", (e) => {
-      const t = e.touches[0];
-      const rect = canvas.getBoundingClientRect();
-      lastMx = t.clientX - rect.left; lastMy = t.clientY - rect.top;
-      touchStartX = lastMx; touchStartY = lastMy;
-      isDragging = true; dragDist = 0;
-      e.preventDefault();
-    }, { passive: false });
-    canvas.addEventListener("touchmove", (e) => {
-      if (!isDragging) return;
-      const t = e.touches[0];
-      const rect = canvas.getBoundingClientRect();
-      const mx = t.clientX - rect.left, my = t.clientY - rect.top;
-      targetCamX -= (mx - lastMx) / camZoom;
-      targetCamY -= (my - lastMy) / camZoom;
-      dragDist += Math.abs(mx - lastMx) + Math.abs(my - lastMy);
-      lastMx = mx; lastMy = my;
-      e.preventDefault();
-    }, { passive: false });
-    canvas.addEventListener("touchend", (e) => {
-      isDragging = false;
-      if (dragDist < 15) {
-        const t = e.changedTouches[0];
-        const rect = canvas.getBoundingClientRect();
-        const mx = t.clientX - rect.left, my = t.clientY - rect.top;
-        const hit = hitTest(mx, my);
-        if (hit >= 0) {
-          focusNode = hit;
-          orbitCenter = hit;
-          targetCamX = nodes[hit].x;
-          targetCamY = nodes[hit].y;
-          targetZoom = zoomToFitNetwork(hit);
-          resetBtn.style.display = "block";
-          simAlpha = Math.max(simAlpha, 0.4);
-        }
       }
     });
 

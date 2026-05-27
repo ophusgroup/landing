@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Co-author Network Test</title>
+  <style>
+    body { margin: 0; padding: 20px; background: #111; display: flex; justify-content: center; }
+    #root { width: 100%; max-width: 800px; }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+  <script type="module">
+    import widget from './coauthor-network.js';
+    const params = {
+      data_url: '../data/coauthors.json',
+      accent_color: '#8C1515',
+    };
+    const model = { get(key) { return params[key]; } };
+    widget.render({ model, el: document.getElementById('root') });
+  </script>
+</body>
+</html>
