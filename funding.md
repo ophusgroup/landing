@@ -3,9 +3,25 @@ title: Funding and Awards
 description: Funding sources and awards supporting COLab research.
 ---
 
-We want to thank the funding agencies and generous individuals who have funded our research!
+Thank you to the funding agencies and generous individuals who have funded our research!
 
 +++ {"class": "col-"}
+
+
+
+## L&S Family 
+
+Colin is the L&S Family Center Fellow in Energy and Sustainability in the Precourt Institute for Energy, thanks to a generous gift from the L&S Family. This donation supports research into the microscopy of disordered materials. As an example, we have created methods for generating materials with different degrees of order:
+
+:::{anywidget} widgets/silicon-order.js
+
+{}
+:::
+
+**Degrees of atomic order in silicon.** These structures span from a continuous random network (amorphous) through medium range order (MRO) to randomly orientated crystalline grains (nanocrystalline). Tetrahedra show silicon atoms in their stable four-fold coordinated environment. See [tricor](https://tricor.readthedocs.io) for more information.
+
+
+
 
 ## Department of Energy
 
@@ -56,6 +72,4 @@ We want to thank the funding agencies and generous individuals who have funded o
 ::::
 :::::
 
-## Donations
 
-- Coming soon!

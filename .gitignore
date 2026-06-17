@@ -6,3 +6,5 @@ images/.DS_Store
 
 # Node modules
 node_modules/
+
+.claude/

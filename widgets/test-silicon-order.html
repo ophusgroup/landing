@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Silicon Order Widget Test</title>
+  <style>
+    body { margin: 0; padding: 24px; background: #ffffff; transition: background 0.2s;
+      font-family: ui-sans-serif, system-ui, -apple-system, sans-serif; }
+    #bar { max-width: 920px; margin: 0 auto 16px; display: flex; gap: 8px; align-items: center; }
+    #bar button { padding: 5px 12px; border: 1px solid #888; border-radius: 6px; cursor: pointer;
+      background: #eee; font-size: 13px; }
+    #root { max-width: 920px; margin: 0 auto; }
+  </style>
+</head>
+<body>
+  <div id="bar">
+    <button id="light">Light mode</button>
+    <button id="dark">Dark mode</button>
+  </div>
+  <div id="root"></div>
+  <script type="module">
+    import widget from './silicon-order.js';
+    const model = { get: () => undefined }; // use widget defaults
+    widget.render({ model, el: document.getElementById('root') });
+
+    // Toggle the page theme the same way the curvenote book-theme does:
+    // an attribute on <html> plus a body background. The widget's
+    // MutationObserver(documentElement) + body-luminance check react to it.
+    function setTheme(dark) {
+      document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light');
+      document.body.style.background = dark ? '#0b0d10' : '#ffffff';
+    }
+    document.getElementById('light').onclick = () => setTheme(false);
+    document.getElementById('dark').onclick = () => setTheme(true);
+    setTheme(false);
+  </script>
+</body>
+</html>

@@ -10,8 +10,33 @@ function render({ model, el }) {
   const links = model.get("links") || [];
   const papers = model.get("papers") || [];
   const popupWidth = model.get("popup_width") || 420;
+  // Optional per-card styling (defaults below = plain square, full color):
+  //   "frame": "hexagon" → pointy-top hexagon crop with a slow "breathing" clip boundary
+  //   "grayscale": true  → grayscale at rest, fades to full color on hover
+  const frame = model.get("frame") || "square";
+  const grayscale = model.get("grayscale") || false;
 
   const id = "pc-" + Math.random().toString(36).slice(2, 8);
+  const breatheDelay = "-" + (Math.random() * 5).toFixed(2);
+
+  const imgShapeCss = frame === "hexagon"
+    ? `aspect-ratio: 0.8660; object-fit: cover;
+       clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+       animation: ${id}-breathe 5s ease-in-out infinite;
+       animation-delay: ${breatheDelay}s; will-change: clip-path;`
+    : `border-radius: 4px;`;
+  const grayscaleCss = grayscale
+    ? `filter: grayscale(100%); transition: filter 0.4s ease;`
+    : ``;
+  const optionCss = `
+    ${grayscale ? `.${id}-wrap:hover img { filter: grayscale(0%); }` : ``}
+    ${frame === "hexagon" ? `
+    @keyframes ${id}-breathe {
+      0%, 100% { clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); }
+      50%      { clip-path: polygon(50% 3%, 97% 26.5%, 97% 73.5%, 50% 97%, 3% 73.5%, 3% 26.5%); }
+    }
+    @media (prefers-reduced-motion: reduce) { .${id}-wrap img { animation: none; } }` : ``}
+  `;
 
   const style = document.createElement("style");
   style.textContent = `
@@ -24,8 +49,9 @@ function render({ model, el }) {
     }
     .${id}-wrap img {
       width: 100%;
-      border-radius: 4px;
       display: block;
+      ${grayscaleCss}
+      ${imgShapeCss}
     }
     .${id}-name {
       font-weight: 700;
@@ -108,6 +134,7 @@ function render({ model, el }) {
     .${id}-dark .${id}-bio { color: #d1d5db; }
     .${id}-dark .${id}-papers { border-top-color: #4b5563; }
     .${id}-dark .${id}-papers a { color: #E8A0A0; }
+    ${optionCss}
   `;
   el.appendChild(style);
 
