@@ -8,35 +8,35 @@ function render({ model, el }) {
 
   const style = document.createElement("style");
   style.textContent = `
-    .${id}-wrap { background: #0a0a0f; border-radius: 8px; overflow: hidden; position: relative; }
+    .${id}-wrap { background: var(--${id}-bg, #0a0a0f); border-radius: 8px; overflow: hidden; position: relative; border: 1px solid var(--${id}-ovborder, #222); }
     .${id}-canvas { width: 100%; display: block; cursor: grab; touch-action: none; }
     .${id}-canvas:active { cursor: grabbing; }
     .${id}-info {
       position: absolute; bottom: 12px; left: 12px;
-      background: rgba(0,0,0,0.75); color: #ccc; padding: 8px 12px;
+      background: var(--${id}-ovbg, rgba(0,0,0,0.75)); color: var(--${id}-ovfg, #ccc); padding: 8px 12px;
       border-radius: 6px; font: 12px -apple-system, sans-serif;
       pointer-events: none; opacity: 0; transition: opacity 0.2s;
     }
     .${id}-info.show { opacity: 1; }
     .${id}-hint {
       position: absolute; top: 8px; right: 12px;
-      color: #555; font: 11px -apple-system, sans-serif;
+      color: var(--${id}-dim, #555); font: 11px -apple-system, sans-serif;
     }
     .${id}-reset {
       position: absolute; top: 8px; left: 12px;
-      background: rgba(255,255,255,0.08); color: #888; border: 1px solid #333;
+      background: var(--${id}-btnbg, rgba(255,255,255,0.08)); color: var(--${id}-dim, #888); border: 1px solid var(--${id}-ovborder, #333);
       padding: 4px 10px; border-radius: 4px; font: 11px -apple-system, sans-serif;
       cursor: pointer;
     }
-    .${id}-reset:hover { background: rgba(255,255,255,0.15); color: #ccc; }
+    .${id}-reset:hover { background: var(--${id}-btnbghover, rgba(255,255,255,0.15)); color: var(--${id}-ovfg, #ccc); }
     .${id}-search {
       position: absolute; top: 8px; left: 50%; transform: translateX(-50%);
-      background: rgba(0,0,0,0.6); color: #ccc; border: 1px solid #444;
+      background: var(--${id}-ovbg, rgba(0,0,0,0.6)); color: var(--${id}-ovfg, #ccc); border: 1px solid var(--${id}-ovborder, #444);
       padding: 4px 10px; border-radius: 4px; font: 12px -apple-system, sans-serif;
       width: 180px; outline: none;
     }
-    .${id}-search:focus { border-color: #666; background: rgba(0,0,0,0.8); }
-    .${id}-search::placeholder { color: #666; }
+    .${id}-search:focus { border-color: var(--${id}-ovborder, #666); background: var(--${id}-ovbg, rgba(0,0,0,0.8)); }
+    .${id}-search::placeholder { color: var(--${id}-dim, #666); }
   `;
   el.appendChild(style);
 
@@ -56,6 +56,35 @@ function render({ model, el }) {
   const resetBtn = wrap.querySelector(`#${id}-reset`);
   const searchInput = wrap.querySelector(`#${id}-search`);
   const ctx = canvas.getContext("2d");
+
+  // ---- Light/dark theming: chrome via CSS vars + canvas gradient/label colors. ----
+  const cnPalettes = {
+    dark:  { bg: "#0a0a0f", ovbg: "rgba(0,0,0,0.7)", ovfg: "#ccc", ovborder: "#444", btnbg: "rgba(255,255,255,0.08)", btnbghover: "rgba(255,255,255,0.15)", dim: "#888" },
+    light: { bg: "#eef0ec", ovbg: "rgba(255,255,255,0.88)", ovfg: "#222", ovborder: "#cfd2cc", btnbg: "rgba(0,0,0,0.05)", btnbghover: "rgba(0,0,0,0.10)", dim: "#777" },
+  };
+  const cnCanvasColors = {
+    dark:  { gradTop: "#0f0f1a", gradBottom: "#060608", label: "#ffffff" },
+    light: { gradTop: "#fbfcfa", gradBottom: "#e8eae6", label: "#1f1f1f" },
+  };
+  let cnCanvas = cnCanvasColors.dark;
+  function cnDetectDark() {
+    try {
+      const m = getComputedStyle(document.body).backgroundColor.match(/\d+/g);
+      if (m && m.length >= 3) return (0.299 * +m[0] + 0.587 * +m[1] + 0.114 * +m[2]) / 255 < 0.5;
+    } catch (e) {}
+    return window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+  }
+  function cnApplyTheme() {
+    const dark = cnDetectDark();
+    const p = cnPalettes[dark ? "dark" : "light"];
+    for (const k in p) wrap.style.setProperty(`--${id}-${k}`, p[k]);
+    cnCanvas = cnCanvasColors[dark ? "dark" : "light"];
+  }
+  cnApplyTheme();
+  new MutationObserver(cnApplyTheme).observe(document.documentElement, { attributes: true });
+  if (window.matchMedia) window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", cnApplyTheme);
+  let cnLastDark = cnDetectDark();
+  setInterval(() => { const d = cnDetectDark(); if (d !== cnLastDark) { cnLastDark = d; cnApplyTheme(); } }, 700);
 
   function resize() {
     const w = wrap.clientWidth;
@@ -268,8 +297,8 @@ function render({ model, el }) {
       ctx.clearRect(0, 0, W, H);
 
       const grad = ctx.createRadialGradient(W/2, H/2, 0, W/2, H/2, W * 0.7);
-      grad.addColorStop(0, "#0f0f1a");
-      grad.addColorStop(1, "#060608");
+      grad.addColorStop(0, cnCanvas.gradTop);
+      grad.addColorStop(1, cnCanvas.gradBottom);
       ctx.fillStyle = grad;
       ctx.fillRect(0, 0, W, H);
 
@@ -354,7 +383,7 @@ function render({ model, el }) {
           const bold = isHovered || isCentered;
           ctx.font = `${bold ? "bold " : ""}${fontSize}px -apple-system, sans-serif`;
           ctx.textAlign = "center";
-          ctx.fillStyle = "#ffffff";
+          ctx.fillStyle = cnCanvas.label;
 
           const label = n.lastName;
           ctx.fillText(label, p.sx, p.sy + r + fontSize + 3);

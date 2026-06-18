@@ -4,14 +4,31 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Amorphous Si Widget Test</title>
-  <style>body { margin: 0; padding: 20px; background: #1a1a1a; }</style>
+  <style>
+    body { margin: 0; padding: 20px; background: #ffffff; transition: background 0.2s;
+      font-family: ui-sans-serif, system-ui, -apple-system, sans-serif; }
+    #bar { max-width: 1000px; margin: 0 auto 16px; display: flex; gap: 8px; }
+    #bar button { padding: 5px 12px; border: 1px solid #888; border-radius: 6px; cursor: pointer; background: #eee; }
+    #root { max-width: 1000px; margin: 0 auto; }
+  </style>
 </head>
 <body>
-  <div id="root" style="max-width: 1000px; margin: 0 auto;"></div>
+  <div id="bar">
+    <button id="light">Light mode</button>
+    <button id="dark">Dark mode</button>
+  </div>
+  <div id="root"></div>
   <script type="module">
     import widget from './amorphous-si.js';
     const model = { get: (k) => ({ sphere_radius: 32, lattice_constant: 5.43 })[k] };
     widget.render({ model, el: document.getElementById('root') });
+    function setTheme(dark) {
+      document.documentElement.classList.toggle('dark', dark);
+      document.body.style.background = dark ? '#0b0d10' : '#ffffff';
+    }
+    document.getElementById('light').onclick = () => setTheme(false);
+    document.getElementById('dark').onclick = () => setTheme(true);
+    setTheme(false);
   </script>
 </body>
 </html>

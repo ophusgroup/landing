@@ -1067,7 +1067,7 @@ function render({ model, el }) {
 
   el.innerHTML = `
     <style>
-      .${id}-wrap { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #111; border-radius: 12px; overflow: hidden; color: #ccc; }
+      .${id}-wrap { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--${id}-bg, #111); border-radius: 12px; overflow: hidden; color: var(--${id}-fg, #ccc); border: 1px solid var(--${id}-border, #444); }
       .${id}-wrap { overflow: visible; }
       .${id}-panels { display: flex; gap: 0; width: 100%; }
       .${id}-panel { flex: 1; display: flex; flex-direction: column; align-items: center; padding: 4px 2px; min-width: 0; overflow: hidden; }
@@ -1075,15 +1075,15 @@ function render({ model, el }) {
       .${id}-mid { flex: 1.4; }
       .${id}-mid canvas { cursor: grab; }
       .${id}-mid canvas:active { cursor: grabbing; }
-      .${id}-label { font-size: 10px; color: #aaa; margin-bottom: 3px; text-align: center; letter-spacing: 0.3px; text-transform: uppercase; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100%; }
-      .${id}-controls { display: flex; flex-wrap: wrap; gap: 6px 14px; padding: 8px 12px; background: #222; align-items: center; justify-content: center; border-top: 1px solid #444; }
+      .${id}-label { font-size: 10px; color: var(--${id}-label, #aaa); margin-bottom: 3px; text-align: center; letter-spacing: 0.3px; text-transform: uppercase; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100%; }
+      .${id}-controls { display: flex; flex-wrap: wrap; gap: 6px 14px; padding: 8px 12px; background: var(--${id}-ctrlbg, #222); align-items: center; justify-content: center; border-top: 1px solid var(--${id}-border, #444); }
       .${id}-ctrl { display: flex; align-items: center; gap: 4px; font-size: 11px; }
       .${id}-ctrl input[type="range"] { width: 100px; accent-color: #00cc66; }
-      .${id}-ctrl .val { min-width: 50px; text-align: right; font-variant-numeric: tabular-nums; color: #00ff88; font-size: 11px; }
-      .${id}-btn { background: #222; border: 1px solid #444; color: #ccc; padding: 3px 10px; border-radius: 4px; cursor: pointer; font-size: 11px; min-width: 64px; text-align: center; }
-      .${id}-btn:hover { background: #333; }
+      .${id}-ctrl .val { min-width: 50px; text-align: right; font-variant-numeric: tabular-nums; color: var(--${id}-val, #00ff88); font-size: 11px; }
+      .${id}-btn { background: var(--${id}-btnbg, #222); border: 1px solid var(--${id}-border, #444); color: var(--${id}-fg, #ccc); padding: 3px 10px; border-radius: 4px; cursor: pointer; font-size: 11px; min-width: 64px; text-align: center; }
+      .${id}-btn:hover { background: var(--${id}-btnhover, #333); }
       .${id}-btn.active { background: #1a4d2e; border-color: #00cc66; color: #00ff88; }
-      .${id}-loading { text-align: center; padding: 40px; color: #888; font-size: 14px; }
+      .${id}-loading { text-align: center; padding: 40px; color: var(--${id}-loading, #888); font-size: 14px; }
       .${id}-main { display: none; }
       @media (max-width: 500px) { .${id}-panels { flex-direction: column; align-items: center; } .${id}-panel canvas { width: 80%; } }
     </style>
@@ -1104,6 +1104,31 @@ function render({ model, el }) {
         </div>
       </div>
     </div>`;
+
+  // ---- Light/dark theming of the chrome (frame, controls, labels). The
+  // scientific display canvases stay dark by design. ----
+  const wrapEl = el.querySelector(`.${id}-wrap`);
+  const asiPalettes = {
+    dark:  { bg: "#111", fg: "#ccc", label: "#aaa", ctrlbg: "#222", border: "#444", btnbg: "#222", btnhover: "#333", val: "#00ff88", loading: "#888" },
+    light: { bg: "#f4f6f3", fg: "#333", label: "#556", ctrlbg: "#e9ebe6", border: "#d3d6d0", btnbg: "#ffffff", btnhover: "#e9ebe6", val: "#0a8a3f", loading: "#777" },
+  };
+  function asiDetectDark() {
+    try {
+      const m = getComputedStyle(document.body).backgroundColor.match(/\d+/g);
+      if (m && m.length >= 3) return (0.299 * +m[0] + 0.587 * +m[1] + 0.114 * +m[2]) / 255 < 0.5;
+    } catch (e) {}
+    return window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+  }
+  function asiApplyTheme() {
+    const p = asiPalettes[asiDetectDark() ? "dark" : "light"];
+    for (const k in p) wrapEl.style.setProperty(`--${id}-${k}`, p[k]);
+  }
+  asiApplyTheme();
+  new MutationObserver(asiApplyTheme).observe(document.documentElement, { attributes: true });
+  if (window.matchMedia) window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", asiApplyTheme);
+  // Backstop poll: some theme toggles don't trip the observer reliably.
+  let asiLastDark = asiDetectDark();
+  setInterval(() => { const d = asiDetectDark(); if (d !== asiLastDark) { asiLastDark = d; asiApplyTheme(); } }, 700);
 
   setTimeout(async () => {
     // Scope queries to this widget root so it works in shadow DOM and

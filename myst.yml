@@ -4,6 +4,16 @@ project:
   title: Colin Ophus Lab
   short_title: COLab
   description: Understanding materials atom by atom
+  keywords:
+    - electron microscopy
+    - scanning transmission electron microscopy
+    - 4D-STEM
+    - computational imaging
+    - ptychography
+    - electron tomography
+    - materials science
+    - py4DSTEM
+  thumbnail: images/banners/banner.webp
   toc:
     - file: index.md
     - file: news.md

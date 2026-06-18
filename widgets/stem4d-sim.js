@@ -534,8 +534,9 @@ function render({ model, el }) {
   const style = document.createElement("style");
   style.textContent = `
     .${id}-wrap {
-      background: #111;
-      color: #ccc;
+      background: var(--${id}-bg, #111);
+      color: var(--${id}-fg, #ccc);
+      border: 1px solid var(--${id}-border, #444);
       border-radius: 8px;
       padding: 8px 16px;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
@@ -543,25 +544,25 @@ function render({ model, el }) {
       max-width: 100%;
       box-sizing: border-box;
     }
-    .${id}-title { font-size: 16px; font-weight: 600; color: #ddd; margin-bottom: 4px; text-align: center; }
+    .${id}-title { font-size: 16px; font-weight: 600; color: var(--${id}-title, #ddd); margin-bottom: 4px; text-align: center; }
     .${id}-main { display: flex; flex-direction: column; gap: 8px; }
-    .${id}-bottom-hint { font-size: 11px; color: #555; text-align: center; margin-top: 4px; }
+    .${id}-bottom-hint { font-size: 11px; color: var(--${id}-dim, #555); text-align: center; margin-top: 4px; }
     .${id}-controls { display: flex; flex-direction: row; flex-wrap: wrap; gap: 10px 20px; align-items: flex-end; padding: 8px 4px; }
     .${id}-canvas-wrap { min-width: 0; }
     .${id}-canvas { width: 100%; display: block; border-radius: 4px; cursor: crosshair; touch-action: none; }
     .${id}-slider-group { flex: 1; min-width: 160px; }
-    .${id}-slider-group label { display: block; font-size: 14px; color: #aaa; margin-bottom: 3px; }
+    .${id}-slider-group label { display: block; font-size: 14px; color: var(--${id}-label, #aaa); margin-bottom: 3px; }
     .${id}-slider-group input[type=range] { width: 100%; accent-color: #00cc66; }
-    .${id}-slider-val { font-size: 13px; color: #666; margin-top: 2px; }
+    .${id}-slider-val { font-size: 13px; color: var(--${id}-dim, #666); margin-top: 2px; }
     .${id}-btn {
-      padding: 8px 16px; border: 1px solid #444; background: #222;
-      color: #ccc; border-radius: 4px; cursor: pointer; font-size: 14px; text-align: center;
+      padding: 8px 16px; border: 1px solid var(--${id}-border, #444); background: var(--${id}-btnbg, #222);
+      color: var(--${id}-fg, #ccc); border-radius: 4px; cursor: pointer; font-size: 14px; text-align: center;
       align-self: center;
     }
-    .${id}-btn:hover { background: #333; }
+    .${id}-btn:hover { background: var(--${id}-btnhover, #333); }
     .${id}-btn.active { background: #1a4d2e; border-color: #00cc66; color: #00ff88; }
-    .${id}-hint { font-size: 12px; color: #555; line-height: 1.4; }
-    .${id}-loading { color: #888; padding: 40px; text-align: center; }
+    .${id}-hint { font-size: 12px; color: var(--${id}-dim, #555); line-height: 1.4; }
+    .${id}-loading { color: var(--${id}-dim, #888); padding: 40px; text-align: center; }
   `;
   el.appendChild(style);
 
@@ -596,6 +597,28 @@ function render({ model, el }) {
     </div>
   `;
   el.appendChild(wrap);
+
+  // ---- Light/dark theming of the chrome; the dark diffraction display stays dark. ----
+  const s4dPalettes = {
+    dark:  { bg: "#111", fg: "#ccc", title: "#ddd", label: "#aaa", dim: "#666", btnbg: "#222", btnhover: "#333", border: "#444" },
+    light: { bg: "#f4f6f3", fg: "#333", title: "#1f1f1f", label: "#556", dim: "#888", btnbg: "#ffffff", btnhover: "#e9ebe6", border: "#d3d6d0" },
+  };
+  function s4dDetectDark() {
+    try {
+      const m = getComputedStyle(document.body).backgroundColor.match(/\d+/g);
+      if (m && m.length >= 3) return (0.299 * +m[0] + 0.587 * +m[1] + 0.114 * +m[2]) / 255 < 0.5;
+    } catch (e) {}
+    return window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+  }
+  function s4dApplyTheme() {
+    const p = s4dPalettes[s4dDetectDark() ? "dark" : "light"];
+    for (const k in p) wrap.style.setProperty(`--${id}-${k}`, p[k]);
+  }
+  s4dApplyTheme();
+  new MutationObserver(s4dApplyTheme).observe(document.documentElement, { attributes: true });
+  if (window.matchMedia) window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", s4dApplyTheme);
+  let s4dLastDark = s4dDetectDark();
+  setInterval(() => { const d = s4dDetectDark(); if (d !== s4dLastDark) { s4dLastDark = d; s4dApplyTheme(); } }, 700);
 
   setTimeout(() => {
     const loadingEl = wrap.querySelector(`.${id}-loading`);

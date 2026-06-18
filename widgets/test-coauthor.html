@@ -5,20 +5,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Co-author Network Test</title>
   <style>
-    body { margin: 0; padding: 20px; background: #111; display: flex; justify-content: center; }
-    #root { width: 100%; max-width: 800px; }
+    body { margin: 0; padding: 20px; background: #ffffff; transition: background 0.2s;
+      font-family: ui-sans-serif, system-ui, -apple-system, sans-serif; }
+    #bar { max-width: 800px; margin: 0 auto 16px; display: flex; gap: 8px; }
+    #bar button { padding: 5px 12px; border: 1px solid #888; border-radius: 6px; cursor: pointer; background: #eee; }
+    #root { width: 100%; max-width: 800px; margin: 0 auto; }
   </style>
 </head>
 <body>
+  <div id="bar">
+    <button id="light">Light mode</button>
+    <button id="dark">Dark mode</button>
+  </div>
   <div id="root"></div>
   <script type="module">
     import widget from './coauthor-network.js';
-    const params = {
-      data_url: '../data/coauthors.json',
-      accent_color: '#8C1515',
-    };
+    const params = { data_url: '../data/coauthors.json', accent_color: '#8C1515' };
     const model = { get(key) { return params[key]; } };
     widget.render({ model, el: document.getElementById('root') });
+    function setTheme(dark) {
+      document.documentElement.classList.toggle('dark', dark);
+      document.body.style.background = dark ? '#0b0d10' : '#ffffff';
+    }
+    document.getElementById('light').onclick = () => setTheme(false);
+    document.getElementById('dark').onclick = () => setTheme(true);
+    setTheme(false);
   </script>
 </body>
 </html>
