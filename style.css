@@ -1,0 +1,42 @@
+/* =====================================================================
+   Custom CSS for colab.stanford.edu
+   Loaded via myst.yml -> site.options.style: ./style.css
+   ===================================================================== */
+
+/* ---------------------------------------------------------------------
+   STEP 1 — TEST MARKER (temporary).
+   Purpose: confirm curvenote actually applies this file on the deployed
+   site. If a small magenta "css ✓" badge appears in the bottom-left
+   corner of every page, custom CSS works and we can rely on it.
+   Remove this block once confirmed.
+   --------------------------------------------------------------------- */
+body::after {
+  content: "css ✓";
+  position: fixed;
+  bottom: 6px;
+  left: 6px;
+  z-index: 99999;
+  background: #bf003f;
+  color: #fff;
+  font: 600 11px/1 ui-sans-serif, system-ui, sans-serif;
+  padding: 3px 6px;
+  border-radius: 4px;
+  opacity: 0.9;
+  pointer-events: none;
+}
+
+/* ---------------------------------------------------------------------
+   STEP 2 — Best-effort: force the right-hand "Contents" outline to show,
+   in case the element IS rendered but hidden. (If curvenote doesn't
+   render the outline element at all, CSS can't bring it back and we'll
+   need a different lever — but the badge above will still confirm whether
+   custom CSS is even reaching the page.)
+   --------------------------------------------------------------------- */
+.myst-outline,
+.myst-outline-section,
+nav[aria-label*="ontents" i],
+nav[aria-label*="utline" i] {
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
