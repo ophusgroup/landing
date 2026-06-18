@@ -42,15 +42,27 @@ Colin is the L&S Family Center Fellow in Energy and Sustainability in the Precou
 
 
 
-::::{div}
-<div style="width: 32%; float: right; margin-left: 1em;"><img src="/images/funding/DOE_Color_Seal_Green_Logo_Clear_2860×719.png" alt="DOE" style="width: 100%;" /></div>
+::::::{grid} 1 1 2 2
+
+:::::{grid-item}
 
 ## Department of Energy
 
 - We are a member of the [SLAC ESTEEM center](https://esteem.slac.stanford.edu/), a DOE-funded Energy Frontier Research Center for electron microscopy.
 - In 2018, Colin received an [Early Career Research Award](https://foundry.lbl.gov/2018/06/21/foundrys-colin-ophus-receives-doe-early-career-research-award/) from the US DOE.
 - The US DOE has funded many of our research projects, including the [4D Camera Distillery](https://foundry.lbl.gov/2020/10/28/foundry-funded-to-lead-aiml/).
+:::::
+
+:::::{grid-item}
+
+<img src="/images/funding/DOE_Color_Seal_Green_Logo_Clear_2860×719.png" alt="DOE" style="width: 100%; display: block; margin-bottom: 1em;" />
+
+::::{anywidget} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/esteem-logo.js
+{}
 ::::
+:::::
+
+::::::
 
 +++ {"class": "col-"}
 

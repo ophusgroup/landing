@@ -30,7 +30,8 @@
   <div id="root"></div>
 
   <script type="module">
-    import widget from './esteem-logo.js';
+    // Cache-bust the import so dev reloads always pick up the latest module.
+    const widget = (await import('./esteem-logo.js?v=' + Date.now())).default;
 
     // Mock the model.get() interface MyST's anywidget provides. Empty params
     // exercise all the defaults (the as-shipped logo).
@@ -39,13 +40,14 @@
 
     widget.render({ model, el: document.getElementById('root') });
 
-    // Theme toggle flips body background so the widget's luminance-based
-    // dark-mode detection (and MutationObserver on <html>) fires.
+    // Mimic the MyST book-theme: it sets <html class="dark|light"> (and leaves
+    // body white). body.dark just drives this harness's own background.
     document.getElementById('theme').addEventListener('click', () => {
-      document.body.classList.toggle('dark');
-      // nudge the observer that watches documentElement attributes
-      document.documentElement.toggleAttribute('data-theme-dark');
+      const dark = document.documentElement.classList.toggle('dark');
+      document.documentElement.classList.toggle('light', !dark);
+      document.body.classList.toggle('dark', dark);
     });
+    document.documentElement.classList.add('light');
   </script>
 </body>
 </html>
