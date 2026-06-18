@@ -57,7 +57,7 @@ Colin is the L&S Family Center Fellow in Energy and Sustainability in the Precou
 
 <img src="/images/funding/DOE_Color_Seal_Green_Logo_Clear_2860×719.png" alt="DOE" style="width: 100%; display: block; margin-bottom: 1em;" />
 
-::::{anywidget} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/esteem-logo.js
+::::{anywidget} https://cdn.jsdelivr.net/gh/ophusgroup/landing@f21f232/widgets/esteem-logo.js
 {}
 ::::
 :::::
