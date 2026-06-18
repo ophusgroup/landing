@@ -73,7 +73,6 @@ site:
     - colab-landing.curve.space
   options:
     outline_maxdepth: 2
-    style: ./style.css
   nav:
     - title: News
       url: /news
