@@ -4,6 +4,10 @@ short_title: Code
 description: Open-source software packages from COLab for electron microscopy simulation and analysis.
 ---
 
+:::{anywidget} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/section-nav.js
+{}
+:::
+
 Our group develops or has previously developed several open-source software packages for electron microscopy simulation, data analysis, and materials characterization.
 
 ## quantEM

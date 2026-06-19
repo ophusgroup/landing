@@ -4,6 +4,10 @@ short_title: Facilities
 description: Electron microscopy facilities and equipment available to COLab at Stanford and SLAC.
 ---
 
+:::{anywidget} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/section-nav.js
+{}
+:::
+
 +++ {"class": "col-"}
 
 ## nano@Stanford

@@ -72,6 +72,9 @@ function render({ el, model }) {
   let onScroll = null,
     onResize = null,
     themeTimer = null,
+    themeObserver = null,
+    themeMedia = null,
+    onThemeChange = null,
     builtItems = [],
     retryTimers = [];
 
@@ -183,12 +186,17 @@ function render({ el, model }) {
     onResize = onScroll;
     window.addEventListener("resize", onResize, { passive: true });
 
-    // theme: poll (robust across class/attr/media switches)
+    // theme: react instantly to class/attr/media changes; poll as a backstop
     let lastDark = detectDark();
-    themeTimer = setInterval(() => {
+    onThemeChange = () => {
       const d = detectDark();
       if (d !== lastDark) { lastDark = d; applyTheme(); }
-    }, 600);
+    };
+    themeObserver = new MutationObserver(onThemeChange);
+    themeObserver.observe(document.documentElement, { attributes: true, attributeFilter: ["class", "data-theme", "data-mode"] });
+    themeMedia = window.matchMedia("(prefers-color-scheme: dark)");
+    if (themeMedia.addEventListener) themeMedia.addEventListener("change", onThemeChange);
+    themeTimer = setInterval(onThemeChange, 600);
 
     updateActive();
     nav.__cleanup = cleanup;
@@ -199,6 +207,8 @@ function render({ el, model }) {
     if (onScroll) window.removeEventListener("scroll", onScroll, { capture: true });
     if (onResize) window.removeEventListener("resize", onResize);
     if (themeTimer) clearInterval(themeTimer);
+    if (themeObserver) themeObserver.disconnect();
+    if (themeMedia && onThemeChange && themeMedia.removeEventListener) themeMedia.removeEventListener("change", onThemeChange);
     retryTimers.forEach(clearTimeout);
     const n = document.getElementById(NAV_ID);
     if (n) n.remove();
