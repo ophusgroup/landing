@@ -5,6 +5,10 @@ description: Funding sources and awards supporting COLab research.
 
 Thank you to the funding agencies and generous individuals who have funded our research!
 
+:::{anywidget} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/section-nav.js
+{}
+:::
+
 +++ {"class": "col-"}
 
 

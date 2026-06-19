@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Section Nav Test</title>
+  <style>
+    :root { --bg: #ffffff; --fg: #1a1a1a; }
+    html.dark { --bg: #0b0d10; --fg: #e6e8eb; }
+    body { margin: 0; background: var(--bg); color: var(--fg); transition: background .2s, color .2s;
+      font-family: ui-sans-serif, system-ui, -apple-system, sans-serif; line-height: 1.6; }
+    header { position: fixed; top: 0; left: 0; right: 0; height: 60px; z-index: 50;
+      display: flex; align-items: center; gap: 12px; padding: 0 24px;
+      background: var(--bg); border-bottom: 1px solid rgba(128,128,128,.25); }
+    header strong { font-size: 15px; }
+    header button { padding: 5px 12px; border: 1px solid #888; border-radius: 6px; cursor: pointer;
+      background: transparent; color: inherit; font: inherit; }
+    main { max-width: 720px; margin: 0 auto; padding: 90px 24px 60vh; }
+    h1 { font-size: 30px; }
+    h2 { font-size: 23px; margin-top: 2.4em; padding-top: .2em; }
+    h3 { font-size: 18px; margin-top: 1.6em; color: #888; }
+    p { margin: 1em 0; }
+  </style>
+</head>
+<body>
+  <header>
+    <strong>COLab — section-nav harness</strong>
+    <button id="light">Light</button>
+    <button id="dark">Dark</button>
+    <span id="status" style="font-size:12px;opacity:.6;margin-left:auto"></span>
+  </header>
+
+  <main>
+    <h1>Funding and Awards</h1>
+    <p>Thank you to the funding agencies and generous individuals who have funded our research. This page mirrors the structure of the real funding page so the floating section menu can be exercised.</p>
+
+    <h2 id="ls-family">L&amp;S Family</h2>
+    <p>Colin is the L&amp;S Family Center Fellow in Energy and Sustainability in the Precourt Institute for Energy. This donation supports research into the microscopy of disordered materials.</p>
+    <p>As an example, we have created methods for generating materials with different degrees of order for electron scattering simulations spanning amorphous to nanocrystalline structures.</p>
+
+    <h2 id="tri">Toyota Research Institute</h2>
+    <p>TRI generously sponsored the development of open-source analysis tooling for four-dimensional scanning transmission electron microscopy.</p>
+    <h3 id="py4dstem">py4DSTEM Toolkit</h3>
+    <p>The py4DSTEM package provides a complete pipeline for loading, calibrating, and analyzing 4D-STEM datasets, and is widely used across the electron microscopy community.</p>
+    <h3 id="rd100">R&amp;D 100 Award</h3>
+    <p>In 2023, py4DSTEM was recognized with an R&amp;D 100 award for its impact on materials characterization workflows.</p>
+
+    <h2 id="doe">Department of Energy</h2>
+    <p>The US DOE has funded many of our research projects across imaging, tomography, and detector development.</p>
+    <h3 id="esteem">ESTEEM Center</h3>
+    <p>We are a member of the SLAC ESTEEM center, a DOE-funded Energy Frontier Research Center for electron microscopy.</p>
+    <h3 id="early-career">Early Career Award</h3>
+    <p>In 2018, Colin received an Early Career Research Award from the US Department of Energy.</p>
+
+    <h2 id="msa">Microscopy Society of America</h2>
+    <p>In 2022, Colin was awarded the Burton Medal in physical sciences for distinguished contributions to the field of microscopy and microanalysis.</p>
+    <p>The MSA is the sponsor of Elemental Microscopy and has awarded our group members travel grants to attend the annual meeting.</p>
+
+    <h2 id="awards">Awards and Honors</h2>
+    <p>Group members have received numerous fellowships, scholarships, and travel awards recognizing their research contributions.</p>
+    <p>This final section provides extra scroll length so the active-section highlighting can be observed all the way to the bottom of the page.</p>
+  </main>
+
+  <script type="module">
+    import widget from './section-nav.js';
+    const params = { title: 'On this page', min_width: 1000 };
+    const model = { get(key) { return params[key]; } };
+    widget.render({ model, el: document.createElement('div') });
+
+    function setTheme(dark) {
+      document.documentElement.classList.toggle('dark', dark);
+      document.documentElement.classList.toggle('light', !dark);
+      document.getElementById('status').textContent = dark ? 'theme: dark' : 'theme: light';
+    }
+    document.getElementById('light').onclick = () => setTheme(false);
+    document.getElementById('dark').onclick = () => setTheme(true);
+    setTheme(false);
+  </script>
+</body>
+</html>

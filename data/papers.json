@@ -1,5 +1,45 @@
 [
   {
+    "title": "Three-Dimensional Atomic Scale Insights into Unconventional Fragmentation of Two-Dimensional ReS₂ Monolayers into Molecular Clusters",
+    "url": "https://doi.org/10.1021/acsnano.6c02376",
+    "year": 2026,
+    "tags": [
+      "2D Materials",
+      "Tomography",
+      "Imaging"
+    ],
+    "authors": [
+      "Matthew Coupin",
+      "Jun Chen",
+      "Ruoyu Wang",
+      "Axel Brillot",
+      "Manish Kumar",
+      "Yuanyue Liu",
+      "Colin Ophus",
+      "Jamie Warner"
+    ],
+    "journal": "ACS Nano"
+  },
+  {
+    "title": "Unsupervised Segmentation and Clustering Workflow for Efficient Processing of 4D-STEM and 5D-STEM Data",
+    "url": "https://doi.org/10.1093/mam/ozag044",
+    "year": 2026,
+    "tags": [
+      "4DSTEM",
+      "Machine Learning",
+      "Software"
+    ],
+    "authors": [
+      "Serin Lee",
+      "Stephanie M. Ribet",
+      "Arthur R. C. McCray",
+      "Andrew Barnum",
+      "Jennifer A. Dionne",
+      "Colin Ophus"
+    ],
+    "journal": "Microscopy and Microanalysis"
+  },
+  {
     "title": "Nanocrystal Geometry Governs Phase Transformation Pathways in Palladium Hydride",
     "url": "https://doi.org/10.1021/acsnano.6c01302",
     "year": 2026,
