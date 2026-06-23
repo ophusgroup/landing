@@ -3,7 +3,7 @@ title: Research Projects
 description: Research in 4DSTEM, atomic electron tomography, STEM probe design, quantum mechanical simulations, and computational materials science.
 ---
 
-:::{anywidget} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/section-nav.js
+:::{anywidget} https://cdn.jsdelivr.net/gh/ophusgroup/landing@61d8e5c/widgets/section-nav.js
 {}
 :::
 

@@ -3,7 +3,7 @@ title: People
 description: Current members and alumni of the Colin Ophus Lab at Stanford University.
 ---
 
-:::{anywidget} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/section-nav.js
+:::{anywidget} https://cdn.jsdelivr.net/gh/ophusgroup/landing@61d8e5c/widgets/section-nav.js
 {}
 :::
 
