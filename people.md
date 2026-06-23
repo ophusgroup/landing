@@ -202,6 +202,21 @@ description: Current members and alumni of the Colin Ophus Lab at Stanford Unive
 
 ::::::
 
+
+:::{anywidget} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/person-card.js
+{
+  "name": "Miti Shah",
+  "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/ShahMiti.jpg",
+  "pronouns": "she/her",
+  "bio": "Miti Shah is a PhD student at Stanford University with a background in Engineering Physics, Electrical Engineering, and Applied Physics from the University of Michigan. Her research interests include materials science, diffraction, and advanced electron microscopy. Previously, she conducted research in the Hovden Lab, where she led a two-year project that became *Atlas of Fourier Transforms*, a published educational resource. She was also award a National Science Foundation Graduate Research Fellowship.",
+  "papers": [
+    {"title": "The Atlas of Fourier Transforms", "url": "https://fourieratlas.com/"}
+  ]
+}
+:::
+
+::::::
+
 ## Masters Students
 
 ::::::{grid} 1 2 3 4
