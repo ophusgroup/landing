@@ -5,7 +5,13 @@
 // Behaviour:
 //  • Defers automatically if a native outline is already visible (so it adds
 //    nothing on local `myst start`, but appears on the deployed site).
-//  • Theme-aware (light/dark), scroll-spy active highlighting, smooth scroll.
+//  • A continuous "reading spine": a faint rail with an accent fill + sliding
+//    dot that tracks your exact position, gliding smoothly to the last item at
+//    the bottom (no snap). Inactive items fade to grey with distance.
+//  • Scroll-position read works whether the page scrolls <window> or an inner
+//    container (scroller detected from scroll events).
+//  • Theme-aware (light/dark, instant via observer), smooth scroll on click.
+//  • prefers-reduced-motion: keeps the indicator but drops the easing.
 //  • Idempotent: the theme toggle re-runs render(); we tear down first so we
 //    never stack duplicates. Returns a cleanup fn for unmount.
 //  • Hidden on narrow viewports (no room for a right rail).
@@ -56,27 +62,25 @@ function collectHeadings(maxLevel) {
   return out;
 }
 
+const clamp01 = (x) => (x < 0 ? 0 : x > 1 ? 1 : x);
+
 function render({ el, model }) {
   // Hide this widget's own inline footprint — the menu floats from <body>.
   try { el.style.display = "none"; } catch (e) {}
 
-  const title = (model && model.get && model.get("title")) || "On this page";
-  const minWidth = (model && model.get && model.get("min_width")) || 1100;
-  const maxLevel = (model && model.get && model.get("max_level")) || 3;
-  const accent = (model && model.get && model.get("accent")) || "#8C1515";
+  const opt = (k, d) => { const v = model && model.get && model.get(k); return (v === undefined || v === null) ? d : v; };
+  const title = opt("title", "On this page");
+  const minWidth = +opt("min_width", 1100);
+  const maxLevel = +opt("max_level", 3);
+  const accentLight = opt("accent", "#8C1515");
+  const accentDark = opt("accent_dark", "#d24a52");
+  const reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  // ---- Tear down any prior instance (idempotent across re-renders) ----
   teardown();
 
-  let nav = null;
-  let onScroll = null,
-    onResize = null,
-    themeTimer = null,
-    themeObserver = null,
-    themeMedia = null,
-    onThemeChange = null,
-    builtItems = [],
-    retryTimers = [];
+  let nav = null, items = null, fillEl = null, dotEl = null, links = [], builtItems = [];
+  let onScroll = null, onResize = null, themeTimer = null, themeObserver = null, themeMedia = null, onThemeChange = null, retryTimers = [];
+  let scroller = document.scrollingElement || document.documentElement;
 
   function teardown() {
     const prevNav = document.getElementById(NAV_ID);
@@ -94,8 +98,7 @@ function render({ el, model }) {
       #${NAV_ID} {
         position: fixed; top: 88px; right: max(16px, calc((100vw - 1280px) / 2 - 40px));
         width: 200px; max-height: calc(100vh - 140px); overflow-y: auto;
-        z-index: 40; box-sizing: border-box; padding-left: 12px;
-        border-left: 1px solid var(--cn-rule);
+        z-index: 40; box-sizing: border-box;
         font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
         -webkit-font-smoothing: antialiased;
       }
@@ -103,19 +106,28 @@ function render({ el, model }) {
       #${NAV_ID}::-webkit-scrollbar-thumb { background: var(--cn-rule); border-radius: 3px; }
       #${NAV_ID} .cn-title {
         font-size: 11px; font-weight: 600; letter-spacing: .4px; text-transform: uppercase;
-        color: var(--cn-dim); margin-bottom: 8px;
+        color: var(--cn-dim); margin: 0 0 10px; padding-left: 14px;
+      }
+      #${NAV_ID} .cn-items { position: relative; padding-left: 14px; }
+      #${NAV_ID} .cn-rail { position: absolute; left: 0; top: 0; bottom: 0; width: 1px; background: var(--cn-rule); }
+      #${NAV_ID} .cn-fill { position: absolute; left: 0; top: 0; width: 2px; height: 0; background: var(--cn-accent); transition: height .1s linear; }
+      #${NAV_ID} .cn-dot {
+        position: absolute; left: -2.5px; top: 0; width: 6px; height: 6px; border-radius: 50%;
+        background: var(--cn-accent); transform: translateY(-3px); transition: transform .1s linear;
+        box-shadow: 0 0 0 3px color-mix(in srgb, var(--cn-accent) 22%, transparent);
       }
       #${NAV_ID} a {
         display: block; text-decoration: none; color: var(--cn-fg);
-        font-size: 13px; line-height: 1.35; padding: 3px 0 3px 0; margin-left: -13px;
-        padding-left: 13px; border-left: 2px solid transparent;
-        transition: color .15s ease, border-color .15s ease;
+        font-size: 13px; line-height: 1.45; padding: 3.5px 0;
+        transition: color .15s ease, opacity .2s ease, font-weight .15s ease;
       }
-      #${NAV_ID} a.cn-l3 { padding-left: 26px; font-size: 12px; }
-      #${NAV_ID} a.cn-l4 { padding-left: 38px; font-size: 12px; }
-      #${NAV_ID} a:hover { color: var(--cn-active); }
-      #${NAV_ID} a.cn-active { color: var(--cn-active); border-left-color: var(--cn-accent); font-weight: 600; }
+      #${NAV_ID} a.cn-l3 { padding-left: 12px; font-size: 12px; }
+      #${NAV_ID} a.cn-l4 { padding-left: 24px; font-size: 12px; }
+      #${NAV_ID} a:hover { color: var(--cn-active); opacity: 1 !important; }
       @media (max-width: ${minWidth}px) { #${NAV_ID} { display: none !important; } }
+      @media (prefers-reduced-motion: reduce) {
+        #${NAV_ID} .cn-fill, #${NAV_ID} .cn-dot, #${NAV_ID} a { transition: none !important; }
+      }
     `;
     document.head.appendChild(s);
   }
@@ -126,32 +138,62 @@ function render({ el, model }) {
     nav.style.setProperty("--cn-fg", dark ? "#9aa3ad" : "#6b7280");
     nav.style.setProperty("--cn-dim", dark ? "#6b7280" : "#9aa3ad");
     nav.style.setProperty("--cn-active", dark ? "#f3f4f6" : "#111827");
-    nav.style.setProperty("--cn-rule", dark ? "rgba(255,255,255,0.14)" : "rgba(0,0,0,0.12)");
-    nav.style.setProperty("--cn-accent", accent);
+    nav.style.setProperty("--cn-rule", dark ? "rgba(255,255,255,0.16)" : "rgba(0,0,0,0.14)");
+    nav.style.setProperty("--cn-accent", dark ? accentDark : accentLight);
   }
 
-  function updateActive() {
-    if (!nav || !builtItems.length) return;
-    const trigger = 130;
-    let activeId = builtItems[0].id;
-    for (const it of builtItems) {
-      const top = it.el.getBoundingClientRect().top;
-      if (top <= trigger) activeId = it.id;
-      else break;
+  // Track which element actually scrolls (window/document vs an inner container).
+  function noteScroller(e) {
+    const t = e && e.target;
+    if (!t || t === document || t === window || t === document.documentElement || t === document.body) {
+      scroller = document.scrollingElement || document.documentElement;
+    } else if (t.scrollHeight - t.clientHeight > 8) {
+      scroller = t;
     }
-    // If scrolled to the very bottom, activate the last item.
-    if (window.innerHeight + window.scrollY >= document.body.scrollHeight - 4)
-      activeId = builtItems[builtItems.length - 1].id;
-    for (const a of nav.querySelectorAll("a"))
-      a.classList.toggle("cn-active", a.dataset.id === activeId);
+  }
+  function metrics() {
+    const root = scroller === (document.scrollingElement || document.documentElement) || scroller === document.body;
+    const re = document.scrollingElement || document.documentElement;
+    const sTop = root ? (window.scrollY || re.scrollTop || 0) : scroller.scrollTop;
+    const sMax = root ? Math.max(1, re.scrollHeight - window.innerHeight) : Math.max(1, scroller.scrollHeight - scroller.clientHeight);
+    return { root, sTop, sMax };
+  }
+  function headOffset(h, root) {
+    const r = h.getBoundingClientRect();
+    return root ? r.top + (window.scrollY || 0) : r.top - scroller.getBoundingClientRect().top + scroller.scrollTop;
+  }
+  const linkCenter = (i) => links[i].offsetTop + links[i].offsetHeight / 2;
+
+  function update() {
+    if (!nav || !builtItems.length || !links.length) return;
+    const m = metrics(), trig = 100, p = clamp01(m.sTop / m.sMax), n = builtItems.length;
+    const bp = builtItems.map((it) => clamp01((headOffset(it.el, m.root) - trig) / m.sMax));
+    bp[0] = 0;
+    for (let i = 1; i < n; i++) if (bp[i] < bp[i - 1]) bp[i] = bp[i - 1];
+    let act = 0;
+    for (let i = 0; i < n; i++) { if (bp[i] <= p + 1e-6) act = i; else break; }
+    let markerY;
+    if (act >= n - 1) markerY = linkCenter(n - 1);
+    else {
+      const seg = bp[act + 1] - bp[act], t = seg > 1e-6 ? clamp01((p - bp[act]) / seg) : 1;
+      markerY = linkCenter(act) + (linkCenter(act + 1) - linkCenter(act)) * t;
+    }
+    fillEl.style.height = markerY.toFixed(1) + "px";
+    dotEl.style.transform = "translateY(" + (markerY - 3).toFixed(1) + "px)";
+    for (let i = 0; i < links.length; i++) {
+      const on = i === act;
+      links[i].style.color = on ? "var(--cn-active)" : "var(--cn-fg)";
+      links[i].style.fontWeight = on ? "600" : "400";
+      links[i].style.opacity = Math.max(0.35, 1 - 0.18 * Math.abs(i - act));
+    }
   }
 
   function build() {
     if (document.getElementById(NAV_ID)) return true;
     if (nativeOutlineVisible()) return false;
-    const items = collectHeadings(maxLevel);
-    if (items.length < 2) return false;
-    builtItems = items;
+    const its = collectHeadings(maxLevel);
+    if (its.length < 2) return false;
+    builtItems = its;
 
     ensureStyle();
     nav = document.createElement("nav");
@@ -159,13 +201,14 @@ function render({ el, model }) {
     nav.setAttribute("aria-label", "Section navigation");
     nav.innerHTML =
       `<div class="cn-title">${title}</div>` +
-      items
-        .map(
-          (it) =>
-            `<a href="#${it.id}" data-id="${it.id}" class="cn-l${it.level}">${it.text.replace(/</g, "&lt;")}</a>`
-        )
-        .join("");
+      `<div class="cn-items"><div class="cn-rail"></div><div class="cn-fill"></div><div class="cn-dot"></div>` +
+      its.map((it) => `<a href="#${it.id}" data-id="${it.id}" class="cn-l${it.level}">${it.text.replace(/</g, "&lt;")}</a>`).join("") +
+      `</div>`;
     document.body.appendChild(nav);
+    items = nav.querySelector(".cn-items");
+    fillEl = nav.querySelector(".cn-fill");
+    dotEl = nav.querySelector(".cn-dot");
+    links = [].slice.call(nav.querySelectorAll("a"));
     applyTheme();
 
     nav.addEventListener("click", (e) => {
@@ -174,16 +217,16 @@ function render({ el, model }) {
       const target = document.getElementById(a.dataset.id);
       if (target) {
         e.preventDefault();
-        target.scrollIntoView({ behavior: "smooth", block: "start" });
+        target.scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth", block: "start" });
         history.replaceState(null, "", "#" + a.dataset.id);
       }
     });
 
-    onScroll = () => updateActive();
+    onScroll = (e) => { noteScroller(e); update(); };
     // capture:true so we catch scroll from an inner scroll container too
     // (scroll events don't bubble; the hosted layout may not scroll <window>).
     window.addEventListener("scroll", onScroll, { passive: true, capture: true });
-    onResize = onScroll;
+    onResize = () => update();
     window.addEventListener("resize", onResize, { passive: true });
 
     // theme: react instantly to class/attr/media changes; poll as a backstop
@@ -198,7 +241,7 @@ function render({ el, model }) {
     if (themeMedia.addEventListener) themeMedia.addEventListener("change", onThemeChange);
     themeTimer = setInterval(onThemeChange, 600);
 
-    updateActive();
+    update();
     nav.__cleanup = cleanup;
     return true;
   }
@@ -210,8 +253,8 @@ function render({ el, model }) {
     if (themeObserver) themeObserver.disconnect();
     if (themeMedia && onThemeChange && themeMedia.removeEventListener) themeMedia.removeEventListener("change", onThemeChange);
     retryTimers.forEach(clearTimeout);
-    const n = document.getElementById(NAV_ID);
-    if (n) n.remove();
+    const nd = document.getElementById(NAV_ID);
+    if (nd) nd.remove();
     const st = document.getElementById(STYLE_ID);
     if (st) st.remove();
     nav = null;
