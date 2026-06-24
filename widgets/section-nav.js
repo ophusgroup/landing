@@ -106,13 +106,13 @@ function render({ el, model }) {
       #${NAV_ID}::-webkit-scrollbar-thumb { background: var(--cn-rule); border-radius: 3px; }
       #${NAV_ID} .cn-title {
         font-size: 11px; font-weight: 600; letter-spacing: .4px; text-transform: uppercase;
-        color: var(--cn-dim); margin: 0 0 10px; padding-left: 14px;
+        color: var(--cn-dim); margin: 0 0 10px; padding-left: 18px;
       }
-      #${NAV_ID} .cn-items { position: relative; padding-left: 14px; }
-      #${NAV_ID} .cn-rail { position: absolute; left: 0; top: 0; bottom: 0; width: 1px; background: var(--cn-rule); }
-      #${NAV_ID} .cn-fill { position: absolute; left: 0; top: 0; width: 2px; height: 0; background: var(--cn-accent); transition: height .1s linear; }
+      #${NAV_ID} .cn-items { position: relative; padding-left: 18px; }
+      #${NAV_ID} .cn-rail { position: absolute; left: 7px; top: 0; bottom: 0; width: 1px; background: var(--cn-rule); }
+      #${NAV_ID} .cn-fill { position: absolute; left: 7px; top: 0; width: 2px; height: 0; background: var(--cn-accent); transition: height .1s linear; }
       #${NAV_ID} .cn-dot {
-        position: absolute; left: -2.5px; top: 0; width: 6px; height: 6px; border-radius: 50%;
+        position: absolute; left: 4.5px; top: 0; width: 6px; height: 6px; border-radius: 50%;
         background: var(--cn-accent); transform: translateY(-3px); transition: transform .1s linear;
         box-shadow: 0 0 0 3px color-mix(in srgb, var(--cn-accent) 22%, transparent);
       }
