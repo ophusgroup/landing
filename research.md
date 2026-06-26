@@ -7,11 +7,47 @@ description: Research in 4DSTEM, atomic electron tomography, STEM probe design, 
 {}
 :::
 
+We develop new scanning transmission electron microscopy (STEM) experiments, reconstruction and machine learning algorithms, and open-source software. These tools let us image and understand materials atom by atom. Our research spans three areas:
+
+::::{grid} 1 1 3 3
+
+:::{card}
+![STEM probe wavefunctions](/images/research/card_experiments.jpg)
+
+**Scanning Transmission Electron Microscopy**
+
+We develop new experiments to capture more information at the atomic scale, including 4DSTEM, custom electron probes, and detectors.
+
+[4DSTEM experiments](#4dstem-experiments) · [STEM probe design](#stem-probe-wavefunction-control)
+:::
+
+:::{card}
+![Atomic electron tomography reconstruction](/images/research/card_reconstruction.jpg)
+
+**Computational Imaging and Data Analysis**
+
+We turn detector data into structure and simulate microscopy, using ptychography, tomography, machine learning, and scattering simulations.
+
+[py4DSTEM analysis](#4dstem-analysis-with-py4dstem) · [ML inversion](#ml-inversion-of-multiple-scattering) · [drift correction](#scanning-probe-drift-correction) · [simulations](#quantum-mechanical-scattering-simulations)
+:::
+
+:::{card}
+![Disordered nanocrystalline silicon](/videos/card_materials.mp4)
+
+**Atomic Scale Understanding of Materials**
+
+We study real materials at the atomic scale, mapping their 3D structure, chemistry, and disorder.
+
+[atomic electron tomography](#atomic-electron-tomography) · [atomic-resolution chemistry](#atomic-resolution-imaging) · [disordered materials](#ml-characterization-of-disordered-materials)
+:::
+
+::::
+
 :::{anywidget} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/stem4d-sim.js
 {}
 :::
 
-::::{dropdown} 4DSTEM Experiments
+## 4DSTEM Experiments
 
 <!-- ::::{div}
 :::{figure} ./videos/research_4DSTEM_02.mp4
@@ -21,7 +57,7 @@ Comparing conventional ADF-STEM and 4DSTEM.
 :::
 -->
 
-In conventional STEM, a focused electron probe is scanned over the sample while detectors record just a few intensity values per position, discarding most of the information encoded in each diffraction pattern. Modern direct electron detectors now operate at up to 120,000 frames/second, allowing us to capture a full 2D diffraction image at every probe position — producing a 4D dataset. We coined the term four-dimensional scanning transmission electron microscopy (4DSTEM) to describe this family of experiments.
+In conventional STEM, a focused electron probe is scanned over the sample while detectors record just a few intensity values per position, discarding most of the information encoded in each diffraction pattern. Modern direct electron detectors now operate at up to 120,000 frames/second, allowing us to capture a full 2D diffraction image at every probe position, producing a 4D dataset. We coined the term four-dimensional scanning transmission electron microscopy (4DSTEM) to describe this family of experiments.
 
 Our group has developed many 4DSTEM methods, including nanobeam orientation and phase mapping, inversion of multiple scattering, ptychographic imaging, and ptychographic atomic electron tomography.
 
@@ -29,14 +65,12 @@ Our group has developed many 4DSTEM methods, including nanobeam orientation and 
 - [(2021) 4DSTEM of beam-sensitive materials](doi.org/10.1021/acs.accounts.1c00073)
 - [(2019) Review of 4DSTEM](doi.org/10.1017/S1431927619000497)
 
-::::
-
-::::::{dropdown} 4DSTEM Analysis with py4DSTEM
+## 4DSTEM Analysis with py4DSTEM
 
 ::::{div}
 <div style="width: 20%; float: right; margin-left: 1em;"><img src="/images/research/py4DSTEM_logo_54_export.png" alt="py4DSTEM" style="width: 100%;" /></div>
 
-4DSTEM experiments produce massive datasets — potentially millions of diffraction patterns, each with tens of thousands of pixels. We developed the open-source [py4DSTEM](https://github.com/py4dstem/py4DSTEM) Python package to analyze these datasets. py4DSTEM supports a wide range of analysis methods, including:
+4DSTEM experiments produce massive datasets. A single scan can hold millions of diffraction patterns, each with tens of thousands of pixels. We developed the open-source [py4DSTEM](https://github.com/py4dstem/py4DSTEM) Python package to analyze these datasets. py4DSTEM supports a wide range of analysis methods, including:
 
 ::::
 
@@ -61,11 +95,9 @@ Our group has developed many 4DSTEM methods, including nanobeam orientation and 
 - [multislice ptychography](doi.org/10.1063/5.0206814)
 - joint ptychography-tomography
 
-::::::
-
 ### ML Inversion of Multiple Scattering
 
-Electrons interact roughly an order of magnitude more strongly with matter than photons, which is what makes electron microscopy so powerful — but also means that thicker samples or heavy elements cause the beam to scatter multiple times. This multiple scattering produces complex nonlinear contrast that conventional methods cannot analyze.
+Electrons interact with matter roughly an order of magnitude more strongly than photons. This makes electron microscopy powerful, but it also means that thicker samples and heavy elements scatter the beam multiple times. This multiple scattering produces complex nonlinear contrast that conventional methods cannot analyze.
 
 We use deep learning to predict single-scattering signals from multiply-scattered diffraction patterns, enabling accurate analysis of much thicker crystalline samples.
 
@@ -80,7 +112,7 @@ We use deep learning to predict single-scattering signals from multiply-scattere
 Disordered nanocrystalline silicon.
 :::
 
-Many important materials are highly disordered — functional oxides, silicate glasses, amorphous electrolytes, polymers, and more. We are generalizing our ML inversion methods to work across the full spectrum, from disordered liquids to crystalline materials.
+Many important materials are highly disordered, including functional oxides, silicate glasses, amorphous electrolytes, and polymers. We are generalizing our ML inversion methods to work across the full spectrum, from disordered liquids to crystalline materials.
 ::::
 
 :::{anywidget} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/amorphous-si.js
@@ -113,7 +145,7 @@ Unlike light optics, electron microscopy has traditionally been limited to plane
 Bullseye patterned probes stamp identifiable patterns onto diffracted beams, enabling high-precision strain and orientation measurements.
 :::
 
-We also design _amplitude plates_ — patterned membranes inserted into the probe-forming aperture that stamp identifiable "bullseye" patterns onto each diffracted beam. This enables our analysis software to extract orientation and strain with much higher precision than conventional methods. See [patterned probes for high precision 4D-STEM bragg measurements](doi.org/10.1016/j.ultramic.2019.112890).
+We also design _amplitude plates_, patterned membranes inserted into the probe-forming aperture that stamp identifiable "bullseye" patterns onto each diffracted beam. This enables our analysis software to extract orientation and strain with much higher precision than conventional methods. See [patterned probes for high precision 4D-STEM bragg measurements](doi.org/10.1016/j.ultramic.2019.112890).
 
 ## Atomic Electron Tomography
 
@@ -126,7 +158,7 @@ We also design _amplitude plates_ — patterned membranes inserted into the prob
 ZrTe nanowire encapsulated in a double-walled carbon nanotube, solved with PAET.
 :::
 
-Our group pioneered ptychographic atomic electron tomography (PAET), combining ptychographic imaging with AET to significantly enhance precision and sensitivity for 3D atomic structure determination — including light elements that are invisible to conventional methods.
+Our group pioneered ptychographic atomic electron tomography (PAET), combining ptychographic imaging with AET to significantly enhance precision and sensitivity for 3D atomic structure determination, including light elements that are invisible to conventional methods.
 
 - [(2015) 3D positions of individual atoms in materials revealed by electron tomography](doi.org/10.1038/nmat4426)
 - [(2017) Deciphering chemical order/disorder and material properties at the single-atom level](doi.org/10.1038/nature21042)
@@ -165,7 +197,7 @@ Our group develops methods for imaging and analyzing materials at atomic resolut
 
 ## Scanning Probe Drift Correction
 
-In STEM and SPM, data is recorded sequentially as the probe scans, making measurements susceptible to sample drift from mechanical/thermal motion or beam-induced charging. We developed a drift correction method that combines multiple scans recorded at different angles, using the accurate fast-scan direction from each to correct the slow-scan direction — inspired by tomographic reconstruction algorithms.
+In STEM and SPM, data is recorded sequentially as the probe scans, making measurements susceptible to sample drift from mechanical/thermal motion or beam-induced charging. We developed a drift correction method that combines multiple scans recorded at different angles, using the accurate fast-scan direction from each to correct the slow-scan direction, inspired by tomographic reconstruction algorithms.
 
 Our open-source Matlab implementation is available on [GitHub](https://github.com/cophus/scanning-drift-corr).
 
@@ -175,7 +207,7 @@ TEM simulation algorithms are essential tools for experiment design, data analys
 
 ### The PRISM Algorithm
 
-The standard **multislice method** solves the Schrödinger equation with a split-step algorithm, alternating transmission (scattering through each slice) and propagation operators. While efficient for single-wavefunction TEM simulations, STEM requires a separate calculation for each probe position — potentially millions per scan.
+The standard **multislice method** solves the Schrödinger equation with a split-step algorithm, alternating transmission (scattering through each slice) and propagation operators. While efficient for single-wavefunction TEM simulations, STEM requires a separate calculation for each probe position, potentially millions per scan.
 
 Colin developed the **PRISM algorithm** to address this, achieving speedups of f² to f⁴ (with interpolation factor f typically 2–10) at negligible accuracy cost. For large scans, this can be orders of magnitude faster, especially for [inelastic scattering](doi.org/10.1103/PhysRevResearch.1.033186). Extensions include the [partitioned PRISM algorithm](doi.org/10.1017/S1431927621012083) and the related [Lattice Multislice Algorithm](https://arxiv.org/abs/2310.16829). PRISM is implemented in our [Prismatic code](doi.org/10.1016/j.micron.2021.103141) and in [abTEM](doi.org/10.12688/openreseurope.13015.2).
 

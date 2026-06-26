@@ -4,7 +4,7 @@ title: Gallery
 
 :::{anywidget} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/gallery.js
 {
-  "intro": "",
+  "intro": "A few moments from around the lab.",
   "image_base": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/gallery",
   "albums": [
     {
@@ -28,7 +28,14 @@ title: Gallery
       "title": "Lab Life (2026)",
       "caption": "",
       "images": [
+        "8ea6c21f-9fb6-4171-8813-409ecc582f42.jpg",
+        "IMG_0685.jpg",
+        "IMG_0807.jpg",
+        "IMG_1002.jpg",
+        "IMG_1096.jpg",
+        "IMG_1105.jpg",
         "IMG_4682.jpg",
+        "IMG_8427.jpg",
         "PXL_20260127_203409212.jpg",
         "PXL_20260211_211824164.jpg",
         "PXL_20260430_170838286.jpg",
@@ -57,7 +64,10 @@ title: Gallery
       "title": "Baseball (2026)",
       "caption": "",
       "images": [
-        "IMG_0984.jpg"
+        "IMG_0920.jpg",
+        "IMG_0984.jpg",
+        "IMG_0993.jpg",
+        "IMG_0994.jpg"
       ]
     },
     {
