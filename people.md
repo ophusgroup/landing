@@ -249,11 +249,11 @@ description: Current members and alumni of the Colin Ophus Lab at Stanford Unive
 :::{anywidget} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/person-card.js
 {
   "name": "Emanuel Tsegaye",
-  "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/blank_male.png",
+  "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/TsegayeEmanuel.jpg",
   "links": [
     {"label": "Email", "url": "mailto:etsegaye@stanford.edu"}
   ],
-  "bio": "Emanuel is a summer student in the Colin Ophus Lab."
+  "bio": "Emanuel is an undergraduate student in Bioengineering at Stanford University. His (broad) research interests include protein engineering, cell membrane mechanobiology, and most recently developing computational tools for materials science. Outside of the lab, he enjoys playing chess, running, and training jiu jitsu."
 }
 :::
 
