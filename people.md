@@ -261,7 +261,7 @@ description: Current members and alumni of the Colin Ophus Lab at Stanford Unive
 :::{anywidget} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/person-card.js
 {
   "name": "Sarah Gao",
-  "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/GaoSarah.png",
+  "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/GaoSarah.jpg",
   "links": [
     {"label": "Email", "url": "mailto:sargao@stanford.edu"}
   ],

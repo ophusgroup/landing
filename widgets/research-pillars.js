@@ -1,0 +1,229 @@
+// research-pillars.js — the three research pillars as one unified, full-width row.
+// Each column has an interactive panel on top, then a title, description, and links.
+// Hovering a column brings its panel to life and lets it grow past the column border.
+// Column 3 is the live nanocrystalline-silicon block; columns 1 and 2 are placeholders
+// until the STEM and computational widgets are ready.
+
+let THREE = null;
+const THREE_VERSION = "0.170.0";
+const THREE_MIRRORS = [
+  `https://cdn.jsdelivr.net/npm/three@${THREE_VERSION}/build/three.module.js`,
+  `https://unpkg.com/three@${THREE_VERSION}/build/three.module.js`,
+  `https://esm.sh/three@${THREE_VERSION}/build/three.module.js`,
+];
+async function ensureThree() {
+  if (THREE) return THREE;
+  if (globalThis.__three_module_cache) return (THREE = globalThis.__three_module_cache);
+  const errs = [];
+  for (const url of THREE_MIRRORS) {
+    try {
+      const resp = await fetch(url); if (!resp.ok) throw new Error("HTTP " + resp.status);
+      const blobUrl = URL.createObjectURL(new Blob([await resp.text()], { type: "application/javascript" }));
+      THREE = await import(blobUrl); globalThis.__three_module_cache = THREE; return THREE;
+    } catch (e) { errs.push(url.split("/")[2] + ": " + e.message); }
+  }
+  throw new Error("Could not load Three.js (" + errs.join("; ") + ")");
+}
+function detectDark() {
+  try {
+    const bg = getComputedStyle(document.body).backgroundColor; const m = bg.match(/\d+/g);
+    if (m && m.length >= 3) return (0.299 * +m[0] + 0.587 * +m[1] + 0.114 * +m[2]) / 255 < 0.5;
+  } catch (e) {}
+  return window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+}
+const MAT = {
+  light: { clear: 0xeef0ec, atom: [0.94, 0.78, 0.63], emissive: 0x2a2a2a, specular: 0xcccccc,
+           outline: 0x000000, tet: [0.35, 0.45, 0.95], tetOp: 0.38, edge: 0x1b2444, edgeOp: 0.4 },
+  dark:  { clear: 0x0c0f14, atom: [0.56, 0.47, 0.38], emissive: 0x050504, specular: 0x1c1c1c,
+           outline: 0x000000, tet: [0.30, 0.50, 0.95], tetOp: 0.12, edge: 0x8fb6ec, edgeOp: 0.5 },
+};
+
+const PILLARS = [
+  { kind: "stem", img: "card_experiments.jpg",
+    title: "Scanning Transmission Electron Microscopy",
+    desc: "We develop new experiments to capture more information at the atomic scale, including 4DSTEM, custom electron probes, and detectors.",
+    links: [["4DSTEM experiments", "#id-4dstem-experiments"], ["STEM probe design", "#stem-probe-wavefunction-control"]] },
+  { kind: "comp", img: "card_reconstruction.jpg",
+    title: "Computational Imaging and Data Analysis",
+    desc: "We turn detector data into structure and simulate microscopy, using ptychography, tomography, machine learning, and scattering simulations.",
+    links: [["py4DSTEM analysis", "#4dstem-analysis-with-py4dstem"], ["ML inversion", "#ml-inversion-of-multiple-scattering"], ["drift correction", "#scanning-probe-drift-correction"], ["simulations", "#quantum-mechanical-scattering-simulations"]] },
+  { kind: "materials",
+    title: "Atomic Scale Understanding of Materials",
+    desc: "We study real materials at the atomic scale, mapping their 3D structure, chemistry, and disorder.",
+    links: [["atomic electron tomography", "#atomic-electron-tomography"], ["atomic-resolution chemistry", "#atomic-resolution-imaging"], ["disordered materials", "#ml-characterization-of-disordered-materials"]] },
+];
+
+function render({ model, el }) {
+  const opt = (k, d) => { try { const v = model.get(k); return v == null ? d : v; } catch (e) { return d; } };
+  const dataUrl = opt("data_url", "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/nanocrystalline-si.json");
+  const imageBase = opt("image_base", "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/research");
+  const accent = opt("accent", "#8C1515");
+  const id = "rp_" + Math.random().toString(36).slice(2, 7);
+
+  el.innerHTML = `
+    <style>
+      .${id}-row { display:flex; align-items:stretch; gap:0; width:100%; overflow:visible;
+        margin:0.5rem 0 1rem; font-family:inherit; }
+      .${id}-col { flex:1 1 0; min-width:0; position:relative; display:flex; flex-direction:column;
+        padding:0 1.1rem 1rem; border-left:1px solid var(--${id}-rule); transition:z-index 0s; }
+      .${id}-col:first-child { border-left:0; }
+      .${id}-col.hot { z-index:6; }
+      .${id}-panel { position:relative; width:100%; aspect-ratio:5/4; overflow:visible; line-height:0;
+        border-radius:10px; transform-origin:center; transition:transform .4s cubic-bezier(.2,.7,.2,1);
+        background:var(--${id}-panelbg); }
+      .${id}-col.hot .${id}-panel { transform:scale(1.16); box-shadow:0 12px 40px rgba(0,0,0,.28); }
+      .${id}-panel canvas { display:block; width:100%; height:100%; border-radius:10px; }
+      .${id}-img { width:100%; height:100%; object-fit:cover; display:block; border-radius:10px; }
+      .${id}-title { font-size:1.05rem; font-weight:600; line-height:1.25; margin:.85rem 0 .15rem;
+        color:var(--${id}-fg); }
+      .${id}-bar { width:0; height:2px; background:${accent}; transition:width .3s ease; margin-bottom:.5rem; }
+      .${id}-col.hot .${id}-bar { width:34px; }
+      .${id}-desc { font-size:.86rem; line-height:1.5; color:var(--${id}-dim); margin:0 0 .6rem; }
+      .${id}-links { font-size:.82rem; line-height:1.7; color:var(--${id}-faint); }
+      .${id}-links a { color:var(--${id}-link); text-decoration:none; }
+      .${id}-links a:hover { text-decoration:underline; }
+      @media (max-width:640px){ .${id}-row{ flex-direction:column; } .${id}-col{ border-left:0; padding:0 0 1.2rem; } }
+      @media (prefers-reduced-motion: reduce){ .${id}-panel{ transition:none; } }
+    </style>
+    <div class="${id}-row">
+      ${PILLARS.map((p) => `
+        <div class="${id}-col" data-kind="${p.kind}">
+          <div class="${id}-panel">${p.kind === "materials" ? `<canvas></canvas>` : `<img class="${id}-img" src="${imageBase}/${p.img}" alt="${p.title}" loading="lazy">`}</div>
+          <div class="${id}-title">${p.title}</div>
+          <div class="${id}-bar"></div>
+          <div class="${id}-desc">${p.desc}</div>
+          <div class="${id}-links">${p.links.map(([t, h]) => `<a href="${h}">${t}</a>`).join(" · ")}</div>
+        </div>`).join("")}
+    </div>`;
+
+  const root = el.querySelector(`.${id}-row`);
+  function applyChrome() {
+    const dark = detectDark();
+    const v = (k, val) => root.style.setProperty(`--${id}-${k}`, val);
+    v("rule", dark ? "rgba(255,255,255,.10)" : "rgba(0,0,0,.10)");
+    v("panelbg", dark ? "#0c0f14" : "#eef0ec");
+    v("fg", dark ? "#e6e9ee" : "#1a1a1a");
+    v("dim", dark ? "#aab2bd" : "#4b5563");
+    v("faint", dark ? "#7b8593" : "#9aa3ad");
+    v("link", dark ? "#E8A0A0" : accent);
+  }
+  applyChrome();
+  const chromeObs = new MutationObserver(() => requestAnimationFrame(applyChrome));
+  chromeObs.observe(document.documentElement, { attributes: true });
+  chromeObs.observe(document.body, { attributes: true });
+
+  // Per-column hover: grow + raise the panel (the spill), and drive the 3D bloom.
+  const cols = [...el.querySelectorAll(`.${id}-col`)];
+  const hover = { materials: { value: false } };
+  cols.forEach((col) => {
+    col.addEventListener("pointerenter", () => { col.classList.add("hot"); if (col.dataset.kind === "materials") hover.materials.value = true; });
+    col.addEventListener("pointerleave", () => { col.classList.remove("hot"); if (col.dataset.kind === "materials") hover.materials.value = false; });
+  });
+
+  // Mount the live silicon block into column 3.
+  const matCanvas = el.querySelector(`.${id}-col[data-kind="materials"] canvas`);
+  const matStage = el.querySelector(`.${id}-col[data-kind="materials"] .${id}-panel`);
+  ensureThree()
+    .then((T) => fetch(dataUrl).then((r) => r.json()).then((data) => buildMaterials(T, data, matCanvas, matStage, hover.materials)))
+    .catch((err) => { if (matStage) matStage.innerHTML = `<div style="padding:1.5em;font:12px sans-serif;opacity:.6">3D failed: ${err.message}</div>`; });
+}
+
+function buildMaterials(THREE, data, canvas, stage, hoverRef) {
+  let theme = detectDark() ? MAT.dark : MAT.light;
+  const renderer = new THREE.WebGLRenderer({ antialias: true, canvas });
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+  renderer.setClearColor(new THREE.Color(theme.clear), 1);
+
+  const scene = new THREE.Scene();
+  scene.add(new THREE.AmbientLight(0xffffff, 0.9));
+  const d1 = new THREE.DirectionalLight(0xffffff, 0.9); d1.position.set(1.2, 1.5, 1.0); scene.add(d1);
+  const d2 = new THREE.DirectionalLight(0xffffff, 0.25); d2.position.set(-1, -0.5, -1); scene.add(d2);
+  const camera = new THREE.PerspectiveCamera(16, 1, 0.1, 8000);
+  const group = new THREE.Group(); group.rotation.x = 0.22; scene.add(group);
+
+  const n = data.num_atoms;
+  const base = new Float32Array(data.positions);
+  let maxR = 0;
+  for (let i = 0; i < n; i++) { const d = Math.hypot(base[i*3], base[i*3+1], base[i*3+2]); if (d > maxR) maxR = d; }
+
+  const sphereGeo = new THREE.SphereGeometry(1, 16, 12);
+  const atomMat = new THREE.MeshPhongMaterial({ color: new THREE.Color(theme.atom[0], theme.atom[1], theme.atom[2]), shininess: 28, specular: theme.specular, emissive: theme.emissive });
+  const outlineMat = new THREE.MeshBasicMaterial({ color: theme.outline, side: THREE.BackSide });
+  const atomMesh = new THREE.InstancedMesh(sphereGeo, atomMat, n); atomMesh.frustumCulled = false;
+  const outlineMesh = new THREE.InstancedMesh(sphereGeo, outlineMat, n); outlineMesh.frustumCulled = false;
+  const r = data.atom_radius * data.atom_scale, rOut = r + 0.02;
+  const dummy = new THREE.Object3D();
+  function setAtoms(bloom) {
+    const k = 1 + bloom * 0.55;
+    for (let i = 0; i < n; i++) {
+      dummy.position.set(base[i*3]*k, base[i*3+1]*k, base[i*3+2]*k);
+      dummy.scale.setScalar(r); dummy.updateMatrix(); atomMesh.setMatrixAt(i, dummy.matrix);
+      dummy.scale.setScalar(rOut); dummy.updateMatrix(); outlineMesh.setMatrixAt(i, dummy.matrix);
+    }
+    atomMesh.instanceMatrix.needsUpdate = true; outlineMesh.instanceMatrix.needsUpdate = true;
+  }
+  setAtoms(0); group.add(outlineMesh); group.add(atomMesh);
+
+  let tetMesh = null, edgeMesh = null;
+  const nT = data.num_tetrahedra || 0;
+  if (nT > 0) {
+    const tv = new Float32Array(data.tetrahedra_vertices);
+    const FACES = [[0,1,2],[0,1,3],[0,2,3],[1,2,3]], EDGES = [[0,1],[0,2],[0,3],[1,2],[1,3],[2,3]];
+    const facePos = new Float32Array(nT * FACES.length * 9), edgePos = new Float32Array(nT * EDGES.length * 6);
+    let fo = 0, eo = 0;
+    for (let t = 0; t < nT; t++) {
+      const b = t * 12;
+      const V = [[tv[b],tv[b+1],tv[b+2]],[tv[b+3],tv[b+4],tv[b+5]],[tv[b+6],tv[b+7],tv[b+8]],[tv[b+9],tv[b+10],tv[b+11]]];
+      for (const [a,bb,c] of FACES) { facePos[fo++]=V[a][0];facePos[fo++]=V[a][1];facePos[fo++]=V[a][2];facePos[fo++]=V[bb][0];facePos[fo++]=V[bb][1];facePos[fo++]=V[bb][2];facePos[fo++]=V[c][0];facePos[fo++]=V[c][1];facePos[fo++]=V[c][2]; }
+      for (const [a,bb] of EDGES) { edgePos[eo++]=V[a][0];edgePos[eo++]=V[a][1];edgePos[eo++]=V[a][2];edgePos[eo++]=V[bb][0];edgePos[eo++]=V[bb][1];edgePos[eo++]=V[bb][2]; }
+    }
+    const fgeo = new THREE.BufferGeometry(); fgeo.setAttribute("position", new THREE.BufferAttribute(facePos, 3)); fgeo.computeVertexNormals();
+    tetMesh = new THREE.Mesh(fgeo, new THREE.MeshPhongMaterial({ color: new THREE.Color(theme.tet[0], theme.tet[1], theme.tet[2]), shininess: 20, transparent: true, opacity: theme.tetOp, side: THREE.DoubleSide, depthWrite: false })); group.add(tetMesh);
+    const egeo = new THREE.BufferGeometry(); egeo.setAttribute("position", new THREE.BufferAttribute(edgePos, 3));
+    edgeMesh = new THREE.LineSegments(egeo, new THREE.LineBasicMaterial({ color: new THREE.Color(theme.edge), transparent: true, opacity: theme.edgeOp, depthWrite: false })); group.add(edgeMesh);
+  }
+
+  function applyTheme() {
+    requestAnimationFrame(() => {
+      theme = detectDark() ? MAT.dark : MAT.light;
+      renderer.setClearColor(new THREE.Color(theme.clear), 1);
+      atomMat.color.setRGB(theme.atom[0], theme.atom[1], theme.atom[2]);
+      atomMat.emissive.set(theme.emissive); atomMat.specular.set(theme.specular);
+      outlineMat.color.set(theme.outline);
+      if (tetMesh) tetMesh.material.color.setRGB(theme.tet[0], theme.tet[1], theme.tet[2]);
+      if (edgeMesh) edgeMesh.material.color.set(theme.edge);
+    });
+  }
+  applyTheme();
+  const themeObs = new MutationObserver(applyTheme);
+  themeObs.observe(document.documentElement, { attributes: true });
+  themeObs.observe(document.body, { attributes: true });
+
+  let lastW = 0, lastH = 0;
+  function resize() {
+    const w = Math.max(1, stage.clientWidth), h = Math.max(1, stage.clientHeight);
+    renderer.setSize(w, h, false); camera.aspect = w / h;
+    const fov = camera.fov * Math.PI / 180; camera.position.set(0, 0, (maxR * 1.15) / Math.tan(fov / 2));
+    camera.updateProjectionMatrix();
+  }
+
+  let bloom = 0, scale = 1;
+  function animate() {
+    requestAnimationFrame(animate);
+    const cw = stage.clientWidth, ch = stage.clientHeight;
+    if (cw > 1 && ch > 1 && (cw !== lastW || ch !== lastH)) { lastW = cw; lastH = ch; resize(); }
+    const hot = hoverRef.value;
+    const nb = bloom + ((hot ? 1 : 0) - bloom) * 0.07;
+    if (Math.abs(nb - bloom) > 0.0008) {
+      bloom = nb; setAtoms(bloom);
+      if (tetMesh) tetMesh.material.opacity = theme.tetOp * (1 - bloom);
+      if (edgeMesh) edgeMesh.material.opacity = theme.edgeOp * (1 - bloom);
+    }
+    const ts = hot ? 1.06 : 1.0; scale += (ts - scale) * 0.08; group.scale.setScalar(scale);
+    group.rotation.y += hot ? 0.006 : 0.0035;
+    renderer.render(scene, camera);
+  }
+  animate();
+}
+
+export default { render };

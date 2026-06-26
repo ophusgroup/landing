@@ -9,39 +9,9 @@ description: Research in 4DSTEM, atomic electron tomography, STEM probe design, 
 
 We develop new scanning transmission electron microscopy (STEM) experiments, reconstruction and machine learning algorithms, and open-source software. These tools let us image and understand materials atom by atom. Our research spans three areas:
 
-::::{grid} 1 1 3 3
-
-:::{card}
-![STEM probe wavefunctions](/images/research/card_experiments.jpg)
-
-**Scanning Transmission Electron Microscopy**
-
-We develop new experiments to capture more information at the atomic scale, including 4DSTEM, custom electron probes, and detectors.
-
-[4DSTEM experiments](#4dstem-experiments) · [STEM probe design](#stem-probe-wavefunction-control)
+:::{anywidget} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/research-pillars.js
+{}
 :::
-
-:::{card}
-![Atomic electron tomography reconstruction](/images/research/card_reconstruction.jpg)
-
-**Computational Imaging and Data Analysis**
-
-We turn detector data into structure and simulate microscopy, using ptychography, tomography, machine learning, and scattering simulations.
-
-[py4DSTEM analysis](#4dstem-analysis-with-py4dstem) · [ML inversion](#ml-inversion-of-multiple-scattering) · [drift correction](#scanning-probe-drift-correction) · [simulations](#quantum-mechanical-scattering-simulations)
-:::
-
-:::{card}
-![Disordered nanocrystalline silicon](/videos/card_materials.mp4)
-
-**Atomic Scale Understanding of Materials**
-
-We study real materials at the atomic scale, mapping their 3D structure, chemistry, and disorder.
-
-[atomic electron tomography](#atomic-electron-tomography) · [atomic-resolution chemistry](#atomic-resolution-imaging) · [disordered materials](#ml-characterization-of-disordered-materials)
-:::
-
-::::
 
 :::{anywidget} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/stem4d-sim.js
 {}

@@ -37,8 +37,10 @@ function detectDark() {
   return window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
 }
 const THEME = {
-  light: { clear: 0xeef0ec, atom: [0.94, 0.78, 0.63], outline: 0x000000, tet: [0.35, 0.45, 0.95], tetOp: 0.4 },
-  dark:  { clear: 0x0c0f14, atom: [0.66, 0.34, 0.30], outline: 0x05070a, tet: [0.55, 0.10, 0.10], tetOp: 0.22 },
+  light: { clear: 0xeef0ec, atom: [0.94, 0.78, 0.63], emissive: 0x2a2a2a, specular: 0xcccccc, outline: 0x000000,
+           tet: [0.35, 0.45, 0.95], tetOp: 0.38, edge: 0x1b2444, edgeOp: 0.4 },
+  dark:  { clear: 0x0c0f14, atom: [0.56, 0.47, 0.38], emissive: 0x050504, specular: 0x1c1c1c, outline: 0x000000,
+           tet: [0.30, 0.50, 0.95], tetOp: 0.12, edge: 0x8fb6ec, edgeOp: 0.5 },
 };
 
 function render({ model, el }) {
@@ -85,7 +87,7 @@ function render({ model, el }) {
     for (let i = 0; i < n; i++) { const d = Math.hypot(base[i*3], base[i*3+1], base[i*3+2]); if (d > maxR) maxR = d; }
 
     const sphereGeo = new THREE.SphereGeometry(1, 16, 12);
-    const atomMat = new THREE.MeshPhongMaterial({ color: new THREE.Color(theme.atom[0], theme.atom[1], theme.atom[2]), shininess: 28, specular: 0xcccccc, emissive: 0x2a2a2a });
+    const atomMat = new THREE.MeshPhongMaterial({ color: new THREE.Color(theme.atom[0], theme.atom[1], theme.atom[2]), shininess: 28, specular: theme.specular, emissive: theme.emissive });
     const outlineMat = new THREE.MeshBasicMaterial({ color: theme.outline, side: THREE.BackSide });
     const atomMesh = new THREE.InstancedMesh(sphereGeo, atomMat, n); atomMesh.frustumCulled = false;
     const outlineMesh = new THREE.InstancedMesh(sphereGeo, outlineMat, n); outlineMesh.frustumCulled = false;
@@ -103,13 +105,17 @@ function render({ model, el }) {
     setAtoms(0);
     group.add(outlineMesh); group.add(atomMesh);
 
-    // Translucent tetrahedra (fade out as the lattice blooms so the atoms read clearly).
-    let tetMesh = null;
+    // Translucent tetrahedra + crisp edge lines. The edges keep them legible on a dark
+    // background, where translucent faces alone wash out. Both fade as the lattice blooms.
+    let tetMesh = null, edgeMesh = null;
     const nT = data.num_tetrahedra || 0;
     if (nT > 0) {
       const tv = new Float32Array(data.tetrahedra_vertices);
       const FACES = [[0,1,2],[0,1,3],[0,2,3],[1,2,3]];
-      const facePos = new Float32Array(nT * FACES.length * 9); let fo = 0;
+      const EDGES = [[0,1],[0,2],[0,3],[1,2],[1,3],[2,3]];
+      const facePos = new Float32Array(nT * FACES.length * 9);
+      const edgePos = new Float32Array(nT * EDGES.length * 6);
+      let fo = 0, eo = 0;
       for (let t = 0; t < nT; t++) {
         const b = t * 12;
         const V = [[tv[b],tv[b+1],tv[b+2]],[tv[b+3],tv[b+4],tv[b+5]],[tv[b+6],tv[b+7],tv[b+8]],[tv[b+9],tv[b+10],tv[b+11]]];
@@ -118,22 +124,38 @@ function render({ model, el }) {
           facePos[fo++]=V[bb][0]; facePos[fo++]=V[bb][1]; facePos[fo++]=V[bb][2];
           facePos[fo++]=V[c][0]; facePos[fo++]=V[c][1]; facePos[fo++]=V[c][2];
         }
+        for (const [a, bb] of EDGES) {
+          edgePos[eo++]=V[a][0]; edgePos[eo++]=V[a][1]; edgePos[eo++]=V[a][2];
+          edgePos[eo++]=V[bb][0]; edgePos[eo++]=V[bb][1]; edgePos[eo++]=V[bb][2];
+        }
       }
       const fgeo = new THREE.BufferGeometry();
       fgeo.setAttribute("position", new THREE.BufferAttribute(facePos, 3));
       fgeo.computeVertexNormals();
       const fmat = new THREE.MeshPhongMaterial({ color: new THREE.Color(theme.tet[0], theme.tet[1], theme.tet[2]), shininess: 20, transparent: true, opacity: theme.tetOp, side: THREE.DoubleSide, depthWrite: false });
       tetMesh = new THREE.Mesh(fgeo, fmat); group.add(tetMesh);
+
+      const egeo = new THREE.BufferGeometry();
+      egeo.setAttribute("position", new THREE.BufferAttribute(edgePos, 3));
+      const emat = new THREE.LineBasicMaterial({ color: new THREE.Color(theme.edge), transparent: true, opacity: theme.edgeOp, depthWrite: false });
+      edgeMesh = new THREE.LineSegments(egeo, emat); group.add(edgeMesh);
     }
 
     // React to light/dark theme changes: flip the background and the atom/tetra colors.
+    // Deferred a frame so the page's new background has been recomputed before we read it.
     function applyTheme() {
-      theme = detectDark() ? THEME.dark : THEME.light;
-      renderer.setClearColor(new THREE.Color(theme.clear), 1);
-      atomMat.color.setRGB(theme.atom[0], theme.atom[1], theme.atom[2]);
-      outlineMat.color.set(theme.outline);
-      if (tetMesh) tetMesh.material.color.setRGB(theme.tet[0], theme.tet[1], theme.tet[2]);
+      requestAnimationFrame(() => {
+        theme = detectDark() ? THEME.dark : THEME.light;
+        renderer.setClearColor(new THREE.Color(theme.clear), 1);
+        atomMat.color.setRGB(theme.atom[0], theme.atom[1], theme.atom[2]);
+        atomMat.emissive.set(theme.emissive);
+        atomMat.specular.set(theme.specular);
+        outlineMat.color.set(theme.outline);
+        if (tetMesh) tetMesh.material.color.setRGB(theme.tet[0], theme.tet[1], theme.tet[2]);
+        if (edgeMesh) edgeMesh.material.color.set(theme.edge);
+      });
     }
+    applyTheme();
     const themeObs = new MutationObserver(applyTheme);
     themeObs.observe(document.documentElement, { attributes: true });
     themeObs.observe(document.body, { attributes: true });
@@ -160,6 +182,7 @@ function render({ model, el }) {
       if (Math.abs(nb - bloom) > 0.0008) {
         bloom = nb; setAtoms(bloom);
         if (tetMesh) tetMesh.material.opacity = theme.tetOp * (1 - bloom);
+        if (edgeMesh) edgeMesh.material.opacity = theme.edgeOp * (1 - bloom);
       }
       const ts = hover ? 1.08 : 1.0; scale += (ts - scale) * 0.08; group.scale.setScalar(scale);
       group.rotation.y += hover ? 0.006 : 0.0035;

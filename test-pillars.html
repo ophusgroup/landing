@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>research-pillars — local test</title>
+<style>
+  body { margin:0; font-family:-apple-system, system-ui, sans-serif; background:#ffffff; color:#1a1a1a; }
+  body.dark { background:#0e1116; color:#e8eaed; }
+  .page { max-width:1040px; margin:0 auto; padding:26px 22px 90px; }
+  .bar { display:flex; align-items:center; gap:12px; margin-bottom:6px; }
+  .bar h1 { flex:1; font-size:1.3rem; margin:0; }
+  button { padding:6px 12px; border:1px solid currentColor; border-radius:8px; background:transparent;
+    color:inherit; cursor:pointer; font-size:.85rem; opacity:.8; }
+  .hint { opacity:.6; font-size:.85rem; margin:0 0 22px; }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="bar"><h1>research-pillars — unified 3-column</h1><button id="theme">Toggle dark</button></div>
+  <p class="hint">Three edge-to-edge columns. Hover any column: its panel grows past the border and column 3's silicon block blooms. Three.js + data are local.</p>
+  <div id="mount"></div>
+</div>
+<script type="module">
+  import widget from "./widgets/research-pillars.js";
+  const data = { data_url: "/widgets/nanocrystalline-si.json", image_base: "/images/research", accent: "#8C1515" };
+  widget.render({ model: { get: (k) => data[k] }, el: document.getElementById("mount") });
+  document.getElementById("theme").onclick = () => document.body.classList.toggle("dark");
+</script>
+</body>
+</html>
