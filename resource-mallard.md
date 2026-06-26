@@ -3,7 +3,7 @@ title: Mallard SOP
 description: Setup and usage guide for Mallard, the COLab GPU compute server.
 ---
 
-:::{anywidget} https://cdn.jsdelivr.net/gh/ophusgroup/landing@61d8e5c/widgets/section-nav.js
+:::{anywidget} https://cdn.jsdelivr.net/gh/ophusgroup/landing@d7c89f4/widgets/section-nav.js
 {}
 :::
 

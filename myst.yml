@@ -19,17 +19,15 @@ project:
     - file: news.md
     - file: people.md
     - file: research.md
-      children:
-        - file: papers.md
-        - file: preprints.md
-        - file: funding.md
-        - file: interactive.md
+    - file: papers.md
     - file: teaching.md
     - file: resource-students.md
     - file: resource-mallard.md
-    - file: resource-interactive.md
     - file: resource-code.md
+    - file: interactive.md
     - file: facilities.md
+    - file: funding.md
+    - file: gallery.md
   abbreviations:
     4DSTEM: four dimensional scanning transmission electron microscopy
     4DSCED: four dimensional scanning confocal electron diffraction
@@ -79,29 +77,25 @@ site:
     - title: People
       url: /people
     - title: Research
-      children:
-        - title: Projects
-          url: /research
-        - title: Publications
-          url: /papers
-        - title: Preprints
-          url: /preprints
-        - title: Funding
-          url: /funding
-        - title: Interactive
-          url: /interactive
+      url: /research
+    - title: Publications
+      url: /papers
     - title: Teaching
       url: /teaching
     - title: Resources
       children:
         - title: Students
           url: /resource-students
-        - title: Mallard Compute
+        - title: Compute
           url: /resource-mallard
-        - title: Interactive
-          url: /resource-interactive
         - title: Code
           url: /resource-code
+        - title: Interactive
+          url: /interactive
         - title: Facilities
           url: /facilities
+        - title: Funding
+          url: /funding
+    - title: Gallery
+      url: /gallery
 
