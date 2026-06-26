@@ -32,12 +32,37 @@ function render({ model, el }) {
       border-color: ${accentColor};
       box-shadow: 0 0 0 2px ${accentColor}33;
     }
+    .${id}-tags-toggle {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45em;
+      padding: 0.4em 0.85em;
+      font-size: 0.85em;
+      border: 1px solid #d1d5db;
+      border-radius: 8px;
+      cursor: pointer;
+      background: #fff;
+      color: #374151;
+      user-select: none;
+      transition: all 0.15s ease;
+      margin-bottom: 0.6em;
+    }
+    .${id}-tags-toggle:hover { border-color: ${accentColor}; color: ${accentColor}; }
+    .${id}-chev {
+      display: inline-block;
+      font-size: 0.7em;
+      line-height: 1;
+      transition: transform 0.15s ease;
+    }
+    .${id}-tags-toggle.open .${id}-chev { transform: rotate(90deg); }
+    .${id}-tagcount { color: ${accentColor}; font-weight: 600; }
     .${id}-tags {
-      display: flex;
+      display: none;
       flex-wrap: wrap;
       gap: 0.4em;
       margin-bottom: 0.6em;
     }
+    .${id}-tags.open { display: flex; }
     .${id}-tag-cat {
       display: inline-block;
       font-size: 0.7em;
@@ -162,6 +187,9 @@ function render({ model, el }) {
     .${id}-dark .${id}-search { background: #1f2937; color: #e5e7eb; border-color: #4b5563; }
     .${id}-dark .${id}-search:focus { border-color: ${accentColorDark}; box-shadow: 0 0 0 2px ${accentColorDark}33; }
     .${id}-dark .${id}-tag-cat { color: #6b7280; }
+    .${id}-dark .${id}-tags-toggle { background: #1f2937; color: #9ca3af; border-color: #374151; }
+    .${id}-dark .${id}-tags-toggle:hover { border-color: #b05050; color: #d4a0a0; }
+    .${id}-dark .${id}-tagcount { color: ${accentColorDark}; }
     .${id}-dark .${id}-tag { background: #1f2937; color: #6b7280; border-color: #374151; }
     .${id}-dark .${id}-tag:hover { border-color: #b05050; color: #d4a0a0; }
     .${id}-dark .${id}-tag.active { background: #6b2020; color: #e5d0d0; border-color: #8C1515; }
@@ -261,7 +289,10 @@ function render({ model, el }) {
     wrap.innerHTML = `
       <div class="${id}-controls">
         <input class="${id}-search" type="text" placeholder="Search by title, author, or journal..." />
-        <div class="${id}-tags"></div>
+        <button class="${id}-tags-toggle" type="button" aria-expanded="false" aria-controls="${id}-tagsbox">
+          <span class="${id}-chev">&#9656;</span><span>Tags</span><span class="${id}-tagcount"></span>
+        </button>
+        <div class="${id}-tags" id="${id}-tagsbox"></div>
         <!-- years removed -->
         <div class="${id}-stats"></div>
       </div>
@@ -270,9 +301,21 @@ function render({ model, el }) {
 
     const searchInput = wrap.querySelector(`.${id}-search`);
     const tagsContainer = wrap.querySelector(`.${id}-tags`);
+    const tagsToggle = wrap.querySelector(`.${id}-tags-toggle`);
+    const tagCountEl = wrap.querySelector(`.${id}-tagcount`);
     const yearsContainer = wrap.querySelector(`.${id}-years`);
     const statsContainer = wrap.querySelector(`.${id}-stats`);
     const resultsContainer = wrap.querySelector(`.${id}-results`);
+
+    // Tags are collapsed by default to save space; toggle to reveal the pills.
+    tagsToggle.addEventListener("click", () => {
+      const open = tagsContainer.classList.toggle("open");
+      tagsToggle.classList.toggle("open", open);
+      tagsToggle.setAttribute("aria-expanded", open ? "true" : "false");
+    });
+    function updateTagCount() {
+      tagCountEl.textContent = activeTags.size ? `· ${activeTags.size} selected` : "";
+    }
 
     // Render tag pills with category labels
     let lastCat = -1;
@@ -295,6 +338,7 @@ function render({ model, el }) {
           activeTags.add(tag);
         }
         updateTagStyles();
+        updateTagCount();
         renderResults();
       });
       pill.dataset.tag = tag;
@@ -316,6 +360,7 @@ function render({ model, el }) {
     }
 
     function updateYearStyles() {
+      if (!yearsContainer) return; // year buttons were removed to save space
       yearsContainer.querySelectorAll(`.${id}-year-btn`).forEach((el) => {
         el.classList.toggle("active", activeYears.has(parseInt(el.dataset.year)));
       });
@@ -371,6 +416,7 @@ function render({ model, el }) {
           activeYears.clear();
           updateTagStyles();
           updateYearStyles();
+          updateTagCount();
           renderResults();
         });
       }
