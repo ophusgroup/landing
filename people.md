@@ -261,17 +261,17 @@ description: Current members and alumni of the Colin Ophus Lab at Stanford Unive
 :::{anywidget} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/person-card.js
 {
   "name": "Sarah Gao",
-  "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/blank_female.png",
+  "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/GaoSarah.png",
   "links": [
     {"label": "Email", "url": "mailto:sargao@stanford.edu"}
   ],
-  "bio": "Sarah is a summer student in the Colin Ophus Lab."
+  "bio": "Sarah is an undergraduate student at Stanford University, originally from San Diego. She is interested in math, computer science, and materials science. In her free time, she enjoys biking, going to the beach, and cooking."
 }
 :::
 
 ::::::
 
-## Honorary Members
+## Close Collaborators
 
 ::::::{grid} 1 2 3 4
 
@@ -280,7 +280,8 @@ description: Current members and alumni of the Colin Ophus Lab at Stanford Unive
   "name": "Kate Reidy",
   "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/ReidyKate.jpg",
   "links": [
-    {"label": "Email", "url": "mailto:kareidy@stanford.edu"}
+    {"label": "Email", "url": "mailto:kareidy@stanford.edu"},
+    {"label": "Website", "url": "https://reidygroup.stanford.edu/"}
   ],
   "bio": "Kate is a tenure-track Assistant Professor of Materials Science and Engineering at Stanford, a Gabilan Faculty Fellow, and a faculty affiliate of the Geballe Laboratory of Advanced Materials (GLAM). Her work combines advanced characterization with in situ microscopy to elucidate kinetic growth mechanisms, functional properties, and atomic-scale response to stimuli. She was previously a Miller Postdoctoral Fellow at UC Berkeley, and earned her PhD at MIT and BA at Trinity College Dublin. Her work has been recognized by the Microscopy Society of America, a Materials Research Society Gold Award, and MIT's Best Doctoral Thesis Award."
 }
@@ -320,17 +321,6 @@ description: Current members and alumni of the Colin Ophus Lab at Stanford Unive
 }
 :::
 
-:::{anywidget} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/person-card.js
-{
-  "name": "Antony Georgiadis",
-  "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/GeorgiadisAntony.jpg",
-  "pronouns": "he/him",
-  "links": [
-    {"label": "Website", "url": "https://dionne.stanford.edu/members/antony-georgiadis/"}
-  ],
-  "bio": "Antony is a PhD student in Materials Science and Engineering in the Jen Dionne Lab at Stanford. He earned his BS and MS in Optics from the Institute of Optics at the University of Rochester. He is interested in optics and photonics, education, and creating novel sensing devices."
-}
-:::
 
 ::::::
 
@@ -367,6 +357,18 @@ description: Current members and alumni of the Colin Ophus Lab at Stanford Unive
 ## Former Group Members
 
 ::::::{grid} 1 2 3 4
+
+:::{anywidget} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/person-card.js
+{
+  "name": "Antony Georgiadis",
+  "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/GeorgiadisAntony.jpg",
+  "pronouns": "he/him",
+  "links": [
+    {"label": "Website", "url": "https://dionne.stanford.edu/members/antony-georgiadis/"}
+  ],
+  "bio": "Antony is a PhD student in Materials Science and Engineering in the Jen Dionne Lab at Stanford. He earned his BS and MS in Optics from the Institute of Optics at the University of Rochester. He is interested in optics and photonics, education, and creating novel sensing devices."
+}
+:::
 
 :::{anywidget} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/person-card.js
 {

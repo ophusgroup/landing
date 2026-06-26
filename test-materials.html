@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>materials-block — local test</title>
+<style>
+  body { margin:0; font-family:-apple-system, system-ui, sans-serif; background:#fff; color:#1a1a1a;
+    transition:background .2s, color .2s; }
+  body.dark { background:#0e1116; color:#e8eaed; }
+  .page { max-width:760px; margin:0 auto; padding:28px 20px 90px; }
+  .bar { display:flex; align-items:center; gap:12px; margin-bottom:8px; }
+  .bar h1 { flex:1; font-size:1.25rem; margin:0; }
+  button { padding:6px 12px; border:1px solid currentColor; border-radius:8px; background:transparent;
+    color:inherit; cursor:pointer; font-size:.85rem; opacity:.8; }
+  .hint { opacity:.65; font-size:.85rem; margin:0 0 22px; }
+  .panels { display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:18px; }
+  .panel { border:0.5px solid rgba(127,127,127,.3); border-radius:12px; padding:6px; }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="bar"><h1>materials-block — nanocrystalline silicon</h1>
+    <button id="theme">Toggle dark</button></div>
+  <p class="hint">Hover a panel: the lattice should bloom apart, grow past its box, and spin a touch faster. Three.js loads from CDN; data is local.</p>
+  <div class="panels">
+    <div class="panel"><div id="m1"></div></div>
+    <div class="panel"><div id="m2"></div></div>
+  </div>
+</div>
+<script type="module">
+  import widget from "./widgets/materials-block.js";
+  const data = { data_url: "/widgets/nanocrystalline-si.json", aspect: "1 / 1" };
+  widget.render({ model: { get: (k) => data[k] }, el: document.getElementById("m1") });
+  widget.render({ model: { get: (k) => data[k] }, el: document.getElementById("m2") });
+  document.getElementById("theme").onclick = () => document.body.classList.toggle("dark");
+</script>
+</body>
+</html>
