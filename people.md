@@ -154,6 +154,7 @@ description: Current members and alumni of the Colin Ophus Lab at Stanford Unive
   "pronouns": "he/him",
   "links": [
     {"label": "Email", "url": "mailto:bobleesj@stanford.edu"},
+    {"label": "Website", "url": "https://bobleesj.github.io/"},
     {"label": "GitHub", "url": "https://github.com/bobleesj"},
     {"label": "ORCID", "url": "https://orcid.org/0000-0002-2367-3932"}
   ],
@@ -276,7 +277,7 @@ description: Current members and alumni of the Colin Ophus Lab at Stanford Unive
 
 :::{anywidget} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/person-card.js
 {
-  "name": "Professor Kate Reidy",
+  "name": "Kate Reidy",
   "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/ReidyKate.jpg",
   "links": [
     {"label": "Email", "url": "mailto:kareidy@stanford.edu"}
@@ -456,7 +457,7 @@ description: Current members and alumni of the Colin Ophus Lab at Stanford Unive
   "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/PelzPhilipp.jpg",
   "pronouns": "he/him",
   "links": [
-    {"label": "Website", "url": "https://pelzlab.science/people/staff/00_pelz_philipp.html"}
+    {"label": "Website", "url": "https://pelzlab.science/"}
   ],
   "bio": "Philipp is W2 Professor (Tenure Track) for Computational Materials Microscopy at Friedrich-Alexander Universität Erlangen-Nürnberg. He received his PhD in Physics from the University of Hamburg and the Max Planck Institute for the Structure and Dynamics of Matter, and was previously a postdoc at UC Berkeley and NCEM. His research focuses on computational imaging, autonomous systems, large-scale inverse problems, and electron and X-ray microscopy.",
   "papers": [
@@ -470,7 +471,7 @@ description: Current members and alumni of the Colin Ophus Lab at Stanford Unive
   "name": "Ellis Kennedy",
   "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/KennedyEllis.jpg",
   "pronouns": "she/her",
-  "bio": "Received her PhD in Mary Scott's group at UC Berkeley after interning in Colin's group and Mary's group. Formerly a postdoc in Kwabena Bediako's group at UC Berkeley, and now working as a postdoc at Los Alamos National Lab.",
+  "bio": "Received her PhD in Mary Scott's group at UC Berkeley after interning in Colin's group and Mary's group. Formerly a postdoc at UC Berkeley, and now working as a postdoc at Los Alamos National Lab.",
   "papers": [
     {"title": "Tilted fluctuation electron microscopy", "url": "https://doi.org/10.1063/5.0015532"}
   ]
