@@ -3,7 +3,7 @@ title: Resources
 description: Resources and onboarding information for new and prospective COLab members.
 ---
 
-:::{anywidget} https://cdn.jsdelivr.net/gh/ophusgroup/landing@61d8e5c/widgets/section-nav.js
+:::{anywidget} https://cdn.jsdelivr.net/gh/ophusgroup/landing@d7c89f4/widgets/section-nav.js
 {}
 :::
 

@@ -3,7 +3,7 @@ title: People
 description: Current members and alumni of the Colin Ophus Lab at Stanford University.
 ---
 
-:::{anywidget} https://cdn.jsdelivr.net/gh/ophusgroup/landing@61d8e5c/widgets/section-nav.js
+:::{anywidget} https://cdn.jsdelivr.net/gh/ophusgroup/landing@d7c89f4/widgets/section-nav.js
 {}
 :::
 
@@ -205,18 +205,12 @@ description: Current members and alumni of the Colin Ophus Lab at Stanford Unive
   "name": "Miti Shah",
   "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/ShahMiti.jpg",
   "pronouns": "she/her",
-  "bio": "Miti Shah is a PhD student at Stanford University with a background in Engineering Physics, Electrical Engineering, and Applied Physics from the University of Michigan. Her research interests include materials science, diffraction, and advanced electron microscopy. Previously, she conducted research in the Hovden Lab, where she led a two-year project that became "The Atlas of Fourier Transforms,"" a published educational resource. She was also awarded a National Science Foundation Graduate Research Fellowship.",
+  "bio": "Miti Shah is a PhD student at Stanford University with a background in Engineering Physics, Electrical Engineering, and Applied Physics from the University of Michigan. Her research interests include materials science, diffraction, and advanced electron microscopy. Previously, she conducted research in the Hovden Lab, where she led a two-year project that became \"The Atlas of Fourier Transforms,\" a published educational resource. She was also awarded a National Science Foundation Graduate Research Fellowship.",
   "papers": [
     {"title": "The Atlas of Fourier Transforms", "url": "https://fourieratlas.com/"}
   ]
 }
 :::
-
-::::::
-
-## Masters Students
-
-::::::{grid} 1 2 3 4
 
 :::{anywidget} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/person-card.js
 {
@@ -226,19 +220,70 @@ description: Current members and alumni of the Colin Ophus Lab at Stanford Unive
   "links": [
     {"label": "Email", "url": "mailto:darshanm@stanford.edu"}
   ],
-  "bio": "Darshan Mali is a master's student in Materials Science and Engineering at Stanford University. He earned his BTech (Honors) in Metallurgical Engineering and Materials Science from the Indian Institute of Technology Bombay, where he worked with Prof. Tanushree Choudhury on developing single-photon emitters in 2D materials. His current research interests include applying TEM for atomic-scale structure-property analysis."
+  "bio": "Darshan Mali is a PhD student in Materials Science and Engineering at Stanford University, primarily supervised by <a href='https://profiles.stanford.edu/bob-sinclair'>Prof. Robert Sinclair</a> and co-supervised by Prof. Colin Ophus. He earned his BTech (Honors) in Metallurgical Engineering and Materials Science from the Indian Institute of Technology Bombay, where he worked with Prof. Tanushree Choudhury on developing single-photon emitters in 2D materials. His current research interests include applying TEM for atomic-scale structure-property analysis."
+}
+:::
+
+:::{anywidget} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/person-card.js
+{
+  "name": "Evan Isbell",
+  "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/IsbellEvan.jpg",
+  "pronouns": "he/him",
+  "links": [
+    {"label": "Email", "url": "mailto:eisbell@stanford.edu"}
+  ],
+  "bio": "Evan is a PhD student in the Materials Science & Engineering department at Stanford where he is co-advised by Colin Ophus and <a href='https://xlab.stanford.edu/'>Debbie Senesky</a>. He received his B.S. in Mechanical Engineering from the University of Tulsa (TU) in 2022. He continues his work at Stanford developing characterization methods for mycelium biocomposites used in both terrestrial and extra-terrestrial construction use. Please don't hesitate to reach out to him if you are interested in engineering materials that use fungi!"
 }
 :::
 
 ::::::
 
+<!-- ## Masters Students (no current masters students) -->
+
 <!-- ## Student Rotations (commented out) -->
 
-<!-- ## Interns (commented out) -->
+## Interns
+
+::::::{grid} 1 2 3 4
+
+:::{anywidget} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/person-card.js
+{
+  "name": "Emanuel Tsegaye",
+  "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/blank_male.png",
+  "links": [
+    {"label": "Email", "url": "mailto:etsegaye@stanford.edu"}
+  ],
+  "bio": "Emanuel is a summer student in the Colin Ophus Lab."
+}
+:::
+
+:::{anywidget} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/person-card.js
+{
+  "name": "Sarah Gao",
+  "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/blank_female.png",
+  "links": [
+    {"label": "Email", "url": "mailto:sargao@stanford.edu"}
+  ],
+  "bio": "Sarah is a summer student in the Colin Ophus Lab."
+}
+:::
+
+::::::
 
 ## Honorary Members
 
 ::::::{grid} 1 2 3 4
+
+:::{anywidget} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/person-card.js
+{
+  "name": "Professor Kate Reidy",
+  "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/ReidyKate.jpg",
+  "links": [
+    {"label": "Email", "url": "mailto:kareidy@stanford.edu"}
+  ],
+  "bio": "Kate is a tenure-track Assistant Professor of Materials Science and Engineering at Stanford, a Gabilan Faculty Fellow, and a faculty affiliate of the Geballe Laboratory of Advanced Materials (GLAM). Her work combines advanced characterization with in situ microscopy to elucidate kinetic growth mechanisms, functional properties, and atomic-scale response to stimuli. She was previously a Miller Postdoctoral Fellow at UC Berkeley, and earned her PhD at MIT and BA at Trinity College Dublin. Her work has been recognized by the Microscopy Society of America, a Materials Research Society Gold Award, and MIT's Best Doctoral Thesis Award."
+}
+:::
 
 :::{anywidget} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/person-card.js
 {
