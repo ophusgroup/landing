@@ -680,15 +680,17 @@ function render({ model, el }) {
     const { potential, imW, imH, atoms } = generateSample({ pixelSize, cellDimX: cellX, cellDimY, cellDimZ, aLattice, sigma });
 
     // The beam stays centered. PASSIVE = the probe DEFOCUS sweeps: the cone cross-over slides and the
-    // detector shows the defocused shadow image (Ronchigram) of the lattice. HOVER = the sample scans
-    // left->right (atoms recycle at the edges) and the diffraction slides to match. Real FFT physics
-    // (probe x sample -> FFT) drives the detector; the scene reads the same defocus + scan, so they stay in sync.
+    // detector shows the defocused shadow image (Ronchigram) of the lattice. HOVER = the probe settles
+    // at a fairly large defocus (hovDefocus) while the sample scans left->right, so the magnified lattice
+    // shadow flies by in the bright-field disk. Real FFT physics (probe x sample -> FFT) drives the
+    // detector; the scene reads the same defocus + scan, so they stay in sync.
     let probeX = 0; const probeY = 0, gamma = initGamma;
     const initDefocus = model.get("init_defocus") || 0;  // debug: hold a static defocus
     const initScan = model.get("init_scan") || 0;        // debug: hold a static sample scan (A)
     const qMax = model.get("probe_q_max") || 0.5;        // aperture / convergence semi-angle (bigger = bigger disks)
     const defAmp = model.get("defocus_amp") || 280;      // passive defocus sweep (A): wide enough that the lattice visibly magnifies -> demagnifies
     const scanSpeed = model.get("scan_speed") || 7.0;    // hover sample scan rate (A/s)
+    const hovDefocus = model.get("hover_defocus") || 240; // under hover: hold a fairly large defocus so the BF disk shows the lattice shadow flying by as the sample scans
     const halfX = cellX / 2;
     let defocus = initDefocus, sampleShift = initScan, hov = 0;
 
@@ -717,7 +719,7 @@ function render({ model, el }) {
       if (!t0) t0 = now;
       const t = (now - t0) * 0.001;
       hov += ((hover ? 1 : 0) - hov) * 0.07;             // ease passive <-> hover
-      defocus = (1 - hov) * defAmp * (0.5 - 0.5 * Math.cos(t * 0.5)); // passive: focus -> overfocus -> focus (positive only: cross-over stays at/above the crystal, never the wide underfocus cone)
+      defocus = (1 - hov) * (defAmp * (0.5 - 0.5 * Math.cos(t * 0.5))) + hov * hovDefocus; // passive breathes focus<->overfocus; hover settles at ~hovDefocus so the lattice shadow flies by under the scanning probe
       sampleShift += hov * scanSpeed * 0.033;            // hover: scan the sample left -> right
       renderAll();
     }
