@@ -71,7 +71,8 @@ function lab2rgb(L, A, B) {
 }
 
 // Colin's cyclic phase colormap: 12 LAB control points, Fourier-interpolated to N, -> sRGB.
-function labPhaseLUT(N) {
+// chroma scales the a*/b* (saturation/vividness); lLift raises L* (brightness).
+function labPhaseLUT(N, chroma = 1, lLift = 0) {
   const LAB = [[50,80,70],[65,50,75],[80,20,85],[100,-20,95],[95,-50,90],[90,-90,75],
                [80,-50,0],[60,-10,-50],[50,40,-85],[40,55,-90],[35,80,-80],[40,90,-30]];
   const M = 12, out = new Uint8Array(N * 3), lab = [new Float64Array(N), new Float64Array(N), new Float64Array(N)];
@@ -84,7 +85,7 @@ function labPhaseLUT(N) {
       lab[ch][j] = v / M;
     }
   }
-  for (let j = 0; j < N; j++) { const c = lab2rgb(lab[0][j], lab[1][j], lab[2][j]); out[j * 3] = c[0]; out[j * 3 + 1] = c[1]; out[j * 3 + 2] = c[2]; }
+  for (let j = 0; j < N; j++) { const c = lab2rgb(Math.min(100, lab[0][j] + lLift), lab[1][j] * chroma, lab[2][j] * chroma); out[j * 3] = c[0]; out[j * 3 + 1] = c[1]; out[j * 3 + 2] = c[2]; }
   return out;
 }
 
@@ -165,7 +166,7 @@ function render({ model, el }) {
     // amplitude -> brightness LUT (their sin/gamma mapping), avoids pow+sin per pixel
     const brightLUT = new Uint8Array(256);
     for (let a = 0; a < 256; a++) { let t = a / 255; if (ampPower !== 1) t = Math.pow(t, ampPower); brightLUT[a] = (Math.sin(t * Math.PI / 2) * 255) | 0; }
-    const hueLUT = labPhaseLUT(256);
+    const hueLUT = labPhaseLUT(256, opt("chroma_boost", 1.48), opt("bright_lift", 12));
     const fc = document.createElement("canvas"); fc.width = Wf; fc.height = Hf;
     const fctx = fc.getContext("2d");
     const img = fctx.createImageData(Wf, Hf), d = img.data;
