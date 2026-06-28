@@ -179,16 +179,13 @@ function applyDefects(atoms, halfX, halfY, a) {
     for (let i=0;i<atoms.length;i++){ const at=atoms[i]; if(at.k>1) continue; const d=(at.x-x)**2+(at.y-y)**2; if(d<bd){bd=d;bi=i;} }
     return bi;
   };
+  // Every defect sits on the beam centre line (y=0) so the scan walks the probe straight through each.
+  // NONE leave a hole: dopants are substitutional, the Stone-Wales is a bond rotation, and the molecule
+  // sits ON TOP of an intact lattice (no clearing).
   // heavy substitutional dopants -> bright in the CBED, gold in the scene
-  for (const [x,y] of [[27,5],[44,-6],[-50,-3]]) { const i=nearest(x,y); if(i>=0) atoms[i].k=2; }
-  // vacancies, with a little inward relaxation of the surrounding atoms
-  for (const [x,y] of [[-27,-4],[52,5]]) {
-    const i=nearest(x,y); if(i<0) continue;
-    const vx=atoms[i].x, vy=atoms[i].y; atoms.splice(i,1);
-    for (let j=0;j<atoms.length;j++){ const at=atoms[j]; if(at.k>1) continue; const d=Math.hypot(at.x-vx,at.y-vy); if(d>0.1&&d<a*0.85){ at.x+=(vx-at.x)/d*0.3; at.y+=(vy-at.y)/d*0.3; } }
-  }
+  for (const x of [18, 42, -40, -54]) { const i=nearest(x,0); if(i>=0) atoms[i].k=2; }
   // Stone-Wales: rotate one bond 90 deg about its midpoint (two atoms swing into pentagon/heptagon)
-  { const i=nearest(-42,4);
+  { const i=nearest(-18,0);
     if(i>=0){ const xi=atoms[i].x, yi=atoms[i].y; let j=-1,bd=1e9;
       for(let m=0;m<atoms.length;m++){ if(m===i||atoms[m].k>1) continue; const d=(atoms[m].x-xi)**2+(atoms[m].y-yi)**2; if(d<bd){bd=d;j=m;} }
       if(j>=0){ const mx=(xi+atoms[j].x)/2, my=(yi+atoms[j].y)/2; for(const m of [i,j]){ const ex=atoms[m].x-mx, ey=atoms[m].y-my; atoms[m].x=mx-ey; atoms[m].y=my+ex; } } }
@@ -205,11 +202,8 @@ function addCaffeine(atoms, cx, cy) {
     [-2.25,-1.30,5],[0,2.60,5],                // carbonyls O2 O6
     [-2.52,1.45,3],[0,-2.90,3],[3.75,1.80,3],  // methyls on N1 N3 N7
   ];
-  const mol = M.map(([mx,my,k]) => ({ x: cx+mx, y: cy+my, k }));
-  // clear the lattice atoms it sits on so the molecule reads cleanly (adsorbed in a small clearing)
-  for (let i=atoms.length-1;i>=0;i--){ const at=atoms[i]; if(at.k>1) continue;
-    for (const c of mol){ if((at.x-c.x)**2+(at.y-c.y)**2 < 5.3){ atoms.splice(i,1); break; } } }
-  for (const c of mol) atoms.push({ x: c.x, y: c.y, z: -1.6, k: c.k });
+  // Adsorbed ON TOP of an INTACT lattice: lifted toward the beam (z<0 draws in front), no clearing.
+  for (const [mx,my,k] of M) atoms.push({ x: cx+mx, y: cy+my, z: -2.4, k });
 }
 
 // ============================================================
