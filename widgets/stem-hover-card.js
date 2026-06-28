@@ -98,17 +98,55 @@ function drawGlow(ctx, x, y, r, rgb, alpha) {
   ctx.fill();
 }
 
+function tracePolygon(ctx, points) {
+  if (!points.length) return;
+  ctx.beginPath();
+  ctx.moveTo(points[0].x, points[0].y);
+  for (let i = 1; i < points.length; i++) ctx.lineTo(points[i].x, points[i].y);
+  ctx.closePath();
+}
+
+function drawHatchRegion(ctx, points, angle, spacing, rgb, alpha, lineWidth) {
+  if (points.length < 3) return;
+  let minX = Infinity;
+  let minY = Infinity;
+  let maxX = -Infinity;
+  let maxY = -Infinity;
+  for (let i = 0; i < points.length; i++) {
+    const p = points[i];
+    if (p.x < minX) minX = p.x;
+    if (p.x > maxX) maxX = p.x;
+    if (p.y < minY) minY = p.y;
+    if (p.y > maxY) maxY = p.y;
+  }
+  const cx = (minX + maxX) * 0.5;
+  const cy = (minY + maxY) * 0.5;
+  const diag = Math.hypot(maxX - minX, maxY - minY) + 32;
+  const dx = Math.cos(angle);
+  const dy = Math.sin(angle);
+  const nx = -dy;
+  const ny = dx;
+
+  ctx.save();
+  tracePolygon(ctx, points);
+  ctx.clip();
+  ctx.strokeStyle = rgba(rgb, alpha);
+  ctx.lineWidth = lineWidth;
+  for (let offset = -diag; offset <= diag; offset += spacing) {
+    ctx.beginPath();
+    ctx.moveTo(cx + nx * offset - dx * diag, cy + ny * offset - dy * diag);
+    ctx.lineTo(cx + nx * offset + dx * diag, cy + ny * offset + dy * diag);
+    ctx.stroke();
+  }
+  ctx.restore();
+}
+
 function generateStructure(seed) {
   const random = makeRng(seed);
-  const colors = [
-    [246, 53, 20],
-    [36, 197, 255],
-    [224, 170, 24],
-  ];
   const grains = [
-    { xMin: -34, xMax: -7, rotY: -0.14, rotX: 0.03, color: colors[0] },
-    { xMin: -10, xMax: 10, rotY: 0.22, rotX: -0.06, color: colors[1] },
-    { xMin: 7, xMax: 34, rotY: -0.18, rotX: 0.08, color: colors[2] },
+    { xMin: -30, xMax: -6, rotY: -0.14, rotX: 0.03 },
+    { xMin: -8, xMax: 8, rotY: 0.22, rotX: -0.06 },
+    { xMin: 6, xMax: 30, rotY: -0.18, rotX: 0.08 },
   ];
   const basis = [
     { x: 0.25, y: 0.25, z: 0.25 },
@@ -117,7 +155,7 @@ function generateStructure(seed) {
     { x: 0.25, y: 0.75, z: 0.75 },
   ];
   const atoms = [];
-  const spacing = 2.25;
+  const spacing = 2.15;
 
   for (let g = 0; g < grains.length; g++) {
     const grain = grains[g];
@@ -133,18 +171,17 @@ function generateStructure(seed) {
             p = rotY(grain.rotY, p);
             p = rotX(grain.rotX, p);
             p.x += (grain.xMin + grain.xMax) * 0.5;
-            p.z += (random() - 0.5) * 0.25;
+            p.z += (random() - 0.5) * 0.16;
             if (p.x < grain.xMin || p.x > grain.xMax) continue;
-            if (p.y < -4.5 || p.y > 4.5) continue;
-            if (p.z < -14 || p.z > 14) continue;
+            if (p.y < -4.2 || p.y > 4.2) continue;
+            if (p.z < -12 || p.z > 12) continue;
             atoms.push({
               x: p.x,
               y: p.y,
               z: p.z,
               grain: g,
-              color: grain.color,
               phase: random() * Math.PI * 2,
-              amp: 0.03 + random() * 0.04,
+              amp: 0.02 + random() * 0.02,
             });
           }
         }
@@ -156,12 +193,12 @@ function generateStructure(seed) {
     atoms,
     grains,
     bounds: {
-      xMin: -37,
-      xMax: 37,
-      yMin: -4.5,
-      yMax: 4.5,
-      zMin: -14,
-      zMax: 14,
+      xMin: -32,
+      xMax: 32,
+      yMin: -4.2,
+      yMax: 4.2,
+      zMin: -12,
+      zMax: 12,
     },
   };
 }
@@ -237,59 +274,83 @@ function drawBeamColumn(ctx, state, view, layout, palette) {
   const bot = projectPoint({ x: state.probe.x, y: bottomY, z: state.probe.z }, view);
 
   const beamRgb = palette.beam;
-  const radius = 2.6 + state.live * 1.5;
+  const radius = 1.8 + state.live * 1.1;
   ctx.save();
-  ctx.strokeStyle = rgba(beamRgb, 0.75);
-  ctx.lineWidth = 2.2;
+  ctx.strokeStyle = rgba(beamRgb, 0.22);
+  ctx.lineWidth = 8 + state.live * 2;
   ctx.beginPath();
   ctx.moveTo(top.x, top.y);
   ctx.lineTo(bot.x, bot.y);
   ctx.stroke();
 
-  ctx.fillStyle = rgba(beamRgb, 0.12 + state.live * 0.08);
+  ctx.strokeStyle = rgba(beamRgb, 0.84);
+  ctx.lineWidth = 1.7;
+  ctx.beginPath();
+  ctx.moveTo(top.x, top.y);
+  ctx.lineTo(bot.x, bot.y);
+  ctx.stroke();
+
+  ctx.fillStyle = rgba(beamRgb, 0.09 + state.live * 0.04);
   ctx.beginPath();
   ctx.moveTo(top.x - radius, top.y);
   ctx.lineTo(top.x + radius, top.y);
-  ctx.lineTo(top2.x + 9 + state.live * 3, top2.y);
-  ctx.lineTo(top2.x - 9 - state.live * 3, top2.y);
+  ctx.lineTo(top2.x + 5.5 + state.live * 2.2, top2.y);
+  ctx.lineTo(top2.x - 5.5 - state.live * 2.2, top2.y);
   ctx.closePath();
   ctx.fill();
 
   ctx.beginPath();
-  ctx.moveTo(mid2.x - 9 - state.live * 2, mid2.y);
-  ctx.lineTo(mid2.x + 9 + state.live * 2, mid2.y);
-  ctx.lineTo(bot.x + 13 + state.live * 4, bot.y);
-  ctx.lineTo(bot.x - 13 - state.live * 4, bot.y);
+  ctx.moveTo(mid2.x - 6 - state.live * 1.6, mid2.y);
+  ctx.lineTo(mid2.x + 6 + state.live * 1.6, mid2.y);
+  ctx.lineTo(bot.x + 9 + state.live * 3, bot.y);
+  ctx.lineTo(bot.x - 9 - state.live * 3, bot.y);
   ctx.closePath();
   ctx.fill();
 
-  drawGlow(ctx, mid1.x, mid1.y, 15 + state.live * 8, beamRgb, 0.18 + state.live * 0.1);
-  drawGlow(ctx, bot.x, bot.y, 18 + state.live * 6, beamRgb, 0.1 + state.live * 0.08);
+  drawGlow(ctx, mid1.x, mid1.y, 11 + state.live * 6, beamRgb, 0.12 + state.live * 0.05);
+  drawGlow(ctx, bot.x, bot.y, 14 + state.live * 5, beamRgb, 0.08 + state.live * 0.05);
   ctx.restore();
 }
 
 function drawObjective(ctx, state, view, layout, palette) {
   const p = projectPoint({ x: state.probe.x, y: -39, z: state.probe.z }, view);
-  const w = 70 + state.live * 6;
-  const h = 20;
+  const w = 66 + state.live * 5;
   ctx.save();
-  const g = ctx.createLinearGradient(p.x, p.y - h, p.x, p.y + h);
-  g.addColorStop(0, palette.objectiveTop);
-  g.addColorStop(1, palette.objectiveBottom);
-  ctx.fillStyle = g;
-  roundedRect(ctx, p.x - w * 0.36, p.y - 11, w * 0.72, 22, 10);
+  const body = ctx.createLinearGradient(p.x, p.y - 22, p.x, p.y + 24);
+  body.addColorStop(0, palette.objectiveTop);
+  body.addColorStop(0.55, palette.objectiveMid);
+  body.addColorStop(1, palette.objectiveBottom);
+  ctx.fillStyle = body;
+  roundedRect(ctx, p.x - w * 0.24, p.y - 28, w * 0.48, 14, 7);
   ctx.fill();
-  ctx.strokeStyle = rgba(palette.objectiveEdge, 0.8);
-  ctx.lineWidth = 1.2;
+  roundedRect(ctx, p.x - w * 0.17, p.y - 16, w * 0.34, 28, 8);
+  ctx.fill();
+  roundedRect(ctx, p.x - w * 0.12, p.y + 7, w * 0.24, 18, 7);
+  ctx.fill();
+  ctx.strokeStyle = rgba(palette.objectiveEdge, 0.72);
+  ctx.lineWidth = 1;
+  roundedRect(ctx, p.x - w * 0.17, p.y - 16, w * 0.34, 28, 8);
+  ctx.stroke();
+  roundedRect(ctx, p.x - w * 0.12, p.y + 7, w * 0.24, 18, 7);
   ctx.stroke();
 
-  roundedRect(ctx, p.x - w * 0.24, p.y + 8, w * 0.48, 16, 8);
+  ctx.fillStyle = rgba(palette.objectiveShadow, 0.9);
+  ctx.beginPath();
+  ctx.ellipse(p.x, p.y + 27, 11, 6.2, 0, 0, Math.PI * 2);
   ctx.fill();
+  ctx.strokeStyle = rgba(palette.objectiveEdge, 0.68);
+  ctx.lineWidth = 0.9;
+  ctx.stroke();
+
+  ctx.strokeStyle = rgba(palette.objectiveHighlight, 0.7);
+  ctx.lineWidth = 1;
+  ctx.beginPath();
+  ctx.ellipse(p.x, p.y + 27, 5.8, 3.1, 0, 0, Math.PI * 2);
   ctx.stroke();
 
   ctx.fillStyle = palette.aperture;
   ctx.beginPath();
-  ctx.ellipse(p.x, p.y + 16, 8, 4.6, 0, 0, Math.PI * 2);
+  ctx.ellipse(p.x, p.y + 27, 3.1, 1.85, 0, 0, Math.PI * 2);
   ctx.fill();
   ctx.restore();
 }
@@ -345,35 +406,70 @@ function drawSample(ctx, structure, state, view, layout, palette) {
   ctx.fill();
   ctx.stroke();
 
+  function topPoint(u, v) {
+    return {
+      x: lerp(lerp(top.a.x, top.b.x, u), lerp(top.d.x, top.c.x, u), v),
+      y: lerp(lerp(top.a.y, top.b.y, u), lerp(top.d.y, top.c.y, u), v),
+    };
+  }
+
+  const steps = 12;
+  const edge1 = [];
+  const edge2 = [];
+  for (let i = 0; i <= steps; i++) {
+    const v = i / steps;
+    edge1.push(topPoint(0.34 + Math.sin(v * Math.PI * 1.1 + 0.15) * 0.028, v));
+    edge2.push(topPoint(0.64 + Math.sin(v * Math.PI * 1.05 + 0.95) * 0.024, v));
+  }
+
+  const regionLeft = [top.a, edge1[0], ...edge1.slice(1), top.d];
+  const regionMid = [edge1[0], edge2[0], ...edge2.slice(1), edge1[edge1.length - 1], ...edge1.slice(1, -1).reverse()];
+  const regionRight = [edge2[0], top.b, top.c, edge2[edge2.length - 1], ...edge2.slice(1, -1).reverse()];
+
+  ctx.save();
+  ctx.fillStyle = rgba(palette.grains[0], 0.085);
+  tracePolygon(ctx, regionLeft);
+  ctx.fill();
+  ctx.fillStyle = rgba(palette.grains[1], 0.08);
+  tracePolygon(ctx, regionMid);
+  ctx.fill();
+  ctx.fillStyle = rgba(palette.grains[2], 0.085);
+  tracePolygon(ctx, regionRight);
+  ctx.fill();
+  ctx.restore();
+
+  drawHatchRegion(ctx, regionLeft, -0.84, 8.5, palette.grains[0], 0.34, 1.2);
+  drawHatchRegion(ctx, regionMid, 0.92, 8.5, palette.grains[1], 0.34, 1.2);
+  drawHatchRegion(ctx, regionRight, -0.32, 8.5, palette.grains[2], 0.34, 1.2);
+
+  ctx.save();
+  ctx.strokeStyle = rgba([255, 255, 255], 0.08);
+  ctx.lineWidth = 1;
+  ctx.beginPath();
+  ctx.moveTo(edge1[0].x, edge1[0].y);
+  for (let i = 1; i < edge1.length; i++) ctx.lineTo(edge1[i].x, edge1[i].y);
+  ctx.moveTo(edge2[0].x, edge2[0].y);
+  for (let i = 1; i < edge2.length; i++) ctx.lineTo(edge2[i].x, edge2[i].y);
+  ctx.stroke();
+  ctx.restore();
+
   if (state.live > 0.15) {
     ctx.save();
-    ctx.strokeStyle = rgba(palette.grid, 0.16 + state.live * 0.16);
+    ctx.strokeStyle = rgba(palette.grid, 0.05 + state.live * 0.04);
     ctx.lineWidth = 1;
-    for (let i = 0; i <= 10; i++) {
-      const t = i / 10;
-      const p0 = {
-        x: lerp(top.a.x, top.b.x, t),
-        y: lerp(top.a.y, top.b.y, t),
-      };
-      const p1 = {
-        x: lerp(top.d.x, top.c.x, t),
-        y: lerp(top.d.y, top.c.y, t),
-      };
+    for (let i = 0; i <= 9; i++) {
+      const t = i / 9;
+      const p0 = topPoint(t, 0.08);
+      const p1 = topPoint(t, 0.92);
       ctx.beginPath();
       ctx.moveTo(p0.x, p0.y);
       ctx.lineTo(p1.x, p1.y);
       ctx.stroke();
     }
-    for (let i = 0; i <= 6; i++) {
-      const t = i / 6;
-      const p0 = {
-        x: lerp(top.a.x, top.d.x, t),
-        y: lerp(top.a.y, top.d.y, t),
-      };
-      const p1 = {
-        x: lerp(top.b.x, top.c.x, t),
-        y: lerp(top.b.y, top.c.y, t),
-      };
+    for (let i = 0; i <= 5; i++) {
+      const t = i / 5;
+      const p0 = topPoint(0.08, t);
+      const p1 = topPoint(0.92, t);
       ctx.beginPath();
       ctx.moveTo(p0.x, p0.y);
       ctx.lineTo(p1.x, p1.y);
@@ -390,41 +486,28 @@ function drawSample(ctx, structure, state, view, layout, palette) {
   state.samplePlane = plane;
   state.sampleTopQuad = top;
 
-  const atoms = structure.atoms.slice();
-  atoms.sort((m, n) => {
-    const dm = m.z * 1.5 - m.y * 0.15;
-    const dn = n.z * 1.5 - n.y * 0.15;
-    return dm - dn;
-  });
-
-  ctx.save();
-  for (let i = 0; i < atoms.length; i++) {
-    const atom = atoms[i];
-    const jitter = state.live * atom.amp;
-    const p = projectPoint(
-      {
-        x: atom.x + Math.sin(state.time * 2 + atom.phase) * jitter,
-        y: atom.y + Math.cos(state.time * 2.3 + atom.phase * 0.8) * jitter * 0.4,
-        z: atom.z + Math.sin(state.time * 1.7 + atom.phase * 1.2) * jitter * 0.6,
-      },
-      view
-    );
-    const r = 4.2 - atom.y * 0.04;
-    const fill = mix(atom.color, [255, 255, 255], 0.12);
-    drawGlow(ctx, p.x, p.y, r * 2.8, atom.color, 0.018 + state.live * 0.012);
-    ctx.fillStyle = rgba(fill, 0.98);
+  if (state.live > 0.08) {
+    const probeTop = projectPoint({ x: state.probe.x, y: topY - 0.18, z: state.probe.z }, view);
+    ctx.save();
     ctx.beginPath();
-    ctx.arc(p.x, p.y, r, 0, Math.PI * 2);
-    ctx.fill();
-    ctx.strokeStyle = rgba(mix(atom.color, [70, 38, 0], 0.45), 0.96);
-    ctx.lineWidth = 1;
-    ctx.stroke();
-    ctx.fillStyle = rgba([255, 255, 255], 0.78);
-    ctx.beginPath();
-    ctx.arc(p.x - r * 0.28, p.y - r * 0.26, r * 0.24, 0, Math.PI * 2);
-    ctx.fill();
+    ctx.ellipse(probeTop.x, probeTop.y, 36 + state.live * 8, 15 + state.live * 5, -0.22, 0, Math.PI * 2);
+    ctx.clip();
+    for (let row = -3; row <= 3; row++) {
+      for (let col = -4; col <= 4; col++) {
+        const px = probeTop.x + col * 7.5 + (row % 2) * 3.8;
+        const py =
+          probeTop.y +
+          row * 5.3 +
+          Math.sin(state.time * 2.2 + row * 0.6 + col * 0.5) * 0.55 * state.live;
+        const rr = 1.35 + Math.cos(state.time * 2.4 + row + col) * 0.12 * state.live;
+        ctx.fillStyle = rgba([242, 247, 252], 0.76);
+        ctx.beginPath();
+        ctx.arc(px, py, rr, 0, Math.PI * 2);
+        ctx.fill();
+      }
+    }
+    ctx.restore();
   }
-  ctx.restore();
 
   if (state.live > 0.18 && state.scanTrail.length > 1) {
     ctx.save();
@@ -452,9 +535,12 @@ function drawDiffractionPlane(ctx, state, view, layout, palette) {
   };
 
   ctx.save();
-  ctx.fillStyle = palette.diffPlane;
+  const planeFill = ctx.createLinearGradient(quad.a.x, quad.a.y, quad.d.x, quad.d.y);
+  planeFill.addColorStop(0, palette.diffPlane);
+  planeFill.addColorStop(1, palette.diffPlaneEdge);
+  ctx.fillStyle = planeFill;
   ctx.strokeStyle = palette.diffEdge;
-  ctx.lineWidth = 1.2;
+  ctx.lineWidth = 1;
   ctx.beginPath();
   ctx.moveTo(quad.a.x, quad.a.y);
   ctx.lineTo(quad.b.x, quad.b.y);
@@ -485,14 +571,14 @@ function drawDiffractionPlane(ctx, state, view, layout, palette) {
   }
 
   const c0 = planePoint(0, 0);
-  drawGlow(ctx, c0.x, c0.y, 22 + state.signals.bf * 16, [255, 255, 255], 0.34);
-  ctx.fillStyle = "rgba(255,255,255,0.98)";
+  drawGlow(ctx, c0.x, c0.y, 18 + state.signals.bf * 10, [255, 255, 255], 0.28);
+  ctx.fillStyle = "rgba(255,255,255,0.96)";
   ctx.beginPath();
-  ctx.arc(c0.x, c0.y, 5 + state.signals.bf * 5, 0, Math.PI * 2);
+  ctx.arc(c0.x, c0.y, 3.4 + state.signals.bf * 4.1, 0, Math.PI * 2);
   ctx.fill();
 
-  planeRing(0.34 + state.signals.adf * 0.05, 0.18, 1.4);
-  planeRing(0.58 + state.signals.haadf * 0.06, 0.14, 1.1);
+  planeRing(0.28 + state.signals.adf * 0.05, 0.11, 1);
+  planeRing(0.48 + state.signals.haadf * 0.05, 0.09, 0.9);
 
   const spotAngles = [-0.72, 0.12, 0.84];
   for (let g = 0; g < state.signals.grainWeights.length; g++) {
@@ -504,9 +590,9 @@ function drawDiffractionPlane(ctx, state, view, layout, palette) {
       const radii = [0.28 + g * 0.04, 0.48 + g * 0.05];
       for (let j = 0; j < radii.length; j++) {
         const p = planePoint(Math.cos(ang) * radii[j], Math.sin(ang) * radii[j]);
-        const rr = (j === 0 ? 2.2 : 1.4) + weight * (j === 0 ? 2.0 : 1.2);
-        drawGlow(ctx, p.x, p.y, rr * 5.2, [255, 255, 255], 0.12 + weight * 0.2);
-        ctx.fillStyle = rgba([246, 246, 246], 0.72 + weight * 0.22);
+        const rr = (j === 0 ? 1.15 : 0.84) + weight * (j === 0 ? 1.15 : 0.62);
+        drawGlow(ctx, p.x, p.y, rr * 5.6, [255, 255, 255], 0.08 + weight * 0.12);
+        ctx.fillStyle = rgba([248, 248, 248], 0.64 + weight * 0.2);
         ctx.beginPath();
         ctx.arc(p.x, p.y, rr, 0, Math.PI * 2);
         ctx.fill();
@@ -532,7 +618,7 @@ function drawDiffractionPlane(ctx, state, view, layout, palette) {
 
 function drawLabels(ctx, state, view, layout, palette) {
   ctx.save();
-  ctx.font = "600 13px ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif";
+  ctx.font = "600 12px 'Avenir Next', 'Segoe UI', 'Helvetica Neue', sans-serif";
   ctx.fillStyle = palette.label;
 
   const top = projectPoint({ x: state.probe.x, y: -36, z: state.probe.z }, view);
@@ -540,24 +626,24 @@ function drawLabels(ctx, state, view, layout, palette) {
   const diffLabel = projectPoint({ x: 22, y: layout.diffY - 18, z: -18 }, view);
   const probeLabel = projectPoint({ x: state.probe.x - 1.5, y: layout.sampleTopY - 22, z: state.probe.z - 2 }, view);
 
-  ctx.fillText("objective lens", top.x - 50, top.y - 18);
-  ctx.fillText("focused probe", probeLabel.x - 34, probeLabel.y);
+  ctx.fillText("objective lens", top.x - 42, top.y - 18);
+  ctx.fillText("focused probe", probeLabel.x - 30, probeLabel.y);
   ctx.fillText("polycrystalline specimen", sampleLabel.x, sampleLabel.y);
   ctx.fillText("diffraction pattern", diffLabel.x - 8, diffLabel.y);
 
-  ctx.font = "12px ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif";
+  ctx.font = "11px 'Avenir Next', 'Segoe UI', 'Helvetica Neue', sans-serif";
   ctx.fillStyle = palette.subtle;
-  ctx.fillText("scan coils + converged beam", top.x - 58, top.y - 2);
+  ctx.fillText("converged electron beam", top.x - 50, top.y - 2);
   ctx.fillText("grain contrast from atomic-scale structure", sampleLabel.x, sampleLabel.y + 18);
   ctx.fillText("live scattering response", diffLabel.x - 8, diffLabel.y + 16);
   ctx.restore();
 }
 
 function drawStatus(ctx, state, dims, palette) {
-  const x = dims.w - 174;
-  const y = 20;
-  const w = 144;
-  const h = 30;
+  const x = dims.w - 158;
+  const y = 18;
+  const w = 128;
+  const h = 28;
   ctx.save();
   ctx.fillStyle = state.active ? palette.pillActiveBg : palette.pillBg;
   ctx.strokeStyle = state.active ? palette.pillActiveBorder : palette.pillBorder;
@@ -566,10 +652,10 @@ function drawStatus(ctx, state, dims, palette) {
   ctx.fill();
   ctx.stroke();
   ctx.fillStyle = state.active ? palette.pillActiveFg : palette.pillFg;
-  ctx.font = "600 11px ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif";
+  ctx.font = "600 10px 'Avenir Next', 'Segoe UI', 'Helvetica Neue', sans-serif";
   ctx.textAlign = "center";
   ctx.textBaseline = "middle";
-  ctx.fillText(state.active ? "RASTER SCAN LIVE" : "HOVER TO SCAN", x + w * 0.5, y + h * 0.53);
+  ctx.fillText(state.active ? "LIVE SCAN" : "HOVER TO SCAN", x + w * 0.5, y + h * 0.53);
   ctx.restore();
 }
 
@@ -579,16 +665,16 @@ function drawLegend(ctx, state, dims, palette) {
     { label: "ADF", value: state.signals.adf, color: [130, 230, 255] },
     { label: "HAADF", value: state.signals.haadf, color: [255, 205, 92] },
   ];
-  const x0 = dims.w - 206;
-  const y0 = dims.h - 62;
+  const x0 = dims.w - 182;
+  const y0 = dims.h - 38;
   ctx.save();
-  ctx.font = "600 11px ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif";
+  ctx.font = "600 9px 'Avenir Next', 'Segoe UI', 'Helvetica Neue', sans-serif";
   for (let i = 0; i < items.length; i++) {
-    const x = x0 + i * 66;
+    const x = x0 + i * 58;
     ctx.fillStyle = rgba(items[i].color, 0.95);
     ctx.fillText(items[i].label, x, y0);
     ctx.fillStyle = palette.subtle;
-    ctx.fillText(`${Math.round(items[i].value * 100)}%`, x + 24, y0);
+    ctx.fillText(`${Math.round(items[i].value * 100)}%`, x + 18, y0);
   }
   ctx.restore();
 }
@@ -600,27 +686,41 @@ function drawScene(ctx, dims, structure, state, palette) {
   ctx.fillStyle = bg;
   ctx.fillRect(0, 0, dims.w, dims.h);
 
+  const wash = ctx.createRadialGradient(dims.w * 0.5, dims.h * 0.28, 0, dims.w * 0.5, dims.h * 0.46, dims.w * 0.58);
+  wash.addColorStop(0, rgba(palette.atmosphere, 0.12));
+  wash.addColorStop(1, rgba(palette.atmosphere, 0));
+  ctx.fillStyle = wash;
+  ctx.fillRect(0, 0, dims.w, dims.h);
+
+  const column = ctx.createLinearGradient(dims.w * 0.5, 0, dims.w * 0.5, dims.h);
+  column.addColorStop(0, rgba(palette.columnGlow, 0.014));
+  column.addColorStop(0.35, rgba(palette.columnGlow, 0.045));
+  column.addColorStop(1, rgba(palette.columnGlow, 0.018));
+  ctx.fillStyle = column;
+  roundedRect(ctx, dims.w * 0.5 - 34, 20, 68, dims.h - 40, 36);
+  ctx.fill();
+
   const liveEase = ease(state.live);
   const view = {
     cx: dims.w * 0.5,
-    cy: lerp(dims.h * 0.4, dims.h * 0.375, liveEase),
-    scale: lerp(Math.min(dims.w * 0.0082, 7.2), Math.min(dims.w * 0.0091, 8.1), liveEase),
-    scaleY: lerp(Math.min(dims.w * 0.0075, 6.6), Math.min(dims.w * 0.0083, 7.4), liveEase),
-    skewX: lerp(-5.2, -6.0, liveEase),
-    skewY: lerp(-1.95, -2.35, liveEase),
+    cy: lerp(dims.h * 0.43, dims.h * 0.405, liveEase),
+    scale: lerp(Math.min(dims.w * 0.0072, 6.1), Math.min(dims.w * 0.0081, 7), liveEase),
+    scaleY: lerp(Math.min(dims.w * 0.0067, 5.7), Math.min(dims.w * 0.0075, 6.5), liveEase),
+    skewX: lerp(-4.5, -5.1, liveEase),
+    skewY: lerp(-1.65, -2.05, liveEase),
   };
   const layout = {
-    sampleTopY: -5.4,
-    sampleBottomY: 5.4,
-    diffY: lerp(24, 30, liveEase),
+    sampleTopY: -4.9,
+    sampleBottomY: 4.9,
+    diffY: lerp(21, 27, liveEase),
   };
 
   const diffGlowY = projectPoint({ x: 0, y: layout.diffY, z: 0 }, view).y;
-  const baseGlow = ctx.createLinearGradient(0, diffGlowY - 80, 0, dims.h);
+  const baseGlow = ctx.createLinearGradient(0, diffGlowY - 60, 0, dims.h);
   baseGlow.addColorStop(0, rgba(palette.floorGlow, 0));
-  baseGlow.addColorStop(1, rgba(palette.floorGlow, 0.08 + liveEase * 0.08));
+  baseGlow.addColorStop(1, rgba(palette.floorGlow, 0.03 + liveEase * 0.035));
   ctx.fillStyle = baseGlow;
-  ctx.fillRect(0, diffGlowY - 80, dims.w, dims.h - diffGlowY + 80);
+  ctx.fillRect(0, diffGlowY - 60, dims.w, dims.h - diffGlowY + 60);
 
   drawDiffractionPlane(ctx, state, view, layout, palette);
   drawBeamColumn(ctx, state, view, layout, palette);
@@ -628,7 +728,7 @@ function drawScene(ctx, dims, structure, state, palette) {
   drawObjective(ctx, state, view, layout, palette);
   drawStatus(ctx, state, dims, palette);
   drawLegend(ctx, state, dims, palette);
-  if (state.live > 0.18) drawLabels(ctx, state, view, layout, palette);
+  if (state.live > 0.42) drawLabels(ctx, state, view, layout, palette);
 }
 
 function render({ model, el }) {
@@ -644,22 +744,24 @@ function render({ model, el }) {
   const style = document.createElement("style");
   style.textContent = `
     .${id}-wrap {
-      background: var(--${id}-bg, #0f1216);
+      background:
+        radial-gradient(circle at top left, var(--${id}-sheen, rgba(255,255,255,0.05)), transparent 26%),
+        linear-gradient(180deg, var(--${id}-bg, #0f1216), var(--${id}-bg2, #0c1015));
       color: var(--${id}-fg, #dfe6ef);
       border: 1px solid var(--${id}-border, #28313a);
-      border-radius: 18px;
-      padding: 16px;
+      border-radius: 24px;
+      padding: 16px 16px 12px;
       box-sizing: border-box;
       width: 100%;
       max-width: 1080px;
-      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      box-shadow: 0 10px 34px rgba(0, 0, 0, 0.12);
+      font-family: "Avenir Next", "Segoe UI", "Helvetica Neue", sans-serif;
+      box-shadow: 0 18px 46px rgba(0, 0, 0, 0.14);
       transition: transform 260ms ease, box-shadow 260ms ease, border-color 220ms ease, background 220ms ease;
       outline: none;
     }
     .${id}-wrap.is-live {
       transform: translateY(-2px);
-      box-shadow: 0 18px 48px rgba(0, 0, 0, 0.18);
+      box-shadow: 0 26px 60px rgba(0, 0, 0, 0.18);
       border-color: var(--${id}-borderlive, #48c59f);
     }
     .${id}-head {
@@ -667,41 +769,53 @@ function render({ model, el }) {
       justify-content: space-between;
       gap: 16px;
       align-items: flex-start;
-      margin-bottom: 12px;
+      margin-bottom: 10px;
+    }
+    .${id}-eyebrow {
+      margin: 0 0 6px 0;
+      font-size: 10px;
+      line-height: 1;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--${id}-sub, #90a0b2);
     }
     .${id}-title {
       margin: 0;
-      font-size: 18px;
-      line-height: 1.15;
+      font-size: 19px;
+      line-height: 1.08;
       font-weight: 700;
       color: var(--${id}-title, #f5f8fc);
+      letter-spacing: -0.02em;
     }
     .${id}-subtitle {
       margin: 6px 0 0 0;
-      max-width: 66ch;
-      font-size: 13px;
+      max-width: 52ch;
+      font-size: 12.5px;
       line-height: 1.45;
       color: var(--${id}-sub, #90a0b2);
     }
     .${id}-hint {
       flex: 0 0 auto;
       align-self: center;
-      font-size: 11px;
+      font-size: 10px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
       color: var(--${id}-sub, #90a0b2);
       text-align: right;
-      line-height: 1.35;
+      line-height: 1.45;
     }
     .${id}-viewport {
       position: relative;
-      min-height: 290px;
-      border-radius: 16px;
+      min-height: 360px;
+      border-radius: 20px;
       overflow: hidden;
       background: var(--${id}-viewport, #071018);
       border: 1px solid var(--${id}-viewborder, rgba(255,255,255,0.08));
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.05);
       transition: min-height 360ms cubic-bezier(0.2, 0.8, 0.2, 1), border-color 220ms ease;
     }
     .${id}-wrap.is-live .${id}-viewport {
-      min-height: 420px;
+      min-height: 450px;
       border-color: var(--${id}-viewborderlive, rgba(73, 197, 158, 0.25));
     }
     .${id}-canvas {
@@ -716,21 +830,12 @@ function render({ model, el }) {
       justify-content: space-between;
       gap: 12px;
       align-items: center;
-      font-size: 12px;
+      font-size: 11px;
       color: var(--${id}-sub, #90a0b2);
       flex-wrap: wrap;
     }
-    .${id}-chips {
-      display: flex;
-      gap: 8px;
-      flex-wrap: wrap;
-    }
-    .${id}-chip {
-      padding: 4px 8px;
-      border-radius: 999px;
-      background: var(--${id}-chipbg, rgba(255,255,255,0.04));
-      border: 1px solid var(--${id}-chipborder, rgba(255,255,255,0.08));
-      color: var(--${id}-chipfg, #c7d1dc);
+    .${id}-caption {
+      max-width: 66ch;
     }
     @media (max-width: 760px) {
       .${id}-head {
@@ -742,7 +847,7 @@ function render({ model, el }) {
       }
       .${id}-viewport,
       .${id}-wrap.is-live .${id}-viewport {
-        min-height: 260px;
+        min-height: 300px;
       }
     }
     @media (prefers-reduced-motion: reduce) {
@@ -760,21 +865,17 @@ function render({ model, el }) {
   wrap.innerHTML = `
     <div class="${id}-head">
       <div>
+        <div class="${id}-eyebrow">STEM Experiments</div>
         <div class="${id}-title">${title}</div>
         <p class="${id}-subtitle">${subtitle}</p>
       </div>
-      <div class="${id}-hint">Hover to start the scan.<br>Move across the sample to steer the probe.</div>
+      <div class="${id}-hint">Instrument Schematic<br>Hover to activate</div>
     </div>
     <div class="${id}-viewport">
       <canvas class="${id}-canvas"></canvas>
     </div>
     <div class="${id}-footer">
-      <div>This version mirrors the notebook schematic: lens, probe, specimen, and diffraction plane.</div>
-      <div class="${id}-chips">
-        <span class="${id}-chip">probe scan</span>
-        <span class="${id}-chip">polycrystal</span>
-        <span class="${id}-chip">diffraction</span>
-      </div>
+      <div class="${id}-caption">Focused probe, polycrystalline specimen, and diffraction response in a clean, notebook-inspired instrument view.</div>
     </div>
   `;
   el.appendChild(wrap);
@@ -782,30 +883,38 @@ function render({ model, el }) {
   const palettes = {
     dark: {
       bg: "#0f1216",
+      bg2: "#0a0e13",
       fg: "#dfe6ef",
       title: "#f4f8fd",
       sub: "#93a2b3",
       border: "#28313a",
       borderlive: "#48c59f",
+      sheen: "rgba(255,255,255,0.045)",
       viewport: "#081018",
       viewborder: "rgba(255,255,255,0.08)",
       viewborderlive: "rgba(73,197,158,0.24)",
-      chipbg: "rgba(255,255,255,0.04)",
-      chipborder: "rgba(255,255,255,0.08)",
-      chipfg: "#c8d2dc",
       sceneTop: "#071019",
-      sceneBottom: "#060b10",
-      sampleTop: "rgba(34, 48, 64, 0.58)",
-      sampleFace: "rgba(20, 32, 44, 0.62)",
-      sampleSide: "rgba(16, 25, 36, 0.72)",
-      sampleEdge: "rgba(174, 214, 255, 0.18)",
+      sceneBottom: "#071019",
+      sampleTop: "rgba(41, 52, 66, 0.26)",
+      sampleFace: "rgba(29, 38, 50, 0.24)",
+      sampleSide: "rgba(20, 28, 38, 0.34)",
+      sampleEdge: "rgba(174, 214, 255, 0.14)",
       grid: [126, 176, 224],
+      grains: [
+        [206, 144, 130],
+        [150, 199, 218],
+        [203, 185, 139],
+      ],
       objectiveTop: "#39444e",
+      objectiveMid: "#78828d",
       objectiveBottom: "#1b222b",
       objectiveEdge: [148, 164, 178],
+      objectiveHighlight: [214, 226, 236],
+      objectiveShadow: [26, 32, 39],
       aperture: "rgba(10, 10, 12, 0.95)",
-      beam: [95, 255, 130],
+      beam: [112, 236, 196],
       diffPlane: "rgba(8, 8, 8, 1)",
+      diffPlaneEdge: "rgba(18, 18, 18, 1)",
       diffEdge: "rgba(180, 210, 255, 0.22)",
       label: "rgba(223, 238, 252, 0.95)",
       subtle: "rgba(154, 173, 192, 0.84)",
@@ -815,34 +924,44 @@ function render({ model, el }) {
       pillActiveBg: "rgba(72, 197, 159, 0.16)",
       pillActiveBorder: "rgba(94, 233, 187, 0.4)",
       pillActiveFg: "rgba(183, 255, 221, 0.95)",
-      floorGlow: [60, 255, 138],
+      floorGlow: [76, 226, 186],
+      atmosphere: [86, 156, 236],
+      columnGlow: [76, 127, 185],
     },
     light: {
       bg: "#f5f7f4",
+      bg2: "#eef3f0",
       fg: "#203042",
       title: "#13202d",
       sub: "#5f6e7d",
       border: "#d3ddd2",
       borderlive: "#66a789",
+      sheen: "rgba(255,255,255,0.75)",
       viewport: "#fdfefe",
       viewborder: "rgba(19, 33, 45, 0.08)",
       viewborderlive: "rgba(66, 153, 119, 0.24)",
-      chipbg: "rgba(255,255,255,0.82)",
-      chipborder: "rgba(19, 33, 45, 0.08)",
-      chipfg: "#384656",
       sceneTop: "#fdfefe",
       sceneBottom: "#edf2f6",
-      sampleTop: "rgba(236, 242, 248, 0.94)",
-      sampleFace: "rgba(220, 230, 239, 0.9)",
-      sampleSide: "rgba(209, 221, 232, 0.94)",
-      sampleEdge: "rgba(90, 116, 143, 0.26)",
+      sampleTop: "rgba(236, 242, 248, 0.72)",
+      sampleFace: "rgba(220, 230, 239, 0.56)",
+      sampleSide: "rgba(209, 221, 232, 0.64)",
+      sampleEdge: "rgba(90, 116, 143, 0.18)",
       grid: [126, 150, 184],
+      grains: [
+        [169, 92, 76],
+        [74, 146, 172],
+        [168, 138, 70],
+      ],
       objectiveTop: "#d8dde2",
+      objectiveMid: "#bcc4cc",
       objectiveBottom: "#adb6bf",
       objectiveEdge: [124, 135, 145],
+      objectiveHighlight: [248, 250, 252],
+      objectiveShadow: [84, 95, 106],
       aperture: "rgba(32, 34, 38, 0.92)",
-      beam: [48, 234, 87],
+      beam: [36, 192, 166],
       diffPlane: "rgba(10, 10, 10, 1)",
+      diffPlaneEdge: "rgba(26, 26, 26, 1)",
       diffEdge: "rgba(68, 84, 102, 0.24)",
       label: "rgba(16, 30, 42, 0.92)",
       subtle: "rgba(71, 86, 102, 0.84)",
@@ -852,7 +971,9 @@ function render({ model, el }) {
       pillActiveBg: "rgba(72, 197, 159, 0.14)",
       pillActiveBorder: "rgba(66, 153, 119, 0.32)",
       pillActiveFg: "rgba(24, 95, 73, 0.95)",
-      floorGlow: [46, 188, 107],
+      floorGlow: [58, 180, 156],
+      atmosphere: [133, 174, 214],
+      columnGlow: [154, 180, 208],
     },
   };
 
@@ -908,16 +1029,23 @@ function render({ model, el }) {
         k === "sampleSide" ||
         k === "sampleEdge" ||
         k === "grid" ||
+        k === "grains" ||
         k === "objectiveTop" ||
+        k === "objectiveMid" ||
         k === "objectiveBottom" ||
         k === "objectiveEdge" ||
+        k === "objectiveHighlight" ||
+        k === "objectiveShadow" ||
         k === "aperture" ||
         k === "beam" ||
         k === "diffPlane" ||
+        k === "diffPlaneEdge" ||
         k === "diffEdge" ||
         k === "label" ||
         k === "subtle" ||
-        k === "floorGlow"
+        k === "floorGlow" ||
+        k === "atmosphere" ||
+        k === "columnGlow"
       ) {
         continue;
       }

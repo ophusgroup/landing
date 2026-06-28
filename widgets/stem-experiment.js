@@ -517,6 +517,12 @@ function renderScene(ctx, W, H, atoms, view, probeX, probeY, qMax, defocus, dpCa
   ctx.lineTo(c2.sx,c2.sy); ctx.lineTo(c3.sx,c3.sy);
   ctx.closePath(); ctx.stroke();
 
+  // ---- Probe cone, LOWER pass (sample plane -> detector): drawn BEHIND the atoms so the sample sheet
+  // occludes the part of the beam that is below it. (Affine DP centre used by both cone passes.)
+  const dpCenterSx = c0.sx + (c1.sx - c0.sx) / 2 + (c3.sx - c0.sx) / 2;
+  const dpCenterSy = c0.sy + (c1.sy - c0.sy) / 2 + (c3.sy - c0.sy) / 2;
+  drawProbeCone(ctx, view, probeX, probeY, qMax, defocus, dpSize, zDP, zBeamSrc, halfZ, cropSize, pixelSize, dpCenterSx, dpCenterSy, dpZoom, "lower");
+
   // ---- Draw atoms (sorted by depth, back to front) ----
   // Sample scan: shift the crystal in x and WRAP it (modulo) so atoms that leave the right edge
   // reappear on the left -- the count stays constant, none vanish. The cell is a whole number of
@@ -579,26 +585,24 @@ function renderScene(ctx, W, H, atoms, view, probeX, probeY, qMax, defocus, dpCa
   }
   ctx.globalAlpha = 1;
 
-  // ---- Draw probe cone ----
-  // Affine center: the transform maps pixel (imgW/2, imgH/2) to this screen point
-  const dpCenterSx = c0.sx + (c1.sx - c0.sx) / 2 + (c3.sx - c0.sx) / 2;
-  const dpCenterSy = c0.sy + (c1.sy - c0.sy) / 2 + (c3.sy - c0.sy) / 2;
-  drawProbeCone(ctx, view, probeX, probeY, qMax, defocus, dpSize, zDP, zBeamSrc, halfZ, cropSize, pixelSize, dpCenterSx, dpCenterSy, dpZoom);
+  // ---- Probe cone, UPPER pass (aperture -> cross-over -> sample plane) + the beam's circular
+  // projection in the sample plane: drawn AFTER the atoms so it reads in front of the sample. ----
+  drawProbeCone(ctx, view, probeX, probeY, qMax, defocus, dpSize, zDP, zBeamSrc, halfZ, cropSize, pixelSize, dpCenterSx, dpCenterSy, dpZoom, "upper");
 }
 
-function drawProbeCone(ctx, view, probeX, probeY, qMax, defocus, dpSize, zDP, zBeamSrc, halfZ, cropSize, pixelSize, dpCenterSx, dpCenterSy, dpZoom) {
-  // Crossover z (0 = sample plane; defocus shifts it along the beam). Gentle scale so the cone
-  // cross-over moves a moderate amount even at the larger defocus used to make the shadow visible.
-  // Cross-over height: tanh-saturated so the LARGE defocus now used for the shadow projection never
-  // pushes it above the aperture (would break the cone). Stays in front of the crystal for overfocus.
+function drawProbeCone(ctx, view, probeX, probeY, qMax, defocus, dpSize, zDP, zBeamSrc, halfZ, cropSize, pixelSize, dpCenterSx, dpCenterSy, dpZoom, part) {
+  // The cone is drawn in two passes so the sample occludes the part behind it: part "lower" (sample
+  // plane -> detector) is drawn BEFORE the atoms, part "upper" (aperture -> cross-over -> sample plane)
+  // AFTER. Cross-over height tanh-saturated so the large shadow defocus never pushes it above the aperture.
   const crossZ = 15 * Math.tanh(defocus / 320);
 
-  // Bright-field disk radius at the DP plane, matched to the displayed pattern,
-  // and the aperture radius that gives the same takeoff angle.
+  // Bright-field disk radius at the DP plane, the aperture radius for the same takeoff angle, and the
+  // beam radius where it crosses the SAMPLE plane (z=0) -- linear along the lower cone (cross-over -> DP).
   const bottomRadius = qMax * pixelSize * dpSize * (dpZoom || 1) * 0.95;
   const topDist = Math.abs(zBeamSrc - crossZ);
   const bottomDist = Math.abs(zDP - crossZ);
   const topRadius = bottomDist > 0 ? bottomRadius * topDist / bottomDist : bottomRadius;
+  const beamRadius = crossZ <= 0 ? 0 : bottomRadius * crossZ / (crossZ - zDP);
 
   // Keep the cone bottom + crossover aligned with the drawn DP image center.
   const nomDP = proj(probeX, probeY, zDP, view);
@@ -623,13 +627,10 @@ function drawProbeCone(ctx, view, probeX, probeY, qMax, defocus, dpSize, zDP, zB
   const apL = P(probeX - topRadius, probeY, zBeamSrc), apR = P(probeX + topRadius, probeY, zBeamSrc);
   const cross = P(probeX, probeY, crossZ);
   const dpL = P(probeX - bottomRadius, probeY, zDP), dpR = P(probeX + bottomRadius, probeY, zDP);
+  const beamL = P(probeX - beamRadius, probeY, 0), beamR = P(probeX + beamRadius, probeY, 0);
 
-  // Fill the WHOLE beam as ONE translucent path (no double-darkening). Pieces: aperture circle, DP /
-  // bright-field circle, upper cone (aperture->crossover) and lower cone (crossover->DP) as two SEPARATE
-  // simple triangles -- NOT one self-intersecting bowtie. Each circle OVERLAPS its cone triangle, so for
-  // fill("nonzero") to UNION them (rather than cancel where windings oppose -- which blanked the
-  // aperture's lower cap), every subpath is forced to the SAME orientation as the aperture circle. Sign
-  // is taken from the projected aperture circle so it is correct whichever way the view projects.
+  // Translucent green fill from a UNION of simple subpaths, each forced to the aperture circle's
+  // orientation so fill("nonzero") unions (never cancels) the circle<->cone overlaps.
   function ellipsePts(z, radius) {
     const pts = [];
     for (let i = 0; i < 48; i++) { const a = i / 48 * Math.PI * 2; pts.push(P(probeX + Math.cos(a) * radius, probeY + Math.sin(a) * radius, z)); }
@@ -640,32 +641,41 @@ function drawProbeCone(ctx, view, probeX, probeY, qMax, defocus, dpSize, zDP, zB
     const seq = (signedArea(pts) * refSign >= 0) ? pts : pts.slice().reverse();
     for (let i = 0; i < seq.length; i++) { const p = seq[i]; if (i === 0) ctx.moveTo(p.x, p.y); else ctx.lineTo(p.x, p.y); }
   }
-  const apEl = ellipsePts(zBeamSrc, topRadius), dpEl = ellipsePts(zDP, bottomRadius);
+  const apEl = ellipsePts(zBeamSrc, topRadius), dpEl = ellipsePts(zDP, bottomRadius), beamEl = ellipsePts(0, beamRadius);
   const refSign = signedArea(apEl) >= 0 ? 1 : -1;
-  ctx.globalAlpha = 1; ctx.setLineDash([]);
-  ctx.fillStyle = "rgba(0,200,110,0.3)";
-  ctx.beginPath();
-  emitSub(apEl, refSign);               // aperture circle
-  emitSub(dpEl, refSign);               // DP / bright-field circle
-  emitSub([apL, apR, cross], refSign);  // upper cone: aperture -> crossover
-  emitSub([dpL, dpR, cross], refSign);  // lower cone: crossover -> DP
-  ctx.fill("nonzero");
+  ctx.setLineDash([]); ctx.fillStyle = "rgba(0,200,110,0.3)";
 
-  // Cone edges
+  if (part === "lower") {
+    // BELOW the sample (sample plane -> detector): beam circle + frustum body + DP circle. Drawn BEFORE
+    // the atoms so the sample sheet occludes it.
+    ctx.globalAlpha = 1;
+    ctx.beginPath();
+    emitSub(beamEl, refSign); emitSub([beamL, beamR, dpR, dpL], refSign); emitSub(dpEl, refSign);
+    ctx.fill("nonzero");
+    ctx.globalAlpha = 0.85; ctx.strokeStyle = "#00b863"; ctx.lineWidth = 1.6;
+    ctx.beginPath(); ctx.moveTo(beamL.x, beamL.y); ctx.lineTo(dpL.x, dpL.y); ctx.moveTo(beamR.x, beamR.y); ctx.lineTo(dpR.x, dpR.y); ctx.stroke();
+    ring(zDP, bottomRadius, 0.85, 1.6);
+    ctx.globalAlpha = 1;
+    return;
+  }
+
+  // ABOVE/at the sample (aperture -> cross-over -> sample plane), drawn AFTER the atoms, plus the
+  // circular projection of the beam IN the sample plane (the bright ring at z=0).
+  ctx.globalAlpha = 1;
+  ctx.beginPath();
+  emitSub(apEl, refSign);                  // aperture circle
+  emitSub([apL, apR, cross], refSign);     // converging: aperture -> cross-over
+  emitSub([cross, beamL, beamR], refSign); // diverging: cross-over -> sample plane
+  ctx.fill("nonzero");
   ctx.globalAlpha = 0.85; ctx.strokeStyle = "#00b863"; ctx.lineWidth = 1.6;
   ctx.beginPath();
-  ctx.moveTo(apL.x, apL.y); ctx.lineTo(cross.x, cross.y); ctx.lineTo(dpL.x, dpL.y);
-  ctx.moveTo(apR.x, apR.y); ctx.lineTo(cross.x, cross.y); ctx.lineTo(dpR.x, dpR.y);
+  ctx.moveTo(apL.x, apL.y); ctx.lineTo(cross.x, cross.y); ctx.lineTo(beamL.x, beamL.y);
+  ctx.moveTo(apR.x, apR.y); ctx.lineTo(cross.x, cross.y); ctx.lineTo(beamR.x, beamR.y);
   ctx.stroke();
-
-  // Aperture ring (top) and bright-field disk (bottom)
-  ring(zBeamSrc, topRadius, 0.85, 1.6);
-  ring(zDP, bottomRadius, 0.85, 1.6);
-
-  // Crossover dot
+  ring(zBeamSrc, topRadius, 0.85, 1.6);    // aperture ring
+  ring(0, beamRadius, 0.95, 1.9);          // beam's circular projection in the sample plane
   ctx.globalAlpha = 0.9; ctx.fillStyle = "#00ff88";
   ctx.beginPath(); ctx.arc(cross.x, cross.y, 2.5, 0, Math.PI * 2); ctx.fill();
-
   ctx.globalAlpha = 1;
 }
 

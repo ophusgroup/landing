@@ -4,7 +4,7 @@ title: Gallery
 
 :::{anywidget} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/gallery.js
 {
-  "intro": "A few moments from around the lab.",
+  "intro": "",
   "image_base": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/gallery",
   "albums": [
     {

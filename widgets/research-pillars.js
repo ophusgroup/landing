@@ -85,6 +85,7 @@ function render({ model, el }) {
   ];
   const widgetCb = opt("widget_cb", ""); // local-preview cache-buster, e.g. "?t=123"; empty in production
   const accent = opt("accent", "#8C1515");
+  const bare = opt("bare", false); // widgets only, no title/desc/links (used at the top of the landing page)
   const id = "rp_" + Math.random().toString(36).slice(2, 7);
 
   el.innerHTML = `
@@ -95,6 +96,8 @@ function render({ model, el }) {
         padding:0 1.1rem 1rem; border-left:1px solid var(--${id}-rule); transition:z-index 0s; }
       .${id}-col:first-child { border-left:0; }
       .${id}-col.hot { z-index:6; }
+      .${id}-row.bare { margin:0; }
+      .${id}-row.bare .${id}-col { border-left:0; padding:0 0.4rem; }
       .${id}-panel { position:relative; width:100%; aspect-ratio:1/1; overflow:visible; line-height:0;
         border-radius:10px; background:transparent; }
       .${id}-panel canvas { display:block; width:100%; height:100%; border-radius:10px; }
@@ -111,14 +114,14 @@ function render({ model, el }) {
       @media (max-width:640px){ .${id}-row{ flex-direction:column; } .${id}-col{ border-left:0; padding:0 0 1.2rem; } }
       @media (prefers-reduced-motion: reduce){ .${id}-panel{ transition:none; } }
     </style>
-    <div class="${id}-row">
+    <div class="${id}-row${bare ? " bare" : ""}">
       ${PILLARS.map((p) => `
         <div class="${id}-col" data-kind="${p.kind}">
           <div class="${id}-panel">${p.kind === "materials" ? `<canvas></canvas>` : `<div class="${id}-widget" data-widget="${p.kind}"></div>`}</div>
-          <div class="${id}-title">${p.title}</div>
+          ${bare ? "" : `<div class="${id}-title">${p.title}</div>
           <div class="${id}-bar"></div>
           <div class="${id}-desc">${p.desc}</div>
-          <div class="${id}-links">${p.links.map(([t, h]) => `<a href="${h}">${t}</a>`).join(" · ")}</div>
+          <div class="${id}-links">${p.links.map(([t, h]) => `<a href="${h}">${t}</a>`).join(" · ")}</div>`}
         </div>`).join("")}
     </div>`;
 

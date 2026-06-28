@@ -13,9 +13,7 @@ We develop new scanning transmission electron microscopy (STEM) experiments, rec
 {}
 :::
 
-:::{anywidget} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/stem4d-sim.js
-{}
-:::
+
 
 ## 4DSTEM Experiments
 
@@ -26,6 +24,10 @@ We develop new scanning transmission electron microscopy (STEM) experiments, rec
 Comparing conventional ADF-STEM and 4DSTEM.
 :::
 -->
+
+:::{anywidget} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/stem4d-sim.js
+{}
+:::
 
 In conventional STEM, a focused electron probe is scanned over the sample while detectors record just a few intensity values per position, discarding most of the information encoded in each diffraction pattern. Modern direct electron detectors now operate at up to 120,000 frames/second, allowing us to capture a full 2D diffraction image at every probe position, producing a 4D dataset. We coined the term four-dimensional scanning transmission electron microscopy (4DSTEM) to describe this family of experiments.
 

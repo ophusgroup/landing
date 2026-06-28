@@ -23,7 +23,7 @@
 </div>
 <script type="module">
   const data = { data_url: "/widgets/nanocrystalline-si.json", image_base: "/images/research", accent: "#8C1515",
-    widget_base: "/widgets", widget_cb: "?t=" + Date.now() };
+    widget_base: "/widgets", widget_cb: "?t=" + Date.now(), bare: new URLSearchParams(location.search).has("bare") };
   const { default: widget } = await import(`./widgets/research-pillars.js?t=${Date.now()}`);
   widget.render({ model: { get: (k) => data[k] }, el: document.getElementById("mount") });
   document.getElementById("theme").onclick = () => document.body.classList.toggle("dark");
