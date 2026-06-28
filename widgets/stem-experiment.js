@@ -220,7 +220,7 @@ function addPyramid(atoms, cx, cy, a) {
       if (x*x + y*y <= r*r) atoms.push({ x: cx+x, y: cy+y, z, k: s });
     }
   }
-  atoms.push({ x: cx, y: cy, z: -4*cZ, k: 2 });
+  atoms.push({ x: cx, y: cy, z: -4*cZ, k: 0 }); // apex is substrate too (a lattice A site at the centre)
 }
 
 // 14 heavy atoms (8 C, 4 N, 2 O) of caffeine (1,3,7-trimethylxanthine), ROTATED in-plane and lifted ON
@@ -342,7 +342,7 @@ function computeCBED(N, p) {
 // has a huge dynamic range, so a plain power stretch crushes the dim defocused shadow image to
 // black. The log compresses it so the shadow (and its zoom with defocus) is actually visible.
 // Rendered as plasma on an OPAQUE BLACK detector (same in light + dark mode).
-function renderCBEDtoCanvas(offscreen, intensity, N, power, zoom) {
+function renderCBEDtoCanvas(offscreen, intensity, N, power, zoom, rBF, dfExp, ref, dfScale) {
   zoom = zoom || 1;
   offscreen.width = N; offscreen.height = N;
   const ctx = offscreen.getContext("2d");
@@ -355,7 +355,15 @@ function renderCBEDtoCanvas(offscreen, intensity, N, power, zoom) {
   const disp = new Float32Array(N * N);
   let mn = Infinity, mx = -Infinity;
   for (let i = 0; i < N * N; i++) { const d = Math.pow(intensity[i], power); disp[i] = d; if (d < mn) mn = d; if (d > mx) mx = d; }
-  const range = mx - mn || 1, cEdge = N / 2, rMax = N * 0.54, half = N / 2;
+  // The BF disk uses PER-FRAME exposure (so the bright disk + its shadow stay crisp at any thickness),
+  // while the dark field uses an ABSOLUTE exposure tied to the fixed bare bright-field reference (scaled
+  // by dfScale to set the ceiling). That split is the whole trick: the dark field then reads true sample
+  // thickness -- dark over the thin lattice, lit up only where a thick / heavy region scatters strongly --
+  // and beyond the disk (rIn, soft to rOut) the weak thin-lattice scattering is further crushed by dexp.
+  const rangeBF = (mx - mn) || 1;
+  const refDisp = ref ? Math.pow(ref, power) * (dfScale || 1) : mx;
+  const rangeDF = (refDisp - mn) || 1, cEdge = N / 2, rMax = N * 0.54, half = N / 2;
+  const rIn = rBF || N, rOut = (rBF || N) * 1.3, dexp = dfExp || 2.2;
   for (let r = 0; r < N; r++) {
     const sr = (r - half) / zoom + half, r0 = Math.floor(sr), fr = sr - r0;
     for (let c = 0; c < N; c++) {
@@ -363,7 +371,13 @@ function renderCBEDtoCanvas(offscreen, intensity, N, power, zoom) {
       let val = mn;
       if (r0 >= 0 && r0 < N - 1 && c0 >= 0 && c0 < N - 1) { const b = r0 * N + c0;
         val = disp[b]*(1-fr)*(1-fc) + disp[b+1]*(1-fr)*fc + disp[b+N]*fr*(1-fc) + disp[b+N+1]*fr*fc; }
-      const t = (val - mn) / range;
+      const v = val - mn;
+      const sdx = sc - half, sdy = sr - half, sd = Math.sqrt(sdx * sdx + sdy * sdy);
+      let t;
+      if (sd <= rIn) { t = v / rangeBF; }                                  // bright-field disk: per-frame
+      else { let tDF = v / rangeDF; if (tDF > 1) tDF = 1; tDF = Math.pow(tDF, dexp); // dark field: absolute + crushed
+        if (sd >= rOut) t = tDF; else { const k = (sd - rIn) / (rOut - rIn); t = (v / rangeBF) * (1 - k) + tDF * k; } }
+      if (t > 1) t = 1;
       const dist = Math.hypot(c - cEdge, r - cEdge) / rMax;
       let vig = dist < 0.78 ? 1 : Math.max(0, 1 - (dist - 0.78) / 0.24);
       vig *= vig;
@@ -709,6 +723,8 @@ function render({ model, el }) {
   const lambda = model.get("lambda") || 0.0197;
   const cropSize = model.get("crop_size") || 128;
   const dispPower = model.get("display_power") || 0.5;  // detector tone map: BF disk pops (was log)
+  const dfPower = model.get("df_power") || 2.2;         // dark-field suppression: weak scattering reads near-black outside the BF disk, lighting up only over thick/heavy regions
+  const dfScale = model.get("df_ref_scale") || 3.0;     // dark-field exposure ceiling = (bare BF peak) x this; high enough that a thick region glows bright but still shows structure, not a flat flood
 
   // Coherent-CBED diffraction (overlapping interfering disks)
   const cbedG0 = model.get("cbed_g0") || 23;            // reciprocal lattice spacing (DP px)
@@ -831,13 +847,21 @@ function render({ model, el }) {
     let defocus = initDefocus, sampleShift = initScan, hov = 0;
 
     let probe = computeProbe(cropSize, pixelSize, qMax, defocus, lambda), probeDf = defocus;
+    // Fixed bright-field reference = the bare-lattice BF peak (a focused probe over an empty patch), so the
+    // detector exposure is ABSOLUTE rather than per-frame. The dark field then stays dark over the thin
+    // lattice and only lights up where the sample is thicker (a defect / heavy cluster scatters more) --
+    // a per-frame max would grow with the brighter BF over thick regions and cancel exactly that signal.
+    const refProbe = computeProbe(cropSize, pixelSize, qMax, 0, lambda);
+    const refInt = computeDiffraction(potential, imW, imH, refProbe.probeRe, refProbe.probeIm, -43, 0, cropSize, pixelSize);
+    let bfRef = 1e-9; for (let i = 0; i < refInt.length; i++) if (refInt[i] > bfRef) bfRef = refInt[i];
     const view = makeView(0, viewEl, viewZoom * 0.82, W * 0.5, H * 0.36, 140);
 
     function renderAll() {
       if (probeDf !== defocus) { probe = computeProbe(cropSize, pixelSize, qMax, defocus, lambda); probeDf = defocus; }
       probeX = -sampleShift; // the beam is centered; the sample scrolls under it
       const intensity = computeDiffraction(potential, imW, imH, probe.probeRe, probe.probeIm, probeX, probeY, cropSize, pixelSize);
-      renderCBEDtoCanvas(dpOffscreen, intensity, cropSize, dispPower, dpZoom);
+      const rBF = qMax * cropSize * pixelSize; // bright-field disk radius (px) = the aperture radius in the FFT grid
+      renderCBEDtoCanvas(dpOffscreen, intensity, cropSize, dispPower, dpZoom, rBF, dfPower, bfRef, dfScale);
       renderScene(ctx, W, H, atoms, view, 0, probeY, qMax, defocus, dpOffscreen, dpSize, cropSize, pixelSize, cellDimZ, dpZoom, sampleShift, halfX, aLattice);
     }
 
