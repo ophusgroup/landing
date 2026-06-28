@@ -522,24 +522,31 @@ function drawProbeCone(ctx, view, probeX, probeY, qMax, defocus, dpSize, zDP, zB
   const cross = P(probeX, probeY, crossZ);
   const dpL = P(probeX - bottomRadius, probeY, zDP), dpR = P(probeX + bottomRadius, probeY, zDP);
 
-  // trace a projected circle (ellipse) into the current path
-  function ellipseSub(z, radius) {
-    for (let i = 0; i <= 48; i++) {
-      const a = i / 48 * Math.PI * 2;
-      const p = P(probeX + Math.cos(a) * radius, probeY + Math.sin(a) * radius, z);
-      if (i === 0) ctx.moveTo(p.x, p.y); else ctx.lineTo(p.x, p.y);
-    }
+  // Fill the WHOLE beam as ONE translucent path (no double-darkening). Pieces: aperture circle, DP /
+  // bright-field circle, upper cone (aperture->crossover) and lower cone (crossover->DP) as two SEPARATE
+  // simple triangles -- NOT one self-intersecting bowtie. Each circle OVERLAPS its cone triangle, so for
+  // fill("nonzero") to UNION them (rather than cancel where windings oppose -- which blanked the
+  // aperture's lower cap), every subpath is forced to the SAME orientation as the aperture circle. Sign
+  // is taken from the projected aperture circle so it is correct whichever way the view projects.
+  function ellipsePts(z, radius) {
+    const pts = [];
+    for (let i = 0; i < 48; i++) { const a = i / 48 * Math.PI * 2; pts.push(P(probeX + Math.cos(a) * radius, probeY + Math.sin(a) * radius, z)); }
+    return pts;
   }
-  // Solid translucent beam = aperture CIRCLE + bowtie cone body (through the cross-over) + DP CIRCLE,
-  // all in ONE fill so the WHOLE thing is uniformly green (the bowtie alone leaves the upper cap of
-  // the aperture circle and the lower cap of the DP circle uncolored). One fill = no double-darkening.
+  function signedArea(pts) { let s = 0; for (let i = 0; i < pts.length; i++) { const a = pts[i], b = pts[(i + 1) % pts.length]; s += a.x * b.y - b.x * a.y; } return s; }
+  function emitSub(pts, refSign) {
+    const seq = (signedArea(pts) * refSign >= 0) ? pts : pts.slice().reverse();
+    for (let i = 0; i < seq.length; i++) { const p = seq[i]; if (i === 0) ctx.moveTo(p.x, p.y); else ctx.lineTo(p.x, p.y); }
+  }
+  const apEl = ellipsePts(zBeamSrc, topRadius), dpEl = ellipsePts(zDP, bottomRadius);
+  const refSign = signedArea(apEl) >= 0 ? 1 : -1;
   ctx.globalAlpha = 1; ctx.setLineDash([]);
   ctx.fillStyle = "rgba(0,200,110,0.3)";
   ctx.beginPath();
-  ellipseSub(zBeamSrc, topRadius);                                                   // aperture circle
-  ctx.moveTo(apL.x, apL.y); ctx.lineTo(cross.x, cross.y); ctx.lineTo(dpL.x, dpL.y);  // cone body (bowtie)
-  ctx.lineTo(dpR.x, dpR.y); ctx.lineTo(cross.x, cross.y); ctx.lineTo(apR.x, apR.y);
-  ellipseSub(zDP, bottomRadius);                                                     // DP / bright-field circle
+  emitSub(apEl, refSign);               // aperture circle
+  emitSub(dpEl, refSign);               // DP / bright-field circle
+  emitSub([apL, apR, cross], refSign);  // upper cone: aperture -> crossover
+  emitSub([dpL, dpR, cross], refSign);  // lower cone: crossover -> DP
   ctx.fill("nonzero");
 
   // Cone edges
