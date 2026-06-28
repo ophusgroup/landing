@@ -281,7 +281,10 @@ function renderCBEDtoCanvas(offscreen, intensity, N, gamma) {
   for (let r = 0; r < N; r++) {
     for (let c = 0; c < N; c++) {
       const i = r * N + c;
-      const t = Math.pow((disp[i] - mn) / range, gamma);
+      // Read the horizontally-mirrored source: the beam is always over-focused here (cross-over ABOVE
+      // the sample), so the shadow image is erect and must scan the SAME way as the lattice. The raw FFT
+      // shadow runs the other way, so mirror it in x. (Invisible statically -- the pattern is symmetric.)
+      const t = Math.pow((disp[r * N + (N - 1 - c)] - mn) / range, gamma);
       const dist = Math.hypot(c - cEdge, r - cEdge) / rMax;
       let vig = dist < 0.78 ? 1 : Math.max(0, 1 - (dist - 0.78) / 0.24);
       vig *= vig;
