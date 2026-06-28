@@ -152,7 +152,7 @@ function render({ model, el }) {
   const stemMount = el.querySelector(`.${id}-widget[data-widget="stem"]`);
   if (stemMount) loadSibling(widgetBases, "stem-experiment.js", widgetCb)
     .then((w) => w.render({ model: mk({ embed: true,
-      pixel_size: 0.2, cell_dim_x: 120, cell_dim_y: 30, cell_dim_z: 3, a_lattice: 3.4, sigma: 0.22,
+      pixel_size: 0.2, cell_dim_x: 120, cell_dim_y: 30, cell_dim_z: 3, a_lattice: 3.2, sigma: 0.22,
       lambda: 0.0197, crop_size: 128, display_gamma: 0.7, cbed_g0: 23, cbed_disk_frac: 0.78,
       cbed_chi: 0.026, cbed_g_max: 42, cbed_sigma_g: 40, cbed_phase_scale: 0.04, dp_size: 40,
       view_el: -26, view_zoom: 26 }), el: stemMount }))
