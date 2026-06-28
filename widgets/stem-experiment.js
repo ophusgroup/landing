@@ -185,19 +185,19 @@ function applyDefects(atoms, halfX, halfY, a) {
     all.sort((p,q)=>p[0]-q[0]); return all.slice(0,k).map(p=>p[1]);
   };
   // A VARIETY of defects, all on the beam centre line (y=0) so the scan walks the probe through each.
-  // None leaves a hole. (1) single substitutional dopant; (2) cluster of 4 substituted atoms;
-  // (3) Stone-Wales bond rotation; (4) hemispherical metal nanoparticle on top; (5) stepped ad-atom
-  // pyramid with a heavy apex; (6) the rotated caffeine molecule on top.
-  { const i=nearest(-54,0); if(i>=0) atoms[i].k=2; }                 // (1)
-  for (const i of kNear(-30,0,4)) atoms[i].k=2;                      // (2)
-  { const i=nearest(-14,0);                                         // (3)
-    if(i>=0){ const xi=atoms[i].x, yi=atoms[i].y; let j=-1,bd=1e9;
-      for(let m=0;m<atoms.length;m++){ if(m===i||atoms[m].k>1) continue; const d=(atoms[m].x-xi)**2+(atoms[m].y-yi)**2; if(d<bd){bd=d;j=m;} }
+  // None leaves a hole. The two gold features sit far apart (not adjacent).
+  { const i=nearest(-54,0); if(i>=0) atoms[i].k=2; }                 // (1) single substitutional dopant (gold)
+  for (const i of kNear(24,0,4)) atoms[i].k=2;                       // (2) 4-atom substitution cluster (gold), opposite side from (1)
+  // (3) Stone-Wales: rotate the bond aligned with the DEPTH/camera (y) axis -- it is foreshortened, so
+  // swinging it 90 deg to horizontal is the obvious change. Pick the neighbour with the largest |dy|.
+  { const i=nearest(-12,0);
+    if(i>=0){ const xi=atoms[i].x, yi=atoms[i].y; let j=-1, best=-1;
+      for(let m=0;m<atoms.length;m++){ if(m===i||atoms[m].k>1) continue; const dx=atoms[m].x-xi, dy=atoms[m].y-yi; if(dx*dx+dy*dy>4.2) continue; if(Math.abs(dy)>best){ best=Math.abs(dy); j=m; } }
       if(j>=0){ const mx=(xi+atoms[j].x)/2, my=(yi+atoms[j].y)/2; for(const m of [i,j]){ const ex=atoms[m].x-mx, ey=atoms[m].y-my; atoms[m].x=mx-ey; atoms[m].y=my+ex; } } }
   }
-  addNanoparticle(atoms, 22, 0);                                    // (4)
-  addPyramid(atoms, 48, 0);                                         // (5)
-  addCaffeine(atoms, 0, 0);                                         // (6)
+  addNanoparticle(atoms, -32, 0);                                   // (4) hemispherical metal nanoparticle on top
+  addPyramid(atoms, 0, 0, a);                                       // (5) epitaxial substrate pyramid (now in the passive beam)
+  addCaffeine(atoms, 48, 0);                                        // (6) caffeine molecule, swapped off to the side
 }
 
 // Cluster atoms (kind 6 = silvery metal, NO bonds) sit ON TOP of the surface (z<0 draws toward the beam).
@@ -206,11 +206,18 @@ function addNanoparticle(atoms, cx, cy) { // a rounded hemisphere of metal atoms
     for (let i=0;i<cnt;i++){ const ang = i/cnt*2*Math.PI + z; atoms.push({ x: cx+r*Math.cos(ang), y: cy+r*Math.sin(ang), z, k: 6 }); }
   atoms.push({ x: cx, y: cy, z: -4.4, k: 6 });
 }
-function addPyramid(atoms, cx, cy) { // stepped flat planes shrinking upward, a heavy apex on top
-  atoms.push({ x: cx, y: cy, z: -0.7, k: 6 });
-  for (const [cnt, r, z] of [[6, 2.7, -0.7], [3, 1.4, -2.5]])
-    for (let i=0;i<cnt;i++){ const ang = i/cnt*2*Math.PI + (z<-2?0.5:0); atoms.push({ x: cx+r*Math.cos(ang), y: cy+r*Math.sin(ang), z, k: 6 }); }
-  atoms.push({ x: cx, y: cy, z: -4.3, k: 6 });
+// Epitaxial PYRAMID of the SAME substrate lattice/atoms (kinds 0/1): honeycomb patches stacked and
+// shrinking upward (1-2-3 planes), with one heavy apex atom (the "4th atom").
+function addPyramid(atoms, cx, cy, a) {
+  const s3 = Math.sqrt(3), cZ = a * 0.5;
+  for (const [r, L] of [[3.4, 1], [2.1, 2], [0.9, 3]]) {
+    const z = -L * cZ;
+    for (let j=-3;j<=3;j++) for (let i=-3;i<=3;i++) for (let s=0;s<2;s++){
+      const x = i*a + j*a*0.5 + (s ? a*0.5 : 0), y = j*a*s3*0.5 + (s ? a*s3/6 : 0);
+      if (x*x + y*y <= r*r) atoms.push({ x: cx+x, y: cy+y, z, k: s });
+    }
+  }
+  atoms.push({ x: cx, y: cy, z: -4*cZ, k: 2 });
 }
 
 // 14 heavy atoms (8 C, 4 N, 2 O) of caffeine (1,3,7-trimethylxanthine), ROTATED in-plane and lifted ON

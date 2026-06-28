@@ -86,6 +86,7 @@ function render({ model, el }) {
   const widgetCb = opt("widget_cb", ""); // local-preview cache-buster, e.g. "?t=123"; empty in production
   const accent = opt("accent", "#8C1515");
   const bare = opt("bare", false); // widgets only, no title/desc/links (used at the top of the landing page)
+  const researchUrl = opt("research_url", "/research"); // bare panels link here on click
   const id = "rp_" + Math.random().toString(36).slice(2, 7);
 
   el.innerHTML = `
@@ -147,6 +148,7 @@ function render({ model, el }) {
   cols.forEach((col) => {
     col.addEventListener("pointerenter", () => { col.classList.add("hot"); if (col.dataset.kind === "materials") hover.materials.value = true; });
     col.addEventListener("pointerleave", () => { col.classList.remove("hot"); if (col.dataset.kind === "materials") hover.materials.value = false; });
+    if (bare) { col.style.cursor = "pointer"; col.addEventListener("click", () => { window.location.href = researchUrl; }); }
   });
 
   // Mount the STEM experiment (col 1) and the wave-propagation widget (col 2).
