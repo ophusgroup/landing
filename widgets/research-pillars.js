@@ -64,15 +64,15 @@ const PILLARS = [
   { kind: "stem", img: "card_experiments.jpg",
     title: "Scanning Transmission Electron Microscopy",
     desc: "We develop new STEM measurement techniques using advanced detectors, beam shaping, and programmable acquisition. We record and invert massive electron-scattering datasets to reveal structural, chemical, and other signals beyond conventional imaging.",
-    links: [["4DSTEM experiments", "#id-4dstem-experiments"], ["STEM probe design", "#stem-probe-wavefunction-control"]] },
+    links: [["see the projects", "#scanning-transmission-electron-microscopy"]] },
   { kind: "comp", img: "card_reconstruction.jpg",
     title: "Computational Imaging and Open Software",
     desc: "We build reconstruction algorithms, simulations, and open-source software for quantitative microscopy. Our methods include ptychography, tomography, and physics-guided machine learning to convert raw high-dimensional data into interpretable structure.",
-    links: [["py4DSTEM analysis", "#4dstem-analysis-with-py4dstem"], ["ML inversion", "#ml-inversion-of-multiple-scattering"], ["drift correction", "#scanning-probe-drift-correction"], ["simulations", "#quantum-mechanical-scattering-simulations"]] },
+    links: [["see the projects", "#computational-imaging-and-open-software"]] },
   { kind: "materials",
     title: "Atomic-Scale Materials Structure",
     desc: "We study how atomic structure controls material behavior. Our work maps strain, defects, interfaces, chemical and structural order/disorder, local symmetry, and evolving atomic environments across energy, electronic, quantum, and structural materials.",
-    links: [["atomic electron tomography", "#atomic-electron-tomography"], ["atomic-resolution chemistry", "#atomic-resolution-imaging"], ["disordered materials", "#ml-characterization-of-disordered-materials"]] },
+    links: [["see the projects", "#atomic-scale-materials-structure"]] },
 ];
 
 function render({ model, el }) {
