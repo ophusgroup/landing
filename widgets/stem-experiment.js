@@ -190,10 +190,13 @@ function applyDefects(atoms, halfX, halfY, a) {
   for (const i of kNear(24,0,4)) atoms[i].k=2;                       // (2) 4-atom substitution cluster (gold), opposite side from (1)
   // (3) Stone-Wales: rotate the bond aligned with the DEPTH/camera (y) axis -- it is foreshortened, so
   // swinging it 90 deg to horizontal is the obvious change. Pick the neighbour with the largest |dy|.
+  // The honeycomb has NO horizontal bonds (they run 30/150/270 deg), so we also STRETCH the rotated pair
+  // by `ex` past the plain 90 deg: the central bond ends up clearly longer than a lattice bond, and a long
+  // horizontal bond in a hex net is unmistakable. The 5-7-7-5 rewiring stays clean (no dangling bonds).
   { const i=nearest(-12,0);
     if(i>=0){ const xi=atoms[i].x, yi=atoms[i].y; let j=-1, best=-1;
       for(let m=0;m<atoms.length;m++){ if(m===i||atoms[m].k>1) continue; const dx=atoms[m].x-xi, dy=atoms[m].y-yi; if(dx*dx+dy*dy>4.2) continue; if(Math.abs(dy)>best){ best=Math.abs(dy); j=m; } }
-      if(j>=0){ const mx=(xi+atoms[j].x)/2, my=(yi+atoms[j].y)/2; for(const m of [i,j]){ const ex=atoms[m].x-mx, ey=atoms[m].y-my; atoms[m].x=mx-ey; atoms[m].y=my+ex; } } }
+      if(j>=0){ const mx=(xi+atoms[j].x)/2, my=(yi+atoms[j].y)/2, ex=1.34; for(const m of [i,j]){ const dx=atoms[m].x-mx, dy=atoms[m].y-my; atoms[m].x=mx-dy*ex; atoms[m].y=my+dx*ex; } } }
   }
   addNanoparticle(atoms, -32, 0);                                   // (4) hemispherical metal nanoparticle on top
   addPyramid(atoms, 0, 0, a);                                       // (5) epitaxial substrate pyramid (now in the passive beam)
@@ -558,11 +561,17 @@ function renderScene(ctx, W, H, atoms, view, probeX, probeY, qMax, defocus, dpCa
   const vis = [];
   for (let i=0;i<projected.length;i++){ const a=projected[i]; if (a.sx>-30 && a.sx<W+30 && a.sy>-30 && a.sy<H+30) vis.push(a); }
   ctx.lineCap="round";
-  ctx.strokeStyle="rgba(116,130,160,0.62)"; ctx.lineWidth=2.1;  // lattice bonds (graphene network; dopant kind 2 still links)
+  // Lattice bonds (graphene network; dopant kind 2 still links). Cutoff 6.8 sits in the wide gap between
+  // the 1.85 A nearest neighbour (3.4) and the 3.2 A second neighbour (10.2), so the regular net is
+  // unchanged -- but the STRETCHED Stone-Wales bond (~2.5 A, the only pair that lands in that gap) draws,
+  // and we paint it in a warm accent so the rotated bond reads at a glance.
   for (let i=0;i<vis.length;i++){ if (vis[i].grain>2) continue;
     for (let j=i+1;j<vis.length;j++){ if (vis[j].grain>2) continue;
-      const dx=vis[i].ax-vis[j].ax, dy=vis[i].ay-vis[j].ay;
-      if (dx*dx+dy*dy < 4.2){ ctx.beginPath(); ctx.moveTo(vis[i].sx,vis[i].sy); ctx.lineTo(vis[j].sx,vis[j].sy); ctx.stroke(); } } }
+      const dx=vis[i].ax-vis[j].ax, dy=vis[i].ay-vis[j].ay, d2=dx*dx+dy*dy;
+      if (d2 >= 6.8) continue;
+      if (d2 < 4.2){ ctx.strokeStyle="rgba(116,130,160,0.62)"; ctx.lineWidth=2.1; }
+      else { ctx.strokeStyle="rgba(255,116,40,0.96)"; ctx.lineWidth=3.7; }  // the rotated (stretched) Stone-Wales bond
+      ctx.beginPath(); ctx.moveTo(vis[i].sx,vis[i].sy); ctx.lineTo(vis[j].sx,vis[j].sy); ctx.stroke(); } }
   const org = vis.filter(a=>a.grain>=3 && a.grain<=5); // organic only; kind 6 cluster atoms draw bondless
   ctx.strokeStyle="rgba(108,112,130,0.92)"; ctx.lineWidth=2.4;  // molecule bonds (stronger)
   for (let i=0;i<org.length;i++) for (let j=i+1;j<org.length;j++){
