@@ -1,8 +1,30 @@
 // research-pillars.js — the three research pillars as one unified, full-width row.
 // Each column has an interactive panel on top, then a title, description, and links.
 // Hovering a column brings its panel to life and lets it grow past the column border.
-// Column 3 is the live nanocrystalline-silicon block; columns 1 and 2 are placeholders
-// until the STEM and computational widgets are ready.
+// Column 1 is the live STEM experiment (stem-experiment.js), column 2 the wave
+// propagation widget (comp-experiment.js), column 3 the nanocrystalline-silicon block.
+
+// The sibling STEM + computational widgets are loaded the same way as Three.js below:
+// fetch the text and import a Blob URL. This avoids import.meta / relative-import resolution,
+// which does not survive the anywidget module loader (the parent module has no usable base URL).
+// Tries each base in order and verifies the response is actually JS, not a CDN 404 page (jsDelivr
+// returns a plain-text "Couldn't find the requested file" body that otherwise imports as a syntax error).
+async function loadSibling(bases, name, cb) {
+  const errs = [];
+  for (const base of bases) {
+    try {
+      const resp = await fetch(`${base}/${name}${cb || ""}`);
+      if (!resp.ok) throw new Error("HTTP " + resp.status);
+      const text = await resp.text();
+      const head = text.slice(0, 200);
+      if (/^\s*</.test(head) || /couldn'?t find|not found|404:/i.test(head)) throw new Error("got an error page, not JS");
+      const blobUrl = URL.createObjectURL(new Blob([text], { type: "application/javascript" }));
+      const mod = await import(blobUrl);
+      return mod.default || mod;
+    } catch (e) { errs.push((base.split("/")[2] || base) + ": " + e.message); }
+  }
+  throw new Error("all sources failed (" + errs.join("; ") + ")");
+}
 
 let THREE = null;
 const THREE_VERSION = "0.170.0";
@@ -41,15 +63,15 @@ const MAT = {
 const PILLARS = [
   { kind: "stem", img: "card_experiments.jpg",
     title: "Scanning Transmission Electron Microscopy",
-    desc: "We develop new experiments to capture more information at the atomic scale, including 4DSTEM, custom electron probes, and detectors.",
+    desc: "We develop new STEM measurement techniques using advanced detectors, beam shaping, and programmable acquisition. We record and invert massive electron-scattering datasets to reveal structural, chemical, and other signals beyond conventional imaging.",
     links: [["4DSTEM experiments", "#id-4dstem-experiments"], ["STEM probe design", "#stem-probe-wavefunction-control"]] },
   { kind: "comp", img: "card_reconstruction.jpg",
-    title: "Computational Imaging and Data Analysis",
-    desc: "We turn detector data into structure and simulate microscopy, using ptychography, tomography, machine learning, and scattering simulations.",
+    title: "Computational Imaging and Open Software",
+    desc: "We build reconstruction algorithms, simulations, and open-source software for quantitative microscopy. Our methods include ptychography, tomography, and physics-guided machine learning to convert raw high-dimensional data into interpretable structure.",
     links: [["py4DSTEM analysis", "#4dstem-analysis-with-py4dstem"], ["ML inversion", "#ml-inversion-of-multiple-scattering"], ["drift correction", "#scanning-probe-drift-correction"], ["simulations", "#quantum-mechanical-scattering-simulations"]] },
   { kind: "materials",
-    title: "Atomic Scale Understanding of Materials",
-    desc: "We study real materials at the atomic scale, mapping their 3D structure, chemistry, and disorder.",
+    title: "Atomic-Scale Materials Structure",
+    desc: "We study how atomic structure controls material behavior. Our work maps strain, defects, interfaces, chemical and structural order/disorder, local symmetry, and evolving atomic environments across energy, electronic, quantum, and structural materials.",
     links: [["atomic electron tomography", "#atomic-electron-tomography"], ["atomic-resolution chemistry", "#atomic-resolution-imaging"], ["disordered materials", "#ml-characterization-of-disordered-materials"]] },
 ];
 
@@ -57,6 +79,11 @@ function render({ model, el }) {
   const opt = (k, d) => { try { const v = model.get(k); return v == null ? d : v; } catch (e) { return d; } };
   const dataUrl = opt("data_url", "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/nanocrystalline-si.json");
   const imageBase = opt("image_base", "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/research");
+  const widgetBases = [
+    opt("widget_base", "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets"),
+    "https://raw.githubusercontent.com/ophusgroup/landing/main/widgets", // fallback if jsDelivr is stale/404
+  ];
+  const widgetCb = opt("widget_cb", ""); // local-preview cache-buster, e.g. "?t=123"; empty in production
   const accent = opt("accent", "#8C1515");
   const id = "rp_" + Math.random().toString(36).slice(2, 7);
 
@@ -68,17 +95,16 @@ function render({ model, el }) {
         padding:0 1.1rem 1rem; border-left:1px solid var(--${id}-rule); transition:z-index 0s; }
       .${id}-col:first-child { border-left:0; }
       .${id}-col.hot { z-index:6; }
-      .${id}-panel { position:relative; width:100%; aspect-ratio:5/4; overflow:visible; line-height:0;
-        border-radius:10px; transform-origin:center; transition:transform .4s cubic-bezier(.2,.7,.2,1);
-        background:var(--${id}-panelbg); }
-      .${id}-col.hot .${id}-panel { transform:scale(1.16); box-shadow:0 12px 40px rgba(0,0,0,.28); }
+      .${id}-panel { position:relative; width:100%; aspect-ratio:1/1; overflow:visible; line-height:0;
+        border-radius:10px; background:transparent; }
       .${id}-panel canvas { display:block; width:100%; height:100%; border-radius:10px; }
+      .${id}-widget { position:absolute; inset:0; }
       .${id}-img { width:100%; height:100%; object-fit:cover; display:block; border-radius:10px; }
       .${id}-title { font-size:1.05rem; font-weight:600; line-height:1.25; margin:.85rem 0 .15rem;
         color:var(--${id}-fg); }
       .${id}-bar { width:0; height:2px; background:${accent}; transition:width .3s ease; margin-bottom:.5rem; }
       .${id}-col.hot .${id}-bar { width:34px; }
-      .${id}-desc { font-size:.86rem; line-height:1.5; color:var(--${id}-dim); margin:0 0 .6rem; }
+      .${id}-desc { font-size:.86rem; line-height:1.5; color:var(--${id}-dim); margin:0 0 .6rem; flex:1 0 auto; }
       .${id}-links { font-size:.82rem; line-height:1.7; color:var(--${id}-faint); }
       .${id}-links a { color:var(--${id}-link); text-decoration:none; }
       .${id}-links a:hover { text-decoration:underline; }
@@ -88,7 +114,7 @@ function render({ model, el }) {
     <div class="${id}-row">
       ${PILLARS.map((p) => `
         <div class="${id}-col" data-kind="${p.kind}">
-          <div class="${id}-panel">${p.kind === "materials" ? `<canvas></canvas>` : `<img class="${id}-img" src="${imageBase}/${p.img}" alt="${p.title}" loading="lazy">`}</div>
+          <div class="${id}-panel">${p.kind === "materials" ? `<canvas></canvas>` : `<div class="${id}-widget" data-widget="${p.kind}"></div>`}</div>
           <div class="${id}-title">${p.title}</div>
           <div class="${id}-bar"></div>
           <div class="${id}-desc">${p.desc}</div>
@@ -120,6 +146,22 @@ function render({ model, el }) {
     col.addEventListener("pointerleave", () => { col.classList.remove("hot"); if (col.dataset.kind === "materials") hover.materials.value = false; });
   });
 
+  // Mount the STEM experiment (col 1) and the wave-propagation widget (col 2).
+  const mk = (o) => ({ get: (k) => o[k] });
+  const fail = (mount, label) => (e) => { if (mount) mount.innerHTML = `<div style="padding:1em;font:11px sans-serif;opacity:.55">${label}: ${e.message}</div>`; };
+  const stemMount = el.querySelector(`.${id}-widget[data-widget="stem"]`);
+  if (stemMount) loadSibling(widgetBases, "stem-experiment.js", widgetCb)
+    .then((w) => w.render({ model: mk({ embed: true,
+      pixel_size: 0.2, cell_dim_x: 80, cell_dim_y: 30, cell_dim_z: 3, a_lattice: 3.4, sigma: 0.22,
+      lambda: 0.0197, crop_size: 128, display_gamma: 0.7, cbed_g0: 23, cbed_disk_frac: 0.78,
+      cbed_chi: 0.026, cbed_g_max: 42, cbed_sigma_g: 40, cbed_phase_scale: 0.04, dp_size: 40,
+      view_el: -26, view_zoom: 26 }), el: stemMount }))
+    .catch(fail(stemMount, "STEM widget"));
+  const compMount = el.querySelector(`.${id}-widget[data-widget="comp"]`);
+  if (compMount) loadSibling(widgetBases, "comp-experiment.js", widgetCb)
+    .then((w) => w.render({ model: mk({}), el: compMount }))
+    .catch(fail(compMount, "wave widget"));
+
   // Mount the live silicon block into column 3.
   const matCanvas = el.querySelector(`.${id}-col[data-kind="materials"] canvas`);
   const matStage = el.querySelector(`.${id}-col[data-kind="materials"] .${id}-panel`);
@@ -130,9 +172,9 @@ function render({ model, el }) {
 
 function buildMaterials(THREE, data, canvas, stage, hoverRef) {
   let theme = detectDark() ? MAT.dark : MAT.light;
-  const renderer = new THREE.WebGLRenderer({ antialias: true, canvas });
+  const renderer = new THREE.WebGLRenderer({ antialias: true, canvas, alpha: true });
   renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
-  renderer.setClearColor(new THREE.Color(theme.clear), 1);
+  renderer.setClearColor(0x000000, 0);
 
   const scene = new THREE.Scene();
   scene.add(new THREE.AmbientLight(0xffffff, 0.9));
@@ -154,7 +196,7 @@ function buildMaterials(THREE, data, canvas, stage, hoverRef) {
   const r = data.atom_radius * data.atom_scale, rOut = r + 0.02;
   const dummy = new THREE.Object3D();
   function setAtoms(bloom) {
-    const k = 1 + bloom * 0.55;
+    const k = 1 + bloom * 0.45;
     for (let i = 0; i < n; i++) {
       dummy.position.set(base[i*3]*k, base[i*3+1]*k, base[i*3+2]*k);
       dummy.scale.setScalar(r); dummy.updateMatrix(); atomMesh.setMatrixAt(i, dummy.matrix);
@@ -186,7 +228,6 @@ function buildMaterials(THREE, data, canvas, stage, hoverRef) {
   function applyTheme() {
     requestAnimationFrame(() => {
       theme = detectDark() ? MAT.dark : MAT.light;
-      renderer.setClearColor(new THREE.Color(theme.clear), 1);
       atomMat.color.setRGB(theme.atom[0], theme.atom[1], theme.atom[2]);
       atomMat.emissive.set(theme.emissive); atomMat.specular.set(theme.specular);
       outlineMat.color.set(theme.outline);
@@ -199,27 +240,25 @@ function buildMaterials(THREE, data, canvas, stage, hoverRef) {
   themeObs.observe(document.documentElement, { attributes: true });
   themeObs.observe(document.body, { attributes: true });
 
-  let lastW = 0, lastH = 0;
+  let lastW = 0, lastH = 0, camBaseZ = 0;
   function resize() {
     const w = Math.max(1, stage.clientWidth), h = Math.max(1, stage.clientHeight);
     renderer.setSize(w, h, false); camera.aspect = w / h;
-    const fov = camera.fov * Math.PI / 180; camera.position.set(0, 0, (maxR * 1.15) / Math.tan(fov / 2));
+    const fov = camera.fov * Math.PI / 180; camBaseZ = (maxR * 0.9) / Math.tan(fov / 2);
     camera.updateProjectionMatrix();
   }
 
-  let bloom = 0, scale = 1;
+  // hover only FADES the polyhedra out to reveal the atoms; nothing scales (no bloom, no camera move)
+  let fade = 0;
   function animate() {
     requestAnimationFrame(animate);
     const cw = stage.clientWidth, ch = stage.clientHeight;
     if (cw > 1 && ch > 1 && (cw !== lastW || ch !== lastH)) { lastW = cw; lastH = ch; resize(); }
     const hot = hoverRef.value;
-    const nb = bloom + ((hot ? 1 : 0) - bloom) * 0.07;
-    if (Math.abs(nb - bloom) > 0.0008) {
-      bloom = nb; setAtoms(bloom);
-      if (tetMesh) tetMesh.material.opacity = theme.tetOp * (1 - bloom);
-      if (edgeMesh) edgeMesh.material.opacity = theme.edgeOp * (1 - bloom);
-    }
-    const ts = hot ? 1.06 : 1.0; scale += (ts - scale) * 0.08; group.scale.setScalar(scale);
+    fade += ((hot ? 1 : 0) - fade) * 0.07;
+    if (tetMesh) tetMesh.material.opacity = theme.tetOp * (1 - fade);
+    if (edgeMesh) edgeMesh.material.opacity = theme.edgeOp * (1 - fade);
+    camera.position.z = camBaseZ; // fixed: the structure never zooms or shrinks
     group.rotation.y += hot ? 0.006 : 0.0035;
     renderer.render(scene, camera);
   }

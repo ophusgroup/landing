@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>comp-experiment — local test</title>
+<style>
+  body { margin:0; font-family:-apple-system, system-ui, sans-serif; background:#ffffff; color:#1a1a1a; }
+  body.dark { background:#0e1116; color:#e8eaed; }
+  .page { max-width:560px; margin:0 auto; padding:26px 20px 90px; }
+  .bar { display:flex; align-items:center; gap:12px; margin-bottom:6px; }
+  .bar h1 { flex:1; font-size:1.3rem; margin:0; }
+  button { padding:6px 12px; border:1px solid currentColor; border-radius:8px; background:transparent;
+    color:inherit; cursor:pointer; font-size:.85rem; opacity:.8; }
+  .hint { opacity:.6; font-size:.85rem; margin:0 0 22px; }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="bar"><h1>comp-experiment — forward + adjoint wave</h1><button id="theme">Toggle dark</button></div>
+  <p class="hint">Multislice wave propagation (ported from the notebook): a plane wave flows down and scatters through a 5-fold cluster, with the LAB cyclic phase colormap. Passive = forward. On <b>hover</b> the atoms light up strongly in place while the rest of the wave fades back (no zoom). Buttery-smooth cross-dissolve, no per-frame recompute. Column 2 concept.</p>
+  <div id="mount" style="max-width:480px;"></div>
+</div>
+<script type="module">
+  const base = {
+    field_w: 128, field_h: 128, width: 460,
+    pixel_size: 0.12, wavelength: 0.04, slice_thickness: 2.0,
+    carrier_bands: 9, atom_phi: 0.62, atom_sigma: 2.4,
+    amp_max: 1.7, amp_power: 1.6,
+    flow_speed: 2.6, hover_speed: 8.0, recon_gain: 1.0,
+  };
+  const { default: widget } = await import(`./widgets/comp-experiment.js?t=${Date.now()}`);
+  window.rerender = (ov = {}) => {
+    const d = { ...base, ...ov };
+    const m = document.getElementById("mount"); m.innerHTML = "";
+    widget.render({ model: { get: (k) => d[k] }, el: m });
+    window.__cur = d;
+  };
+  window.rerender();
+  document.getElementById("theme").onclick = () => document.body.classList.toggle("dark");
+</script>
+</body>
+</html>

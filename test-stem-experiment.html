@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stem-experiment — local test</title>
+<style>
+  body { margin:0; font-family:-apple-system, system-ui, sans-serif; background:#ffffff; color:#1a1a1a; }
+  body.dark { background:#0e1116; color:#e8eaed; }
+  .page { max-width:880px; margin:0 auto; padding:26px 20px 90px; }
+  .bar { display:flex; align-items:center; gap:12px; margin-bottom:6px; }
+  .bar h1 { flex:1; font-size:1.3rem; margin:0; }
+  button { padding:6px 12px; border:1px solid currentColor; border-radius:8px; background:transparent;
+    color:inherit; cursor:pointer; font-size:.85rem; opacity:.8; }
+  .hint { opacity:.6; font-size:.85rem; margin:0 0 22px; }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="bar"><h1>stem-experiment — beam + sample + diffraction</h1><button id="theme">Toggle dark</button></div>
+  <p class="hint">Real FFT diffraction (probe x sample, like the reference 4DSTEM widget): a CBED of overlapping convergent-beam disks on a black detector (plasma colormap). Passive = the probe defocus sweeps, moving the cross-over and showing the defocused shadow image of the lattice. Hover = the sample scans left-to-right, atoms recycling at the edges, and the diffraction slides to match. Debug: init_defocus, init_scan.</p>
+  <div id="mount" style="max-width:540px;"></div>
+</div>
+<script type="module">
+  const base = {
+    embed: true,
+    pixel_size: 0.2,
+    cell_dim_x: 80, cell_dim_y: 30, cell_dim_z: 3,
+    a_lattice: 3.4, sigma: 0.22, lambda: 0.0197, crop_size: 128,
+    display_gamma: 0.7,
+    cbed_g0: 23, cbed_disk_frac: 0.78, cbed_chi: 0.026,
+    cbed_g_max: 42, cbed_sigma_g: 40, cbed_phase_scale: 0.04,
+    dp_size: 40, view_el: -26, view_zoom: 26,
+  };
+  // cache-bust so a reload always pulls the freshest widget module
+  const { default: widget } = await import(`./widgets/stem-experiment.js?t=${Date.now()}`);
+  window.rerender = (ov = {}) => {
+    const d = { ...base, ...ov };
+    const m = document.getElementById("mount"); m.innerHTML = "";
+    widget.render({ model: { get: (k) => d[k] }, el: m });
+    window.__cur = d;
+  };
+  window.rerender();
+  document.getElementById("theme").onclick = () => document.body.classList.toggle("dark");
+</script>
+</body>
+</html>
