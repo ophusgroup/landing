@@ -500,15 +500,19 @@ function renderScene(ctx, W, H, atoms, view, probeX, probeY, qMax, defocus, dpCa
   // lattice periods so it tiles seamlessly; the window is offset by a quarter period (pad) so the
   // wrap seam falls in a lattice GAP, keeping atoms off the boundary where float rounding could glitch.
   const pad = latA * 0.25, twoH = 2 * halfX;
-  const projected = new Array(numAtoms);
+  // The cell is TALL in y (so the cropSize diffraction window fits without wrapping), but the SCENE only
+  // draws a thin band around the beam line so it still reads as a thin sheet, not a fat block.
+  const yClip = 16;
+  const projected = [];
   for (let i=0;i<numAtoms;i++){
-    const ax = ((atoms[i*4] + sampleShift - pad + halfX) % twoH + twoH) % twoH - halfX + pad;
     const ay = atoms[i*4+1];
+    if (ay < -yClip || ay > yClip) continue;
+    const ax = ((atoms[i*4] + sampleShift - pad + halfX) % twoH + twoH) % twoH - halfX + pad;
     const p=proj(ax, ay, -atoms[i*4+2], view);
-    projected[i]={sx:p.sx,sy:p.sy,depth:p.depth,grain:atoms[i*4+3],ax,ay};
+    projected.push({sx:p.sx,sy:p.sy,depth:p.depth,grain:atoms[i*4+3],ax,ay});
   }
   projected.sort((a,b)=>a.depth-b.depth);
-  const minD=projected[0].depth, maxD=projected[numAtoms-1].depth;
+  const minD=projected[0].depth, maxD=projected[projected.length-1].depth;
   const rangeD=maxD-minD||1;
 
   // Ball-and-stick bonds, drawn UNDER the spheres. Honeycomb nearest neighbours (~1.96 A, so the
@@ -516,7 +520,7 @@ function renderScene(ctx, W, H, atoms, view, probeX, probeY, qMax, defocus, dpCa
   // shorter bonds. The distance cutoff skips 3.4 A second neighbours and any pair split across the scroll
   // seam (whose wrapped x differ by ~the cell width).
   const vis = [];
-  for (let i=0;i<numAtoms;i++){ const a=projected[i]; if (a.sx>-12 && a.sx<W+12) vis.push(a); }
+  for (let i=0;i<projected.length;i++){ const a=projected[i]; if (a.sx>-30 && a.sx<W+30 && a.sy>-30 && a.sy<H+30) vis.push(a); }
   ctx.lineCap="round";
   ctx.strokeStyle="rgba(116,130,160,0.62)"; ctx.lineWidth=2.1;  // lattice bonds (graphene network; dopant kind 2 still links)
   for (let i=0;i<vis.length;i++){ if (vis[i].grain>2) continue;
@@ -529,9 +533,9 @@ function renderScene(ctx, W, H, atoms, view, probeX, probeY, qMax, defocus, dpCa
     const dx=org[i].ax-org[j].ax, dy=org[i].ay-org[j].ay;
     if (dx*dx+dy*dy < 2.9){ ctx.beginPath(); ctx.moveTo(org[i].sx,org[i].sy); ctx.lineTo(org[j].sx,org[j].sy); ctx.stroke(); } }
 
-  for (let i=0;i<numAtoms;i++){
+  for (let i=0;i<projected.length;i++){
     const a=projected[i];
-    if (a.sx < -8 || a.sx > W + 8) continue; // skip atoms scrolled off-screen (the sheet is wider than the frame)
+    if (a.sx < -8 || a.sx > W + 8 || a.sy < -8 || a.sy > H + 8) continue; // skip atoms off-screen (sheet is wider than the frame)
     const t=(a.depth-minD)/rangeD;
     const fade=0.55+0.45*t;
     const gc=GRAIN_COLORS[a.grain];
@@ -562,7 +566,9 @@ function renderScene(ctx, W, H, atoms, view, probeX, probeY, qMax, defocus, dpCa
 function drawProbeCone(ctx, view, probeX, probeY, qMax, defocus, dpSize, zDP, zBeamSrc, halfZ, cropSize, pixelSize, dpCenterSx, dpCenterSy, dpZoom) {
   // Crossover z (0 = sample plane; defocus shifts it along the beam). Gentle scale so the cone
   // cross-over moves a moderate amount even at the larger defocus used to make the shadow visible.
-  const crossZ = Math.max(-50, Math.min(45, defocus / 750 * 35));
+  // Cross-over height: tanh-saturated so the LARGE defocus now used for the shadow projection never
+  // pushes it above the aperture (would break the cone). Stays in front of the crystal for overfocus.
+  const crossZ = 15 * Math.tanh(defocus / 320);
 
   // Bright-field disk radius at the DP plane, matched to the displayed pattern,
   // and the aperture radius that gives the same takeoff angle.
@@ -767,11 +773,11 @@ function render({ model, el }) {
     let probeX = 0; const probeY = 0;
     const initDefocus = model.get("init_defocus") || 0;  // debug: hold a static defocus
     const initScan = model.get("init_scan") || 0;        // debug: hold a static sample scan (A)
-    const qMax = model.get("probe_q_max") || 0.16;       // SMALL convergence -> separated, CIRCULAR CBED disks (the displayed pattern is then magnified by dpZoom)
-    const dpZoom = model.get("dp_zoom") || 3.5;          // magnify the central disks to fill the detector; the cone bottom scales with it so it still lands on the BF disk
-    const defAmp = model.get("defocus_amp") || 280;      // passive defocus sweep (A): wide enough that the lattice visibly magnifies -> demagnifies
+    const qMax = model.get("probe_q_max") || 0.3;        // MODERATE convergence: disks overlap a bit, and the BF disk is big enough to hold the shadow projection
+    const dpZoom = model.get("dp_zoom") || 1.5;          // light magnify -> BF disk near native FFT res so the projection stays crisp; cone bottom scales with it
+    const defAmp = model.get("defocus_amp") || 500;      // passive defocus sweep (A): big enough that the BF disk shows a magnified PROJECTION (Ronchigram) of the lattice/molecule under the probe
     const scanSpeed = model.get("scan_speed") || 7.0;    // hover sample scan rate (A/s)
-    const hovDefocus = model.get("hover_defocus") || 240; // under hover: hold a fairly large defocus so the BF disk shows the lattice shadow flying by as the sample scans
+    const hovDefocus = model.get("hover_defocus") || 480; // hover holds the shadow regime so the projection of whatever is under the probe scans by in the BF disk
     const halfX = cellX / 2;
     let defocus = initDefocus, sampleShift = initScan, hov = 0;
 
