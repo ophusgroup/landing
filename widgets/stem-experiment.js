@@ -269,14 +269,17 @@ function computeCBED(N, p) {
 // has a huge dynamic range, so a plain power stretch crushes the dim defocused shadow image to
 // black. The log compresses it so the shadow (and its zoom with defocus) is actually visible.
 // Rendered as plasma on an OPAQUE BLACK detector (same in light + dark mode).
-function renderCBEDtoCanvas(offscreen, intensity, N, gamma) {
+function renderCBEDtoCanvas(offscreen, intensity, N, power) {
   offscreen.width = N; offscreen.height = N;
   const ctx = offscreen.getContext("2d");
   const imgData = ctx.createImageData(N, N);
   const px = imgData.data;
+  // POWER-law tone map (was log). Log over-compressed the huge FFT dynamic range so the bright-field
+  // disk read no brighter than the diffracted ring. A gentle power (~0.5) keeps the BF disk clearly the
+  // brightest while still showing the dim shadow. Smaller power = flatter; larger = more BF contrast.
   const disp = new Float32Array(N * N);
   let mn = Infinity, mx = -Infinity;
-  for (let i = 0; i < N * N; i++) { const d = Math.log(1 + intensity[i]); disp[i] = d; if (d < mn) mn = d; if (d > mx) mx = d; }
+  for (let i = 0; i < N * N; i++) { const d = Math.pow(intensity[i], power); disp[i] = d; if (d < mn) mn = d; if (d > mx) mx = d; }
   const range = mx - mn || 1, cEdge = N / 2, rMax = N * 0.54;
   for (let r = 0; r < N; r++) {
     for (let c = 0; c < N; c++) {
@@ -284,13 +287,13 @@ function renderCBEDtoCanvas(offscreen, intensity, N, gamma) {
       // Read the horizontally-mirrored source: the beam is always over-focused here (cross-over ABOVE
       // the sample), so the shadow image is erect and must scan the SAME way as the lattice. The raw FFT
       // shadow runs the other way, so mirror it in x. (Invisible statically -- the pattern is symmetric.)
-      const t = Math.pow((disp[r * N + (N - 1 - c)] - mn) / range, gamma);
+      const t = (disp[r * N + (N - 1 - c)] - mn) / range;
       const dist = Math.hypot(c - cEdge, r - cEdge) / rMax;
       let vig = dist < 0.78 ? 1 : Math.max(0, 1 - (dist - 0.78) / 0.24);
       vig *= vig;
       const col = plasmaMap(t);
       const o = i * 4;
-      const w = vig * Math.min(1, t * 4); // ramp the very bottom to true black, keep the shadow visible
+      const w = vig * Math.min(1, t * 6); // ramp only the very bottom to true black
       px[o] = col[0] * w | 0; px[o + 1] = col[1] * w | 0; px[o + 2] = col[2] * w | 0; px[o + 3] = 255;
     }
   }
@@ -583,7 +586,7 @@ function render({ model, el }) {
   const sigma = model.get("sigma") || 0.22;
   const lambda = model.get("lambda") || 0.0197;
   const cropSize = model.get("crop_size") || 128;
-  const initGamma = model.get("display_gamma") || 0.7;
+  const dispPower = model.get("display_power") || 0.5;  // detector tone map: BF disk pops (was log)
 
   // Coherent-CBED diffraction (overlapping interfering disks)
   const cbedG0 = model.get("cbed_g0") || 23;            // reciprocal lattice spacing (DP px)
@@ -694,10 +697,10 @@ function render({ model, el }) {
     // at a fairly large defocus (hovDefocus) while the sample scans left->right, so the magnified lattice
     // shadow flies by in the bright-field disk. Real FFT physics (probe x sample -> FFT) drives the
     // detector; the scene reads the same defocus + scan, so they stay in sync.
-    let probeX = 0; const probeY = 0, gamma = initGamma;
+    let probeX = 0; const probeY = 0;
     const initDefocus = model.get("init_defocus") || 0;  // debug: hold a static defocus
     const initScan = model.get("init_scan") || 0;        // debug: hold a static sample scan (A)
-    const qMax = model.get("probe_q_max") || 0.5;        // aperture / convergence semi-angle (bigger = bigger disks)
+    const qMax = model.get("probe_q_max") || 0.68;       // aperture / convergence semi-angle (bigger = bigger BF disk, more visible shadow detail)
     const defAmp = model.get("defocus_amp") || 280;      // passive defocus sweep (A): wide enough that the lattice visibly magnifies -> demagnifies
     const scanSpeed = model.get("scan_speed") || 7.0;    // hover sample scan rate (A/s)
     const hovDefocus = model.get("hover_defocus") || 240; // under hover: hold a fairly large defocus so the BF disk shows the lattice shadow flying by as the sample scans
@@ -711,7 +714,7 @@ function render({ model, el }) {
       if (probeDf !== defocus) { probe = computeProbe(cropSize, pixelSize, qMax, defocus, lambda); probeDf = defocus; }
       probeX = -sampleShift; // the beam is centered; the sample scrolls under it
       const intensity = computeDiffraction(potential, imW, imH, probe.probeRe, probe.probeIm, probeX, probeY, cropSize, pixelSize);
-      renderCBEDtoCanvas(dpOffscreen, intensity, cropSize, gamma);
+      renderCBEDtoCanvas(dpOffscreen, intensity, cropSize, dispPower);
       renderScene(ctx, W, H, atoms, view, 0, probeY, qMax, defocus, dpOffscreen, dpSize, cropSize, pixelSize, cellDimZ, 1, sampleShift, halfX, aLattice);
     }
 
