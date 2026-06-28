@@ -110,45 +110,48 @@ function makeRot(a, b, g) {
 function applyRot(m,x,y,z) { return [m[0]*x+m[1]*y+m[2]*z, m[3]*x+m[4]*y+m[5]*z, m[6]*x+m[7]*y+m[8]*z]; }
 
 function generateSample(params) {
-  const { pixelSize, cellDimX, cellDimY, cellDimZ, aLattice, sigma } = params;
+  const { pixelSize, cellDimX, cellDimY, aLattice, sigma } = params;
   const imW = Math.round(cellDimX / pixelSize), imH = Math.round(cellDimY / pixelSize);
   const potential = new Float32Array(imW * imH);
-  // --- A good-looking hexagonal lattice (looks cool; not a literal material) ---
-  // Two-color honeycomb in the x-y plane, one thin layer. The small cell spreads
-  // the diffraction spots apart, so a large convergence still gives big, distinct
-  // CBED disks. The 4th atom value tags the A/B sublattice (its color).
+  // Two-color honeycomb in the x-y plane, one thin layer. The 4th atom value tags the element/kind
+  // (0/1 sublattice A/B, 2 heavy dopant, 3/4/5 organic C/N/O), which sets colour, size AND scattering
+  // weight (ATOM_AMP). The small cell spreads the diffraction spots so a large convergence still gives
+  // big, distinct CBED disks.
   const s3 = Math.sqrt(3);
   const a = aLattice;            // in-plane lattice constant (Å)
-  const cZ = aLattice;           // one layer at this thickness
   const a1x = a,       a1y = 0;
   const a2x = a * 0.5, a2y = a * s3 / 2;
   const bx = (a1x + a2x) / 3, by = (a1y + a2y) / 3;   // B sublattice offset
 
-  const halfX = cellDimX/2, halfY = cellDimY/2, halfZ = cellDimZ/2;
+  const halfX = cellDimX/2, halfY = cellDimY/2;
   const nJ = Math.ceil(halfY / a2y) + 4;
   const nI = Math.ceil(halfX / a) + nJ + 4;
-  const nK = Math.ceil(halfZ / cZ) + 1;
-  const atomList = [];
 
-  for (let k=-nK; k<=nK; k++) {
-    const az = k * cZ;
-    if (az < -halfZ || az >= halfZ) continue;
-    for (let j=-nJ; j<=nJ; j++) {
-      for (let i=-nI; i<=nI; i++) {
-        for (let s=0; s<2; s++) {
-          const ax = i*a1x + j*a2x + (s ? bx : 0);
-          const ay = i*a1y + j*a2y + (s ? by : 0);
-          if (ax<-halfX||ax>=halfX||ay<-halfY||ay>=halfY) continue;
-          atomList.push(ax, ay, az, s);
-          const px=ax/pixelSize+imW/2, py=ay/pixelSize+imH/2;
-          const fxp=Math.floor(px), fyp=Math.floor(py), dx=px-fxp, dy=py-fyp;
-          const x0=((fxp%imW)+imW)%imW, x1=((fxp+1)%imW+imW)%imW;
-          const y0=((fyp%imH)+imH)%imH, y1=((fyp+1)%imH+imH)%imH;
-          potential[x0*imH+y0]+=(1-dx)*(1-dy); potential[x1*imH+y0]+=dx*(1-dy);
-          potential[x0*imH+y1]+=(1-dx)*dy; potential[x1*imH+y1]+=dx*dy;
-        }
+  // --- perfect honeycomb as an editable atom list (objects so defects can rewrite it) ---
+  const atoms = [];
+  for (let j=-nJ; j<=nJ; j++) {
+    for (let i=-nI; i<=nI; i++) {
+      for (let s=0; s<2; s++) {
+        const x = i*a1x + j*a2x + (s ? bx : 0);
+        const y = i*a1y + j*a2y + (s ? by : 0);
+        if (x<-halfX||x>=halfX||y<-halfY||y>=halfY) continue;
+        atoms.push({ x, y, z: 0, k: s });
       }
     }
+  }
+
+  // --- inject defects + an adsorbed molecule (mostly off-camera until the hover scan reveals them) ---
+  applyDefects(atoms, halfX, halfY, a);
+
+  // --- rasterize the projected potential, each atom weighted by its element's scattering power ---
+  for (let n=0; n<atoms.length; n++) {
+    const at = atoms[n], amp = ATOM_AMP[at.k] || 1;
+    const px=at.x/pixelSize+imW/2, py=at.y/pixelSize+imH/2;
+    const fxp=Math.floor(px), fyp=Math.floor(py), dx=px-fxp, dy=py-fyp;
+    const x0=((fxp%imW)+imW)%imW, x1=((fxp+1)%imW+imW)%imW;
+    const y0=((fyp%imH)+imH)%imH, y1=((fyp+1)%imH+imH)%imH;
+    potential[x0*imH+y0]+=amp*(1-dx)*(1-dy); potential[x1*imH+y0]+=amp*dx*(1-dy);
+    potential[x0*imH+y1]+=amp*(1-dx)*dy; potential[x1*imH+y1]+=amp*dx*dy;
   }
 
   // Gaussian blur
@@ -160,7 +163,53 @@ function generateSample(params) {
   for (let y=0;y<imH;y++) for (let x=0;x<imW;x++){let s=0;for(let k=-kR;k<=kR;k++)s+=potential[((x+k)%imW+imW)%imW*imH+y]*kernel[k+kR];temp[x*imH+y]=s;}
   for (let x=0;x<imW;x++) for (let y=0;y<imH;y++){let s=0;for(let k=-kR;k<=kR;k++)s+=temp[x*imH+((y+k)%imH+imH)%imH]*kernel[k+kR];potential[x*imH+y]=s;}
 
-  return { potential, imW, imH, atoms: new Float32Array(atomList) };
+  // --- scene atoms (Float32Array, stride 4: x, y, z, kind) ---
+  const out = new Float32Array(atoms.length * 4);
+  for (let n=0; n<atoms.length; n++){ const at=atoms[n]; out[n*4]=at.x; out[n*4+1]=at.y; out[n*4+2]=at.z; out[n*4+3]=at.k; }
+  return { potential, imW, imH, atoms: out };
+}
+
+// Inject point defects + an adsorbed caffeine molecule into the honeycomb list. Coordinates are
+// absolute (Å); defects sit at a spread of x so most are off-camera until the hover scan reveals them,
+// with the caffeine parked at x=0 in the passive beam path. Skipped for small preview cells.
+function applyDefects(atoms, halfX, halfY, a) {
+  if (halfX < 30) return;
+  const nearest = (x, y) => {
+    let bi=-1, bd=1e9;
+    for (let i=0;i<atoms.length;i++){ const at=atoms[i]; if(at.k>1) continue; const d=(at.x-x)**2+(at.y-y)**2; if(d<bd){bd=d;bi=i;} }
+    return bi;
+  };
+  // heavy substitutional dopants -> bright in the CBED, gold in the scene
+  for (const [x,y] of [[27,5],[44,-6],[-50,-3]]) { const i=nearest(x,y); if(i>=0) atoms[i].k=2; }
+  // vacancies, with a little inward relaxation of the surrounding atoms
+  for (const [x,y] of [[-27,-4],[52,5]]) {
+    const i=nearest(x,y); if(i<0) continue;
+    const vx=atoms[i].x, vy=atoms[i].y; atoms.splice(i,1);
+    for (let j=0;j<atoms.length;j++){ const at=atoms[j]; if(at.k>1) continue; const d=Math.hypot(at.x-vx,at.y-vy); if(d>0.1&&d<a*0.85){ at.x+=(vx-at.x)/d*0.3; at.y+=(vy-at.y)/d*0.3; } }
+  }
+  // Stone-Wales: rotate one bond 90 deg about its midpoint (two atoms swing into pentagon/heptagon)
+  { const i=nearest(-42,4);
+    if(i>=0){ const xi=atoms[i].x, yi=atoms[i].y; let j=-1,bd=1e9;
+      for(let m=0;m<atoms.length;m++){ if(m===i||atoms[m].k>1) continue; const d=(atoms[m].x-xi)**2+(atoms[m].y-yi)**2; if(d<bd){bd=d;j=m;} }
+      if(j>=0){ const mx=(xi+atoms[j].x)/2, my=(yi+atoms[j].y)/2; for(const m of [i,j]){ const ex=atoms[m].x-mx, ey=atoms[m].y-my; atoms[m].x=mx-ey; atoms[m].y=my+ex; } } }
+  }
+  addCaffeine(atoms, 0, 0);
+}
+
+// 14 heavy atoms (8 C, 4 N, 2 O) of caffeine (1,3,7-trimethylxanthine) in an approximate planar
+// geometry (Å), lifted just above the sheet so it reads as adsorbed. k: 3=C, 4=N, 5=O.
+function addCaffeine(atoms, cx, cy) {
+  const M = [
+    [-1.21,0.70,4],[-1.21,-0.70,3],[0,-1.40,4],[1.21,-0.70,3],[1.21,0.70,3],[0,1.40,3], // 6-ring: N1 C2 N3 C4 C5 C6
+    [2.40,1.15,4],[3.00,0,3],[2.40,-1.15,4],   // 5-ring: N7 C8 N9
+    [-2.25,-1.30,5],[0,2.60,5],                // carbonyls O2 O6
+    [-2.52,1.45,3],[0,-2.90,3],[3.75,1.80,3],  // methyls on N1 N3 N7
+  ];
+  const mol = M.map(([mx,my,k]) => ({ x: cx+mx, y: cy+my, k }));
+  // clear the lattice atoms it sits on so the molecule reads cleanly (adsorbed in a small clearing)
+  for (let i=atoms.length-1;i>=0;i--){ const at=atoms[i]; if(at.k>1) continue;
+    for (const c of mol){ if((at.x-c.x)**2+(at.y-c.y)**2 < 5.3){ atoms.splice(i,1); break; } } }
+  for (const c of mol) atoms.push({ x: c.x, y: c.y, z: -1.6, k: c.k });
 }
 
 // ============================================================
@@ -320,8 +369,10 @@ function plasmaMap(t) {
   return [a[0] + (b[0] - a[0]) * f, a[1] + (b[1] - a[1]) * f, a[2] + (b[2] - a[2]) * f];
 }
 
-const GRAIN_COLORS = [[120,190,255],[255,150,110]]; // two-tone sublattices (cool blue / warm coral)
-const ATOM_RAD    = [1.0, 0.86];                    // gentle size contrast between sublattices
+// element-like kinds: 0/1 honeycomb A/B, 2 heavy dopant, 3/4/5 organic C/N/O (the adsorbed molecule)
+const GRAIN_COLORS = [[120,190,255],[255,150,110],[255,205,80],[190,196,206],[125,140,240],[255,95,82]];
+const ATOM_RAD     = [1.0, 0.86, 1.45, 0.74, 0.8, 0.86];
+const ATOM_AMP     = [1.0, 1.0, 2.4, 1.0, 1.3, 1.6]; // projected-potential weight (~scattering power; dopant heavy)
 
 function renderDPtoCanvas(offscreen, intensity, N, gamma, zoom) {
   zoom = zoom || 1;
@@ -455,12 +506,31 @@ function renderScene(ctx, W, H, atoms, view, probeX, probeY, qMax, defocus, dpCa
   const projected = new Array(numAtoms);
   for (let i=0;i<numAtoms;i++){
     const ax = ((atoms[i*4] + sampleShift - pad + halfX) % twoH + twoH) % twoH - halfX + pad;
-    const p=proj(ax, atoms[i*4+1], -atoms[i*4+2], view);
-    projected[i]={sx:p.sx,sy:p.sy,depth:p.depth,grain:atoms[i*4+3]};
+    const ay = atoms[i*4+1];
+    const p=proj(ax, ay, -atoms[i*4+2], view);
+    projected[i]={sx:p.sx,sy:p.sy,depth:p.depth,grain:atoms[i*4+3],ax,ay};
   }
   projected.sort((a,b)=>a.depth-b.depth);
   const minD=projected[0].depth, maxD=projected[numAtoms-1].depth;
   const rangeD=maxD-minD||1;
+
+  // Ball-and-stick bonds, drawn UNDER the spheres. Honeycomb nearest neighbours (~1.96 A, so the
+  // network reads like graphene and the vacancy / Stone-Wales defects show clearly) plus the molecule's
+  // shorter bonds. The distance cutoff skips 3.4 A second neighbours and any pair split across the scroll
+  // seam (whose wrapped x differ by ~the cell width).
+  const vis = [];
+  for (let i=0;i<numAtoms;i++){ const a=projected[i]; if (a.sx>-12 && a.sx<W+12) vis.push(a); }
+  ctx.lineCap="round";
+  ctx.strokeStyle="rgba(116,130,160,0.62)"; ctx.lineWidth=2.1;  // lattice bonds (graphene network; dopant kind 2 still links)
+  for (let i=0;i<vis.length;i++){ if (vis[i].grain>2) continue;
+    for (let j=i+1;j<vis.length;j++){ if (vis[j].grain>2) continue;
+      const dx=vis[i].ax-vis[j].ax, dy=vis[i].ay-vis[j].ay;
+      if (dx*dx+dy*dy < 4.2){ ctx.beginPath(); ctx.moveTo(vis[i].sx,vis[i].sy); ctx.lineTo(vis[j].sx,vis[j].sy); ctx.stroke(); } } }
+  const org = vis.filter(a=>a.grain>=3);
+  ctx.strokeStyle="rgba(108,112,130,0.92)"; ctx.lineWidth=2.4;  // molecule bonds (stronger)
+  for (let i=0;i<org.length;i++) for (let j=i+1;j<org.length;j++){
+    const dx=org[i].ax-org[j].ax, dy=org[i].ay-org[j].ay;
+    if (dx*dx+dy*dy < 2.9){ ctx.beginPath(); ctx.moveTo(org[i].sx,org[i].sy); ctx.lineTo(org[j].sx,org[j].sy); ctx.stroke(); } }
 
   for (let i=0;i<numAtoms;i++){
     const a=projected[i];
