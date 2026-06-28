@@ -179,22 +179,42 @@ function applyDefects(atoms, halfX, halfY, a) {
     for (let i=0;i<atoms.length;i++){ const at=atoms[i]; if(at.k>1) continue; const d=(at.x-x)**2+(at.y-y)**2; if(d<bd){bd=d;bi=i;} }
     return bi;
   };
-  // Every defect sits on the beam centre line (y=0) so the scan walks the probe straight through each.
-  // NONE leave a hole: dopants are substitutional, the Stone-Wales is a bond rotation, and the molecule
-  // sits ON TOP of an intact lattice (no clearing).
-  // heavy substitutional dopants -> bright in the CBED, gold in the scene
-  for (const x of [18, 42, -40, -54]) { const i=nearest(x,0); if(i>=0) atoms[i].k=2; }
-  // Stone-Wales: rotate one bond 90 deg about its midpoint (two atoms swing into pentagon/heptagon)
-  { const i=nearest(-18,0);
+  const kNear = (x, y, k) => {
+    const all = [];
+    for (let i=0;i<atoms.length;i++){ const at=atoms[i]; if(at.k>1) continue; all.push([(at.x-x)**2+(at.y-y)**2, i]); }
+    all.sort((p,q)=>p[0]-q[0]); return all.slice(0,k).map(p=>p[1]);
+  };
+  // A VARIETY of defects, all on the beam centre line (y=0) so the scan walks the probe through each.
+  // None leaves a hole. (1) single substitutional dopant; (2) cluster of 4 substituted atoms;
+  // (3) Stone-Wales bond rotation; (4) hemispherical metal nanoparticle on top; (5) stepped ad-atom
+  // pyramid with a heavy apex; (6) the rotated caffeine molecule on top.
+  { const i=nearest(-54,0); if(i>=0) atoms[i].k=2; }                 // (1)
+  for (const i of kNear(-30,0,4)) atoms[i].k=2;                      // (2)
+  { const i=nearest(-14,0);                                         // (3)
     if(i>=0){ const xi=atoms[i].x, yi=atoms[i].y; let j=-1,bd=1e9;
       for(let m=0;m<atoms.length;m++){ if(m===i||atoms[m].k>1) continue; const d=(atoms[m].x-xi)**2+(atoms[m].y-yi)**2; if(d<bd){bd=d;j=m;} }
       if(j>=0){ const mx=(xi+atoms[j].x)/2, my=(yi+atoms[j].y)/2; for(const m of [i,j]){ const ex=atoms[m].x-mx, ey=atoms[m].y-my; atoms[m].x=mx-ey; atoms[m].y=my+ex; } } }
   }
-  addCaffeine(atoms, 0, 0);
+  addNanoparticle(atoms, 22, 0);                                    // (4)
+  addPyramid(atoms, 48, 0);                                         // (5)
+  addCaffeine(atoms, 0, 0);                                         // (6)
 }
 
-// 14 heavy atoms (8 C, 4 N, 2 O) of caffeine (1,3,7-trimethylxanthine) in an approximate planar
-// geometry (Å), lifted just above the sheet so it reads as adsorbed. k: 3=C, 4=N, 5=O.
+// Cluster atoms (kind 6 = silvery metal, NO bonds) sit ON TOP of the surface (z<0 draws toward the beam).
+function addNanoparticle(atoms, cx, cy) { // a rounded hemisphere of metal atoms
+  for (const [cnt, r, z] of [[9, 3.0, -1.1], [6, 2.1, -2.6], [3, 1.1, -3.7]])
+    for (let i=0;i<cnt;i++){ const ang = i/cnt*2*Math.PI + z; atoms.push({ x: cx+r*Math.cos(ang), y: cy+r*Math.sin(ang), z, k: 6 }); }
+  atoms.push({ x: cx, y: cy, z: -4.4, k: 6 });
+}
+function addPyramid(atoms, cx, cy) { // stepped flat planes shrinking upward, a heavy apex on top
+  atoms.push({ x: cx, y: cy, z: -0.7, k: 6 });
+  for (const [cnt, r, z] of [[6, 2.7, -0.7], [3, 1.4, -2.5]])
+    for (let i=0;i<cnt;i++){ const ang = i/cnt*2*Math.PI + (z<-2?0.5:0); atoms.push({ x: cx+r*Math.cos(ang), y: cy+r*Math.sin(ang), z, k: 6 }); }
+  atoms.push({ x: cx, y: cy, z: -4.3, k: 6 });
+}
+
+// 14 heavy atoms (8 C, 4 N, 2 O) of caffeine (1,3,7-trimethylxanthine), ROTATED in-plane and lifted ON
+// TOP of the intact lattice (z<0 draws in front, no clearing). k: 3=C, 4=N, 5=O.
 function addCaffeine(atoms, cx, cy) {
   const M = [
     [-1.21,0.70,4],[-1.21,-0.70,3],[0,-1.40,4],[1.21,-0.70,3],[1.21,0.70,3],[0,1.40,3], // 6-ring: N1 C2 N3 C4 C5 C6
@@ -202,8 +222,8 @@ function addCaffeine(atoms, cx, cy) {
     [-2.25,-1.30,5],[0,2.60,5],                // carbonyls O2 O6
     [-2.52,1.45,3],[0,-2.90,3],[3.75,1.80,3],  // methyls on N1 N3 N7
   ];
-  // Adsorbed ON TOP of an INTACT lattice: lifted toward the beam (z<0 draws in front), no clearing.
-  for (const [mx,my,k] of M) atoms.push({ x: cx+mx, y: cy+my, z: -2.4, k });
+  const th = 0.62, ct = Math.cos(th), st = Math.sin(th); // rotate off the lattice axes so it reads as a distinct object
+  for (const [mx,my,k] of M) atoms.push({ x: cx + mx*ct - my*st, y: cy + mx*st + my*ct, z: -2.4, k });
 }
 
 // ============================================================
@@ -367,9 +387,12 @@ function plasmaMap(t) {
 }
 
 // element-like kinds: 0/1 honeycomb A/B, 2 heavy dopant, 3/4/5 organic C/N/O (the adsorbed molecule)
-const GRAIN_COLORS = [[120,190,255],[255,150,110],[255,205,80],[190,196,206],[125,140,240],[255,95,82]];
-const ATOM_RAD     = [1.0, 0.86, 1.45, 0.74, 0.8, 0.86];
-const ATOM_AMP     = [1.0, 1.0, 2.4, 1.0, 1.3, 1.6]; // projected-potential weight (~scattering power; dopant heavy)
+// kinds: 0/1 substrate A/B, 2 substitutional dopant (gold, bonds into the lattice), 3/4/5 organic C/N/O,
+// 6 on-top metal cluster (silvery, no bonds -- nanoparticle / pyramid). The "unique" atoms (dopant, N, O,
+// cluster) get larger radii so they pop.
+const GRAIN_COLORS = [[120,190,255],[255,150,110],[255,205,80],[190,196,206],[120,135,255],[255,90,80],[206,214,226]];
+const ATOM_RAD     = [1.0, 0.86, 1.7, 0.78, 1.08, 1.24, 1.7];
+const ATOM_AMP     = [1.0, 1.0, 2.4, 1.0, 1.35, 1.7, 3.0]; // projected-potential weight (~scattering power; heavy = dopant/cluster)
 
 function renderDPtoCanvas(offscreen, intensity, N, gamma, zoom) {
   zoom = zoom || 1;
@@ -527,7 +550,7 @@ function renderScene(ctx, W, H, atoms, view, probeX, probeY, qMax, defocus, dpCa
     for (let j=i+1;j<vis.length;j++){ if (vis[j].grain>2) continue;
       const dx=vis[i].ax-vis[j].ax, dy=vis[i].ay-vis[j].ay;
       if (dx*dx+dy*dy < 4.2){ ctx.beginPath(); ctx.moveTo(vis[i].sx,vis[i].sy); ctx.lineTo(vis[j].sx,vis[j].sy); ctx.stroke(); } } }
-  const org = vis.filter(a=>a.grain>=3);
+  const org = vis.filter(a=>a.grain>=3 && a.grain<=5); // organic only; kind 6 cluster atoms draw bondless
   ctx.strokeStyle="rgba(108,112,130,0.92)"; ctx.lineWidth=2.4;  // molecule bonds (stronger)
   for (let i=0;i<org.length;i++) for (let j=i+1;j<org.length;j++){
     const dx=org[i].ax-org[j].ax, dy=org[i].ay-org[j].ay;
