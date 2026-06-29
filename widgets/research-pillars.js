@@ -62,15 +62,15 @@ const MAT = {
 
 const PILLARS = [
   { kind: "stem", img: "card_experiments.jpg",
-    title: "Scanning Transmission Electron Microscopy",
+    title: "Scanning Transmission Electron Microscopy", short: "Electron Microscopy",
     desc: "We develop new STEM measurement techniques using advanced detectors, beam shaping, and programmable acquisition. We record and invert massive electron-scattering datasets to reveal structural, chemical, and other signals beyond conventional imaging.",
     links: [["see the projects", "#scanning-transmission-electron-microscopy"]] },
   { kind: "comp", img: "card_reconstruction.jpg",
-    title: "Computational Imaging and Open Software",
+    title: "Computational Imaging and Open Software", short: "Computational Imaging",
     desc: "We build reconstruction algorithms, simulations, and open-source software for quantitative microscopy. Our methods include ptychography, tomography, and physics-guided machine learning to convert raw high-dimensional data into interpretable structure.",
     links: [["see the projects", "#computational-imaging-and-open-software"]] },
   { kind: "materials",
-    title: "Atomic-Scale Materials Structure",
+    title: "Atomic-Scale Materials Structure", short: "Materials Structure",
     desc: "We study how atomic structure controls material behavior. Our work maps strain, defects, interfaces, chemical and structural order/disorder, local symmetry, and evolving atomic environments across energy, electronic, quantum, and structural materials.",
     links: [["see the projects", "#atomic-scale-materials-structure"]] },
 ];
@@ -112,6 +112,8 @@ function render({ model, el }) {
       .${id}-links { font-size:.82rem; line-height:1.7; color:var(--${id}-faint); }
       .${id}-links a { color:var(--${id}-link); text-decoration:none; }
       .${id}-links a:hover { text-decoration:underline; }
+      .${id}-btitle { font-size:.95rem; font-weight:600; line-height:1.3; text-align:center; margin:.6rem 0 .2rem; color:var(--${id}-fg); }
+      .${id}-row.bare .${id}-links { text-align:center; }
       @media (max-width:640px){ .${id}-row{ flex-direction:column; } .${id}-col{ border-left:0; padding:0 0 1.2rem; } }
       @media (prefers-reduced-motion: reduce){ .${id}-panel{ transition:none; } }
     </style>
@@ -119,7 +121,8 @@ function render({ model, el }) {
       ${PILLARS.map((p) => `
         <div class="${id}-col" data-kind="${p.kind}">
           <div class="${id}-panel">${p.kind === "materials" ? `<canvas></canvas>` : `<div class="${id}-widget" data-widget="${p.kind}"></div>`}</div>
-          ${bare ? "" : `<div class="${id}-title">${p.title}</div>
+          ${bare ? `<div class="${id}-btitle">${p.short}</div>
+          <div class="${id}-links">${p.links.map(([t, h]) => `<a href="${researchUrl}${h}">${t}</a>`).join(" · ")}</div>` : `<div class="${id}-title">${p.title}</div>
           <div class="${id}-bar"></div>
           <div class="${id}-desc">${p.desc}</div>
           <div class="${id}-links">${p.links.map(([t, h]) => `<a href="${h}">${t}</a>`).join(" · ")}</div>`}
@@ -145,10 +148,10 @@ function render({ model, el }) {
   // Per-column hover: grow + raise the panel (the spill), and drive the 3D bloom.
   const cols = [...el.querySelectorAll(`.${id}-col`)];
   const hover = { materials: { value: false } };
-  cols.forEach((col) => {
+  cols.forEach((col, i) => {
     col.addEventListener("pointerenter", () => { col.classList.add("hot"); if (col.dataset.kind === "materials") hover.materials.value = true; });
     col.addEventListener("pointerleave", () => { col.classList.remove("hot"); if (col.dataset.kind === "materials") hover.materials.value = false; });
-    if (bare) { col.style.cursor = "pointer"; col.addEventListener("click", () => { window.location.href = researchUrl; }); }
+    if (bare) { col.style.cursor = "pointer"; const dest = researchUrl + ((PILLARS[i] && PILLARS[i].links[0]) ? PILLARS[i].links[0][1] : ""); col.addEventListener("click", () => { window.location.href = dest; }); }
   });
 
   // Mount the STEM experiment (col 1) and the wave-propagation widget (col 2).
