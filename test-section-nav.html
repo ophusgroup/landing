@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>section-nav — readability test</title>
+<script>
+  // detectDark() reads <html class="dark|light"> first, so set it pre-render.
+  const theme = new URLSearchParams(location.search).get("theme") || "light";
+  document.documentElement.classList.add(theme);
+</script>
+<style>
+  html.light, html.light body { background:#ffffff; color:#1a1a1a; }
+  html.dark,  html.dark body  { background:#0e1116; color:#e6e8eb; }
+  body { font-family: ui-sans-serif, system-ui, -apple-system, sans-serif;
+         max-width: 720px; margin: 0 auto; padding: 48px 24px 90vh; }
+  h1 { font-size: 1.6rem; }
+  h2 { margin-top: 7vh; }
+  h3 { margin-top: 3vh; opacity:.92; }
+  p  { line-height: 1.65; opacity:.78; }
+</style>
+</head>
+<body>
+  <h1>Section-nav readability test</h1>
+  <p>Scroll-spy outline floats fixed at top-right. At scroll 0 the first item is
+     active and the rest fade with distance — the faded ones are what must stay readable.</p>
+
+  <h2 id="introduction-and-overview">Introduction and Overview</h2>
+  <p>Paragraph of filler text to give the page height so the outline has room to track.</p>
+  <h2 id="scanning-transmission-electron-microscopy">Scanning Transmission Electron Microscopy</h2>
+  <p>Filler.</p>
+  <h3 id="advanced-detectors">Advanced Detectors and Beam Shaping</h3>
+  <p>Filler.</p>
+  <h2 id="computational-imaging-and-open-software">Computational Imaging and Open Software</h2>
+  <p>Filler.</p>
+  <h3 id="ptychography-and-tomography">Ptychography and Tomography</h3>
+  <p>Filler.</p>
+  <h2 id="characterizing-materials-on-the-atomic-scale">Characterizing Materials on the Atomic Scale</h2>
+  <p>Filler.</p>
+  <h3 id="battery-materials">Battery Materials</h3>
+  <p>Filler.</p>
+  <h2 id="closing-remarks">Closing Remarks and Acknowledgements</h2>
+  <p>Filler.</p>
+
+  <div id="mount"></div>
+  <script type="module">
+    const mod = await import("./widgets/section-nav.js?t=" + Date.now());
+    const opts = { title: "On this page", min_width: 0, max_level: 3, accent: "#8C1515", accent_dark: "#d24a52" };
+    mod.default.render({ el: document.getElementById("mount"), model: { get: (k) => opts[k] } });
+  </script>
+</body>
+</html>

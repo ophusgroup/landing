@@ -135,7 +135,7 @@ function render({ el, model }) {
   function applyTheme() {
     if (!nav) return;
     const dark = detectDark();
-    nav.style.setProperty("--cn-fg", dark ? "#9aa3ad" : "#6b7280");
+    nav.style.setProperty("--cn-fg", dark ? "#aab3bd" : "#4b5563");
     nav.style.setProperty("--cn-dim", dark ? "#6b7280" : "#9aa3ad");
     nav.style.setProperty("--cn-active", dark ? "#f3f4f6" : "#111827");
     nav.style.setProperty("--cn-rule", dark ? "rgba(255,255,255,0.16)" : "rgba(0,0,0,0.14)");
@@ -184,7 +184,7 @@ function render({ el, model }) {
       const on = i === act;
       links[i].style.color = on ? "var(--cn-active)" : "var(--cn-fg)";
       links[i].style.fontWeight = on ? "600" : "400";
-      links[i].style.opacity = Math.max(0.35, 1 - 0.18 * Math.abs(i - act));
+      links[i].style.opacity = Math.max(0.6, 1 - 0.14 * Math.abs(i - act));
     }
   }
 
