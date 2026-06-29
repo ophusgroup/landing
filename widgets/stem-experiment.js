@@ -342,7 +342,7 @@ function computeCBED(N, p) {
 // has a huge dynamic range, so a plain power stretch crushes the dim defocused shadow image to
 // black. The log compresses it so the shadow (and its zoom with defocus) is actually visible.
 // Rendered as plasma on an OPAQUE BLACK detector (same in light + dark mode).
-function renderCBEDtoCanvas(offscreen, intensity, N, power, zoom, rBF, dfExp, ref, dfScale) {
+function renderCBEDtoCanvas(offscreen, intensity, N, power, zoom, rBF, dfExp, ref, dfScale, bright) {
   zoom = zoom || 1;
   offscreen.width = N; offscreen.height = N;
   const ctx = offscreen.getContext("2d");
@@ -384,7 +384,7 @@ function renderCBEDtoCanvas(offscreen, intensity, N, power, zoom, rBF, dfExp, re
       const col = plasmaMap(t);
       const o = (r * N + c) * 4;
       const w = vig * Math.min(1, t * 6); // ramp only the very bottom to true black
-      px[o] = col[0] * w | 0; px[o + 1] = col[1] * w | 0; px[o + 2] = col[2] * w | 0; px[o + 3] = 255;
+      const wb = w * (bright || 1); px[o] = col[0] * wb | 0; px[o + 1] = col[1] * wb | 0; px[o + 2] = col[2] * wb | 0; px[o + 3] = 255;
     }
   }
   ctx.putImageData(imgData, 0, 0);
@@ -846,7 +846,7 @@ function render({ model, el }) {
     const dpZoom = model.get("dp_zoom") || 1.5;          // light magnify -> BF disk near native FFT res so the projection stays crisp; cone bottom scales with it
     const defAmp = model.get("defocus_amp") || 1500;     // passive defocus sweep MAX (A). The BF-disk Ronchigram shows ~qMax*lambda*defocus/a unit cells across, so a big swing makes the lattice image visibly magnify (few cells, small defocus) <-> demagnify (many cells, large defocus)
     const scanSpeed = model.get("scan_speed") || 7.0;    // hover sample scan rate (A/s)
-    const hovDefocus = model.get("hover_defocus") || 480; // hover holds the shadow regime so the projection of whatever is under the probe scans by in the BF disk
+    const hovDefocus = model.get("hover_defocus") || 1200; // hover holds a LARGE defocus so a clearly demagnified lattice (several unit cells) scrolls by in the BF disk under the scanning probe
     const halfX = cellX / 2;
     let defocus = initDefocus, sampleShift = initScan, hov = 0;
 
@@ -865,7 +865,8 @@ function render({ model, el }) {
       probeX = -sampleShift; // the beam is centered; the sample scrolls under it
       const intensity = computeDiffraction(potential, imW, imH, probe.probeRe, probe.probeIm, probeX, probeY, cropSize, pixelSize);
       const rBF = qMax * cropSize * pixelSize; // bright-field disk radius (px) = the aperture radius in the FFT grid
-      renderCBEDtoCanvas(dpOffscreen, intensity, cropSize, dispPower, dpZoom, rBF, dfPower, bfRef, dfScale);
+      const bright = 0.55 + 0.45 * Math.min(1, Math.abs(defocus) / 300); // dim the detector near FOCUS so the concentrated bright-field disk does not saturate to a blinding yellow
+      renderCBEDtoCanvas(dpOffscreen, intensity, cropSize, dispPower, dpZoom, rBF, dfPower, bfRef, dfScale, bright);
       renderScene(ctx, W, H, atoms, view, 0, probeY, qMax, defocus, dpOffscreen, dpSize, cropSize, pixelSize, cellDimZ, dpZoom, sampleShift, halfX, aLattice);
     }
 
@@ -883,7 +884,7 @@ function render({ model, el }) {
       if (!t0) t0 = now;
       const t = (now - t0) * 0.001;
       hov += ((hover ? 1 : 0) - hov) * 0.07;             // ease passive <-> hover
-      defocus = (1 - hov) * defAmp * (0.5 - 0.5 * Math.cos(t * 0.5)) + hov * hovDefocus; // passive sweeps from FOCUS (defocus 0 -> cross-over at the sample plane, the lattice image at peak magnification) out to a demagnified lattice (defAmp) and back; hover settles at ~hovDefocus so the lattice shadow flies by under the scanning probe
+      defocus = (1 - hov) * defAmp * (0.5 + 0.5 * Math.cos(t * 0.5)) + hov * hovDefocus; // passive STARTS demagnified (defAmp) and sweeps toward FOCUS (defocus 0 -> cross-over at the sample plane) and back; hover settles at the large hovDefocus so a demagnified lattice scrolls by under the scanning probe
       sampleShift += hov * scanSpeed * 0.033;            // hover: scan the sample left -> right
       renderAll();
     }
