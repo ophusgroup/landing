@@ -103,7 +103,7 @@ Fast electron-scattering simulations connect atomic models, microscope settings,
 [PRISM fast STEM image simulations](doi.org/10.1186/s40679-017-0046-1), [Prismatic multi-GPU STEM simulations](doi.org/10.1186/s40679-017-0048-z), [Prismatic documentation](https://prism-em.github.io/)
 
 
-## Atomic-Scale Materials Structure
+## Characterizing Materials on the Atomic Scale
 
 ### Imaging, Ptychography, and Tomography of Battery Materials
 

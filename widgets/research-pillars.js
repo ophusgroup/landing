@@ -70,9 +70,9 @@ const PILLARS = [
     desc: "We build reconstruction algorithms, simulations, and open-source software for quantitative microscopy. Our methods include ptychography, tomography, and physics-guided machine learning to convert raw high-dimensional data into interpretable structure.",
     links: [["see the projects", "#computational-imaging-and-open-software"]] },
   { kind: "materials",
-    title: "Atomic-Scale Materials Structure", short: "Materials Structure",
+    title: "Characterizing Materials on the Atomic Scale", short: "Materials Structure",
     desc: "We study how atomic structure controls material behavior. Our work maps strain, defects, interfaces, chemical and structural order/disorder, local symmetry, and evolving atomic environments across energy, electronic, quantum, and structural materials.",
-    links: [["see the projects", "#atomic-scale-materials-structure"]] },
+    links: [["see the projects", "#characterizing-materials-on-the-atomic-scale"]] },
 ];
 
 function render({ model, el }) {
