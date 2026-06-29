@@ -185,22 +185,22 @@ function applyDefects(atoms, halfX, halfY, a) {
     all.sort((p,q)=>p[0]-q[0]); return all.slice(0,k).map(p=>p[1]);
   };
   // A VARIETY of defects, all on the beam centre line (y=0) so the scan walks the probe through each.
-  // None leaves a hole. The two gold features sit far apart (not adjacent).
+  // None leaves a hole. They are EVENLY spaced (step 18 A) about the starting defect (the pyramid at x=0).
   { const i=nearest(-54,0); if(i>=0) atoms[i].k=2; }                 // (1) single substitutional dopant (gold)
-  for (const i of kNear(24,0,4)) atoms[i].k=2;                       // (2) 4-atom substitution cluster (gold), opposite side from (1)
+  for (const i of kNear(18,0,4)) atoms[i].k=2;                       // (2) 4-atom substitution cluster (gold), opposite side from (1)
   // (3) Stone-Wales: rotate the bond aligned with the DEPTH/camera (y) axis -- it is foreshortened, so
   // swinging it 90 deg to horizontal is the obvious change. Pick the neighbour with the largest |dy|.
   // The honeycomb has NO horizontal bonds (they run 30/150/270 deg), so we also STRETCH the rotated pair
   // by `ex` past the plain 90 deg: the central bond ends up clearly longer than a lattice bond, and a long
   // horizontal bond in a hex net is unmistakable. The 5-7-7-5 rewiring stays clean (no dangling bonds).
-  { const i=nearest(-12,0);
+  { const i=nearest(-18,0);
     if(i>=0){ const xi=atoms[i].x, yi=atoms[i].y; let j=-1, best=-1;
       for(let m=0;m<atoms.length;m++){ if(m===i||atoms[m].k>1) continue; const dx=atoms[m].x-xi, dy=atoms[m].y-yi; if(dx*dx+dy*dy>4.2) continue; if(Math.abs(dy)>best){ best=Math.abs(dy); j=m; } }
       if(j>=0){ const mx=(xi+atoms[j].x)/2, my=(yi+atoms[j].y)/2, ex=1.34; for(const m of [i,j]){ const dx=atoms[m].x-mx, dy=atoms[m].y-my; atoms[m].x=mx-dy*ex; atoms[m].y=my+dx*ex; } } }
   }
-  addNanoparticle(atoms, -32, 0);                                   // (4) hemispherical metal nanoparticle on top
-  addPyramid(atoms, 0, 0, a);                                       // (5) epitaxial substrate pyramid (now in the passive beam)
-  addCaffeine(atoms, 48, 0);                                        // (6) caffeine molecule, swapped off to the side
+  addNanoparticle(atoms, -36, 0);                                   // (4) hemispherical metal nanoparticle on top
+  addPyramid(atoms, 0, 0, a);                                       // (5) epitaxial substrate pyramid (the starting defect, in the passive beam)
+  addCaffeine(atoms, 36, 0);                                        // (6) caffeine molecule
 }
 
 // Cluster atoms (kind 6 = silvery metal, NO bonds) sit ON TOP of the surface (z<0 draws toward the beam).
@@ -840,7 +840,7 @@ function render({ model, el }) {
     const initScan = model.get("init_scan") || 0;        // debug: hold a static sample scan (A)
     const qMax = model.get("probe_q_max") || 0.3;        // MODERATE convergence: disks overlap a bit, and the BF disk is big enough to hold the shadow projection
     const dpZoom = model.get("dp_zoom") || 1.5;          // light magnify -> BF disk near native FFT res so the projection stays crisp; cone bottom scales with it
-    const defAmp = model.get("defocus_amp") || 500;      // passive defocus sweep (A): big enough that the BF disk shows a magnified PROJECTION (Ronchigram) of the lattice/molecule under the probe
+    const defAmp = model.get("defocus_amp") || 1500;     // passive defocus sweep MAX (A). The BF-disk Ronchigram shows ~qMax*lambda*defocus/a unit cells across, so a big swing makes the lattice image visibly magnify (few cells, small defocus) <-> demagnify (many cells, large defocus)
     const scanSpeed = model.get("scan_speed") || 7.0;    // hover sample scan rate (A/s)
     const hovDefocus = model.get("hover_defocus") || 480; // hover holds the shadow regime so the projection of whatever is under the probe scans by in the BF disk
     const halfX = cellX / 2;
@@ -879,7 +879,7 @@ function render({ model, el }) {
       if (!t0) t0 = now;
       const t = (now - t0) * 0.001;
       hov += ((hover ? 1 : 0) - hov) * 0.07;             // ease passive <-> hover
-      defocus = (1 - hov) * (defAmp * (0.5 - 0.5 * Math.cos(t * 0.5))) + hov * hovDefocus; // passive breathes focus<->overfocus; hover settles at ~hovDefocus so the lattice shadow flies by under the scanning probe
+      defocus = (1 - hov) * defAmp * (0.16 + 0.84 * (0.5 - 0.5 * Math.cos(t * 0.5))) + hov * hovDefocus; // passive breathes between a magnified (small defocus) and demagnified (defAmp) lattice image, never quite reaching flat focus; hover settles at ~hovDefocus so the lattice shadow flies by under the scanning probe
       sampleShift += hov * scanSpeed * 0.033;            // hover: scan the sample left -> right
       renderAll();
     }
