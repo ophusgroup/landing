@@ -125,7 +125,6 @@ Catalytic function depends on local structure, composition, and interfaces under
 Quantitative STEM, ptychography, tomography, diffraction, and spectroscopy map the local structures that control material behavior. Current targets include strain, defects, interfaces, chemical and structural order/disorder, local symmetry, and evolving atomic environments in energy, electronic, quantum, and structural materials.
 
 :::{figure} /images/research/AET_FePt_v01.jpg
-:width: 50%
-:align: center
+:width: 100%
 Atomic electron tomography reconstruction of an FePt nanoparticle.
 :::
