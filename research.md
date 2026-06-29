@@ -25,13 +25,13 @@ Crystalline materials diffract electrons into sharp Bragg peaks that encode loca
 
 ### Nanobeam 4D-STEM of Disordered Materials
 
-<div style="float: right; width: 32%; margin: 0.2em 0 0.7em 1.4em;"><video src="/videos/atomic_struct_04_crop.mp4" autoplay loop muted playsinline style="width: 100%; display: block; border-radius: 6px;"></video><div style="font-size: 0.82em; opacity: 0.72; margin-top: 0.4em; line-height: 1.3;">A disordered nanocrystalline silicon model, of the kind tricor builds from three-body correlations.</div></div>
+::::{div}
+<div style="width: 32%; float: right; margin-left: 1em;"><video src="/videos/atomic_struct_04_crop.mp4" autoplay loop muted playsinline style="width: 100%;"></video></div>
 
 Nanobeam diffraction reveals short- and medium-range order in materials that are neither fully crystalline nor fully amorphous. The `tricor` framework generates disordered atomic models from three-body correlations, enabling direct comparison between simulated structures and experimental diffraction.
 
 [tricor: disordered-structure simulations](https://tricor.readthedocs.io/en/latest/)
-
-<div style="clear: both;"></div>
+::::
 
 ### Nanobeam Diffraction and Machine Learning for Polymer Order
 
@@ -82,14 +82,13 @@ A ZrTe nanowire encapsulated in a double-walled carbon nanotube, solved with pty
 
 ### 4D-STEM Analysis Software with quantEM and py4DSTEM
 
+::::{div}
+<div style="width: 26%; float: right; margin-left: 1em;"><img src="/images/research/quantem_py4dstem_logos.png" alt="quantEM and py4DSTEM" style="width: 100%;" /></div>
+
 quantEM and py4DSTEM are our open-source Python packages for quantitative 4D-STEM. They cover calibration, visualization, diffraction analysis, strain and orientation mapping, phase retrieval, ptychography, and simulation, with scalable workflows built for the high-dimensional datasets that modern detectors produce. Both are open and reproducible, so analysis pipelines can be shared, audited, and reused across groups.
 
-:::{figure} /images/research/quantem_py4dstem_logos.png
-:width: 30%
-:align: center
-:::
-
 [quantEM code](https://github.com/ophusgroup/quantem), [py4DSTEM code](https://github.com/py4dstem/py4DSTEM), [py4DSTEM: multimodal 4D-STEM data analysis](doi.org/10.1017/S1431927621000477)
+::::
 
 ### Scanning Probe Drift Correction
 
