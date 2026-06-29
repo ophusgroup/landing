@@ -13,6 +13,8 @@ Understanding materials, atom by atom
 :::
 
 
+Welcome to the Colin Ophus Lab (COLab) website! We are a highly collaborative group which develops electron microscopy experiments, reconstruction and machine learning algorithms, and open-source software, to image and understand materials at atomic scales. 
+
 :::{anywidget} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/research-pillars.js
 {"bare": true}
 :::
@@ -20,7 +22,6 @@ Understanding materials, atom by atom
 
 <!-- ## About -->
 
-Welcome to the Colin Ophus Lab (COLab) website! We are a highly collaborative group which develops electron microscopy experiments, reconstruction and machine learning algorithms, and open-source software, to image and understand materials at atomic scales. 
 
 <!-- Please [contact us](mailto:cophus@stanford.edu) if you're interested in collaborating on these topics. -->
 
