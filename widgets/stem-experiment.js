@@ -847,7 +847,7 @@ function render({ model, el }) {
     const dpZoom = model.get("dp_zoom") || 1.5;          // light magnify -> BF disk near native FFT res so the projection stays crisp; cone bottom scales with it
     const defAmp = model.get("defocus_amp") || 1500;     // passive defocus sweep MAX (A). The BF-disk Ronchigram shows ~qMax*lambda*defocus/a unit cells across, so a big swing makes the lattice image visibly magnify (few cells, small defocus) <-> demagnify (many cells, large defocus)
     const scanSpeed = model.get("scan_speed") || 7.0;    // hover sample scan rate (A/s)
-    const hovDefocus = model.get("hover_defocus") || 1200; // hover holds a LARGE defocus so a clearly demagnified lattice (several unit cells) scrolls by in the BF disk under the scanning probe
+    const hovDefocus = model.get("hover_defocus") || 800; // hover holds a fairly large defocus so a demagnified lattice (a few unit cells) scrolls by in the BF disk under the scanning probe
     const halfX = cellX / 2;
     let defocus = initDefocus, sampleShift = initScan, hov = 0;
 
