@@ -727,8 +727,8 @@ function render({ model, el }) {
   let cropSize = model.get("crop_size") || 128;
   if (mobile) cropSize = 64; // a smaller FFT keeps the per-frame probe + diffraction FFTs real-time on mobile. MUST stay a power of 2 (the radix-2 FFT needs it); 64/8 = 8 whole lattice periods so the window still tiles seamlessly
   const dispPower = model.get("display_power") || 0.5;  // detector tone map: BF disk pops (was log)
-  const dfPower = model.get("df_power") || 1.5;         // dark-field suppression beyond the BF disk: gentle enough that the dark-field scattering stays visibly DIM over the thin lattice (and during the scan), while still brightening over thick/heavy regions
-  const dfScale = model.get("df_ref_scale") || 3.0;     // dark-field exposure ceiling = (bare BF peak) x this; high enough that a thick region glows bright but still shows structure, not a flat flood
+  const dfPower = model.get("df_power") || 1.0;         // dark-field suppression beyond the BF disk: 1.0 = NO extra crushing (just the absolute exposure), so the dark-field scattering stays clearly visible during the scan while still brightening over thick/heavy regions
+  const dfScale = model.get("df_ref_scale") || 2.2;     // dark-field exposure ceiling = (bare BF peak) x this; lower => brighter dark field. Tuned so the thin-lattice scattering reads clearly during the scan and a thick region glows brighter still (without a flat white-out)
 
   // Coherent-CBED diffraction (overlapping interfering disks)
   const cbedG0 = model.get("cbed_g0") || 23;            // reciprocal lattice spacing (DP px)
