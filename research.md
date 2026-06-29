@@ -25,15 +25,13 @@ Crystalline materials diffract electrons into sharp Bragg peaks that encode loca
 
 ### Nanobeam 4D-STEM of Disordered Materials
 
+<div style="float: right; width: 32%; margin: 0.2em 0 0.7em 1.4em;"><video src="/videos/atomic_struct_04_crop.mp4" autoplay loop muted playsinline style="width: 100%; display: block; border-radius: 6px;"></video><div style="font-size: 0.82em; opacity: 0.72; margin-top: 0.4em; line-height: 1.3;">A disordered nanocrystalline silicon model, of the kind tricor builds from three-body correlations.</div></div>
+
 Nanobeam diffraction reveals short- and medium-range order in materials that are neither fully crystalline nor fully amorphous. The `tricor` framework generates disordered atomic models from three-body correlations, enabling direct comparison between simulated structures and experimental diffraction.
 
-:::{figure} /videos/atomic_struct_04_crop.mp4
-:width: 38%
-:align: center
-A disordered nanocrystalline silicon model, of the kind `tricor` builds from three-body correlations.
-:::
-
 [tricor: disordered-structure simulations](https://tricor.readthedocs.io/en/latest/)
+
+<div style="clear: both;"></div>
 
 ### Nanobeam Diffraction and Machine Learning for Polymer Order
 
