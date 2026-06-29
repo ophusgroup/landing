@@ -63,7 +63,7 @@ const MAT = {
 const PILLARS = [
   { kind: "stem", img: "card_experiments.jpg",
     title: "Scanning Transmission Electron Microscopy", short: "Electron Microscopy",
-    desc: "We develop new STEM measurement techniques using advanced detectors, beam shaping, and programmable acquisition. We record and invert massive electron-scattering datasets to reveal structural, chemical, and other signals beyond conventional imaging.",
+    desc: "We develop new STEM measurements using advanced detectors, beam shaping, and programmable acquisition. We record and invert massive electron-scattering datasets to reveal structural, chemical, and other signals beyond conventional imaging.",
     links: [["see the projects", "#scanning-transmission-electron-microscopy"]] },
   { kind: "comp", img: "card_reconstruction.jpg",
     title: "Computational Imaging and Open Software", short: "Computational Imaging",

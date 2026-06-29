@@ -72,11 +72,9 @@ Implicit neural representations provide a self-supervised route to electron tomo
 
 Atomic electron tomography (AET) determines the three-dimensional positions and chemical species of individual atoms by recording atomic-resolution images across many tilt angles and reconstructing the volume. Our group pioneered ptychographic AET (PAET), which couples ptychographic phase retrieval to tomography to reach light elements and complex nanostructures that conventional methods cannot resolve.
 
-:::{figure} /images/research/figure_AET_ZrTe_DWCNT.jpg
-:width: 60%
-:align: center
-A ZrTe nanowire encapsulated in a double-walled carbon nanotube, solved with ptychographic AET.
-:::
+::::{div}
+<div style="width: 75%; margin: 1em auto;"><img src="/images/research/figure_AET_ZrTe_DWCNT.jpg" style="width: 100%;" alt="A ZrTe nanowire encapsulated in a double-walled carbon nanotube, solved with ptychographic AET." /><p style="font-size: 0.88em; opacity: 0.72; margin: 0.5em 0 0; text-align: center;">A ZrTe nanowire encapsulated in a double-walled carbon nanotube, solved with ptychographic AET.</p></div>
+::::
 
 [Solving complex nanostructures with PAET](doi.org/10.1038/s41467-023-43634-z), [3D positions of individual atoms revealed by electron tomography](doi.org/10.1038/nmat4426)
 
