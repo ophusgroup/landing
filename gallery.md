@@ -3,6 +3,7 @@ title: Gallery
 ---
 
 :::{anywidget} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/gallery.js
+:class: col-page
 {
   "intro": "",
   "image_base": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/gallery",
