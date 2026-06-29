@@ -177,8 +177,9 @@ function render({ model, el }) {
 
 function buildMaterials(THREE, data, canvas, stage, hoverRef) {
   let theme = detectDark() ? MAT.dark : MAT.light;
-  const renderer = new THREE.WebGLRenderer({ antialias: true, canvas, alpha: true });
-  renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+  const mobile = window.innerWidth < 820 || (window.matchMedia && window.matchMedia("(pointer: coarse)").matches); // lighter GPU load on phones/tablets
+  const renderer = new THREE.WebGLRenderer({ antialias: !mobile, canvas, alpha: true });
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, mobile ? 1.4 : 2));
   renderer.setClearColor(0x000000, 0);
 
   const scene = new THREE.Scene();
@@ -193,7 +194,7 @@ function buildMaterials(THREE, data, canvas, stage, hoverRef) {
   let maxR = 0;
   for (let i = 0; i < n; i++) { const d = Math.hypot(base[i*3], base[i*3+1], base[i*3+2]); if (d > maxR) maxR = d; }
 
-  const sphereGeo = new THREE.SphereGeometry(1, 16, 12);
+  const sphereGeo = new THREE.SphereGeometry(1, mobile ? 10 : 16, mobile ? 8 : 12);
   const atomMat = new THREE.MeshPhongMaterial({ color: new THREE.Color(theme.atom[0], theme.atom[1], theme.atom[2]), shininess: 28, specular: theme.specular, emissive: theme.emissive });
   const outlineMat = new THREE.MeshBasicMaterial({ color: theme.outline, side: THREE.BackSide });
   const atomMesh = new THREE.InstancedMesh(sphereGeo, atomMat, n); atomMesh.frustumCulled = false;
@@ -254,9 +255,11 @@ function buildMaterials(THREE, data, canvas, stage, hoverRef) {
   }
 
   // hover only FADES the polyhedra out to reveal the atoms; nothing scales (no bloom, no camera move)
-  let fade = 0;
-  function animate() {
+  let fade = 0, lastFrame = -1e9;
+  function animate(now) {
     requestAnimationFrame(animate);
+    if (mobile && (now || 0) - lastFrame < 33) return; // ~30fps cap on mobile to halve the continuous-render load
+    lastFrame = now || 0;
     const cw = stage.clientWidth, ch = stage.clientHeight;
     if (cw > 1 && ch > 1 && (cw !== lastW || ch !== lastH)) { lastW = cw; lastH = ch; resize(); }
     const hot = hoverRef.value;

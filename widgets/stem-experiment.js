@@ -723,7 +723,9 @@ function render({ model, el }) {
   const aLattice = model.get("a_lattice") || 3.4;
   const sigma = model.get("sigma") || 0.22;
   const lambda = model.get("lambda") || 0.0197;
-  const cropSize = model.get("crop_size") || 128;
+  const mobile = (typeof window !== "undefined") && (window.innerWidth < 820 || (window.matchMedia && window.matchMedia("(pointer: coarse)").matches)); // phones/tablets: lighten the per-frame compute
+  let cropSize = model.get("crop_size") || 128;
+  if (mobile) cropSize = 64; // a smaller FFT keeps the per-frame probe + diffraction FFTs real-time on mobile. MUST stay a power of 2 (the radix-2 FFT needs it); 64/8 = 8 whole lattice periods so the window still tiles seamlessly
   const dispPower = model.get("display_power") || 0.5;  // detector tone map: BF disk pops (was log)
   const dfPower = model.get("df_power") || 1.5;         // dark-field suppression beyond the BF disk: gentle enough that the dark-field scattering stays visibly DIM over the thin lattice (and during the scan), while still brightening over thick/heavy regions
   const dfScale = model.get("df_ref_scale") || 3.0;     // dark-field exposure ceiling = (bare BF peak) x this; high enough that a thick region glows bright but still shows structure, not a flat flood
@@ -876,7 +878,7 @@ function render({ model, el }) {
     function frame(now) {
       if (!running) return;
       raf = requestAnimationFrame(frame);
-      if (now - lastT < 33) return; // ~30fps cap
+      if (now - lastT < (mobile ? 52 : 33)) return; // ~30fps desktop, ~19fps mobile
       lastT = now;
       if (!t0) t0 = now;
       const t = (now - t0) * 0.001;

@@ -246,11 +246,12 @@ function render({ model, el }) {
     }
 
     const initRecon = opt("init_recon", 0); // debug: hold the hover/bloom state for previewing
+    const mobile = window.innerWidth < 820 || (window.matchMedia && window.matchMedia("(pointer: coarse)").matches); // phones/tablets: lower the frame rate
     let theta = 0, eff = flowSpeed, recon = initRecon, hover = false, raf = null, running = false, lastT = -1;
     function step(now) {
       if (!running) return;
       raf = requestAnimationFrame(step);
-      if (lastT >= 0 && now - lastT < 33) return;
+      if (lastT >= 0 && now - lastT < (mobile ? 52 : 33)) return;
       const dt = lastT < 0 ? 0.033 : Math.min(0.05, (now - lastT) / 1000); lastT = now;
       eff += ((hover ? -hoverSpeed : flowSpeed) - eff) * Math.min(1, dt * 5);
       recon += ((hover ? 1 : initRecon) - recon) * Math.min(1, dt * 4);
