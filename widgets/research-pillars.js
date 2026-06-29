@@ -112,17 +112,18 @@ function render({ model, el }) {
       .${id}-links { font-size:.82rem; line-height:1.7; color:var(--${id}-faint); }
       .${id}-links a { color:var(--${id}-link); text-decoration:none; }
       .${id}-links a:hover { text-decoration:underline; }
-      .${id}-btitle { font-size:.95rem; font-weight:600; line-height:1.3; text-align:center; margin:.6rem 0 .2rem; color:var(--${id}-fg); }
-      .${id}-row.bare .${id}-links { text-align:center; }
+      .${id}-btitle { font-size:.95rem; font-weight:600; line-height:1.3; text-align:center; margin:.1rem 0 .12rem; color:var(--${id}-fg); }
+      .${id}-row.bare .${id}-links { text-align:center; margin-bottom:.55rem; }
       @media (max-width:640px){ .${id}-row{ flex-direction:column; } .${id}-col{ border-left:0; padding:0 0 1.2rem; } }
       @media (prefers-reduced-motion: reduce){ .${id}-panel{ transition:none; } }
     </style>
     <div class="${id}-row${bare ? " bare" : ""}">
       ${PILLARS.map((p) => `
         <div class="${id}-col" data-kind="${p.kind}">
-          <div class="${id}-panel">${p.kind === "materials" ? `<canvas></canvas>` : `<div class="${id}-widget" data-widget="${p.kind}"></div>`}</div>
           ${bare ? `<div class="${id}-btitle">${p.short}</div>
-          <div class="${id}-links">${p.links.map(([t, h]) => `<a href="${researchUrl}${h}">${t}</a>`).join(" · ")}</div>` : `<div class="${id}-title">${p.title}</div>
+          <div class="${id}-links">${p.links.map(([t, h]) => `<a href="${researchUrl}${h}">${t}</a>`).join(" · ")}</div>` : ""}
+          <div class="${id}-panel">${p.kind === "materials" ? `<canvas></canvas>` : `<div class="${id}-widget" data-widget="${p.kind}"></div>`}</div>
+          ${bare ? "" : `<div class="${id}-title">${p.title}</div>
           <div class="${id}-bar"></div>
           <div class="${id}-desc">${p.desc}</div>
           <div class="${id}-links">${p.links.map(([t, h]) => `<a href="${h}">${t}</a>`).join(" · ")}</div>`}
