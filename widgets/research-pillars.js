@@ -104,7 +104,7 @@ function render({ model, el }) {
       .${id}-panel canvas { display:block; width:100%; height:100%; border-radius:10px; }
       .${id}-widget { position:absolute; inset:0; }
       .${id}-img { width:100%; height:100%; object-fit:cover; display:block; border-radius:10px; }
-      .${id}-title { font-size:.95rem; font-weight:600; line-height:1.25; margin:.85rem 0 .15rem;
+      .${id}-title { font-size:.9rem; font-weight:600; line-height:1.25; margin:.85rem 0 .15rem;
         color:var(--${id}-fg); }
       .${id}-bar { width:0; height:2px; background:${accent}; transition:width .3s ease; margin-bottom:.5rem; }
       .${id}-col.hot .${id}-bar { width:34px; }
@@ -112,18 +112,17 @@ function render({ model, el }) {
       .${id}-links { font-size:.82rem; line-height:1.7; color:var(--${id}-faint); }
       .${id}-links a { color:var(--${id}-link); text-decoration:none; }
       .${id}-links a:hover { text-decoration:underline; }
-      .${id}-btitle { font-size:.95rem; font-weight:600; line-height:1.3; text-align:center; margin:.1rem 0 .12rem; color:var(--${id}-fg); }
-      .${id}-row.bare .${id}-links { text-align:center; margin-bottom:.55rem; }
+      .${id}-btitle { font-size:.95rem; font-weight:600; line-height:1.3; text-align:center; margin:.6rem 0 .15rem; color:var(--${id}-fg); }
+      .${id}-row.bare .${id}-links { text-align:center; }
       @media (max-width:640px){ .${id}-row{ flex-direction:column; } .${id}-col{ border-left:0; padding:0 0 1.2rem; } }
       @media (prefers-reduced-motion: reduce){ .${id}-panel{ transition:none; } }
     </style>
     <div class="${id}-row${bare ? " bare" : ""}">
       ${PILLARS.map((p) => `
         <div class="${id}-col" data-kind="${p.kind}">
-          ${bare ? `<div class="${id}-btitle">${p.short}</div>
-          <div class="${id}-links">${p.links.map(([t, h]) => `<a href="${researchUrl}${h}">${t}</a>`).join(" · ")}</div>` : ""}
           <div class="${id}-panel">${p.kind === "materials" ? `<canvas></canvas>` : `<div class="${id}-widget" data-widget="${p.kind}"></div>`}</div>
-          ${bare ? "" : `<div class="${id}-title">${p.title}</div>
+          ${bare ? `<div class="${id}-btitle">${p.short}</div>
+          <div class="${id}-links">${p.links.map(([t, h]) => `<a href="${researchUrl}${h}">${t}</a>`).join(" · ")}</div>` : `<div class="${id}-title">${p.title}</div>
           <div class="${id}-bar"></div>
           <div class="${id}-desc">${p.desc}</div>
           <div class="${id}-links">${p.links.map(([t, h]) => `<a href="${h}">${t}</a>`).join(" · ")}</div>`}
