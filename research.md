@@ -25,17 +25,15 @@ Crystalline materials diffract electrons into sharp Bragg peaks that encode loca
 
 ### Nanobeam 4D-STEM of Disordered Materials
 
-::::{div}
+Nanobeam diffraction reveals short- and medium-range order in materials that are neither fully crystalline nor fully amorphous. The `tricor` framework generates disordered atomic models from three-body correlations, enabling direct comparison between simulated structures and experimental diffraction.
+
 :::{figure} /videos/atomic_struct_04_crop.mp4
-:class: float-right
-:width: 32%
+:width: 38%
+:align: center
 A disordered nanocrystalline silicon model, of the kind `tricor` builds from three-body correlations.
 :::
 
-Nanobeam diffraction reveals short- and medium-range order in materials that are neither fully crystalline nor fully amorphous. The `tricor` framework generates disordered atomic models from three-body correlations, enabling direct comparison between simulated structures and experimental diffraction.
-
 [tricor: disordered-structure simulations](https://tricor.readthedocs.io/en/latest/)
-::::
 
 ### Nanobeam Diffraction and Machine Learning for Polymer Order
 
@@ -74,31 +72,26 @@ Implicit neural representations provide a self-supervised route to electron tomo
 
 ### Atomic Electron Tomography
 
-::::{div}
+Atomic electron tomography (AET) determines the three-dimensional positions and chemical species of individual atoms by recording atomic-resolution images across many tilt angles and reconstructing the volume. Our group pioneered ptychographic AET (PAET), which couples ptychographic phase retrieval to tomography to reach light elements and complex nanostructures that conventional methods cannot resolve.
+
 :::{figure} /images/research/figure_AET_ZrTe_DWCNT.jpg
-:class: float-right
-:width: 40%
+:width: 60%
+:align: center
 A ZrTe nanowire encapsulated in a double-walled carbon nanotube, solved with ptychographic AET.
 :::
 
-Atomic electron tomography (AET) determines the three-dimensional positions and chemical species of individual atoms by recording atomic-resolution images across many tilt angles and reconstructing the volume. Our group pioneered ptychographic AET (PAET), which couples ptychographic phase retrieval to tomography to reach light elements and complex nanostructures that conventional methods cannot resolve.
-
 [Solving complex nanostructures with PAET](doi.org/10.1038/s41467-023-43634-z), [3D positions of individual atoms revealed by electron tomography](doi.org/10.1038/nmat4426)
-::::
 
 ### 4D-STEM Analysis Software with quantEM and py4DSTEM
 
-::::{div}
-:::{image} /images/research/quantem_py4dstem_logos.png
-:class: float-right
-:width: 22%
-:alt: quantEM and py4DSTEM
-:::
-
 quantEM and py4DSTEM are our open-source Python packages for quantitative 4D-STEM. They cover calibration, visualization, diffraction analysis, strain and orientation mapping, phase retrieval, ptychography, and simulation, with scalable workflows built for the high-dimensional datasets that modern detectors produce. Both are open and reproducible, so analysis pipelines can be shared, audited, and reused across groups.
 
+:::{figure} /images/research/quantem_py4dstem_logos.png
+:width: 30%
+:align: center
+:::
+
 [quantEM code](https://github.com/ophusgroup/quantem), [py4DSTEM code](https://github.com/py4dstem/py4DSTEM), [py4DSTEM: multimodal 4D-STEM data analysis](doi.org/10.1017/S1431927621000477)
-::::
 
 ### Scanning Probe Drift Correction
 
@@ -129,12 +122,10 @@ Catalytic function depends on local structure, composition, and interfaces under
 
 ### Atomic-Scale Structure of Functional Materials
 
-::::{div}
+Quantitative STEM, ptychography, tomography, diffraction, and spectroscopy map the local structures that control material behavior. Current targets include strain, defects, interfaces, chemical and structural order/disorder, local symmetry, and evolving atomic environments in energy, electronic, quantum, and structural materials.
+
 :::{figure} /images/research/AET_FePt_v01.jpg
-:class: float-right
-:width: 42%
+:width: 50%
+:align: center
 Atomic electron tomography reconstruction of an FePt nanoparticle.
 :::
-
-Quantitative STEM, ptychography, tomography, diffraction, and spectroscopy map the local structures that control material behavior. Current targets include strain, defects, interfaces, chemical and structural order/disorder, local symmetry, and evolving atomic environments in energy, electronic, quantum, and structural materials.
-::::
