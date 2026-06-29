@@ -623,8 +623,10 @@ function renderScene(ctx, W, H, atoms, view, probeX, probeY, qMax, defocus, dpCa
 function drawProbeCone(ctx, view, probeX, probeY, qMax, defocus, dpSize, zDP, zBeamSrc, halfZ, cropSize, pixelSize, dpCenterSx, dpCenterSy, dpZoom, part) {
   // The cone is drawn in two passes so the sample occludes the part behind it: part "lower" (sample
   // plane -> detector) is drawn BEFORE the atoms, part "upper" (aperture -> cross-over -> sample plane)
-  // AFTER. Cross-over height tanh-saturated so the large shadow defocus never pushes it above the aperture.
-  const crossZ = 15 * Math.tanh(defocus / 320);
+  // AFTER. Cross-over height is LINEAR in defocus so it visibly tracks the defocus the viewer reads off the
+  // BF disk: 0 at the sample plane (z=0, i.e. focus) and rising toward the aperture (z=18) as defocus grows.
+  // Clamped just below the aperture so a large shadow defocus never pushes the cross-over above it.
+  const crossZ = Math.max(-13.5, Math.min(13.5, defocus * 0.00867));
 
   // Bright-field disk radius at the DP plane, the aperture radius for the same takeoff angle, and the
   // beam radius where it crosses the SAMPLE plane (z=0) -- linear along the lower cone (cross-over -> DP).
@@ -723,7 +725,7 @@ function render({ model, el }) {
   const lambda = model.get("lambda") || 0.0197;
   const cropSize = model.get("crop_size") || 128;
   const dispPower = model.get("display_power") || 0.5;  // detector tone map: BF disk pops (was log)
-  const dfPower = model.get("df_power") || 2.2;         // dark-field suppression: weak scattering reads near-black outside the BF disk, lighting up only over thick/heavy regions
+  const dfPower = model.get("df_power") || 1.5;         // dark-field suppression beyond the BF disk: gentle enough that the dark-field scattering stays visibly DIM over the thin lattice (and during the scan), while still brightening over thick/heavy regions
   const dfScale = model.get("df_ref_scale") || 3.0;     // dark-field exposure ceiling = (bare BF peak) x this; high enough that a thick region glows bright but still shows structure, not a flat flood
 
   // Coherent-CBED diffraction (overlapping interfering disks)
@@ -879,7 +881,7 @@ function render({ model, el }) {
       if (!t0) t0 = now;
       const t = (now - t0) * 0.001;
       hov += ((hover ? 1 : 0) - hov) * 0.07;             // ease passive <-> hover
-      defocus = (1 - hov) * defAmp * (0.16 + 0.84 * (0.5 - 0.5 * Math.cos(t * 0.5))) + hov * hovDefocus; // passive breathes between a magnified (small defocus) and demagnified (defAmp) lattice image, never quite reaching flat focus; hover settles at ~hovDefocus so the lattice shadow flies by under the scanning probe
+      defocus = (1 - hov) * defAmp * (0.5 - 0.5 * Math.cos(t * 0.5)) + hov * hovDefocus; // passive sweeps from FOCUS (defocus 0 -> cross-over at the sample plane, the lattice image at peak magnification) out to a demagnified lattice (defAmp) and back; hover settles at ~hovDefocus so the lattice shadow flies by under the scanning probe
       sampleShift += hov * scanSpeed * 0.033;            // hover: scan the sample left -> right
       renderAll();
     }
