@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>section-nav — readability test</title>
+<title>section-nav — readability + footer-clear test</title>
 <script>
   // detectDark() reads <html class="dark|light"> first, so set it pre-render.
   const theme = new URLSearchParams(location.search).get("theme") || "light";
@@ -12,20 +12,22 @@
   html.light, html.light body { background:#ffffff; color:#1a1a1a; }
   html.dark,  html.dark body  { background:#0e1116; color:#e6e8eb; }
   body { font-family: ui-sans-serif, system-ui, -apple-system, sans-serif;
-         max-width: 720px; margin: 0 auto; padding: 48px 24px 90vh; }
+         max-width: 720px; margin: 0 auto; padding: 48px 24px 0; }
   h1 { font-size: 1.6rem; }
-  h2 { margin-top: 7vh; }
-  h3 { margin-top: 3vh; opacity:.92; }
+  h2 { margin-top: 24vh; }
+  h3 { margin-top: 4vh; opacity:.92; }
   p  { line-height: 1.65; opacity:.78; }
+  footer { margin-top: 22vh; padding: 64px 24px 48px; min-height: 420px;
+           border-top: 1px solid rgba(128,128,128,.3); }
+  footer p { margin: .3em 0; }
 </style>
 </head>
 <body>
-  <h1>Section-nav readability test</h1>
-  <p>Scroll-spy outline floats fixed at top-right. At scroll 0 the first item is
-     active and the rest fade with distance — the faded ones are what must stay readable.</p>
+  <h1>Section-nav — readability + footer-clear test</h1>
+  <p>The outline should fade out as the footer scrolls up under it.</p>
 
   <h2 id="introduction-and-overview">Introduction and Overview</h2>
-  <p>Paragraph of filler text to give the page height so the outline has room to track.</p>
+  <p>Filler.</p>
   <h2 id="scanning-transmission-electron-microscopy">Scanning Transmission Electron Microscopy</h2>
   <p>Filler.</p>
   <h3 id="advanced-detectors">Advanced Detectors and Beam Shaping</h3>
@@ -40,6 +42,14 @@
   <p>Filler.</p>
   <h2 id="closing-remarks">Closing Remarks and Acknowledgements</h2>
   <p>Filler.</p>
+
+  <footer>
+    <p style="font-weight:600;">Mock Footer — Stanford Engineering</p>
+    <p style="opacity:.7;">Understanding materials, atom by atom — Colin Ophus Lab</p>
+    <p style="opacity:.7;">Home · People · Facilities · Funding</p>
+    <p style="opacity:.7;">Lab Group Website by Curvenote</p>
+    <p style="opacity:.5; margin-top:2em;">© Stanford University · Stanford, California</p>
+  </footer>
 
   <div id="mount"></div>
   <script type="module">

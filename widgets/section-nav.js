@@ -81,6 +81,7 @@ function render({ el, model }) {
   let nav = null, items = null, fillEl = null, dotEl = null, links = [], builtItems = [];
   let onScroll = null, onResize = null, themeTimer = null, themeObserver = null, themeMedia = null, onThemeChange = null, retryTimers = [];
   let scroller = document.scrollingElement || document.documentElement;
+  let footEl = null, mainEl = null, refsTries = 0;
 
   function teardown() {
     const prevNav = document.getElementById(NAV_ID);
@@ -164,6 +165,17 @@ function render({ el, model }) {
   }
   const linkCenter = (i) => links[i].offsetTop + links[i].offsetHeight / 2;
 
+  // The outline is position:fixed, so near the page bottom it would ride down
+  // over the site footer. Cache the footer (what to clear) and the main-content
+  // element (its bottom edge also marks where the footer region begins); the
+  // outline later hides once the higher of the two rises under it.
+  function cacheRefs() {
+    const f = document.querySelector('footer, [role="contentinfo"]');
+    footEl = (f && f.offsetParent !== null && f.id !== NAV_ID) ? f : null;
+    mainEl = document.querySelector('main, article, [role="main"]') || null;
+    refsTries++;
+  }
+
   function update() {
     if (!nav || !builtItems.length || !links.length) return;
     const m = metrics(), trig = 100, p = clamp01(m.sTop / m.sMax), n = builtItems.length;
@@ -185,6 +197,19 @@ function render({ el, model }) {
       links[i].style.color = on ? "var(--cn-active)" : "var(--cn-fg)";
       links[i].style.fontWeight = on ? "600" : "400";
       links[i].style.opacity = Math.max(0.6, 1 - 0.14 * Math.abs(i - act));
+    }
+    // Fade + disable the outline as the footer (or the end of the main
+    // content) scrolls up under it, so it never overlays the footer.
+    if (!footEl && !mainEl && refsTries < 40) cacheRefs();
+    let refTop = Infinity;
+    if (footEl) refTop = Math.min(refTop, footEl.getBoundingClientRect().top);
+    if (mainEl) refTop = Math.min(refTop, mainEl.getBoundingClientRect().bottom);
+    if (refTop !== Infinity) {
+      const navTop = parseFloat(getComputedStyle(nav).top) || 88;
+      const gap = refTop - (navTop + nav.offsetHeight);
+      const fade = Math.max(0, Math.min(1, (gap - 24) / 80));
+      nav.style.opacity = fade.toFixed(2);
+      nav.style.pointerEvents = fade < 0.05 ? "none" : "";
     }
   }
 
