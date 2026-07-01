@@ -767,7 +767,7 @@ function render({ model, el }) {
     .${id}-bare .${id}-canvas { border-radius: 10px; }
     .${id}-controls { display: flex; flex-direction: row; flex-wrap: wrap; gap: 10px 20px; align-items: flex-end; padding: 8px 4px; }
     .${id}-canvas-wrap { min-width: 0; }
-    .${id}-canvas { width: 100%; display: block; border-radius: 4px; cursor: crosshair; touch-action: none; }
+    .${id}-canvas { width: 100%; display: block; border-radius: 4px; touch-action: none; }
     .${id}-slider-group { flex: 1; min-width: 160px; }
     .${id}-slider-group label { display: block; font-size: 14px; color: var(--${id}-label, #aaa); margin-bottom: 3px; }
     .${id}-slider-group input[type=range] { width: 100%; accent-color: #00cc66; }
