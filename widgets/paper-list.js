@@ -207,18 +207,20 @@ function render({ model, el }) {
 
     /* Hover preview card — graphical abstract + abstract text */
     .${id}-hovercard {
-      position: fixed; z-index: 9999; width: 340px; max-width: 92vw;
+      position: fixed; z-index: 9999; width: 500px; max-width: 94vw;
       background: #fff; color: #1f2937; border: 1px solid #e5e7eb; border-radius: 10px;
       box-shadow: 0 10px 34px rgba(0,0,0,0.18); overflow: hidden; pointer-events: none;
       opacity: 0; transform: translateY(4px);
       transition: opacity .14s ease, transform .14s ease;
       font-size: 0.84em; line-height: 1.5;
     }
-    .${id}-hovercard.show { opacity: 1; transform: translateY(0); }
-    .${id}-hc-img { display: block; width: 100%; max-height: 190px; object-fit: contain;
+    .${id}-hovercard.show { opacity: 1; transform: translateY(0); pointer-events: auto; }
+    .${id}-hc-img { display: block; width: 100%; max-height: 320px; object-fit: contain;
       background: #f6f6f7; border-bottom: 1px solid #eee; }
     .${id}-hc-body { padding: 11px 13px 13px; }
     .${id}-hc-title { font-weight: 600; color: #111; margin: 0 0 3px; font-size: 0.96em; line-height: 1.35; }
+    .${id}-hc-title a { color: inherit; text-decoration: none; }
+    .${id}-hc-title a:hover { text-decoration: underline; }
     .${id}-hc-meta { color: #6b7280; font-style: italic; margin: 0 0 7px; font-size: 0.92em; }
     .${id}-hc-abs { margin: 0; color: #374151;
       display: -webkit-box; -webkit-line-clamp: 9; -webkit-box-orient: vertical; overflow: hidden; }
@@ -337,7 +339,7 @@ function render({ model, el }) {
     const hovercard = document.createElement("div");
     hovercard.className = `${id}-hovercard`;
     wrap.appendChild(hovercard);
-    let hoverData = null, hoverLoading = false, hoverCurrent = null, hoverTimer = null;
+    let hoverData = null, hoverLoading = false, hoverCurrent = null, showTimer = null, hideTimer = null;
     const canHover = !window.matchMedia || window.matchMedia("(hover: hover)").matches;
     function loadHoverData() {
       if (hoverData || hoverLoading || !hoverUrl) return;
@@ -347,23 +349,16 @@ function render({ model, el }) {
     }
     if (canHover && hoverUrl) loadHoverData();
     function normDoi(u) { return (u || "").replace(/^https?:\/\/(dx\.)?doi\.org\//i, "").toLowerCase(); }
-    function hideCard() { clearTimeout(hoverTimer); hoverCurrent = null; hovercard.classList.remove("show"); }
+    function hideCard() { clearTimeout(showTimer); clearTimeout(hideTimer); hoverCurrent = null; hovercard.classList.remove("show"); }
+    function scheduleHide() { clearTimeout(hideTimer); hideTimer = setTimeout(hideCard, 140); }
+    function cancelHide() { clearTimeout(hideTimer); }
+    // Centered on the hovered paper (partially overlapping it), clamped to the viewport.
     function positionCard(cardEl) {
-      const r = cardEl.getBoundingClientRect(), gap = 14;
-      const w = hovercard.offsetWidth || 340, h = hovercard.offsetHeight;
-      const vw = window.innerWidth, vh = window.innerHeight;
-      const clampTop = (t) => Math.max(8, Math.min(t, vh - h - 8));
-      let left, top;
-      if (vw - r.right >= w + gap + 8) {            // room to the right
-        left = r.right + gap; top = clampTop(r.top);
-      } else if (r.left >= w + gap + 8) {           // room to the left
-        left = r.left - w - gap; top = clampTop(r.top);
-      } else {                                       // full-width card: drop below (or above)
-        left = Math.max(8, Math.min(r.left, vw - w - 8));
-        top = (r.bottom + gap + h <= vh - 8) ? r.bottom + gap : Math.max(8, r.top - gap - h);
-      }
-      hovercard.style.left = left + "px";
-      hovercard.style.top = top + "px";
+      const r = cardEl.getBoundingClientRect();
+      const w = hovercard.offsetWidth || 500, h = hovercard.offsetHeight;
+      const left = r.left + r.width / 2 - w / 2, top = r.top + r.height / 2 - h / 2;
+      hovercard.style.left = Math.max(8, Math.min(left, window.innerWidth - w - 8)) + "px";
+      hovercard.style.top = Math.max(8, Math.min(top, window.innerHeight - h - 8)) + "px";
     }
     function showCard(cardEl) {
       const p = papers[+cardEl.dataset.pidx];
@@ -380,7 +375,10 @@ function render({ model, el }) {
       const body = document.createElement("div");
       body.className = `${id}-hc-body`;
       const t = document.createElement("div");
-      t.className = `${id}-hc-title`; t.textContent = p.title;
+      t.className = `${id}-hc-title`;
+      const link = document.createElement("a");
+      link.href = p.url; link.target = "_blank"; link.rel = "noopener"; link.textContent = p.title;
+      t.appendChild(link);
       body.appendChild(t);
       const metaStr = [p.journal, p.year].filter(Boolean).join(" · ");
       if (metaStr) {
@@ -400,15 +398,27 @@ function render({ model, el }) {
     if (canHover) {
       resultsContainer.addEventListener("mouseover", (e) => {
         const card = e.target.closest(`.${id}-paper`);
-        if (!card || card === hoverCurrent) return;
+        if (!card) return;
+        cancelHide();
+        if (card === hoverCurrent && hovercard.classList.contains("show")) return;
         loadHoverData();
-        clearTimeout(hoverTimer);
+        clearTimeout(showTimer);
         hoverCurrent = card;
-        hoverTimer = setTimeout(() => showCard(card), 350);
+        showTimer = setTimeout(() => { if (hoverCurrent === card) showCard(card); }, 350);
       });
       resultsContainer.addEventListener("mouseout", (e) => {
         const card = e.target.closest(`.${id}-paper`);
-        if (card && (!e.relatedTarget || !card.contains(e.relatedTarget))) hideCard();
+        if (!card) return;
+        const to = e.relatedTarget;
+        if (to && (card.contains(to) || hovercard.contains(to))) return;
+        clearTimeout(showTimer);
+        scheduleHide();
+      });
+      hovercard.addEventListener("mouseenter", cancelHide);
+      hovercard.addEventListener("mouseleave", (e) => {
+        const to = e.relatedTarget;
+        if (to && to.closest && to.closest(`.${id}-paper`)) return;
+        scheduleHide();
       });
       window.addEventListener("scroll", () => { if (hoverCurrent) hideCard(); }, { passive: true });
     }
