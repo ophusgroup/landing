@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>paper-list — hover-preview test</title>
+<script>
+  const theme = new URLSearchParams(location.search).get("theme") || "light";
+  document.documentElement.classList.add(theme);
+</script>
+<style>
+  html.light, html.light body { background:#ffffff; color:#1a1a1a; }
+  html.dark,  html.dark body  { background:#0e1116; color:#e6e8eb; }
+  body { font-family: ui-sans-serif, system-ui, -apple-system, sans-serif;
+         max-width: 760px; margin: 0 auto; padding: 40px 24px 60vh; }
+  h1 { font-size: 1.5rem; }
+</style>
+</head>
+<body>
+  <h1>Publications — hover preview test</h1>
+  <div id="mount"></div>
+  <script type="module">
+    // Test-only: force the widget to treat this as a hover-capable device.
+    const _mm = window.matchMedia ? window.matchMedia.bind(window) : null;
+    window.matchMedia = (q) => (/hover/i.test(q)
+      ? { matches: true, media: q, addEventListener() {}, removeEventListener() {}, addListener() {}, removeListener() {} }
+      : (_mm ? _mm(q) : { matches: false, addEventListener() {}, removeEventListener() {}, addListener() {}, removeListener() {} }));
+
+    const mod = await import("./widgets/paper-list.js?t=" + Date.now());
+    const opts = {
+      data_url: "/data/papers.json",
+      hover_url: "/data/papers_hover.json",
+      accent_color: "#8C1515",
+      accent_color_dark: "#E8A0A0",
+    };
+    mod.default.render({ el: document.getElementById("mount"), model: { get: (k) => opts[k] } });
+  </script>
+</body>
+</html>

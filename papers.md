@@ -15,6 +15,7 @@ short_title: Publications
 :::{anywidget} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/paper-list.js
 {
   "data_url": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/data/papers.json",
+  "hover_url": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/data/papers_hover.json",
   "accent_color": "#8C1515",
   "accent_color_dark": "#E8A0A0"
 }

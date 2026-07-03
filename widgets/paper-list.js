@@ -4,6 +4,7 @@ function render({ model, el }) {
   const dataUrl = model.get("data_url") || "";
   const accentColor = model.get("accent_color") || "#8C1515";
   const accentColorDark = model.get("accent_color_dark") || "#E8A0A0";
+  const hoverUrl = model.get("hover_url") || "";
 
   const id = "pl-" + Math.random().toString(36).slice(2, 8);
 
@@ -203,6 +204,30 @@ function render({ model, el }) {
     .${id}-dark .${id}-stats { color: #9ca3af; }
     .${id}-dark .${id}-paper-tag { background: #1f2937; color: #6b7280; }
     .${id}-dark .${id}-loading { color: #9ca3af; }
+
+    /* Hover preview card — graphical abstract + abstract text */
+    .${id}-hovercard {
+      position: fixed; z-index: 9999; width: 340px; max-width: 92vw;
+      background: #fff; color: #1f2937; border: 1px solid #e5e7eb; border-radius: 10px;
+      box-shadow: 0 10px 34px rgba(0,0,0,0.18); overflow: hidden; pointer-events: none;
+      opacity: 0; transform: translateY(4px);
+      transition: opacity .14s ease, transform .14s ease;
+      font-size: 0.84em; line-height: 1.5;
+    }
+    .${id}-hovercard.show { opacity: 1; transform: translateY(0); }
+    .${id}-hc-img { display: block; width: 100%; max-height: 190px; object-fit: contain;
+      background: #f6f6f7; border-bottom: 1px solid #eee; }
+    .${id}-hc-body { padding: 11px 13px 13px; }
+    .${id}-hc-title { font-weight: 600; color: #111; margin: 0 0 3px; font-size: 0.96em; line-height: 1.35; }
+    .${id}-hc-meta { color: #6b7280; font-style: italic; margin: 0 0 7px; font-size: 0.92em; }
+    .${id}-hc-abs { margin: 0; color: #374151;
+      display: -webkit-box; -webkit-line-clamp: 9; -webkit-box-orient: vertical; overflow: hidden; }
+    .${id}-dark .${id}-hovercard { background: #111827; color: #d1d5db; border-color: #374151;
+      box-shadow: 0 10px 34px rgba(0,0,0,0.5); }
+    .${id}-dark .${id}-hc-img { background: #0b0f16; border-bottom-color: #1f2937; }
+    .${id}-dark .${id}-hc-title { color: #f3f4f6; }
+    .${id}-dark .${id}-hc-meta { color: #9ca3af; }
+    .${id}-dark .${id}-hc-abs { color: #cbd5e1; }
   `;
   el.appendChild(style);
 
@@ -238,13 +263,14 @@ function render({ model, el }) {
 
   function buildUI(papers) {
     // Pre-build search index: lowercase title + authors + journal
-    for (const p of papers) {
+    papers.forEach((p, i) => {
+      p._idx = i;
       p._search = [
         p.title,
         (p.authors || []).join(" "),
         p.journal || ""
       ].join(" ").toLowerCase();
-    }
+    });
 
     // Collect all tags and years
     const allTags = {};
@@ -306,6 +332,86 @@ function render({ model, el }) {
     const yearsContainer = wrap.querySelector(`.${id}-years`);
     const statsContainer = wrap.querySelector(`.${id}-stats`);
     const resultsContainer = wrap.querySelector(`.${id}-results`);
+
+    // --- Hover preview card: lazy-loads pre-baked abstracts/images keyed by DOI ---
+    const hovercard = document.createElement("div");
+    hovercard.className = `${id}-hovercard`;
+    wrap.appendChild(hovercard);
+    let hoverData = null, hoverLoading = false, hoverCurrent = null, hoverTimer = null;
+    const canHover = !window.matchMedia || window.matchMedia("(hover: hover)").matches;
+    function loadHoverData() {
+      if (hoverData || hoverLoading || !hoverUrl) return;
+      hoverLoading = true;
+      fetch(hoverUrl).then((r) => r.json()).then((d) => { hoverData = d || {}; })
+        .catch(() => { hoverData = {}; });
+    }
+    if (canHover && hoverUrl) loadHoverData();
+    function normDoi(u) { return (u || "").replace(/^https?:\/\/(dx\.)?doi\.org\//i, "").toLowerCase(); }
+    function hideCard() { clearTimeout(hoverTimer); hoverCurrent = null; hovercard.classList.remove("show"); }
+    function positionCard(cardEl) {
+      const r = cardEl.getBoundingClientRect(), gap = 14;
+      const w = hovercard.offsetWidth || 340, h = hovercard.offsetHeight;
+      const vw = window.innerWidth, vh = window.innerHeight;
+      const clampTop = (t) => Math.max(8, Math.min(t, vh - h - 8));
+      let left, top;
+      if (vw - r.right >= w + gap + 8) {            // room to the right
+        left = r.right + gap; top = clampTop(r.top);
+      } else if (r.left >= w + gap + 8) {           // room to the left
+        left = r.left - w - gap; top = clampTop(r.top);
+      } else {                                       // full-width card: drop below (or above)
+        left = Math.max(8, Math.min(r.left, vw - w - 8));
+        top = (r.bottom + gap + h <= vh - 8) ? r.bottom + gap : Math.max(8, r.top - gap - h);
+      }
+      hovercard.style.left = left + "px";
+      hovercard.style.top = top + "px";
+    }
+    function showCard(cardEl) {
+      const p = papers[+cardEl.dataset.pidx];
+      const info = p && hoverData && hoverData[normDoi(p.url)];
+      if (!info || (!info.abstract && !info.image)) return;
+      hovercard.textContent = "";
+      if (info.image) {
+        const img = document.createElement("img");
+        img.className = `${id}-hc-img`; img.alt = ""; img.referrerPolicy = "no-referrer";
+        img.onerror = () => img.remove();
+        img.src = info.image;
+        hovercard.appendChild(img);
+      }
+      const body = document.createElement("div");
+      body.className = `${id}-hc-body`;
+      const t = document.createElement("div");
+      t.className = `${id}-hc-title`; t.textContent = p.title;
+      body.appendChild(t);
+      const metaStr = [p.journal, p.year].filter(Boolean).join(" · ");
+      if (metaStr) {
+        const m = document.createElement("div");
+        m.className = `${id}-hc-meta`; m.textContent = metaStr;
+        body.appendChild(m);
+      }
+      if (info.abstract) {
+        const a = document.createElement("div");
+        a.className = `${id}-hc-abs`; a.textContent = info.abstract;
+        body.appendChild(a);
+      }
+      hovercard.appendChild(body);
+      positionCard(cardEl);
+      hovercard.classList.add("show");
+    }
+    if (canHover) {
+      resultsContainer.addEventListener("mouseover", (e) => {
+        const card = e.target.closest(`.${id}-paper`);
+        if (!card || card === hoverCurrent) return;
+        loadHoverData();
+        clearTimeout(hoverTimer);
+        hoverCurrent = card;
+        hoverTimer = setTimeout(() => showCard(card), 350);
+      });
+      resultsContainer.addEventListener("mouseout", (e) => {
+        const card = e.target.closest(`.${id}-paper`);
+        if (card && (!e.relatedTarget || !card.contains(e.relatedTarget))) hideCard();
+      });
+      window.addEventListener("scroll", () => { if (hoverCurrent) hideCard(); }, { passive: true });
+    }
 
     // Tags are collapsed by default to save space; toggle to reveal the pills.
     tagsToggle.addEventListener("click", () => {
@@ -397,6 +503,7 @@ function render({ model, el }) {
     }
 
     function renderResults() {
+      hideCard();
       const filtered = filterPapers();
       const hasFilters = searchText || activeTags.size > 0 || activeYears.size > 0;
 
@@ -443,7 +550,7 @@ function render({ model, el }) {
           if (authorsStr) metaParts.push(escHtml(authorsStr));
           if (journal) metaParts.push(`<span class="${id}-paper-journal">${escHtml(journal)}</span>`);
 
-          html += `<div class="${id}-paper">`;
+          html += `<div class="${id}-paper" data-pidx="${p._idx}">`;
           html += `<a href="${p.url}" target="_blank" rel="noopener">${escHtml(p.title)}</a>`;
           if (tagsHtml) html += `<span class="${id}-paper-tags">${tagsHtml}</span>`;
           if (metaParts.length) html += `<div class="${id}-paper-meta">${metaParts.join(" · ")}</div>`;
