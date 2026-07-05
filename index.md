@@ -48,4 +48,4 @@ Everyone deserves to work a safe, inclusive and equitable environment. As educat
 
 ## Current Positions
 
-We are currently recruiting enthusiastic PhD students, postdocs and interns. If you are interested in joining the lab or collaborating, please [contact Colin](mailto:cophus@stanford.edu)! 
+We are currently recruiting enthusiastic PhD students, postdocs and interns. Prospective PhD students should apply to [Stanford's Materials Science and Engineering graduate program](https://mse.stanford.edu/academics-admissions/how-to-apply), and prospective interns can apply to the [Stanford MSE REU program](https://mse.stanford.edu/REU). If you are interested in a postdoc position in the lab, please [Contact Professor Ophus](mailto:cophus@stanford.edu). Candidates pursuing a [Stanford postdoctoral fellowship](https://postdocs.stanford.edu/fellowships) are encouraged to reach out before the application deadlines. 
