@@ -19,6 +19,10 @@ project:
     - file: news.md
     - file: people.md
     - file: research.md
+      children:
+        - file: research-stem.md
+        - file: research-comp.md
+        - file: research-mat.md
     - file: papers.md
     - file: teaching.md
     - file: resource-students.md

@@ -64,15 +64,15 @@ const PILLARS = [
   { kind: "stem", img: "card_experiments.jpg",
     title: "Scanning Transmission Electron Microscopy", short: "Electron Microscopy",
     desc: "We develop new STEM measurements using advanced detectors, beam shaping, and programmable acquisition. We record and invert massive electron-scattering datasets to reveal structural, chemical, and other signals beyond conventional imaging.",
-    links: [["see the projects", "#scanning-transmission-electron-microscopy"]] },
+    links: [["see the projects", "/research-stem"]] },
   { kind: "comp", img: "card_reconstruction.jpg",
     title: "Computational Imaging and Open Software", short: "Computational Imaging",
     desc: "We build reconstruction algorithms, simulations, and open-source software for quantitative microscopy. Our methods include ptychography, tomography, and physics-guided machine learning to convert raw high-dimensional data into interpretable structure.",
-    links: [["see the projects", "#computational-imaging-and-open-software"]] },
+    links: [["see the projects", "/research-comp"]] },
   { kind: "materials",
     title: "Characterizing Materials on the Atomic Scale", short: "Materials Structure",
     desc: "We study how atomic structure controls material behavior. Our work maps strain, defects, interfaces, chemical and structural order/disorder, local symmetry, and evolving atomic environments across energy, electronic, quantum, and structural materials.",
-    links: [["see the projects", "#characterizing-materials-on-the-atomic-scale"]] },
+    links: [["see the projects", "/research-mat"]] },
 ];
 
 function render({ model, el }) {
@@ -86,7 +86,7 @@ function render({ model, el }) {
   const widgetCb = opt("widget_cb", ""); // local-preview cache-buster, e.g. "?t=123"; empty in production
   const accent = opt("accent", "#8C1515");
   const bare = opt("bare", false); // widgets only, no title/desc/links (used at the top of the landing page)
-  const researchUrl = opt("research_url", "/research"); // bare panels link here on click
+  // "see the projects" links point at the research subpages (absolute paths in PILLARS[].links)
   const id = "rp_" + Math.random().toString(36).slice(2, 7);
 
   el.innerHTML = `
@@ -122,7 +122,7 @@ function render({ model, el }) {
         <div class="${id}-col" data-kind="${p.kind}">
           <div class="${id}-panel">${p.kind === "materials" ? `<canvas></canvas>` : `<div class="${id}-widget" data-widget="${p.kind}"></div>`}</div>
           ${bare ? `<div class="${id}-btitle">${p.short}</div>
-          <div class="${id}-links">${p.links.map(([t, h]) => `<a href="${researchUrl}${h}">${t}</a>`).join(" · ")}</div>` : `<div class="${id}-title">${p.title}</div>
+          <div class="${id}-links">${p.links.map(([t, h]) => `<a href="${h}">${t}</a>`).join(" · ")}</div>` : `<div class="${id}-title">${p.title}</div>
           <div class="${id}-bar"></div>
           <div class="${id}-desc">${p.desc}</div>
           <div class="${id}-links">${p.links.map(([t, h]) => `<a href="${h}">${t}</a>`).join(" · ")}</div>`}
@@ -151,7 +151,7 @@ function render({ model, el }) {
   cols.forEach((col, i) => {
     col.addEventListener("pointerenter", () => { col.classList.add("hot"); if (col.dataset.kind === "materials") hover.materials.value = true; });
     col.addEventListener("pointerleave", () => { col.classList.remove("hot"); if (col.dataset.kind === "materials") hover.materials.value = false; });
-    if (bare) { col.style.cursor = "pointer"; const dest = researchUrl + ((PILLARS[i] && PILLARS[i].links[0]) ? PILLARS[i].links[0][1] : ""); col.addEventListener("click", () => { window.location.href = dest; }); }
+    if (bare) { col.style.cursor = "pointer"; const dest = (PILLARS[i] && PILLARS[i].links[0]) ? PILLARS[i].links[0][1] : "/research"; col.addEventListener("click", () => { window.location.href = dest; }); }
   });
 
   // Mount the STEM experiment (col 1) and the wave-propagation widget (col 2).
