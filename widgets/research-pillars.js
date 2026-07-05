@@ -104,7 +104,7 @@ function render({ model, el }) {
       .${id}-panel canvas { display:block; width:100%; height:100%; border-radius:10px; }
       .${id}-widget { position:absolute; inset:0; }
       .${id}-img { width:100%; height:100%; object-fit:cover; display:block; border-radius:10px; }
-      .${id}-title { font-size:.9rem; font-weight:600; line-height:1.25; margin:.85rem 0 .15rem;
+      .${id}-title { font-size:1rem; font-weight:600; line-height:1.25; margin:.85rem 0 .15rem; text-wrap:balance;
         color:var(--${id}-fg); }
       .${id}-bar { width:0; height:2px; background:${accent}; transition:width .3s ease; margin-bottom:.5rem; }
       .${id}-col.hot .${id}-bar { width:34px; }
