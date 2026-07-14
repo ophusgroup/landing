@@ -81,7 +81,10 @@ description: Current members and alumni of the Colin Ophus Lab at Stanford Unive
     {"label": "Email", "url": "mailto:da501@stanford.edu"},
     {"label": "ORCID", "url": "https://orcid.org/0000-0003-2284-7010"}
   ],
-  "bio": "Dasol earned her PhD in Materials Science and Engineering at Cornell University, advised by Professor David Muller. Her research focused on imaging atomic-scale defects in Li-NMC cathodes using electron ptychography and developing related machine learning tools. At Stanford, her work builds upon this foundation, employing electron ptychography and advanced scanning transmission electron microscopy to investigate battery materials and uncover their underlying mechanisms."
+  "bio": "Dasol earned her PhD in Materials Science and Engineering at Cornell University, advised by Professor David Muller. Her research focused on imaging atomic-scale defects in Li-NMC cathodes using electron ptychography and developing related machine learning tools. At Stanford, her work builds upon this foundation, employing electron ptychography and advanced scanning transmission electron microscopy to investigate battery materials and uncover their underlying mechanisms.",
+  "papers": [
+    {"title": "Imaging of Li Vacancies in a Battery Cathode by MEP", "url": "https://doi.org/10.1021/acs.nanolett.6c00786"}
+  ]
 }
 :::
 
@@ -94,7 +97,10 @@ description: Current members and alumni of the Colin Ophus Lab at Stanford Unive
     {"label": "Email", "url": "mailto:ehrdt@stanford.edu"},
     {"label": "ORCID", "url": "https://orcid.org/0000-0002-6988-2959"}
   ],
-  "bio": "Karen received her PhD in Materials Chemistry from the University of North Carolina at Chapel Hill under Professor Scott Warren. Her research focused on the fabrication and structural characterization of disordered ultrathin materials using atomic layer deposition, TEM, and modeling via molecular dynamics and reverse Monte Carlo. Currently, she is applying advanced STEM and developing machine learning methods for solving complex disordered structures. She is the lead developer of the pyHRMC package."
+  "bio": "Karen received her PhD in Materials Chemistry from the University of North Carolina at Chapel Hill under Professor Scott Warren. Her research focused on the fabrication and structural characterization of disordered ultrathin materials using atomic layer deposition, TEM, and modeling via molecular dynamics and reverse Monte Carlo. Currently, she is applying advanced STEM and developing machine learning methods for solving complex disordered structures. She is the lead developer of the pyHRMC package.",
+  "papers": [
+    {"title": "pyHRMC: Hybrid RMC for Electron Total Scattering", "url": "https://doi.org/10.1002/jcc.70306"}
+  ]
 }
 :::
 
@@ -107,7 +113,10 @@ description: Current members and alumni of the Colin Ophus Lab at Stanford Unive
     {"label": "ORCID", "url": "https://orcid.org/0000-0002-7228-4263"},
     {"label": "Scholar", "url": "https://scholar.google.com/citations?hl=en&user=s-yHlNMAAAAJ&view_op=list_works&sortby=pubdate"}
   ],
-  "bio": "Levi earned his PhD in Chemistry at Caltech, where he was advised by Professor Scott Cushing as an NSF Graduate Research Fellow, and he also held a DOE SCGSR Fellowship to conduct research at Argonne National Laboratory with Dr. Thomas Gage. He is now an Arnold O. Beckman Postdoctoral Fellow and GLAM Postdoctoral Fellow developing in/ex situ microscopy methods for imaging the growth, performance, and failure of hybrid materials at atomic scales."
+  "bio": "Levi earned his PhD in Chemistry at Caltech, where he was advised by Professor Scott Cushing as an NSF Graduate Research Fellow, and he also held a DOE SCGSR Fellowship to conduct research at Argonne National Laboratory with Dr. Thomas Gage. He is now an Arnold O. Beckman Postdoctoral Fellow and GLAM Postdoctoral Fellow developing in/ex situ microscopy methods for imaging the growth, performance, and failure of hybrid materials at atomic scales.",
+  "papers": [
+    {"title": "Nanoscale photocarrier traps in solar H2O-splitting catalysts", "url": "https://arxiv.org/abs/2512.24543"}
+  ]
 }
 :::
 
