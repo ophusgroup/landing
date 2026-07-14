@@ -25,7 +25,7 @@ description: Current members and alumni of the Colin Ophus Lab at Stanford Unive
   ],
   "titles": [
     "Associate Professor, Department of Materials Science and Engineering, Stanford University",
-    "Center Fellow, Precourt Institute for Energy, Stanford University",
+    "L&S Family Center Fellow in Energy and Sustainability, Precourt Institute for Energy",
     "Faculty Scientist, SLAC National Accelerator Laboratory"
   ],
   "bio": "Colin previously worked as a Staff Scientist at the National Center for Electron Microscopy (NCEM), part of the Molecular Foundry, at Lawrence Berkeley Lab. He was awarded a US DOE Early Career award in 2018, and the Burton Medal from the MSA in 2022. His research focuses on experimental methods, reconstruction algorithms, and software codes for simulation, analysis, and instrument design of scanning transmission electron microscopy (STEM). He advocates for open science and develops open-source scientific software such as quantEM, py4DSTEM, and Prismatic. He is also the editor-in-chief for the interactive web-based scientific journal Elemental Microscopy."

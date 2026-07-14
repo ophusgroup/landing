@@ -1,5 +1,41 @@
 [
   {
+    "title": "Atomic-Scale Imaging of Lithium Vacancies in a Battery Cathode by Multislice Electron Ptychography",
+    "url": "https://doi.org/10.1021/acs.nanolett.6c00786",
+    "year": 2026,
+    "tags": [
+      "Energy Materials",
+      "Ptychography",
+      "Imaging"
+    ],
+    "authors": [
+      "Dasol Yoon",
+      "Harikrishnan KP",
+      "Eleanor Richard",
+      "Yu-Tsun Shao",
+      "Yao Yang",
+      "Hector D. Abruña",
+      "David A. Muller"
+    ],
+    "journal": "Nano Letters"
+  },
+  {
+    "title": "pyHRMC: Hybrid Reverse Monte Carlo for Electron Total Scattering",
+    "url": "https://doi.org/10.1002/jcc.70306",
+    "year": 2026,
+    "tags": [
+      "Simulation",
+      "Software",
+      "Disordered"
+    ],
+    "authors": [
+      "Karen M. Ehrhardt",
+      "Jack D. Sundberg",
+      "Scott C. Warren"
+    ],
+    "journal": "Journal of Computational Chemistry"
+  },
+  {
     "title": "Atomic Evolution of Hydrogen Intercalation Wave Dynamics in Palladium Nanocrystals Revealed by Liquid-Phase Transmission Electron Microscopy",
     "url": "https://doi.org/10.1021/jacs.6c03937",
     "year": 2026,
@@ -562,6 +598,34 @@
       "David Dye"
     ],
     "journal": "Communications Materials"
+  },
+  {
+    "title": "Imaging nanoscale photocarrier traps in solar water-splitting catalysts",
+    "url": "https://arxiv.org/abs/2512.24543",
+    "year": 2025,
+    "tags": [
+      "Catalysis",
+      "Energy Materials",
+      "Spectroscopy"
+    ],
+    "authors": [
+      "Levi D. Palmer",
+      "Wonseok Lee",
+      "Pushp Raj Prasad",
+      "Bradley W. Layne",
+      "Han-Hsuan Wu",
+      "Zejie Chen",
+      "Jianguo Wen",
+      "Yuzi Liu",
+      "Xiaoqing Pan",
+      "A. Alec Talin",
+      "Akihiko Kudo",
+      "Shane Ardo",
+      "Joseph P. Patterson",
+      "Thomas E. Gage",
+      "Scott K. Cushing"
+    ],
+    "journal": ""
   },
   {
     "title": "Quantitative structure determination from experimental four-dimensional scanning transmission electron microscopy via the scattering matrix",
