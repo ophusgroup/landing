@@ -31,7 +31,8 @@ function render({ model, el }) {
   const side = opt("side", "");
   if (side === "left" || side === "right") {
     const w = opt("width", "40%");
-    const m = side === "right" ? "0.2em 0 0.6em 1.4em" : "0.2em 1.4em 0.6em 0";
+    const top = opt("top", "0.2em");
+    const m = side === "right" ? `${top} 0 0.6em 1.4em` : `${top} 1.4em 0.6em 0`;
     // Float the mount; if MyST wrapped it in a single-child block, hoist the float up to
     // that wrapper too, until we reach the real content flow (a parent with siblings).
     let t = el;
@@ -43,8 +44,9 @@ function render({ model, el }) {
     }
   }
 
-  el.innerHTML = `
-    <style>
+  // CSS kept as a string so the run overlay (which lives in document.body, outside the
+  // widget's shadow root on the deployed site) can inject its own copy for the clone.
+  const css = `
       .${id}-wrap { display:block; width:100%; line-height:0; cursor:pointer; user-select:none; -webkit-user-select:none; }
       .${id}-wrap svg { width:100%; height:auto; display:block; overflow:visible; }
       .${id}-armR { transform-box:view-box; transform-origin:147px 115px;
@@ -80,8 +82,10 @@ function render({ model, el }) {
       @keyframes ${id}-flailR { 0%,100%{ transform:rotate(-42deg);} 50%{ transform:rotate(12deg);} }
       @keyframes ${id}-flailL { 0%,100%{ transform:rotate(42deg);} 50%{ transform:rotate(-12deg);} }
       @keyframes ${id}-stomprun { 0%{transform:translateY(0);} 10%{transform:translateY(-7px);} 20%{transform:translateY(0);} 32%{transform:translateY(-5px);} 45%{transform:translateY(0);} 58%{transform:translateY(-3px);} 72%{transform:translateY(0);} 86%{transform:translateY(-1.5px);} 100%{transform:translateY(0);} }
-      @media (prefers-reduced-motion: reduce){ .${id}-armR, .${id}-bob { animation:none; } }
-    </style>
+      @media (prefers-reduced-motion: reduce){ .${id}-armR, .${id}-bob { animation:none; } }`;
+
+  el.innerHTML = `
+    <style>${css}</style>
     <div class="${id}-wrap">
       <svg viewBox="0 0 197.6 212.48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="nano@Stanford mascot robot">
         <defs>
@@ -221,10 +225,11 @@ function render({ model, el }) {
       "position:fixed;inset:0;z-index:2147483000;pointer-events:none;opacity:1;transition:opacity .5s ease;user-select:none;";
 
     // The overlay lives in document.body (light DOM). On the deployed site the widget's
-    // <style> is scoped inside the anywidget's shadow root, so copy it in — otherwise the
-    // clone gets no animations and every face group shows at once.
-    const styleEl = el.querySelector("style");
-    if (styleEl) overlay.appendChild(styleEl.cloneNode(true));
+    // <style> is scoped inside the anywidget's shadow root, so inject a fresh copy of the
+    // CSS here — otherwise the clone gets no animations and every face group shows at once.
+    const runStyle = document.createElement("style");
+    runStyle.textContent = css;
+    overlay.appendChild(runStyle);
 
     const black = document.createElement("div");
     black.style.cssText =

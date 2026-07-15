@@ -15,7 +15,7 @@ description: Electron microscopy facilities and equipment available to COLab at 
 ::::{div}
 
 :::{anywidget} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/nano-mascot.js
-{"side": "right", "width": "24%"}
+{"side": "right", "width": "32%", "top": "30px"}
 :::
 
 <div style="width: 56%; display: inline-block; vertical-align: top; margin: 0.2em 1.2em 0.6em 0;"><img src="/images/facilities/deeplab.jpg" alt="nano@Stanford" style="width: 100%; border-radius: 6px;" /></div>
