@@ -12,14 +12,28 @@ description: Electron microscopy facilities and equipment available to COLab at 
 
 ## nano@Stanford
 
+::::{grid} 1 1 2 2
+
+:::{grid-item}
+:columns: 7
+
 ```{image} /images/facilities/deeplab.jpg
 :alt: nano@Stanford
-:class: md:float-right ml-4
-:width: 500px
-:align: center
+:width: 100%
 ```
+:::
 
-[nano@Stanford](https://nanolabs.stanford.edu/) is Stanford's umbrella of shared nanoscience labs — including the Stanford Nano Shared Facilities (SNSF), the Stanford Nanofabrication Facility (SNF), the Microchemical Analysis Facility (MAF), and the Stanford Isotope and Geochemical Measurement and Analysis Facility (SIGMA) — and is part of the National Science Foundation's National Nanotechnology Coordinated Infrastructure (NNCI). These facilities provide access to state-of-the-art nanofabrication and characterization tools that are otherwise economically infeasible for individual labs. Serving over 1,000 researchers each year from across academia, industry, and government, nano@Stanford enables cutting-edge nanoscale science and engineering across diverse fields. Operating as transparent, cost-recovery service centers, the labs maintain and operate sophisticated instruments while offering expert training to educate the next generation of scientists.
+:::{grid-item}
+:columns: 5
+
+```{anywidget} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/nano-mascot.js
+{}
+```
+:::
+
+::::
+
+[nano@Stanford](https://nanolabs.stanford.edu/) is Stanford's umbrella of shared nanoscience labs. These facilities provide access to state-of-the-art nanofabrication and characterization tools that are otherwise economically infeasible for individual labs. Serving over 1,000 researchers each year from across academia, industry, and government, nano@Stanford enables cutting-edge nanoscale science and engineering across diverse fields. Operating as transparent, cost-recovery service centers, the labs maintain and operate sophisticated instruments while offering expert training to educate the next generation of scientists.
 
 ## NCEM, Berkeley Lab
 
