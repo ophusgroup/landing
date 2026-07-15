@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>nano-mascot — local test</title>
+<style>
+  body { margin:0; font-family:-apple-system, system-ui, sans-serif; background:#8a8a8a; }
+  .page { max-width:760px; margin:0 auto; padding:24px 20px 90px; }
+  .bar { display:flex; align-items:center; gap:12px; margin-bottom:6px; }
+  .bar h1 { flex:1; font-size:1.15rem; margin:0; color:#fff; }
+  button { padding:6px 12px; border:1px solid #fff; border-radius:8px; background:transparent; color:#fff; cursor:pointer; font-size:.85rem; }
+  .hint { color:#eee; font-size:.85rem; margin:0 0 10px; }
+  #mount { width:340px; margin:18px auto; }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="bar"><h1>nano-mascot — should wave; hover to wink</h1><button id="bg">Toggle bg</button></div>
+  <p class="hint">Transparent background (shown here over gray / white / dark).</p>
+  <div id="mount"></div>
+</div>
+<script type="module">
+  const { default: widget } = await import(`./widgets/nano-mascot.js?t=${Date.now()}`);
+  widget.render({ model: { get: () => undefined }, el: document.getElementById("mount") });
+  const bgs = ["#8a8a8a", "#ffffff", "#0e1116", "#eef0ec"]; let i = 0;
+  document.getElementById("bg").onclick = () => { i = (i + 1) % bgs.length; document.body.style.background = bgs[i]; };
+</script>
+</body>
+</html>

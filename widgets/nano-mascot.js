@@ -25,6 +25,24 @@ function render({ model, el }) {
   const id = "nm_" + Math.random().toString(36).slice(2, 7);
   const G = "#bfbfbf", SH = "#8d8d8d", HL = "#ffffff"; // grey / shading / highlight
 
+  // Optional float layout via anywidget body params, applied to the mount as a runtime
+  // inline style — the deployed theme strips Tailwind float/width utilities, but not this.
+  const opt = (k, d) => { try { const v = model && model.get && model.get(k); return v == null ? d : v; } catch (e) { return d; } };
+  const side = opt("side", "");
+  if (side === "left" || side === "right") {
+    const w = opt("width", "40%");
+    const m = side === "right" ? "0.2em 0 0.6em 1.4em" : "0.2em 1.4em 0.6em 0";
+    // Float the mount; if MyST wrapped it in a single-child block, hoist the float up to
+    // that wrapper too, until we reach the real content flow (a parent with siblings).
+    let t = el;
+    for (let i = 0; i < 3 && t; i++) {
+      t.style.float = side; t.style.width = w; t.style.margin = m;
+      const p = t.parentElement;
+      if (!p || p.children.length > 1) break;
+      t = p;
+    }
+  }
+
   el.innerHTML = `
     <style>
       .${id}-wrap { display:block; width:100%; line-height:0; cursor:pointer; user-select:none; -webkit-user-select:none; }
