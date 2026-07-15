@@ -220,6 +220,12 @@ function render({ model, el }) {
     overlay.style.cssText =
       "position:fixed;inset:0;z-index:2147483000;pointer-events:none;opacity:1;transition:opacity .5s ease;user-select:none;";
 
+    // The overlay lives in document.body (light DOM). On the deployed site the widget's
+    // <style> is scoped inside the anywidget's shadow root, so copy it in — otherwise the
+    // clone gets no animations and every face group shows at once.
+    const styleEl = el.querySelector("style");
+    if (styleEl) overlay.appendChild(styleEl.cloneNode(true));
+
     const black = document.createElement("div");
     black.style.cssText =
       "position:absolute;inset:0;background:#000;opacity:0;transition:opacity 1.1s ease-in;";
