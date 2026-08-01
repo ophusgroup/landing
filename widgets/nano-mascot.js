@@ -81,7 +81,7 @@ function render({ model, el }) {
       .${id}-running .${id}-bob { animation:${id}-stomprun 1.7s ease-out forwards; }
       @keyframes ${id}-flailR { 0%,100%{ transform:rotate(-42deg);} 50%{ transform:rotate(12deg);} }
       @keyframes ${id}-flailL { 0%,100%{ transform:rotate(42deg);} 50%{ transform:rotate(-12deg);} }
-      @keyframes ${id}-stomprun { 0%{transform:translateY(0);} 10%{transform:translateY(-7px);} 20%{transform:translateY(0);} 32%{transform:translateY(-5px);} 45%{transform:translateY(0);} 58%{transform:translateY(-3px);} 72%{transform:translateY(0);} 86%{transform:translateY(-1.5px);} 100%{transform:translateY(0);} }
+      @keyframes ${id}-stomprun { 0%{transform:translateY(0);} 10%{transform:translateY(-7px);} 20%{transform:translateY(0);} 32%{transform:translateY(-5px);} 45%{transform:translateY(0);} 58%{transform:translateY(-3px);} 72%{transform:translateY(0);} 100%{transform:translateY(0);} }
       @media (prefers-reduced-motion: reduce){ .${id}-armR, .${id}-bob { animation:none; } }`;
 
   el.innerHTML = `

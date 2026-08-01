@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Foundry Logo Widget Test</title>
+  <style>
+    /* Mimic the deployed MyST book-theme: it marks dark mode on <html class="dark">
+       and keeps <body> as-is, so the widget must key off the html class, not body bg. */
+    body { margin:0; padding:40px; background:#fff; font-family:-apple-system,sans-serif; transition:background .2s; }
+    html.dark body { background:#14181c; }
+    #root { max-width:520px; margin:0 auto; }
+    .controls { max-width:520px; margin:0 auto 24px; display:flex; gap:10px; }
+    button { font:inherit; padding:6px 14px; border-radius:6px; border:1px solid #bbb; background:#f4f4f4; cursor:pointer; }
+    html.dark button { background:#2a2f35; color:#eee; border-color:#555; }
+  </style>
+</head>
+<body>
+  <div class="controls">
+    <button id="theme">Toggle dark</button>
+    <button id="pause">Pause</button>
+    <input id="scrub" type="range" min="0" max="1000" value="0" style="flex:1">
+  </div>
+  <div id="root"></div>
+  <script type="module">
+    const widget = (await import('./foundry-logo.js?v=' + Date.now())).default;
+    const q = new URLSearchParams(location.search);
+    const params = q.has('debug') ? { debug: true } : {};
+    const model = { get: (k) => params[k] };
+    const el = document.getElementById('root');
+    widget.render({ model, el });
+    document.getElementById('theme').onclick = () => document.documentElement.classList.toggle('dark');
+    // scrub / pause to inspect a specific phase
+    const scrub = document.getElementById('scrub');
+    let paused = false;
+    document.getElementById('pause').onclick = () => { paused = !paused; };
+    scrub.oninput = () => { if (el.__setPhase) el.__setPhase(scrub.value / 1000); };
+  </script>
+</body>
+</html>

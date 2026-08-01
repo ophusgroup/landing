@@ -14,7 +14,7 @@ description: Electron microscopy facilities and equipment available to COLab at 
 
 ::::{div}
 
-:::{anywidget} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/nano-mascot.js
+:::{anywidget} http://127.0.0.1:8094/widgets/nano-mascot.js
 {"side": "right", "width": "32%", "top": "30px"}
 :::
 
@@ -33,14 +33,19 @@ description: Electron microscopy facilities and equipment available to COLab at 
 :align: center
 ``` -->
 
-```{image} /images/facilities/ncem_foundry_buildings.jpg
-:alt: NCEM
-:class: md:float-right ml-4
-:width: 500px
-:align: center
-```
+::::{div}
+
+:::{anywidget} http://127.0.0.1:8094/widgets/foundry-logo.js?v=5
+{"side": "right", "width": "34%", "clear": "right", "top": "0.6em"}
+:::
+
+<div style="float: right; clear: right; width: 42%; margin: 0.3em 0 0.6em 1.4em;"><img src="/images/facilities/ncem_foundry_buildings.jpg" alt="NCEM buildings at the Molecular Foundry" style="width: 100%; border-radius: 6px; display: block;" /></div>
 
 The [National Center for Electron Microscopy](https://foundry.lbl.gov/about/facilities/the-national-center-for-electron-microscopy-ncem/), established in 1983 and integrated into the [Molecular Foundry](https://foundry.lbl.gov/) in 2014, is a leading facility for advanced electron microscopy of materials, offering world-class instrumentation and expertise. NCEM's capabilities include double-aberration corrected microscopes (TEAM 0.5 and TEAM I) developed through the pioneering TEAM project, which incorporated the latest advancements in electron optics, detectors, and computational analysis methods. The facility supports a wide range of modern techniques, including 4DSTEM, STEM-EELS, XEDS, AET, and _in situ_ TEM. These methods allow for comprehensive structural, chemical, and electronic characterization at the atomic scale. NCEM’s research focuses on understanding the relationships between microstructural and microchemical features and materials properties, developing novel microscopy techniques, and advancing our understanding of defects, phase transformations, nanostructures, interfaces, and microelectronic materials, while also training the next generation of electron microscopy scientists.
+
+<div style="clear: both;"></div>
+
+::::
 
 ## SLAC
 

@@ -1,5 +1,21 @@
 [
   {
+    "title": "5D-STEM of energy materials: Recording real and reciprocal space dynamics via in situ 4D-STEM",
+    "url": "https://doi.org/10.1557/s43579-026-01009-7",
+    "year": 2026,
+    "tags": [
+      "4DSTEM",
+      "In Situ",
+      "Energy Materials",
+      "Catalysis"
+    ],
+    "authors": [
+      "Serin Lee",
+      "Colin Ophus"
+    ],
+    "journal": "MRS Communications"
+  },
+  {
     "title": "Atomic Evolution of Hydrogen Intercalation Wave Dynamics in Palladium Nanocrystals Revealed by Liquid-Phase Transmission Electron Microscopy",
     "url": "https://doi.org/10.1021/jacs.6c03937",
     "year": 2026,
@@ -20,7 +36,8 @@
       "Lin-Wang Wang",
       "Mark Asta",
       "Younan Xia",
-      "David T Limmer"
+      "David T Limmer",
+      "Haimei Zheng"
     ],
     "journal": "Journal of the American Chemical Society"
   },
