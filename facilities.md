@@ -14,7 +14,7 @@ description: Electron microscopy facilities and equipment available to COLab at 
 
 ::::{div}
 
-:::{anywidget} http://127.0.0.1:8094/widgets/nano-mascot.js
+:::{anywidget} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/nano-mascot.js
 {"side": "right", "width": "32%", "top": "30px"}
 :::
 
@@ -35,7 +35,7 @@ description: Electron microscopy facilities and equipment available to COLab at 
 
 ::::{div}
 
-:::{anywidget} http://127.0.0.1:8094/widgets/foundry-logo.js?v=5
+:::{anywidget} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/foundry-logo.js
 {"side": "right", "width": "34%", "clear": "right", "top": "0.6em"}
 :::
 
