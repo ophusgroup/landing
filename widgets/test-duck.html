@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><title>Duck test</title>
+<style>
+  body { margin:0; padding:40px; background:#fff; font-family:-apple-system,sans-serif; transition:background .2s; }
+  html.dark body { background:#14181c; }
+  #root { max-width:420px; margin:0 auto; }
+  button { position:fixed; top:10px; right:10px; font:14px sans-serif; padding:6px 12px; }
+</style></head>
+<body>
+  <button id="theme">Toggle dark</button>
+  <div id="root"></div>
+  <script type="module">
+    const widget = (await import('./duck.js?v=' + Date.now())).default;
+    widget.render({ model: { get: () => undefined }, el: document.getElementById('root') });
+    document.getElementById('theme').onclick = () => document.documentElement.classList.toggle('dark');
+  </script>
+</body></html>

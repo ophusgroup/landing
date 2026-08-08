@@ -75,3 +75,7 @@ ie. Change a movie from a slider, numeric input, etc — see probe_construction_
 - [Interactive PRISM Repository](https://github.com/ophusgroup/interactive-prism)
 - [MyST Documentation](https://mystmd.org/guide/typography)
 - [ipywidgets Documentation](https://ipywidgets.readthedocs.io/en/stable/)
+
+:::{anywidget} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/duck.js
+{}
+:::
