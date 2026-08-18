@@ -120,6 +120,18 @@ description: Current members and alumni of the Colin Ophus Lab at Stanford Unive
 }
 :::
 
+:::{anywidget} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/person-card.js
+{
+  "name": "Julian Feijoo",
+  "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/FeijooJulian.jpg",
+  "pronouns": "he/him",
+  "bio": "Julian received his PhD from UC Berkeley, where he was advised by Professor Peidong Yang. His research focused on studying electrocatalysts under operating conditions using electron microscopy and X-ray spectroscopy. At Stanford, he is co-supervised by <a href='https://web.slac.stanford.edu/wekergroup/'>Johanna Weker</a> and will combine synchrotron X-ray and 4D-STEM methods to uncover processing-structure-property relationships in energy storage materials.",
+  "papers": [
+    {"title": "Operando migration of copper carbonyl during CO₂ electroreduction", "url": "https://doi.org/10.1038/s41929-025-01359-w"}
+  ]
+}
+:::
+
 ::::::
 
 ## PhD Students
