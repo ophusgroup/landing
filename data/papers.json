@@ -1,5 +1,48 @@
 [
   {
+    "title": "Crystallographic challenges in microscopy of multi-domain spinel materials",
+    "url": "https://doi.org/10.1039/d6ta05906f",
+    "year": 2026,
+    "tags": [
+      "Crystallography",
+      "Oxides",
+      "Energy Materials",
+      "Disordered"
+    ],
+    "authors": [
+      "Ninon Scherz",
+      "Shashwat Anand",
+      "Colin Ophus",
+      "Tucker Holstun",
+      "Mary Scott",
+      "Tara P. Mishra",
+      "Gerbrand Ceder"
+    ],
+    "journal": "Journal of Materials Chemistry A"
+  },
+  {
+    "title": "Programable Beam Control for Electron Energy-Loss Spectroscopy and Ptychography",
+    "url": "https://doi.org/10.1093/mam/ozag080",
+    "year": 2026,
+    "tags": [
+      "Ptychography",
+      "EELS",
+      "4DSTEM",
+      "Perovskites"
+    ],
+    "authors": [
+      "Mariana Palos",
+      "Liam Spillane",
+      "Geri Topore",
+      "Yaqi Li",
+      "David Pesquera",
+      "Colin Ophus",
+      "Stephanie M Ribet",
+      "Michele Shelly Conroy"
+    ],
+    "journal": "Microscopy and Microanalysis"
+  },
+  {
     "title": "5D-STEM of energy materials: Recording real and reciprocal space dynamics via in situ 4D-STEM",
     "url": "https://doi.org/10.1557/s43579-026-01009-7",
     "year": 2026,
@@ -579,6 +622,60 @@
       "David Dye"
     ],
     "journal": "Communications Materials"
+  },
+  {
+    "title": "Evaluating the Transfer of Information in Phase Retrieval STEM Techniques",
+    "url": "https://doi.org/10.69761/ehch7395",
+    "year": 2025,
+    "tags": [
+      "Ptychography",
+      "Phase Contrast",
+      "Simulation"
+    ],
+    "authors": [
+      "Julie Marie Bekkevold",
+      "Stephanie M Ribet",
+      "Mary C Scott",
+      "Lewys Jones",
+      "Colin Ophus",
+      "Georgios Varnavides"
+    ],
+    "journal": "Elemental Microscopy"
+  },
+  {
+    "title": "A Practical Guide to Scanning and Transmission Electron Microscopy Simulations",
+    "url": "https://doi.org/10.69761/aghr7357",
+    "year": 2025,
+    "tags": [
+      "Simulation",
+      "Software"
+    ],
+    "authors": [
+      "Colin Ophus",
+      "Stephanie M Ribet",
+      "Georgios Varnavides",
+      "Jacob Madsen",
+      "Toma Susi"
+    ],
+    "journal": "Elemental Microscopy"
+  },
+  {
+    "title": "A Gaussian Parameterization for Direct Atomic Structure Identification in Electron Tomography",
+    "url": "https://doi.org/10.1109/iccp64821.2025.11143828",
+    "year": 2025,
+    "tags": [
+      "Tomography",
+      "Crystallography",
+      "Machine Learning"
+    ],
+    "authors": [
+      "Nalini M. Singh",
+      "Tiffany Chien",
+      "Arthur R.C. McCray",
+      "Colin Ophus",
+      "Laura Waller"
+    ],
+    "journal": "2025 IEEE International Conference on Computational Photography (ICCP)"
   },
   {
     "title": "Quantitative structure determination from experimental four-dimensional scanning transmission electron microscopy via the scattering matrix",
