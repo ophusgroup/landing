@@ -749,28 +749,34 @@
   },
   {
     "title": "Kinetically Controlled Seed-Mediated Synthesis of Colloidal Copper Nanotetrahedra with Intricate Internal Structure",
-    "url": "https://doi.org/10.1021/jacs.5c08337",
+    "url": "https://doi.org/10.1021/jacs.5c12614",
     "year": 2025,
     "tags": [
-      "Nanoparticles"
+      "Nanoparticles",
+      "Metals & Alloys"
     ],
     "authors": [
-      "Bo Dai",
-      "Zichuang Li",
-      "Wenqian Li",
-      "Jiang Li",
-      "Xiaojun Lu",
-      "Kailong Qian",
-      "Ruoqian Jiang",
-      "Ying Zou",
-      "Yangfan Lu",
-      "Qing Zhang",
-      "Yanpeng Qi",
-      "Miao Xu",
-      "Feng Ryan Wang",
-      "Hideo Hosono",
-      "Jie-Sheng Chen",
-      "Tian-Nan Ye"
+      "Soojin Jeong",
+      "Mingjian Wu",
+      "Rebecca X. Skalla",
+      "Bianca Paranzino",
+      "Alexander Kichigin",
+      "Baixu Zhu",
+      "Alex N. Butrum-Griffith",
+      "Xun Zhan",
+      "Yaxu Zhong",
+      "Chenyu Yan",
+      "Philipp Pelz",
+      "Colin Ophus",
+      "Stefanie Rechberger",
+      "Yi Wang",
+      "Jun Chen",
+      "Akira Yasuhara",
+      "Yoshitaka Aoyama",
+      "Mayu Kakefuda",
+      "Katherine A. Willets",
+      "Erdmann Spiecker",
+      "Xingchen Ye"
     ],
     "journal": "Journal of the American Chemical Society"
   },
@@ -1375,7 +1381,7 @@
     "authors": [
       "A.L. Clauser",
       "K. Oware Sarfo",
-      "C. Ophus",
+      "Colin Ophus",
       "J. Ciston",
       "R. Giulian",
       "L. Árnadóttir",
@@ -1796,7 +1802,7 @@
       "Jacob T. Sivak",
       "George Kotsonis",
       "Jim Ciston",
-      "Colin L. Ophus",
+      "Colin Ophus",
       "Ismaila Dabo",
       "Jon-Paul Maria",
       "Susan B. Sinnott",
@@ -2117,7 +2123,7 @@
       "F. Cropp",
       "F. Ji",
       "S. Paiagua",
-      "C. Ophus",
+      "Colin Ophus",
       "N. C. Andresen",
       "L. Jin",
       "J. Wu",
@@ -2365,7 +2371,7 @@
       "T C Petersen",
       "H G Brown",
       "P M Pelz",
-      "C Ophus",
+      "Colin Ophus",
       "S D Findlay"
     ],
     "journal": "Microscopy and Microanalysis"
@@ -2450,7 +2456,7 @@
       "A.K. Ackerman",
       "B.H. Savitzky",
       "M. Danaie",
-      "C. Ophus",
+      "Colin Ophus",
       "D. Dye"
     ],
     "journal": "Materials Science and Engineering: A"
@@ -2646,7 +2652,7 @@
       "A.L. Clauser",
       "K. Oware Sarfo",
       "R. Giulian",
-      "C. Ophus",
+      "Colin Ophus",
       "J. Ciston",
       "L. Árnadóttir",
       "M.K. Santala"
@@ -3675,7 +3681,7 @@
   },
   {
     "title": "Local Lattice Deformation of Tellurene Grain Boundaries by Four-Dimensional Electron Microscopy",
-    "url": "https://doi.org/10.1017/S1431927620024770",
+    "url": "https://doi.org/10.1021/acs.jpcc.1c00308",
     "year": 2021,
     "tags": [
       "2D Materials",
@@ -3683,16 +3689,14 @@
       "Strain"
     ],
     "authors": [
-      "Xuhao Hong",
-      "Steven E. Zeltmann",
+      "Alejandra Londoño-Calderon",
+      "Darrick J. Williams",
+      "Matthew Schneider",
       "Benjamin H. Savitzky",
-      "Luis Rangel DaCosta",
-      "Alexander Müller",
-      "Andrew M. Minor",
-      "Karen C. Bustillo",
-      "Colin Ophus"
+      "Colin Ophus",
+      "Michael T. Pettes"
     ],
-    "journal": "Microscopy and Microanalysis"
+    "journal": "The Journal of Physical Chemistry C"
   },
   {
     "title": "Intrinsic helical twist and chirality in ultrathin tellurium nanowires",
@@ -3844,7 +3848,7 @@
       "R. Dhall",
       "J. Turner",
       "J. D. Carlström",
-      "C. Ophus",
+      "Colin Ophus",
       "C. Klewe",
       "P. Shafer",
       "A. T. N’Diaye",
@@ -4498,7 +4502,7 @@
       "V. A. Stoica",
       "S.-L. Hsu",
       "B. Wang",
-      "C. Ophus",
+      "Colin Ophus",
       "J. F. Liu",
       "C. T. Nelson",
       "S. Saremi",
@@ -4645,7 +4649,7 @@
       "H. G. Brown",
       "Z. Chen",
       "M. Weyland",
-      "C. Ophus",
+      "Colin Ophus",
       "J. Ciston",
       "L. J. Allen",
       "S. D. Findlay"
@@ -4876,7 +4880,7 @@
     "authors": [
       "R.P. Sankaran",
       "V.B. Ozdol",
-      "C. Ophus",
+      "Colin Ophus",
       "J. Kacher",
       "C. Gammer",
       "S. Govindjee",
@@ -5017,7 +5021,7 @@
       "J.J. Axelrod",
       "D. R. Tuthill",
       "P. Haslinger",
-      "C. Ophus",
+      "Colin Ophus",
       "R.M. Glaeser",
       "H. Müller"
     ],
@@ -5054,7 +5058,7 @@
       "S Jain",
       "R Admana",
       "B Ozdol",
-      "C Ophus",
+      "Colin Ophus",
       "M Desai",
       "R Acharya"
     ],
@@ -5441,7 +5445,7 @@
     ],
     "authors": [
       "M. L. Bowers",
-      "C. Ophus",
+      "Colin Ophus",
       "A. Gautam",
       "F. Lançon",
       "U. Dahmen"
@@ -5587,7 +5591,7 @@
       "C. Gammer",
       "X. G. Jin",
       "P. Ercius",
-      "C. Ophus",
+      "Colin Ophus",
       "J. Ciston",
       "A. M. Minor"
     ],
@@ -5607,7 +5611,7 @@
       "H. G. Brown",
       "A. J. D’Alfonso",
       "P. Koirala",
-      "C. Ophus",
+      "Colin Ophus",
       "Y. Lin",
       "Y. Suzuki",
       "H. Inada",
@@ -5644,7 +5648,7 @@
     ],
     "authors": [
       "A. Gautam",
-      "C. Ophus",
+      "Colin Ophus",
       "F. Lançon",
       "P. Denes",
       "U. Dahmen"
@@ -5680,7 +5684,7 @@
     ],
     "authors": [
       "R.P. Sankaran",
-      "C. Ophus",
+      "Colin Ophus",
       "B. Ozdol",
       "V.R. Radmilovic",
       "A.M. Minor",
@@ -5754,7 +5758,7 @@
       "A. Rattanachata",
       "A. A. Greer",
       "J. Ciston",
-      "C. Ophus",
+      "Colin Ophus",
       "G. Rijnders",
       "D. H. A. Blank",
       "D. Doennig",
@@ -5792,7 +5796,7 @@
     ],
     "authors": [
       "A. Gautam",
-      "C. Ophus",
+      "Colin Ophus",
       "F. Lançon",
       "V. Radmilovic",
       "U. Dahmen"
@@ -5826,7 +5830,7 @@
     "authors": [
       "D.S. Gianola",
       "Z. Lee",
-      "C. Ophus",
+      "Colin Ophus",
       "E.J. Luber",
       "D. Mitlin",
       "U. Dahmen",
@@ -5846,7 +5850,7 @@
     ],
     "authors": [
       "R. dos Reis",
-      "C. Ophus",
+      "Colin Ophus",
       "J. Jimenez",
       "M. Snure",
       "B. Gérard",
@@ -5863,7 +5867,7 @@
     ],
     "authors": [
       "T. Radetic",
-      "C. Ophus",
+      "Colin Ophus",
       "D.L. Olmsted",
       "M. Asta",
       "U. Dahmen"
@@ -5894,7 +5898,7 @@
     ],
     "authors": [
       "V. Radmilovic",
-      "C. Ophus",
+      "Colin Ophus",
       "E. A. Marquis",
       "M. D. Rossell",
       "A. Tolley",
@@ -5916,7 +5920,7 @@
       "H. Fritzsche",
       "E. Poirier",
       "J. Haagsma",
-      "C. Ophus",
+      "Colin Ophus",
       "E. Luber",
       "C. T. Harrower",
       "D. Mitlin"
@@ -5966,7 +5970,7 @@
       "J. Haagsma",
       "B. Zahiri",
       "E.J. Luber",
-      "C. Ophus",
+      "Colin Ophus",
       "E. Poirier",
       "H. Fritzsche",
       "D. Mitlin"
@@ -5993,7 +5997,7 @@
     "authors": [
       "E J Luber",
       "B C Olsen",
-      "C Ophus",
+      "Colin Ophus",
       "V Radmilovic",
       "D Mitlin"
     ],
@@ -6008,7 +6012,7 @@
       "Nanoparticles"
     ],
     "authors": [
-      "C. Ophus",
+      "Colin Ophus",
       "E.J. Luber",
       "M. Edelen",
       "Z. Lee",
@@ -6079,7 +6083,7 @@
     "authors": [
       "E Luber",
       "R Mohammadi",
-      "C Ophus",
+      "Colin Ophus",
       "Z Lee",
       "N Nelson-Fitzpatrick",
       "K Westra",
@@ -6100,7 +6104,7 @@
       "Nanoparticles"
     ],
     "authors": [
-      "C. Ophus",
+      "Colin Ophus",
       "N. Nelson Fitzpatrick",
       "Z. Lee",
       "E. Luber",
@@ -6125,7 +6129,7 @@
       "H. Fritzsche",
       "M. Saoudi",
       "J. Haagsma",
-      "C. Ophus",
+      "Colin Ophus",
       "E. Luber",
       "C. T. Harrower",
       "D. Mitlin"
@@ -6145,7 +6149,7 @@
       "J. Chen",
       "K. Sand",
       "M.S. Xia",
-      "C. Ophus",
+      "Colin Ophus",
       "R. Mohammadi",
       "M.L. Kuntz",
       "Y. Zhou",
@@ -6160,7 +6164,7 @@
     "tags": [],
     "authors": [
       "N Nelson-Fitzpatrick",
-      "C Ophus",
+      "Colin Ophus",
       "E Luber",
       "L Gervais",
       "Z Lee",
@@ -6179,7 +6183,7 @@
     ],
     "authors": [
       "Z Lee",
-      "C Ophus",
+      "Colin Ophus",
       "L M Fischer",
       "N Nelson-Fitzpatrick",
       "K L Westra",

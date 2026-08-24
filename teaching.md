@@ -5,6 +5,16 @@ description: Courses, tutorials, and educational resources from the Colin Ophus 
 
 ## Stanford Courses
 
+### MATSCI 323: Thin Film and Interface Characterization
+
+An in-depth study of the analytical techniques we use to measure thin films and the interfaces between them: X-ray and optical metrology, ion beam analysis and atom probe tomography, electron spectroscopy, electron microscopy and diffraction, and scanning probe microscopy. The full course website is public and includes interactive demonstrations of each technique:
+
+- [MATSCI 323 course website](https://ophusgroup.github.io/matsci323/)
+
+::::{anywidget} https://cdn.jsdelivr.net/gh/ophusgroup/matsci323@main/widgets/hero-techniques.js
+{ "base": "https://ophusgroup.github.io/matsci323/" }
+::::
+
 :::{cn:articles}
 :venue: ophusgroup
 :collection: courses

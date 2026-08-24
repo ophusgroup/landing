@@ -728,7 +728,7 @@ function render({ model, el }) {
   if (mobile) cropSize = 64; // a smaller FFT keeps the per-frame probe + diffraction FFTs real-time on mobile. MUST stay a power of 2 (the radix-2 FFT needs it); 64/8 = 8 whole lattice periods so the window still tiles seamlessly
   const dispPower = model.get("display_power") || 0.5;  // detector tone map: BF disk pops (was log)
   const dfPower = model.get("df_power") || 1.0;         // dark-field suppression beyond the BF disk: 1.0 = NO extra crushing (just the absolute exposure), so the dark-field scattering stays clearly visible during the scan while still brightening over thick/heavy regions
-  const dfScale = model.get("df_ref_scale") || 2.2;     // dark-field exposure ceiling = (bare BF peak) x this; lower => brighter dark field. Tuned so the thin-lattice scattering reads clearly during the scan and a thick region glows brighter still (without a flat white-out)
+  const dfScale = model.get("df_ref_scale") || 5.0;     // dark-field exposure ceiling = (bare BF peak) x this; lower => brighter dark field. Raised from 2.2: at 2.2 the passive defocus sweep flashed a fully-saturated yellow dark-field ring near df~350 (the demagnified Ronchigram lit the whole ring). At 5.0 the thin lattice reads as the purple CBED disks through the sweep (no yellow blow-out), and a thick region under the hover scan still glows warmer without a flat white-out
   const bfHead = model.get("bf_headroom") || 1.18;      // bright-field headroom: divide the BF-disk exposure range by this so the focused disk peaks just below pure-yellow saturation (raise = a touch dimmer / less saturated BF disk)
 
   // Coherent-CBED diffraction (overlapping interfering disks)
