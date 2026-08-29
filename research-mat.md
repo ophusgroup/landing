@@ -3,7 +3,7 @@ title: Characterizing Materials on the Atomic Scale
 description: Mapping the atomic-scale structure that controls behavior in energy, catalytic, electronic, and quantum materials.
 ---
 
-:::{anywidget} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/section-nav.js
+:::{anywidget} ./widgets/section-nav.js
 {}
 :::
 

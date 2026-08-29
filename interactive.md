@@ -2,7 +2,7 @@
 title: Interactive Simulations
 ---
 
-:::{anywidget} https://cdn.jsdelivr.net/gh/ophusgroup/landing@d7c89f4/widgets/section-nav.js
+:::{anywidget} ./widgets/section-nav.js
 {}
 :::
 

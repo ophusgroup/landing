@@ -5,6 +5,6 @@ description: Research across scanning transmission electron microscopy, computat
 
 We develop new scanning transmission electron microscopy (STEM) experiments, reconstruction and machine learning algorithms, and open-source software. These tools let us image and understand materials atom by atom. Our research spans three areas:
 
-:::{anywidget} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/research-pillars.js
+:::{anywidget} ./widgets/research-pillars.js
 {}
 :::

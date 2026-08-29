@@ -5,7 +5,7 @@ description: Funding sources and awards supporting COLab research.
 
 Thank you to the funding agencies and generous individuals who have funded our research!
 
-:::{anywidget} https://cdn.jsdelivr.net/gh/ophusgroup/landing@d7c89f4/widgets/section-nav.js
+:::{anywidget} ./widgets/section-nav.js
 {}
 :::
 
@@ -20,7 +20,7 @@ Colin is the L&S Family Center Fellow in Energy and Sustainability in the Precou
 ::::{figure}
 :label: fig-silicon-order
 
-:::{anywidget} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/silicon-order.js
+:::{anywidget} ./widgets/silicon-order.js
 {}
 :::
 
@@ -61,7 +61,7 @@ Colin is the L&S Family Center Fellow in Energy and Sustainability in the Precou
 
 <img src="/images/funding/DOE_Color_Seal_Green_Logo_Clear_2860×719.png" alt="DOE" style="width: 100%; display: block; margin-bottom: 1em;" />
 
-::::{anywidget} https://cdn.jsdelivr.net/gh/ophusgroup/landing@f21f232/widgets/esteem-logo.js
+::::{anywidget} ./widgets/esteem-logo.js
 {}
 ::::
 :::::

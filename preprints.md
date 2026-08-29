@@ -2,7 +2,7 @@
 title: Preprints
 ---
 
-:::{anywidget} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/paper-list.js
+:::{anywidget} ./widgets/paper-list.js
 {
   "data_url": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/data/preprints.json",
   "accent_color": "#8C1515",

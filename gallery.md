@@ -2,7 +2,7 @@
 title: Gallery
 ---
 
-:::{anywidget} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/gallery.js
+:::{anywidget} ./widgets/gallery.js
 :class: col-page
 {
   "intro": "",

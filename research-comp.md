@@ -3,7 +3,7 @@ title: Computational Imaging and Open Software
 description: Reconstruction algorithms, physics-guided machine learning, and open-source packages for quantitative microscopy.
 ---
 
-:::{anywidget} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/section-nav.js
+:::{anywidget} ./widgets/section-nav.js
 {}
 :::
 

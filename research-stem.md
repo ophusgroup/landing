@@ -3,7 +3,7 @@ title: Scanning Transmission Electron Microscopy
 description: Nanobeam 4D-STEM and in situ scanning diffraction across ordered, disordered, and dynamic materials.
 ---
 
-:::{anywidget} https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/section-nav.js
+:::{anywidget} ./widgets/section-nav.js
 {}
 :::
 
