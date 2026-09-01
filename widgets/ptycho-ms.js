@@ -109,39 +109,38 @@ function buildSample(cfg) {
   const atoms = []; // {x, y, z, kind (0 metal, 1 carbon), slice}
   const a = 2.4; // wedge lattice constant (A)
 
-  // A REAL decahedron viewed along its five-fold axis: five twinned wedges, each
-  // carrying a triangular lattice whose rows run PARALLEL to that wedge's outer
-  // facet. The row spacing is strained to a/(2 tan 36) so the five wedges close
-  // exactly; atoms ON the twin boundaries are shared (added once). Layers stack
-  // ABAB along the axis (B rows sit in the hollows between A rows). Six layers,
-  // two per slice (s1..s3), with a mirror-symmetric row-count profile so the top
-  // and bottom show clean tapered triangular facets. s0 and s5 stay empty.
-  const layers = [ // slice, fraction within slice, rows per wedge
-    { sl: 1, f: 0.28, R: 2 }, { sl: 1, f: 0.72, R: 3 },
-    { sl: 2, f: 0.28, R: 4 }, { sl: 2, f: 0.72, R: 4 },
-    { sl: 3, f: 0.28, R: 4 }, { sl: 3, f: 0.72, R: 3 },
-    { sl: 4, f: 0.28, R: 2 }, // truncated base leaks into the substrate slice
-  ];
+  // A proper pentagonal-bipyramid decahedron, built as a full 3D atomic model
+  // FIRST and assigned to potential slices AFTERWARDS (slice = floor(z / DZ)).
+  // Five twinned wedges around the vertical five-fold axis; each wedge carries a
+  // triangular lattice with rows parallel to its outer facet, strained to
+  // a/(2 tan 36) so the wedges close exactly, twin-boundary atoms shared once.
+  // Atomic layers stack ABAB along the axis with the row count tapering by one
+  // per layer both ways from the equator: clean triangular 111-like facets and
+  // sharp tips. The particle is positioned so the lower tip pokes into the
+  // substrate carbon.
   const hrow = a / (2 * Math.tan(36 * Math.PI / 180));
-  for (let k = 0; k < layers.length; k++) {
-    const Rk = layers[k].R;
-    const sl = layers[k].sl;
-    const zA = (sl + layers[k].f) * DZ;
-    const isB = k % 2 === 1;
+  const dzA = 2.1;                 // atomic layer spacing along the axis (A)
+  const RMAX = 4;                  // rows per wedge at the equator
+  const zEq = 12.9;                // equator depth: lower tip lands in slice s4
+  for (let n = -(RMAX - 1); n <= RMAX - 1; n++) {
+    const Rk = RMAX - Math.abs(n);
+    const zA = zEq + n * dzA;
+    const sl = Math.max(0, Math.min(NS - 1, Math.floor(zA / DZ))); // sliced AFTER building
+    const isB = ((n + RMAX) % 2) === 1;    // ABAB stacking along the axis
     if (!isB) atoms.push({ x: 0, y: 0, z: zA, kind: 0, slice: sl }); // shared axis atom
     for (let w = 0; w < 5; w++) {
       const t0 = (w * 72 - 90) * Math.PI / 180;
-      const u = [Math.cos(t0), Math.sin(t0)];       // wedge bisector (outward)
+      const u = [Math.cos(t0), Math.sin(t0)];      // wedge bisector (outward)
       const v = [-u[1], u[0]];
       if (!isB) {
         for (let r = 1; r <= Rk; r++) {
-          for (let j = 0; j < r; j++) {             // j = r seam atom belongs to the next wedge
+          for (let j = 0; j < r; j++) {            // j = r seam atom belongs to the next wedge
             const pu = r * hrow, pv = (j - r / 2) * a;
             atoms.push({ x: u[0] * pu + v[0] * pv, y: u[1] * pu + v[1] * pv, z: zA, kind: 0, slice: sl });
           }
         }
       } else {
-        for (let r = 0; r < Rk; r++) {              // B rows in the hollows between A rows
+        for (let r = 0; r < Rk; r++) {             // B rows in the hollows between A rows
           for (let j = 0; j <= r; j++) {
             const pu = (r + 0.5) * hrow, pv = (j - r / 2) * a;
             atoms.push({ x: u[0] * pu + v[0] * pv, y: u[1] * pu + v[1] * pv, z: zA, kind: 0, slice: sl });
@@ -431,7 +430,7 @@ function render({ model, el }) {
   // measured amplitudes + recon state live in a page-global cache so a theme
   // toggle (which re-serializes the shadow DOM and re-mounts the widget) does
   // NOT re-run the simulation or reset the reconstruction.
-  const BASE_KEY = "pms-v12|" + [N, PX, ALPHA, NS, NR, SCAN_N, SCAN_EXT, PHI_M, PHI_C].join(",");
+  const BASE_KEY = "pms-v13|" + [N, PX, ALPHA, NS, NR, SCAN_N, SCAN_EXT, PHI_M, PHI_C].join(",");
   const gcPeek = globalThis.__pmsCache;
   if (gcPeek && gcPeek.baseKey === BASE_KEY && gcPeek.meta) {
     if (gcPeek.meta.df) DF = gcPeek.meta.df;                 // defocus survives re-mounts
@@ -577,8 +576,9 @@ function render({ model, el }) {
     ce: Math.cos(-14 * Math.PI / 180), se: Math.sin(-14 * Math.PI / 180),
     zoom: 52, cx: SW / 2, cy: SH * 0.386, fl: 45,
   };
+  let projXSH = 0; // per-panel world-x offset: both panels share ONE off-axis camera
   function proj(x, y, z) {
-    const rx = (x * view.ca - y * view.sa) * XY;
+    const rx = (x * view.ca - y * view.sa) * XY + projXSH;
     const ry = (x * view.sa + y * view.ca) * XY;
     const depth = ry * view.ce - z * view.se;
     const sc = view.fl > 0 ? view.fl / (view.fl - depth + 200) : 1;
@@ -684,7 +684,7 @@ function render({ model, el }) {
     // Perspective-correct textured quad: an affine setTransform can only draw a
     // parallelogram, so the quad is sliced into horizontal bands, each drawn with
     // its own affine map. Band edges land exactly on the projected trapezoid.
-    const W2 = imgCv.width, H2 = imgCv.height, NB = 16; // integer source bands (128/16 = 8 px)
+    const W2 = imgCv.width, H2 = imgCv.height, NB = 32; // integer source bands (128/32 = 4 px)
     const Lpts = [], Rpts = [];
     for (let b = 0; b <= NB; b++) {
       const yy = y - half + (2 * half * b) / NB;
@@ -695,10 +695,13 @@ function render({ model, el }) {
     ctx.globalAlpha = alpha;
     const srcBand = H2 / NB;
     for (let b = 0; b < NB; b++) {
-      const l0 = Lpts[b], r0 = Rpts[b], l1 = Lpts[b + 1];
-      const aT = (r0.sx - l0.sx) / W2, bT = (r0.sy - l0.sy) / W2;
+      const l0 = Lpts[b], r0 = Rpts[b], l1 = Lpts[b + 1], r1 = Rpts[b + 1];
+      // average the top and bottom row vectors: the residual trapezoid error is
+      // split half-and-half between the edges (sub-pixel), so no right-edge zigzag
+      const aT = ((r0.sx - l0.sx) + (r1.sx - l1.sx)) / 2 / W2, bT = ((r0.sy - l0.sy) + (r1.sy - l1.sy)) / 2 / W2;
       const cT = (l1.sx - l0.sx) / srcBand, dT = (l1.sy - l0.sy) / srcBand;
-      ctx.setTransform(aT, bT, cT, dT, l0.sx, l0.sy);
+      const ox = l0.sx + ((r0.sx - l0.sx) - aT * W2) / 2, oy = l0.sy + ((r0.sy - l0.sy) - bT * W2) / 2;
+      ctx.setTransform(aT, bT, cT, dT, ox, oy);
       const ov = b < NB - 1 ? 0.6 : 0; // slight source overlap into the next band: no hairline seams
       ctx.drawImage(imgCv, 0, b * srcBand, W2, srcBand + ov, 0, 0, W2, srcBand + ov);
     }
@@ -715,7 +718,13 @@ function render({ model, el }) {
   }
 
 
+  const SC0 = view.fl > 0 ? view.fl / (view.fl + 200) : 1; // camera scale at the stack mid-plane
   function paintScene(ctx, side) {
+    // one shared camera for the pair: its axis sits at the SEAM between the two
+    // panels, so the left stack is viewed off-axis to the left and the right
+    // stack off-axis to the right -- a single unified perspective.
+    view.cx = side === "R" ? 0 : SW;
+    projXSH = (SW / 2 - view.cx) / (view.zoom * SC0);
     ctx.clearRect(0, 0, SW, SH);
     ctx.fillStyle = dark ? "#000000" : "#ffffff";
     ctx.fillRect(0, 0, SW, SH);
