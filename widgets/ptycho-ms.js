@@ -107,31 +107,38 @@ function buildSample(cfg) {
   const atoms = []; // {x, y, z, kind (0 metal, 1 carbon), slice}
   const a = 2.4; // wedge lattice constant (A)
 
-  // slice roles: s0..s2 particle (triangular-faceted decahedron, about 2x wider
-  // than tall); the lower cap is EMBEDDED in the substrate; s2..s5 amorphous carbon.
-  // particle: six atomic 111-like layers (two per slice, slices s1..s3), with a
-  // pentagon radius profile that is MIRROR-SYMMETRIC about the equator, so both
-  // the top and bottom surfaces show clean tapered triangular facets.
-  const layerR = [2, 3, 4, 4, 3, 2];
+  // A REAL decahedron viewed along its five-fold axis: five twinned wedges, each
+  // carrying a triangular lattice whose rows run PARALLEL to that wedge's outer
+  // facet. The row spacing is strained to a/(2 tan 36) so the five wedges close
+  // exactly; atoms ON the twin boundaries are shared (added once). Layers stack
+  // ABAB along the axis (B rows sit in the hollows between A rows). Six layers,
+  // two per slice (s1..s3), with a mirror-symmetric row-count profile so the top
+  // and bottom show clean tapered triangular facets. s0 and s5 stay empty.
+  const layerRows = [2, 3, 4, 4, 3, 2];
+  const hrow = a / (2 * Math.tan(36 * Math.PI / 180));
   for (let k = 0; k < 6; k++) {
-    const R = layerR[k];
-    const s = 1 + (k >> 1);                        // s0 stays empty
-    const zA = (s + (k % 2 ? 0.72 : 0.28)) * DZ;   // two layers per slice
-    const useOff = k % 2 === 1;                    // ABAB stacking
+    const Rk = layerRows[k];
+    const sl = 1 + (k >> 1);
+    const zA = (sl + (k % 2 ? 0.72 : 0.28)) * DZ;
+    const isB = k % 2 === 1;
+    if (!isB) atoms.push({ x: 0, y: 0, z: zA, kind: 0, slice: sl }); // shared axis atom
     for (let w = 0; w < 5; w++) {
       const t0 = (w * 72 - 90) * Math.PI / 180;
-      const e1 = [Math.cos(t0 - 36 * Math.PI / 180), Math.sin(t0 - 36 * Math.PI / 180)];
-      const e2 = [Math.cos(t0 + 36 * Math.PI / 180), Math.sin(t0 + 36 * Math.PI / 180)];
-      const bis = [(e1[0] + e2[0]), (e1[1] + e2[1])];
-      const bl = Math.hypot(bis[0], bis[1]) || 1;
-      const off = useOff ? [bis[0] / bl * a * 0.577, bis[1] / bl * a * 0.577] : [0, 0];
-      for (let i = 0; i <= R; i++) {
-        for (let j = 0; j <= R - i; j++) {
-          if (w > 0 && j === 0) continue;          // seam atoms belong to the previous wedge
-          if (i === 0 && j === 0 && w > 0) continue; // apex once
-          const x = a * (i * e1[0] + j * e2[0]) + off[0];
-          const y = a * (i * e1[1] + j * e2[1]) + off[1];
-          atoms.push({ x, y, z: zA, kind: 0, slice: s });
+      const u = [Math.cos(t0), Math.sin(t0)];       // wedge bisector (outward)
+      const v = [-u[1], u[0]];
+      if (!isB) {
+        for (let r = 1; r <= Rk; r++) {
+          for (let j = 0; j < r; j++) {             // j = r seam atom belongs to the next wedge
+            const pu = r * hrow, pv = (j - r / 2) * a;
+            atoms.push({ x: u[0] * pu + v[0] * pv, y: u[1] * pu + v[1] * pv, z: zA, kind: 0, slice: sl });
+          }
+        }
+      } else {
+        for (let r = 0; r < Rk; r++) {              // B rows in the hollows between A rows
+          for (let j = 0; j <= r; j++) {
+            const pu = (r + 0.5) * hrow, pv = (j - r / 2) * a;
+            atoms.push({ x: u[0] * pu + v[0] * pv, y: u[1] * pu + v[1] * pv, z: zA, kind: 0, slice: sl });
+          }
         }
       }
     }
@@ -144,8 +151,8 @@ function buildSample(cfg) {
     const placed = [];
     let guard = 0;
     while (placed.length < count && guard++ < 9000) {
-      const x = (rng() * 2 - 1) * (halfBox - 0.3);
-      const y = (rng() * 2 - 1) * (halfBox - 0.3);
+      const x = (rng() * 2 - 1) * (halfBox - 0.1);
+      const y = (rng() * 2 - 1) * (halfBox - 0.1);
       if (avoidR && Math.hypot(x, y) < avoidR) continue; // keep clear of the particle core
       let ok = true;
       for (const p of placed) if ((p.x - x) ** 2 + (p.y - y) ** 2 < 1.65 * 1.65) { ok = false; break; }
@@ -155,10 +162,8 @@ function buildSample(cfg) {
       atoms.push({ x, y, z, kind: 1, slice });
     }
   }
-  addCarbon(3, 48, 5.2);   // substrate surface, wrapping around the embedded lower cap
-  addCarbon(4, 110, 0);    // substrate fills the field of view
-  addCarbon(5, 110, 0);
-  addCarbon(6, 110, 0);    // s7 stays empty
+  addCarbon(3, 70, 5.0);   // substrate surface, wrapping around the embedded lower cap
+  addCarbon(4, 125, 0);    // substrate fills the field of view; s5 stays empty
 
   // rasterize each slice's projected phase (spiky Gaussians)
   const phase = new Float32Array(NS * N * N);
@@ -195,30 +200,30 @@ function render({ model, el }) {
   const BOX = N * PX;                // 25.6 A
   const DK = 1 / BOX;
   const LAM = opt("lambda", 0.019687);          // 300 kV
-  const ALPHA = opt("alpha", 0.030);            // rad
+  const ALPHA = opt("alpha", 0.033);            // rad (33 mrad: depth resolution ~36 A = ~2.4 recon slices)
   const KAP = ALPHA / LAM;                      // aperture radius, 1/A
   const DZ = opt("slice_thickness", 4.7);       // A
-  const NS = 8;                                 // sample slices (empty, 3 particle, 3 carbon, empty)
-  const NR = Math.max(3, opt("recon_slices", 7)); // reconstruction slices
-  const ZPAD = 16.2;                            // recon pad above/below the sample -> 10 A recon slices
-  let DF = opt("defocus", 130);                 // A underfocus (crossover above the entrance)
+  const NS = 6;                                 // sample slices (empty, 3 particle, 2 carbon, empty)
+  const NR = Math.max(3, opt("recon_slices", 6)); // reconstruction slices
+  const ZPAD = 30.9;                            // recon pad above/below the sample -> 15 A recon slices
+  let DF = opt("defocus", -200);                // A; C1 = -DF. Negative = overfocus (inverted shadow), positive = underfocus (upright)
   const DOSES = [1e2, 1e3, 1e4, 1e5, 1e6, Infinity];
   let doseIdx = 5;
   const SCAN_N = 15;
-  const SCAN_EXT = opt("scan_extent", 18.0);    // A, full width of scan grid
+  const SCAN_EXT = opt("scan_extent", 11.0);    // A, full width of scan grid
   const STEP = SCAN_EXT / (SCAN_N - 1);
   const PHI_M = opt("phi_metal", 0.6);          // peak phase per metal atom (rad)
   const PHI_C = opt("phi_carbon", 0.25);
   const BATCH = opt("batch", 11);
   const LR = opt("learning_rate", 0.01);
-  const KMAX_AL = (2 / 3) / (2 * PX);           // anti-alias band limit, 1/A
+  const KMAX_AL = 0.85 / (2 * PX);              // band limit, 1/A (relaxed so dark field exists beyond the 1.52 1/A disk)
 
   const cfg = { N, PX, NS, DZ, PHI_M, PHI_C, SIG_M: 0.5, SIG_C: 0.6 };
 
   // ---- DOM -------------------------------------------------------------------
   // Each panel is ONE stem4d-style scene canvas: probe cone from the top, the
   // sample in the middle, and the diffraction pattern as a tilted plane below.
-  const CW = 372, CH = 420;             // CSS size; internal canvases are 2x
+  const CW = 372, CH = 485;             // CSS size; internal canvases are 2x
   const SW = CW * 2, SH = CH * 2;
   el.innerHTML = `
   <style>
@@ -242,13 +247,15 @@ function render({ model, el }) {
     .${id}-slider { flex: 1; min-width: 70px; accent-color: var(--accent); }
     .${id}-lab { font-size: 12px; color: var(--dim); white-space: nowrap; min-width: 52px; }
     .${id}-stat { font-size: 13px; color: var(--dim); font-variant-numeric: tabular-nums; margin-left: 4px; }
-    .${id}-load { position: absolute; inset: 0; display: flex; flex-direction: column; gap: 10px; align-items: center;
-      justify-content: center; background: var(--bg); z-index: 5; border-radius: 10px; }
+    .${id}-load { position: absolute; top: 64px; left: 50%; transform: translateX(-50%);
+      display: flex; gap: 12px; align-items: center; background: var(--bg); z-index: 5;
+      border: 1px solid var(--line); border-radius: 8px; padding: 9px 16px;
+      box-shadow: 0 3px 14px rgba(0,0,0,0.18); white-space: nowrap; }
     .${id}-bar { width: 220px; height: 6px; border-radius: 3px; background: var(--line); overflow: hidden; }
     .${id}-bar > div { height: 100%; width: 0%; background: var(--accent); transition: width 0.1s; }
   </style>
   <div class="${id}-wrap">
-    <div class="${id}-load"><div style="font-size:12px">Simulating the 11×11 4D-STEM dataset…</div><div class="${id}-bar"><div></div></div></div>
+    <div class="${id}-load"><div style="font-size:12px">Simulating the 15×15 4D-STEM dataset…</div><div class="${id}-bar"><div></div></div></div>
     <div class="${id}-cols">
       <div class="${id}-panel">
         <div class="${id}-ptitle">Experiment: 4D-STEM acquisition</div>
@@ -257,11 +264,11 @@ function render({ model, el }) {
         <div class="${id}-row">
           <button class="${id}-btn ${id}-tgl">Slices</button>
           <button class="${id}-btn ${id}-scan">▶ Scan</button>
-          <button class="${id}-btn ${id}-dpm">Contrast: BF</button>
+          <button class="${id}-btn ${id}-dpm">Scale: BF disk</button>
         </div>
         <div class="${id}-row">
           <span class="${id}-lab">defocus</span>
-          <input class="${id}-slider ${id}-dfs" type="range" min="60" max="220" step="5" value="130">
+          <input class="${id}-slider ${id}-dfs" type="range" min="-200" max="200" step="10" value="-200">
           <span class="${id}-lab ${id}-dfsl">130 Å</span>
         </div>
         <div class="${id}-row">
@@ -365,7 +372,10 @@ function render({ model, el }) {
         const amp = Math.max(0, Math.min(1, (KAP - k) / dq + 0.5));
         const i = r * N + c;
         if (amp <= 0) { re[i] = 0; im[i] = 0; continue; }
-        const ph = -Math.PI * LAM * df * (kx * kx + ky * ky) - 2 * Math.PI * (kx * x0 + ky * y0);
+        // + BOX/2 shift: the iFFT places r = 0 at pixel (0,0), but the potential is
+        // rasterized centered at N/2 -- without this the probe sits at the CORNER
+        // (a half-box fft-shift misregistration between probe and sample)
+        const ph = -Math.PI * LAM * df * (kx * kx + ky * ky) - 2 * Math.PI * (kx * (x0 + BOX / 2) + ky * (y0 + BOX / 2));
         re[i] = amp * Math.cos(ph); im[i] = amp * Math.sin(ph);
       }
     }
@@ -410,7 +420,7 @@ function render({ model, el }) {
   // measured amplitudes + recon state live in a page-global cache so a theme
   // toggle (which re-serializes the shadow DOM and re-mounts the widget) does
   // NOT re-run the simulation or reset the reconstruction.
-  const BASE_KEY = "pms-v7|" + [N, PX, ALPHA, NS, NR, SCAN_N, SCAN_EXT, PHI_M, PHI_C].join(",");
+  const BASE_KEY = "pms-v11|" + [N, PX, ALPHA, NS, NR, SCAN_N, SCAN_EXT, PHI_M, PHI_C].join(",");
   const gcPeek = globalThis.__pmsCache;
   if (gcPeek && gcPeek.baseKey === BASE_KEY && gcPeek.meta) {
     if (gcPeek.meta.df) DF = gcPeek.meta.df;                 // defocus survives re-mounts
@@ -443,7 +453,7 @@ function render({ model, el }) {
 
   // forward through the current OBJECT estimate (13 slices, padded geometry)
   function forwardModel(x0, y0, store) {
-    buildProbe(wRe, wIm, x0, y0, DF - ZPAD); // recon entrance is ZPAD closer to the crossover above
+    buildProbe(wRe, wIm, x0, y0, DF + ZPAD); // recon entrance sits ZPAD upstream of the sample
     for (let s = 0; s < NR; s++) {
       const o = s * NN;
       if (store) { psiRe.set(wRe.subarray(0, NN), o); psiIm.set(wIm.subarray(0, NN), o); }
@@ -544,14 +554,14 @@ function render({ model, el }) {
   // Oblique parallel projection with mild perspective. The display geometry is
   // deliberately DECOUPLED from the physical spacings: x-y is exaggerated and each
   // panel spreads its slices at its own vertical pitch so the stack reads clearly.
-  const XY = 2.15;                      // lateral display exaggeration
-  const PITCH = 8.0;                    // slice display pitch, IDENTICAL for both panels
-  const ZDP = -41;                      // DP plane, IDENTICAL height for both panels
-  const DPSIZE = 19;                    // DP quad width in scene units (x XY on screen)
+  const XY = 2.0;                       // lateral display exaggeration
+  const PITCH = 10.0;                   // slice display pitch, IDENTICAL for both panels
+  const ZDP = -52;                      // DP plane, IDENTICAL height for both panels
+  const DPSIZE = 26;                    // DP quad width in scene units (x XY on screen)
   const view = {
     ca: 1, sa: 0,
-    ce: Math.cos(-13 * Math.PI / 180), se: Math.sin(-13 * Math.PI / 180),
-    zoom: 27, cx: SW / 2, cy: SH * 0.39, fl: 110,
+    ce: Math.cos(-24 * Math.PI / 180), se: Math.sin(-24 * Math.PI / 180),
+    zoom: 9.6, cx: SW / 2, cy: SH * 0.386, fl: 0,
   };
   function proj(x, y, z) {
     const rx = (x * view.ca - y * view.sa) * XY;
@@ -561,8 +571,7 @@ function render({ model, el }) {
     return { sx: rx * view.zoom * sc + view.cx, sy: (-ry * view.se - z * view.ce) * view.zoom * sc + view.cy, depth };
   }
   function unproj(sx, sy) { // inverse on the stack mid-plane (z = 0)
-    const perspScale = view.fl > 0 ? view.fl / (view.fl + 200) : 1;
-    const effZoom = view.zoom * perspScale;
+    const effZoom = view.zoom;
     const px2 = (sx - view.cx) / effZoom / XY;
     const py2 = -(sy - view.cy) / effZoom / XY;
     const pyse = py2 / view.se;
@@ -615,8 +624,10 @@ function render({ model, el }) {
   }
 
   const KAPPX = KAP / DK;            // BF-disk radius in DP pixels
-  const MIRX = false, MIRY = false;  // display mirroring (validated: underfocus is upright)
-  function paintDP(cv, inten, smooth) {
+  const KALPX = KMAX_AL / DK;        // band-limit radius in DP pixels
+  const MIRX = false, MIRY = false;  // display mirroring (validated: +defocus is upright)
+  let dpNorm = null;                 // measured-pattern range, shared with the model DP
+  function paintDP(cv, inten, normOverride) {
     const ctx = cv.getContext("2d");
     const img = ctx.createImageData(N, N);
     const px = img.data;
@@ -627,20 +638,15 @@ function render({ model, el }) {
     for (let r = 0; r < N; r++) {
       for (let c = 0; c < N; c++) {
         const dist = Math.hypot(r - h, c - h);
-        const inBF = dist < KAPPX - 2, inDF = dist > KAPPX + 2;
+        const inBF = dist < KAPPX - 2, inDF = dist > KAPPX + 2 && dist < KALPX - 1;
         if ((dpMode === "bf" && !inBF) || (dpMode === "df" && !inDF)) continue;
         const sr = ((MIRY ? N - 1 - r : r) + h) % N, sc2 = ((MIRX ? N - 1 - c : c) + h) % N;
         const v = inten[sr * N + sc2];
         if (v < mn) mn = v; if (v > mx) mx = v;
       }
     }
-    // smoothed normalization: while the reconstruction iterates, blend the display
-    // range toward the new one so the pattern contrast stops flickering
-    if (smooth && cv.__nrm) {
-      mn = cv.__nrm.mn + 0.15 * (mn - cv.__nrm.mn);
-      mx = cv.__nrm.mx + 0.15 * (mx - cv.__nrm.mx);
-    }
-    cv.__nrm = { mn, mx };
+    // identical scaling on both panels: the measured pattern defines the range
+    if (normOverride) { mn = normOverride.mn; mx = normOverride.mx; }
     const rng = mx - mn || 1;
     for (let r = 0; r < N; r++) {
       for (let c = 0; c < N; c++) {
@@ -653,6 +659,7 @@ function render({ model, el }) {
       }
     }
     ctx.putImageData(img, 0, 0);
+    return { mn, mx };
   }
 
   // draw an image as a tilted quad centered at (x, y, zScene)
@@ -705,7 +712,7 @@ function render({ model, el }) {
       for (const a of pr) {
         const t = (a.d - minD) / rD;
         const size = (a.kind === 0 ? 16.5 : 8.0) + 7.0 * t;
-        const fade = 0.35 + 0.65 * t;
+        const fade = 0.58 + 0.42 * t;
         ctx.fillStyle = a.kind === 0
           ? `rgba(${232 * fade | 0},${178 * fade | 0},${42 * fade | 0},0.97)`
           : (dark ? `rgba(${156 * fade | 0},${164 * fade | 0},${176 * fade | 0},0.92)` : `rgba(${125 * fade | 0},${132 * fade | 0},${142 * fade | 0},0.95)`);
@@ -717,7 +724,7 @@ function render({ model, el }) {
       const tex = side === "R" ? texR : texL;
       const bc = dark ? "rgba(255,255,255,0.3)" : "rgba(0,0,0,0.24)";
       for (let s2 = g.nSl - 1; s2 >= 0; s2--) { // bottom (far) first
-        drawQuad(ctx, tex[s2], 0, 0, g.sliceZ(s2), BOX / 2 * 0.94, 0.9, bc);
+        drawQuad(ctx, tex[s2], 0, 0, g.sliceZ(s2), BOX / 2, 0.9, bc);
       }
     }
 
@@ -727,7 +734,8 @@ function render({ model, el }) {
     ctx.lineWidth = 2.4;
     for (let s2 = 0; s2 < g.nSl; s2++) {
       const zs = g.sliceZ(s2);
-      const rad = ALPHA * (DF + g.slicePhysZ(s2));
+      const rad = ALPHA * Math.abs(DF + g.slicePhysZ(s2));
+      if (rad < 0.15) continue;
       ctx.beginPath();
       for (let i = 0; i <= 36; i++) {
         const a2 = i / 36 * Math.PI * 2;
@@ -760,9 +768,9 @@ function render({ model, el }) {
       for (let i = 0; i < NN; i++) tot += inten[i];
       const sc = D / Math.max(tot, 1e-12), inv = 1 / sc;
       for (let i = 0; i < NN; i++) dpNoise[i] = poisson(inten[i] * sc) * inv;
-      paintDP(dpLOff, dpNoise);
+      dpNorm = paintDP(dpLOff, dpNoise);
     } else {
-      paintDP(dpLOff, inten);
+      dpNorm = paintDP(dpLOff, inten);
     }
     paintScene(ctxL, "L");
   }
@@ -770,12 +778,11 @@ function render({ model, el }) {
     buildTexR();
     paintScene(ctxR, "R");
   }
-  function paintDPRight(smooth) {
+  function paintDPRight() {
     if (!ready) return;
     forwardModel(probe.x, probe.y, false);
     for (let i = 0; i < NN; i++) intBuf[i] = wRe[i] * wRe[i] + wIm[i] * wIm[i];
-    if (!smooth) dpROff.__nrm = null; // probe moved or state reset: snap the display range
-    paintDP(dpROff, intBuf, smooth);
+    paintDP(dpROff, intBuf, dpNorm);
     paintScene(ctxR, "R");
   }
 
@@ -826,13 +833,14 @@ function render({ model, el }) {
   });
   dpmBtn.addEventListener("click", () => {
     dpMode = dpMode === "bf" ? "df" : "bf";
-    dpmBtn.textContent = "Contrast: " + dpMode.toUpperCase();
+    dpmBtn.textContent = dpMode === "bf" ? "Scale: BF disk" : "Scale: dark field";
     paintDPLeft();
     if (ready) paintDPRight();
   });
 
   const doseLabel = () => isFinite(DOSES[doseIdx]) ? DOSES[doseIdx].toExponential(0).replace("e+", "e") + " e⁻/pattern" : "∞ e⁻/pattern";
   dfSlider.value = DF; dfLab.textContent = DF + " Å";
+  // (labels update below; C1 = -defocus)
   dsSlider.value = doseIdx; dsLab.textContent = doseLabel();
   dfSlider.addEventListener("input", () => {   // live: update the geometry display only
     DF = +dfSlider.value;
@@ -900,7 +908,7 @@ function render({ model, el }) {
         relErr = Math.sqrt(batchNum / Math.max(batchDen, 1e-12));
         batchK = 0; batchNum = 0; batchDen = 0;
         paintRecon(); paintXZ(); updateStat();
-        if (iter % 3 === 0) paintDPRight(true);
+        if (iter % 3 === 0) paintDPRight();
       }
     }
   }
@@ -945,7 +953,11 @@ function render({ model, el }) {
     simFinish();
   }
   if (ready) { loadEl.style.display = "none"; setTimeout(() => paintAll(), 0); }
-  else simTimer = setTimeout(simChunk, 30);
+  else {
+    // paint the scenes immediately so the compact loading pill overlays real content
+    buildTexL(); buildTexR(); paintView(); paintScene(ctxR, "R");
+    simTimer = setTimeout(simChunk, 30);
+  }
 
   // debug hooks for automated testing (harmless in production)
   el.__pmsDebug = () => ({ ready, iter, relErr, simDone, NPOS, probe: { ...probe } });
