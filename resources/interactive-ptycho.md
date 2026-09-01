@@ -10,7 +10,7 @@ description: An interactive multislice electron ptychography demonstration, from
 
 We develop computational imaging methods that reconstruct the atomic structure of materials from scanning transmission electron microscopy (STEM) measurements. This page demonstrates multislice electron ptychography end to end. The left panel acquires a 4D-STEM dataset from a decahedral metal nanoparticle resting on an amorphous carbon substrate. The right panel reconstructs the sample, one thin slice at a time, directly from the recorded diffraction patterns.
 
-Drag the electron probe across either panel, or press Scan to run a serpentine scan over the full field of view. Flip the left panel between the atomic model and the projected potential slices. Press Reconstruct to run the ptychographic solver and watch the object estimate improve. Reset returns the reconstruction to a blank object.
+Drag the electron probe across either panel, or press Scan to run a serpentine scan over the full field of view. Flip the left panel between the atomic model and the projected potential slices, and switch the diffraction display between bright-field and dark-field contrast. The defocus slider changes the illumination geometry and rebuilds the dataset when released. The dose slider adds Poisson counting noise to the measurements. Press Reconstruct to run the ptychographic solver and watch the object estimate improve. Reset returns the reconstruction to a blank object.
 
 :::{anywidget} ../widgets/ptycho-ms.js
 {}
@@ -20,15 +20,15 @@ Drag the electron probe across either panel, or press Scan to run a serpentine s
 
 A focused electron probe illuminates a small region of the sample. Because the probe is intentionally defocused, neighboring scan positions overlap strongly, and every region of the sample is measured many times from slightly different illumination conditions. At each of the 11 by 11 scan positions we record the far-field diffraction pattern, giving a four-dimensional dataset: two scan dimensions and two diffraction dimensions.
 
-The simulation here uses a 300 kV beam with a 30 mrad convergence semiangle and 130 angstroms of defocus. The sample contains 11 potential slices: nine slices of a five-fold twinned decahedral nanoparticle, with two amorphous carbon substrate slices below it. Every diffraction pattern is computed live in your browser with the multislice algorithm, which alternates between transmission through each thin slice and Fresnel propagation between slices.
+The simulation here uses a 300 kV beam with a 30 mrad convergence semiangle and an underfocused probe, so the illumination footprint grows as the beam passes through the sample. The sample is a five-fold twinned decahedral nanoparticle with triangular 111 surface facets, embedded in an amorphous carbon substrate that fills the field of view. Every diffraction pattern in the 15 by 15 scan is computed live in your browser with the multislice algorithm, which alternates between transmission through each thin slice and Fresnel propagation between slices.
 
 ## How the reconstruction works
 
 Ptychography recovers the sample transmission function from the recorded intensities. We parameterize the object as a stack of complex slices and use the same multislice model in the forward direction: the known probe is transmitted through each object slice and propagated between them, and the modeled far-field intensity is compared against the measurement.
 
-The solver minimizes the amplitude error between the modeled and measured diffraction patterns using mini-batch gradient descent. Each iteration selects 11 random probe positions, computes the exact gradient of the loss with respect to every object slice by back-propagating the residual wave through the multislice model, and applies an Adam optimizer update. This is the same pixelated multislice approach used in our quantEM software, with the probe assumed known. The reconstruction starts from a completely blank object.
+The solver minimizes the amplitude error between the modeled and measured diffraction patterns using mini-batch gradient descent. Each iteration selects a small random batch of probe positions, computes the exact gradient of the loss with respect to every object slice by back-propagating the residual wave through the multislice model, and applies an Adam optimizer update. This is the same pixelated multislice approach used in our quantEM software, with the probe assumed known. The reconstruction uses seven slices, each 10 angstroms thick, and starts from a completely blank object.
 
-Because the depth resolution of ptychography is limited to roughly two times the wavelength divided by the square of the convergence angle, about 44 angstroms for these conditions, features smear along the beam direction across neighboring slices. You can see this directly in the reconstructed slice stack: the substrate separates from the particle, but adjacent atomic layers blend together.
+Because the depth resolution of ptychography is limited to roughly two times the wavelength divided by the square of the convergence angle, about 44 angstroms for these conditions, features smear along the beam direction across neighboring slices. You can see this directly in the reconstructed slice stack: the flat nanoparticle and the substrate blur across several 10 angstrom slices, including the empty padding slices above and below the sample.
 
 ## Learn more
 
