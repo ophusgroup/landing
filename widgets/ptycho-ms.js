@@ -110,38 +110,40 @@ function buildSample(cfg) {
   const a = 2.4; // wedge lattice constant (A)
 
   // A proper pentagonal-bipyramid decahedron, built as a full 3D atomic model
-  // FIRST and assigned to potential slices AFTERWARDS (slice = floor(z / DZ)).
-  // Five twinned wedges around the vertical five-fold axis; each wedge carries a
-  // triangular lattice with rows parallel to its outer facet, strained to
-  // a/(2 tan 36) so the wedges close exactly, twin-boundary atoms shared once.
-  // Atomic layers stack ABAB along the axis with the row count tapering by one
-  // per layer both ways from the equator: clean triangular 111-like facets and
-  // sharp tips. The particle is positioned so the lower tip pokes into the
-  // substrate carbon.
+  // FIRST and binned into potential slices AFTERWARDS (slice = floor(z / DZ)).
+  // Construction: an EVEN number of ABAB layers with the equator mirror plane
+  // BETWEEN the two central layers, and each layer's occupancy determined by
+  // cutting the wedge lattice against the tapering facet planes. Mirror layers
+  // therefore land on OPPOSITE sublattices and no two layers are identical
+  // (occupancies 1, 15, 31, 75, 51, 30, 6, 5 from apex atom to base pentagon).
+  // Five strained twinned wedges (row pitch a/(2 tan 36) closes them exactly),
+  // twin-boundary atoms shared once; the lower tip pokes into the substrate.
   const hrow = a / (2 * Math.tan(36 * Math.PI / 180));
-  const dzA = 2.1;                 // atomic layer spacing along the axis (A)
-  const RMAX = 4;                  // rows per wedge at the equator
-  const zEq = 12.9;                // equator depth: lower tip lands in slice s4
-  for (let n = -(RMAX - 1); n <= RMAX - 1; n++) {
-    const Rk = RMAX - Math.abs(n);
-    const zA = zEq + n * dzA;
+  const dzA = 1.75;                 // atomic layer spacing along the axis (A)
+  const NLAY = 8;                   // layers; equator sits between k = 3 and 4
+  const zEq = 12.9;
+  const HALF = (NLAY / 2) * dzA;    // apex height above/below the equator
+  const UMAX = 5.2 * hrow;          // facet radius at the equator (wedge bisector)
+  for (let k = 0; k < NLAY; k++) {
+    const zA = zEq + (k - (NLAY - 1) / 2) * dzA;
     const sl = Math.max(0, Math.min(NS - 1, Math.floor(zA / DZ))); // sliced AFTER building
-    const isB = ((n + RMAX) % 2) === 1;    // ABAB stacking along the axis
-    if (!isB) atoms.push({ x: 0, y: 0, z: zA, kind: 0, slice: sl }); // shared axis atom
+    const isB = k % 2 === 1;                       // strict ABAB along the axis
+    const uCut = UMAX * (1 - Math.abs(zA - zEq) / HALF) + 0.05; // facet plane at this layer
+    if (!isB && uCut > 0) atoms.push({ x: 0, y: 0, z: zA, kind: 0, slice: sl }); // axis atom
     for (let w = 0; w < 5; w++) {
       const t0 = (w * 72 - 90) * Math.PI / 180;
       const u = [Math.cos(t0), Math.sin(t0)];      // wedge bisector (outward)
       const v = [-u[1], u[0]];
       if (!isB) {
-        for (let r = 1; r <= Rk; r++) {
+        for (let r = 1; r * hrow <= uCut; r++) {
           for (let j = 0; j < r; j++) {            // j = r seam atom belongs to the next wedge
             const pu = r * hrow, pv = (j - r / 2) * a;
             atoms.push({ x: u[0] * pu + v[0] * pv, y: u[1] * pu + v[1] * pv, z: zA, kind: 0, slice: sl });
           }
         }
       } else {
-        for (let r = 0; r < Rk; r++) {             // B rows in the hollows between A rows
-          for (let j = 0; j <= r; j++) {
+        for (let r = 0; (r + 0.5) * hrow <= uCut; r++) {
+          for (let j = 0; j <= r; j++) {           // B rows in the hollows between A rows
             const pu = (r + 0.5) * hrow, pv = (j - r / 2) * a;
             atoms.push({ x: u[0] * pu + v[0] * pv, y: u[1] * pu + v[1] * pv, z: zA, kind: 0, slice: sl });
           }
@@ -430,7 +432,7 @@ function render({ model, el }) {
   // measured amplitudes + recon state live in a page-global cache so a theme
   // toggle (which re-serializes the shadow DOM and re-mounts the widget) does
   // NOT re-run the simulation or reset the reconstruction.
-  const BASE_KEY = "pms-v13|" + [N, PX, ALPHA, NS, NR, SCAN_N, SCAN_EXT, PHI_M, PHI_C].join(",");
+  const BASE_KEY = "pms-v14|" + [N, PX, ALPHA, NS, NR, SCAN_N, SCAN_EXT, PHI_M, PHI_C].join(",");
   const gcPeek = globalThis.__pmsCache;
   if (gcPeek && gcPeek.baseKey === BASE_KEY && gcPeek.meta) {
     if (gcPeek.meta.df) DF = gcPeek.meta.df;                 // defocus survives re-mounts
