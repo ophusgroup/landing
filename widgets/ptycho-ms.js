@@ -170,8 +170,10 @@ function buildSample(cfg) {
       atoms.push({ x, y, z, kind: 1, slice });
     }
   }
-  addCarbon(3, 70, 5.0);   // substrate surface, wrapping around the embedded lower cap
-  addCarbon(4, 125, 3.2);  // substrate fills the field of view around the leaked base; s5 stays empty
+  addCarbon(3, 65, 5.0);   // substrate surface, wrapping around the embedded lower cap
+  addCarbon(3, 65, 5.0);   // (second pass: min separation is per pass, so density ~doubles)
+  addCarbon(4, 115, 3.2);  // substrate fills the field of view around the leaked base; s5 stays empty
+  addCarbon(4, 115, 3.2);
 
   // rasterize each slice's projected phase (spiky Gaussians)
   const phase = new Float32Array(NS * N * N);
@@ -215,7 +217,9 @@ function render({ model, el }) {
   const NR_SHOW = Math.max(3, opt("recon_slices", 6)); // displayed reconstruction slices
   const NR_HID = 2;                             // hidden headroom slices ABOVE (absorb top artifacts)
   const NR = NR_SHOW + NR_HID;                  // total solved slices
-  const ZPAD = 30.9;                            // recon pad above/below the sample -> 15 A recon slices
+  const DZR = 15.0;                             // recon slice thickness (A)
+  const ZPADT = 25.5;                           // displayed-volume pad above the sample, phased so
+                                                // one bin (4.5..19.5 A) cleanly contains the particle
   let DF = opt("defocus", -200);                // A; C1 = -DF. Negative = overfocus (inverted shadow), positive = underfocus (upright)
   const DOSES = [1e3, 1e4, 1e5, 1e6, Infinity];
   let doseIdx = 4;
@@ -258,6 +262,15 @@ function render({ model, el }) {
     .${id}-slider { flex: 1; min-width: 70px; accent-color: var(--accent); }
     .${id}-lab { font-size: 12px; color: var(--dim); white-space: nowrap; min-width: 52px; }
     .${id}-stat { font-size: 13px; color: var(--dim); font-variant-numeric: tabular-nums; margin-left: 4px; }
+    @media (pointer: coarse) {
+      .${id}-panel canvas { touch-action: pan-y; } /* vertical swipe scrolls the page; horizontal drag moves the probe */
+    }
+    @media (max-width: 700px) {
+      .${id}-panel { max-width: 100%; }
+      .${id}-btn { padding: 9px 16px; font-size: 14px; }
+      .${id}-slider { min-height: 30px; }
+      .${id}-lab { font-size: 13px; }
+    }
     .${id}-load { position: absolute; top: 64px; left: 50%; transform: translateX(-50%);
       display: flex; gap: 12px; align-items: center; background: var(--bg); z-index: 5;
       border: 1px solid var(--line); border-radius: 8px; padding: 9px 16px;
@@ -358,8 +371,7 @@ function render({ model, el }) {
     mask[r * N + c] = k < KMAX_AL ? 1 : 0;
   }
   // Fresnel propagators: sim slices (DZ) and recon slices (DZR), + adjoint
-  const DZR = (NS * DZ + 2 * ZPAD) / NR_SHOW;   // recon slice thickness (15 A)
-  const ZPAD_TOP = ZPAD + NR_HID * DZR;         // headroom pad above the sample
+  const ZPAD_TOP = ZPADT + NR_HID * DZR;        // solver volume top (headroom slices included)
   function makeProp(dz) {
     const pr = new Float32Array(NN), pi = new Float32Array(NN);
     for (let r = 0; r < N; r++) for (let c = 0; c < N; c++) {
@@ -432,7 +444,7 @@ function render({ model, el }) {
   // measured amplitudes + recon state live in a page-global cache so a theme
   // toggle (which re-serializes the shadow DOM and re-mounts the widget) does
   // NOT re-run the simulation or reset the reconstruction.
-  const BASE_KEY = "pms-v14|" + [N, PX, ALPHA, NS, NR, SCAN_N, SCAN_EXT, PHI_M, PHI_C].join(",");
+  const BASE_KEY = "pms-v16|" + [N, PX, ALPHA, NS, NR, SCAN_N, SCAN_EXT, PHI_M, PHI_C].join(",");
   const gcPeek = globalThis.__pmsCache;
   if (gcPeek && gcPeek.baseKey === BASE_KEY && gcPeek.meta) {
     if (gcPeek.meta.df) DF = gcPeek.meta.df;                 // defocus survives re-mounts
@@ -602,7 +614,7 @@ function render({ model, el }) {
     const nSl = side === "R" ? NR_SHOW : NS;
     const zTopSlice = (nSl - 1) / 2 * PITCH;
     const sliceZ = (i) => zTopSlice - i * PITCH;          // i may be fractional (atoms)
-    const slicePhysZ = (i) => side === "R" ? -ZPAD + (i + 0.5) * DZR : (i + 0.5) * DZ;
+    const slicePhysZ = (i) => side === "R" ? -ZPADT + (i + 0.5) * DZR : (i + 0.5) * DZ;
     return { nSl, zTopSlice, zDP: ZDP, sliceZ, slicePhysZ };
   }
 
@@ -630,14 +642,25 @@ function render({ model, el }) {
     }
   }
   function buildTexR() {
-    // locked to the ground-truth scale, boosted 2x: the recovered phase is smeared
-    // across the thicker recon slices, so its peaks sit well below the truth peaks.
+    // Display scale: locked to the ground-truth scale x0.5 while the recovered
+    // phase is strong (smearing dilutes peaks ~2x), but when the reconstruction
+    // is weak (low dose) the scale follows its own robust peak so the result
+    // stays visible instead of fading to nothing.
     // The NR_HID hidden headroom slices are solved but never displayed.
+    let pk = 0;
+    for (let k = NR_HID; k < NR; k++) {
+      const o = k * NN;
+      for (let i = 0; i < NN; i += 7) {
+        const ph = Math.atan2(OIm[o + i], ORe[o + i]);
+        if (ph > pk) pk = ph;
+      }
+    }
+    const scale = Math.min(PHI_SCALE * 0.5, Math.max(PHI_SCALE * 0.12, pk * 1.05));
     for (let s2 = 0; s2 < NR_SHOW; s2++) {
       const o = (s2 + NR_HID) * NN;
       for (let i = 0; i < NN; i++) phBuf[i] = Math.atan2(OIm[o + i], ORe[o + i]);
       const ctx = texR[s2].getContext("2d");
-      ctx.putImageData(greyImage(ctx, phBuf, 0, PHI_SCALE * 0.5, N, N), 0, 0);
+      ctx.putImageData(greyImage(ctx, phBuf, 0, scale, N, N), 0, 0);
     }
   }
 
@@ -945,11 +968,12 @@ function render({ model, el }) {
   }
   reshuffle();
   let orderPtr = 0;
+  const COARSE = !!(window.matchMedia && window.matchMedia("(pointer: coarse)").matches);
   function reconTick() {
     if (!running) return;
     reconRaf = requestAnimationFrame(reconTick);
-    // two probe positions per frame keeps ~30 fps with visible progress
-    for (let rep = 0; rep < 2 && running; rep++) {
+    // two probe positions per frame on desktop, one on touch devices
+    for (let rep = 0; rep < (COARSE ? 1 : 2) && running; rep++) {
       if (orderPtr >= NPOS) { orderPtr = 0; reshuffle(); }
       const [num, den] = accumGrad(order[orderPtr++]);
       batchNum += num; batchDen += den; batchK++;
@@ -1016,6 +1040,15 @@ function render({ model, el }) {
   el.__pmsDebug = () => ({ ready, iter, relErr, simDone, NPOS, probe: { ...probe } });
   el.__pmsRun = {
     simAll() { while (simDone < NPOS) simOne(); if (!ready) { clearTimeout(simTimer); simFinish(); } },
+    sliceProfile() {
+      const truth = [];
+      for (let s2 = 0; s2 < NS; s2++) { let t = 0; for (let i = 0; i < NN; i++) t += phase[s2 * NN + i]; truth.push(+t.toFixed(0)); }
+      const sum = (k, thr) => { const o = k * NN; let t = 0; for (let i = 0; i < NN; i++) { const ph = Math.atan2(OIm[o + i], ORe[o + i]); if (ph > thr) t += ph - thr; } return +t.toFixed(0); };
+      return { truth, hidden: Array.from({ length: NR_HID }, (_, k) => sum(k, 0.02)),
+               recon: Array.from({ length: NR_SHOW }, (_, i2) => sum(i2 + NR_HID, 0.02)),
+               hiddenPk: Array.from({ length: NR_HID }, (_, k) => sum(k, 0.12)),
+               reconPk: Array.from({ length: NR_SHOW }, (_, i2) => sum(i2 + NR_HID, 0.12)) };
+    },
     dpStats(x, y) {
       paintDP(dpLOff, forwardTrue(x, y));
       const d = dpLOff.getContext("2d").getImageData(0, 0, N, N).data;
