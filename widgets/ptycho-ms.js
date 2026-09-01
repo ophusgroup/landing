@@ -1,26 +1,28 @@
 // ptycho-ms.js — interactive multislice electron ptychography demo (MyST anywidget).
 //
-// Left panel: 4D-STEM acquisition geometry. A decahedral metal nanoparticle
-// (5-fold axis along the beam, 2 laterally-offset 111 layers per slice) sits on
-// an amorphous carbon substrate, 11 potential slices total. The probe can be
-// dragged freely or scanned in a serpentine over the 11x11 acquisition grid,
-// with the live far-field diffraction pattern shown below (power-0.5 scaling,
-// turbo-with-black colormap). A toggle flips the sample view between the 3D
-// atomic model and the greyscale 2D phase slices.
+// Left panel: 4D-STEM acquisition. A decahedral metal nanoparticle (five twinned
+// wedges, 111-like layers, base embedded in an amorphous carbon substrate) in a
+// 6-slice volume (empty top/bottom slices). Drag the probe anywhere (relative
+// drag), serpentine Scan, defocus slider (C1 = -dF, -200..+200 A, re-simulates
+// on release), dose slider (Poisson noise), BF/DF linear contrast, and a toggle
+// between the 3D atomic model and the greyscale potential slices.
 //
 // Right panel: mini-batch gradient-descent multislice ptychography (pixelated
-// forward model as in quantEM's diffractive_imaging module; probe assumed known,
-// object-only, Adam optimizer, batch of 11 random probe positions per step).
-// The reconstruction volume spans the sample plus a small pad above and below,
-// split into recon_slices (default 7, thicker than the true slices) so the
-// elongation of features along the beam direction is visible,
-// especially in the x-z cross-section. The model diffraction pattern from the
-// current object estimate is shown at the shared (linked) probe position.
+// forward model as in quantEM; probe known, object-only, Adam, batch of 11 of
+// the 15x15 positions, capped at 50 iterations). Six 15 A slices are displayed;
+// two extra hidden headroom slices above absorb top-of-volume artifacts. The
+// model diffraction pattern shares the measured pattern's display scaling.
 //
-// The 11x11 dataset is simulated in-browser at load (~2 s, chunked with a
-// progress bar); there are no data files. Physics: 300 kV, 30 mrad, 128^2 grid
-// at 0.2 A/px, 4.7 A slices, defocus 130 A -> ~80% probe overlap at 1.6 A steps.
-// Depth resolution 2*lambda/alpha^2 ~ 44 A vs a ~52 A stack: partial sectioning.
+// Display: both panels share one camera (mild perspective, fl=45) with slice
+// stacks at identical pitch and DP planes at identical height; quads render
+// perspective-correct via banded affine maps. The dataset is simulated live in
+// the browser (~2-4 s) and cached page-globally (globalThis.__pmsCache) so
+// theme/zoom re-mounts never re-simulate or reset the reconstruction.
+//
+// Conventions (empirically calibrated, see project memory): chi = -pi*lam*dF*k^2
+// with propagator exp(-i*pi*lam*dz*k^2); probe shift phase includes +BOX/2 so
+// probe(0,0) is CENTERED on the grid (without it everything sits half a box
+// off); dF<0 = overfocus = inverted shadow, dF>0 = underfocus = upright.
 
 "use strict";
 
@@ -114,12 +116,17 @@ function buildSample(cfg) {
   // ABAB along the axis (B rows sit in the hollows between A rows). Six layers,
   // two per slice (s1..s3), with a mirror-symmetric row-count profile so the top
   // and bottom show clean tapered triangular facets. s0 and s5 stay empty.
-  const layerRows = [2, 3, 4, 4, 3, 2];
+  const layers = [ // slice, fraction within slice, rows per wedge
+    { sl: 1, f: 0.28, R: 2 }, { sl: 1, f: 0.72, R: 3 },
+    { sl: 2, f: 0.28, R: 4 }, { sl: 2, f: 0.72, R: 4 },
+    { sl: 3, f: 0.28, R: 4 }, { sl: 3, f: 0.72, R: 3 },
+    { sl: 4, f: 0.28, R: 2 }, // truncated base leaks into the substrate slice
+  ];
   const hrow = a / (2 * Math.tan(36 * Math.PI / 180));
-  for (let k = 0; k < 6; k++) {
-    const Rk = layerRows[k];
-    const sl = 1 + (k >> 1);
-    const zA = (sl + (k % 2 ? 0.72 : 0.28)) * DZ;
+  for (let k = 0; k < layers.length; k++) {
+    const Rk = layers[k].R;
+    const sl = layers[k].sl;
+    const zA = (sl + layers[k].f) * DZ;
     const isB = k % 2 === 1;
     if (!isB) atoms.push({ x: 0, y: 0, z: zA, kind: 0, slice: sl }); // shared axis atom
     for (let w = 0; w < 5; w++) {
@@ -163,7 +170,7 @@ function buildSample(cfg) {
     }
   }
   addCarbon(3, 70, 5.0);   // substrate surface, wrapping around the embedded lower cap
-  addCarbon(4, 125, 0);    // substrate fills the field of view; s5 stays empty
+  addCarbon(4, 125, 3.2);  // substrate fills the field of view around the leaked base; s5 stays empty
 
   // rasterize each slice's projected phase (spiky Gaussians)
   const phase = new Float32Array(NS * N * N);
@@ -204,11 +211,13 @@ function render({ model, el }) {
   const KAP = ALPHA / LAM;                      // aperture radius, 1/A
   const DZ = opt("slice_thickness", 4.7);       // A
   const NS = 6;                                 // sample slices (empty, 3 particle, 2 carbon, empty)
-  const NR = Math.max(3, opt("recon_slices", 6)); // reconstruction slices
+  const NR_SHOW = Math.max(3, opt("recon_slices", 6)); // displayed reconstruction slices
+  const NR_HID = 2;                             // hidden headroom slices ABOVE (absorb top artifacts)
+  const NR = NR_SHOW + NR_HID;                  // total solved slices
   const ZPAD = 30.9;                            // recon pad above/below the sample -> 15 A recon slices
   let DF = opt("defocus", -200);                // A; C1 = -DF. Negative = overfocus (inverted shadow), positive = underfocus (upright)
-  const DOSES = [1e2, 1e3, 1e4, 1e5, 1e6, Infinity];
-  let doseIdx = 5;
+  const DOSES = [1e3, 1e4, 1e5, 1e6, Infinity];
+  let doseIdx = 4;
   const SCAN_N = 15;
   const SCAN_EXT = opt("scan_extent", 11.0);    // A, full width of scan grid
   const STEP = SCAN_EXT / (SCAN_N - 1);
@@ -216,7 +225,8 @@ function render({ model, el }) {
   const PHI_C = opt("phi_carbon", 0.25);
   const BATCH = opt("batch", 11);
   const LR = opt("learning_rate", 0.01);
-  const KMAX_AL = 0.85 / (2 * PX);              // band limit, 1/A (relaxed so dark field exists beyond the 1.52 1/A disk)
+  const MAX_ITER = opt("max_iterations", 50);
+  const KMAX_AL = 0.95 / (2 * PX);              // band limit, 1/A: pushed near the grid ceiling for maximum visible dark field
 
   const cfg = { N, PX, NS, DZ, PHI_M, PHI_C, SIG_M: 0.5, SIG_C: 0.6 };
 
@@ -273,7 +283,7 @@ function render({ model, el }) {
         </div>
         <div class="${id}-row">
           <span class="${id}-lab">dose</span>
-          <input class="${id}-slider ${id}-dss" type="range" min="0" max="5" step="1" value="5">
+          <input class="${id}-slider ${id}-dss" type="range" min="0" max="4" step="1" value="4">
           <span class="${id}-lab ${id}-dssl">∞ e⁻/pattern</span>
         </div>
       </div>
@@ -347,7 +357,8 @@ function render({ model, el }) {
     mask[r * N + c] = k < KMAX_AL ? 1 : 0;
   }
   // Fresnel propagators: sim slices (DZ) and recon slices (DZR), + adjoint
-  const DZR = (NS * DZ + 2 * ZPAD) / NR;        // recon slice thickness
+  const DZR = (NS * DZ + 2 * ZPAD) / NR_SHOW;   // recon slice thickness (15 A)
+  const ZPAD_TOP = ZPAD + NR_HID * DZR;         // headroom pad above the sample
   function makeProp(dz) {
     const pr = new Float32Array(NN), pi = new Float32Array(NN);
     for (let r = 0; r < N; r++) for (let c = 0; c < N; c++) {
@@ -420,11 +431,11 @@ function render({ model, el }) {
   // measured amplitudes + recon state live in a page-global cache so a theme
   // toggle (which re-serializes the shadow DOM and re-mounts the widget) does
   // NOT re-run the simulation or reset the reconstruction.
-  const BASE_KEY = "pms-v11|" + [N, PX, ALPHA, NS, NR, SCAN_N, SCAN_EXT, PHI_M, PHI_C].join(",");
+  const BASE_KEY = "pms-v12|" + [N, PX, ALPHA, NS, NR, SCAN_N, SCAN_EXT, PHI_M, PHI_C].join(",");
   const gcPeek = globalThis.__pmsCache;
   if (gcPeek && gcPeek.baseKey === BASE_KEY && gcPeek.meta) {
     if (gcPeek.meta.df) DF = gcPeek.meta.df;                 // defocus survives re-mounts
-    if (gcPeek.meta.doseIdx != null) doseIdx = gcPeek.meta.doseIdx;
+    if (gcPeek.meta.doseIdx != null) doseIdx = Math.min(gcPeek.meta.doseIdx, DOSES.length - 1);
   }
   const keyFor = (df) => BASE_KEY + "|df" + df;
   const CACHE_KEY = keyFor(DF);
@@ -453,7 +464,10 @@ function render({ model, el }) {
 
   // forward through the current OBJECT estimate (13 slices, padded geometry)
   function forwardModel(x0, y0, store) {
-    buildProbe(wRe, wIm, x0, y0, DF + ZPAD); // recon entrance sits ZPAD upstream of the sample
+    // chi = -pi*lam*df*k^2 grows by -pi*lam*dz*k^2 per +dz, so the probe ZPAD
+    // UPSTREAM of the sample entrance carries defocus DF - ZPAD (not DF + ZPAD:
+    // that mismatch defocused the model by 2*ZPAD and shifted the recon in z)
+    buildProbe(wRe, wIm, x0, y0, DF - ZPAD_TOP);
     for (let s = 0; s < NR; s++) {
       const o = s * NN;
       if (store) { psiRe.set(wRe.subarray(0, NN), o); psiIm.set(wIm.subarray(0, NN), o); }
@@ -557,11 +571,11 @@ function render({ model, el }) {
   const XY = 2.0;                       // lateral display exaggeration
   const PITCH = 10.0;                   // slice display pitch, IDENTICAL for both panels
   const ZDP = -52;                      // DP plane, IDENTICAL height for both panels
-  const DPSIZE = 26;                    // DP quad width in scene units (x XY on screen)
+  const DPSIZE = 30;                    // DP quad width in scene units (x XY on screen)
   const view = {
     ca: 1, sa: 0,
-    ce: Math.cos(-24 * Math.PI / 180), se: Math.sin(-24 * Math.PI / 180),
-    zoom: 9.6, cx: SW / 2, cy: SH * 0.386, fl: 0,
+    ce: Math.cos(-14 * Math.PI / 180), se: Math.sin(-14 * Math.PI / 180),
+    zoom: 52, cx: SW / 2, cy: SH * 0.386, fl: 45,
   };
   function proj(x, y, z) {
     const rx = (x * view.ca - y * view.sa) * XY;
@@ -571,7 +585,8 @@ function render({ model, el }) {
     return { sx: rx * view.zoom * sc + view.cx, sy: (-ry * view.se - z * view.ce) * view.zoom * sc + view.cy, depth };
   }
   function unproj(sx, sy) { // inverse on the stack mid-plane (z = 0)
-    const effZoom = view.zoom;
+    const perspScale = view.fl > 0 ? view.fl / (view.fl + 200) : 1;
+    const effZoom = view.zoom * perspScale;
     const px2 = (sx - view.cx) / effZoom / XY;
     const py2 = -(sy - view.cy) / effZoom / XY;
     const pyse = py2 / view.se;
@@ -582,7 +597,7 @@ function render({ model, el }) {
   // both sides, and the DP plane at the SAME height on both sides. The physical
   // depth of slice i (A, 0 = sample entrance) drives the beam-circle radii.
   function sideGeom(side) {
-    const nSl = side === "R" ? NR : NS;
+    const nSl = side === "R" ? NR_SHOW : NS;
     const zTopSlice = (nSl - 1) / 2 * PITCH;
     const sliceZ = (i) => zTopSlice - i * PITCH;          // i may be fractional (atoms)
     const slicePhysZ = (i) => side === "R" ? -ZPAD + (i + 0.5) * DZR : (i + 0.5) * DZ;
@@ -604,7 +619,7 @@ function render({ model, el }) {
   function mkTex() { const c = document.createElement("canvas"); c.width = N; c.height = N; return c; }
   const dpLOff = mkTex(), dpROff = mkTex();
   const texL = Array.from({ length: NS }, mkTex);
-  const texR = Array.from({ length: NR }, mkTex);
+  const texR = Array.from({ length: NR_SHOW }, mkTex);
   const phBuf = new Float32Array(NN);
   function buildTexL() {
     for (let s2 = 0; s2 < NS; s2++) {
@@ -614,14 +629,16 @@ function render({ model, el }) {
   }
   function buildTexR() {
     // locked to the ground-truth scale, boosted 2x: the recovered phase is smeared
-    // across the thicker recon slices, so its peaks sit well below the truth peaks
-    for (let s2 = 0; s2 < NR; s2++) {
-      const o = s2 * NN;
+    // across the thicker recon slices, so its peaks sit well below the truth peaks.
+    // The NR_HID hidden headroom slices are solved but never displayed.
+    for (let s2 = 0; s2 < NR_SHOW; s2++) {
+      const o = (s2 + NR_HID) * NN;
       for (let i = 0; i < NN; i++) phBuf[i] = Math.atan2(OIm[o + i], ORe[o + i]);
       const ctx = texR[s2].getContext("2d");
       ctx.putImageData(greyImage(ctx, phBuf, 0, PHI_SCALE * 0.5, N, N), 0, 0);
     }
   }
+
 
   const KAPPX = KAP / DK;            // BF-disk radius in DP pixels
   const KALPX = KMAX_AL / DK;        // band-limit radius in DP pixels
@@ -664,28 +681,39 @@ function render({ model, el }) {
 
   // draw an image as a tilted quad centered at (x, y, zScene)
   function drawQuad(ctx, imgCv, x, y, zScene, half, alpha, borderColor) {
-    const c0 = proj(x - half, y - half, zScene);
-    const c1 = proj(x + half, y - half, zScene);
-    const c3 = proj(x - half, y + half, zScene);
-    const c2 = proj(x + half, y + half, zScene);
-    const ta = (c1.sx - c0.sx) / imgCv.width, tb = (c1.sy - c0.sy) / imgCv.width;
-    const tc = (c3.sx - c0.sx) / imgCv.height, td = (c3.sy - c0.sy) / imgCv.height;
+    // Perspective-correct textured quad: an affine setTransform can only draw a
+    // parallelogram, so the quad is sliced into horizontal bands, each drawn with
+    // its own affine map. Band edges land exactly on the projected trapezoid.
+    const W2 = imgCv.width, H2 = imgCv.height, NB = 16; // integer source bands (128/16 = 8 px)
+    const Lpts = [], Rpts = [];
+    for (let b = 0; b <= NB; b++) {
+      const yy = y - half + (2 * half * b) / NB;
+      Lpts.push(proj(x - half, yy, zScene));
+      Rpts.push(proj(x + half, yy, zScene));
+    }
     ctx.save();
-    ctx.setTransform(ta, tb, tc, td, c0.sx, c0.sy);
     ctx.globalAlpha = alpha;
-    ctx.drawImage(imgCv, 0, 0);
+    const srcBand = H2 / NB;
+    for (let b = 0; b < NB; b++) {
+      const l0 = Lpts[b], r0 = Rpts[b], l1 = Lpts[b + 1];
+      const aT = (r0.sx - l0.sx) / W2, bT = (r0.sy - l0.sy) / W2;
+      const cT = (l1.sx - l0.sx) / srcBand, dT = (l1.sy - l0.sy) / srcBand;
+      ctx.setTransform(aT, bT, cT, dT, l0.sx, l0.sy);
+      const ov = b < NB - 1 ? 0.6 : 0; // slight source overlap into the next band: no hairline seams
+      ctx.drawImage(imgCv, 0, b * srcBand, W2, srcBand + ov, 0, 0, W2, srcBand + ov);
+    }
     ctx.restore();
     ctx.globalAlpha = 1;
+    const c0 = Lpts[0], c1 = Rpts[0], c2 = Rpts[NB], c3 = Lpts[NB];
     if (borderColor) {
       ctx.strokeStyle = borderColor; ctx.lineWidth = 1.6;
       ctx.beginPath();
       ctx.moveTo(c0.sx, c0.sy); ctx.lineTo(c1.sx, c1.sy); ctx.lineTo(c2.sx, c2.sy); ctx.lineTo(c3.sx, c3.sy);
       ctx.closePath(); ctx.stroke();
     }
-    const cxs = c0.sx + (c1.sx - c0.sx) / 2 + (c3.sx - c0.sx) / 2;
-    const cys = c0.sy + (c1.sy - c0.sy) / 2 + (c3.sy - c0.sy) / 2;
-    return [cxs, cys];
+    return [(c0.sx + c1.sx + c2.sx + c3.sx) / 4, (c0.sy + c1.sy + c2.sy + c3.sy) / 4];
   }
+
 
   function paintScene(ctx, side) {
     ctx.clearRect(0, 0, SW, SH);
@@ -696,7 +724,7 @@ function render({ model, el }) {
     const g = sideGeom(side);
 
     // DP plane first (bottom-most)
-    drawQuad(ctx, dpCv2, probe.x, probe.y, g.zDP, DPSIZE / 2, 0.95, dark ? "rgba(120,120,120,0.5)" : "rgba(80,80,80,0.4)");
+    drawQuad(ctx, dpCv2, probe.x, probe.y, g.zDP, DPSIZE / 2, 1.0, dark ? "rgba(120,120,120,0.5)" : "rgba(80,80,80,0.4)");
 
     // sample: atoms or slice stack, painted back-to-front along z
     if (!isSlices) {
@@ -789,7 +817,7 @@ function render({ model, el }) {
   function paintXZ() { /* x-z strip removed: smearing reads directly in the slice stack */ }
 
   function updateStat() {
-    statEl.textContent = `iteration ${iter}` + (isFinite(relErr) ? ` · data error ${(100 * relErr).toFixed(1)}%` : "");
+    statEl.textContent = `iteration ${iter}/${MAX_ITER}` + (isFinite(relErr) ? ` · data error ${(100 * relErr).toFixed(1)}%` : "");
   }
   function paintAll() {
     buildTexL(); buildTexR();
@@ -812,17 +840,29 @@ function render({ model, el }) {
     return [p.x, p.y];
   }
   function addDrag(cv) {
-    let dragging = false;
+    // relative dragging: grab anywhere (slices, DP, empty space) and move the
+    // probe by the pointer DELTA, so vertical freedom never depends on where
+    // the initial click landed
+    let dragging = false, sx0 = 0, sy0 = 0, px0 = 0, py0 = 0, css = 2;
     cv.addEventListener("pointerdown", (e) => {
       dragging = true;
       try { cv.setPointerCapture(e.pointerId); } catch (err) { }
       if (scanning) stopScan();
-      const [x, y] = hit(e, cv); setProbe(x, y);
+      const r = cv.getBoundingClientRect();
+      css = SW / r.width;
+      sx0 = e.clientX; sy0 = e.clientY; px0 = probe.x; py0 = probe.y;
     });
-    cv.addEventListener("pointermove", (e) => { if (dragging) { const [x, y] = hit(e, cv); setProbe(x, y); } });
+    cv.addEventListener("pointermove", (e) => {
+      if (!dragging) return;
+      const effZoom = view.zoom * (view.fl > 0 ? view.fl / (view.fl + 200) : 1);
+      const du = (e.clientX - sx0) * css / effZoom / XY;
+      const dv = -(e.clientY - sy0) * css / effZoom / XY / view.se;
+      setProbe(px0 + du, py0 + dv);
+    });
     cv.addEventListener("pointerup", () => dragging = false);
     cv.addEventListener("pointercancel", () => dragging = false);
   }
+
   addDrag(sceneL);
   addDrag(sceneR);
 
@@ -909,6 +949,7 @@ function render({ model, el }) {
         batchK = 0; batchNum = 0; batchDen = 0;
         paintRecon(); paintXZ(); updateStat();
         if (iter % 3 === 0) paintDPRight();
+        if (iter >= MAX_ITER) { stopRecon(); paintDPRight(); break; }
       }
     }
   }
@@ -916,6 +957,7 @@ function render({ model, el }) {
   runBtn.addEventListener("click", () => {
     if (!ready) return;
     if (running) { stopRecon(); return; }
+    if (iter >= MAX_ITER) resetRecon();
     running = true; runBtn.classList.add(`${id}-on`); runBtn.textContent = "■ Pause";
     reconRaf = requestAnimationFrame(reconTick);
   });
@@ -979,7 +1021,7 @@ function render({ model, el }) {
     reconSteps(n) {
       if (!ready) return null;
       const t0 = performance.now();
-      for (let it = 0; it < n; it++) {
+      for (let it = 0; it < n && iter < MAX_ITER; it++) {
         let num = 0, den = 0;
         for (let b = 0; b < BATCH; b++) {
           if (orderPtr >= NPOS) { orderPtr = 0; reshuffle(); }
