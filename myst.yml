@@ -29,6 +29,7 @@ project:
     - file: resource-mallard.md
     - file: resource-code.md
     - file: interactive.md
+    - file: resources/interactive-ptycho.md
     - file: facilities.md
     - file: funding.md
     - file: gallery.md
@@ -96,6 +97,8 @@ site:
           url: /resource-code
         - title: Interactive
           url: /interactive
+        - title: Ptychography
+          url: /interactive-ptycho
         - title: Facilities
           url: /facilities
         - title: Funding
