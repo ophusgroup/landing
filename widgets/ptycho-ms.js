@@ -291,7 +291,7 @@ function render({ model, el }) {
       .${id}-cols { gap: 5px; flex-wrap: nowrap; }
       .${id}-panel { flex: 1 1 0; min-width: 0; max-width: none; }
       .${id}-wrap { padding: 6px 5px 5px; }
-      .${id}-ptitle { font-size: 10.5px; margin: 1px 0 3px; }
+      .${id}-ptitle { font-size: 10.5px; margin: 1px 0 3px; min-height: 26px; display: flex; align-items: flex-end; justify-content: center; text-align: center; } /* reserve 2 lines so a wrapped title never pushes one canvas below the other */
       .${id}-btn { padding: 3px 7px; font-size: 10.5px; font-weight: 600; }
       .${id}-lab { font-size: 10px; min-width: 34px; }
       .${id}-row { gap: 3px; margin: 4px 0; }
@@ -314,7 +314,7 @@ function render({ model, el }) {
     <div class="${id}-load"><div style="font-size:12px">Simulating the 15×15 4D-STEM dataset…</div><div class="${id}-bar"><div></div></div></div>
     <div class="${id}-cols">
       <div class="${id}-panel">
-        <div class="${id}-ptitle">Experiment: 4D-STEM acquisition</div>
+        <div class="${id}-ptitle">4DSTEM Experiment</div>
         <canvas class="${id}-sceneL" width="${SW}" height="${SH}"></canvas>
         <div class="${id}-dplab">measured diffraction pattern</div>
         <div class="${id}-row">
@@ -339,7 +339,7 @@ function render({ model, el }) {
         </div>
       </div>
       <div class="${id}-panel">
-        <div class="${id}-ptitle">Reconstruction: multislice ptychography</div>
+        <div class="${id}-ptitle">Ptychographic Reconstruction</div>
         <canvas class="${id}-sceneR" width="${SW}" height="${SH}"></canvas>
         <div class="${id}-dplab">model diffraction pattern</div>
         <div class="${id}-row">
