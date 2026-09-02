@@ -8,10 +8,6 @@ description: An interactive multislice electron ptychography demonstration, from
 {}
 :::
 
-We develop computational imaging methods that reconstruct the atomic structure of materials from scanning transmission electron microscopy (STEM) measurements. This page demonstrates multislice electron ptychography end to end. The left panel acquires a 4D-STEM dataset from a decahedral metal nanoparticle resting on an amorphous carbon substrate. The right panel reconstructs the sample, one thin slice at a time, directly from the recorded diffraction patterns.
-
-Drag the electron probe across either panel, or press Scan to run a serpentine scan over the full field of view. Flip the left panel between the atomic model and the projected potential slices, and switch the diffraction display between bright-field and dark-field contrast. The defocus slider changes the illumination geometry and rebuilds the dataset when released. The dose slider adds Poisson counting noise to the measurements. Press Reconstruct to run the ptychographic solver and watch the object estimate improve. Reset returns the reconstruction to a blank object.
-
 :::{anywidget} ../widgets/ptycho-ms.js
 {}
 :::

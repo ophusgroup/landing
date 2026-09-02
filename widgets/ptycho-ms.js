@@ -175,9 +175,29 @@ function buildSample(cfg) {
   addCarbon(4, 115, 3.2);  // substrate fills the field of view around the leaked base; s5 stays empty
   addCarbon(4, 115, 3.2);
 
+  // display-only support film sticking out LEFT and RIGHT of the simulation box.
+  // These atoms appear in the 3D view but are deliberately NOT rasterized into
+  // the potential slices (the physics box stays periodic and unchanged).
+  function addCarbonDeco(slice, count, side) {
+    const placed = [];
+    let guard = 0;
+    while (placed.length < count && guard++ < 9000) {
+      const x = side * (halfBox + 0.4 + rng() * 5.2);
+      const y = (rng() * 2 - 1) * (halfBox - 0.1);
+      let ok = true;
+      for (const q of placed) if ((q.x - x) ** 2 + (q.y - y) ** 2 < 1.65 * 1.65) { ok = false; break; }
+      if (!ok) continue;
+      const z = (slice + 0.2 + rng() * 0.6) * DZ;
+      placed.push({ x, y });
+      atoms.push({ x, y, z, kind: 1, slice, deco: true });
+    }
+  }
+  for (const sl of [3, 4]) for (const sd of [-1, 1]) { addCarbonDeco(sl, 30, sd); addCarbonDeco(sl, 30, sd); }
+
   // rasterize each slice's projected phase (spiky Gaussians)
   const phase = new Float32Array(NS * N * N);
   for (const at of atoms) {
+    if (at.deco) continue; // display-only support film: not in the potential
     const phi = at.kind === 0 ? PHI_M : PHI_C;
     const sig = at.kind === 0 ? SIG_M : SIG_C;
     const sp = sig / PX, rad = Math.ceil(sp * 3.2);
@@ -264,6 +284,11 @@ function render({ model, el }) {
     .${id}-stat { font-size: 13px; color: var(--dim); font-variant-numeric: tabular-nums; margin-left: 4px; }
     @media (pointer: coarse) {
       .${id}-panel canvas { touch-action: pan-y; } /* vertical swipe scrolls the page; horizontal drag moves the probe */
+    }
+    @media (max-width: 940px), (pointer: coarse) {
+      .${id}-cols { flex-direction: column; align-items: center; } /* one panel per screenful */
+      .${id}-panel { width: 100%; max-width: 420px; min-width: 0; }
+      .${id}-wrap { padding: 8px 8px 6px; }
     }
     @media (max-width: 700px) {
       .${id}-panel { max-width: 100%; }
@@ -762,6 +787,30 @@ function render({ model, el }) {
 
     // sample: atoms or slice stack, painted back-to-front along z
     if (!isSlices) {
+      // conic section of the beam through the sample (atoms view only; it ends
+      // at the exit surface and is deliberately NOT connected to the pattern
+      // below). The radius alpha*|dF + z| is linear in z, so a single band
+      // between the entrance and exit rings is the exact frustum silhouette.
+      const green = dark ? "0,255,136" : "0,150,80";
+      const nC = 48;
+      const zScene = (zp) => g.sliceZ(zp / DZ - 0.5);
+      const rOf = (zp) => Math.max(0.15, ALPHA * Math.abs(DF + zp));
+      const ringPts = (zp) => {
+        const pts = [];
+        for (let i = 0; i <= nC; i++) {
+          const a2 = i / nC * 2 * Math.PI;
+          pts.push(proj(probe.x + Math.cos(a2) * rOf(zp), probe.y + Math.sin(a2) * rOf(zp), zScene(zp)));
+        }
+        return pts;
+      };
+      const ringTop = ringPts(0), ringBot = ringPts(NS * DZ);
+      ctx.fillStyle = `rgba(${green},${dark ? 0.16 : 0.14})`;
+      ctx.beginPath();
+      ringTop.forEach((pp, i) => i ? ctx.lineTo(pp.sx, pp.sy) : ctx.moveTo(pp.sx, pp.sy));
+      for (let i = nC; i >= 0; i--) ctx.lineTo(ringBot[i].sx, ringBot[i].sy);
+      ctx.closePath();
+      ctx.fill();
+
       const pr = [];
       for (const a of atoms) {
         const p = proj(a.x, a.y, g.sliceZ(a.z / DZ - 0.5));
@@ -781,6 +830,14 @@ function render({ model, el }) {
         ctx.strokeStyle = dark ? `rgba(0,0,0,${0.2 + 0.4 * t})` : `rgba(0,0,0,${0.25 + 0.35 * t})`;
         ctx.lineWidth = 1;
         ctx.beginPath(); ctx.arc(a.sx, a.sy, size, 0, 6.283); ctx.fill(); ctx.stroke();
+      }
+      // crisp entrance and exit rims of the beam frustum, over the atoms
+      ctx.lineWidth = 2.2;
+      ctx.strokeStyle = `rgba(${green},0.55)`;
+      for (const ring of [ringTop, ringBot]) {
+        ctx.beginPath();
+        ring.forEach((pp, i) => i ? ctx.lineTo(pp.sx, pp.sy) : ctx.moveTo(pp.sx, pp.sy));
+        ctx.stroke();
       }
     } else {
       const tex = side === "R" ? texR : texL;
