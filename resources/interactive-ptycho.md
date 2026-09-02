@@ -12,6 +12,8 @@ description: An interactive multislice electron ptychography demonstration, from
 {}
 :::
 
+<div style="height: 3rem"></div>
+
 ## How the measurement works
 
 A focused electron probe illuminates a small region of the sample. Because the probe is intentionally defocused, neighboring scan positions overlap strongly, and every region of the sample is measured many times from slightly different illumination conditions. At each of the 11 by 11 scan positions we record the far-field diffraction pattern, giving a four-dimensional dataset: two scan dimensions and two diffraction dimensions.
