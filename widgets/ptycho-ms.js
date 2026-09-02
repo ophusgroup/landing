@@ -706,7 +706,24 @@ function render({ model, el }) {
   let KAPPX = KAP / DK;              // BF-disk radius in DP pixels (recomputed on angle change)
   const KALPX = KMAX_AL / DK;        // band-limit radius in DP pixels
   const MIRX = false, MIRY = false;  // display mirroring (validated: +defocus is upright)
-  let dpNorm = null;                 // measured-pattern range, shared with the model DP
+  let dpNorm = null;                 // measured-pattern range (its own display)
+  let dpModelNorm = null;            // clean, dose-independent range for the model DP
+  // min/max over the active BF/DF region only (used to scale the panels)
+  function computeNorm(inten) {
+    const h = N >> 1;
+    let mn = Infinity, mx = -Infinity;
+    for (let r = 0; r < N; r++) {
+      for (let c = 0; c < N; c++) {
+        const dist = Math.hypot(r - h, c - h);
+        const inBF = dist < KAPPX - 2, inDF = dist > KAPPX + 2 && dist < KALPX - 1;
+        if ((dpMode === "bf" && !inBF) || (dpMode === "df" && !inDF)) continue;
+        const v = inten[((r + h) % N) * N + ((c + h) % N)];
+        if (v < mn) mn = v; if (v > mx) mx = v;
+      }
+    }
+    return { mn, mx };
+  }
+
   function paintDP(cv, inten, normOverride) {
     const ctx = cv.getContext("2d");
     const img = ctx.createImageData(N, N);
@@ -894,13 +911,17 @@ function render({ model, el }) {
   const dpNoise = new Float32Array(NN);
   function paintDPLeft() {
     const inten = forwardTrue(probe.x, probe.y);
+    // model DP uses the CLEAN (noiseless) range so it stays legible at any dose:
+    // the noisy measured max is a single-count spike (~1/dose-scale) that would
+    // otherwise crush the smooth model pattern to black at low dose.
+    dpModelNorm = computeNorm(inten);
     const D = DOSES[doseIdx];
     if (isFinite(D)) {
       let tot = 0;
       for (let i = 0; i < NN; i++) tot += inten[i];
       const sc = D / Math.max(tot, 1e-12), inv = 1 / sc;
       for (let i = 0; i < NN; i++) dpNoise[i] = poisson(inten[i] * sc) * inv;
-      dpNorm = paintDP(dpLOff, dpNoise);
+      dpNorm = paintDP(dpLOff, dpNoise);   // measured keeps its own (noisy) auto-range
     } else {
       dpNorm = paintDP(dpLOff, inten);
     }
@@ -914,7 +935,7 @@ function render({ model, el }) {
     if (!ready) return;
     forwardModel(probe.x, probe.y, false);
     for (let i = 0; i < NN; i++) intBuf[i] = wRe[i] * wRe[i] + wIm[i] * wIm[i];
-    paintDP(dpROff, intBuf, dpNorm);
+    paintDP(dpROff, intBuf, dpModelNorm || dpNorm);
     paintScene(ctxR, "R");
   }
 
