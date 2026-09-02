@@ -230,15 +230,16 @@ function render({ model, el }) {
   const BOX = N * PX;                // 25.6 A
   const DK = 1 / BOX;
   const LAM = opt("lambda", 0.019687);          // 300 kV
-  const ALPHA = opt("alpha", 0.033);            // rad (33 mrad: depth resolution ~36 A = ~2.4 recon slices)
-  const KAP = ALPHA / LAM;                      // aperture radius, 1/A
+  let ALPHA = opt("alpha", 0.030);              // rad (convergence semiangle; slider 10-40 mrad)
+  let KAP = ALPHA / LAM;                        // aperture radius, 1/A
   const DZ = opt("slice_thickness", 4.7);       // A
   const NS = 6;                                 // sample slices (empty, 3 particle, 2 carbon, empty)
   const NR_SHOW = Math.max(3, opt("recon_slices", 6)); // displayed reconstruction slices
-  const NR_HID = 2;                             // hidden headroom slices ABOVE (absorb top artifacts)
-  const NR = NR_SHOW + NR_HID;                  // total solved slices
+  const NR_HID_TOP = opt("hidden_top", 4);      // hidden headroom slices ABOVE the displayed volume
+  const NR_HID_BOT = opt("hidden_bot", 2);      // hidden headroom slices BELOW (both absorb artifacts)
+  const NR = NR_SHOW + NR_HID_TOP + NR_HID_BOT; // total solved slices
   const DZR = 15.0;                             // recon slice thickness (A)
-  const ZPADT = 25.5;                           // displayed-volume pad above the sample, phased so
+  const ZPADT = 18.0;                           // displayed-volume pad above the sample, phased so
                                                 // one bin (4.5..19.5 A) cleanly contains the particle
   let DF = opt("defocus", -200);                // A; C1 = -DF. Negative = overfocus (inverted shadow), positive = underfocus (upright)
   const DOSES = [1e3, 1e4, 1e5, 1e6, Infinity];
@@ -268,7 +269,7 @@ function render({ model, el }) {
       position: relative; }
     .${id}-wrap.${id}-dark { --bg:#000000; --fg:#e8e8e8; --dim:#9aa; --line:#2c2c2c; }
     .${id}-cols { display: flex; gap: 14px; flex-wrap: wrap; justify-content: center; }
-    .${id}-panel { flex: 1 1 320px; max-width: ${CW + 10}px; min-width: 280px; }
+    .${id}-panel { flex: 1 1 0; max-width: ${CW + 10}px; min-width: 0; }
     .${id}-ptitle { font-size: 13px; font-weight: 600; margin: 2px 0 6px; letter-spacing: 0.2px; }
     .${id}-panel canvas { display: block; width: 100%; height: auto; border: 1px solid var(--line); border-radius: 6px; touch-action: none; }
     .${id}-row { display: flex; gap: 6px; align-items: center; margin: 6px 0; flex-wrap: wrap; }
@@ -285,10 +286,16 @@ function render({ model, el }) {
     @media (pointer: coarse) {
       .${id}-panel canvas { touch-action: pan-y; } /* vertical swipe scrolls the page; horizontal drag moves the probe */
     }
-    @media (max-width: 940px), (pointer: coarse) {
-      .${id}-cols { flex-direction: column; align-items: center; } /* one panel per screenful */
-      .${id}-panel { width: 100%; max-width: 420px; min-width: 0; }
-      .${id}-wrap { padding: 8px 8px 6px; }
+    @media (max-width: 760px) {
+      /* keep BOTH panels side by side on phones; shrink everything to fit */
+      .${id}-cols { gap: 5px; flex-wrap: nowrap; }
+      .${id}-panel { flex: 1 1 0; min-width: 0; max-width: none; }
+      .${id}-wrap { padding: 6px 5px 5px; }
+      .${id}-ptitle { font-size: 10.5px; margin: 1px 0 3px; }
+      .${id}-btn { padding: 3px 7px; font-size: 10.5px; font-weight: 600; }
+      .${id}-lab { font-size: 10px; min-width: 34px; }
+      .${id}-row { gap: 3px; margin: 4px 0; }
+      .${id}-stat { font-size: 10px; }
     }
     @media (max-width: 700px) {
       .${id}-panel { max-width: 100%; }
@@ -321,6 +328,11 @@ function render({ model, el }) {
           <span class="${id}-lab ${id}-dfsl">130 Å</span>
         </div>
         <div class="${id}-row">
+          <span class="${id}-lab">angle</span>
+          <input class="${id}-slider ${id}-ang" type="range" min="10" max="40" step="1" value="30">
+          <span class="${id}-lab ${id}-angl">30 mrad</span>
+        </div>
+        <div class="${id}-row">
           <span class="${id}-lab">dose</span>
           <input class="${id}-slider ${id}-dss" type="range" min="0" max="4" step="1" value="4">
           <span class="${id}-lab ${id}-dssl">∞ e⁻/pattern</span>
@@ -346,6 +358,7 @@ function render({ model, el }) {
   const runBtn = el.querySelector(`.${id}-run`), rstBtn = el.querySelector(`.${id}-rst`);
   const dpmBtn = el.querySelector(`.${id}-dpm`);
   const dfSlider = el.querySelector(`.${id}-dfs`), dfLab = el.querySelector(`.${id}-dfsl`);
+  const angSlider = el.querySelector(`.${id}-ang`), angLab = el.querySelector(`.${id}-angl`);
   const dsSlider = el.querySelector(`.${id}-dss`), dsLab = el.querySelector(`.${id}-dssl`);
   const statEl = el.querySelector(`.${id}-stat1`);
 
@@ -396,7 +409,7 @@ function render({ model, el }) {
     mask[r * N + c] = k < KMAX_AL ? 1 : 0;
   }
   // Fresnel propagators: sim slices (DZ) and recon slices (DZR), + adjoint
-  const ZPAD_TOP = ZPADT + NR_HID * DZR;        // solver volume top (headroom slices included)
+  const ZPAD_TOP = ZPADT + NR_HID_TOP * DZR;    // solver volume top (headroom slices included)
   function makeProp(dz) {
     const pr = new Float32Array(NN), pi = new Float32Array(NN);
     for (let r = 0; r < N; r++) for (let c = 0; c < N; c++) {
@@ -469,14 +482,15 @@ function render({ model, el }) {
   // measured amplitudes + recon state live in a page-global cache so a theme
   // toggle (which re-serializes the shadow DOM and re-mounts the widget) does
   // NOT re-run the simulation or reset the reconstruction.
-  const BASE_KEY = "pms-v16|" + [N, PX, ALPHA, NS, NR, SCAN_N, SCAN_EXT, PHI_M, PHI_C].join(",");
+  const BASE_KEY = "pms-v17|" + [N, PX, NS, NR, SCAN_N, SCAN_EXT, PHI_M, PHI_C].join(",");
   const gcPeek = globalThis.__pmsCache;
   if (gcPeek && gcPeek.baseKey === BASE_KEY && gcPeek.meta) {
     if (gcPeek.meta.df) DF = gcPeek.meta.df;                 // defocus survives re-mounts
+    if (gcPeek.meta.alpha) { ALPHA = gcPeek.meta.alpha; KAP = ALPHA / LAM; }
     if (gcPeek.meta.doseIdx != null) doseIdx = Math.min(gcPeek.meta.doseIdx, DOSES.length - 1);
   }
-  const keyFor = (df) => BASE_KEY + "|df" + df;
-  const CACHE_KEY = keyFor(DF);
+  const keyFor = (df, al) => BASE_KEY + "|a" + Math.round(al * 1e4) + "|df" + df;
+  const CACHE_KEY = keyFor(DF, ALPHA);
   const gcOld = gcPeek && gcPeek.key === CACHE_KEY ? gcPeek : null;
   const ampsClean = gcOld ? gcOld.ampsClean : new Float32Array(NPOS * NN);
   const ampsUse = gcOld ? gcOld.ampsUse : new Float32Array(NPOS * NN);
@@ -489,7 +503,7 @@ function render({ model, el }) {
   const vRe = gcOld ? gcOld.vRe : new Float32Array(NR * NN), vIm = gcOld ? gcOld.vIm : new Float32Array(NR * NN);
   const psiRe = new Float32Array(NR * NN), psiIm = new Float32Array(NR * NN); // stored per-slice inputs
   if (!gcOld) globalThis.__pmsCache = { key: CACHE_KEY, baseKey: BASE_KEY, ampsClean, ampsUse, ORe, OIm, mRe, mIm, vRe, vIm,
-    meta: { iter: 0, adamT: 0, init: false, df: DF, doseIdx } };
+    meta: { iter: 0, adamT: 0, init: false, df: DF, alpha: ALPHA, doseIdx } };
   const cacheMeta = globalThis.__pmsCache.meta;
   let iter = cacheMeta.iter, adamT = cacheMeta.adamT, relErr = NaN;
   function resetRecon() {
@@ -671,18 +685,18 @@ function render({ model, el }) {
     // phase is strong (smearing dilutes peaks ~2x), but when the reconstruction
     // is weak (low dose) the scale follows its own robust peak so the result
     // stays visible instead of fading to nothing.
-    // The NR_HID hidden headroom slices are solved but never displayed.
+    // the top/bottom hidden headroom slices are solved but never displayed.
     let pk = 0;
-    for (let k = NR_HID; k < NR; k++) {
+    for (let k = NR_HID_TOP; k < NR_HID_TOP + NR_SHOW; k++) {
       const o = k * NN;
       for (let i = 0; i < NN; i += 7) {
         const ph = Math.atan2(OIm[o + i], ORe[o + i]);
         if (ph > pk) pk = ph;
       }
     }
-    const scale = Math.min(PHI_SCALE * 0.5, Math.max(PHI_SCALE * 0.12, pk * 1.05));
+    const scale = Math.min(PHI_SCALE * 0.45, Math.max(PHI_SCALE * 0.11, pk * 1.05));
     for (let s2 = 0; s2 < NR_SHOW; s2++) {
-      const o = (s2 + NR_HID) * NN;
+      const o = (s2 + NR_HID_TOP) * NN;
       for (let i = 0; i < NN; i++) phBuf[i] = Math.atan2(OIm[o + i], ORe[o + i]);
       const ctx = texR[s2].getContext("2d");
       ctx.putImageData(greyImage(ctx, phBuf, 0, scale, N, N), 0, 0);
@@ -690,7 +704,7 @@ function render({ model, el }) {
   }
 
 
-  const KAPPX = KAP / DK;            // BF-disk radius in DP pixels
+  let KAPPX = KAP / DK;              // BF-disk radius in DP pixels (recomputed on angle change)
   const KALPX = KMAX_AL / DK;        // band-limit radius in DP pixels
   const MIRX = false, MIRY = false;  // display mirroring (validated: +defocus is upright)
   let dpNorm = null;                 // measured-pattern range, shared with the model DP
@@ -982,6 +996,16 @@ function render({ model, el }) {
     DF = +dfSlider.value;
     restartSim();
   });
+  angSlider.value = Math.round(ALPHA * 1000); angLab.textContent = angSlider.value + " mrad";
+  angSlider.addEventListener("input", () => {  // live: update circles/DP geometry
+    ALPHA = +angSlider.value / 1000; KAP = ALPHA / LAM; KAPPX = KAP / DK;
+    angLab.textContent = angSlider.value + " mrad";
+    paintScene(ctxL, "L"); paintScene(ctxR, "R");
+  });
+  angSlider.addEventListener("change", () => { // on release: rebuild the dataset
+    ALPHA = +angSlider.value / 1000; KAP = ALPHA / LAM; KAPPX = KAP / DK;
+    restartSim();
+  });
   dsSlider.addEventListener("input", () => { doseIdx = +dsSlider.value; dsLab.textContent = doseLabel(); });
   dsSlider.addEventListener("change", () => {
     doseIdx = +dsSlider.value;
@@ -1071,11 +1095,11 @@ function render({ model, el }) {
     if (!cacheMeta.init) resetRecon();
     paintAll();
   }
-  function restartSim() { // defocus changed: rebuild the dataset (on slider release)
+  function restartSim() { // defocus/angle changed: rebuild the dataset (on slider release)
     stopRecon(); if (scanning) stopScan();
     ready = false; simDone = 0;
-    cacheMeta.init = false; cacheMeta.iter = 0; cacheMeta.adamT = 0; cacheMeta.df = DF;
-    globalThis.__pmsCache.key = keyFor(DF);
+    cacheMeta.init = false; cacheMeta.iter = 0; cacheMeta.adamT = 0; cacheMeta.df = DF; cacheMeta.alpha = ALPHA;
+    globalThis.__pmsCache.key = keyFor(DF, ALPHA);
     loadEl.style.display = ""; loadBar.style.width = "0%";
     clearTimeout(simTimer); simTimer = setTimeout(simChunk, 20);
   }
@@ -1101,10 +1125,10 @@ function render({ model, el }) {
       const truth = [];
       for (let s2 = 0; s2 < NS; s2++) { let t = 0; for (let i = 0; i < NN; i++) t += phase[s2 * NN + i]; truth.push(+t.toFixed(0)); }
       const sum = (k, thr) => { const o = k * NN; let t = 0; for (let i = 0; i < NN; i++) { const ph = Math.atan2(OIm[o + i], ORe[o + i]); if (ph > thr) t += ph - thr; } return +t.toFixed(0); };
-      return { truth, hidden: Array.from({ length: NR_HID }, (_, k) => sum(k, 0.02)),
-               recon: Array.from({ length: NR_SHOW }, (_, i2) => sum(i2 + NR_HID, 0.02)),
-               hiddenPk: Array.from({ length: NR_HID }, (_, k) => sum(k, 0.12)),
-               reconPk: Array.from({ length: NR_SHOW }, (_, i2) => sum(i2 + NR_HID, 0.12)) };
+      return { truth, recon: Array.from({ length: NR_SHOW }, (_, i2) => sum(i2 + NR_HID_TOP, 0.02)),
+               reconPk: Array.from({ length: NR_SHOW }, (_, i2) => sum(i2 + NR_HID_TOP, 0.12)),
+               hidTopPk: Array.from({ length: NR_HID_TOP }, (_, k) => sum(k, 0.12)),
+               hidBotPk: Array.from({ length: NR_HID_BOT }, (_, k) => sum(NR_HID_TOP + NR_SHOW + k, 0.12)) };
     },
     dpStats(x, y) {
       paintDP(dpLOff, forwardTrue(x, y));
