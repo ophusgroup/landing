@@ -31,3 +31,5 @@ Because the depth resolution of ptychography is limited to roughly two times the
 ## Learn more
 
 Conventional pixel-based reconstructions like this one are sensitive to noise and require careful regularization, especially in three dimensions. We recently introduced deep generative priors for electron ptychography, which parameterize the object and probe with neural networks inside the same automatic-differentiation multislice model. This approach improves noise robustness, convergence speed, and depth regularization. You can read the paper at [doi.org/10.48550/arXiv.2511.07795](https://doi.org/10.48550/arXiv.2511.07795).
+
+To work through the algorithms behind this demo yourself, see our diffractive imaging tutorials for quantEM at [github.com/electronmicroscopy/quantem-tutorials](https://github.com/electronmicroscopy/quantem-tutorials/tree/main/tutorials/diffractive_imaging).
