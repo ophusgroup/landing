@@ -653,8 +653,7 @@ function render({ model, el }) {
     const nSl = side === "R" ? NR_SHOW : NS;
     const zTopSlice = (nSl - 1) / 2 * PITCH;
     const sliceZ = (i) => zTopSlice - i * PITCH;          // i may be fractional (atoms)
-    const slicePhysZ = (i) => side === "R" ? -ZPADT + (i + 0.5) * DZR : (i + 0.5) * DZ;
-    return { nSl, zTopSlice, zDP: ZDP, sliceZ, slicePhysZ };
+    return { nSl, zTopSlice, zDP: ZDP, sliceZ };
   }
 
   function greyImage(ctx, data, off, scale, w, h) {
@@ -867,7 +866,7 @@ function render({ model, el }) {
     ctx.lineWidth = 2.4;
     for (let s2 = 0; s2 < g.nSl; s2++) {
       const zs = g.sliceZ(s2);
-      const rad = ALPHA * Math.abs(DF + g.slicePhysZ(s2));
+      const rad = ALPHA * Math.abs(DF + (s2 + 0.5) * DZ); // shared depth: identical cone on both panels
       if (rad < 0.15) continue;
       ctx.beginPath();
       for (let i = 0; i <= 36; i++) {
