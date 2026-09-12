@@ -162,6 +162,10 @@ function render({ model, el }) {
       margin-top: 0.15em;
       line-height: 1.4;
     }
+    .${id}-own {
+      font-weight: 700;
+      color: #374151;
+    }
     .${id}-paper-journal {
       font-style: italic;
     }
@@ -200,6 +204,7 @@ function render({ model, el }) {
     .${id}-dark .${id}-year-heading { color: #e5e7eb; border-bottom-color: ${accentColorDark}; }
     .${id}-dark .${id}-paper a { color: ${accentColorDark}; }
     .${id}-dark .${id}-paper-meta { color: #9ca3af; }
+    .${id}-dark .${id}-own { color: #e5e7eb; }
     .${id}-dark .${id}-clear { color: ${accentColorDark}; }
     .${id}-dark .${id}-stats { color: #9ca3af; }
     .${id}-dark .${id}-paper-tag { background: #1f2937; color: #6b7280; }
@@ -506,10 +511,25 @@ function render({ model, el }) {
       return s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
     }
 
-    function formatAuthors(authors) {
+    // Author line as HTML. The group's own name is ALWAYS kept (long lists used
+    // to truncate to first-five-plus-last, which dropped it on most papers) and
+    // is bolded. Names are escaped individually so the markup survives.
+    const OWN_NAME = /ophus/i;
+    function authorsHtml(authors) {
       if (!authors || authors.length === 0) return "";
-      if (authors.length <= 6) return authors.join(", ");
-      return authors.slice(0, 5).join(", ") + ", ... " + authors[authors.length - 1];
+      const mine = authors.findIndex((a) => OWN_NAME.test(a));
+      const name = (i) => {
+        const n = escHtml(authors[i]);
+        return i === mine ? `<span class="${id}-own">${n}</span>` : n;
+      };
+      if (authors.length <= 6) return authors.map((_, i) => name(i)).join(", ");
+      const keep = new Set([0, 1, 2, 3, 4, authors.length - 1]);
+      if (mine >= 0) keep.add(mine);
+      const idx = [...keep].sort((a, b) => a - b);
+      // ", " between adjacent authors, ", ... " across an elided gap
+      return idx
+        .map((i, k) => (k === 0 ? "" : i === idx[k - 1] + 1 ? ", " : ", ... ") + name(i))
+        .join("");
     }
 
     function renderResults() {
@@ -554,10 +574,10 @@ function render({ model, el }) {
             .map((t) => `<span class="${id}-paper-tag">${escHtml(t)}</span>`)
             .join("");
 
-          const authorsStr = formatAuthors(p.authors || []);
+          const authorsMarkup = authorsHtml(p.authors || []);
           const journal = p.journal || "";
           let metaParts = [];
-          if (authorsStr) metaParts.push(escHtml(authorsStr));
+          if (authorsMarkup) metaParts.push(authorsMarkup);
           if (journal) metaParts.push(`<span class="${id}-paper-journal">${escHtml(journal)}</span>`);
 
           html += `<div class="${id}-paper" data-pidx="${p._idx}">`;
