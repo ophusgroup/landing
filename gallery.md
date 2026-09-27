@@ -9,6 +9,14 @@ title: Gallery
   "image_base": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/gallery",
   "albums": [
     {
+      "folder": "2026_group_photo",
+      "title": "Group Photo (2026)",
+      "caption": "",
+      "images": [
+        "2026_group_photo.jpg"
+      ]
+    },
+    {
       "folder": "2026_painting",
       "title": "Painting (2026)",
       "caption": "",
@@ -29,6 +37,7 @@ title: Gallery
       "title": "Lab Life (2026)",
       "caption": "",
       "images": [
+        "2026_NCEM.jpg",
         "8ea6c21f-9fb6-4171-8813-409ecc582f42.jpg",
         "IMG_0685.jpg",
         "IMG_0807.jpg",
@@ -57,14 +66,27 @@ title: Gallery
       "title": "Conferences (2026)",
       "caption": "",
       "images": [
+        "2026_conf_00.jpg",
+        "2026_conf_01.jpg",
+        "2026_conf_02.jpg",
+        "2026_conf_03.jpg",
+        "2026_conf_04.jpg",
+        "2026_conf_05.jpg",
+        "2026_conf_06.jpg",
+        "2026_conf_07.jpg",
+        "2026_conf_08.jpg",
         "PXL_20260427_060220069.jpg"
       ]
     },
     {
       "folder": "2026_baseball",
+      "cover": "IMG_0984.jpg",
       "title": "Baseball (2026)",
       "caption": "",
       "images": [
+        "2026_baseball_03.jpg",
+        "2026_baseball_04.jpg",
+        "2026_baseball_pokemon.jpg",
         "IMG_0920.jpg",
         "IMG_0984.jpg",
         "IMG_0993.jpg",
