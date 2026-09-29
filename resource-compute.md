@@ -27,7 +27,14 @@ There is no job scheduler. Everyone shares the machines directly, so please read
 - Your username is your **SUNet ID**. Accounts are managed centrally, so one username and password works on both servers.
 - To get an account (or access to buffle), ask someone in the group to put you in touch with the current admin. You will receive a temporary password; log in once and run `passwd` to change it.
 - SSH keys work as normal: put your public key in `~/.ssh/authorized_keys` on each server (home directories are separate per server).
-- Forgot your password? Ask the admin for a reset.
+
+
+## Basics
+
+- **Bash**: [Microsoft's Introduction to Bash](https://learn.microsoft.com/en-us/training/modules/bash-introduction/) covers the essentials; [explainshell](https://explainshell.com/) decodes commands you copy from StackOverflow.
+- **Git & GitHub**: It is worth learning the [basics](https://xkcd.com/1597/) of `git` and `GitHub` as these are the tools we use for managing our projects. There are some [excellent interactive resources available](https://learngitbranching.js.org/) (note the tutorials that include a remote) as well as [slides](https://docs.google.com/presentation/d/1WZb3w1SYOxGW1coMqJXrM8yEyLSS9RCl/edit?usp=sharing&ouid=116704770862661131657&rtpof=true&sd=true).
+- **Windows users**: the [Windows Subsystem for Linux](https://learn.microsoft.com/en-us/windows/wsl/install) gives you a proper terminal.
+
 
 ## Where to put your data
 
@@ -43,8 +50,7 @@ Both servers see the same shared storage, so a file saved to `$DATA` on mallard 
 Tips:
 
 - `cd $DATA` works from any shell; the variables are set for you at login.
-- Make a folder for yourself or your project inside `$SHARED` (e.g. `$SHARED/projects/<name>`) rather than dropping files at the top level. Files there are automatically made group-writable, so collaborators can edit them.
-- Please don't leave large datasets in `$HOME`. If `df -h ~` shows the disk filling up, it slows everyone down.
+- Please don't leave large datasets in `$HOME`. Your home directories should be kept smaller than 250 GB. You can get an idea of your storage usage with `du -sh ~/*`
 
 ## Moving data in and out
 
@@ -69,7 +75,7 @@ Tips:
 
 ## Sharing the servers
 
-There is no scheduler, so it is up to all of us not to run over each other's jobs.
+There is no scheduler; it is therefore the users' responsibility to not run over each others' jobs.
 
 ### Pick a free GPU
 
@@ -94,11 +100,11 @@ There is no scheduler, so it is up to all of us not to run over each other's job
 
    With quantEM, `config.set_device(2)` sets the device for torch and cupy together.
 
-3. When you are done, make sure your job (or a hung Jupyter kernel) has actually released the GPU. `nvidia-smi` should no longer list your process.
+3. When you are done, make sure your job (or a hung Jupyter kernel) has actually released the GPU. `nvtop` should no longer list your process.
 
 ### Don't grab every CPU core
 
-Many packages (`torch`, `abtem`, `ase`, `construction_zone`, ...) default to using every thread on the machine, which starves other users. Unless you deliberately need multi-threading, put this at the top of scripts and notebooks:
+Many packages (`torch`, `abtem`, `ase`, `construction_zone`, ...) default to using every thread on the machine, which problematic for other users. Unless you deliberately need multi-threading, put this at the top of scripts and notebooks:
 
 ```python
 import os
@@ -114,7 +120,7 @@ torch.set_num_threads(1)              # torch ignores OMP_NUM_THREADS for .cpu()
 
 ### Long-running jobs
 
-Disconnecting from SSH normally kills your jobs. Run long scripts inside [tmux](https://github.com/tmux/tmux/wiki/Getting-Started) so they survive:
+Disconnecting from SSH normally kills your jobs. Run long scripts inside [tmux](https://github.com/tmux/tmux/wiki/Getting-Started) so they survive. There are many useful cheat sheets for `tmux` commands, but the most common are: 
 
 - New named session: `tmux new -s <name>`
 - Detach: `ctrl + b` then `d`
@@ -122,12 +128,6 @@ Disconnecting from SSH normally kills your jobs. Run long scripts inside [tmux](
 - List sessions: `tmux ls`
 
 This doesn't help with notebooks in VS Code, where the kernel dies with the connection. Running a standalone Jupyter server and connecting to it is one workaround; do let us know if you find a better one.
-
-## Basics worth learning
-
-- **Bash**: [Microsoft's Introduction to Bash](https://learn.microsoft.com/en-us/training/modules/bash-introduction/) covers the essentials; [explainshell](https://explainshell.com/) decodes commands you copy from the internet.
-- **Git & GitHub**: [Learn Git Branching](https://learngitbranching.js.org/) (do the remote tutorials too), plus [these slides](https://docs.google.com/presentation/d/1WZb3w1SYOxGW1coMqJXrM8yEyLSS9RCl/edit?usp=sharing&ouid=116704770862661131657&rtpof=true&sd=true). See also the group's [contributing guide](https://github.com/ophusgroup/dev).
-- **Windows users**: the [Windows Subsystem for Linux](https://learn.microsoft.com/en-us/windows/wsl/install) gives you a proper terminal.
 
 ## Getting help
 
