@@ -8,15 +8,15 @@ description: Getting started on the COLab GPU servers (mallard, buffle) and shar
 {}
 :::
 
-COLab runs two shared GPU servers and a storage server. This page covers what you need to get started; ask in the group chat or contact Arthur (amccray) for anything not covered here.
+COLab runs two shared GPU servers and a storage server. This page covers what you need to get started; ask someone in the group for anything not covered here.
 
 ## The machines
 
 | Server      | GPUs                                     | CPU / RAM               | Notes                                                              |
 | ----------- | ---------------------------------------- | ----------------------- | ------------------------------------------------------------------ |
-| **mallard** | 4× NVIDIA L40S (48 GB each)              | 64-core AMD EPYC, 512 GB | Default server for everyone. Fast local scratch. Globus endpoint. |
+| **mallard** | 4× NVIDIA L40S (48 GB each)              | 64-core AMD EPYC, 512 GB | Default server for everyone. Fast local scratch. |
 | **buffle**  | 4× NVIDIA RTX Pro 6000 (96 GB each)      | dual CPU (256 threads), 512 GB | Newer, larger GPUs. Ask for access if you need it.          |
-| **wigeon**  | —                                        | —                       | Storage server. Not a login host; its disks appear on both servers under `/wigeon`. |
+| **wigeon**  | —                                        | —                       | Storage server. Not a login host; its disks appear on both servers under `/wigeon`. Globus endpoint. |
 
 Connect with `ssh <sunetid>@mallard.stanford.edu` or `ssh <sunetid>@buffle.stanford.edu`. You must be on the Stanford network or the [VPN](#vpn-access-from-off-campus).
 
@@ -25,9 +25,9 @@ There is no job scheduler. Everyone shares the machines directly, so please read
 ## Accounts
 
 - Your username is your **SUNet ID**. Accounts are managed centrally, so one username and password works on both servers.
-- To get an account (or access to buffle), ask Arthur. You will receive a temporary password; log in once and run `passwd` to change it.
+- To get an account (or access to buffle), ask someone in the group to put you in touch with the current admin. You will receive a temporary password; log in once and run `passwd` to change it.
 - SSH keys work as normal: put your public key in `~/.ssh/authorized_keys` on each server (home directories are separate per server).
-- Forgot your password? Ask Arthur for a reset.
+- Forgot your password? Ask the admin for a reset.
 
 ## Where to put your data
 
@@ -48,7 +48,7 @@ Tips:
 
 ## Moving data in and out
 
-- **Globus** is the best option for anything large. Log in at [app.globus.org](https://app.globus.org) with your Stanford account and search for the collections `Stanford Wigeon on Mallard /wigeon/users` (your `$DATA`) or `Stanford Wigeon on Mallard /wigeon/shared`. To transfer from your own computer, install [Globus Connect Personal](https://www.globus.org/globus-connect-personal). Globus runs on mallard, but the wigeon paths are the same from buffle.
+- **Globus** is the best option for anything large. Log in at [app.globus.org](https://app.globus.org) with your Stanford account and search for the collections `Stanford Wigeon on Mallard /wigeon/users` (your `$DATA`) or `Stanford Wigeon on Mallard /wigeon/shared`. To transfer from your own computer, install [Globus Connect Personal](https://www.globus.org/globus-connect-personal). Globus transfers go straight to wigeon, so the files show up on both servers.
 - **Small transfers**: `scp`/`rsync` from the command line, or a GUI client like [CyberDuck](https://cyberduck.io/) or [WinSCP](https://winscp.net/eng/index.php). VS Code's remote file browser also lets you drag and drop.
 - **Microscope data** streamed from the TEM lands in `/wigeon/streaming` (read-only). Copy what you need into `$DATA` or `$SHARED`.
 
@@ -131,5 +131,5 @@ This doesn't help with notebooks in VS Code, where the kernel dies with the conn
 
 ## Getting help
 
-- Something broken (can't log in, disk full, `/wigeon` missing)? Contact Arthur (amccray).
+- Something broken (can't log in, disk full, `/wigeon` missing)? Ask in the group chat so the admin sees it.
 - Questions about packages, environments, or GPU code: ask in the group chat; someone has probably hit it before.
