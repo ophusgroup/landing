@@ -26,7 +26,7 @@ project:
     - file: papers.md
     - file: teaching.md
     - file: resource-students.md
-    - file: resource-mallard.md
+    - file: resource-compute.md
     - file: resource-code.md
     - file: interactive.md
     - file: resources/interactive-ptycho.md
@@ -93,7 +93,7 @@ site:
         - title: Students
           url: /resource-students
         - title: Compute
-          url: /resource-mallard
+          url: /resource-compute
         - title: Code
           url: /resource-code
         - title: Interactive

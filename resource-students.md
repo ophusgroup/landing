@@ -45,9 +45,9 @@ Ask one of the group members for the latest PTA Google Sheets link. Bring this u
 
 Discuss with Colin and submit the following form [here](https://docs.google.com/forms/d/e/1FAIpQLSeHohlFVhiFzT8PDJ1naY3MUKVIMZ_sRuBIBcHckWXi4fZpdA/viewform)
 
-### Mallard compute cluster
+### Compute resources
 
-Information for using our group computational resources [can be found here.](resource-mallard.md)
+How to get an account and use the group GPU servers and storage [can be found here.](resource-compute.md)
 
 ### Interactive and educational resources
 
