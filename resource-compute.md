@@ -25,7 +25,7 @@ There is no job scheduler. Everyone shares the machines directly, so please read
 ## Accounts
 
 - Your username is your **SUNet ID**. Accounts are managed centrally, so one username and password works on both servers.
-- To get an account (or access to buffle), ask someone in the group to put you in touch with the current admin. You will receive a temporary password; log in once and run `passwd` to change it.
+- To get an account (or access to buffle), ask the admin. You will receive a temporary password; log in once and run `passwd` to change it.
 - SSH keys work as normal: put your public key in `~/.ssh/authorized_keys` on each server (home directories are separate per server).
 
 
@@ -38,13 +38,13 @@ There is no job scheduler. Everyone shares the machines directly, so please read
 
 ## Where to put your data
 
-Both servers see the same shared storage, so a file saved to `$DATA` on mallard is there on buffle too. Home and scratch are local to each server.
+Both servers see the same shared storage, so a file saved to `$DATA` on mallard is available on buffle too. Home and scratch are local to each server.
 
 | Location        | Variable   | Servers | Use it for                                                                                        |
 | --------------- | ---------- | ------- | ------------------------------------------------------------------------------------------------- |
 | `/home/<user>`  | `$HOME`    | each server separately | Dotfiles, conda environments, code. **Not** for datasets: the disk is small and shared with the OS. |
-| `/wigeon/users/<user>` | `$DATA`   | both    | **Your data.** Large, private to you, backed by wigeon. Use this for anything you want to keep.  |
-| `/wigeon/shared` | `$SHARED` | both    | Group data: shared datasets, project folders, things collaborators need. Everyone can read and write. |
+| `/wigeon/users/<user>` | `$DATA`   | both    | **Your data.** Large storage, private to you. Use this for anything you want to keep.  |
+| `/wigeon/shared` | `$SHARED` | both    | Group data: shared datasets, project folders. Everyone can read and write. |
 | `/data/users/<user>` | `$SCRATCH` | mallard only | Fast local NVMe scratch for active jobs. Not backed up; treat as temporary.                   |
 
 Tips:
@@ -54,7 +54,7 @@ Tips:
 
 ## Moving data in and out
 
-- **Globus** is the best option for anything large. Log in at [app.globus.org](https://app.globus.org) with your Stanford account and search for the collections `Stanford Wigeon on Mallard /wigeon/users` (your `$DATA`) or `Stanford Wigeon on Mallard /wigeon/shared`. To transfer from your own computer, install [Globus Connect Personal](https://www.globus.org/globus-connect-personal). Globus transfers go straight to wigeon, so the files show up on both servers.
+- **Globus** is the best option for moving anything large. Log in at [app.globus.org](https://app.globus.org) with your Stanford account and search for the collections `Stanford Wigeon on Mallard /wigeon/users` (your `$DATA`) or `Stanford Wigeon on Mallard /wigeon/shared`. To transfer from your own computer, install [Globus Connect Personal](https://www.globus.org/globus-connect-personal). Globus transfers go straight to wigeon, so the files show up on both servers.
 - **Small transfers**: `scp`/`rsync` from the command line, or a GUI client like [CyberDuck](https://cyberduck.io/) or [WinSCP](https://winscp.net/eng/index.php). VS Code's remote file browser also lets you drag and drop.
 - **Microscope data** streamed from the TEM lands in `/wigeon/streaming` (read-only). Copy what you need into `$DATA` or `$SHARED`.
 
@@ -75,7 +75,7 @@ Tips:
 
 ## Sharing the servers
 
-There is no scheduler; it is therefore the users' responsibility to not run over each others' jobs.
+**There is no job scheduler on either server**; it is therefore the users' responsibility not to run over each others' jobs.
 
 ### Pick a free GPU
 
@@ -102,9 +102,9 @@ There is no scheduler; it is therefore the users' responsibility to not run over
 
 3. When you are done, make sure your job (or a hung Jupyter kernel) has actually released the GPU. `nvtop` should no longer list your process.
 
-### Don't grab every CPU core
+### Limit CPU usage
 
-Many packages (`torch`, `abtem`, `ase`, `construction_zone`, ...) default to using every thread on the machine, which problematic for other users. Unless you deliberately need multi-threading, put this at the top of scripts and notebooks:
+Many packages (`torch`, `abtem`, `ase`, `construction_zone`, ...) default to using every thread on the machine, which is problematic for other users. Unless you deliberately need multi-threading, put this at the top of scripts and notebooks:
 
 ```python
 import os
@@ -114,13 +114,13 @@ import torch
 torch.set_num_threads(1)              # torch ignores OMP_NUM_THREADS for .cpu() work
 ```
 
-- `abtem`, `ase`, `construction_zone`: always `N=1`; these get no real benefit from more cores. Modern abtem (≥1.0.1) ignores the environment variable, so use `abtem.config.set({"device": "gpu", "num_workers": 1})` ([docs](https://abtem.readthedocs.io/en/latest/user_guide/walkthrough/parallelization.html#using-gpus)).
-- `torch`: `N=1` for small-scale training. For large datasets with many small files, a `DataLoader` with `num_workers=4` and threads set to match can help; measure before assuming.
-- Check `htop` occasionally while running something heavy to make sure it behaves.
+- For `abtem`, `ase`, `construction_zone`: always `N=1`; these get no real benefit from more cores. Modern abtem (≥1.0.1) ignores the environment variable, so use `abtem.config.set({"device": "gpu", "num_workers": 1})` ([docs](https://abtem.readthedocs.io/en/latest/user_guide/walkthrough/parallelization.html#using-gpus)).
+- For `torch`: `N=1` for small-scale training. For large datasets with many small files, a `DataLoader` with `num_workers=4` and threads set to match can help; measure before assuming.
+- Check `htop` occasionally while running something heavy to make sure you are not accidentally using all the cores.
 
 ### Long-running jobs
 
-Disconnecting from SSH normally kills your jobs. Run long scripts inside [tmux](https://github.com/tmux/tmux/wiki/Getting-Started) so they survive. There are many useful cheat sheets for `tmux` commands, but the most common are: 
+Disconnecting from SSH normally kills your jobs. Run long scripts inside [tmux](https://github.com/tmux/tmux/wiki/Getting-Started) so they survive. There are many useful cheat sheets for `tmux` commands, but the most common/useful commands are: 
 
 - New named session: `tmux new -s <name>`
 - Detach: `ctrl + b` then `d`
@@ -131,5 +131,5 @@ This doesn't help with notebooks in VS Code, where the kernel dies with the conn
 
 ## Getting help
 
-- Something broken (can't log in, disk full, `/wigeon` missing)? Ask in the group chat so the admin sees it.
-- Questions about packages, environments, or GPU code: ask in the group chat; someone has probably hit it before.
+- If something seems broken (can't log in, disk full, `/wigeon` missing): reach out to the admin for help. 
+- If you have a question about packages, environments, or GPU code: ask in the `colab-compute` Slack channel; someone probably knows the answer.
