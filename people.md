@@ -46,8 +46,8 @@ description: Current members and alumni of the Colin Ophus Lab at Stanford Unive
   "links": [
     {"label": "Email", "url": "mailto:amccray@stanford.edu"},
     {"label": "GitHub", "url": "https://github.com/arthurmccray"},
-    {"label": "ORCID", "url": "https://orcid.org/0000-0001-6077-4698"}
-    {"label": "scholar", "url": "https://scholar.google.com/citations?user=BV5vrGgAAAAJ&hl=en"}
+    {"label": "ORCID", "url": "https://orcid.org/0000-0001-6077-4698"},
+    {"label": "scholar", "url": "https://scholar.google.com/citations?user=BV5vrGgAAAAJ&hl=en"},
     {"label": "website", "url": "https://arthurmccray.github.io/"}
   ],
   "bio": "Arthur McCray received his PhD in Applied Physics at Northwestern University, supervised by Amanda Petford-Long. He has experience in Lorentz TEM, magnetic materials, and is currently developing machine learning methods for solving inverse problems in (S)TEM. Arthur is also the lead developer of the pyLorentz software package.",
