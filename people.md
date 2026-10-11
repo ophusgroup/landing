@@ -21,7 +21,8 @@ description: Current members and alumni of the Colin Ophus Lab at Stanford Unive
     {"label": "Email", "url": "mailto:cophus@stanford.edu"},
     {"label": "GitHub", "url": "https://github.com/cophus"},
     {"label": "ORCID", "url": "https://orcid.org/0000-0003-2348-8558"},
-    {"label": "Scholar", "url": "https://scholar.google.com/citations?hl=en&user=h5MPYJAAAAAJ&view_op=list_works&sortby=pubdate"}
+    {"label": "Scholar", "url": "https://scholar.google.com/citations?hl=en&user=h5MPYJAAAAAJ&view_op=list_works&sortby=pubdate"},
+    {"label": "CV", "url": "/cv"}
   ],
   "titles": [
     "Associate Professor, Department of Materials Science and Engineering, Stanford University",
@@ -263,6 +264,23 @@ description: Current members and alumni of the Colin Ophus Lab at Stanford Unive
 <!-- ## Masters Students (no current masters students) -->
 
 <!-- ## Student Rotations (commented out) -->
+
+## Visiting Researchers
+
+::::::{grid} 1 2 3 4
+
+:::{anywidget} ./widgets/person-card.js
+{
+  "name": "Christoph Flathmann",
+  "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/FlathmannChristoph.jpg",
+  "links": [
+    {"label": "Email", "url": "mailto:Christoph.Flathmann@ruhr-uni-bochum.de"}
+  ],
+  "bio": "Christoph earned his PhD from Georg-August University Göttingen under the supervision of Prof. Michael Seibt. He is currently working with Prof. Christian Liebscher at Ruhr University Bochum. His work focuses on atomic-scale characterization of functional materials using advanced and in situ transmission electron microscopy techniques, as well as method development. At Stanford University, Christoph applies ptychographic imaging to investigate extended defects in energy and quantum materials."
+}
+:::
+
+::::::
 
 ## Interns
 
