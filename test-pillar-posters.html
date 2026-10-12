@@ -1,0 +1,42 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>research-pillars poster capture</title>
+<style>body{margin:0;background:#fff} body.dark{background:#1c1917} #mount{width:1500px}</style></head>
+<body>
+<div id="mount"></div>
+<!-- Captures the three live pillar panels and posts them to scripts/build_pillar_posters.py.
+     Load once plain and once with ?dark. The rAF shim keeps animation running in hidden/headless
+     tabs; preserveDrawingBuffer lets the WebGL canvas be read back. -->
+<script type="module">
+  window.requestAnimationFrame = (cb) => setTimeout(() => cb(performance.now()), 16);
+  const gc = HTMLCanvasElement.prototype.getContext;
+  HTMLCanvasElement.prototype.getContext = function (t, o) { return gc.call(this, t, /webgl/.test(t) ? { ...(o || {}), preserveDrawingBuffer: true } : o); };
+  const dark = new URLSearchParams(location.search).has("dark");
+  if (dark) document.body.classList.add("dark");
+  const data = { data_url: "/widgets/nanocrystalline-si.json", widget_base: "/widgets", widget_cb: "?t=" + Date.now(), bare: true };
+  const { default: widget } = await import(`./widgets/research-pillars.js?t=${Date.now()}`);
+  widget.render({ model: { get: (k) => data[k] }, el: document.getElementById("mount") });
+  // Capture each panel at its FIRST drawn frame: the live widget starts from that same frame,
+  // so the poster -> live fade on the site is seamless.
+  const out = {}, first = {}, probe = document.createElement("canvas"); probe.width = probe.height = 8;
+  const pctx = probe.getContext("2d", { willReadFrequently: true });
+  const drawn = (cv) => { pctx.clearRect(0, 0, 8, 8); pctx.drawImage(cv, 0, 0, 8, 8);
+    return pctx.getImageData(0, 0, 8, 8).data.some((v, i) => i % 4 === 3 && v > 0); };
+  const poll = setInterval(() => {
+    document.querySelectorAll("[data-kind]").forEach((c) => {
+      const name = c.dataset.kind + "-" + (dark ? "dark" : "light") + ".webp";
+      const cv = c.querySelector("canvas"); if (!cv || out[name] || !cv.width || !drawn(cv)) return;
+      // the site fades stem/comp out 250 ms after they first draw (materials at once), so grab the same moment
+      first[name] ??= performance.now();
+      if (performance.now() - first[name] < (c.dataset.kind === "materials" ? 0 : 250)) return;
+      const S = 220, o = document.createElement("canvas"); o.width = S; o.height = S;
+      const s = Math.min(cv.width, cv.height);
+      o.getContext("2d").drawImage(cv, (cv.width - s) / 2, (cv.height - s) / 2, s, s, 0, 0, S, S);
+      out[name] = o.toDataURL("image/webp", 0.6);
+    });
+    if (Object.keys(out).length === 3) {
+      clearInterval(poll);
+      fetch("http://127.0.0.1:8799/", { method: "POST", body: JSON.stringify(out) }).then(() => document.title = "DONE");
+    }
+  }, 5);
+</script>
+</body></html>
