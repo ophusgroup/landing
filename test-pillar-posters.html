@@ -1,6 +1,6 @@
 <!doctype html>
 <html><head><meta charset="utf-8"><title>research-pillars poster capture</title>
-<style>body{margin:0;background:#fff} body.dark{background:#1c1917} #mount{width:1500px}</style></head>
+<style>body{margin:0;background:#fff} body.dark{background:#1c1917} #mount{width:700px} /* same panel size as the site (~230 px), so line widths match the live render */</style></head>
 <body>
 <div id="mount"></div>
 <!-- Captures the three live pillar panels and posts them to scripts/build_pillar_posters.py.
@@ -28,10 +28,9 @@
       // the site fades stem/comp out 250 ms after they first draw (materials at once), so grab the same moment
       first[name] ??= performance.now();
       if (performance.now() - first[name] < (c.dataset.kind === "materials" ? 0 : 250)) return;
-      const S = 220, o = document.createElement("canvas"); o.width = S; o.height = S;
-      const s = Math.min(cv.width, cv.height);
+      const s = Math.min(cv.width, cv.height), S = s, o = document.createElement("canvas"); o.width = S; o.height = S; // native pixels, no resampling
       o.getContext("2d").drawImage(cv, (cv.width - s) / 2, (cv.height - s) / 2, s, s, 0, 0, S, S);
-      out[name] = o.toDataURL("image/webp", 0.6);
+      out[name] = o.toDataURL("image/png");
     });
     if (Object.keys(out).length === 3) {
       clearInterval(poll);
