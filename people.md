@@ -70,7 +70,7 @@ description: Current members and alumni of the Colin Ophus Lab at Stanford Unive
   ],
   "bio": "Serin earned her PhD in Materials Science and Engineering at MIT, advised by Professor Frances Ross, as an MIT Energy Initiative and MathWorks Fellow. Her research uses in situ electron microscopy to study nanomaterials for sustainability, while her postdoc focuses on enhancing photocatalytic materials' performance and lifetime with advanced techniques like 4DSTEM.",
   "papers": [
-    {"title": "Temperature dependent nanochemistry and growth kinetics using liquid cell TEM", "url": "https://doi.org/10.1021/acsnano.2c11477"}
+    {"title": "5D-STEM of energy materials: in situ 4D-STEM dynamics", "url": "https://doi.org/10.1557/s43579-026-01009-7"}
   ]
 }
 :::
@@ -111,6 +111,7 @@ description: Current members and alumni of the Colin Ophus Lab at Stanford Unive
 {
   "name": "Levi Palmer",
   "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/PalmerLevi.png",
+  "pronouns": "he/him",
   "links": [
     {"label": "Email", "url": "mailto:ldpalmer@stanford.edu"},
     {"label": "ORCID", "url": "https://orcid.org/0000-0002-7228-4263"},
@@ -128,6 +129,9 @@ description: Current members and alumni of the Colin Ophus Lab at Stanford Unive
   "name": "Julian Feijoo",
   "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/FeijooJulian.jpg",
   "pronouns": "he/him",
+  "links": [
+    {"label": "Email", "url": "mailto:jfeijoo@stanford.edu"}
+  ],
   "bio": "Julian received his PhD from UC Berkeley, where he was advised by Professor Peidong Yang. His research focused on studying electrocatalysts under operating conditions using electron microscopy and X-ray spectroscopy. At Stanford, he is co-supervised by <a href='https://web.slac.stanford.edu/wekergroup/'>Johanna Weker</a> and will combine synchrotron X-ray and 4D-STEM methods to uncover processing-structure-property relationships in energy storage materials.",
   "papers": [
     {"title": "Operando migration of copper carbonyl during CO₂ electroreduction", "url": "https://doi.org/10.1038/s41929-025-01359-w"}
@@ -146,6 +150,9 @@ description: Current members and alumni of the Colin Ophus Lab at Stanford Unive
   "name": "Cedric Lim",
   "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/LimCedric.jpg",
   "pronouns": "he/him",
+  "links": [
+    {"label": "Email", "url": "mailto:cedlim@stanford.edu"}
+  ],
   "bio": "Cedric is a PhD student in Materials Science and Engineering at Stanford University. He earned his B.A in Physics at the University of California, Berkeley, and worked with Professor Anatoli Polkovnikov at Boston University proposing a new definition of chaos in both classical and quantum systems. He is currently interested in applying novel machine learning techniques for reconstructing atomic electron tomography (AET) data, and automating data collection for AET.",
   "papers": [
     {"title": "Defining classical and quantum chaos through adiabatic transformations", "url": "https://arxiv.org/abs/2401.01927"}
@@ -158,6 +165,9 @@ description: Current members and alumni of the Colin Ophus Lab at Stanford Unive
   "name": "Nicholas Marchese",
   "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/MarcheseNicholas.jpg",
   "pronouns": "he/him",
+  "links": [
+    {"label": "Email", "url": "mailto:njmarch@stanford.edu"}
+  ],
   "bio": "Nicholas is a PhD student in Materials Science and Engineering at Stanford University. He earned his BA in Materials Science at Northwestern University. During his time at Northwestern, he worked with Prof Sossina Haile on developing a simulation package for solar thermochemical hydrogen production. Currently, he is interested in polymer systems and using TEM to gain a better understanding of how their microstructure impacts various properties."
 }
 :::
@@ -167,6 +177,9 @@ description: Current members and alumni of the Colin Ophus Lab at Stanford Unive
   "name": "Henry Bell",
   "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/BellHenry.jpg",
   "pronouns": "he/him",
+  "links": [
+    {"label": "Email", "url": "mailto:hebell@stanford.edu"}
+  ],
   "bio": "Henry Bell is a PhD student in the Applied Physics program at Stanford. He completed his BA in Physics at Macalester College and his MSc in Physics at ETH Zurich. His Masters research focused on understanding the nonequilibrium photoexcited states of quantum materials. He is currently working on a computational method to reconstruct the topography/strain of thin films from TEM images and an improved Ptychography algorithm."
 }
 :::
@@ -192,6 +205,7 @@ description: Current members and alumni of the Colin Ophus Lab at Stanford Unive
   "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/ObreroCaitlyn.jpg",
   "pronouns": "she/her",
   "links": [
+    {"label": "Email", "url": "mailto:ceobrero@stanford.edu"},
     {"label": "LinkedIn", "url": "https://www.linkedin.com/in/caitlyn-obrero"}
   ],
   "bio": "Caitlyn Obrero is a PhD student in Materials Science and Engineering at Stanford University. She earned her BS in Materials Science and Engineering from NC State University, where she developed a broad background in characterizing and studying the properties of materials with a focus on electron microscopy techniques, including SEM and S/TEM. She is currently interested in developing and optimizing in situ STEM techniques to investigate atomic-scale growth mechanisms."
@@ -203,6 +217,9 @@ description: Current members and alumni of the Colin Ophus Lab at Stanford Unive
   "name": "Will Millsaps",
   "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/MillsapsWill.jpg",
   "pronouns": "he/him",
+  "links": [
+    {"label": "Email", "url": "mailto:wmill@stanford.edu"}
+  ],
   "bio": "Will is a PhD student in the Materials Science and Engineering 2025 cohort at Stanford University where he is co-advised by Colin Ophus and Andrew Mannix. He received a B.S.E. in Engineering Physics from the University of Michigan, Ann Arbor, where he worked under Prof. Robert Hovden for 3 years on electron tomography algorithms, custom liquid helium TEM holders, and educational tools. Will is currently working on open source code development for atomic resolution data analysis in 2D and 3D, defect analysis for 2D materials, and scanning tunneling microscopy."
 }
 :::
@@ -212,6 +229,9 @@ description: Current members and alumni of the Colin Ophus Lab at Stanford Unive
   "name": "Guoliang Hu",
   "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/HuGuoliang.jpg",
   "pronouns": "he/him",
+  "links": [
+    {"label": "Email", "url": "mailto:hugl@stanford.edu"}
+  ],
   "bio": "Guoliang Hu is a PhD student in Materials Science and Engineering at Stanford University where he is co-advised by Colin Ophus and Yi Cui. He received his BS in Chemical Physics from the University of Science and Technology of China (USTC). His research focuses on understanding the structural evolution and electronic behaviors of materials using advanced scanning/transmission electron microscopy (S/TEM) techniques. He is particularly interested in exploring two-dimensional materials, energy-related materials, and quantum phenomena through high-resolution imaging and spectroscopy."
 }
 :::
@@ -221,6 +241,9 @@ description: Current members and alumni of the Colin Ophus Lab at Stanford Unive
   "name": "Corrie Barnes",
   "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/BarnesCorrie.jpg",
   "pronouns": "she/her",
+  "links": [
+    {"label": "Email", "url": "mailto:cbarnes3@stanford.edu"}
+  ],
   "bio": "Corrie is a PhD student in Materials Science and Engineering at Stanford University. She earned her BS in Molecular Engineering (Quantum) at The University of Chicago. As an undergraduate, she worked with Prof. David Awschalom to determine the coherence time of spin-bearing molecular qubits in addition to characterizing the noise environment of nitrogen vacancy centers in delta-doped diamond. Currently, she is interested in using TEM to understand the structure-property relationships of 2-dimensional material heterostructures, more specifically transition metal dichalcogenides, for clean energy technologies."
 }
 :::
@@ -230,6 +253,9 @@ description: Current members and alumni of the Colin Ophus Lab at Stanford Unive
   "name": "Miti Shah",
   "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/ShahMiti.jpg",
   "pronouns": "she/her",
+  "links": [
+    {"label": "Email", "url": "mailto:mitis@stanford.edu"}
+  ],
   "bio": "Miti Shah is a PhD student at Stanford University with a background in Engineering Physics, Electrical Engineering, and Applied Physics from the University of Michigan. Her research interests include materials science, diffraction, and advanced electron microscopy. Previously, she conducted research in the Hovden Lab, where she led a two-year project that became \"The Atlas of Fourier Transforms,\" a published educational resource. She was also awarded a National Science Foundation Graduate Research Fellowship.",
   "papers": [
     {"title": "The Atlas of Fourier Transforms", "url": "https://fourieratlas.com/"}
@@ -275,6 +301,7 @@ description: Current members and alumni of the Colin Ophus Lab at Stanford Unive
 {
   "name": "Christoph Flathmann",
   "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/FlathmannChristoph.jpg",
+  "pronouns": "he/him",
   "links": [
     {"label": "Email", "url": "mailto:Christoph.Flathmann@ruhr-uni-bochum.de"}
   ],
@@ -290,8 +317,21 @@ description: Current members and alumni of the Colin Ophus Lab at Stanford Unive
 
 :::{anywidget} ./widgets/person-card.js
 {
+  "name": "Daniella Fenster",
+  "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/FensterDaniella.jpg",
+  "pronouns": "she/her",
+  "links": [
+    {"label": "Email", "url": "mailto:dfenster@stanford.edu"}
+  ],
+  "bio": "Dani is an undergraduate student in Materials Science and Engineering at Stanford University where she is co-advised by Dr. Mianzhen Mo at SLAC National Accelerator Laboratory and by Dr. Colin Ophus. Her research targets plasma-facing components, a key bottleneck in fusion energy, by applying TEM and ultrafast experimentation to understand damage evolution under fusion-relevant conditions."
+}
+:::
+
+:::{anywidget} ./widgets/person-card.js
+{
   "name": "Emanuel Tsegaye",
   "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/TsegayeEmanuel.jpg",
+  "pronouns": "he/him",
   "links": [
     {"label": "Email", "url": "mailto:etsegaye@stanford.edu"}
   ],
@@ -303,6 +343,7 @@ description: Current members and alumni of the Colin Ophus Lab at Stanford Unive
 {
   "name": "Sarah Gao",
   "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/GaoSarah.jpg",
+  "pronouns": "she/her",
   "links": [
     {"label": "Email", "url": "mailto:sargao@stanford.edu"}
   ],
@@ -320,6 +361,7 @@ description: Current members and alumni of the Colin Ophus Lab at Stanford Unive
 {
   "name": "Kate Reidy",
   "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/ReidyKate.jpg",
+  "pronouns": "she/her",
   "links": [
     {"label": "Email", "url": "mailto:kareidy@stanford.edu"},
     {"label": "Website", "url": "https://reidygroup.stanford.edu/"}
@@ -334,7 +376,7 @@ description: Current members and alumni of the Colin Ophus Lab at Stanford Unive
   "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/RibetSteph.jpg",
   "pronouns": "she/her",
   "links": [
-    {"label": "Website", "url": "https://foundry.lbl.gov/about/staff/stephanie-ribet/"},
+    {"label": "Website", "url": "https://ribet.lbl.gov/"},
     {"label": "GitHub", "url": "https://github.com/smribet"},
     {"label": "ORCID", "url": "https://orcid.org/0000-0002-7117-066X"}
   ],
@@ -351,13 +393,13 @@ description: Current members and alumni of the Colin Ophus Lab at Stanford Unive
   "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/VarnavidesGeorge.jpg",
   "pronouns": "he/him",
   "links": [
-    {"label": "Website", "url": "https://cbl.curve.space/team"},
+    {"label": "Website", "url": "https://cbl.curve.space/"},
     {"label": "GitHub", "url": "https://github.com/gvarnavi"},
     {"label": "ORCID", "url": "https://orcid.org/0000-0001-8338-3323"}
   ],
   "bio": "Georgios is Assistant Professor of Imaging Physics at Delft University of Technology, where he leads the Curious Beams Lab. He is a lead developer of open-source electron microscopy analysis tools (py4DSTEM and quantEM) and co-editor of Elemental Microscopy.",
   "papers": [
-    {"title": "Iterative phase retrieval algorithms for STEM", "url": "https://doi.org/10.48550/arXiv.2309.05250"}
+    {"title": "Relaxing direct ptychography sampling requirements", "url": "https://doi.org/10.1093/mam/ozaf139"}
   ]
 }
 :::
