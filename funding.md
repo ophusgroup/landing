@@ -40,6 +40,7 @@ Colin is the L&S Family Center Fellow in Energy and Sustainability in the Precou
 - TRI generously sponsored the development of the [py4DSTEM](https://github.com/py4dstem/py4DSTEM) open-source analysis toolkit for 4DSTEM, developed by our group.
 - Read the TRI [py4DSTEM writeup](https://www.tri.global/research/py4dstem-software-package-four-dimensional-scanning-transmission-electron-microscopy-data).
 - In 2023, [py4DSTEM](https://github.com/py4dstem/py4DSTEM) was awarded an [R&D100 award](https://www.rdworldonline.com/rd-100-2023-winner/py4dstem/).
+- TRI funds "An Atlas of Mechanochemistry", a collaboration with UCLA and SLAC through the TRI Synthesis Advanced Research Challenge.
 ::::
 
 +++ {"class": "col-"}
@@ -55,6 +56,7 @@ Colin is the L&S Family Center Fellow in Energy and Sustainability in the Precou
 - We are a member of the [SLAC ESTEEM center](https://esteem.slac.stanford.edu/), a DOE-funded Energy Frontier Research Center for electron microscopy.
 - In 2018, Colin received an [Early Career Research Award](https://foundry.lbl.gov/2018/06/21/foundrys-colin-ophus-receives-doe-early-career-research-award/) from the US DOE.
 - The US DOE has funded many of our research projects, including the [4D Camera Distillery](https://foundry.lbl.gov/2020/10/28/foundry-funded-to-lead-aiml/).
+- Colin is a co-PI of [MEERCAT](https://meercat-center.org/projects/esteem) (Microelectronics Energy Efficiency Research Center for Advanced Technologies), a DOE Microelectronics Science Research Center.
 :::::
 
 :::::{grid-item}
@@ -67,6 +69,13 @@ Colin is the L&S Family Center Fellow in Energy and Sustainability in the Precou
 :::::
 
 ::::::
+
++++ {"class": "col-"}
+
+
+## Stanford University
+
+- Colin is the lead PI of a [Center for Teaching and Learning](https://ctl.stanford.edu/) (CTL) Curriculum Transformation Project grant for the undergraduate Materials Science and Engineering program at Stanford.
 
 +++ {"class": "col-"}
 

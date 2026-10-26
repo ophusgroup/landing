@@ -68,6 +68,7 @@ Stanford University; US Department of Energy, [Basic Energy Sciences](https://ww
 
 **2026**
 
+- **268.** A Koishi, C Weeraratna, M Ahmed, C Zhu, W Dong, KC Bustillo, **C Ophus**, P Zarzycki, LN Lammers, and ML Whittaker, [Bicarbonate Liquid Condensate Controls Manganese Partitioning in Calcite](https://hdl.handle.net/10.1021%2Facs.inorgchem.6c02302), **Inorganic Chemistry 65**, 24116 (2026).
 - **267.** SK Catalina, K Frohna, WL Thompson, KJ Harmon, D Yoon, J Wang, **C Ophus**, DN Congreve, and WC Chueh, [Visualizing degradation in anode-free high-capacity aqueous tin metal batteries across cell lifetime](https://hdl.handle.net/10.1039%2Fd6ee04917f), **Energy & Environmental Science** (2026).
 - **266.** AS McKeown-Green, P Moradifar, Z Zhang, C Lim, A Barnum, L Yuan, R Sinclair, F Abild-Pedersen, **C Ophus**, and JA Dionne, [In Situ Gas-Cell Electron Microscopy Reveals Pressure-Selected Restructuring Pathways in AuRu Ammonia Catalysts](https://hdl.handle.net/10.1021%2Fjacs.6c08457), **Journal of the American Chemical Society 148**, 39609 (2026).
 - **265.** N Scherz, S Anand, **C Ophus**, T Holstun, M Scott, TP Mishra, and G Ceder, [Crystallographic challenges in microscopy of multi-domain spinel materials](https://hdl.handle.net/10.1039%2Fd6ta05906f), **Journal of Materials Chemistry A 14**, 36711 (2026).
@@ -400,6 +401,9 @@ Stanford University; US Department of Energy, [Basic Energy Sciences](https://ww
 
 **2026**
 
+- December, invited speaker, Digital Twin for CryoET Workshop, Biohub, Redwood City, CA, USA
+- December, invited speaker, 2026 Nanoscale Imaging Symposium (NIS), Rice University, Houston, TX, USA
+- October, invited speaker, Duke-ORNL Workshop on Advanced Microscopy and Data-Driven Materials Science, Duke University, Durham, NC, USA
 - September, invited speaker, Diamond Light Source, Didcot, UK
 - September, symposium co-organizer, “Diffraction and 4D-STEM: Advances in Experimentation, Analysis, and Interpretation,” 21st International Microscopy Congress (IMC21), Liverpool, UK
 - August, invited speaker, IUCr 2026 Congress, and lecturer, IUCr Satellite School on Crystallography, Calgary, Alberta, Canada

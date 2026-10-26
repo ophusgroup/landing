@@ -45,11 +45,11 @@ Atomic electron tomography (AET) determines the three-dimensional positions and 
 ## Scanning Probe Drift Correction
 
 :::{figure} /images/research/research_drift_correction.png
-:alt: Orthogonal scan pairs enable nonlinear scan-drift correction.
-Orthogonal 0° and 90° scans recover the true scan-line origins, correcting nonlinear drift across 2D, 3D, and 4D-STEM data.
+:alt: Two scans with different fast-scan directions recover the true scan-line origins for 2D, 3D, and 4D datasets.
+Two or more scans with different fast-scan directions recover the true scan-line origins, which then correct 2D images, spectrum images, and 4D-STEM datasets.
 :::
 
-Sequential scanning makes STEM and SPM images vulnerable to drift, scan distortion, and beam-induced motion. [Orthogonal scan pairs](doi.org/10.1016/j.ultramic.2015.12.002) provide accurate fast-scan information in different directions, allowing nonlinear drift correction and recovery of undistorted sample coordinates with our [open drift-correction code](https://github.com/cophus/scanning-drift-corr).
+Sequential scanning makes STEM, SEM, and SPM images vulnerable to drift, scan distortion, and beam-induced motion. [Orthogonal scan pairs](doi.org/10.1016/j.ultramic.2015.12.002) record the same field of view with different fast-scan directions, which lets us recover the true probe positions without any prior structural model. Our [universal drift correction](https://arxiv.org/abs/2609.30866) extends this approach from 2D images to XEDS and EELS spectrum images and 4D-STEM diffraction datasets, combining affine and non-rigid correction to place every recorded signal at its true position on the sample. The method is implemented as GPU-accelerated open-source software in [quantEM](https://github.com/electronmicroscopy/quantem), running two to three orders of magnitude faster than our [original drift-correction code](https://github.com/cophus/scanning-drift-corr).
 
 ## Quantum Mechanical Electron-Scattering Simulations
 

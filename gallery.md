@@ -66,6 +66,7 @@ title: Gallery
       "title": "Conferences (2026)",
       "caption": "",
       "images": [
+        "2026_conf_duke.jpg",
         "2026_conf_00.jpg",
         "2026_conf_01.jpg",
         "2026_conf_02.jpg",
