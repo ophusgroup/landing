@@ -25,7 +25,7 @@ const CSS = `
 :host { display:block; color:inherit; }
 * { box-sizing:border-box; }
 .intro { margin:0 0 22px; font-size:1.02rem; line-height:1.45; opacity:.85; }
-.album { margin:0 0 34px; }
+.album { margin:0 0 34px; scroll-margin-top:80px; }
 .hero { position:relative; margin:0; overflow:hidden; border-radius:14px; cursor:zoom-in;
   background:rgba(127,127,127,.12); }
 .hero img { width:100%; aspect-ratio:16/9; max-height:56vh; min-height:220px;
@@ -33,7 +33,7 @@ const CSS = `
 .hero .cap { position:absolute; left:0; right:0; bottom:0; padding:46px 22px 18px; color:#fff;
   background:linear-gradient(to top, rgba(0,0,0,.78) 0%, rgba(0,0,0,.44) 34%, rgba(0,0,0,0) 76%);
   text-shadow:0 1px 4px rgba(0,0,0,.6); pointer-events:none; }
-.hero .cap .t { display:block; font-size:1.55rem; font-weight:700; line-height:1.15; letter-spacing:.2px; }
+.hero .cap .t { display:block; margin:0; font-family:inherit; font-size:1.55rem; font-weight:700; line-height:1.15; letter-spacing:.2px; }
 .hero .cap .c { display:block; margin-top:5px; font-size:1rem; line-height:1.35; opacity:.95; max-width:62ch; }
 .grid { display:grid; gap:10px; margin-top:10px;
   grid-template-columns:repeat(auto-fill, minmax(190px, 1fr)); }
@@ -110,6 +110,8 @@ function render({ model, el }) {
     return year ? (t + " (" + year + ")") : t;
   }
   function titleOf(a) { return a.title ? a.title : prettify(a.folder); }
+  // Link anchor per album: folder name with "_" -> "-" (e.g. /gallery#2026-hackathon).
+  function slugOf(a) { return String(a.folder || titleOf(a)).toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, ""); }
 
   function makeImg(src, alt) {
     var img = document.createElement("img");
@@ -129,6 +131,7 @@ function render({ model, el }) {
       var title = titleOf(a), caption = a.caption || "";
 
       var section = document.createElement("section"); section.className = "album";
+      section.id = slugOf(a);
 
       // Hero = the album's `cover` image if given, else its first image, with the
       // title/caption overlaid. The remaining images go to the grid (hero excluded).
@@ -140,7 +143,8 @@ function render({ model, el }) {
       var hero = document.createElement("figure"); hero.className = "hero";
       hero.appendChild(makeImg(heroSrc, title));
       var cap = document.createElement("figcaption"); cap.className = "cap";
-      var t = document.createElement("span"); t.className = "t"; t.textContent = title; cap.appendChild(t);
+      // An <h2 id> so section-nav.js lists the album (it also searches shadow roots).
+      var t = document.createElement("h2"); t.className = "t"; t.id = section.id + "-title"; t.textContent = title; cap.appendChild(t);
       if (caption) {
         var c = document.createElement("span"); c.className = "c"; c.textContent = caption; cap.appendChild(c);
       }
@@ -165,7 +169,32 @@ function render({ model, el }) {
       wrap.appendChild(section);
     });
     buildLightbox();
+    scrollToHash();
   }
+
+  // The albums live in a shadow root, so the browser can't jump to #album links
+  // on its own. Do it here on load (retrying while the page settles) and on hashchange.
+  function albumFor(hash) {
+    var id = decodeURIComponent(String(hash || "").replace(/^#/, ""));
+    if (!id) return null;
+    try { return root.getElementById ? root.getElementById(id) || root.getElementById(id.replace(/-title$/, "")) : null; }
+    catch (e) { return null; }
+  }
+  var hashTimers = [];
+  function scrollToHash() {
+    if (!albumFor(location.hash)) return;
+    [0, 300, 900].forEach(function (ms) {
+      hashTimers.push(setTimeout(function () {
+        var s = albumFor(location.hash);
+        if (s) s.scrollIntoView({ block: "start" });
+      }, ms));
+    });
+  }
+  function onHashChange() {
+    var s = albumFor(location.hash);
+    if (s) s.scrollIntoView({ block: "start", behavior: "smooth" });
+  }
+  window.addEventListener("hashchange", onHashChange);
 
   // ---- lightbox (lives in its own shadow host on <body>) ----
   var lbHost, lb, lbImg, lbCap, cur = 0, prevOverflow = "";
@@ -239,6 +268,8 @@ function render({ model, el }) {
   }
 
   return function cleanup() {
+    window.removeEventListener("hashchange", onHashChange);
+    hashTimers.forEach(clearTimeout);
     if (keyHandler) { document.removeEventListener("keydown", keyHandler); keyHandler = null; }
     if (lbHost && lbHost.parentNode) lbHost.parentNode.removeChild(lbHost);
     document.body.style.overflow = prevOverflow;

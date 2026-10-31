@@ -47,17 +47,37 @@ function nativeOutlineVisible() {
   return false;
 }
 
+// Headings in the page plus any inside open shadow roots (e.g. gallery.js albums).
+function allHeadings() {
+  const sel = "h2[id], h3[id], h4[id]";
+  const found = [...document.querySelectorAll(sel)];
+  // MyST wraps each anywidget in its own shadow host, so recurse through nested roots.
+  const walk = (root) => {
+    for (const host of root.querySelectorAll("*")) {
+      if (!host.shadowRoot) continue;
+      found.push(...host.shadowRoot.querySelectorAll(sel));
+      walk(host.shadowRoot);
+    }
+  };
+  walk(document);
+  // Keep document order (compareDocumentPosition is unreliable across shadow trees).
+  return found.sort((a, b) => a.getBoundingClientRect().top - b.getBoundingClientRect().top);
+}
+
 function collectHeadings(maxLevel) {
   const out = [];
   const seen = new Set();
-  for (const h of document.querySelectorAll("h2[id], h3[id], h4[id]")) {
+  for (const h of allHeadings()) {
     const lvl = +h.tagName[1];
     if (lvl > maxLevel) continue;
     if (h.closest('nav, aside, header, footer, [class*="outline"], [class*="toc"]')) continue;
     const text = (h.textContent || "").replace(/[¶#]/g, "").trim();
     if (!h.id || !text || seen.has(h.id)) continue;
     seen.add(h.id);
-    out.push({ id: h.id, text, level: lvl, el: h });
+    // A heading inside a widget's shadow root stands for its enclosing section
+    // (gallery album): link + scroll-spy use the section's id and top edge.
+    const sec = h.getRootNode() !== document && h.closest("section[id]");
+    out.push(sec ? { id: sec.id, text, level: lvl, el: sec } : { id: h.id, text, level: lvl, el: h });
   }
   return out;
 }
@@ -176,10 +196,22 @@ function render({ el, model }) {
     refsTries++;
   }
 
+  // A widget that re-renders (e.g. the gallery on theme toggle) replaces its
+  // headings, leaving our refs detached; re-resolve them by id.
+  function refreshEls() {
+    if (builtItems.every((it) => it.el.isConnected)) return;
+    const fresh = new Map(collectHeadings(maxLevel).map((x) => [x.id, x.el]));
+    builtItems.forEach((it) => { const e = fresh.get(it.id); if (e) it.el = e; });
+  }
+
   function update() {
     if (!nav || !builtItems.length || !links.length) return;
+    refreshEls();
     const m = metrics(), trig = 100, p = clamp01(m.sTop / m.sMax), n = builtItems.length;
-    const bp = builtItems.map((it) => clamp01((headOffset(it.el, m.root) - trig) / m.sMax));
+    // Tall widget sections (gallery albums) count as current once their top
+    // reaches the upper third of the viewport; plain headings use `trig`.
+    const trigOf = (it) => (it.el.tagName === "SECTION" ? Math.max(trig, window.innerHeight * 0.35) : trig);
+    const bp = builtItems.map((it) => clamp01((headOffset(it.el, m.root) - trigOf(it)) / m.sMax));
     bp[0] = 0;
     for (let i = 1; i < n; i++) if (bp[i] < bp[i - 1]) bp[i] = bp[i - 1];
     let act = 0;
@@ -239,7 +271,8 @@ function render({ el, model }) {
     nav.addEventListener("click", (e) => {
       const a = e.target.closest("a");
       if (!a) return;
-      const target = document.getElementById(a.dataset.id);
+      const it = builtItems.find((x) => x.id === a.dataset.id);
+      const target = (it && it.el.isConnected && it.el) || document.getElementById(a.dataset.id);
       if (target) {
         e.preventDefault();
         target.scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth", block: "start" });

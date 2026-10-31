@@ -2,8 +2,12 @@
 title: Gallery
 ---
 
+:::{anywidget} ./widgets/section-nav.js
+{"title": "Albums"}
+:::
+
 :::{anywidget} ./widgets/gallery.js
-:class: col-page
+:class: col-page-left
 {
   "intro": "",
   "image_base": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/gallery",
@@ -14,6 +18,39 @@ title: Gallery
       "caption": "",
       "images": [
         "2026_group_photo.jpg"
+      ]
+    },
+    {
+      "folder": "2026_hackathon",
+      "cover": "web.Hackathon.181.jpg",
+      "title": "Stanford NVIDIA DECTRIS Hackathon (2026)",
+      "caption": "",
+      "images": [
+        "web.Hackathon.002.jpg",
+        "web.Hackathon.009.jpg",
+        "web.Hackathon.012.jpg",
+        "web.Hackathon.014.jpg",
+        "web.Hackathon.020.jpg",
+        "web.Hackathon.029.jpg",
+        "web.Hackathon.037.jpg",
+        "web.Hackathon.039.jpg",
+        "web.Hackathon.048.jpg",
+        "web.Hackathon.058.jpg",
+        "web.Hackathon.061.jpg",
+        "web.Hackathon.065.jpg",
+        "web.Hackathon.081.jpg",
+        "web.Hackathon.088.jpg",
+        "web.Hackathon.094.jpg",
+        "web.Hackathon.108.jpg",
+        "web.Hackathon.125.jpg",
+        "web.Hackathon.139.jpg",
+        "web.Hackathon.145.jpg",
+        "web.Hackathon.149.jpg",
+        "web.Hackathon.154.jpg",
+        "web.Hackathon.164.jpg",
+        "web.Hackathon.170.jpg",
+        "web.Hackathon.178.jpg",
+        "web.Hackathon.181.jpg"
       ]
     },
     {
