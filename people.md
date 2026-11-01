@@ -14,7 +14,7 @@ description: Current members and alumni of the Colin Ophus Lab at Stanford Unive
 :::{anywidget} ./widgets/person-card.js
 {
   "name": "Colin Ophus",
-  "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/OphusColin.jpg",
+  "image": "https://raw.githubusercontent.com/ophusgroup/landing/main/images/people/OphusColin.jpg",
   "pronouns": "he/him",
   "popup_width": 400,
   "links": [
@@ -42,7 +42,7 @@ description: Current members and alumni of the Colin Ophus Lab at Stanford Unive
 :::{anywidget} ./widgets/person-card.js
 {
   "name": "Arthur McCray",
-  "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/McCrayArthur.jpg",
+  "image": "https://raw.githubusercontent.com/ophusgroup/landing/main/images/people/McCrayArthur.jpg",
   "pronouns": "he/him",
   "links": [
     {"label": "Email", "url": "mailto:amccray@stanford.edu"},
@@ -61,7 +61,7 @@ description: Current members and alumni of the Colin Ophus Lab at Stanford Unive
 :::{anywidget} ./widgets/person-card.js
 {
   "name": "Serin Lee",
-  "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/LeeSerin.jpg",
+  "image": "https://raw.githubusercontent.com/ophusgroup/landing/main/images/people/LeeSerin.jpg",
   "pronouns": "she/her",
   "links": [
     {"label": "Email", "url": "mailto:serinl@stanford.edu"},
@@ -78,7 +78,7 @@ description: Current members and alumni of the Colin Ophus Lab at Stanford Unive
 :::{anywidget} ./widgets/person-card.js
 {
   "name": "Dasol Yoon",
-  "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/DasolYoon.jpg",
+  "image": "https://raw.githubusercontent.com/ophusgroup/landing/main/images/people/DasolYoon.jpg",
   "pronouns": "she/her",
   "links": [
     {"label": "Email", "url": "mailto:da501@stanford.edu"},
@@ -94,7 +94,7 @@ description: Current members and alumni of the Colin Ophus Lab at Stanford Unive
 :::{anywidget} ./widgets/person-card.js
 {
   "name": "Karen Ehrhardt",
-  "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/EhrhardtKaren.jpg",
+  "image": "https://raw.githubusercontent.com/ophusgroup/landing/main/images/people/EhrhardtKaren.jpg",
   "pronouns": "she/her",
   "links": [
     {"label": "Email", "url": "mailto:ehrdt@stanford.edu"},
@@ -110,7 +110,7 @@ description: Current members and alumni of the Colin Ophus Lab at Stanford Unive
 :::{anywidget} ./widgets/person-card.js
 {
   "name": "Levi Palmer",
-  "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/PalmerLevi.png",
+  "image": "https://raw.githubusercontent.com/ophusgroup/landing/main/images/people/PalmerLevi.png",
   "pronouns": "he/him",
   "links": [
     {"label": "Email", "url": "mailto:ldpalmer@stanford.edu"},
@@ -127,7 +127,7 @@ description: Current members and alumni of the Colin Ophus Lab at Stanford Unive
 :::{anywidget} ./widgets/person-card.js
 {
   "name": "Julian Feijoo",
-  "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/FeijooJulian.jpg",
+  "image": "https://raw.githubusercontent.com/ophusgroup/landing/main/images/people/FeijooJulian.jpg",
   "pronouns": "he/him",
   "links": [
     {"label": "Email", "url": "mailto:jfeijoo@stanford.edu"}
@@ -148,7 +148,7 @@ description: Current members and alumni of the Colin Ophus Lab at Stanford Unive
 :::{anywidget} ./widgets/person-card.js
 {
   "name": "Cedric Lim",
-  "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/LimCedric.jpg",
+  "image": "https://raw.githubusercontent.com/ophusgroup/landing/main/images/people/LimCedric.jpg",
   "pronouns": "he/him",
   "links": [
     {"label": "Email", "url": "mailto:cedlim@stanford.edu"}
@@ -163,7 +163,7 @@ description: Current members and alumni of the Colin Ophus Lab at Stanford Unive
 :::{anywidget} ./widgets/person-card.js
 {
   "name": "Nicholas Marchese",
-  "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/MarcheseNicholas.jpg",
+  "image": "https://raw.githubusercontent.com/ophusgroup/landing/main/images/people/MarcheseNicholas.jpg",
   "pronouns": "he/him",
   "links": [
     {"label": "Email", "url": "mailto:njmarch@stanford.edu"}
@@ -175,7 +175,7 @@ description: Current members and alumni of the Colin Ophus Lab at Stanford Unive
 :::{anywidget} ./widgets/person-card.js
 {
   "name": "Henry Bell",
-  "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/BellHenry.jpg",
+  "image": "https://raw.githubusercontent.com/ophusgroup/landing/main/images/people/BellHenry.jpg",
   "pronouns": "he/him",
   "links": [
     {"label": "Email", "url": "mailto:hebell@stanford.edu"}
@@ -187,7 +187,7 @@ description: Current members and alumni of the Colin Ophus Lab at Stanford Unive
 :::{anywidget} ./widgets/person-card.js
 {
   "name": "Sangjoon Bob Lee",
-  "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/LeeSangjoonBob.jpg",
+  "image": "https://raw.githubusercontent.com/ophusgroup/landing/main/images/people/LeeSangjoonBob.jpg",
   "pronouns": "he/him",
   "links": [
     {"label": "Email", "url": "mailto:bobleesj@stanford.edu"},
@@ -202,7 +202,7 @@ description: Current members and alumni of the Colin Ophus Lab at Stanford Unive
 :::{anywidget} ./widgets/person-card.js
 {
   "name": "Caitlyn Obrero",
-  "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/ObreroCaitlyn.jpg",
+  "image": "https://raw.githubusercontent.com/ophusgroup/landing/main/images/people/ObreroCaitlyn.jpg",
   "pronouns": "she/her",
   "links": [
     {"label": "Email", "url": "mailto:ceobrero@stanford.edu"},
@@ -215,7 +215,7 @@ description: Current members and alumni of the Colin Ophus Lab at Stanford Unive
 :::{anywidget} ./widgets/person-card.js
 {
   "name": "Will Millsaps",
-  "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/MillsapsWill.jpg",
+  "image": "https://raw.githubusercontent.com/ophusgroup/landing/main/images/people/MillsapsWill.jpg",
   "pronouns": "he/him",
   "links": [
     {"label": "Email", "url": "mailto:wmill@stanford.edu"}
@@ -227,7 +227,7 @@ description: Current members and alumni of the Colin Ophus Lab at Stanford Unive
 :::{anywidget} ./widgets/person-card.js
 {
   "name": "Guoliang Hu",
-  "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/HuGuoliang.jpg",
+  "image": "https://raw.githubusercontent.com/ophusgroup/landing/main/images/people/HuGuoliang.jpg",
   "pronouns": "he/him",
   "links": [
     {"label": "Email", "url": "mailto:hugl@stanford.edu"}
@@ -239,7 +239,7 @@ description: Current members and alumni of the Colin Ophus Lab at Stanford Unive
 :::{anywidget} ./widgets/person-card.js
 {
   "name": "Corrie Barnes",
-  "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/BarnesCorrie.jpg",
+  "image": "https://raw.githubusercontent.com/ophusgroup/landing/main/images/people/BarnesCorrie.jpg",
   "pronouns": "she/her",
   "links": [
     {"label": "Email", "url": "mailto:cbarnes3@stanford.edu"}
@@ -251,7 +251,7 @@ description: Current members and alumni of the Colin Ophus Lab at Stanford Unive
 :::{anywidget} ./widgets/person-card.js
 {
   "name": "Miti Shah",
-  "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/ShahMiti.jpg",
+  "image": "https://raw.githubusercontent.com/ophusgroup/landing/main/images/people/ShahMiti.jpg",
   "pronouns": "she/her",
   "links": [
     {"label": "Email", "url": "mailto:mitis@stanford.edu"}
@@ -266,7 +266,7 @@ description: Current members and alumni of the Colin Ophus Lab at Stanford Unive
 :::{anywidget} ./widgets/person-card.js
 {
   "name": "Darshan Mali",
-  "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/MaliDarshan.jpg",
+  "image": "https://raw.githubusercontent.com/ophusgroup/landing/main/images/people/MaliDarshan.jpg",
   "pronouns": "he/him",
   "links": [
     {"label": "Email", "url": "mailto:darshanm@stanford.edu"}
@@ -278,7 +278,7 @@ description: Current members and alumni of the Colin Ophus Lab at Stanford Unive
 :::{anywidget} ./widgets/person-card.js
 {
   "name": "Evan Isbell",
-  "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/IsbellEvan.jpg",
+  "image": "https://raw.githubusercontent.com/ophusgroup/landing/main/images/people/IsbellEvan.jpg",
   "pronouns": "he/him",
   "links": [
     {"label": "Email", "url": "mailto:eisbell@stanford.edu"}
@@ -300,7 +300,7 @@ description: Current members and alumni of the Colin Ophus Lab at Stanford Unive
 :::{anywidget} ./widgets/person-card.js
 {
   "name": "Christoph Flathmann",
-  "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/FlathmannChristoph.jpg",
+  "image": "https://raw.githubusercontent.com/ophusgroup/landing/main/images/people/FlathmannChristoph.jpg",
   "pronouns": "he/him",
   "links": [
     {"label": "Email", "url": "mailto:Christoph.Flathmann@ruhr-uni-bochum.de"}
@@ -318,7 +318,7 @@ description: Current members and alumni of the Colin Ophus Lab at Stanford Unive
 :::{anywidget} ./widgets/person-card.js
 {
   "name": "Daniella Fenster",
-  "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/FensterDaniella.jpg",
+  "image": "https://raw.githubusercontent.com/ophusgroup/landing/main/images/people/FensterDaniella.jpg",
   "pronouns": "she/her",
   "links": [
     {"label": "Email", "url": "mailto:dfenster@stanford.edu"}
@@ -330,7 +330,7 @@ description: Current members and alumni of the Colin Ophus Lab at Stanford Unive
 :::{anywidget} ./widgets/person-card.js
 {
   "name": "Emanuel Tsegaye",
-  "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/TsegayeEmanuel.jpg",
+  "image": "https://raw.githubusercontent.com/ophusgroup/landing/main/images/people/TsegayeEmanuel.jpg",
   "pronouns": "he/him",
   "links": [
     {"label": "Email", "url": "mailto:etsegaye@stanford.edu"}
@@ -342,7 +342,7 @@ description: Current members and alumni of the Colin Ophus Lab at Stanford Unive
 :::{anywidget} ./widgets/person-card.js
 {
   "name": "Sarah Gao",
-  "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/GaoSarah.jpg",
+  "image": "https://raw.githubusercontent.com/ophusgroup/landing/main/images/people/GaoSarah.jpg",
   "pronouns": "she/her",
   "links": [
     {"label": "Email", "url": "mailto:sargao@stanford.edu"}
@@ -360,7 +360,7 @@ description: Current members and alumni of the Colin Ophus Lab at Stanford Unive
 :::{anywidget} ./widgets/person-card.js
 {
   "name": "Kate Reidy",
-  "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/ReidyKate.jpg",
+  "image": "https://raw.githubusercontent.com/ophusgroup/landing/main/images/people/ReidyKate.jpg",
   "pronouns": "she/her",
   "links": [
     {"label": "Email", "url": "mailto:kareidy@stanford.edu"},
@@ -373,7 +373,7 @@ description: Current members and alumni of the Colin Ophus Lab at Stanford Unive
 :::{anywidget} ./widgets/person-card.js
 {
   "name": "Stephanie Ribet",
-  "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/RibetSteph.jpg",
+  "image": "https://raw.githubusercontent.com/ophusgroup/landing/main/images/people/RibetSteph.jpg",
   "pronouns": "she/her",
   "links": [
     {"label": "Website", "url": "https://ribet.lbl.gov/"},
@@ -390,7 +390,7 @@ description: Current members and alumni of the Colin Ophus Lab at Stanford Unive
 :::{anywidget} ./widgets/person-card.js
 {
   "name": "Georgios Varnavides",
-  "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/VarnavidesGeorge.jpg",
+  "image": "https://raw.githubusercontent.com/ophusgroup/landing/main/images/people/VarnavidesGeorge.jpg",
   "pronouns": "he/him",
   "links": [
     {"label": "Website", "url": "https://cbl.curve.space/"},
@@ -414,7 +414,7 @@ description: Current members and alumni of the Colin Ophus Lab at Stanford Unive
 :::{anywidget} ./widgets/person-card.js
 {
   "name": "Annie Hall",
-  "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/HallAnnie.jpg",
+  "image": "https://raw.githubusercontent.com/ophusgroup/landing/main/images/people/HallAnnie.jpg",
   "pronouns": "she/her",
   "links": [
     {"label": "Email", "url": "mailto:amthall@stanford.edu"}
@@ -426,7 +426,7 @@ description: Current members and alumni of the Colin Ophus Lab at Stanford Unive
 :::{anywidget} ./widgets/person-card.js
 {
   "name": "Chris Hall",
-  "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/HallChris.jpg",
+  "image": "https://raw.githubusercontent.com/ophusgroup/landing/main/images/people/HallChris.jpg",
   "pronouns": "he/him",
   "links": [
     {"label": "Email", "url": "mailto:chris.hall@stanford.edu"}
@@ -444,7 +444,7 @@ description: Current members and alumni of the Colin Ophus Lab at Stanford Unive
 :::{anywidget} ./widgets/person-card.js
 {
   "name": "Antony Georgiadis",
-  "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/GeorgiadisAntony.jpg",
+  "image": "https://raw.githubusercontent.com/ophusgroup/landing/main/images/people/GeorgiadisAntony.jpg",
   "pronouns": "he/him",
   "links": [
     {"label": "Website", "url": "https://dionne.stanford.edu/members/antony-georgiadis/"}
@@ -456,7 +456,7 @@ description: Current members and alumni of the Colin Ophus Lab at Stanford Unive
 :::{anywidget} ./widgets/person-card.js
 {
   "name": "Yi Cui",
-  "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/CuiYi.jpg",
+  "image": "https://raw.githubusercontent.com/ophusgroup/landing/main/images/people/CuiYi.jpg",
   "pronouns": "he/him",
   "bio": "Yi is a PhD candidate in the Department of Materials Science and Engineering at Stanford University. His research focuses on the confined synthesis and (S)TEM characterization of ultra thin (nanometer-thick) materials. At COLab, Yi is currently working on machine learning methods for STEM tomography. Yi has been co-organizing the bimonthly Stanford EM-X symposium and the CryoEM FWP meeting since 2022.",
   "papers": [
@@ -468,7 +468,7 @@ description: Current members and alumni of the Colin Ophus Lab at Stanford Unive
 :::{anywidget} ./widgets/person-card.js
 {
   "name": "Yemi Uthman",
-  "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/UthmanYemi.jpg",
+  "image": "https://raw.githubusercontent.com/ophusgroup/landing/main/images/people/UthmanYemi.jpg",
   "pronouns": "he/him",
   "bio": "Yemi is a Master's student in Materials Science and Engineering at Stanford University. He earned his BSc in Materials Science at Carnegie Mellon University with a minor in Biomedical Engineering. He is interested in machine learning aided characterization efforts for low dimensional materials."
 }
@@ -477,7 +477,7 @@ description: Current members and alumni of the Colin Ophus Lab at Stanford Unive
 :::{anywidget} ./widgets/person-card.js
 {
   "name": "Peiwen Ren",
-  "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/RenPeiwen.jpg",
+  "image": "https://raw.githubusercontent.com/ophusgroup/landing/main/images/people/RenPeiwen.jpg",
   "pronouns": "he/him",
   "links": [
     {"label": "GitHub", "url": "https://github.com/rpw199912j"},
@@ -494,7 +494,7 @@ description: Current members and alumni of the Colin Ophus Lab at Stanford Unive
 :::{anywidget} ./widgets/person-card.js
 {
   "name": "Andrew Ducharme",
-  "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/DucharmeAndrew.jpg",
+  "image": "https://raw.githubusercontent.com/ophusgroup/landing/main/images/people/DucharmeAndrew.jpg",
   "pronouns": "he/him",
   "bio": "Andrew is a PhD candidate in the Department of Physics at the University of Oregon, supervised by Ben McMorran. He was awarded an SCGSR fellowship from the US Department of Energy to work on STEM holography-ptychography in Colin's group at Berkeley Lab and Stanford."
 }
@@ -503,7 +503,7 @@ description: Current members and alumni of the Colin Ophus Lab at Stanford Unive
 :::{anywidget} ./widgets/person-card.js
 {
   "name": "Samuel Gleason",
-  "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/GleasonSam.jpg",
+  "image": "https://raw.githubusercontent.com/ophusgroup/landing/main/images/people/GleasonSam.jpg",
   "pronouns": "he/him",
   "bio": "Sam received his PhD from the University of California, Berkeley, working with Dr Paul Alivisatos, Dr Jim Ciston, and Colin. He is now working on AI-driven materials discovery at Entalpic.",
   "papers": [
@@ -515,7 +515,7 @@ description: Current members and alumni of the Colin Ophus Lab at Stanford Unive
 :::{anywidget} ./widgets/person-card.js
 {
   "name": "Benjamin Savitzky",
-  "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/SavitzkyBen.jpg",
+  "image": "https://raw.githubusercontent.com/ophusgroup/landing/main/images/people/SavitzkyBen.jpg",
   "pronouns": "he/him",
   "bio": "Formerly a PhD student in Lena Kourkoutis' group at Cornell and a postdoc in Colin Ophus' group at Berkeley Lab. Now working as a Principle Research Scientist at hBar Instruments.",
   "papers": [
@@ -527,7 +527,7 @@ description: Current members and alumni of the Colin Ophus Lab at Stanford Unive
 :::{anywidget} ./widgets/person-card.js
 {
   "name": "Alexander Rakowski",
-  "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/RakowskiAlex.jpg",
+  "image": "https://raw.githubusercontent.com/ophusgroup/landing/main/images/people/RakowskiAlex.jpg",
   "pronouns": "he/him",
   "bio": "Received his PhD in Sarah Haigh's group at Manchester, and worked a postdoc in Joe Patterson and Colin Ophus' group. Now returned to silicon valley.",
   "papers": [
@@ -539,7 +539,7 @@ description: Current members and alumni of the Colin Ophus Lab at Stanford Unive
 :::{anywidget} ./widgets/person-card.js
 {
   "name": "Philipp Pelz",
-  "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/PelzPhilipp.jpg",
+  "image": "https://raw.githubusercontent.com/ophusgroup/landing/main/images/people/PelzPhilipp.jpg",
   "pronouns": "he/him",
   "links": [
     {"label": "Website", "url": "https://pelzlab.science/"}
@@ -554,7 +554,7 @@ description: Current members and alumni of the Colin Ophus Lab at Stanford Unive
 :::{anywidget} ./widgets/person-card.js
 {
   "name": "Ellis Kennedy",
-  "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/KennedyEllis.jpg",
+  "image": "https://raw.githubusercontent.com/ophusgroup/landing/main/images/people/KennedyEllis.jpg",
   "pronouns": "she/her",
   "bio": "Received her PhD in Mary Scott's group at UC Berkeley after interning in Colin's group and Mary's group. Formerly a postdoc at UC Berkeley, and now working as a postdoc at Los Alamos National Lab.",
   "papers": [
@@ -566,7 +566,7 @@ description: Current members and alumni of the Colin Ophus Lab at Stanford Unive
 :::{anywidget} ./widgets/person-card.js
 {
   "name": "Steven Zeltmann",
-  "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/ZeltmannSteven.jpg",
+  "image": "https://raw.githubusercontent.com/ophusgroup/landing/main/images/people/ZeltmannSteven.jpg",
   "pronouns": "he/him",
   "bio": "Received his PhD in Andy Minor's group at UC Berkeley. Now working as a Staff Scientist in PARADIM at Cornell University.",
   "papers": [
@@ -578,7 +578,7 @@ description: Current members and alumni of the Colin Ophus Lab at Stanford Unive
 :::{anywidget} ./widgets/person-card.js
 {
   "name": "Alexandra Bruefach",
-  "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/BruefachAlexandra.jpg",
+  "image": "https://raw.githubusercontent.com/ophusgroup/landing/main/images/people/BruefachAlexandra.jpg",
   "pronouns": "she/her",
   "bio": "Received PhD in Mary Scott's group at UC Berkeley. Now working as a Research Scientist at Meta.",
   "papers": [
@@ -590,7 +590,7 @@ description: Current members and alumni of the Colin Ophus Lab at Stanford Unive
 :::{anywidget} ./widgets/person-card.js
 {
   "name": "Blanka Janicek",
-  "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/JanicekBlanka.jpg",
+  "image": "https://raw.githubusercontent.com/ophusgroup/landing/main/images/people/JanicekBlanka.jpg",
   "pronouns": "she/her",
   "bio": "Received her PhD in Pinshane Huang's group at UIUC. Worked as postdoc in Xi Jiang's group and Colin Ophus' group at Berkeley Lab. Currently a Scientist working at Exponent.",
   "papers": [
@@ -602,7 +602,7 @@ description: Current members and alumni of the Colin Ophus Lab at Stanford Unive
 :::{anywidget} ./widgets/person-card.js
 {
   "name": "Hannah Devyldere",
-  "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/DevyldereHannah.jpg",
+  "image": "https://raw.githubusercontent.com/ophusgroup/landing/main/images/people/DevyldereHannah.jpg",
   "pronouns": "she/her",
   "bio": "Former intern in Colin Ophus' group. Currently pursuing a PhD in Mary Scott's group at UC Berkeley."
 }
@@ -611,7 +611,7 @@ description: Current members and alumni of the Colin Ophus Lab at Stanford Unive
 :::{anywidget} ./widgets/person-card.js
 {
   "name": "Luis Rangel DaCosta",
-  "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/RangelDaCostaLuis.jpg",
+  "image": "https://raw.githubusercontent.com/ophusgroup/landing/main/images/people/RangelDaCostaLuis.jpg",
   "pronouns": "he/him",
   "bio": "Former intern in Colin Ophus' group. Currently pursuing a PhD in Mary Scott's group at UC Berkeley.",
   "papers": [
@@ -623,7 +623,7 @@ description: Current members and alumni of the Colin Ophus Lab at Stanford Unive
 :::{anywidget} ./widgets/person-card.js
 {
   "name": "Thomas Pekin",
-  "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/PekinThomas.jpg",
+  "image": "https://raw.githubusercontent.com/ophusgroup/landing/main/images/people/PekinThomas.jpg",
   "links": [
     {"label": "GitHub", "url": "https://github.com/tcpekin"},
     {"label": "Website", "url": "https://tcpekin.com/about"}
@@ -638,7 +638,7 @@ description: Current members and alumni of the Colin Ophus Lab at Stanford Unive
 :::{anywidget} ./widgets/person-card.js
 {
   "name": "Rohini Sankaran",
-  "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/SankaranRohini.jpg",
+  "image": "https://raw.githubusercontent.com/ophusgroup/landing/main/images/people/SankaranRohini.jpg",
   "bio": "Received her PhD from Andy Minor's group and Daryl Chrzan's group at UC Berkeley. Worked as a Sr. Failure Analysis R&D Engineer at Intel. Currently a Staff Scientist at Lawrence Livermore National Lab.",
   "papers": [
     {"title": "HAADF imaging of the omega phase in a gum metal-related alloy", "url": "https://doi.org/10.1080/14786435.2014.937839"}
@@ -649,7 +649,7 @@ description: Current members and alumni of the Colin Ophus Lab at Stanford Unive
 :::{anywidget} ./widgets/person-card.js
 {
   "name": "Hao Yang",
-  "image": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/people/YangHao.jpg",
+  "image": "https://raw.githubusercontent.com/ophusgroup/landing/main/images/people/YangHao.jpg",
   "pronouns": "he/him",
   "bio": "Received his PhD from Pete Nellist's group at Oxford. Formerly a postdoc in Colin Ophus' group. Currently working in industry."
 }

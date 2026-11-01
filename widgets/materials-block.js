@@ -45,7 +45,7 @@ const THEME = {
 
 function render({ model, el }) {
   const opt = (k, d) => { try { const v = model.get(k); return v == null ? d : v; } catch (e) { return d; } };
-  const dataUrl = opt("data_url", "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/nanocrystalline-si.json");
+  const dataUrl = opt("data_url", "https://raw.githubusercontent.com/ophusgroup/landing/main/widgets/nanocrystalline-si.json");
   const aspect = opt("aspect", "4 / 3");
   const id = "mb_" + Math.random().toString(36).slice(2, 7);
 

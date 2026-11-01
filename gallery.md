@@ -10,7 +10,7 @@ title: Gallery
 :class: col-page-left
 {
   "intro": "",
-  "image_base": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/gallery",
+  "image_base": "https://raw.githubusercontent.com/ophusgroup/landing/main/images/gallery",
   "albums": [
     {
       "folder": "2026_group_photo",

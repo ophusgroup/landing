@@ -9,7 +9,7 @@
 // Data is supplied via the anywidget directive body (the model state):
 //   {
 //     "intro": "A short line shown above the albums.",
-//     "image_base": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/gallery",
+//     "image_base": "https://raw.githubusercontent.com/ophusgroup/landing/main/images/gallery",
 //     "albums": [
 //       { "folder": "2026_painting", "title": "Painting (2026)",
 //         "caption": "Optional one sentence.", "cover": "b.jpg",
@@ -74,7 +74,7 @@ function render({ model, el }) {
   }
 
   var base = String(opt("image_base",
-    "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/gallery")).replace(/\/+$/, "");
+    "https://raw.githubusercontent.com/ophusgroup/landing/main/images/gallery")).replace(/\/+$/, "");
   var intro = opt("intro", "");
   var albums = opt("albums", null);
   var dataUrl = opt("data_url", "");

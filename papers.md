@@ -6,7 +6,7 @@ short_title: Publications
 ::::{dropdown} Co-Author Network
 :::{anywidget} ./widgets/coauthor-network.js
 {
-  "data_url": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/data/coauthors.json",
+  "data_url": "https://raw.githubusercontent.com/ophusgroup/landing/main/data/coauthors.json",
   "accent_color": "#8C1515"
 }
 :::
@@ -14,8 +14,8 @@ short_title: Publications
 
 :::{anywidget} ./widgets/paper-list.js
 {
-  "data_url": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/data/papers.json",
-  "hover_url": "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/data/papers_hover.json",
+  "data_url": "https://raw.githubusercontent.com/ophusgroup/landing/main/data/papers.json",
+  "hover_url": "https://raw.githubusercontent.com/ophusgroup/landing/main/data/papers_hover.json",
   "accent_color": "#8C1515",
   "accent_color_dark": "#E8A0A0"
 }

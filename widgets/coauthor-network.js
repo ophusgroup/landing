@@ -2,7 +2,7 @@
 // Force-directed graph with orbital animation, click-to-center
 
 function render({ model, el }) {
-  const dataUrl = model.get("data_url") || "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/data/coauthors.json";
+  const dataUrl = model.get("data_url") || "https://raw.githubusercontent.com/ophusgroup/landing/main/data/coauthors.json";
   const accentColor = model.get("accent_color") || "#8C1515";
   const id = "cn-" + Math.random().toString(36).slice(2, 8);
 

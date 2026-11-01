@@ -83,10 +83,10 @@ const PILLARS = [
 
 function render({ model, el }) {
   const opt = (k, d) => { try { const v = model.get(k); return v == null ? d : v; } catch (e) { return d; } };
-  const dataUrl = opt("data_url", "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets/nanocrystalline-si.json");
-  const imageBase = opt("image_base", "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/images/research");
+  const dataUrl = opt("data_url", "https://raw.githubusercontent.com/ophusgroup/landing/main/widgets/nanocrystalline-si.json");
+  const imageBase = opt("image_base", "https://raw.githubusercontent.com/ophusgroup/landing/main/images/research");
   const widgetBases = [
-    opt("widget_base", "https://cdn.jsdelivr.net/gh/ophusgroup/landing@main/widgets"),
+    opt("widget_base", "https://raw.githubusercontent.com/ophusgroup/landing/main/widgets"),
     "https://raw.githubusercontent.com/ophusgroup/landing/main/widgets", // fallback if jsDelivr is stale/404
   ];
   const widgetCb = opt("widget_cb", ""); // local-preview cache-buster, e.g. "?t=123"; empty in production
