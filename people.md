@@ -327,30 +327,6 @@ description: Current members and alumni of the Colin Ophus Lab at Stanford Unive
 }
 :::
 
-:::{anywidget} ./widgets/person-card.js
-{
-  "name": "Emanuel Tsegaye",
-  "image": "https://raw.githubusercontent.com/ophusgroup/landing/main/images/people/TsegayeEmanuel.jpg",
-  "pronouns": "he/him",
-  "links": [
-    {"label": "Email", "url": "mailto:etsegaye@stanford.edu"}
-  ],
-  "bio": "Emanuel is an undergraduate student in Bioengineering at Stanford University. His (broad) research interests include protein engineering, cell membrane mechanobiology, and most recently developing computational tools for materials science. Outside of the lab, he enjoys playing chess, running, and training jiu jitsu."
-}
-:::
-
-:::{anywidget} ./widgets/person-card.js
-{
-  "name": "Sarah Gao",
-  "image": "https://raw.githubusercontent.com/ophusgroup/landing/main/images/people/GaoSarah.jpg",
-  "pronouns": "she/her",
-  "links": [
-    {"label": "Email", "url": "mailto:sargao@stanford.edu"}
-  ],
-  "bio": "Sarah is an undergraduate student at Stanford University, originally from San Diego. She is interested in math, computer science, and materials science. In her free time, she enjoys biking, going to the beach, and cooking."
-}
-:::
-
 ::::::
 
 ## Close Collaborators
@@ -440,6 +416,30 @@ description: Current members and alumni of the Colin Ophus Lab at Stanford Unive
 ## Former Group Members
 
 ::::::{grid} 1 2 3 4
+
+:::{anywidget} ./widgets/person-card.js
+{
+  "name": "Sarah Gao",
+  "image": "https://raw.githubusercontent.com/ophusgroup/landing/main/images/people/GaoSarah.jpg",
+  "pronouns": "she/her",
+  "links": [
+    {"label": "Email", "url": "mailto:sargao@stanford.edu"}
+  ],
+  "bio": "Sarah was an undergraduate intern in the group while studying at Stanford University. She is originally from San Diego and is interested in math, computer science, and materials science. In her free time, she enjoys biking, going to the beach, and cooking."
+}
+:::
+
+:::{anywidget} ./widgets/person-card.js
+{
+  "name": "Emanuel Tsegaye",
+  "image": "https://raw.githubusercontent.com/ophusgroup/landing/main/images/people/TsegayeEmanuel.jpg",
+  "pronouns": "he/him",
+  "links": [
+    {"label": "Email", "url": "mailto:etsegaye@stanford.edu"}
+  ],
+  "bio": "Emanuel was an undergraduate intern in the group while studying Bioengineering at Stanford University. His (broad) research interests include protein engineering, cell membrane mechanobiology, and developing computational tools for materials science. Outside of the lab, he enjoys playing chess, running, and training jiu jitsu."
+}
+:::
 
 :::{anywidget} ./widgets/person-card.js
 {
