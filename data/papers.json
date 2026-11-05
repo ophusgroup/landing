@@ -1,5 +1,58 @@
 [
   {
+    "title": "Bend contour electron tomography (BCET): Quantitative strain and topography mapping",
+    "url": "https://doi.org/10.1103/pmcz-g3l8",
+    "year": 2026,
+    "tags": [
+      "Tomography",
+      "Strain",
+      "Diffraction",
+      "2D Materials"
+    ],
+    "authors": [
+      "Henry G. Bell",
+      "Chenhang Xu",
+      "Arthur McCray",
+      "Minyong Han",
+      "Yicheng Zhuang",
+      "Harold Y. Hwang",
+      "Colin Ophus",
+      "Alfred Zong"
+    ],
+    "journal": "Physical Review Materials"
+  },
+  {
+    "title": "Correlative 3D Electron Tomography and Nanobeam 4D-STEM Mapping of Orientation and Strain in Welded Silver Nanowires",
+    "url": "https://doi.org/10.1002/smll.76393",
+    "year": 2026,
+    "tags": [
+      "4DSTEM",
+      "Tomography",
+      "Strain",
+      "Crystallography",
+      "Metals & Alloys"
+    ],
+    "authors": [
+      "Vuk V. Radmilović",
+      "Colin Ophus",
+      "Peter Ercius",
+      "Velimir R. Radmilović"
+    ],
+    "journal": "Small"
+  },
+  {
+    "title": "4D STEM",
+    "url": "https://doi.org/10.1007/978-3-031-80789-3_17",
+    "year": 2026,
+    "tags": [
+      "4DSTEM"
+    ],
+    "authors": [
+      "Colin Ophus"
+    ],
+    "journal": "Transmission Electron Microscopy"
+  },
+  {
     "title": "Bicarbonate Liquid Condensate Controls Manganese Partitioning in Calcite",
     "url": "https://doi.org/10.1021/acs.inorgchem.6c02302",
     "year": 2026,

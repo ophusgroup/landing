@@ -68,6 +68,8 @@ Stanford University; US Department of Energy, [Basic Energy Sciences](https://ww
 
 **2026**
 
+- **270.** HG Bell, C Xu, A McCray, M Han, Y Zhuang, HY Hwang, **C Ophus**, and A Zong, [Bend contour electron tomography (BCET): Quantitative strain and topography mapping](https://hdl.handle.net/10.1103%2Fpmcz-g3l8), **Physical Review Materials 10**, L110801 (2026).
+- **269.** VV Radmilović, **C Ophus**, P Ercius, and VR Radmilović, [Correlative 3D Electron Tomography and Nanobeam 4D-STEM Mapping of Orientation and Strain in Welded Silver Nanowires](https://hdl.handle.net/10.1002%2Fsmll.76393), **Small**, e76393 (2026).
 - **268.** A Koishi, C Weeraratna, M Ahmed, C Zhu, W Dong, KC Bustillo, **C Ophus**, P Zarzycki, LN Lammers, and ML Whittaker, [Bicarbonate Liquid Condensate Controls Manganese Partitioning in Calcite](https://hdl.handle.net/10.1021%2Facs.inorgchem.6c02302), **Inorganic Chemistry 65**, 24116 (2026).
 - **267.** SK Catalina, K Frohna, WL Thompson, KJ Harmon, D Yoon, J Wang, **C Ophus**, DN Congreve, and WC Chueh, [Visualizing degradation in anode-free high-capacity aqueous tin metal batteries across cell lifetime](https://hdl.handle.net/10.1039%2Fd6ee04917f), **Energy & Environmental Science** (2026).
 - **266.** AS McKeown-Green, P Moradifar, Z Zhang, C Lim, A Barnum, L Yuan, R Sinclair, F Abild-Pedersen, **C Ophus**, and JA Dionne, [In Situ Gas-Cell Electron Microscopy Reveals Pressure-Selected Restructuring Pathways in AuRu Ammonia Catalysts](https://hdl.handle.net/10.1021%2Fjacs.6c08457), **Journal of the American Chemical Society 148**, 39609 (2026).
@@ -397,6 +399,10 @@ Stanford University; US Department of Energy, [Basic Energy Sciences](https://ww
 
 - **1.** Z Lee, **C Ophus**, LM Fischer, N Nelson-Fitzpatrick, K Westra, S Evoy, V Radmilovic, U Dahmen and D Mitlin, [Metallic NEMS components fabricated from nanocomposite Al-Mo films](https://hdl.handle.net/10.1088%2F0957-4484/17/12/042), **Nanotechnology 17** 3063 (2006).
 
+## Book Chapters
+
+- **C Ophus**, [4D STEM](https://hdl.handle.net/10.1007%2F978-3-031-80789-3_17), in **Transmission Electron Microscopy**, 527, Springer (2026).
+
 ## Invited Talks
 
 **2026**
@@ -405,13 +411,14 @@ Stanford University; US Department of Energy, [Basic Energy Sciences](https://ww
 - December, invited speaker, 2026 Nanoscale Imaging Symposium (NIS), Rice University, Houston, TX, USA
 - October, invited speaker, Duke-ORNL Workshop on Advanced Microscopy and Data-Driven Materials Science, Duke University, Durham, NC, USA
 - September, invited speaker, Diamond Light Source, Didcot, UK
-- September, symposium co-organizer, “Diffraction and 4D-STEM: Advances in Experimentation, Analysis, and Interpretation,” 21st International Microscopy Congress (IMC21), Liverpool, UK
+- September, invited speaker and symposium co-organizer, “Diffraction and 4D-STEM: Advances in Experimentation, Analysis, and Interpretation,” 21st International Microscopy Congress (IMC21), Liverpool, UK
 - August, invited speaker, IUCr 2026 Congress, and lecturer, IUCr Satellite School on Crystallography, Calgary, Alberta, Canada
 - August, invited speaker, Microscopy and Microanalysis 2026, Milwaukee, WI, USA
 - July, invited speaker, IEEE International Conference on Computational Photography (ICCP 2026), Princeton, NJ, USA
 - June, invited lecturer (remote), Summer School on Machine Learning for Electron Microscopy, University of Tennessee, Knoxville, TN, USA
 - April, invited speaker, 2026 MRS Spring Meeting, Honolulu, HI, USA
 - April, invited speaker, ACerS Spring Meeting 2026, Bellevue, WA, USA
+- January, lecturer, Winter School on High Resolution Electron Microscopy, Arizona State University, Tempe, AZ, USA
 
 **2025**
 
@@ -429,6 +436,7 @@ Stanford University; US Department of Energy, [Basic Energy Sciences](https://ww
 - May, invited speaker, Continuous Science Foundation workshop, Banff, Alberta, Canada
 - April, invited tutorial speaker, MRS tutorial: 4D-STEM analysis of materials in situ / in operando, Seattle, WA, USA
 - April, invited speaker, Minnesota Microscopy Society conference, Chaska, MN, USA
+- March, invited seminar speaker, University of California, Berkeley, CA, USA
 
 **2024**
 
@@ -436,21 +444,37 @@ Stanford University; US Department of Energy, [Basic Energy Sciences](https://ww
 - November 6, Invited speaker, NIMS Award Symposium, Japan
 - November 1, invited speaker, National Nanotechnology Initiative, “Nanometrology Involving Big Data, AI, and Modeling”
 - October 23, Invited speaker, TESCAN TENSOR Launch, Tempe, AZ, USA
+- October 9, department colloquium speaker, Department of Materials Science and Engineering, Stanford University, Stanford, CA, USA
+- September, invited speaker, ELMINA 2024, Belgrade, Serbia
 - August 30, Invited speaker, European Microscopy Conference, Denmark
+- August 16, invited speaker, Molecular Foundry Annual User Meeting, Berkeley, CA, USA
 - July 29, Invited speaker, Microscopy and Microanalysis 2024, USA; also ran Elemental Microscopy tutorial sessions and taught a data analysis workshop
 - June 10, Invited speaker, Enhanced Data Generated by Electrons (EDGE) 2024, Canada
+- June 4, invited speaker (remote), imec, Leuven, Belgium
 - May, department seminar speaker, Materials Science and Monash Centre for Electron Microscopy, Monash University, Australia
+- May, invited seminar speaker (remote), Physics of Nanostructured Materials group, University of Vienna, Austria
 - April, Invited speaker, International Conference on Frontiers of Characterization and Metrology for Nanoelectronics (FCMN), Monterey Bay, USA
+- March, invited seminar speaker (remote), py4DSTEM seminar, Toyota Motor Corporation, Japan
 - January, Lecturer and Lab instructor, Microscopy demonstration, ASU HREM Winter School, Arizona, USA
 
 **2023**
 
+- November, invited speaker, 2 talks and tutorial, 2023 MRS Fall Meeting, Boston, MA, USA
+- October, department seminar speaker, Department of Materials Science and Engineering, University of California, Berkeley, CA, USA
+- September, invited speaker, IMC20 pre-congress workshop, Busan, South Korea
+- September, invited speaker, Los Alamos National Laboratory, Los Alamos, NM, USA
+- August, invited speaker, IUCr 2023 Congress, Melbourne, Australia
+- August, invited speaker, crystallography workshop, Monash University, Melbourne, Australia
+- July, invited speaker, Microscopy and Microanalysis 2023, Minneapolis, MN, USA
+- July, invited speaker, ACA 2023 Transactions Session, Baltimore, MD, USA
 - June, Invited speaker, IAMNano 2023, Matsue, Japan
 - June, Invited speaker, ICMAT, Singapore
 - June, Invited speaker, AI in Scattering Workshop, Maryland, USA
 - June, Invited keynote speaker, IUMAS, Banff, Canada
 - May, Plenary speaker, ISM2023, Jerusalem, Israel
 - May, Department seminar, and associated py4DSTEM workshop instructor at both Weismann Institute and Technion Rehovot and Haifa, Israel
+- April, workshop instructor, py4DSTEM workshop “Guidelines for Performing 4D-STEM Characterization,” Imperial College London, UK
+- April, invited speaker, APS workshop
 - Feb, Invited speaker, Microscopy Conference 2023, Darmstadt, Germany
 - Jan, Lecturer and workshop instructor, 2023 Arizona Winter School on HREM, Tempe, AZ, USA
 

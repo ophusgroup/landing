@@ -195,6 +195,7 @@ def main():
 
     pub_sec = section(tex, "Peer-Reviewed Publications")
     pubs = numbered(table_rows(pub_sec), int(re.search(r"\\setcounter\{pubno\}\{(\d+)\}", pub_sec).group(1)))
+    chapters = [tex_to_md(r[-1]) for r in table_rows(section(tex, "Book Chapters"))]
     talk_sec = section(tex, "Selected Conference Presentations")
     talks = numbered(table_rows(talk_sec), int(re.search(r"\\setcounter\{pubno\}\{(\d+)\}", talk_sec).group(1)))
 
@@ -228,6 +229,9 @@ def main():
         md.append("**%s**\n" % year)
         # Markdown ordered lists renumber upward, so the descending CV numbers are written as text.
         md.append("\n".join("- **%d.** %s" % (n, t) for n, t in items) + "\n")
+
+    md.append("## Book Chapters\n")
+    md.append("\n".join("- " + c for c in chapters) + "\n")
 
     md.append("## Invited Talks\n")
     for year, items in by_year(talks, talk_year):
