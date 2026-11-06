@@ -35,7 +35,6 @@ project:
     - file: funding.md
     - file: gallery.md
     - file: cv.md
-      hidden: true
   abbreviations:
     4DSTEM: four dimensional scanning transmission electron microscopy
     4DSCED: four dimensional scanning confocal electron diffraction
