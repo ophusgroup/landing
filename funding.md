@@ -86,7 +86,7 @@ Colin is the L&S Family Center Fellow in Energy and Sustainability in the Precou
 
 ## Microscopy Society of America
 
-- In 2022, Colin was awarded the [Burton Medal](https://www.microscopy.org/awards/bios/burton_physical_2022.cfm) in physical sciences, for _distinguished contributions to the field of microscopy and microanalysis by a scientist who is less than 40 years of age._
+- In 2022, Colin was awarded the [Burton Medal](https://microscopy.org/search?q=ophus) in physical sciences, for _distinguished contributions to the field of microscopy and microanalysis by a scientist who is less than 40 years of age._
 - The [MSA](https://microscopy.org/) is the sponsor of [Elemental Microscopy](https://www.elementalmicroscopy.com/).
 - The [MSA](https://microscopy.org/) has also awarded our group members travel grants to attend the Microscopy and Microanalysis annual meeting and other conferences.
 ::::

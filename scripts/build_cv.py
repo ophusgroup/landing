@@ -88,7 +88,9 @@ def link_url(url):
     return "https://hdl.handle.net/%s%%2F%s" % m.groups() if m else url
 
 
-def tex_to_md(s):
+def tex_to_md(s, bf="**"):
+    """bf is the markdown for {\\bf ...}; publications use "*" so journals read differently
+    from the highlighted author name."""
     s = re.sub(r"\\(vspace|hspace)\*?\{[^}]*\}", "", s)
     s = re.sub(r"\\(extraSpace|hline|noindent|justifying|newline)\b", " ", s)
     s = re.sub(r"\$([^$]*)\$", math_to_md, s)
@@ -103,7 +105,7 @@ def tex_to_md(s):
     s = replace_cmd(s, "underline", lambda a: "**%s**" % a)
     s = replace_cmd(s, "emph", lambda a: "*%s*" % a)
     s = replace_cmd(s, "textbf", lambda a: "**%s**" % a)
-    s = re.sub(r"\{\s*\\bf\s+([^{}]*)\}", lambda m: "**%s**" % m.group(1).strip(), s)
+    s = re.sub(r"\{\s*\\bf\s+([^{}]*)\}", lambda m: bf + m.group(1).strip() + bf, s)
     s = re.sub(r"\{\s*\\it\s+([^{}]*)\}", lambda m: "*%s*" % m.group(1).strip(), s)
     s = replace_cmd(s, "href", lambda u, t: "[%s](%s)" % (t.strip(), link_url(u.replace(r"\&", "&"))), 2)
     s = s.replace(r"\&", "&").replace(r"\%", "%").replace(r"\$", "\\$").replace(r"\_", "_")
@@ -166,13 +168,29 @@ def dated_list(entries):
     return "\n".join(out) + "\n"
 
 
-def numbered(rows, counter_start):
+def numbered(rows, counter_start, bf="**"):
     """Single-column rows numbered downward (matches the LaTeX \\pubnumrev counter)."""
     items, n = [], counter_start
     for cells in rows:
         n -= 1
-        items.append((n, tex_to_md(cells[-1])))
+        items.append((n, tex_to_md(cells[-1], bf)))
     return items
+
+
+MONTHS = {m[:3]: m for m in ("January February March April May June July August September "
+                             "October November December").split()}
+
+
+def talk_row(text):
+    """Split a talk into (date, description) for the chart; month spellings are normalized."""
+    def month(name):
+        return MONTHS.get(name[:3].title(), name)
+    m = re.match(r"([A-Za-z]+\.?)(?:\s*[–-]\s*([A-Za-z]+\.?))?((?:\s*\d+)?(?:\s*[–-]\s*\d+)?)\s*,\s*(.*)", text)
+    if not m or m.group(1)[:3].title() not in MONTHS:
+        return "", text[:1].upper() + text[1:]
+    date = month(m.group(1)) + ("–" + month(m.group(2)) if m.group(2) else "") + m.group(3).rstrip()
+    rest = m.group(4)
+    return date, rest[:1].upper() + rest[1:]
 
 
 def by_year(items, year_of):
@@ -194,8 +212,8 @@ def main():
     academic = dated_entries(table_rows(section(tex, "Academic Experience")))
 
     pub_sec = section(tex, "Peer-Reviewed Publications")
-    pubs = numbered(table_rows(pub_sec), int(re.search(r"\\setcounter\{pubno\}\{(\d+)\}", pub_sec).group(1)))
-    chapters = [tex_to_md(r[-1]) for r in table_rows(section(tex, "Book Chapters"))]
+    pubs = numbered(table_rows(pub_sec), int(re.search(r"\\setcounter\{pubno\}\{(\d+)\}", pub_sec).group(1)), bf="*")
+    chapters = [tex_to_md(r[-1], bf="*") for r in table_rows(section(tex, "Book Chapters"))]
     talk_sec = section(tex, "Selected Conference Presentations")
     talks = numbered(table_rows(talk_sec), int(re.search(r"\\setcounter\{pubno\}\{(\d+)\}", talk_sec).group(1)))
 
@@ -212,6 +230,7 @@ def main():
     md.append("---\ntitle: Curriculum Vitae\ndescription: Curriculum vitae of Colin Ophus, "
               "Associate Professor of Materials Science and Engineering at Stanford University.\n---\n")
     md.append(":::{anywidget} ./widgets/section-nav.js\n{}\n:::\n")
+    md.append(":::{anywidget} ./widgets/cv-style.js\n{}\n:::\n")
     md.append("**Colin Ophus**  \nAssociate Professor, Materials Science and Engineering, Stanford University  \n"
               "[cophus@stanford.edu](mailto:cophus@stanford.edu) · "
               "[Google Scholar](https://scholar.google.com/citations?hl=en&user=h5MPYJAAAAAJ&view_op=list_works&sortby=pubdate) · "
@@ -236,7 +255,8 @@ def main():
     md.append("## Invited Talks\n")
     for year, items in by_year(talks, talk_year):
         md.append("**%s**\n" % year)
-        md.append("\n".join("- " + re.sub(r"^%s\s*" % year, "", t).lstrip(", ") for _, t in items) + "\n")
+        rows = [talk_row(re.sub(r"^%s\s*" % year, "", t).lstrip(", ")) for _, t in items]
+        md.append("| Date | Talk |\n|:--|:--|\n" + "\n".join("| %s | %s |" % r for r in rows) + "\n")
 
     open(OUT, "w", encoding="utf-8").write("\n".join(md))
     print("wrote %s: %d publications, %d talks" % (OUT, len(pubs), len(talks)))
