@@ -234,25 +234,20 @@ function render({ model, el }) {
       position: fixed; z-index: 9999; width: 500px; max-width: 94vw;
       background: #fff; color: #1f2937; border: 1px solid #e5e7eb; border-radius: 10px;
       box-shadow: 0 10px 34px rgba(0,0,0,0.18); overflow: hidden; pointer-events: none;
+      display: flex; flex-direction: column;
       opacity: 0; transform: translateY(4px);
       transition: opacity .14s ease, transform .14s ease;
       font-size: 0.84em; line-height: 1.5;
     }
-    .${id}-hovercard.show { opacity: 1; transform: translateY(0); pointer-events: auto; }
-    .${id}-hc-img { display: block; width: 100%; max-height: 320px; object-fit: contain;
+    .${id}-hovercard.show { opacity: 1; transform: translateY(0); }
+    /* full abstract always shows; when space is short the figure shrinks instead */
+    .${id}-hc-img { display: block; width: 100%; max-height: 320px; min-height: 0; flex: 0 1 auto; object-fit: contain;
       background: #f6f6f7; border-bottom: 1px solid #eee; }
-    .${id}-hc-body { padding: 11px 13px 13px; }
-    .${id}-hc-title { font-weight: 600; color: #111; margin: 0 0 3px; font-size: 0.96em; line-height: 1.35; }
-    .${id}-hc-title a { color: inherit; text-decoration: none; }
-    .${id}-hc-title a:hover { text-decoration: underline; }
-    .${id}-hc-meta { color: #6b7280; font-style: italic; margin: 0 0 7px; font-size: 0.92em; }
-    .${id}-hc-abs { margin: 0; color: #374151;
-      display: -webkit-box; -webkit-line-clamp: 9; -webkit-box-orient: vertical; overflow: hidden; }
+    .${id}-hc-body { padding: 11px 13px 13px; flex: 0 0 auto; }
+    .${id}-hc-abs { margin: 0; color: #374151; }
     .${id}-dark .${id}-hovercard { background: #111827; color: #d1d5db; border-color: #374151;
       box-shadow: 0 10px 34px rgba(0,0,0,0.5); }
     .${id}-dark .${id}-hc-img { background: #0b0f16; border-bottom-color: #1f2937; }
-    .${id}-dark .${id}-hc-title { color: #f3f4f6; }
-    .${id}-dark .${id}-hc-meta { color: #9ca3af; }
     .${id}-dark .${id}-hc-abs { color: #cbd5e1; }
   `;
   el.appendChild(style);
@@ -280,9 +275,14 @@ function render({ model, el }) {
   new MutationObserver(applyTheme).observe(document.documentElement, { attributes: true });
   window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", applyTheme);
 
-  fetch(dataUrl)
-    .then((r) => r.json())
-    .then((papers) => buildUI(papers))
+  // Group roster (bold + red authors) sits next to the paper data in the repo.
+  const groupUrl = new URL("group-authors.json", new URL(dataUrl, location.href)).href;
+  let group = { members: [], exclude: [] };
+  Promise.all([
+    fetch(dataUrl).then((r) => r.json()),
+    fetch(groupUrl).then((r) => (r.ok ? r.json() : null)).catch(() => null),
+  ])
+    .then(([papers, g]) => { if (g) group = g; buildUI(papers); })
     .catch((err) => {
       wrap.innerHTML = `<div style="color:red;">Failed to load papers: ${err.message}</div>`;
     });
@@ -376,13 +376,32 @@ function render({ model, el }) {
     function hideCard() { clearTimeout(showTimer); clearTimeout(hideTimer); hoverCurrent = null; hovercard.classList.remove("show"); }
     function scheduleHide() { clearTimeout(hideTimer); hideTimer = setTimeout(hideCard, 140); }
     function cancelHide() { clearTimeout(hideTimer); }
-    // Centered on the hovered paper (partially overlapping it), clamped to the viewport.
+    // Placed beside the hovered paper, never on top of it: right or left when
+    // there is room, else above or below (whichever has more space, shrinking
+    // the card to fit). The card ignores the mouse, so links under it still work.
     function positionCard(cardEl) {
       const r = cardEl.getBoundingClientRect();
-      const w = hovercard.offsetWidth || 500, h = hovercard.offsetHeight;
-      const left = r.left + r.width / 2 - w / 2, top = r.top + r.height / 2 - h / 2;
-      hovercard.style.left = Math.max(8, Math.min(left, window.innerWidth - w - 8)) + "px";
-      hovercard.style.top = Math.max(8, Math.min(top, window.innerHeight - h - 8)) + "px";
+      const vw = window.innerWidth, vh = window.innerHeight, gap = 12, pad = 8;
+      const st = hovercard.style;
+      st.maxHeight = ""; st.width = "";
+      const right = vw - r.right - gap - pad, left = r.left - gap - pad;
+      const side = Math.max(right, left);
+      if (side >= 320) {
+        const w = Math.min(560, side);
+        st.width = w + "px";
+        const h = Math.min(hovercard.offsetHeight, vh - 2 * pad);
+        st.maxHeight = h + "px";
+        st.left = (right >= left ? r.right + gap : r.left - gap - w) + "px";
+        st.top = Math.max(pad, Math.min(r.top + r.height / 2 - h / 2, vh - h - pad)) + "px";
+        return;
+      }
+      const w = Math.min(560, vw - 2 * pad);
+      st.width = w + "px";
+      const below = vh - r.bottom - gap - pad, above = r.top - gap - pad;
+      const h = Math.min(hovercard.offsetHeight, Math.max(below, above));
+      st.maxHeight = h + "px";
+      st.left = Math.max(pad, Math.min(r.left + r.width / 2 - w / 2, vw - w - pad)) + "px";
+      st.top = (below >= above ? r.bottom + gap : r.top - gap - h) + "px";
     }
     function showCard(cardEl) {
       const p = papers[+cardEl.dataset.pidx];
@@ -392,24 +411,13 @@ function render({ model, el }) {
       if (info.image) {
         const img = document.createElement("img");
         img.className = `${id}-hc-img`; img.alt = ""; img.referrerPolicy = "no-referrer";
-        img.onerror = () => img.remove();
+        img.onerror = () => { img.remove(); if (hoverCurrent === cardEl) positionCard(cardEl); };
+        img.onload = () => { if (hoverCurrent === cardEl) positionCard(cardEl); };
         img.src = info.image;
         hovercard.appendChild(img);
       }
       const body = document.createElement("div");
       body.className = `${id}-hc-body`;
-      const t = document.createElement("div");
-      t.className = `${id}-hc-title`;
-      const link = document.createElement("a");
-      link.href = p.url; link.target = "_blank"; link.rel = "noopener"; link.textContent = p.title;
-      t.appendChild(link);
-      body.appendChild(t);
-      const metaStr = [p.journal, p.year].filter(Boolean).join(" · ");
-      if (metaStr) {
-        const m = document.createElement("div");
-        m.className = `${id}-hc-meta`; m.textContent = metaStr;
-        body.appendChild(m);
-      }
       if (info.abstract) {
         const a = document.createElement("div");
         a.className = `${id}-hc-abs`; a.textContent = info.abstract;
@@ -434,14 +442,8 @@ function render({ model, el }) {
         const card = e.target.closest(`.${id}-paper`);
         if (!card) return;
         const to = e.relatedTarget;
-        if (to && (card.contains(to) || hovercard.contains(to))) return;
+        if (to && card.contains(to)) return;
         clearTimeout(showTimer);
-        scheduleHide();
-      });
-      hovercard.addEventListener("mouseenter", cancelHide);
-      hovercard.addEventListener("mouseleave", (e) => {
-        const to = e.relatedTarget;
-        if (to && to.closest && to.closest(`.${id}-paper`)) return;
         scheduleHide();
       });
       window.addEventListener("scroll", () => { if (hoverCurrent) hideCard(); }, { passive: true });
@@ -530,20 +532,34 @@ function render({ model, el }) {
       return s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
     }
 
-    // Author line as HTML. The group's own name is ALWAYS kept (long lists used
-    // to truncate to first-five-plus-last, which dropped it on most papers) and
-    // is bolded. Names are escaped individually so the markup survives.
+    // Author line as HTML. Group members (data/group-authors.json) are bold
+    // red. Long lists used to truncate to first-five-plus-last; group members
+    // are always kept. Names are escaped individually so the markup survives.
     const OWN_NAME = /ophus/i;
-    function authorsHtml(authors) {
+    function nameKey(a) {
+      const w = a.replace(/[.\u2010-\u2015-]/g, " ").trim().split(/\s+/);
+      return { first: (w[0] || "").toLowerCase(), last: (w[w.length - 1] || "").toLowerCase() };
+    }
+    let memberKeys = null;
+    function isMember(a, doi, i, n) {
+      if (!memberKeys) memberKeys = (group.members || []).map(nameKey);
+      // exclude: same-named outsider; optional "last": true limits it to the last author
+      if ((group.exclude || []).some((e) => e.name === a && e.doi.toLowerCase() === doi &&
+        (!e.last || i === n - 1))) return false;
+      const k = nameKey(a);
+      return memberKeys.some((m) => m.last === k.last &&
+        (m.first === k.first || (k.first.length === 1 && m.first[0] === k.first)));
+    }
+    function authorsHtml(authors, doi) {
       if (!authors || authors.length === 0) return "";
-      const mine = authors.findIndex((a) => OWN_NAME.test(a));
+      const hi = authors.map((a, i) => OWN_NAME.test(a) || isMember(a, doi, i, authors.length));
       const name = (i) => {
         const n = escHtml(authors[i]);
-        return i === mine ? `<span class="${id}-own">${n}</span>` : n;
+        return hi[i] ? `<span class="${id}-own">${n}</span>` : n;
       };
       if (authors.length <= 6) return authors.map((_, i) => name(i)).join(", ");
       const keep = new Set([0, 1, 2, 3, 4, authors.length - 1]);
-      if (mine >= 0) keep.add(mine);
+      hi.forEach((h, i) => { if (h) keep.add(i); });
       const idx = [...keep].sort((a, b) => a - b);
       // ", " between adjacent authors, ", ... " across an elided gap
       return idx
@@ -601,7 +617,7 @@ function render({ model, el }) {
             .map((t) => `<span class="${id}-paper-tag">${escHtml(t)}</span>`)
             .join("");
 
-          const authorsMarkup = authorsHtml(p.authors || []);
+          const authorsMarkup = authorsHtml(p.authors || [], normDoi(p.url));
           const journal = p.journal || "";
           let metaParts = [];
           if (authorsMarkup) metaParts.push(authorsMarkup);
