@@ -354,7 +354,8 @@
       "Sandip De",
       "Matteo Cargnello"
     ],
-    "journal": "Journal of the American Chemical Society"
+    "journal": "Journal of the American Chemical Society",
+    "image": "images/papers/seed-mediated-colloidal-synthesis-multimetallic.jpg"
   },
   {
     "title": "Beyond Contrast Transfer: Spectral SNR as a Finite-Dose Metric for STEM Phase Retrieval",
@@ -998,7 +999,8 @@
       "Tobias Heil",
       "Peter A. van Aken"
     ],
-    "journal": "Advanced Materials Interfaces"
+    "journal": "Advanced Materials Interfaces",
+    "image": "images/papers/atomic-scale-mechanisms-nucleation-stabilization.jpg"
   },
   {
     "title": "Atomic-scale 3D structural dynamics and functional degradation of Pt alloy nanocatalysts during the oxygen reduction reaction",
@@ -1073,7 +1075,8 @@
       "Nitash P. Balsara",
       "Andrew M. Minor"
     ],
-    "journal": "Macromolecular Rapid Communications"
+    "journal": "Macromolecular Rapid Communications",
+    "image": "images/papers/situ-4d-stem-imaging-orientation.jpg"
   },
   {
     "title": "Mapping strain and structural heterogeneities around bubbles in amorphous ionically conductive Bi₂O₃",
@@ -1213,7 +1216,8 @@
       "Huiqiu Deng",
       "Marie Loyer-Prost"
     ],
-    "journal": "Science Advances"
+    "journal": "Science Advances",
+    "image": "images/papers/decoding-interstitial-vacancy-nature-dislocation.jpg"
   },
   {
     "title": "Accelerating iterative ptychography with an integrated neural network",
@@ -1232,7 +1236,8 @@
       "Georgios Varnavides",
       "Colin Ophus"
     ],
-    "journal": "Journal of Microscopy"
+    "journal": "Journal of Microscopy",
+    "image": "images/papers/accelerating-iterative-ptychography-integrated-n.jpg"
   },
   {
     "title": "Template Matching Approach for Automated Determination of Crystal Phase and Orientation of Grains in 4D-STEM Precession Electron Diffraction Data for Hafnium Zirconium Oxide Ferroelectric Thin Films",
@@ -1264,7 +1269,8 @@
       "Robert Stroud",
       "Gert Leusink"
     ],
-    "journal": "Microscopy and Microanalysis"
+    "journal": "Microscopy and Microanalysis",
+    "image": "images/papers/template-matching-approach-automated-determinati.jpg"
   },
   {
     "title": "Complexions at the iron–magnetite interface",
@@ -1340,7 +1346,8 @@
       "Andrew M. Minor",
       "Peter Hosemann"
     ],
-    "journal": "ACS Applied Materials & Interfaces"
+    "journal": "ACS Applied Materials & Interfaces",
+    "image": "images/papers/stacking-kerogen-mechanical-impact.jpg"
   },
   {
     "title": "Tailored topotactic chemistry unlocks heterostructures of magnetic intercalation compounds",
@@ -1531,7 +1538,8 @@
       "Steven Ehrlich",
       "Gerbrand Ceder"
     ],
-    "journal": "Advanced Materials"
+    "journal": "Advanced Materials",
+    "image": "images/papers/accelerating-electrochemical-formation-phase-man.jpg"
   },
   {
     "title": "The atomic-level structure and stability of interfaces of Pt nanoparticles in alumina: An experimental and computational evaluation",
@@ -1815,7 +1823,8 @@
       "Alexei Gruverman",
       "Dennis Meier"
     ],
-    "journal": "Advanced Materials"
+    "journal": "Advanced Materials",
+    "image": "images/papers/observation-antiferroelectric-domain-walls-uniax.jpg"
   },
   {
     "title": "Integrated rocksalt–polyanion cathodes with excess lithium and stabilized cycling",
@@ -1941,7 +1950,8 @@
       "Jinkyoung Yoo",
       "Michael T. Pettes"
     ],
-    "journal": "ACS Nano"
+    "journal": "ACS Nano",
+    "image": "images/papers/direct-measurement-thermal-expansion-coefficient.jpg"
   },
   {
     "title": "Reversible phase transformations between Pb nanocrystals and a viscous liquid-like phase",
@@ -1986,7 +1996,8 @@
       "Susan B. Sinnott",
       "Nasim Alem"
     ],
-    "journal": "ACS Nano"
+    "journal": "ACS Nano",
+    "image": "images/papers/chemical-environment-structural-variations-high.jpg"
   },
   {
     "title": "Ion Implantation-Induced Plastic Phenomena in Metallic Alloys",
@@ -2007,7 +2018,8 @@
       "Yang Yang",
       "Janelle P. Wharry"
     ],
-    "journal": "JOM"
+    "journal": "JOM",
+    "image": "images/papers/ion-implantation-induced-plastic-phenomena.jpg"
   },
   {
     "title": "Direct Imaging of the Crystalline Domains and Their Orientation in the PS-b-PEO Block Copolymer with 4DSTEM",
@@ -2032,7 +2044,8 @@
       "Nitash P. Balsara",
       "Andrew M. Minor"
     ],
-    "journal": "Macromolecules"
+    "journal": "Macromolecules",
+    "image": "images/papers/direct-imaging-crystalline-domains-their.jpg"
   },
   {
     "title": "Electronic structure along Sm₂Co₃Ge₅ twin boundaries",
@@ -2077,7 +2090,8 @@
       "Andrew H. Comstock",
       "Shijing Sun"
     ],
-    "journal": "Chemical Science"
+    "journal": "Chemical Science",
+    "image": "images/papers/how-ai-assisted-discovery-synthesis.jpg"
   },
   {
     "title": "Rejuvenation as the origin of planar defects in the CrCoNi medium entropy alloy",
@@ -2219,7 +2233,8 @@
       "Colin Ophus",
       "Michael Thompson Pettes"
     ],
-    "journal": "Nano Letters"
+    "journal": "Nano Letters",
+    "image": "images/papers/enabling-oxidation-protection-carrier-type.jpg"
   },
   {
     "title": "Energy Funneling in a Noninteger Two-Dimensional Perovskite",
@@ -2292,7 +2307,8 @@
       "Colin Ophus",
       "Mary C. Scott"
     ],
-    "journal": "ACS Nano"
+    "journal": "ACS Nano",
+    "image": "images/papers/analysis-strain-defects-tellurium-wse.jpg"
   },
   {
     "title": "Relativistic ultrafast electron diffraction at high repetition rates",
@@ -2440,7 +2456,8 @@
       "Gun-Do Lee",
       "Jamie H. Warner"
     ],
-    "journal": "Nano Letters"
+    "journal": "Nano Letters",
+    "image": "images/papers/mapping-nanoscale-electrostatic-field-fluctuatio.jpg"
   },
   {
     "title": "Observing ion diffusion and reciprocating hopping motion in water",
@@ -2548,7 +2565,8 @@
       "Barry P. Rand",
       "Naomi S. Ginsberg"
     ],
-    "journal": "Advanced Functional Materials"
+    "journal": "Advanced Functional Materials",
+    "image": "images/papers/multimodal-characterization-crystal-structure-fo.jpg"
   },
   {
     "title": "Resolution of Virtual Depth Sectioning from Four-Dimensional Scanning Transmission Electron Microscopy",
@@ -2568,7 +2586,8 @@
       "Colin Ophus",
       "S D Findlay"
     ],
-    "journal": "Microscopy and Microanalysis"
+    "journal": "Microscopy and Microanalysis",
+    "image": "images/papers/resolution-virtual-depth-sectioning-four.jpg"
   },
   {
     "title": "Atomic motifs govern the decoration of grain boundaries by interstitial solutes",
@@ -2759,7 +2778,8 @@
       "Colin Ophus",
       "M. C. Scott"
     ],
-    "journal": "APL Machine Learning"
+    "journal": "APL Machine Learning",
+    "image": "images/papers/robust-design-semi-automated-clustering.jpg"
   },
   {
     "title": "4DSTEM reveals crystallization mechanisms of organic semiconductors on graphene",
@@ -2781,7 +2801,8 @@
       "Alejandro L. Briseno",
       "Enrique D. Gomez"
     ],
-    "journal": "MRS Communications"
+    "journal": "MRS Communications",
+    "image": "images/papers/4dstem-reveals-crystallization-mechanisms-organi.jpg"
   },
   {
     "title": "Formation of hierarchically ordered structures in conductive polymers to enhance the performances of lithium-ion batteries",
@@ -2952,7 +2973,8 @@
       "Colin Ophus",
       "Mary C Scott"
     ],
-    "journal": "Microscopy and Microanalysis"
+    "journal": "Microscopy and Microanalysis",
+    "image": "images/papers/analysis-interpretable-data-representations-4dst.jpg"
   },
   {
     "title": "Flexible CO₂ Sensor Architecture with Selective Nitrogen Functionalities by One-Step Laser-Induced Conversion of Versatile Organic Ink",
@@ -2979,7 +3001,8 @@
       "Benjamin Butz",
       "Volker Strauss"
     ],
-    "journal": "Advanced Functional Materials"
+    "journal": "Advanced Functional Materials",
+    "image": "images/papers/flexible-co-sensor-architecture-selective.jpg"
   },
   {
     "title": "Deep learning for electron and scanning probe microscopy: From materials design to atomic fabrication",
@@ -3338,7 +3361,8 @@
       "Jinkyoung Yoo",
       "Michael T. Pettes"
     ],
-    "journal": "Nano Letters"
+    "journal": "Nano Letters",
+    "image": "images/papers/visualizing-grain-statistics-mocvd-wse.jpg"
   },
   {
     "title": "Scattering matrix determination in crystalline materials from 4D scanning transmission electron microscopy at a single defocus value",
@@ -3645,7 +3669,8 @@
       "Karen Bustillo",
       "Igor Zlotnikov"
     ],
-    "journal": "Advanced Materials"
+    "journal": "Advanced Materials",
+    "image": "images/papers/crystallization-amorphous-particle-attachment-ev.jpg"
   },
   {
     "title": "Fast Grain Mapping with Sub-Nanometer Resolution Using 4DSTEM with Grain Classification by Principal Component Analysis and Non-Negative Matrix Factorization",
@@ -3826,7 +3851,8 @@
       "Peter Ercius",
       "A. Paul Alivisatos"
     ],
-    "journal": "Science"
+    "journal": "Science",
+    "image": "images/papers/chain-chirality-transfer-tellurium-nanocrystals.jpg"
   },
   {
     "title": "Extreme mixing in nanoscale transition metal alloys",
@@ -4086,7 +4112,8 @@
       "Haimei Zheng",
       "Emory M. Chan"
     ],
-    "journal": "Nanoscale"
+    "journal": "Nanoscale",
+    "image": "images/papers/hybrid-nanocapsules-situ-tem-imaging.jpg"
   },
   {
     "title": "Creation of skyrmions in van der Waals ferromagnet Fe₃GeTe₂ on (Co/Pd)ₙ superlattice",
@@ -4115,7 +4142,8 @@
       "F. Wang",
       "Z. Q. Qiu"
     ],
-    "journal": "Science Advances"
+    "journal": "Science Advances",
+    "image": "images/papers/creation-skyrmions-van-der-waals.jpg"
   },
   {
     "title": "Tilted fluctuation electron microscopy",
@@ -4206,7 +4234,8 @@
       "Andreas K. Schmid",
       "Roland Wiesendanger"
     ],
-    "journal": "Nano Letters"
+    "journal": "Nano Letters",
+    "image": "images/papers/tuning-properties-zero-field-room.jpg"
   },
   {
     "title": "Atomic structures determined from digitally defined nanocrystalline regions",
@@ -4359,7 +4388,8 @@
       "Zhiqiang Chen",
       "Andrew M. Minor"
     ],
-    "journal": "Advanced Materials"
+    "journal": "Advanced Materials",
+    "image": "images/papers/functional-materials-under-stress-situ.jpg"
   },
   {
     "title": "Real time imaging of two-dimensional iron oxide spherulite nanostructure formation",
@@ -4570,7 +4600,8 @@
       "Angus I. Kirkland",
       "Jamie H. Warner"
     ],
-    "journal": "Nano Letters"
+    "journal": "Nano Letters",
+    "image": "images/papers/simultaneous-identification-low-high-atomic.jpg"
   },
   {
     "title": "Formation of two-dimensional transition metal oxide nanosheets with nanoparticles as intermediates",
@@ -4649,7 +4680,8 @@
     "authors": [
       "Colin Ophus"
     ],
-    "journal": "Microscopy and Microanalysis"
+    "journal": "Microscopy and Microanalysis",
+    "image": "images/papers/4dstem-scanning-nanodiffraction-ptychography-bey.jpg"
   },
   {
     "title": "Interplay between Short‐and Long‐Ranged Forces Leading to the Formation of Ag Nanoparticle Superlattice",
@@ -4671,7 +4703,8 @@
       "Jaehun Chun",
       "Dongsheng Li"
     ],
-    "journal": "Small"
+    "journal": "Small",
+    "image": "images/papers/interplay-between-short-long-ranged.jpg"
   },
   {
     "title": "Dynamic deformability of individual PbSe nanocrystals during superlattice phase transitions",
@@ -4863,7 +4896,8 @@
       "Kenneth H. Downing",
       "Nitash P. Balsara"
     ],
-    "journal": "The Journal of Physical Chemistry B"
+    "journal": "The Journal of Physical Chemistry B",
+    "image": "images/papers/resolving-morphology-peptoid-vesicles-one.jpg"
   },
   {
     "title": "Nanoscale mosaicity revealed in peptide microcrystals by scanning electron nanodiffraction",
@@ -5133,7 +5167,8 @@
       "Sayeef Salahuddin",
       "Peter Fischer"
     ],
-    "journal": "Advanced Materials"
+    "journal": "Advanced Materials",
+    "image": "images/papers/experimental-evidence-chiral-ferrimagnetism-amor.jpg"
   },
   {
     "title": "Local nanoscale strain mapping of a metallic glass during in situ testing",
@@ -5280,7 +5315,8 @@
       "Johannes A. Lercher",
       "Nigel D. Browning"
     ],
-    "journal": "Journal of the American Chemical Society"
+    "journal": "Journal of the American Chemical Society",
+    "image": "images/papers/formation-oxygen-radical-sites-movnbteox.jpg"
   },
   {
     "title": "Dynamics of Symmetry-Breaking Stacking Boundaries in Bilayer MoS₂",
@@ -5340,7 +5376,8 @@
       "Erdmann Spiecker",
       "Velimir R Radmilović"
     ],
-    "journal": "Nanotechnology"
+    "journal": "Nanotechnology",
+    "image": "images/papers/low-temperature-solid-state-wetting.jpg"
   },
   {
     "title": "The effect of film thickness on Curie temperature distribution and magnetization reversal mechanism for granular L1₀ FePt films",
@@ -5585,7 +5622,8 @@
       "Alex Zettl",
       "Jim Ciston"
     ],
-    "journal": "Advanced Structural and Chemical Imaging"
+    "journal": "Advanced Structural and Chemical Imaging",
+    "image": "images/papers/automatic-software-correction-residual-aberratio.jpg"
   },
   {
     "title": "Characterization of Ordering in A-Site Deficient Perovskite Ca₁₋ₓLa₂ₓ/₃TiO₃ Using STEM/EELS",
@@ -5710,7 +5748,8 @@
       "Roya Maboudian",
       "Carlo Carraro"
     ],
-    "journal": "Crystal Growth & Design"
+    "journal": "Crystal Growth & Design",
+    "image": "images/papers/demonstration-hexagonal-phase-silicon-carbide.jpg"
   },
   {
     "title": "Nanomaterial datasets to advance tomography in scanning transmission electron microscopy",
@@ -5956,7 +5995,8 @@
       "Colin Ophus",
       "Alex Zettl"
     ],
-    "journal": "Advanced Materials"
+    "journal": "Advanced Materials",
+    "image": "images/papers/atomic-defects-two-dimensional-materials.jpg"
   },
   {
     "title": "Analysis of grain boundary dynamics using event detection and cumulative averaging",
@@ -5993,7 +6033,8 @@
       "Boris I. Yakobson",
       "Alex Zettl"
     ],
-    "journal": "Nano Letters"
+    "journal": "Nano Letters",
+    "image": "images/papers/conserved-atomic-bonding-sequences-strain.jpg"
   },
   {
     "title": "HAADF imaging of the omega (ω) phase in a gum metal-related alloy",
@@ -6035,7 +6076,8 @@
       "Robert Westervelt",
       "Efthimios Kaxiras"
     ],
-    "journal": "Nano Letters"
+    "journal": "Nano Letters",
+    "image": "images/papers/direct-observation-long-lived-single.jpg"
   },
   {
     "title": "Measurement of the intrinsic strength of crystalline and polycrystalline graphene",
@@ -6232,7 +6274,8 @@
       "M. Asta",
       "U. Dahmen"
     ],
-    "journal": "Nature Materials"
+    "journal": "Nature Materials",
+    "image": "images/papers/highly-monodisperse-core-shell-particles.jpg"
   },
   {
     "title": "A systematic neutron reflectometry study on hydrogen absorption in thin Mg₁₋ₓAlₓ alloy films",
