@@ -19,7 +19,8 @@
       "Colin Ophus",
       "Alfred Zong"
     ],
-    "journal": "Physical Review Materials"
+    "journal": "Physical Review Materials",
+    "image": "images/papers/bcet.jpg"
   },
   {
     "title": "Correlative 3D Electron Tomography and Nanobeam 4D-STEM Mapping of Orientation and Strain in Welded Silver Nanowires",
@@ -39,18 +40,6 @@
       "Velimir R. Radmilović"
     ],
     "journal": "Small"
-  },
-  {
-    "title": "4D STEM",
-    "url": "https://doi.org/10.1007/978-3-031-80789-3_17",
-    "year": 2026,
-    "tags": [
-      "4DSTEM"
-    ],
-    "authors": [
-      "Colin Ophus"
-    ],
-    "journal": "Transmission Electron Microscopy"
   },
   {
     "title": "Bicarbonate Liquid Condensate Controls Manganese Partitioning in Calcite",
@@ -96,7 +85,8 @@
       "Daniel N. Congreve",
       "William C. Chueh"
     ],
-    "journal": "Energy & Environmental Science"
+    "journal": "Energy & Environmental Science",
+    "image": "images/papers/anode-free-aqueous.jpg"
   },
   {
     "title": "In Situ Gas-Cell Electron Microscopy Reveals Pressure-Selected Restructuring Pathways in AuRu Ammonia Catalysts",
@@ -120,7 +110,8 @@
       "Colin Ophus",
       "Jennifer A. Dionne"
     ],
-    "journal": "Journal of the American Chemical Society"
+    "journal": "Journal of the American Chemical Society",
+    "image": "images/papers/gas-cell-pressure.jpg"
   },
   {
     "title": "Crystallographic challenges in microscopy of multi-domain spinel materials",
@@ -141,7 +132,8 @@
       "Tara P. Mishra",
       "Gerbrand Ceder"
     ],
-    "journal": "Journal of Materials Chemistry A"
+    "journal": "Journal of Materials Chemistry A",
+    "image": "images/papers/multidomain-crystallography.jpg"
   },
   {
     "title": "Programable Beam Control for Electron Energy-Loss Spectroscopy and Ptychography",
@@ -163,7 +155,8 @@
       "Stephanie M Ribet",
       "Michele Shelly Conroy"
     ],
-    "journal": "Microscopy and Microanalysis"
+    "journal": "Microscopy and Microanalysis",
+    "image": "images/papers/programmable-eels.jpg"
   },
   {
     "title": "5D-STEM of energy materials: Recording real and reciprocal space dynamics via in situ 4D-STEM",
@@ -179,7 +172,8 @@
       "Serin Lee",
       "Colin Ophus"
     ],
-    "journal": "MRS Communications"
+    "journal": "MRS Communications",
+    "image": "images/papers/5d-stem.jpg"
   },
   {
     "title": "Atomic Evolution of Hydrogen Intercalation Wave Dynamics in Palladium Nanocrystals Revealed by Liquid-Phase Transmission Electron Microscopy",
@@ -205,7 +199,8 @@
       "David T Limmer",
       "Haimei Zheng"
     ],
-    "journal": "Journal of the American Chemical Society"
+    "journal": "Journal of the American Chemical Society",
+    "image": "images/papers/hydrogen-intercalation.jpg"
   },
   {
     "title": "Staging and defect-limited intercalation of FeCl3 in graphite electrodes",
@@ -223,7 +218,8 @@
       "Colin Ophus",
       "Andrew M Minor"
     ],
-    "journal": "Nature Communications"
+    "journal": "Nature Communications",
+    "image": "images/papers/fecl3-graphite.jpg"
   },
   {
     "title": "Three-Dimensional Atomic Scale Insights into Unconventional Fragmentation of Two-Dimensional ReS₂ Monolayers into Molecular Clusters",
@@ -263,7 +259,8 @@
       "Jennifer A. Dionne",
       "Colin Ophus"
     ],
-    "journal": "Microscopy and Microanalysis"
+    "journal": "Microscopy and Microanalysis",
+    "image": "images/papers/unsupervised-segmentation.jpg"
   },
   {
     "title": "Nanocrystal Geometry Governs Phase Transformation Pathways in Palladium Hydride",
@@ -295,7 +292,8 @@
       "David T. Limmer",
       "Haimei Zheng"
     ],
-    "journal": "ACS Nano"
+    "journal": "ACS Nano",
+    "image": "images/papers/nanocrystal-geometry.jpg"
   },
   {
     "title": "Polyolefin blends with co-continuous architectures enabled by dynamic covalent crosslinking",
@@ -374,7 +372,8 @@
       "Lewys Jones",
       "Colin Ophus"
     ],
-    "journal": "Microscopy and Microanalysis"
+    "journal": "Microscopy and Microanalysis",
+    "image": "images/papers/spectral-snr.jpg"
   },
   {
     "title": "Relaxing direct ptychography sampling requirements via parallax imaging insights",
@@ -395,7 +394,8 @@
       "Lewys Jones",
       "Colin Ophus"
     ],
-    "journal": "Microscopy and Microanalysis"
+    "journal": "Microscopy and Microanalysis",
+    "image": "images/papers/direct-ptycho-parallax.jpg"
   },
   {
     "title": "Identifying Strain Stacking Boundaries between Multiphase Domains in Atomically Thin Two-Dimensional Magnets",
@@ -543,7 +543,8 @@
       "Alison M. Funston",
       "Joanne Etheridge"
     ],
-    "journal": "Nature Communications"
+    "journal": "Nature Communications",
+    "image": "images/papers/gold-hard-soft.jpg"
   },
   {
     "title": "Spatial correlations of charge density wave order across the transition in 2H–NbSe₂",
@@ -567,7 +568,8 @@
       "SungBin Lee",
       "Yongsoo Yang"
     ],
-    "journal": "Physical Review Letters"
+    "journal": "Physical Review Letters",
+    "image": "images/papers/cdw-correlations.jpg"
   },
   {
     "title": "Accelerating electron diffraction analysis using graph neural networks and attention mechanisms",
@@ -590,7 +592,8 @@
       "Colin Ophus",
       "Iman Ghamarian"
     ],
-    "journal": "npj Computational Materials"
+    "journal": "npj Computational Materials",
+    "image": "images/papers/gnn-diffraction.jpg"
   },
   {
     "title": "Multislice-based nonlinear phase retrieval for high-resolution cryo-electron tomography",
@@ -641,7 +644,8 @@
       "Mary C. Scott",
       "Michael L. Whittaker"
     ],
-    "journal": "Nature Communications"
+    "journal": "Nature Communications",
+    "image": "images/papers/phaset3m.jpg"
   },
   {
     "title": "Fabrication and characterization of boron-terminated tetravacancies in monolayer hBN using STEM, EELS and electron ptychography",
@@ -662,7 +666,8 @@
       "Colin Ophus",
       "Frances I. Allen"
     ],
-    "journal": "Ultramicroscopy"
+    "journal": "Ultramicroscopy",
+    "image": "images/papers/boron-tetravacancy.jpg"
   },
   {
     "title": "A large interlaboratory electron diffraction study of monolayer graphene",
@@ -722,7 +727,8 @@
       "Andrew J Pollard",
       "Sarah J Haigh"
     ],
-    "journal": "2D Materials"
+    "journal": "2D Materials",
+    "image": "images/papers/interlab-diffraction.jpg"
   },
   {
     "title": "Defect-assisted refinement of nanoscale alpha in titanium alloys",
@@ -744,7 +750,8 @@
       "Phani Karamched",
       "David Dye"
     ],
-    "journal": "Communications Materials"
+    "journal": "Communications Materials",
+    "image": "images/papers/titanium-alpha.jpg"
   },
   {
     "title": "Evaluating the Transfer of Information in Phase Retrieval STEM Techniques",
@@ -850,8 +857,14 @@
       "Nanoparticles",
       "Ptychography"
     ],
-    "authors": [],
-    "journal": ""
+    "authors": [
+      "Dana O. Byrne",
+      "Stephanie M. Ribet",
+      "Karen C. Bustillo",
+      "Colin Ophus",
+      "Frances I. Allen"
+    ],
+    "journal": "Microscopy and Microanalysis"
   },
   {
     "title": "AnyAtom: domain-randomized atomic priors for electron tomography",
@@ -3045,14 +3058,21 @@
     "journal": "Nature Communications"
   },
   {
-    "title": "Seeing structural evolution of organic molecular nano-crystallites using 4DSCED",
-    "url": "https://doi.org/10.5281/zenodo.5831202",
+    "title": "Seeing structural evolution of organic molecular nano-crystallites using 4D scanning confocal electron diffraction (4D-SCED)",
+    "url": "https://doi.org/10.1038/s41467-022-30413-5",
     "year": 2022,
     "tags": [
       "4DSTEM"
     ],
-    "authors": [],
-    "journal": ""
+    "authors": [
+      "Mingjian Wu",
+      "Christina Harreiß",
+      "Colin Ophus",
+      "Manuel Johnson",
+      "Rainer H. Fink",
+      "Erdmann Spiecker"
+    ],
+    "journal": "Nature Communications"
   },
   {
     "title": "Correlative image learning of chemo-mechanics in phase-transforming solids",

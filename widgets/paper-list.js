@@ -2,7 +2,7 @@
 
 function render({ model, el }) {
   const dataUrl = model.get("data_url") || "";
-  const accentColor = model.get("accent_color") || "#8C1515";
+  const accentColor = model.get("accent_color") || "#B0181E";
   const accentColorDark = model.get("accent_color_dark") || "#E8A0A0";
   const hoverUrl = model.get("hover_url") || "";
 
@@ -149,8 +149,26 @@ function render({ model, el }) {
       padding: 0.5em 0;
       line-height: 1.5;
     }
+    .${id}-paper.has-thumb {
+      display: flex;
+      gap: 0.9em;
+      align-items: flex-start;
+    }
+    .${id}-thumb {
+      flex: 0 0 128px;
+      width: 128px;
+      height: 96px;
+      object-fit: cover;
+      border-radius: 4px;
+      border: 1px solid #e5e7eb;
+      background: #f6f6f7;
+    }
+    .${id}-paper-body { flex: 1 1 auto; min-width: 0; }
+    @media (max-width: 520px) {
+      .${id}-thumb { flex-basis: 88px; width: 88px; height: 66px; }
+    }
     .${id}-paper a {
-      color: #6b1010;
+      color: ${accentColor};
       text-decoration: none;
     }
     .${id}-paper a:hover {
@@ -207,6 +225,7 @@ function render({ model, el }) {
     .${id}-dark .${id}-own { color: #e5e7eb; }
     .${id}-dark .${id}-clear { color: ${accentColorDark}; }
     .${id}-dark .${id}-stats { color: #9ca3af; }
+    .${id}-dark .${id}-thumb { border-color: #374151; background: #0b0f16; }
     .${id}-dark .${id}-paper-tag { background: #1f2937; color: #6b7280; }
     .${id}-dark .${id}-loading { color: #9ca3af; }
 
@@ -532,6 +551,14 @@ function render({ model, el }) {
         .join("");
     }
 
+    // Thumbnail paths in the JSON are repo-relative ("images/papers/x.jpg");
+    // resolve them against the repo root that holds data/papers.json.
+    const repoRoot = new URL("../", new URL(dataUrl, location.href));
+    function imageUrl(rel) {
+      if (!rel) return "";
+      try { return new URL(rel, repoRoot).href; } catch (e) { return ""; }
+    }
+
     function renderResults() {
       hideCard();
       const filtered = filterPapers();
@@ -580,10 +607,13 @@ function render({ model, el }) {
           if (authorsMarkup) metaParts.push(authorsMarkup);
           if (journal) metaParts.push(`<span class="${id}-paper-journal">${escHtml(journal)}</span>`);
 
-          html += `<div class="${id}-paper" data-pidx="${p._idx}">`;
+          const thumb = imageUrl(p.image);
+          html += `<div class="${id}-paper${thumb ? " has-thumb" : ""}" data-pidx="${p._idx}">`;
+          if (thumb) html += `<a href="${p.url}" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img class="${id}-thumb" src="${thumb}" alt="" loading="lazy" onerror="this.parentNode.remove()"></a><div class="${id}-paper-body">`;
           html += `<a href="${p.url}" target="_blank" rel="noopener">${escHtml(p.title)}</a>`;
           if (tagsHtml) html += `<span class="${id}-paper-tags">${tagsHtml}</span>`;
           if (metaParts.length) html += `<div class="${id}-paper-meta">${metaParts.join(" · ")}</div>`;
+          if (thumb) html += `</div>`;
           html += `</div>`;
         }
       }

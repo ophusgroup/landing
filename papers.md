@@ -7,7 +7,7 @@ short_title: Publications
 :::{anywidget} ./widgets/coauthor-network.js
 {
   "data_url": "https://raw.githubusercontent.com/ophusgroup/landing/main/data/coauthors.json",
-  "accent_color": "#8C1515"
+  "accent_color": "#B0181E"
 }
 :::
 ::::
@@ -16,7 +16,7 @@ short_title: Publications
 {
   "data_url": "https://raw.githubusercontent.com/ophusgroup/landing/main/data/papers.json",
   "hover_url": "https://raw.githubusercontent.com/ophusgroup/landing/main/data/papers_hover.json",
-  "accent_color": "#8C1515",
+  "accent_color": "#B0181E",
   "accent_color_dark": "#E8A0A0"
 }
 :::

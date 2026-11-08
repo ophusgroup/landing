@@ -9,8 +9,8 @@ const PAGE = "article:has([data-cv-style])";
 
 const CSS = `
   ${PAGE} {
-    --cv-accent: #8c1515;
-    --cv-accent-soft: #8c151522;
+    --cv-accent: #b0181e;
+    --cv-accent-soft: #b0181e22;
     --cv-title: #00677a;
     --cv-muted: #5b6472;
     --cv-pill-fg: #ffffff;
