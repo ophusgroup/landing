@@ -29,8 +29,9 @@ project:
     - file: resource-compute.md
     - file: resource-code.md
     - file: interactive.md
-    - file: resources/interactive-ptycho.md
-    - file: resources/interactive-diffraction.md
+      children:
+        - file: resources/interactive-ptycho.md
+        - file: resources/interactive-diffraction.md
     - file: facilities.md
     - file: funding.md
     - file: gallery.md
@@ -89,6 +90,8 @@ site:
       url: /papers
     - title: Teaching
       url: /teaching
+    - title: Gallery
+      url: /gallery
     - title: Resources
       children:
         - title: Students
@@ -99,14 +102,8 @@ site:
           url: /resource-code
         - title: Interactive
           url: /interactive
-        - title: Ptychography
-          url: /interactive-ptycho
-        - title: Diffraction
-          url: /interactive-diffraction
         - title: Facilities
           url: /facilities
         - title: Funding
           url: /funding
-    - title: Gallery
-      url: /gallery
 

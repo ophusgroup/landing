@@ -91,7 +91,7 @@ title: Gallery
     },
     {
       "folder": "2026_deep_lap_opening",
-      "title": "Deep Lap Opening (2026)",
+      "title": "Deep Lab Opening (2026)",
       "caption": "",
       "images": [
         "PXL_20251113_174557752.jpg",
