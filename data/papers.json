@@ -866,7 +866,8 @@
       "Colin Ophus",
       "Laura Waller"
     ],
-    "journal": "Optica Imaging Congress 2025 (3D, DH, COSI, IS, pcAOP,RadIT)"
+    "journal": "Optica Imaging Congress 2025 (3D, DH, COSI, IS, pcAOP,RadIT)",
+    "image": "images/papers/anyatom-domain-randomized-atomic-priors-for-elec.jpg"
   },
   {
     "title": "Kinetically Controlled Seed-Mediated Synthesis of Colloidal Copper Nanotetrahedra with Intricate Internal Structure",
@@ -5008,7 +5009,8 @@
       "Peter D. Nellist",
       "Nigel D. Browning"
     ],
-    "journal": "Applied Physics Letters"
+    "journal": "Applied Physics Letters",
+    "image": "images/papers/subsampled-stem-ptychography.jpg"
   },
   {
     "title": "Imaging Unstained Synthetic Polymer Crystals and Defects on Atomic Length Scales Using Cryogenic Electron Microscopy",
@@ -6311,7 +6313,8 @@
       "C. T. Harrower",
       "D. Mitlin"
     ],
-    "journal": "Canadian Journal of Physics"
+    "journal": "Canadian Journal of Physics",
+    "image": "images/papers/a-systematic-neutron-reflectometry-study-on-hydr.jpg"
   },
   {
     "title": "The role of self-shadowing on growth and scaling laws of faceted polycrystalline thin films",
@@ -6430,7 +6433,8 @@
       "V. Radmilovic",
       "D. Mitlin"
     ],
-    "journal": "Acta Materialia"
+    "journal": "Acta Materialia",
+    "image": "images/papers/nanocrystalline-amorphous-transitions-in-al-mo-t.jpg"
   },
   {
     "title": "Low temperature hydrogen desorption in MgAl thin films achieved by using a nanoscale Ta/Pd bilayer catalyst",
@@ -6449,7 +6453,8 @@
       "Erik Luber",
       "David Mitlin"
     ],
-    "journal": "Applied Physics Letters"
+    "journal": "Applied Physics Letters",
+    "image": "images/papers/low-temperature-hydrogen-desorption-in-mgal-thin.jpg"
   },
   {
     "title": "Simulations of faceted polycrystalline thin films: asymptotic analysis",
@@ -6465,7 +6470,8 @@
       "Erik Luber",
       "David Mitlin"
     ],
-    "journal": "Acta Materialia"
+    "journal": "Acta Materialia",
+    "image": "images/papers/simulations-of-faceted-polycrystalline-thin-film.jpg"
   },
   {
     "title": "Structural changes of thin MgAl films during hydrogen desorption",
@@ -6534,7 +6540,8 @@
       "S. Evoy",
       "D. Mitlin"
     ],
-    "journal": "Applied Physics Letters"
+    "journal": "Applied Physics Letters",
+    "image": "images/papers/resonance-properties-and-microstructure-of-ultra.jpg"
   },
   {
     "title": "Neutron reflectometry study of hydrogen desorption in destabilized MgAl alloy thin films",
@@ -6555,7 +6562,8 @@
       "C. T. Harrower",
       "D. Mitlin"
     ],
-    "journal": "Applied Physics Letters"
+    "journal": "Applied Physics Letters",
+    "image": "images/papers/neutron-reflectometry-study-of-hydrogen-desorpti.jpg"
   },
   {
     "title": "Transmission electron microscopy and nanoindentation study of the weld zone microstructure of diode-laser-joined automotive transformation-induced plasticity steel",
